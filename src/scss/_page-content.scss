@@ -1,0 +1,10 @@
+.page-content {
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  transition: filter .4s;
+}
+
+
+.search-modal-open .page-content {
+  filter: blur(16px);
+}

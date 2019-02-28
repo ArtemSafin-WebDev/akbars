@@ -1,0 +1,68 @@
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  min-width: 320px;
+  height: 100%;
+  line-height: 1.4;
+  background-color: $bg-grey;
+  color: $green;
+  font-family: 'Supermolot', 'Helvetica', sans-serif;
+
+  > * {
+    flex-shrink: 0;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  user-select: none;
+  -webkit-appearance: none;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+main {
+  flex-grow: 1;
+}
+
+img {
+  max-width: 100%;
+}
+
+svg {
+  display: block;
+}
+
+.visually-hidden {
+  @include visuallyHidden();
+}
+
+::selection {
+  color: white;
+  background: $green;
+} 

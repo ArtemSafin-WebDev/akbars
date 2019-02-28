@@ -1,0 +1,74 @@
+.search-modal {
+  background-color: rgba(#256963, .9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .4s;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  &__form {
+    width: 812px;
+    margin: auto;
+    display: flex;
+  }
+
+  &__input {
+    background: transparent;
+    -webkit-appearance: none;
+    border: none;
+    border-bottom: 1px solid white;
+    width: 50%;
+    flex-grow: 1;
+    margin-right: 20px;
+    outline: none;
+    font: inherit;
+    font-size: 26px;
+    line-height: 40px;
+    color: white;
+    @include placeholder {
+      color: white;
+      font-size: 26px;
+      line-height: 40px;
+      font: inherit;
+      opacity: .7;
+    }
+  }
+
+  &__submit {
+    background-color: #fff;
+    color: $green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 12px 54px 12px 38px;
+    transition: color .2s;
+    &:hover,
+    &:focus {
+      color: $red;
+      > svg {
+        fill: $red;
+      }
+    }
+    > svg {
+      fill: $green;
+      margin-right: 14px;
+      width: 24px; 
+      height: 24px;
+      transition: fill .2s;
+    }
+  }
+}
+
+
+.search-modal-open .search-modal {
+  opacity: 1;
+  visibility: visible;
+}

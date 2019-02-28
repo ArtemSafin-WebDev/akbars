@@ -1,0 +1,15 @@
+.page-header {
+  margin-top: 20px;
+  &__top-panel,
+  &__bottom-panel {
+    display: flex;
+  }
+  &__top-panel {
+    align-items: center;
+  }
+  &__bottom-panel {
+    margin-top: 20px;
+    align-items: center;
+  }
+
+}
