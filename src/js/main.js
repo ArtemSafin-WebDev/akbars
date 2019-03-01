@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   // Слайдер кубков
 
   const teamSliderDotsContainer = document.querySelector('.team__slider-pagination');
+  const newsSliderDotsContainer = document.querySelector('.news-slider__controls');
 
   $('.team__slider-text').slick({
     arrows: false,
@@ -26,8 +27,18 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
   $('.news-slider__image-block-slides').slick({
     arrows: false,
+    fade: false,
+    dots: false,
+    asNavFor: '.news-slider__text-block-slides'
+  });
+
+  $('.news-slider__text-block-slides').slick({
+    arrows: false,
     fade: true,
-    dots: false
+    dots: false,
+    asNavFor: '.news-slider__image-block-slides',
+    dots: true,
+    appendDots: newsSliderDotsContainer
   });
 
 

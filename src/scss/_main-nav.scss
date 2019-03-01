@@ -57,7 +57,10 @@
     box-shadow: 0px 0px 0px rgba(black, 0.2);
     opacity: 0;
     visibility: hidden;
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
     padding-bottom: 40px;
+    z-index: 10000;
     &:focus-within {
       opacity: 1;
       visibility: visible;
