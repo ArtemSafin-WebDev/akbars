@@ -123,7 +123,6 @@ gulp.task('serve', function() {
   gulp.watch('./src/js/**/*.js', gulp.series('scripts'))
   gulp.watch('./src/img/**/*', gulp.series('images'))
   gulp.watch('./src/misc/**/*', gulp.series('miscellaneous'))
-  gulp.watch('src/img/**/*.{png,jpg,jpeg}', gulp.series('webp'))
 })
 
 gulp.task('images', function() {
@@ -134,40 +133,7 @@ gulp.task('images', function() {
     .pipe(browserSync.stream())
 })
 
-// gulp.task('images', function() {
-//   return gulp
-//     .src('./src/img/**/*')
-//     .pipe(newer('./build/img'))
-//     .pipe(
-//       imagemin([
-//         imagemin.gifsicle({ interlaced: true }),
-//         imagemin.jpegtran({ progressive: true }),
-//         imagemin.optipng({ optimizationLevel: 4 }),
-//         imagemin.svgo({
-//           plugins: [
-//             {
-//               removeViewBox: false,
-//               collapseGroups: true
-//             }
-//           ]
-//         })
-//       ])
-//     )
-//     .pipe(gulp.dest('./build/img'))
-//     .pipe(browserSync.stream())
-// })
 
-gulp.task('webp', function() {
-  return gulp
-    .src('src/img/**/*.{png,jpg,jpeg}')
-    .pipe(
-      webp({
-        quality: 85
-      })
-    )
-    .pipe(gulp.dest('./build/img'))
-    .pipe(browserSync.stream())
-})
 
 gulp.task('miscellaneous', function() {
   return gulp
@@ -184,7 +150,7 @@ gulp.task(
     'images',
     'sprite',
     'html',
-    gulp.parallel('miscellaneous', 'styles', 'scripts', 'webp')
+    gulp.parallel('miscellaneous', 'styles', 'scripts')
   )
 )
 
@@ -195,7 +161,7 @@ gulp.task(
     'images',
     'sprite',
     'html',
-    gulp.parallel('miscellaneous', 'styles', 'scripts-production', 'webp')
+    gulp.parallel('miscellaneous', 'styles', 'scripts-production')
   )
 )
 

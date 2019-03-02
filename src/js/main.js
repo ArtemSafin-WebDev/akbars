@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import 'slick-carousel';
+import makeTabsController from './tabs';
 
 document.addEventListener('DOMContentLoaded', function(event) {
   console.log('DOM Loaded');
@@ -25,22 +26,22 @@ document.addEventListener('DOMContentLoaded', function(event) {
     asNavFor: '.team__slider-text'
   });
 
-  $('.news-slider__image-block-slides').slick({
-    arrows: false,
-    fade: false,
-    dots: false,
-    asNavFor: '.news-slider__text-block-slides'
-  });
 
-  $('.news-slider__text-block-slides').slick({
+  $('.js-news-slider').slick({
     arrows: false,
     fade: true,
-    dots: false,
-    asNavFor: '.news-slider__image-block-slides',
     dots: true,
     appendDots: newsSliderDotsContainer
   });
 
+  $('.js-videos-slider').slick({
+    vertical: true,
+    slidesToShow: 3,
+    arrows: true,
+    prevArrow: '.js-videos-slider-prev',
+    nextArrow: '.js-videos-slider-next',
+    
+  });
 
   // Модальное окно поиска
 
@@ -58,4 +59,15 @@ document.addEventListener('DOMContentLoaded', function(event) {
       document.body.classList.remove('search-modal-open');
     }
   })
+
+
+  // Табы
+
+  const tabContainers = Array.from(document.querySelectorAll('.js-tabs-container'));
+
+  tabContainers.forEach(tabContainer => {
+    const initializeTab = makeTabsController();
+    initializeTab(tabContainer);
+  })
+ 
 })

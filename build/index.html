@@ -7,8 +7,7 @@
   <link rel="stylesheet" href="css/styles.min.css" />
 
   <title>
-    Официальный сайт хоккейного клуба "Ак Барс" (ООО "СКП "Татнефть-Ак Барс").
-    Главная страница
+    Официальный сайт хоккейного клуба "Ак Барс" (ООО "СКП "Татнефть-Ак Барс"). Главная страница
   </title>
 </head>
 
@@ -395,22 +394,13 @@
     <main>
       <div class="container">
         <section class="news-slider">
-          <div class="news-slider__left-column">
-            <div class="news-slider__image-block">
-              <ul class="news-slider__image-block-slides">
-                <li class="news-slider__image-block-slide">
-                  <img src="img/Зарипов.jpg" alt="Зарипов" class="news-slider__image" />
-                </li>
-                <li class="news-slider__image-block-slide">
-                  <img src="img/Avangard.jpg" alt="Зарипов" class="news-slider__image" />
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="news-slider__right-column">
-            <div class="news-slider__text-block">
-              <ul class="news-slider__text-block-slides">
-                <li class="news-slider__text-block-slide">
+          <ul class="news-slider__list js-news-slider">
+            <li class="news-slider__list-item">
+              <div class="news-slider__slide-content">
+                <div class="news-slider__image-container">
+                  <img src="img/Avangard.jpg" alt="" class="news-slider__image" />
+                </div>
+                <div class="news-slider__text-container">
                   <div class="news-slider__news-info">
                     <span class="news-slider__info-block">
                       <svg width="15" height="15" aria-hidden="true" class="icon-news-calendar">
@@ -449,34 +439,40 @@
                     </h3>
                   </a>
                   <p class="news-slider__news-paragraph">
-                    Нападающий «Ак Барса» Данис Зарипов благодаря голу в матче
-                    против «Торпедо» вышел на первое место среди снайперов в
-                    истории клуба в КХЛ.
+                    Нападающий «Ак Барса» Данис Зарипов благодаря голу в матче против «Торпедо» вышел на первое место
+                    среди снайперов в истории клуба в КХЛ.
                   </p>
                   <a href="#" class="news-slider__details-link">
                     <span class="news-slider__details-link-text">Подробнее</span>
                   </a>
-                </li>
-                <li class="news-slider__text-block-slide">
+                </div>
+              </div>
+            </li>
+            <li class="news-slider__list-item">
+              <div class="news-slider__slide-content">
+                <div class="news-slider__image-container">
+                  <img src="img/Зарипов.jpg" alt="" class="news-slider__image" />
+                </div>
+                <div class="news-slider__text-container">
                   <div class="news-slider__news-info">
                     <span class="news-slider__info-block">
                       <svg width="15" height="15" aria-hidden="true" class="icon-news-calendar">
                         <use xlink:href="#news-calendar" />
                       </svg>
-                      16.04.2019
+                      14.02.2019
                     </span>
                     <span class="news-slider__divider"></span>
                     <span class="news-slider__info-block">
                       <svg width="15" height="15" aria-hidden="true" class="icon-news-views">
                         <use xlink:href="#news-views" />
                       </svg>
-                      1500
+                      1913
                     </span>
                     <a href="#" class="news-slider__info-block">
                       <svg width="15" height="15" aria-hidden="true" class="icon-news-comments">
                         <use xlink:href="#news-comments" />
                       </svg>
-                      32
+                      22
                     </a>
                     <span class="news-slider__divider"></span>
                     <a href="#" class="news-slider__info-block">
@@ -496,21 +492,244 @@
                     </h3>
                   </a>
                   <p class="news-slider__news-paragraph">
-                    «Ак Барс» 1 марта принимает у себя дома «Авангард» − третий матч четвертьфинальной серии Востока пройдёт на льду «Татнефть Арены» и начнётся в 19:00 по московскому времени.
+                    «Ак Барс» 1 марта принимает у себя дома «Авангард» − третий матч четвертьфинальной серии Востока
+                    пройдёт на льду «Татнефть Арены» и начнётся в 19:00 по московскому времени.
                   </p>
                   <a href="#" class="news-slider__details-link">
                     <span class="news-slider__details-link-text">Подробнее</span>
                   </a>
-                </li>
-              </ul>
-              <div class="news-slider__controls">
-                <a href="#" class="news-slider__all-news-link">
-                  Все новости
-                </a>
+                </div>
               </div>
-            </div>
+            </li>
+          </ul>
+          <div class="news-slider__controls">
+            <a href="#" class="news-slider__all-news-link">
+              Все новости
+            </a>
           </div>
         </section>
+        <div class="flex-row">
+          <section class="ak-bars-info">
+            <div class="tabs js-tabs-container">
+              <nav class="tabs__navigation">
+                <button class="js-tab-button">
+                  АК Барс &mdash; Инфо
+                </button>
+                <button class="js-tab-button">
+                  Фотогалерея
+                </button>
+              </nav>
+              <ul class="tabs__content ak-bars-info__content">
+                <li class="tabs__item js-tab">
+                  <div class="ak-bars-info__selected-video">
+                    <a href="#" class="ak-bars-info__video-link">
+                      <img src="img/selected-video-preview.jpg" alt="" class="ak-bars-info__video-preview" />
+                      <svg width="60" height="60" aria-hidden="true" class="icon-play ak-bars-info__play-icon">
+                        <use xlink:href="#play" />
+                      </svg>
+                    </a>
+                    <p class="ak-bars-info__selected-video-text">
+                      «Я сразу на синей линии упаду!». Раздевалка после победы Ак Барса в Хельсинки.
+                      <a href="#" class="ak-bars-info__selected-video-details-link">
+                        <span class="ak-bars-info__selected-video-details-link-text">Подробнее</span>
+                      </a>
+                    </p>
+                    <a href="#" class="ak-bars-info__all-videos-link">Все видео</a>
+                  </div>
+                  <div class="ak-bars-info__videos-slider">
+                    <button class="ak-bars-info__videos-slider-button ak-bars-info__videos-slider-button--prev js-videos-slider-prev">
+                      <svg width="16" height="16" aria-hidden="true" class="icon-arrow">
+                        <use xlink:href="#arrow-up" />
+                      </svg>
+                    </button>
+                    <ul class="ak-bars-info__videos-slider-list js-videos-slider">
+                      <li class="ak-bars-info__videos-item">
+                        <a href="#" class="ak-bars-info__video-link">
+                          <img src="img/video-preview-1.jpg" alt="" class="ak-bars-info__video-preview" />
+                          <svg width="60" height="60" aria-hidden="true" class="icon-play ak-bars-info__play-icon">
+                            <use xlink:href="#play" />
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="ak-bars-info__videos-item">
+                        <a href="#" class="ak-bars-info__video-link">
+                          <img src="img/video-preview-2.jpg" alt="" class="ak-bars-info__video-preview" />
+                          <svg width="60" height="60" aria-hidden="true" class="icon-play ak-bars-info__play-icon">
+                            <use xlink:href="#play" />
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="ak-bars-info__videos-item">
+                        <a href="#" class="ak-bars-info__video-link">
+                          <img src="img/video-preview-3.jpg" alt="" class="ak-bars-info__video-preview" />
+                          <svg width="60" height="60" aria-hidden="true" class="icon-play ak-bars-info__play-icon">
+                            <use xlink:href="#play" />
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="ak-bars-info__videos-item">
+                        <a href="#" class="ak-bars-info__video-link">
+                          <img src="img/video-preview-1.jpg" alt="" class="ak-bars-info__video-preview" />
+                          <svg width="60" height="60" aria-hidden="true" class="icon-play ak-bars-info__play-icon">
+                            <use xlink:href="#play" />
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                    <button class="ak-bars-info__videos-slider-button ak-bars-info__videos-slider-button--next js-videos-slider-next">
+                      <svg width="16" height="16" aria-hidden="true" class="icon-arrow">
+                        <use xlink:href="#arrow-down" />
+                      </svg>
+                    </button>
+                  </div>
+                </li>
+                <li class="tabs__item js-tab">ФОТОГАЛЕРЕЯ</li>
+              </ul>
+            </div>
+          </section>
+          <section class="match-info">
+            <div class="tabs js-tabs-container">
+              <nav class="tabs__navigation">
+                <button class="js-tab-button">
+                  Прошлый матч
+                </button>
+                <button class="js-tab-button">
+                  Следующий матч
+                </button>
+              </nav>
+              <ul class="tabs__content">
+                <li class="tabs__item match-info__item js-tab">
+                  <div class="match-info__date-time">
+                    <span class="match-info__date">
+                      13 февраля
+                    </span>
+                    <span class="match-info__place-and-time"> Четверг, 19:30 МСК<br />«ЦСКА АРЕНА»</span>
+                  </div>
+                  <div class="match-info__teams">
+                    <div class="match-info__team">
+                      <span class="match-info__team-logo">
+                        <img src="img/logo/akbars-logo.svg" alt="Лого Ак Барс" width="96" />
+                      </span>
+                      <span class="match-info__team-name">Ак Барс</span>
+                      <span class="match-info__team-origin">Казань</span>
+                    </div>
+                    <div class="match-info__score">
+                      5:1
+                    </div>
+                    <div class="match-info__team">
+                      <span class="match-info__team-logo">
+                        <img src="img/logo/torpedo-logo.svg" alt="Лого Ак Барс" width="96" />
+                      </span>
+                      <span class="match-info__team-name">Торпедо</span>
+                      <span class="match-info__team-origin">Новосибирская область</span>
+                    </div>
+                  </div>
+                  <ul class="match-info__media">
+                    <li class="match-info__media-item">
+                      <a href="#" class="match-info__media-link" title="Публикации">
+                        <svg width="22" height="22" aria-hidden="true" class="icon-search-publications">
+                          <use xlink:href="#publications" />
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="match-info__media-item">
+                      <a href="#" class="match-info__media-link" title="Протокол">
+                        <svg width="22" height="22" aria-hidden="true" class="icon-search-protocol">
+                          <use xlink:href="#protocol" />
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="match-info__media-item">
+                      <a href="#" class="match-info__media-link" title="Видео">
+                        <svg width="22" height="22" aria-hidden="true" class="icon-search-video">
+                          <use xlink:href="#video" />
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="match-info__media-item">
+                      <a href="#" class="match-info__media-link" title="Голы">
+                        <svg width="22" height="22" aria-hidden="true" class="icon-search-goals">
+                          <use xlink:href="#goals" />
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="match-info__media-item">
+                      <a href="#" class="match-info__media-link" title="Фото">
+                        <svg width="22" height="22" aria-hidden="true" class="icon-search-photo">
+                          <use xlink:href="#photo" />
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="tabs__item match-info__item js-tab">
+                  <div class="match-info__date-time">
+                    <span class="match-info__date">
+                      21 марта
+                    </span>
+                    <span class="match-info__place-and-time"> Пятница, 12:12 КЗН<br />«ТАТНЕФТЬ АРЕНА» </span>
+                  </div>
+                  <div class="match-info__teams">
+                    <div class="match-info__team">
+                      <span class="match-info__team-logo">
+                        <img src="img/logo/akbars-logo.svg" alt="Лого Ак Барс" width="96" />
+                      </span>
+                      <span class="match-info__team-name">Ак Барс</span>
+                      <span class="match-info__team-origin">Казань</span>
+                    </div>
+                    <div class="match-info__score">
+                      7:3
+                    </div>
+                    <div class="match-info__team">
+                      <span class="match-info__team-logo">
+                        <img src="img/logo/dynamo-logo.svg" alt="Лого Ак Барс" width="96" />
+                      </span>
+                      <span class="match-info__team-name">Динамо</span>
+                      <span class="match-info__team-origin">Москва</span>
+                    </div>
+                  </div>
+                  <ul class="match-info__media">
+                    <li class="match-info__media-item">
+                      <a href="#" class="match-info__media-link" title="Публикации">
+                        <svg width="22" height="22" aria-hidden="true" class="icon-search-publications">
+                          <use xlink:href="#publications" />
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="match-info__media-item">
+                      <a href="#" class="match-info__media-link" title="Протокол">
+                        <svg width="22" height="22" aria-hidden="true" class="icon-search-protocol">
+                          <use xlink:href="#protocol" />
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="match-info__media-item">
+                      <a href="#" class="match-info__media-link" title="Видео">
+                        <svg width="22" height="22" aria-hidden="true" class="icon-search-video">
+                          <use xlink:href="#video" />
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="match-info__media-item">
+                      <a href="#" class="match-info__media-link" title="Голы">
+                        <svg width="22" height="22" aria-hidden="true" class="icon-search-goals">
+                          <use xlink:href="#goals" />
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="match-info__media-item">
+                      <a href="#" class="match-info__media-link" title="Фото">
+                        <svg width="22" height="22" aria-hidden="true" class="icon-search-photo">
+                          <use xlink:href="#photo" />
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
       </div>
     </main>
     <footer>

@@ -1,0 +1,148 @@
+.match-info {
+  width: 326px;
+  display: flex;
+  flex-direction: column;
+  .tabs__navigation button {
+    padding-left: 0;
+    padding-right: 0;
+    width: 45%;
+    flex-grow: 1;
+  }
+}
+
+.match-info__date-time {
+  background-color: #EBEBEB;
+  padding: 20px;
+  text-align: center;
+}
+
+.match-info__date {
+  color: #242F37;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  display: block;
+}
+
+.match-info__place-and-time {
+  color: #606366;
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 10px;
+}
+
+.match-info__item {
+  display: flex;
+  flex-direction: column;
+  min-height: 490px;
+}
+
+.match-info__teams {
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.match-info__team {
+ 
+  width: 110px;
+}
+
+.match-info__score {
+  font-size: 34px;
+  line-height: 42px;
+  font-weight: 700;
+  align-self: flex-start;
+  margin-top: 25px;
+}
+
+.match-info__team-logo {
+  width: 96px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  > img {
+    display: block;
+  }
+}
+
+.match-info__team-name {
+  color: #242F37;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  display: block;
+}
+
+.match-info__team-origin {
+  color:#606366;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  display: block;
+  margin-top: 5px;
+}
+
+.match-info__media {
+  padding: 20px;
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.match-info__media-item {
+  &:not(:last-child) {
+    margin-right: 2px;
+  }
+}
+
+.match-info__media-link {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover,
+  &:focus {
+    > svg {
+      fill: $red;
+    }
+  }
+  > svg {
+    fill: $green;
+    color: $red;
+    width: 24px;
+    height: 24px;
+    transition: fill .3s;
+    &.icon-search-publications {
+      width: 28px;
+      height: 24px;
+    }
+    &.icon-search-protocol {
+      width: 21px;
+      height: 26px;
+    }
+
+    &.icon-search-video {
+      width: 28px;
+      height: 23px;
+    }
+
+    &.icon-search-goals {
+      width: 26px;
+      height: 18px;
+    }
+
+    &.icon-search-photo {
+      width: 30px;
+      height: 22px;
+    }
+  }
+}
