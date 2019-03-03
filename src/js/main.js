@@ -51,6 +51,28 @@ document.addEventListener('DOMContentLoaded', function(event) {
     nextArrow: '.js-photos-slider-next'
   })
 
+
+  $('.js-conference-name-slider').slick({
+    arrows: true,
+    dots: false,
+    prevArrow: '.js-conference-slider-prev',
+    nextArrow: '.js-conference-slider-next',
+    asNavFor: '.js-conference-tables-slider'
+  })
+
+  $('.js-conference-tables-slider').slick({
+    arrows: false,
+    dots: false,
+    draggable: false
+  })
+
+
+  $('.js-products-slider').slick({
+    arrows: false,
+    dots: false,
+    slidesToShow: 4
+  })
+
   // Модальное окно поиска
 
   const searchButton = document.getElementById('search-button')

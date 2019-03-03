@@ -9,6 +9,8 @@
 .tabs__item--calendar-tab {
   flex-direction: column;
   padding: 20px;
+  padding-bottom: 30px;
+  min-height: 690px;
 }
 
 .calendar__controls {
@@ -52,6 +54,9 @@
 
 .calendar__dates {
   margin-top: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
   table {
     width: 100%;
     border-spacing: 11.5px;
@@ -171,6 +176,7 @@
   display: flex;
   align-items: center;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .calendar__legend-item {
@@ -205,6 +211,7 @@
   display: flex;
   align-items: center;
   margin-top: 62px;
+  margin-top: auto;
 }
 
 .calendar__team-calendar-link {
