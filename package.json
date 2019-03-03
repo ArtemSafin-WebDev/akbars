@@ -16,6 +16,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.6",
     "jquery": "^3.3.1",
     "object-fit-images": "^3.2.4",
     "picturefill": "^3.0.3",

@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css" />
   <link rel="stylesheet" href="css/styles.min.css" />
 
   <title>
@@ -512,17 +513,27 @@
           <section class="ak-bars-info">
             <div class="tabs js-tabs-container">
               <nav class="tabs__navigation">
-                <button class="js-tab-button">
-                  АК Барс &mdash; Инфо
+                <button class="js-tab-button js-tab-button-info">
+                  <span class="tabs__button-content">
+                    <svg width="18" height="18" aria-hidden="true" class="icon-video-white">
+                      <use xlink:href="#video-white" />
+                    </svg>
+                    АК Барс &mdash; Инфо
+                  </span>
                 </button>
-                <button class="js-tab-button">
-                  Фотогалерея
+                <button class="js-tab-button js-tab-button-photos">
+                  <span class="tabs__button-content">
+                    <svg width="18" height="18" aria-hidden="true" class="icon-photo-white">
+                      <use xlink:href="#photo-white" />
+                    </svg>
+                    Фотогалерея
+                  </span>
                 </button>
               </nav>
               <ul class="tabs__content ak-bars-info__content">
                 <li class="tabs__item js-tab">
                   <div class="ak-bars-info__selected-video">
-                    <a href="#" class="ak-bars-info__video-link">
+                    <a class="ak-bars-info__video-link" data-fancybox data-width="640" data-height="360" href="https://www.youtube.com/watch?v=ffEjvFkkhm8">
                       <img src="img/selected-video-preview.jpg" alt="" class="ak-bars-info__video-preview" />
                       <svg width="60" height="60" aria-hidden="true" class="icon-play ak-bars-info__play-icon">
                         <use xlink:href="#play" />
@@ -583,7 +594,54 @@
                     </button>
                   </div>
                 </li>
-                <li class="tabs__item js-tab">ФОТОГАЛЕРЕЯ</li>
+                <li class="tabs__item js-tab">
+                  <div class="ak-bars-info__selected-video">
+                    <a class="ak-bars-info__video-link" href="#">
+                      <img src="img/selected-video-preview.jpg" alt="" class="ak-bars-info__video-preview" />
+                    </a>
+                    <p class="ak-bars-info__selected-video-text">
+                      «Я сразу на красной линии упаду!». Раздевалка после победы Ак Барса в Хельсинки.
+                      <a href="#" class="ak-bars-info__selected-video-details-link">
+                        <span class="ak-bars-info__selected-video-details-link-text">Подробнее</span>
+                      </a>
+                    </p>
+                    <a href="#" class="ak-bars-info__all-videos-link">Все фотографии</a>
+                  </div>
+                  <div class="ak-bars-info__videos-slider">
+                    <button class="ak-bars-info__videos-slider-button ak-bars-info__videos-slider-button--prev js-photos-slider-prev">
+                      <svg width="16" height="16" aria-hidden="true" class="icon-arrow">
+                        <use xlink:href="#arrow-up" />
+                      </svg>
+                    </button>
+                    <ul class="ak-bars-info__videos-slider-list js-photos-slider">
+                      <li class="ak-bars-info__videos-item">
+                        <a href="#" class="ak-bars-info__video-link">
+                          <img src="img/video-preview-1.jpg" alt="" class="ak-bars-info__video-preview" />
+                        </a>
+                      </li>
+                      <li class="ak-bars-info__videos-item">
+                        <a href="#" class="ak-bars-info__video-link">
+                          <img src="img/video-preview-2.jpg" alt="" class="ak-bars-info__video-preview" />
+                        </a>
+                      </li>
+                      <li class="ak-bars-info__videos-item">
+                        <a href="#" class="ak-bars-info__video-link">
+                          <img src="img/video-preview-3.jpg" alt="" class="ak-bars-info__video-preview" />
+                        </a>
+                      </li>
+                      <li class="ak-bars-info__videos-item">
+                        <a href="#" class="ak-bars-info__video-link">
+                          <img src="img/video-preview-1.jpg" alt="" class="ak-bars-info__video-preview" />
+                        </a>
+                      </li>
+                    </ul>
+                    <button class="ak-bars-info__videos-slider-button ak-bars-info__videos-slider-button--next js-photos-slider-next">
+                      <svg width="16" height="16" aria-hidden="true" class="icon-arrow">
+                        <use xlink:href="#arrow-down" />
+                      </svg>
+                    </button>
+                  </div>
+                </li>
               </ul>
             </div>
           </section>
@@ -730,6 +788,105 @@
             </div>
           </section>
         </div>
+        <div class="flex-row">
+          <section class="calendar">
+            <div class="tabs js-tabs-container">
+              <nav class="tabs__navigation">
+                <button class="js-tab-button">
+                  <span class="tabs__button-content">
+                    <svg width="18" height="18" aria-hidden="true" class="icon-calendar-white">
+                      <use xlink:href="#calendar-white" />
+                    </svg>
+                    Календарь
+                  </span>
+                </button>
+                <button class="js-tab-button">
+                  5:1 Результаты
+                </button>
+              </nav>
+              <ul class="tabs__content calendar__content">
+                <li class="tabs__item js-tab">
+                  <div class="calendar__controls">
+                    <button class="calendar__button" title="Предыдущий месяц">
+                      <span class="calendar__button-content">
+                        <svg width="8" height="12" aria-hidden="true" class="icon-arrow-left">
+                          <use xlink:href="#arrow-left" />
+                        </svg>
+                      </span>
+                    </button>
+                    <span class="calendar__month">
+                      Февраль
+                    </span>
+                    <button class="calendar__button" title="Следующий месяц">
+                      <span class="calendar__button-content">
+                        <svg width="8" height="12" aria-hidden="true" class="icon-arrow-right">
+                          <use xlink:href="#arrow-right" />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="calendar__dates">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Пн</th>
+                          <th>Вт</th>
+                          <th>Ср</th>
+                          <th>Чт</th>
+                          <th>Пт</th>
+                          <th>Сб</th>
+                          <th>Вс</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <span class="calendar__date-info">
+                              28
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              29
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              30
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              1
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              2
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              3
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              3
+                            </span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </li>
+                <li class="tabs__item js-tab">
+                  Результаты
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
       </div>
     </main>
     <footer>
@@ -737,7 +894,7 @@
 
       </div>
     </footer>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/bundle.min.js"></script>
 
   </div>

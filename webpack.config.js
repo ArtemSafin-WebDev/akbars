@@ -19,5 +19,8 @@ module.exports = {
       }
     ]
   },
-  mode: "development"
+  mode: "development",
+  externals: {
+    jquery: 'jQuery'
+  }
 };

@@ -9,6 +9,7 @@
   const tabs = Array.from(element.querySelectorAll('.js-tab'));
   const tabsControlsCount = tabsControls.length;
   const tabsCount = tabs.length;
+  
 
 
   if (tabsControlsCount !== tabsCount) {
@@ -45,6 +46,7 @@
     event.preventDefault();
     const activeTab = tabsControls.indexOf(this) + 1;
     setActiveTab(activeTab);
+    
   }))
 
   setActiveTab(activeTab);

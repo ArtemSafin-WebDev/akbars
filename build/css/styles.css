@@ -474,8 +474,9 @@ svg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 40px;
-  margin-bottom: 200px; }
+  margin-top: 40px; }
+  .flex-row:last-child {
+    margin-bottom: 200px; }
 
 .khl-placeholder {
   background-color: #242F37;
@@ -1420,14 +1421,14 @@ svg {
       -ms-flex-align: center;
           align-items: center; }
   .tabs__navigation > button {
-    background-color: #7FB1AD;
+    background-color: #7fb1ad;
     color: white;
     text-transform: uppercase;
     font-size: 14px;
     line-height: 18px;
     padding: 15px 20px;
-    -webkit-transition: background-color .3s;
-    transition: background-color .3s;
+    -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s;
     outline: none;
     white-space: nowrap; }
     .tabs__navigation > button:not(:last-of-type) {
@@ -1437,7 +1438,7 @@ svg {
     .tabs__navigation > button[disabled] {
       cursor: default; }
     .tabs__navigation > button:hover:not([disabled]), .tabs__navigation > button:focus:not([disabled]) {
-      background-color: #3C8F88; }
+      background-color: #3c8f88; }
 
 .tabs__content {
   background-color: #fff;
@@ -1459,6 +1460,18 @@ svg {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1; }
+
+.tabs__button-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .tabs__button-content > svg {
+    fill: white;
+    display: block;
+    margin-right: 10px; }
 
 @-webkit-keyframes fadeEffect {
   from {
@@ -1522,7 +1535,8 @@ svg {
   display: block;
   width: 174px;
   height: 116px;
-  position: relative; }
+  position: relative;
+  outline: none; }
   .ak-bars-info__video-link:hover .ak-bars-info__play-icon, .ak-bars-info__video-link:focus .ak-bars-info__play-icon {
     fill-opacity: 1; }
 
@@ -1626,3 +1640,94 @@ svg {
     bottom: calc(100% + 16px); }
   .ak-bars-info__videos-slider-button--next {
     bottom: 0; }
+
+.calendar {
+  width: 634px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 20px; }
+
+.calendar__content {
+  padding: 20px; }
+  .calendar__content .tabs__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+
+.calendar__controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #ebebeb;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.calendar__button {
+  width: 35px;
+  height: 35px;
+  background-color: #256963; }
+  .calendar__button-content {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .calendar__button-content > svg {
+      fill: white; }
+
+.calendar__month {
+  color: #242f37;
+  font-weight: 700;
+  font-size: 16px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  text-align: center; }
+
+.calendar__dates {
+  margin-top: 20px; }
+  .calendar__dates table {
+    width: 100%;
+    border-spacing: 11.5px;
+    margin: -11.5px; }
+  .calendar__dates th {
+    font-size: 18px;
+    line-height: 24px;
+    color: #256963;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-align: center; }
+  .calendar__dates td .calendar__date-info {
+    width: 75px;
+    height: 75px;
+    background-color: #ebebeb;
+    color: #606366;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end; }

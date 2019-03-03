@@ -8,13 +8,13 @@
   display: flex;
   align-items: center;
   > button {
-    background-color: #7FB1AD;
+    background-color: #7fb1ad;
     color: white;
     text-transform: uppercase;
     font-size: 14px;
     line-height: 18px;
     padding: 15px 20px;
-    transition: background-color .3s;
+    transition: background-color 0.3s;
     outline: none;
     white-space: nowrap;
     &:not(:last-of-type) {
@@ -31,7 +31,7 @@
     &:hover,
     &:focus {
       &:not([disabled]) {
-        background-color: #3C8F88;
+        background-color: #3c8f88;
       }
     }
   }
@@ -48,12 +48,24 @@
 .tabs__item {
   animation: fadeEffect 1s;
   flex-grow: 1;
+  
 }
 
+.tabs__button-content {
+  display: flex;
+  align-items: center;
+  > svg {
+    fill: white;
+    display: block;
+    margin-right: 10px;
+  }
+}
 
 @keyframes fadeEffect {
-  from {opacity: 0;}
-  to {opacity: 1;}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-
-
