@@ -805,7 +805,7 @@
                 </button>
               </nav>
               <ul class="tabs__content calendar__content">
-                <li class="tabs__item js-tab">
+                <li class="tabs__item tabs__item--calendar-tab js-tab">
                   <div class="calendar__controls">
                     <button class="calendar__button" title="Предыдущий месяц">
                       <span class="calendar__button-content">
@@ -841,47 +841,442 @@
                       <tbody>
                         <tr>
                           <td>
-                            <span class="calendar__date-info">
-                              28
+                            <span class="calendar__date-info last-month">
+                              <span class="calendar__date-info-day" data-day="28">28</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info last-month">
+                              <span class="calendar__date-info-day" data-day="29">29</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info last-month">
+                              <span class="calendar__date-info-day" data-day="30">30</span>
                             </span>
                           </td>
                           <td>
                             <span class="calendar__date-info">
-                              29
+                              <span class="calendar__date-info-day" data-day="1">1</span>
                             </span>
                           </td>
                           <td>
                             <span class="calendar__date-info">
-                              30
+                              <a href="#" class="calendar__date-link marked-red">
+                                <img src="img/logo/amur-logo.svg" alt="Лого Амура" class="calendar__date-image" />
+                              </a>
+                              <span class="calendar__date-info-day" data-day="2">2</span>
                             </span>
                           </td>
                           <td>
                             <span class="calendar__date-info">
-                              1
+                              <span class="calendar__date-info-day" data-day="3">3</span>
                             </span>
                           </td>
                           <td>
                             <span class="calendar__date-info">
-                              2
+                              <span class="calendar__date-info-day" data-day="4">4</span>
+                            </span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <span class="calendar__date-info">
+                              <span class="calendar__date-info-day" data-day="5">5</span>
                             </span>
                           </td>
                           <td>
                             <span class="calendar__date-info">
-                              3
+                              <span class="calendar__date-info-day" data-day="6">6</span>
                             </span>
                           </td>
                           <td>
                             <span class="calendar__date-info">
-                              3
+                              <a href="#" class="calendar__date-link marked-green">
+                                <img src="img/logo/dynamo-logo.svg" alt="Лого Динамо" class="calendar__date-image" />
+                              </a>
+                              <span class="calendar__date-info-day" data-day="7">7</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              <span class="calendar__date-info-day" data-day="8">8</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              <span class="calendar__date-info-day" data-day="9">9</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              <span class="calendar__date-info-day" data-day="10">10</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              <span class="calendar__date-info-day" data-day="11">11</span>
+                            </span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <span class="calendar__date-info">
+                              <span class="calendar__date-info-day" data-day="12">12</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              <span class="calendar__date-info-day" data-day="13">13</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              <a href="#" class="calendar__date-link marked-green">
+                                <img src="img/logo/metallurg-logo.svg" alt="Лого Металурга" class="calendar__date-image" />
+                              </a>
+                              <span class="calendar__date-info-day" data-day="14">14</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              <span class="calendar__date-info-day" data-day="15">15</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              <a href="#" class="calendar__date-link marked-green">
+                                <img src="img/logo/sochi-logo.svg" alt="Лого Сочи" class="calendar__date-image" />
+                              </a>
+                              <span class="calendar__date-info-day" data-day="16">16</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              <span class="calendar__date-info-day" data-day="17">17</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              <span class="calendar__date-info-day" data-day="18">18</span>
+                            </span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <span class="calendar__date-info">
+                              <span class="calendar__date-info-day" data-day="19">19</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              <a href="#" class="calendar__date-link marked-red">
+                                <img src="img/logo/torpedo-logo.svg" alt="Лого Торпедо" class="calendar__date-image" />
+                              </a>
+                              <span class="calendar__date-info-day" data-day="20">20</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              <span class="calendar__date-info-day" data-day="21">21</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              <span class="calendar__date-info-day" data-day="22">22</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              <span class="calendar__date-info-day" data-day="23">23</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              <span class="calendar__date-info-day" data-day="24">24</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              <a href="#" class="calendar__date-link marked-red">
+                                <img src="img/logo/sibir-logo.svg" alt="Лого Сибирь" class="calendar__date-image" />
+                              </a>
+                              <span class="calendar__date-info-day" data-day="25">25</span>
+                            </span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <span class="calendar__date-info">
+                              <span class="calendar__date-info-day" data-day="26">26</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              <span class="calendar__date-info-day" data-day="27">27</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              <span class="calendar__date-info-day" data-day="28">28</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info last-month">
+                              <span class="calendar__date-info-day" data-day="1">1</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info last-month">
+                              <span class="calendar__date-info-day" data-day="2">2</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info last-month">
+                              <span class="calendar__date-info-day" data-day="3">3</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info last-month">
+                              <span class="calendar__date-info-day" data-day="4">4</span>
                             </span>
                           </td>
                         </tr>
                       </tbody>
                     </table>
+                    <div class="calendar__legend">
+                      <span class="calendar__legend-item calendar__legend-item--home">
+                        Домашние матчи
+                      </span>
+                      <span class="calendar__legend-item calendar__legend-item--guest">
+                        Гостевые матчи
+                      </span>
+                    </div>
+                    <div class="calendar__links">
+                      <a href="#" class="calendar__team-calendar-link">
+                        Календарь Ак Барса
+                      </a>
+                      <a href="#" class="calendar__all-calendar-link">
+                        <span class="calendar__all-calendar-link-text">Весь календарь</span>
+                      </a>
+                    </div>
                   </div>
                 </li>
-                <li class="tabs__item js-tab">
-                  Результаты
+                <li class="tabs__item tabs__item--results-tab js-tab">
+                  <div class="results">
+                    <div class="results__wrapper">
+                      <table class="results__table">
+                        <thead>
+                          <tr>
+                            <th colspan="3">13.02.2019</th>
+                          </tr>
+                          <tr class="visually-hidden">
+                            <th>
+                              Первая команда
+                            </th>
+                            <th>
+                              Счет игры
+                            </th>
+                            <th>
+                              Вторая команда
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="results__team-1">
+                              Ак Барс (Казань)
+                            </td>
+                            <td class="results__score">
+                              5:1
+                            </td>
+                            <td class="results__team-2">
+                              Торпедо (Новосибирская область)
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="results__team-1">
+                              Ак Барс (Казань)
+                            </td>
+                            <td class="results__score">
+                              5:1
+                            </td>
+                            <td class="results__team-2">
+                              Торпедо (Новосибирская область)
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="results__team-1">
+                              Ак Барс (Казань)
+                            </td>
+                            <td class="results__score">
+                              5:1
+                            </td>
+                            <td class="results__team-2">
+                              Торпедо (Новосибирская область)
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="results__team-1">
+                              Ак Барс (Казань)
+                            </td>
+                            <td class="results__score">
+                              5:1
+                            </td>
+                            <td class="results__team-2">
+                              Торпедо (Новосибирская область)
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="results__team-1">
+                              Ак Барс (Казань)
+                            </td>
+                            <td class="results__score">
+                              5:1
+                            </td>
+                            <td class="results__team-2">
+                              Торпедо (Новосибирская область)
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <table class="results__table">
+                        <thead>
+                          <tr>
+                            <th colspan="3">03.02.2019</th>
+                          </tr>
+                          <tr class="visually-hidden">
+                            <th>
+                              Первая команда
+                            </th>
+                            <th>
+                              Счет игры
+                            </th>
+                            <th>
+                              Вторая команда
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="results__team-1">
+                              Ак Барс (Казань)
+                            </td>
+                            <td class="results__score">
+                              5:1
+                            </td>
+                            <td class="results__team-2">
+                              Торпедо (Новосибирская область)
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="results__team-1">
+                              Ак Барс (Казань)
+                            </td>
+                            <td class="results__score">
+                              5:1
+                            </td>
+                            <td class="results__team-2">
+                              Торпедо (Новосибирская область)
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="results__team-1">
+                              Ак Барс (Казань)
+                            </td>
+                            <td class="results__score">
+                              5:1
+                            </td>
+                            <td class="results__team-2">
+                              Торпедо (Новосибирская область)
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="results__team-1">
+                              Ак Барс (Казань)
+                            </td>
+                            <td class="results__score">
+                              5:1
+                            </td>
+                            <td class="results__team-2">
+                              Торпедо (Новосибирская область)
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="results__team-1">
+                              Ак Барс (Казань)
+                            </td>
+                            <td class="results__score">
+                              5:1
+                            </td>
+                            <td class="results__team-2">
+                              Торпедо (Новосибирская область)
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="results__team-1">
+                              Ак Барс (Казань)
+                            </td>
+                            <td class="results__score">
+                              5:1
+                            </td>
+                            <td class="results__team-2">
+                              Торпедо (Новосибирская область)
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="results__team-1">
+                              Ак Барс (Казань)
+                            </td>
+                            <td class="results__score">
+                              5:1
+                            </td>
+                            <td class="results__team-2">
+                              Торпедо (Новосибирская область)
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="results__team-1">
+                              Ак Барс (Казань)
+                            </td>
+                            <td class="results__score">
+                              5:1
+                            </td>
+                            <td class="results__team-2">
+                              Торпедо (Новосибирская область)
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="results__team-1">
+                              Ак Барс (Казань)
+                            </td>
+                            <td class="results__score">
+                              5:1
+                            </td>
+                            <td class="results__team-2">
+                              Торпедо (Новосибирская область)
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="results__team-1">
+                              Ак Барс (Казань)
+                            </td>
+                            <td class="results__score">
+                              5:1
+                            </td>
+                            <td class="results__team-2">
+                              Торпедо (Новосибирская область)
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="results__button-bottom-container">
+                        <a href="#" class="results__all-results-link">
+                          Все результаты
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </li>
               </ul>
             </div>
