@@ -45,23 +45,39 @@
   font-size: 16px;
   line-height: 20px;
   color: #7F7F7F;
+  position: relative;
+  &--tatneft {
+    left: -4px;
+  }
+
+  &--tatneft-azs {
+    left: 20px;
+  }
+
+  &--taneco {
+    left: 26px;
+  }
+
+  &--viatti {
+    left: 32px;
+  }
 }
 
 .sponsors__logo {
   position: relative;
-  &.sponsors__logo--tatneft {
+  &--tatneft {
 
   }
 
-  &.sponsors__logo--tatneft-azs {
+  &--tatneft-azs {
     left: 18px;
   }
 
-  &.sponsors__logo--taneco {
+  &--taneco {
     left: 25px;
   }
 
-  &.sponsors__logo--viatti {
+  &--viatti {
     left: 27px;
   }
 }

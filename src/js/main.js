@@ -3,9 +3,13 @@ import $ from 'jquery'
 import 'slick-carousel'
 import '@fancyapps/fancybox'
 import makeTabsController from './tabs'
+import objectFitImages from 'object-fit-images'
 
 document.addEventListener('DOMContentLoaded', function(event) {
-  console.log('DOM Loaded')
+  // Полифилл для CSS свойства ObjectFit 
+
+  objectFitImages()
+
 
   // Слайдер кубков
 
@@ -39,6 +43,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     vertical: true,
     slidesToShow: 3,
     arrows: true,
+    draggable: false,
     prevArrow: '.js-videos-slider-prev',
     nextArrow: '.js-videos-slider-next'
   })
@@ -47,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     vertical: true,
     slidesToShow: 3,
     arrows: true,
+    draggable: false,
     prevArrow: '.js-photos-slider-prev',
     nextArrow: '.js-photos-slider-next'
   })
