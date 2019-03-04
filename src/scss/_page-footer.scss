@@ -1,0 +1,182 @@
+.page-footer {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+
+.page-footer__links {
+  display: flex;
+  align-items: center;
+}
+
+.page-footer__links-general {
+  display: flex;
+  align-items: center;
+}
+
+.page-footer__links-special {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  .page-footer__link {
+    &:first-child {
+      margin-right: 40px;
+    }
+  }
+}
+
+.page-footer__link {
+  color: $green;
+  font-size: 16px;
+  text-transform: uppercase;
+  line-height: 20px;
+  outline: none;
+  margin-right: 20px;
+  transition: color .3s;
+  display: flex;
+  align-items: center;
+  &:last-child {
+    margin-right: 0;
+  }
+  &:link,
+  &:visited {
+    color: $green;
+  }
+
+  &:hover,
+  &:focus {
+    color: $red;
+  }
+
+  svg {
+    margin-right: 10px;
+    fill: $red;
+  }
+}
+
+.page-footer__divider {
+  width: 1.5px;
+  height: 32px;
+  background-color: $green;
+  margin-right: 40px;
+  margin-left: 20px;
+  display: block;
+}
+
+
+.page-footer__bottom-row {
+  display: flex;
+  margin-top: 53px;
+}
+
+.page-footer__information {
+  color: #606366;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.page-footer__team-logo {
+  margin-right: 30px;
+}
+
+.page-footer__info-block {
+  display: flex;
+  align-items: center;
+}
+
+.page-footer__information {
+  width: 600px;
+  p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    &:not(:last-child) {
+      margin-bottom: 6px;
+    }
+  }
+
+  a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    color: $green;
+    transition: color .3s;
+    &:link,
+    &:visited {
+      outline: none;
+      color: $green;
+    }
+
+    &:hover,
+    &:focus {
+      color: $red;
+    }
+  }
+}
+
+
+.page-footer__social {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-footer__social-list {
+  display: flex;
+  align-items: center;
+  
+  &-item {
+    margin-right: 18px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.page-footer__social-link {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+  
+  svg {
+    fill: $green;
+    transition: fill .3s;
+    width: 22px;
+    height: 22px;
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      fill: $red;
+    }
+  }
+}
+
+.page-footer__callback-form-link {
+  font-size: 16px;
+  line-height: 20px;
+  color: $green;
+  outline: none;
+  font-family: 'Supermolot', 'Helvetica', sans-serif;
+  transition: color .3s;
+  margin-top: auto;
+  margin-left: auto;
+  &:link,
+  &:visited {
+    color: $green;
+  }
+  &::after {
+    content: ' >';
+    color: $red;
+  }
+
+  &:hover,
+  &:focus {
+    color: $red
+  }
+}

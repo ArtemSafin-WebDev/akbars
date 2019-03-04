@@ -1,16 +1,23 @@
 .utility {
   margin-left: auto;
   display: flex;
+  margin-top: 15px;
+  margin-left: 30px;
   // align-items: center;
   &__text-link {
     color: $green;
     text-transform: uppercase;
-    margin-left: 30px;
+    margin-left: 15px;
     white-space: nowrap;
     outline: none;
     transition: color 0.2s;
     display: flex;
     align-items: center;
+    font-size: 14px;
+    line-height: 18px;
+    &:first-child {
+      margin-left: 0;
+    }
     &:link,
     &:visited {
       color: $green;
@@ -26,7 +33,7 @@
     width: 1.5px;
     height: 32px;
     background-color: $green;
-    margin-left: 30px;
+    margin-left: 20px;
   }
 
   &__icon-link {

@@ -137,6 +137,12 @@
         background-color: rgba($green, .15);
       }
 
+      &:first-child {
+        td {
+          padding-top: 12px;
+        }
+      }
+
       &:last-child {
         td {
           border-bottom: 2px solid $red;
@@ -219,7 +225,7 @@
   line-height: 20px;
   border: 2px solid $green;
   display: inline-block;
-  padding: 10px 25px;
+  padding: 13px 47px;
   transition: all 0.3s;
   color: $green;
   

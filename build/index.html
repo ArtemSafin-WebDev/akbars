@@ -399,7 +399,7 @@
             <li class="news-slider__list-item">
               <div class="news-slider__slide-content">
                 <div class="news-slider__image-container">
-                  <img src="img/Avangard.jpg" alt="" class="news-slider__image" />
+                  <img src="img/Зарипов.jpg" alt="" class="news-slider__image" />
                 </div>
                 <div class="news-slider__text-container">
                   <div class="news-slider__news-info">
@@ -452,7 +452,7 @@
             <li class="news-slider__list-item">
               <div class="news-slider__slide-content">
                 <div class="news-slider__image-container">
-                  <img src="img/Зарипов.jpg" alt="" class="news-slider__image" />
+                  <img src="img/Avangard.jpg" alt="" class="news-slider__image" />
                 </div>
                 <div class="news-slider__text-container">
                   <div class="news-slider__news-info">
@@ -495,6 +495,58 @@
                   <p class="news-slider__news-paragraph">
                     «Ак Барс» 1 марта принимает у себя дома «Авангард» − третий матч четвертьфинальной серии Востока
                     пройдёт на льду «Татнефть Арены» и начнётся в 19:00 по московскому времени.
+                  </p>
+                  <a href="#" class="news-slider__details-link">
+                    <span class="news-slider__details-link-text">Подробнее</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="news-slider__list-item">
+              <div class="news-slider__slide-content">
+                <div class="news-slider__image-container">
+                  <img src="https://www.ak-bars.ru/files/image/news/2019/03/00de0cdccf.jpg" alt="" class="news-slider__image" />
+                </div>
+                <div class="news-slider__text-container">
+                  <div class="news-slider__news-info">
+                    <span class="news-slider__info-block">
+                      <svg width="15" height="15" aria-hidden="true" class="icon-news-calendar">
+                        <use xlink:href="#news-calendar" />
+                      </svg>
+                      14.02.2019
+                    </span>
+                    <span class="news-slider__divider"></span>
+                    <span class="news-slider__info-block">
+                      <svg width="15" height="15" aria-hidden="true" class="icon-news-views">
+                        <use xlink:href="#news-views" />
+                      </svg>
+                      1913
+                    </span>
+                    <a href="#" class="news-slider__info-block">
+                      <svg width="15" height="15" aria-hidden="true" class="icon-news-comments">
+                        <use xlink:href="#news-comments" />
+                      </svg>
+                      22
+                    </a>
+                    <span class="news-slider__divider"></span>
+                    <a href="#" class="news-slider__info-block">
+                      <svg width="15" height="15" aria-hidden="true" class="icon-news-video">
+                        <use xlink:href="#news-video" />
+                      </svg>
+                    </a>
+                    <a href="#" class="news-slider__info-block">
+                      <svg width="15" height="15" aria-hidden="true" class="icon-news-photo">
+                        <use xlink:href="#news-photo" />
+                      </svg>
+                    </a>
+                  </div>
+                  <a href="#" class="news-slider__news-heading-link">
+                    <h3 class="news-slider__news-heading">
+                      Роб Клинкхаммер: «Никто не ожидал, что всё так случится»
+                    </h3>
+                  </a>
+                  <p class="news-slider__news-paragraph">
+                    Я не знаю наверняка, что произошло в концовке сезона. Я не думал, что так случится, вряд ли кто-то вообще ожидал такого развития.
                   </p>
                   <a href="#" class="news-slider__details-link">
                     <span class="news-slider__details-link-text">Подробнее</span>
@@ -1284,13 +1336,13 @@
           <section class="conference">
             <div class="tabs js-tabs-container">
               <nav class="tabs__navigation">
-                <button class="js-tab-button">
+                <button class="js-tab-button js-tab-button-conference">
                   Конференции
                 </button>
-                <button class="js-tab-button">
+                <button class="js-tab-button js-tab-button-division">
                   Дивизионы
                 </button>
-                <button class="js-tab-button">
+                <button class="js-tab-button js-tab-button-khl">
                   Кхл
                 </button>
               </nav>
@@ -1515,10 +1567,296 @@
                   </div>
                 </li>
                 <li class="tabs__item tabs__item--conference-tab js-tab">
-                  Дивизионы
+                  <div class="conference__slider-controls">
+                    <button class="conference__slider-button conference__slider-button--prev js-division-slider-prev">
+                      <span class="conference__slider-button-content">
+                        <svg width="8" height="12" aria-hidden="true" class="icon-arrow-left">
+                          <use xlink:href="#arrow-left" />
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="conference__name">
+                      <ul class="conference__conference-name-slider js-division-name-slider">
+                        <li class="conference__conference-name-slider-item">
+                          Дивизион Харламова
+                        </li>
+                        <li class="conference__conference-name-slider-item">
+                          Дивизион Чернышева
+                        </li>
+                      </ul>
+                    </div>
+                    <button class="conference__slider-button conference__slider-button--next js-division-slider-next">
+                      <span class="conference__slider-button-content">
+                        <svg width="8" height="12" aria-hidden="true" class="icon-arrow-right">
+                          <use xlink:href="#arrow-right" />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="conference__info">
+                    <ul class="conference__info-slider js-division-tables-slider">
+                      <li class="conference__info-slider-item">
+                        <table>
+                          <thead>
+                            <tr>
+                              <th colspan="2">Команда</th>
+                              <th>И</th>
+                              <th>О</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>1</td>
+                              <td>Автомобилист (Екатеринбург)</td>
+                              <td>59</td>
+                              <td>89</td>
+                            </tr>
+                            <tr>
+                              <td>2</td>
+                              <td>Барыс (Астана)</td>
+                              <td>60</td>
+                              <td>84</td>
+                            </tr>
+                            <tr>
+                              <td>3</td>
+                              <td>Авангард (Омская обл.)</td>
+                              <td>61</td>
+                              <td>81</td>
+                            </tr>
+                            <tr>
+                              <td>4</td>
+                              <td>Металлург (Магнитогорск)</td>
+                              <td>59</td>
+                              <td>80</td>
+                            </tr>
+                            <tr class="selected">
+                              <td>5</td>
+                              <td>Ак Барс (Казань)</td>
+                              <td>59</td>
+                              <td>79</td>
+                            </tr>
+                            <tr>
+                              <td>6</td>
+                              <td>Салават Юлаев (Уфа)</td>
+                              <td>60</td>
+                              <td>70</td>
+                            </tr>
+
+                          </tbody>
+                        </table>
+                      </li>
+                      <li class="conference__info-slider-item">
+                        <table>
+                          <thead>
+                            <tr>
+                              <th colspan="2">Команда</th>
+                              <th>И</th>
+                              <th>О</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>1</td>
+                              <td>Автомобилист (Екатеринбург)</td>
+                              <td>59</td>
+                              <td>89</td>
+                            </tr>
+                            <tr>
+                              <td>2</td>
+                              <td>Барыс (Астана)</td>
+                              <td>60</td>
+                              <td>84</td>
+                            </tr>
+                            <tr>
+                              <td>3</td>
+                              <td>Авангард (Омская обл.)</td>
+                              <td>61</td>
+                              <td>81</td>
+                            </tr>
+                            <tr>
+                              <td>4</td>
+                              <td>Металлург (Магнитогорск)</td>
+                              <td>59</td>
+                              <td>80</td>
+                            </tr>
+                            <tr class="selected">
+                              <td>5</td>
+                              <td>Ак Барс (Казань)</td>
+                              <td>59</td>
+                              <td>79</td>
+                            </tr>
+                            <tr>
+                              <td>6</td>
+                              <td>Салават Юлаев (Уфа)</td>
+                              <td>60</td>
+                              <td>70</td>
+                            </tr>
+                            <tr>
+                              <td>7</td>
+                              <td>Торпедо (Нижний Новгород)</td>
+                              <td>59</td>
+                              <td>62</td>
+                            </tr>
+                            <tr>
+                              <td>8</td>
+                              <td>Трактор (Челябинск)</td>
+                              <td>60</td>
+                              <td>56</td>
+                            </tr>
+                            <tr>
+                              <td>9</td>
+                              <td>Сибирь (Новосибирская обл.)</td>
+                              <td>60</td>
+                              <td>54</td>
+                            </tr>
+                            <tr>
+                              <td>10</td>
+                              <td>Нефтехимик (Нижнекамск)</td>
+                              <td>60</td>
+                              <td>52</td>
+                            </tr>
+                            <tr>
+                              <td>11</td>
+                              <td>Адмирал (Владивосток)</td>
+                              <td>60</td>
+                              <td>49</td>
+                            </tr>
+
+                          </tbody>
+                        </table>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="conference__all-tables">
+                    <a href="#" class="conference__all-tables-link">
+                      Все таблицы
+                    </a>
+                  </div>
                 </li>
                 <li class="tabs__item tabs__item--conference-tab js-tab">
-                  Кхл
+                  <div class="conference__slider-controls">
+                    <button class="conference__slider-button conference__slider-button--prev js-khl-slider-prev">
+                      <span class="conference__slider-button-content">
+                        <svg width="8" height="12" aria-hidden="true" class="icon-arrow-left">
+                          <use xlink:href="#arrow-left" />
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="conference__name">
+                      <ul class="conference__conference-name-slider js-khl-name-slider">
+                        <li class="conference__conference-name-slider-item">
+                          Чемпионат КХЛ
+                        </li>
+                      </ul>
+                    </div>
+                    <button class="conference__slider-button conference__slider-button--next js-khl-slider-next">
+                      <span class="conference__slider-button-content">
+                        <svg width="8" height="12" aria-hidden="true" class="icon-arrow-right">
+                          <use xlink:href="#arrow-right" />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="conference__info">
+                    <ul class="conference__info-slider js-khl-tables-slider">
+                      <li class="conference__info-slider-item">
+                        <table>
+                          <thead>
+                            <tr>
+                              <th colspan="2">Команда</th>
+                              <th>И</th>
+                              <th>О</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>1</td>
+                              <td>Автомобилист (Екатеринбург)</td>
+                              <td>59</td>
+                              <td>89</td>
+                            </tr>
+                            <tr>
+                              <td>2</td>
+                              <td>Барыс (Астана)</td>
+                              <td>60</td>
+                              <td>84</td>
+                            </tr>
+                            <tr>
+                              <td>3</td>
+                              <td>Авангард (Омская обл.)</td>
+                              <td>61</td>
+                              <td>81</td>
+                            </tr>
+                            <tr>
+                              <td>4</td>
+                              <td>Металлург (Магнитогорск)</td>
+                              <td>59</td>
+                              <td>80</td>
+                            </tr>
+                            <tr class="selected">
+                              <td>5</td>
+                              <td>Ак Барс (Казань)</td>
+                              <td>59</td>
+                              <td>79</td>
+                            </tr>
+                            <tr>
+                              <td>6</td>
+                              <td>Салават Юлаев (Уфа)</td>
+                              <td>60</td>
+                              <td>70</td>
+                            </tr>
+                            <tr>
+                              <td>7</td>
+                              <td>Торпедо (Нижний Новгород)</td>
+                              <td>59</td>
+                              <td>62</td>
+                            </tr>
+                            <tr>
+                              <td>8</td>
+                              <td>Трактор (Челябинск)</td>
+                              <td>60</td>
+                              <td>56</td>
+                            </tr>
+                            <tr>
+                              <td>9</td>
+                              <td>Сибирь (Новосибирская обл.)</td>
+                              <td>60</td>
+                              <td>54</td>
+                            </tr>
+                            <tr>
+                              <td>10</td>
+                              <td>Нефтехимик (Нижнекамск)</td>
+                              <td>60</td>
+                              <td>52</td>
+                            </tr>
+                            <tr>
+                              <td>11</td>
+                              <td>Адмирал (Владивосток)</td>
+                              <td>60</td>
+                              <td>49</td>
+                            </tr>
+                            <tr>
+                              <td>12</td>
+                              <td>Куньлунь Ред Стар (Пекин)</td>
+                              <td>60</td>
+                              <td>48</td>
+                            </tr>
+                            <tr>
+                              <td>13</td>
+                              <td>Амур (Хабаровск)</td>
+                              <td>60</td>
+                              <td>47</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="conference__all-tables">
+                    <a href="#" class="conference__all-tables-link">
+                      Все таблицы
+                    </a>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -1527,6 +1865,18 @@
         <section class="shop">
           <h2 class="shop__heading">Официальный интернет-магазин</h2>
           <div class="shop__products">
+            <div class="shop__slider-controls">
+              <button class="shop__slider-button shop__slider-button--prev js-shop-slider-prev">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 40">
+                  <polyline points="20,4 4,20 20,36" stroke="black" stroke-width="2" fill="none" />
+                </svg>
+              </button>
+              <button class="shop__slider-button shop__slider-button--next js-shop-slider-next">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 40">
+                  <polyline points="4,4 20,20 4,36" stroke="black" stroke-width="2" fill="none" />
+                </svg>
+              </button>
+            </div>
             <ul class="shop__products-list js-products-slider">
               <li class="shop__products-list-item">
                 <div class="shop__product-image-container">
@@ -1610,12 +1960,157 @@
               </li>
             </ul>
           </div>
+          <div class="shop__all-products">
+            <a href="#" class="shop__all-products-link">Все товары</a>
+          </div>
+        </section>
+        <section class="subscribe">
+          <h2 class="subscribe__heading">БУДЬТЕ В КУРСЕ НАШИХ СОБЫТИЙ</h2>
+          <form action="/" method="POST" class="subscribe__form">
+            <input type="email" class="subscribe__input" placeholder="Введите ваш e-mail" name="email" required />
+            <button type="submit" class="subscribe__submit">Подписаться</button>
+          </form>
+        </section>
+        <section class="sponsors">
+          <h3 class="sponsors__heading">
+            Спонсоры матчей с участием ХК «Ак Барс», ХК «Барс» и ХК «Ирбис»
+          </h3>
+          <ul class="sponsors__list">
+            <li class="sponsors__list-item">
+              <a href="#" class="sponsors__link">
+                <img src="img/sponsors/sponsors-tatneft.svg" width="222" height="64" alt="Логотип Татнефть" class="sponsors__logo sponsors__logo--tatneft" />
+              </a>
+              <span class="sponsors__status">
+                Генеральный спонсор
+              </span>
+            </li>
+            <li class="sponsors__list-item">
+              <a href="#" class="sponsors__link">
+                <img src="img/sponsors/sponsors-tatneft-azs.svg" width="190" height="78" alt="Логотип Татнефть АЗС" class="sponsors__logo sponsors__logo--tatneft-azs" />
+              </a>
+              <span class="sponsors__status">
+                Официальный спонсор
+              </span>
+            </li>
+            <li class="sponsors__list-item">
+              <a href="#" class="sponsors__link">
+                <img src="img/sponsors/sponsors-taneco.svg" width="190" height="46" alt="Логотип Танеко" class="sponsors__logo sponsors__logo--taneco" />
+              </a>
+              <span class="sponsors__status">
+                Официальный спонсор
+              </span>
+            </li>
+            <li class="sponsors__list-item">
+              <a href="#" class="sponsors__link">
+                <img src="img/sponsors/sponsors-viatti.svg" width="146" height="54" alt="Логотип Виатти" class="sponsors__logo sponsors__logo--viatti" />
+              </a>
+              <span class="sponsors__status">
+                Официальный спонсор
+              </span>
+            </li>
+          </ul>
         </section>
       </div>
     </main>
-    <footer>
+    <footer class="page-footer">
       <div class="container">
-
+        <div class="page-footer__links">
+          <div class="page-footer__links-general">
+            <a href="#" class="page-footer__link">Команда</a>
+            <a href="#" class="page-footer__link">Болельщики</a>
+            <a href="#" class="page-footer__link">Новости</a>
+            <a href="#" class="page-footer__link">Медиа</a>
+            <span class="page-footer__divider"></span>
+            <a href="#" class="page-footer__link">ХК «БАРС»</a>
+            <a href="#" class="page-footer__link">ХК «ИРБИС»</a>
+          </div>
+          <div class="page-footer__links-special">
+            <a href="#" class="page-footer__link">
+              <svg width="20" height="20" aria-hidden="true" class="icon-academy">
+                <use xlink:href="#academy" />
+              </svg>
+              Академия
+            </a>
+            <a href="#" class="page-footer__link">
+              <svg width="20" height="20" aria-hidden="true" class="icon-tickets">
+                <use xlink:href="#tickets" />
+              </svg>
+              Билеты</a>
+            <a href="#" class="page-footer__link">
+              <svg width="18" height="18" aria-hidden="true" class="icon-shop">
+                <use xlink:href="#shop" />
+              </svg>
+              Магазин
+            </a>
+          </div>
+        </div>
+        <div class="page-footer__bottom-row">
+          <div class="page-footer__info-block">
+            <img src="img/logo/akbars-logo.svg" alt="Логотип команды" width="154" height="88" class="page-footer__team-logo" />
+            <div class="page-footer__information">
+              <p>Официальный сайт ООО «СКП "Татнефть - Ак Барс"». &copy; 2000-2019</p>
+              <p>
+                При использовании материалов сайта ссылка на источник обязательна По вопросам размещения рекламы обращайтесь
+                по тел/факс: +7 843 53-38-232
+              </p>
+              <a href="#">Стать партнером ХК «Ак Барс»</a>
+            </div>
+          </div>
+          <div class="page-footer__social">
+            <ul class="page-footer__social-list">
+              <li class="page-footer__social-list-item">
+                <a href="#" class="page-footer__social-link">
+                  <svg width="15" height="15" aria-hidden="true" class="icon-vk">
+                    <use xlink:href="#vk" />
+                  </svg>
+                </a>
+              </li>
+              <li class="page-footer__social-list-item">
+                <a href="#" class="page-footer__social-link">
+                  <svg width="15" height="15" aria-hidden="true" class="icon-instagram">
+                    <use xlink:href="#instagram" />
+                  </svg>
+                </a>
+              </li>
+              <li class="page-footer__social-list-item">
+                <a href="#" class="page-footer__social-link">
+                  <svg width="15" height="15" aria-hidden="true" class="icon-youtube">
+                    <use xlink:href="#youtube" />
+                  </svg>
+                </a>
+              </li>
+              <li class="page-footer__social-list-item">
+                <a href="#" class="page-footer__social-link">
+                  <svg width="15" height="15" aria-hidden="true" class="icon-twitter">
+                    <use xlink:href="#twitter" />
+                  </svg>
+                </a>
+              </li>
+              <li class="page-footer__social-list-item">
+                <a href="#" class="page-footer__social-link">
+                  <svg width="15" height="15" aria-hidden="true" class="icon-fb">
+                    <use xlink:href="#fb" />
+                  </svg>
+                </a>
+              </li>
+              <li class="page-footer__social-list-item">
+                <a href="#" class="page-footer__social-link">
+                  <svg width="15" height="15" aria-hidden="true" class="icon-ok">
+                    <use xlink:href="#ok" />
+                  </svg>
+                </a>
+              </li>
+              <li class="page-footer__social-list-item">
+                <a href="#" class="page-footer__social-link">
+                  <svg width="15" height="15" aria-hidden="true" class="icon-telegram">
+                    <use xlink:href="#telegram" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+            <a href="#" class="page-footer__callback-form-link">Форма обратной связи</a>
+          </div>
+        </div>
       </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

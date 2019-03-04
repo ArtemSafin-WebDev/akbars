@@ -2,14 +2,21 @@
   width: 634px;
   display: flex;
   flex-direction: column;
-
   margin-right: 20px;
-  // background-color: #fff;
+  .tabs__navigation button {
+    padding-left: 35px;
+    padding-right: 35px;
+
+    svg {
+      margin-right: 20px;
+    }
+  }
 }
 
 .ak-bars-info__content {
   padding: 20px;
   padding-top: 52px;
+  padding-bottom: 26px;
 }
 
 .ak-bars-info__selected-video {
@@ -113,7 +120,7 @@
   line-height: 20px;
   border: 2px solid $green;
   display: inline-block;
-  padding: 10px 40px;
+  padding: 14px 46px;
   transition: all 0.3s;
   color: $green;
   margin-right: auto;

@@ -67,10 +67,41 @@ document.addEventListener('DOMContentLoaded', function(event) {
   })
 
 
-  $('.js-products-slider').slick({
+  $('.js-khl-name-slider').slick({
+    arrows: true,
+    dots: false,
+    prevArrow: '.js-khl-slider-prev',
+    nextArrow: '.js-khl-slider-next',
+    asNavFor: '.js-khl-tables-slider'
+  })
+
+  $('.js-khl-tables-slider').slick({
     arrows: false,
     dots: false,
-    slidesToShow: 4
+    draggable: false
+  })
+
+  $('.js-division-name-slider').slick({
+    arrows: true,
+    dots: false,
+    prevArrow: '.js-division-slider-prev',
+    nextArrow: '.js-division-slider-next',
+    asNavFor: '.js-division-tables-slider'
+  })
+
+  $('.js-division-tables-slider').slick({
+    arrows: false,
+    dots: false,
+    draggable: false
+  })
+
+
+  $('.js-products-slider').slick({
+    arrows: true,
+    dots: false,
+    slidesToShow: 4,
+    prevArrow: '.js-shop-slider-prev',
+    nextArrow: '.js-shop-slider-next',
   })
 
   // Модальное окно поиска
@@ -106,6 +137,21 @@ document.addEventListener('DOMContentLoaded', function(event) {
   })
   document.querySelector('.js-tab-button-photos').addEventListener('click', function() {
     $('.js-photos-slider').slick('setPosition')
+  })
+
+  document.querySelector('.js-tab-button-conference').addEventListener('click', function() {
+    $('.js-conference-name-slider').slick('setPosition')
+    $('.js-conference-tables-slider').slick('setPosition')
+  })
+
+  document.querySelector('.js-tab-button-division').addEventListener('click', function() {
+    $('.js-division-name-slider').slick('setPosition')
+    $('.js-division-tables-slider').slick('setPosition')
+  })
+
+  document.querySelector('.js-tab-button-khl').addEventListener('click', function() {
+    $('.js-khl-name-slider').slick('setPosition')
+    $('.js-khl-tables-slider').slick('setPosition')
   })
 
   // Календарь
