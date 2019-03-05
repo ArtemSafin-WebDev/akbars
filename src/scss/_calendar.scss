@@ -6,15 +6,22 @@
   .tabs__navigation button {
     padding-left: 28px;
     padding-right: 28px;
+    .tabs__button-content {
+      > svg {
+        &.icon-51 {
+          width: 22px;
+          height: 18px;
+        }
+      }
+    }
   }
 }
-
 
 .tabs__item--calendar-tab {
   flex-direction: column;
   padding: 20px;
   padding-bottom: 30px;
-  min-height: 720px;
+  min-height: 610px;
 }
 
 .calendar__controls {
@@ -41,6 +48,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
     > svg {
       fill: white;
     }
@@ -51,24 +59,31 @@
   color: #242f37;
   font-weight: 700;
   font-size: 16px;
+  line-height: 35px;
   flex-grow: 1;
   flex-basis: 50%;
   text-align: center;
 }
 
 .calendar__dates {
-  margin-top: 38px;
+  margin-top: 23px;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   table {
-    width: 100%;
-    border-spacing: 11.5px;
-    margin: -11.5px;
-    // border-collapse: collapse;
-    // table-layout: fixed;
-    // border-collapse: separate;
-    // border-spacing: 0;
+    width: calc(100% + 12px);
+    margin-left: -6px;
+    border-collapse: collapse;
+    table-layout: fixed;
+    tr {
+      td {
+        padding: 6px;
+        position: relative;
+        > * {
+          position: absolute;
+        }
+      }
+    }
   }
 
   th {
@@ -82,8 +97,8 @@
 
   td {
     .calendar__date-info {
-      width: 75px;
-      height: 75px;
+      // width: 75px;
+      height: 65px;
       background-color: #ebebeb;
       color: #606366;
 
@@ -171,6 +186,7 @@
         width: 100%;
         height: 100%;
         display: block;
+        @include objectFitCover();
       }
     }
   }
@@ -179,7 +195,7 @@
 .calendar__legend {
   display: flex;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 4px;
   margin-bottom: 20px;
 }
 
@@ -189,13 +205,13 @@
   line-height: 16px;
   display: flex;
   align-items: center;
-  margin-right: 40px;
+  margin-right: 42px;
   &::before {
     content: '';
     display: block;
-    width: 16px;
-    height: 16px;
-    border: 2px solid #606366;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #606366;
     margin-right: 12px;
   }
 
@@ -244,7 +260,7 @@
   color: $green;
   outline: none;
   font-family: 'Supermolot', 'Helvetica', sans-serif;
-  transition: color .3s;
+  transition: color 0.3s;
   &:link,
   &:visited {
     color: $green;
@@ -256,7 +272,6 @@
 
   &:hover,
   &:focus {
-    color: $red
+    color: $red;
   }
-
 }

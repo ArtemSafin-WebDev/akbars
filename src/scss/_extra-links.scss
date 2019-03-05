@@ -2,10 +2,11 @@
   margin-left: auto;
   &__list {
     display: flex;
+    align-items: center;
     &-item {
-      margin-right: 20px;
+      margin-right: 22px;
       &:first-child {
-        margin-right: 48px;
+        margin-right: 41px;
       }
       &:last-child {
         margin-right: 0;
@@ -27,9 +28,21 @@
       width: 20px;
       height: 20px;
       margin-right: 10px;
+      position: relative;
+      bottom: 1px;
+      &.icon-academy {
+        bottom: 0;
+      }
       &.icon-shop {
         width: 20px;
         height: 20px;
+        bottom: 2px;
+      }
+      &.icon-tickets {
+        width: 23px;
+        height: 23px;
+        position: relative;
+        bottom: 1px;
       }
     }
     &:link,

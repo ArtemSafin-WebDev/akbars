@@ -23,18 +23,18 @@
 }
 
 .stats__player-categories-list-item {
-  width: 300px;
-  margin-right: 10px;
+  width: 285px;
+  margin-right: 32px;
   box-shadow: 0px 0px 60px rgba(black, 0.12);
-  padding-bottom: 34px;
+  padding-bottom: 8px;
   &:last-child {
     margin-right: 0;
   }
 }
 
 .stats__featured-player-photo-container {
-  width: 300px;
-  height: 300px;
+  width: 285px;
+  height: 285px;
 }
 
 .stats__player-category-name {
@@ -62,17 +62,27 @@
 
   tbody {
     tr {
-      &:first-child {
-        td {
-          border-top: 8px solid white;
-        }
-      }
-
       &:hover {
         cursor: default;
         &:not(.stats__selected-player) {
           td {
             background-color: rgba($green, 0.15);
+            &:nth-child(2) {
+              color: $red;
+            }
+          }
+        }
+      }
+
+      &:last-child {
+        td {
+          border-bottom: 1px solid transparent;
+          
+          &:first-child,
+          &:last-child {
+            &::before {
+              display: none;
+            }
           }
         }
       }
@@ -83,7 +93,7 @@
       line-height: 36px;
       border-bottom: 1px solid #ebebeb;
       position: relative;
-
+      transition: color .2s, background-color .2s;
       &:first-child {
         color: #606366;
         padding-left: 16px;
@@ -100,7 +110,7 @@
         color: #242f37;
         font-weight: 700;
         padding-right: 16px;
-        padding-right: 22px;
+        // padding-right: 22px;
         text-align: right;
         &::before {
           content: '';
@@ -116,15 +126,12 @@
     tr.stats__selected-player {
       td {
         background-color: #ebebeb;
-        position: relative;
-        &::after {
-          content: '';
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          height: 3px;
-          background-color: #fff;
-          width: 100%;
+        border-bottom: 1px solid #ebebeb;
+        &:first-child,
+        &:last-child {
+          &::before {
+            display: none;
+          }
         }
       }
     }
@@ -142,7 +149,7 @@
   display: inline-block;
   padding: 13px 32px;
   transition: all 0.3s;
-  margin-top: 28px;
+  margin-top: 38px;
   color: $green;
   &:link,
   &:visited {

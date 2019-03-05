@@ -44,11 +44,13 @@
   display: flex;
   flex-direction: column;
   padding-bottom: 30px;
+  position: relative;
 }
 
 .conference__slider-controls {
   display: flex;
   padding: 20px;
+  flex-shrink: 0;
 }
 
 .conference__name {
@@ -69,6 +71,7 @@
   flex-grow: 1;
   &-item {
     display: flex !important;
+    line-height: 35px;
   }
 }
 
@@ -88,25 +91,27 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
     > svg {
       fill: white;
     }
   }
 }
 
-
 .conference__info {
-  margin-bottom: 20px;
+  // margin-bottom: 20px;
+  height: 490px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   table {
     width: 100%;
     border-collapse: collapse;
-    
   }
 
   thead {
-    background-color: #EBEBEB;
+    background-color: #ebebeb;
     th {
-      color: #242F37;
+      color: #242f37;
       font-family: Arial, Helvetica, sans-serif;
       font-size: 16px;
       line-height: 36px;
@@ -120,11 +125,9 @@
     }
   }
 
-
   tbody {
-    
     tr {
-      transition: background-color .15s;
+      transition: background-color 0.15s;
       cursor: default;
       &.selected {
         background-color: $red;
@@ -134,7 +137,7 @@
       }
 
       &:hover:not(.selected) {
-        background-color: rgba($green, .15);
+        background-color: rgba($green, 0.15);
       }
 
       &:first-child {
@@ -167,9 +170,9 @@
       font-family: Arial, Helvetica, sans-serif;
       font-size: 16px;
       line-height: 36px;
-      color: #242F37;
-      border-bottom: 1px solid #EBEBEB;
-      transition: color .15s;
+      color: #242f37;
+      border-bottom: 1px solid #ebebeb;
+      transition: color 0.15s;
       &:nth-child(2) {
         font-size: 14px;
       }
@@ -205,8 +208,6 @@
       }
     }
 
-    
-
     .conference__number {
       color: #606366;
       font-size: 16px;
@@ -214,11 +215,42 @@
   }
 }
 
-
 .conference__all-tables {
-  margin-top: auto;
+  // margin-top: auto;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  position: absolute;
+  bottom: 30px;
+
+  left: 0;
+  width: 100%;
+  height: 140px;
+  z-index: 1;
+  &::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+70&0+0,1+70 */
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 70%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(
+      top,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 1) 70%
+    ); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 1) 70%
+    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+  }
 }
 
 .conference__all-tables-link {
@@ -229,7 +261,7 @@
   padding: 13px 47px;
   transition: all 0.3s;
   color: $green;
-  
+
   &:link,
   &:visited {
     color: $green;
@@ -241,7 +273,6 @@
   }
 }
 
-
 .conference__info-slider {
   .slick-track {
     display: flex;
@@ -250,8 +281,12 @@
   .slick-slide {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     > div {
       width: 100%;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
     }
   }
 }
@@ -259,4 +294,5 @@
 .conference__info-slider-item {
   display: flex !important;
   flex-direction: column;
+  padding-bottom: 110px;
 }

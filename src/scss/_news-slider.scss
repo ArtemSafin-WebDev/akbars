@@ -72,6 +72,7 @@
 .news-slider__news-info {
   display: flex;
   align-items: center;
+  margin-top: 4px;
 }
 
 .news-slider__info-block {
@@ -82,6 +83,7 @@
   line-height: 16px;
   text-transform: uppercase;
   color: white;
+  outline: none;
   &:link,
   &:visited {
     color: white;
@@ -101,9 +103,11 @@
     fill: white;
     margin-right: 10px;
     display: block;
+    position: relative;
     &.icon-news-calendar {
-      width: 12px;
-      height: 12px;
+      width: 14px;
+      height: 14px;
+      bottom: 1px;
     }
 
     &.icon-news-views {
@@ -139,6 +143,7 @@
 }
 
 .news-slider__news-heading-link {
+  outline: none;
   &:link,
   &:visited {
     color: white;
@@ -153,8 +158,8 @@
 .news-slider__news-heading {
   font-size: 34px;
   line-height: 44px;
-  padding-right: 110px;
-  margin-top: 30px;
+  // padding-right: 110px;
+  margin-top: 24px;
   text-transform: uppercase;
 }
 
@@ -212,7 +217,7 @@
   align-items: center;
   position: absolute;
   right: 0;
-  bottom: 30px;
+  bottom: 27px;
   padding-right: 35px;
   padding-left: 40px;
   width: 586px;
@@ -240,15 +245,12 @@
       transition: all .3s;
       &:hover,
       &:focus {
-        width: 16px;
-        height: 16px;
+        transform: scale(1.5);
       }
     }
 
     li.slick-active button {
-      width: 16px;
-      height: 16px;
-      // transform: scale(1.6);
+      transform: scale(1.6);
       background-color: #fff;
     }
   }
@@ -260,7 +262,7 @@
   line-height: 20px;
   border: 2px solid white;
   display: inline-block;
-  padding: 13px 40px;
+  padding: 13px 37px;
   margin-left: auto;
   transition: all 0.3s;
   &:link,

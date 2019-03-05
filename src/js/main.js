@@ -1,9 +1,10 @@
+import "@babel/polyfill";
 import $ from 'jquery'
-
 import 'slick-carousel'
 import '@fancyapps/fancybox'
 import makeTabsController from './tabs'
 import objectFitImages from 'object-fit-images'
+import 'simplebar'
 
 document.addEventListener('DOMContentLoaded', function(event) {
   // Полифилл для CSS свойства ObjectFit 

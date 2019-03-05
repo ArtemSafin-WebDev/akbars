@@ -6,6 +6,13 @@
     <title>
       Официальный сайт хоккейного клуба "Ак Барс" (ООО "СКП "Татнефть-Ак Барс"). Главная страница
     </title>
+    <noscript>
+      <style>
+      [data-simplebar] {
+          overflow: auto;
+      }
+      </style>
+    </noscript>
   </head>
   <body>
     <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
@@ -183,7 +190,7 @@
                     </div>
                     <a href="#" class="news-slider__news-heading-link">
                       <h3 class="news-slider__news-heading">
-                        Роб Клинкхаммер: «Никто не ожидал, что всё так случится»
+                        «Никто не ожидал, что всё так случится»
                       </h3>
                     </a>
                     <p class="news-slider__news-paragraph">
@@ -385,10 +392,10 @@
               <div class="tabs js-tabs-container">
                 <nav class="tabs__navigation">
                   <button class="js-tab-button">
-                    Прошлый матч
+                    <span>Прошлый матч</span>
                   </button>
                   <button class="js-tab-button">
-                    Следующий матч
+                    <span>Следующий матч</span>
                   </button>
                 </nav>
                 <ul class="tabs__content">
@@ -499,38 +506,53 @@
                     </div>
                     <ul class="match-info__media">
                       <li class="match-info__media-item">
-                        <a href="#" class="match-info__media-link" title="Публикации">
+                        <a href="#" class="match-info__media-link">
                           <svg width="22" height="22" aria-hidden="true" class="icon-search-publications">
                             <use xlink:href="#publications" />
                           </svg>
+                          <span class="match-info__media-link-description">
+                            Публикации
+                          </span>
                         </a>
                       </li>
                       <li class="match-info__media-item">
-                        <a href="#" class="match-info__media-link" title="Протокол">
+                        <a href="#" class="match-info__media-link">
                           <svg width="22" height="22" aria-hidden="true" class="icon-search-protocol">
                             <use xlink:href="#protocol" />
                           </svg>
+                          <span class="match-info__media-link-description">
+                            Протокол
+                          </span>
                         </a>
                       </li>
                       <li class="match-info__media-item">
-                        <a href="#" class="match-info__media-link" title="Видео">
+                        <a href="#" class="match-info__media-link">
                           <svg width="22" height="22" aria-hidden="true" class="icon-search-video">
                             <use xlink:href="#video" />
                           </svg>
+                          <span class="match-info__media-link-description">
+                            Видео
+                          </span>
                         </a>
                       </li>
                       <li class="match-info__media-item">
-                        <a href="#" class="match-info__media-link" title="Голы">
+                        <a href="#" class="match-info__media-link">
                           <svg width="22" height="22" aria-hidden="true" class="icon-search-goals">
                             <use xlink:href="#goals" />
                           </svg>
+                          <span class="match-info__media-link-description">
+                            Голы
+                          </span>
                         </a>
                       </li>
                       <li class="match-info__media-item">
-                        <a href="#" class="match-info__media-link" title="Фото">
+                        <a href="#" class="match-info__media-link">
                           <svg width="22" height="22" aria-hidden="true" class="icon-search-photo">
                             <use xlink:href="#photo" />
                           </svg>
+                          <span class="match-info__media-link-description">
+                            Фото
+                          </span>
                         </a>
                       </li>
                     </ul>
@@ -831,7 +853,7 @@
                   </li>
                   <li class="tabs__item tabs__item--results-tab js-tab">
                     <div class="results">
-                      <div class="results__wrapper">
+                      <div class="results__wrapper" data-simplebar>
                         <table class="results__table">
                           <thead>
                             <tr>
@@ -1037,11 +1059,11 @@
                             </tr>
                           </tbody>
                         </table>
-                        <div class="results__button-bottom-container">
-                          <a href="#" class="results__all-results-link">
-                            Все результаты
-                          </a>
-                        </div>
+                      </div>
+                      <div class="results__button-bottom-container">
+                        <a href="#" class="results__all-results-link">
+                          Все результаты
+                        </a>
                       </div>
                     </div>
                   </li>
@@ -1052,13 +1074,13 @@
               <div class="tabs js-tabs-container">
                 <nav class="tabs__navigation">
                   <button class="js-tab-button js-tab-button-conference">
-                    Конференции
+                    <span>Конференции</span>
                   </button>
                   <button class="js-tab-button js-tab-button-division">
-                    Дивизионы
+                    <span>Дивизионы</span>
                   </button>
                   <button class="js-tab-button js-tab-button-khl">
-                    Кхл
+                    <span>Кхл</span>
                   </button>
                 </nav>
                 <ul class="tabs__content conference__content">
@@ -1093,7 +1115,7 @@
                         </span>
                       </button>
                     </div>
-                    <div class="conference__info">
+                    <div class="conference__info" data-simplebar>
                       <ul class="conference__info-slider js-conference-tables-slider">
                         <li class="conference__info-slider-item">
                           <table>
@@ -1312,7 +1334,7 @@
                         </span>
                       </button>
                     </div>
-                    <div class="conference__info">
+                    <div class="conference__info" data-simplebar>
                       <ul class="conference__info-slider js-division-tables-slider">
                         <li class="conference__info-slider-item">
                           <table>
@@ -1474,7 +1496,7 @@
                         </span>
                       </button>
                     </div>
-                    <div class="conference__info">
+                    <div class="conference__info" data-simplebar>
                       <ul class="conference__info-slider js-khl-tables-slider">
                         <li class="conference__info-slider-item">
                           <table>
@@ -1592,10 +1614,10 @@
               <div class="tabs js-tabs-container">
                 <nav class="tabs__navigation">
                   <button class="js-tab-button">
-                    Регулярный чемпионат
+                    <span>Регулярный чемпионат</span>
                   </button>
                   <button class="js-tab-button">
-                    Плей-офф
+                    <span>Плей-офф</span>
                   </button>
                 </nav>
                 <ul class="tabs__content">

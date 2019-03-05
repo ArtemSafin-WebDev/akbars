@@ -1,6 +1,7 @@
 .team {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
   &__logo {
     display: block;
     width: 162px;
@@ -21,10 +22,11 @@
 .team__slider-image-block {
   width: 70px;
   height: 100px;
+  margin-right: 5px;
 }
 
 .team__slider-text-block {
-  width: 172px;
+  width: 220px;
   .slick-slide {
     outline: none;
   }

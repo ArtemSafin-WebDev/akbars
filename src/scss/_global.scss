@@ -39,6 +39,7 @@ button {
   cursor: pointer;
   user-select: none;
   -webkit-appearance: none;
+  
 }
 
 a {
@@ -66,3 +67,13 @@ svg {
   color: white;
   background: $green;
 } 
+
+.simplebar-scrollbar:before {
+  background-color: darkgrey;
+  border-radius: 0;
+}
+
+.simplebar-track .simplebar-scrollbar.simplebar-visible:before {
+  opacity: 0.8;
+  transition: opacity 0s linear;
+}
