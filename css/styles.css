@@ -678,8 +678,8 @@ svg {
   margin-left: 20px;
   width: 240px;
   background-color: #fff;
-  height: 230px;
-  color: #D81E23;
+  height: 235px;
+  color: #256963;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -690,7 +690,13 @@ svg {
       -ms-flex-pack: center;
           justify-content: center;
   font-weight: 700;
-  font-size: 22px; }
+  font-size: 20px;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  margin-top: 52px; }
+  .banner--high {
+    height: 340px; }
 
 .banner-column {
   display: -webkit-box;
@@ -701,12 +707,13 @@ svg {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-left: 20px;
-  width: 240px; }
+  width: 240px;
+  padding-top: 52px; }
   .banner-column__item {
     background-color: #fff;
     color: #D81E23;
     width: 100%;
-    height: 240px;
+    height: 235px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -717,10 +724,35 @@ svg {
         -ms-flex-pack: center;
             justify-content: center;
     font-weight: 700;
-    font-size: 22px;
-    margin-bottom: 20px; }
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-size: cover;
+    background-position: center; }
     .banner-column__item:last-child {
       margin-bottom: 0; }
+
+.banner-long {
+  width: 100%;
+  height: 140px;
+  background-color: #fff;
+  color: #256963;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 20px;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  margin-top: 40px; }
 
 .khl-placeholder {
   background-color: #242F37;
@@ -3315,7 +3347,7 @@ svg {
     margin-right: 15px; }
 
 .partners__logo-container {
-  width: 130px;
+  width: 120px;
   height: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
