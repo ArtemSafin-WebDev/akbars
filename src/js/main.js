@@ -107,6 +107,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     arrows: true,
     dots: false,
     slidesToShow: 4,
+    slidesToScroll: 4,
     prevArrow: '.js-shop-slider-prev',
     nextArrow: '.js-shop-slider-next',
   })
@@ -160,6 +161,24 @@ document.addEventListener('DOMContentLoaded', function(event) {
     $('.js-khl-name-slider').slick('setPosition')
     $('.js-khl-tables-slider').slick('setPosition')
   })
+
+
+  // Политика по кукам
+
+  const cookiePolicyPanel = document.querySelector('.js-cookie-policy');
+  const cookiePolicyAccept = document.querySelector('.js-cookie-policy-accept');
+
+  if (cookiePolicyPanel) {
+    const cookiePolicyAccepted = localStorage.getItem('cookieAccepted') === 'Y';
+
+    if (!cookiePolicyAccepted) {
+      cookiePolicyPanel.classList.add('shown');
+    }
+    cookiePolicyAccept.addEventListener('click', function() {
+      localStorage.setItem('cookieAccepted', 'Y');
+      cookiePolicyPanel.classList.remove('shown');
+    })
+  }
 
   // Календарь
 

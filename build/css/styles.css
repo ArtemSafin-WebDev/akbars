@@ -778,6 +778,53 @@ svg {
         -ms-flex-align: center;
             align-items: center; }
 
+.cookie-policy {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  z-index: 12000;
+  background-color: rgba(37, 105, 99, 0.9);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  opacity: 0;
+  visibility: hidden; }
+  .cookie-policy > .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .cookie-policy.shown {
+    opacity: 1;
+    visibility: visible; }
+
+.cookie-policy__text {
+  width: 50%;
+  font-size: 16px;
+  line-height: 20px;
+  color: white; }
+
+.cookie-policy__privacy-policy-link {
+  color: white;
+  text-decoration: underline; }
+  .cookie-policy__privacy-policy-link:link, .cookie-policy__privacy-policy-link:visited {
+    color: white; }
+
+.cookie-policy__accept-button {
+  border: 2px solid white;
+  padding: 15px 35px;
+  margin-left: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  outline: none;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  background-color: #fff;
+  color: #D81E23; }
+
 .team {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2823,14 +2870,6 @@ svg {
         cursor: grabbing; }
 
 .shop__products-list-item {
-  padding: 20px 25px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   width: 240px;
   text-align: center;
   -webkit-box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.12);
@@ -2839,10 +2878,35 @@ svg {
   transition: -webkit-box-shadow 0.2s ease-in-out;
   transition: box-shadow 0.2s ease-in-out;
   transition: box-shadow 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
   display: flex !important;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1; }
+
+.shop__product-link {
+  outline: none;
+  color: #256963;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 20px 25px; }
+  .shop__product-link:link, .shop__product-link:visited {
+    color: #256963; }
+  .shop__product-link:hover .shop__buy, .shop__product-link:focus .shop__buy {
+    background-color: #D81E23; }
 
 .slick-slide.slick-active .shop__products-list-item {
   -webkit-box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.12);
@@ -2876,7 +2940,7 @@ svg {
   color: #606366;
   margin-top: auto; }
 
-.shop__buy-link {
+.shop__buy {
   background-color: #256963;
   color: white;
   font-size: 14px;
@@ -2888,10 +2952,6 @@ svg {
   outline: none;
   -webkit-transition: all 0.2s;
   transition: all 0.2s; }
-  .shop__buy-link:link, .shop__buy-link:visited {
-    color: white; }
-  .shop__buy-link:hover, .shop__buy-link:focus {
-    background-color: #D81E23; }
 
 .shop__slider-button {
   position: absolute;
@@ -3223,9 +3283,10 @@ svg {
     border: 2px solid #D81E23; }
 
 .partners {
-  padding: 20px 60px;
+  padding: 32px 60px 44px;
   background-color: #fff;
-  margin-top: 40px; }
+  margin-top: 40px;
+  text-align: center; }
 
 .partners__heading {
   color: #5D6166;
@@ -3237,9 +3298,56 @@ svg {
 
 .partner__status {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  line-height: 20px;
-  color: #7F7F7F; }
+  font-size: 14px;
+  line-height: 18px;
+  color: #7F7F7F;
+  margin-top: 15px; }
+
+.partners__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .partners__list-item {
+    margin-right: 15px; }
+
+.partners__logo-container {
+  width: 130px;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.partner__logo {
+  position: relative; }
+  .partner__logo--megafon {
+    bottom: -5px; }
+  .partner__logo--hankook {
+    bottom: -5px; }
+
+.partners__link {
+  color: #7F7F7F;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .partners__link:link, .partners__link:visited {
+    color: #7F7F7F; }
 
 .page-footer {
   margin-top: 40px;
