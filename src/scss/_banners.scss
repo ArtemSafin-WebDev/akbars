@@ -2,35 +2,61 @@
   margin-left: 20px;
   width: 240px;
   background-color: #fff;
-  height: 230px;
-  color: $red;
+  height: 235px;
+  color: $green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  margin-top: 52px;
+  &--high {
+    height: 340px;
+  }
+}
+
+.banner-column {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  width: 240px;
+  padding-top: 52px;
+  &__item {
+    background-color: #fff;
+    color: $red;
+    width: 100%;
+    height: 235px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.banner-long {
+  width: 100%;
+  height: 140px;
+  background-color: #fff;
+  color: $green;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
   font-size: 22px;
-}
-
-
-.banner-column {
-  display: flex;
-  flex-direction: column;
-  // justify-content: space-between;
-  margin-left: 20px;
-  width: 240px;
-  &__item {
-    background-color: #fff;
-    color: $red;
-    width: 100%;
-    height: 240px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 22px;
-    margin-bottom: 20px;
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
+  margin-bottom: 20px;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  margin-top: 40px;
 }
