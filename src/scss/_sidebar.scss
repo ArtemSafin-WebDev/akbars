@@ -1,0 +1,51 @@
+.sidebar {
+  margin-right: 40px;
+  width: 240px;
+}
+
+
+.sidebar-nav {
+  width: 190px;
+}
+
+.sidebar-nav__list {
+
+}
+
+
+.sidebar-nav__list-item {
+
+}
+
+
+.sidebar-nav__link {
+  color: $green;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 8px 20px;
+  transition: all .2s;
+  display: block;
+  width: 100%;
+  &:link,
+  &:visited {
+    color: $green;
+  }
+
+
+  &:hover,
+  &:focus {
+    color: $red;
+  }
+
+
+  .active & {
+    background-color: $green;
+    color: white;
+    &:hover,
+    &:focus {
+      color: white;
+    }
+  }
+
+  
+}

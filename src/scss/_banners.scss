@@ -16,6 +16,8 @@
   &--high {
     height: 340px;
   }
+
+ 
 }
 
 .banner-column {
@@ -23,7 +25,15 @@
   flex-direction: column;
   margin-left: 20px;
   width: 240px;
-  padding-top: 52px;
+  margin-top: 52px;
+  &--left {
+    margin-left: 0;
+    margin-right: 40px;
+  }
+
+  &--news {
+    margin-top: 80px;
+  }
   &__item {
     background-color: #fff;
     color: $red;

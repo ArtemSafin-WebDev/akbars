@@ -1,16 +1,26 @@
-import "@babel/polyfill";
+import '@babel/polyfill'
 import $ from 'jquery'
 import 'slick-carousel'
 import '@fancyapps/fancybox'
 import makeTabsController from './tabs'
 import objectFitImages from 'object-fit-images'
-import 'simplebar'
+// import 'simplebar'
+
+import 'simplebar';
+import Choices from 'choices.js'
 
 document.addEventListener('DOMContentLoaded', function(event) {
-  // Полифилл для CSS свойства ObjectFit 
+  // Полифилл для CSS свойства ObjectFit
 
-  objectFitImages()
+  objectFitImages();
 
+  // Скроллбар
+
+  
+  
+  // new SimpleBar(document.getElementById('division-simplebar'), { autoHide: false });
+  // new SimpleBar(document.getElementById('conference-simplebar'), { autoHide: false });
+  
 
   // Слайдер кубков
 
@@ -58,7 +68,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
     nextArrow: '.js-photos-slider-next'
   })
 
-
   $('.js-conference-name-slider').slick({
     arrows: true,
     dots: false,
@@ -72,7 +81,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
     dots: false,
     draggable: false
   })
-
 
   $('.js-khl-name-slider').slick({
     arrows: true,
@@ -102,14 +110,13 @@ document.addEventListener('DOMContentLoaded', function(event) {
     draggable: false
   })
 
-
   $('.js-products-slider').slick({
     arrows: true,
     dots: false,
     slidesToShow: 4,
     slidesToScroll: 4,
     prevArrow: '.js-shop-slider-prev',
-    nextArrow: '.js-shop-slider-next',
+    nextArrow: '.js-shop-slider-next'
   })
 
   // Модальное окно поиска
@@ -117,84 +124,57 @@ document.addEventListener('DOMContentLoaded', function(event) {
   const searchButton = document.getElementById('search-button')
   const searchModal = document.querySelector('.search-modal')
 
-  searchButton.addEventListener('click', event => {
-    event.preventDefault()
-    document.body.classList.toggle('search-modal-open')
-  })
+  if (searchModal) {
+    searchButton.addEventListener('click', event => {
+      event.preventDefault()
+      document.body.classList.toggle('search-modal-open')
+    })
 
-  searchModal.addEventListener('click', event => {
-    event.preventDefault()
-    if (event.target === searchModal) {
-      document.body.classList.remove('search-modal-open')
-    }
-  })
+    searchModal.addEventListener('click', event => {
+      event.preventDefault()
+      if (event.target === searchModal) {
+        document.body.classList.remove('search-modal-open')
+      }
+    })
+  }
 
   // Иниализация всех табов на странице с помощью фабрики функций
 
   const tabContainers = Array.from(document.querySelectorAll('.js-tabs-container'))
 
-  tabContainers.forEach(tabContainer => {
-    const initializeTab = makeTabsController()
-    initializeTab(tabContainer)
-  })
-
-  // Фиксы для слайдеров в табах. Слайдер не инициализируется правильно, если у элемента стоит свойство display: none
-
-  document.querySelector('.js-tab-button-info').addEventListener('click', function() {
-    $('.js-videos-slider').slick('setPosition')
-  })
-  document.querySelector('.js-tab-button-photos').addEventListener('click', function() {
-    $('.js-photos-slider').slick('setPosition')
-  })
-
-  document.querySelector('.js-tab-button-conference').addEventListener('click', function() {
-    $('.js-conference-name-slider').slick('setPosition')
-    $('.js-conference-tables-slider').slick('setPosition')
-  })
-
-  document.querySelector('.js-tab-button-division').addEventListener('click', function() {
-    $('.js-division-name-slider').slick('setPosition')
-    $('.js-division-tables-slider').slick('setPosition')
-  })
-
-  document.querySelector('.js-tab-button-khl').addEventListener('click', function() {
-    $('.js-khl-name-slider').slick('setPosition')
-    $('.js-khl-tables-slider').slick('setPosition')
-  })
-
-
-  // Политика по кукам
-
-  const cookiePolicyPanel = document.querySelector('.js-cookie-policy');
-  const cookiePolicyAccept = document.querySelector('.js-cookie-policy-accept');
-
-  if (cookiePolicyPanel) {
-    const cookiePolicyAccepted = localStorage.getItem('cookieAccepted') === 'Y';
-
-    if (!cookiePolicyAccepted) {
-      cookiePolicyPanel.classList.add('shown');
-    }
-    cookiePolicyAccept.addEventListener('click', function() {
-      localStorage.setItem('cookieAccepted', 'Y');
-      cookiePolicyPanel.classList.remove('shown');
+  if (tabContainers.length > 0) {
+    tabContainers.forEach(tabContainer => {
+      const initializeTab = makeTabsController()
+      initializeTab(tabContainer)
     })
   }
 
-  // Календарь
+  
+  // Политика по кукам
 
-  // $.ajax({
-  //   type: 'POST',
-  //   url: 'https://www.ak-bars.ru/calendar/loadtable.php',
-  //   data: { month: 2, year: 2019, team: 1 },
-  //   success: function(data) {
-  //     console.log(data)
-  //   },
-  //   error: function(XMLHttpRequest, textStatus, errorThrown) {
-  //     alert('Ошибка связи с сервером!')
-  //     return false
-  //   }
-  // })
+  const cookiePolicyPanel = document.querySelector('.js-cookie-policy')
+  const cookiePolicyAccept = document.querySelector('.js-cookie-policy-accept')
+
+  if (cookiePolicyPanel) {
+    const cookiePolicyAccepted = localStorage.getItem('cookieAccepted') === 'Y'
+
+    if (!cookiePolicyAccepted) {
+      cookiePolicyPanel.classList.add('shown')
+    }
+    cookiePolicyAccept.addEventListener('click', function() {
+      localStorage.setItem('cookieAccepted', 'Y')
+      cookiePolicyPanel.classList.remove('shown')
+    })
+  }
 
 
+  // Кастомный селект
 
+
+  // const choicesOptions = {
+  //   itemSelectText: ''
+  // }
+  // new Choices('#season', choicesOptions)
+
+ 
 })

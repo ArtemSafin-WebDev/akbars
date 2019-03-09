@@ -11,12 +11,17 @@
       margin-right: 20px;
     }
   }
+
+  .tabs__item {
+    padding: 20px;
+    padding-top: 52px;
+    padding-bottom: 26px;
+    min-height: 100%;
+  }
 }
 
 .ak-bars-info__content {
-  padding: 20px;
-  padding-top: 52px;
-  padding-bottom: 26px;
+  
 }
 
 .ak-bars-info__selected-video {
@@ -143,12 +148,13 @@
   &::after {
     content: '';
     bottom: 0;
-    left: 0;
-    width: 100%;
+    right: -2px;
+    width: calc(100% + 2px);
     height: 120px;
     position: absolute;
     z-index: 20;
     pointer-events: none;
+
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+70&0+0,1+70 */
     background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 70%); /* FF3.6-15 */
     background: -webkit-linear-gradient(

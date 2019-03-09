@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   background-color: #fff;
-
+  position: relative;
   .tabs__navigation {
     button {
       padding-left: 0;
@@ -98,11 +98,15 @@
   }
 }
 
+
 .conference__info {
-  // margin-bottom: 20px;
   height: 490px;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+}
+
+.conference__info-slider {
+  
   table {
     width: 100%;
     border-collapse: collapse;
@@ -227,7 +231,7 @@
   left: 0;
   width: 100%;
   height: 140px;
-  z-index: 1;
+  z-index: 10;
   &::before {
     content: '';
     width: 100%;

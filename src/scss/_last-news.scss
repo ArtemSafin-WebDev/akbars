@@ -1,0 +1,103 @@
+.last-news {
+  width: 960px;
+  background-color: #fff;
+  border-top: 2px solid $green;
+  padding: 40px 40px;
+  margin-left: auto;
+}
+
+.last-news__content {
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.last-news__main-heading {
+  font-size: 26px;
+  line-height: 38px;
+  margin-left: -40px;
+  
+}
+
+.last-news__heading {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  width: 624px;
+}
+
+.last-news__link {
+  color: $green;
+  outline: none;
+
+  &:link,
+  &:visited {
+    color: $green;
+  }
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+.last-news__list {
+  margin-top: 28px;
+  border-bottom: 3px solid #ebebeb;
+  padding-bottom: 22px;
+}
+
+.last-news__list-item {
+  margin-bottom: 16px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.last-news__info {
+  display: flex;
+  align-items: center;
+  margin-top: 2px;
+}
+
+.last-news__info-block {
+  display: flex;
+  align-items: center;
+  color: #94999f;
+  margin-right: 20px;
+  > svg {
+    fill: #94999f;
+    margin-right: 10px;
+  }
+  &:link,
+  &:visited {
+    color: #94999f;
+  }
+
+  &[href] {
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+.last-news__all-news-link {
+  font-size: 16px;
+  line-height: 20px;
+  border: 2px solid $green;
+  display: inline-block;
+  padding: 13px 38px;
+  transition: all 0.3s;
+  color: $green;
+  margin-top: 35px;
+  align-self: center;
+  &:link,
+  &:visited {
+    color: $green;
+  }
+
+  &:hover,
+  &:focus {
+    border: 2px solid $red;
+  }
+}

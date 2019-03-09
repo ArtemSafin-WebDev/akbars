@@ -32,10 +32,10 @@
     })
     tabs.forEach((tab, index) => {
       if (index === (activeTab - 1)) {
-        tab.style.display = 'flex';
+        // tab.style.display = 'flex';
         tab.classList.add('active');
       } else {
-        tab.style.display = 'none';
+        // tab.style.display = 'none';
         tab.classList.remove('active');
       }
     })

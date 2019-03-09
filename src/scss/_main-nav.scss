@@ -28,7 +28,7 @@
   &__link {
     display: block;
     padding: 15px 0;
-    padding-top: 15px;
+    padding-top: 17px;
     padding-bottom: 13px;
     min-width: 190px;
     text-align: center;
@@ -37,7 +37,7 @@
     text-transform: uppercase;
     transition: background-color 0.3s;
     outline: none;
-
+    font-size: 14px;
     &:link,
     &:visited {
       color: white;
