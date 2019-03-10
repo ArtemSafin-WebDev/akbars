@@ -6,21 +6,13 @@ import makeTabsController from './tabs'
 import objectFitImages from 'object-fit-images'
 // import 'simplebar'
 
-import 'simplebar';
+import SimpleBar from 'simplebar'
 import Choices from 'choices.js'
 
 document.addEventListener('DOMContentLoaded', function(event) {
   // Полифилл для CSS свойства ObjectFit
 
-  objectFitImages();
-
-  // Скроллбар
-
-  
-  
-  // new SimpleBar(document.getElementById('division-simplebar'), { autoHide: false });
-  // new SimpleBar(document.getElementById('conference-simplebar'), { autoHide: false });
-  
+  objectFitImages()
 
   // Слайдер кубков
 
@@ -149,7 +141,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
     })
   }
 
-  
   // Политика по кукам
 
   const cookiePolicyPanel = document.querySelector('.js-cookie-policy')
@@ -167,14 +158,19 @@ document.addEventListener('DOMContentLoaded', function(event) {
     })
   }
 
-
   // Кастомный селект
 
+  const choicesOptions = {
+    itemSelectText: '',
+    noResultsText: 'Результаты не найдены'
+  }
+  const seasonSelect = document.getElementById('season')
 
-  // const choicesOptions = {
-  //   itemSelectText: ''
-  // }
-  // new Choices('#season', choicesOptions)
+  if (seasonSelect) {
+    new Choices(seasonSelect, choicesOptions)
 
- 
+    seasonSelect.addEventListener('showDropdown', function(event) {
+      new SimpleBar(document.querySelector('.staff .choices__list--dropdown .choices__list'), { autoHide: false })
+    })
+  }
 })
