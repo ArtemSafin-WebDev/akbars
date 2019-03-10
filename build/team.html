@@ -130,6 +130,9 @@
       <symbol viewBox="0 0 17.11 19.04" id="shop" xmlns="http://www.w3.org/2000/svg">
         <path d="M16.21 3a.5.5 0 0 0-.5-.47h-3.79A4 4 0 0 0 8.55 0a4 4 0 0 0-3.37 2.55H1.4A.5.5 0 0 0 .9 3L0 18.51a.47.47 0 0 0 .14.37.48.48 0 0 0 .36.12h16.11a.48.48 0 0 0 .36-.16.5.5 0 0 0 .14-.37zM8.55 1a2.76 2.76 0 0 1 2.21 1.55H6.34A2.79 2.79 0 0 1 8.55 1zM1 18l.87-14.45h2.9a9.36 9.36 0 0 0-.36 1.56A1.5 1.5 0 1 0 6 6.6a1.53 1.53 0 0 0-.62-1.21 8 8 0 0 1 .47-1.84h5.41a8.58 8.58 0 0 1 .46 1.78A1.48 1.48 0 0 0 11 6.6a1.5 1.5 0 1 0 1.7-1.48 8.57 8.57 0 0 0-.37-1.57h2.91L16.08 18z" />
       </symbol>
+      <symbol viewBox="0 0 7.65 12.32" id="sort" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3.83 11L.65 8.28 0 9.04l3.83 3.28 3.82-3.28L7 8.28 3.83 11zm0-9.68L7 4.04l.65-.76L3.83 0 0 3.28l.65.76 3.18-2.72z" />
+      </symbol>
       <symbol viewBox="0 0 22.34 20" id="telegram" xmlns="http://www.w3.org/2000/svg">
         <path d="M21.55 0a.82.82 0 0 0-.35 0L.51 8.17a.81.81 0 0 0 .08 1.54l3.81 1.22c.08 0 .08.08.17.16l2.51 8.36a.85.85 0 0 0 1.09.55.7.7 0 0 0 .29-.19l4.06-4a.15.15 0 0 1 .21 0L17.14 19a.86.86 0 0 0 1.19-.23.71.71 0 0 0 .11-.25L22.34 1a.86.86 0 0 0-.79-1zm-12 17l.4-3.33 1.7 1.3zm7.76-12.64l-8.6 8.27a.3.3 0 0 0-.09.25l-.4 4.54c0 .24-.33.24-.4 0L6 10.77a.33.33 0 0 1 0-.25L17.07 4c.23-.08.4.17.23.33z" />
       </symbol>
@@ -351,7 +354,7 @@
                         <a href="#" class="main-nav__submenu-link">Таблицы</a>
                       </li>
                       <li class="main-nav__submenu-list-item">
-                        <a href="#" class="main-nav__submenu-link">Команда</a>
+                        <a href="team.html" class="main-nav__submenu-link">Команда</a>
                       </li>
                       <li class="main-nav__submenu-list-item">
                         <a href="#" class="main-nav__submenu-link">Статистика</a>
@@ -534,7 +537,7 @@
               Команда
             </h1>
             <div class="staff__select">
-              <select name="season" id="season" required>
+              <select name="season" id="season" onchange="return console.log('Changed')" required>
                 <option value="2018-1" selected="selected">Сезон 2018/2019</option>
                 <option value="2017-1">Сезон 2017/2018</option>
                 <option value="2016-1">Сезон 2016/2017</option>
@@ -555,7 +558,1067 @@
                 <option value="2001-1">Сезон 2001/2002</option>
               </select>
             </div>
-            <div class="staff__content"></div>
+            <div class="staff__content">
+              <div class="tabs js-tabs-container">
+                <nav class="tabs__navigation">
+                  <button class="js-tab-button">
+                    <span>Руководство</span>
+                  </button>
+                  <button class="js-tab-button">
+                    <span>Тренеры</span>
+                  </button>
+                  <button class="js-tab-button">
+                    <span>Состав</span>
+                  </button>
+                  <button class="js-tab-button">
+                    <span>Персонал</span>
+                  </button>
+                </nav>
+                <ul class="tabs__content">
+                  <li class="tabs__item js-tab">
+                    <ul class="staff__section">
+                      <li class="staff__section-item">
+                        <h3 class="staff__section-heading">
+                          Руководство
+                        </h3>
+                        <table class="staff__info-table">
+                          <thead>
+                            <tr>
+                              <th>
+                                <span class="staff__table-heading-content">
+                                  <span class="staff__table-heading-text">
+                                    Ф.И.О
+                                  </span>
+                                </span>
+                              </th>
+                              <th>
+                                <span class="staff__table-heading-content">
+                                  <span class="staff__table-heading-text">
+                                    Дата рождения
+                                  </span>
+                                </span>
+                              </th>
+                              <th>
+                                <span class="staff__table-heading-content">
+                                  <span class="staff__table-heading-text">
+                                    Должность
+                                  </span>
+                                </span>
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>
+                                <a href="#" class="staff__photo-link">
+                                  <span class="staff__person-name">Маганов Наиль Ульфатович</span>
+                                </a>
+                              </td>
+                              <td>
+                                28.07.1958
+                              </td>
+                              <td>
+                                Президент ХК «Ак Барс» и Федерации хоккея Республики Татарстан
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <a href="#" class="staff__photo-link">
+                                  <span class="staff__person-name">Хуснутдинов Шамил Нурисламович</span>
+                                </a>
+                              </td>
+                              <td>
+                                22.03.1966
+                              </td>
+                              <td>
+                                Директор ООО «СКП «Татнефть – Ак Барс»
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <a href="#" class="staff__photo-link">
+                                  <span class="staff__person-name">Якубов Рафик Хабибуллович</span>
+                                </a>
+                              </td>
+                              <td>
+                                14.09.1966
+                              </td>
+                              <td>
+                                Генеральный менеджер
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <a href="#" class="staff__photo-link">
+                                  <span class="staff__person-name">Смирнов Игорь Николаевич</span>
+                                </a>
+                              </td>
+                              <td>
+                                04.05.1948
+                              </td>
+                              <td>
+                                Технический директор
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="tabs__item js-tab">
+                    <ul class="staff__section">
+                      <li class="staff__section-item">
+                        <h3 class="staff__section-heading">
+                          Тренеры
+                        </h3>
+                        <table class="staff__info-table">
+                          <thead>
+                            <tr>
+                              <th>
+                                <span class="staff__table-heading-content">
+                                  <span class="staff__table-heading-text">
+                                    Ф.И.О
+                                  </span>
+                                </span>
+                              </th>
+                              <th>
+                                <span class="staff__table-heading-content">
+                                  <span class="staff__table-heading-text">
+                                    Дата рождения
+                                  </span>
+                                </span>
+                              </th>
+                              <th>
+                                <span class="staff__table-heading-content">
+                                  <span class="staff__table-heading-text">
+                                    Должность
+                                  </span>
+                                </span>
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>
+                                <a href="#" class="staff__photo-link">
+                                  <span class="staff__person-name">Билялетдинов Зинэтула Хайдярович</span>
+                                </a>
+                              </td>
+                              <td>
+                                13.03.1955
+                              </td>
+                              <td>
+                                Главный тренер
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <a href="#" class="staff__photo-link">
+                                  <span class="staff__person-name">Смирнов Александр Евгеньевич</span>
+                                </a>
+                              </td>
+                              <td>
+                                17.08.1964
+                              </td>
+                              <td>
+                                Старший тренер
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <a href="#" class="staff__photo-link">
+                                  <span class="staff__person-name">Завьялов Александр Васильевич</span>
+                                </a>
+                              </td>
+                              <td>
+                                28.10.1969
+                              </td>
+                              <td>
+                                Тренер
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <a href="#" class="staff__photo-link">
+                                  <span class="staff__person-name">Абрамов Сергей Михайлович</span>
+                                </a>
+                              </td>
+                              <td>
+                                15.09.1959
+                              </td>
+                              <td>
+                                Тренер вратарей
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <a href="#" class="staff__photo-link">
+                                  <span class="staff__person-name">Царев Андрей Анатольевич</span>
+                                </a>
+                              </td>
+                              <td>
+                                30.08.1975
+                              </td>
+                              <td>
+                                Тренер вратарей
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <a href="#" class="staff__photo-link">
+                                  <span class="staff__person-name">Занковец Владислав Эдуардович</span>
+                                </a>
+                              </td>
+                              <td>
+                                23.05.1991
+                              </td>
+                              <td>
+                                Тренер по физподготовке
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="tabs__item js-tab">
+                    <ul class="staff__section staff__section--players">
+                      <li class="staff__section-item">
+                        <h3 class="staff__section-heading">
+                          Вратари
+                        </h3>
+                        <table class="staff__info-table">
+                          <thead>
+                            <tr>
+                              <th>
+                                <span class="staff__table-heading-content">
+                                  <span class="staff__table-heading-text">
+                                    №
+                                  </span>
+                                  <button class="staff__sort-button">
+                                    <svg width="7" height="11" aria-hidden="true" class="icon-sort">
+                                      <use xlink:href="#sort" />
+                                    </svg>
+                                  </button>
+                                </span>
+                              </th>
+                              <th>
+                                <span class="staff__table-heading-content">
+                                  <span class="staff__table-heading-text">
+                                    Игрок
+                                  </span>
+                                  <button class="staff__sort-button">
+                                    <svg width="7" height="11" aria-hidden="true" class="icon-sort">
+                                      <use xlink:href="#sort" />
+                                    </svg>
+                                  </button>
+                                </span>
+                              </th>
+                              <th>
+                                <span class="staff__table-heading-content">
+                                  <span class="staff__table-heading-text">
+                                    Дата рождения
+                                  </span>
+                                  <button class="staff__sort-button">
+                                    <svg width="7" height="11" aria-hidden="true" class="icon-sort">
+                                      <use xlink:href="#sort" />
+                                    </svg>
+                                  </button>
+                                </span>
+                              </th>
+                              <th>
+                                <span class="staff__table-heading-content">
+                                  <span class="staff__table-heading-text">
+                                    Возраст
+                                  </span>
+                                  <button class="staff__sort-button">
+                                    <svg width="7" height="11" aria-hidden="true" class="icon-sort">
+                                      <use xlink:href="#sort" />
+                                    </svg>
+                                  </button>
+                                </span>
+                              </th>
+                              <th>
+                                <span class="staff__table-heading-content">
+                                  <span class="staff__table-heading-text">
+                                    Хват
+                                  </span>
+                                  <button class="staff__sort-button">
+                                    <svg width="7" height="11" aria-hidden="true" class="icon-sort">
+                                      <use xlink:href="#sort" />
+                                    </svg>
+                                  </button>
+                                </span>
+                              </th>
+                              <th>
+                                <span class="staff__table-heading-content">
+                                  <span class="staff__table-heading-text">
+                                    Вес
+                                  </span>
+                                  <button class="staff__sort-button">
+                                    <svg width="7" height="11" aria-hidden="true" class="icon-sort">
+                                      <use xlink:href="#sort" />
+                                    </svg>
+                                  </button>
+                                </span>
+                              </th>
+                              <th>
+                                <span class="staff__table-heading-content">
+                                  <span class="staff__table-heading-text">
+                                    Рост
+                                  </span>
+                                  <button class="staff__sort-button">
+                                    <svg width="7" height="11" aria-hidden="true" class="icon-sort">
+                                      <use xlink:href="#sort" />
+                                    </svg>
+                                  </button>
+                                </span>
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>
+                                39
+                              </td>
+                              <td>
+                                <a href="#" class="staff__photo-link">
+                                  <img src="img/player-1-photo.jpg" alt="" class="staff__person-photo" />
+                                  <span class="staff__person-name">Шарыченков Александр</span>
+                                </a>
+                              </td>
+                              <td>
+                                03.10.1991
+                              </td>
+                              <td>
+                                27 лет
+                              </td>
+                              <td>
+                                Левый
+                              </td>
+                              <td>
+                                101
+                              </td>
+                              <td>
+                                193
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                59
+                              </td>
+                              <td>
+                                <a href="#" class="staff__photo-link">
+                                  <img src="img/player-1-photo.jpg" alt="" class="staff__person-photo" />
+                                  <span class="staff__person-name">Владислав Подъяпольский</span>
+                                </a>
+                              </td>
+                              <td>
+                                04.06.1995
+                              </td>
+                              <td>
+                                23 года
+                              </td>
+                              <td>
+                                Левый
+                              </td>
+                              <td>
+                                87
+                              </td>
+                              <td>
+                                182
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                77
+                              </td>
+                              <td>
+                                <a href="#" class="staff__photo-link">
+                                  <img src="img/player-1-photo.jpg" alt="" class="staff__person-photo" />
+                                  <span class="staff__person-name">Гарипов Эмиль</span>
+                                </a>
+                              </td>
+                              <td>
+                                15.08.1991
+                              </td>
+                              <td>
+                                23 года
+                              </td>
+                              <td>
+                                Левый
+                              </td>
+                              <td>
+                                89
+                              </td>
+                              <td>
+                                188
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </li>
+                      <li class="staff__section-item">
+                        <h3 class="staff__section-heading">
+                          Защитники
+                        </h3>
+                        <table class="staff__info-table">
+                          <thead>
+                            <tr>
+                              <th>
+                                <span class="staff__table-heading-content">
+                                  <span class="staff__table-heading-text">
+                                    №
+                                  </span>
+                                  <button class="staff__sort-button">
+                                    <svg width="7" height="11" aria-hidden="true" class="icon-sort">
+                                      <use xlink:href="#sort" />
+                                    </svg>
+                                  </button>
+                                </span>
+                              </th>
+                              <th>
+                                <span class="staff__table-heading-content">
+                                  <span class="staff__table-heading-text">
+                                    Игрок
+                                  </span>
+                                  <button class="staff__sort-button">
+                                    <svg width="7" height="11" aria-hidden="true" class="icon-sort">
+                                      <use xlink:href="#sort" />
+                                    </svg>
+                                  </button>
+                                </span>
+                              </th>
+                              <th>
+                                <span class="staff__table-heading-content">
+                                  <span class="staff__table-heading-text">
+                                    Дата рождения
+                                  </span>
+                                  <button class="staff__sort-button">
+                                    <svg width="7" height="11" aria-hidden="true" class="icon-sort">
+                                      <use xlink:href="#sort" />
+                                    </svg>
+                                  </button>
+                                </span>
+                              </th>
+                              <th>
+                                <span class="staff__table-heading-content">
+                                  <span class="staff__table-heading-text">
+                                    Возраст
+                                  </span>
+                                  <button class="staff__sort-button">
+                                    <svg width="7" height="11" aria-hidden="true" class="icon-sort">
+                                      <use xlink:href="#sort" />
+                                    </svg>
+                                  </button>
+                                </span>
+                              </th>
+                              <th>
+                                <span class="staff__table-heading-content">
+                                  <span class="staff__table-heading-text">
+                                    Хват
+                                  </span>
+                                  <button class="staff__sort-button">
+                                    <svg width="7" height="11" aria-hidden="true" class="icon-sort">
+                                      <use xlink:href="#sort" />
+                                    </svg>
+                                  </button>
+                                </span>
+                              </th>
+                              <th>
+                                <span class="staff__table-heading-content">
+                                  <span class="staff__table-heading-text">
+                                    Вес
+                                  </span>
+                                  <button class="staff__sort-button">
+                                    <svg width="7" height="11" aria-hidden="true" class="icon-sort">
+                                      <use xlink:href="#sort" />
+                                    </svg>
+                                  </button>
+                                </span>
+                              </th>
+                              <th>
+                                <span class="staff__table-heading-content">
+                                  <span class="staff__table-heading-text">
+                                    Рост
+                                  </span>
+                                  <button class="staff__sort-button">
+                                    <svg width="7" height="11" aria-hidden="true" class="icon-sort">
+                                      <use xlink:href="#sort" />
+                                    </svg>
+                                  </button>
+                                </span>
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>
+                                77
+                              </td>
+                              <td>
+                                <a href="#" class="staff__photo-link">
+                                  <img src="img/player-2-photo.jpg" alt="" class="staff__person-photo" />
+                                  <span class="staff__person-name">Юдин Дмитрий</span>
+                                </a>
+                              </td>
+                              <td>
+                                15.08.1991
+                              </td>
+                              <td>
+                                23 года
+                              </td>
+                              <td>
+                                Левый
+                              </td>
+                              <td>
+                                89
+                              </td>
+                              <td>
+                                188
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                77
+                              </td>
+                              <td>
+                                <a href="#" class="staff__photo-link">
+                                  <img src="img/player-2-photo.jpg" alt="" class="staff__person-photo" />
+                                  <span class="staff__person-name">Абросимов Роман</span>
+                                </a>
+                              </td>
+                              <td>
+                                15.08.1991
+                              </td>
+                              <td>
+                                23 года
+                              </td>
+                              <td>
+                                Левый
+                              </td>
+                              <td>
+                                89
+                              </td>
+                              <td>
+                                188
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                77
+                              </td>
+                              <td>
+                                <a href="#" class="staff__photo-link">
+                                  <img src="img/player-2-photo.jpg" alt="" class="staff__person-photo" />
+                                  <span class="staff__person-name">Манухов Роман</span>
+                                </a>
+                              </td>
+                              <td>
+                                15.08.1991
+                              </td>
+                              <td>
+                                23 года
+                              </td>
+                              <td>
+                                Левый
+                              </td>
+                              <td>
+                                89
+                              </td>
+                              <td>
+                                188
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                77
+                              </td>
+                              <td>
+                                <a href="#" class="staff__photo-link">
+                                  <img src="img/player-2-photo.jpg" alt="" class="staff__person-photo" />
+                                  <span class="staff__person-name">Батыршин Рафаэль</span>
+                                </a>
+                              </td>
+                              <td>
+                                15.08.1991
+                              </td>
+                              <td>
+                                23 года
+                              </td>
+                              <td>
+                                Левый
+                              </td>
+                              <td>
+                                89
+                              </td>
+                              <td>
+                                188
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                77
+                              </td>
+                              <td>
+                                <a href="#" class="staff__photo-link">
+                                  <img src="img/player-2-photo.jpg" alt="" class="staff__person-photo" />
+                                  <span class="staff__person-name">Юдин Дмитрий</span>
+                                </a>
+                              </td>
+                              <td>
+                                15.08.1991
+                              </td>
+                              <td>
+                                23 года
+                              </td>
+                              <td>
+                                Левый
+                              </td>
+                              <td>
+                                89
+                              </td>
+                              <td>
+                                188
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                77
+                              </td>
+                              <td>
+                                <a href="#" class="staff__photo-link">
+                                  <img src="img/player-2-photo.jpg" alt="" class="staff__person-photo" />
+                                  <span class="staff__person-name">Абросимов Роман</span>
+                                </a>
+                              </td>
+                              <td>
+                                15.08.1991
+                              </td>
+                              <td>
+                                23 года
+                              </td>
+                              <td>
+                                Левый
+                              </td>
+                              <td>
+                                89
+                              </td>
+                              <td>
+                                188
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                77
+                              </td>
+                              <td>
+                                <a href="#" class="staff__photo-link">
+                                  <img src="img/player-2-photo.jpg" alt="" class="staff__person-photo" />
+                                  <span class="staff__person-name">Манухов Роман</span>
+                                </a>
+                              </td>
+                              <td>
+                                15.08.1991
+                              </td>
+                              <td>
+                                23 года
+                              </td>
+                              <td>
+                                Левый
+                              </td>
+                              <td>
+                                89
+                              </td>
+                              <td>
+                                188
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                77
+                              </td>
+                              <td>
+                                <a href="#" class="staff__photo-link">
+                                  <img src="img/player-2-photo.jpg" alt="" class="staff__person-photo" />
+                                  <span class="staff__person-name">Батыршин Рафаэль</span>
+                                </a>
+                              </td>
+                              <td>
+                                15.08.1991
+                              </td>
+                              <td>
+                                23 года
+                              </td>
+                              <td>
+                                Левый
+                              </td>
+                              <td>
+                                89
+                              </td>
+                              <td>
+                                188
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </li>
+                      <li class="staff__section-item">
+                        <h3 class="staff__section-heading">
+                          Вратари
+                        </h3>
+                        <table class="staff__info-table">
+                          <thead>
+                            <tr>
+                              <th>
+                                <span class="staff__table-heading-content">
+                                  <span class="staff__table-heading-text">
+                                    №
+                                  </span>
+                                  <button class="staff__sort-button">
+                                    <svg width="7" height="11" aria-hidden="true" class="icon-sort">
+                                      <use xlink:href="#sort" />
+                                    </svg>
+                                  </button>
+                                </span>
+                              </th>
+                              <th>
+                                <span class="staff__table-heading-content">
+                                  <span class="staff__table-heading-text">
+                                    Игрок
+                                  </span>
+                                  <button class="staff__sort-button">
+                                    <svg width="7" height="11" aria-hidden="true" class="icon-sort">
+                                      <use xlink:href="#sort" />
+                                    </svg>
+                                  </button>
+                                </span>
+                              </th>
+                              <th>
+                                <span class="staff__table-heading-content">
+                                  <span class="staff__table-heading-text">
+                                    Дата рождения
+                                  </span>
+                                  <button class="staff__sort-button">
+                                    <svg width="7" height="11" aria-hidden="true" class="icon-sort">
+                                      <use xlink:href="#sort" />
+                                    </svg>
+                                  </button>
+                                </span>
+                              </th>
+                              <th>
+                                <span class="staff__table-heading-content">
+                                  <span class="staff__table-heading-text">
+                                    Возраст
+                                  </span>
+                                  <button class="staff__sort-button">
+                                    <svg width="7" height="11" aria-hidden="true" class="icon-sort">
+                                      <use xlink:href="#sort" />
+                                    </svg>
+                                  </button>
+                                </span>
+                              </th>
+                              <th>
+                                <span class="staff__table-heading-content">
+                                  <span class="staff__table-heading-text">
+                                    Хват
+                                  </span>
+                                  <button class="staff__sort-button">
+                                    <svg width="7" height="11" aria-hidden="true" class="icon-sort">
+                                      <use xlink:href="#sort" />
+                                    </svg>
+                                  </button>
+                                </span>
+                              </th>
+                              <th>
+                                <span class="staff__table-heading-content">
+                                  <span class="staff__table-heading-text">
+                                    Вес
+                                  </span>
+                                  <button class="staff__sort-button">
+                                    <svg width="7" height="11" aria-hidden="true" class="icon-sort">
+                                      <use xlink:href="#sort" />
+                                    </svg>
+                                  </button>
+                                </span>
+                              </th>
+                              <th>
+                                <span class="staff__table-heading-content">
+                                  <span class="staff__table-heading-text">
+                                    Рост
+                                  </span>
+                                  <button class="staff__sort-button">
+                                    <svg width="7" height="11" aria-hidden="true" class="icon-sort">
+                                      <use xlink:href="#sort" />
+                                    </svg>
+                                  </button>
+                                </span>
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>
+                                39
+                              </td>
+                              <td>
+                                <a href="#" class="staff__photo-link">
+                                  <img src="img/player-1-photo.jpg" alt="" class="staff__person-photo" />
+                                  <span class="staff__person-name">Шарыченков Александр</span>
+                                </a>
+                              </td>
+                              <td>
+                                03.10.1991
+                              </td>
+                              <td>
+                                27 лет
+                              </td>
+                              <td>
+                                Левый
+                              </td>
+                              <td>
+                                101
+                              </td>
+                              <td>
+                                193
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                59
+                              </td>
+                              <td>
+                                <a href="#" class="staff__photo-link">
+                                  <img src="img/player-1-photo.jpg" alt="" class="staff__person-photo" />
+                                  <span class="staff__person-name">Владислав Подъяпольский</span>
+                                </a>
+                              </td>
+                              <td>
+                                04.06.1995
+                              </td>
+                              <td>
+                                23 года
+                              </td>
+                              <td>
+                                Левый
+                              </td>
+                              <td>
+                                87
+                              </td>
+                              <td>
+                                182
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                77
+                              </td>
+                              <td>
+                                <a href="#" class="staff__photo-link">
+                                  <img src="img/player-1-photo.jpg" alt="" class="staff__person-photo" />
+                                  <span class="staff__person-name">Гарипов Эмиль</span>
+                                </a>
+                              </td>
+                              <td>
+                                15.08.1991
+                              </td>
+                              <td>
+                                23 года
+                              </td>
+                              <td>
+                                Левый
+                              </td>
+                              <td>
+                                89
+                              </td>
+                              <td>
+                                188
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                39
+                              </td>
+                              <td>
+                                <a href="#" class="staff__photo-link">
+                                  <img src="img/player-1-photo.jpg" alt="" class="staff__person-photo" />
+                                  <span class="staff__person-name">Шарыченков Александр</span>
+                                </a>
+                              </td>
+                              <td>
+                                03.10.1991
+                              </td>
+                              <td>
+                                27 лет
+                              </td>
+                              <td>
+                                Левый
+                              </td>
+                              <td>
+                                101
+                              </td>
+                              <td>
+                                193
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                59
+                              </td>
+                              <td>
+                                <a href="#" class="staff__photo-link">
+                                  <img src="img/player-1-photo.jpg" alt="" class="staff__person-photo" />
+                                  <span class="staff__person-name">Владислав Подъяпольский</span>
+                                </a>
+                              </td>
+                              <td>
+                                04.06.1995
+                              </td>
+                              <td>
+                                23 года
+                              </td>
+                              <td>
+                                Левый
+                              </td>
+                              <td>
+                                87
+                              </td>
+                              <td>
+                                182
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                77
+                              </td>
+                              <td>
+                                <a href="#" class="staff__photo-link">
+                                  <img src="img/player-1-photo.jpg" alt="" class="staff__person-photo" />
+                                  <span class="staff__person-name">Гарипов Эмиль</span>
+                                </a>
+                              </td>
+                              <td>
+                                15.08.1991
+                              </td>
+                              <td>
+                                23 года
+                              </td>
+                              <td>
+                                Левый
+                              </td>
+                              <td>
+                                89
+                              </td>
+                              <td>
+                                188
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </li>
+                    </ul>
+                    <div class="staff__players-average">
+                      <div class="staff__players-average-weight">
+                        Средний вес игроков (кг): <span class="staff__players-average-number">91.4</span>
+                      </div>
+                      <div class="staff__players-average-height">
+                        Средний рост игроков (см): <span class="staff__players-average-number">186.6</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="tabs__item js-tab">
+                    <ul class="staff__section">
+                      <li class="staff__section-item">
+                        <h3 class="staff__section-heading">
+                          Персонал
+                        </h3>
+                        <table class="staff__info-table">
+                          <thead>
+                            <tr>
+                              <th>
+                                <span class="staff__table-heading-content">
+                                  <span class="staff__table-heading-text">
+                                    Ф.И.О
+                                  </span>
+                                </span>
+                              </th>
+                              <th>
+                                <span class="staff__table-heading-content">
+                                  <span class="staff__table-heading-text">
+                                    Дата рождения
+                                  </span>
+                                </span>
+                              </th>
+                              <th>
+                                <span class="staff__table-heading-content">
+                                  <span class="staff__table-heading-text">
+                                    Должность
+                                  </span>
+                                </span>
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>
+                                <a href="#" class="staff__photo-link">
+                                  <span class="staff__person-name">Маганов Наиль Ульфатович</span>
+                                </a>
+                              </td>
+                              <td>
+                                28.07.1958
+                              </td>
+                              <td>
+                                Президент ХК «Ак Барс» и Федерации хоккея Республики Татарстан
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <a href="#" class="staff__photo-link">
+                                  <span class="staff__person-name">Хуснутдинов Шамил Нурисламович</span>
+                                </a>
+                              </td>
+                              <td>
+                                22.03.1966
+                              </td>
+                              <td>
+                                Директор ООО «СКП «Татнефть – Ак Барс»
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <a href="#" class="staff__photo-link">
+                                  <span class="staff__person-name">Якубов Рафик Хабибуллович</span>
+                                </a>
+                              </td>
+                              <td>
+                                14.09.1966
+                              </td>
+                              <td>
+                                Генеральный менеджер
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <a href="#" class="staff__photo-link">
+                                  <span class="staff__person-name">Смирнов Игорь Николаевич</span>
+                                </a>
+                              </td>
+                              <td>
+                                04.05.1948
+                              </td>
+                              <td>
+                                Технический директор
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </section>
         </div>
       </div>

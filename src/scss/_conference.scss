@@ -98,7 +98,6 @@
   }
 }
 
-
 .conference__info {
   height: 490px;
   overflow-y: auto;
@@ -106,7 +105,6 @@
 }
 
 .conference__info-slider {
-  
   table {
     width: 100%;
     border-collapse: collapse;
@@ -137,33 +135,55 @@
         background-color: $red;
         td {
           color: white;
+          &::before {
+            background-color: $red;
+            width: 100%;
+          }
         }
-      }
 
-      &:hover:not(.selected) {
-        background-color: rgba($green, 0.15);
+        + tr {
+          td {
+            &::before {
+              background-color: $red;
+              width: 100%;
+            }
+          }
+          &:hover,
+          &:focus {
+            td {
+              &::before {
+                background-color: $red !important;
+                width: 100% !important;
+              }
+            }
+          }
+
+          
+        }
       }
 
       &:first-child {
         td {
-          // padding-top: 12px;
-          border-top: 12px solid white;
+          &::before {
+            display: none;
+          }
         }
       }
 
-      &:last-child {
+      &:hover:not(.selected) {
+        background-color: #dde8e7;
         td {
-          border-bottom: 2px solid $red;
-          &:first-child {
-            &::before {
-              border-bottom: 2px solid white;
-              bottom: -2px;
-            }
+          &::before {
+            background-color: #dde8e7;
+            width: 100%;
           }
-          &:last-child {
+        }
+
+        + tr:not(.selected) {
+          td {
             &::before {
-              border-bottom: 2px solid white;
-              bottom: -2px;
+              width: 100%;
+              background-color: #dde8e7;
             }
           }
         }
@@ -175,8 +195,8 @@
       font-size: 16px;
       line-height: 36px;
       color: #242f37;
-      border-bottom: 1px solid #ebebeb;
       transition: color 0.15s;
+      position: relative;
       &:nth-child(2) {
         font-size: 14px;
       }
@@ -184,30 +204,36 @@
         padding-right: 10px;
       }
 
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        height: 1px;
+        background-color: #ebebeb;
+        left: 0;
+        width: 100%;
+        transition: background-color 0.2s;
+      }
+
       &:first-child {
         padding-left: 20px;
         padding-right: 2px;
-        position: relative;
         &::before {
           content: '';
-          width: 20px;
-          border-bottom: 1px solid white;
-          bottom: -1px;
-          left: 0;
           position: absolute;
+          right: 0;
+          left: auto;
+          width: calc(100% - 20px);
         }
       }
       &:last-child {
         padding-right: 20px;
         font-weight: 700;
-        position: relative;
         &::before {
           content: '';
-          width: 20px;
-          border-bottom: 1px solid white;
-          bottom: -1px;
-          right: 0;
-          position: absolute;
+          left: 0;
+          right: auto;
+          width: calc(100% - 20px);
         }
       }
     }

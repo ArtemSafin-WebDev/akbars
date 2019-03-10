@@ -162,15 +162,44 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
   const choicesOptions = {
     itemSelectText: '',
-    noResultsText: 'Результаты не найдены'
+    noResultsText: ''
   }
   const seasonSelect = document.getElementById('season')
 
   if (seasonSelect) {
     new Choices(seasonSelect, choicesOptions)
 
-    seasonSelect.addEventListener('showDropdown', function(event) {
-      new SimpleBar(document.querySelector('.staff .choices__list--dropdown .choices__list'), { autoHide: false })
-    })
+    $('.staff .choices__list--dropdown .choices__list').wrap("<div class='choices__list-wrapper'></div>")
+
+    const isIE = /Trident|MSIE/.test(navigator.userAgent);
+    if (!isIE) {
+      new SimpleBar(document.querySelector('.staff .choices__list--dropdown .choices__list-wrapper'), { autoHide: false })
+    }
   }
+
+  // Добавление текста при копировании с сайта
+
+  document.oncopy = function() {
+    var bodyElement = document.body
+    var selection = getSelection()
+    var href = document.location.href
+    var copyright = "<br><br>Источник: <a href='" + href + "'>" + href + '</a><br>© Официальный сайт ХК АкБарс'
+    var text = selection + copyright
+    var divElement = document.createElement('div')
+    divElement.style.position = 'absolute'
+    divElement.style.left = '-99999px'
+    divElement.innerHTML = text
+    bodyElement.appendChild(divElement)
+    selection.selectAllChildren(divElement)
+    setTimeout(function() {
+      bodyElement.removeChild(divElement)
+    }, 0)
+  }
+
+
+  
+  
 })
+
+
+

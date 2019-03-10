@@ -130,6 +130,9 @@
       <symbol viewBox="0 0 17.11 19.04" id="shop" xmlns="http://www.w3.org/2000/svg">
         <path d="M16.21 3a.5.5 0 0 0-.5-.47h-3.79A4 4 0 0 0 8.55 0a4 4 0 0 0-3.37 2.55H1.4A.5.5 0 0 0 .9 3L0 18.51a.47.47 0 0 0 .14.37.48.48 0 0 0 .36.12h16.11a.48.48 0 0 0 .36-.16.5.5 0 0 0 .14-.37zM8.55 1a2.76 2.76 0 0 1 2.21 1.55H6.34A2.79 2.79 0 0 1 8.55 1zM1 18l.87-14.45h2.9a9.36 9.36 0 0 0-.36 1.56A1.5 1.5 0 1 0 6 6.6a1.53 1.53 0 0 0-.62-1.21 8 8 0 0 1 .47-1.84h5.41a8.58 8.58 0 0 1 .46 1.78A1.48 1.48 0 0 0 11 6.6a1.5 1.5 0 1 0 1.7-1.48 8.57 8.57 0 0 0-.37-1.57h2.91L16.08 18z" />
       </symbol>
+      <symbol viewBox="0 0 7.65 12.32" id="sort" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3.83 11L.65 8.28 0 9.04l3.83 3.28 3.82-3.28L7 8.28 3.83 11zm0-9.68L7 4.04l.65-.76L3.83 0 0 3.28l.65.76 3.18-2.72z" />
+      </symbol>
       <symbol viewBox="0 0 22.34 20" id="telegram" xmlns="http://www.w3.org/2000/svg">
         <path d="M21.55 0a.82.82 0 0 0-.35 0L.51 8.17a.81.81 0 0 0 .08 1.54l3.81 1.22c.08 0 .08.08.17.16l2.51 8.36a.85.85 0 0 0 1.09.55.7.7 0 0 0 .29-.19l4.06-4a.15.15 0 0 1 .21 0L17.14 19a.86.86 0 0 0 1.19-.23.71.71 0 0 0 .11-.25L22.34 1a.86.86 0 0 0-.79-1zm-12 17l.4-3.33 1.7 1.3zm7.76-12.64l-8.6 8.27a.3.3 0 0 0-.09.25l-.4 4.54c0 .24-.33.24-.4 0L6 10.77a.33.33 0 0 1 0-.25L17.07 4c.23-.08.4.17.23.33z" />
       </symbol>
@@ -351,7 +354,7 @@
                         <a href="#" class="main-nav__submenu-link">Таблицы</a>
                       </li>
                       <li class="main-nav__submenu-list-item">
-                        <a href="#" class="main-nav__submenu-link">Команда</a>
+                        <a href="team.html" class="main-nav__submenu-link">Команда</a>
                       </li>
                       <li class="main-nav__submenu-list-item">
                         <a href="#" class="main-nav__submenu-link">Статистика</a>
@@ -639,6 +642,41 @@
                     </a>
                   </div>
                 </li>
+                <li class="news__list-item">
+                  <a href="news-details.html" class="news__image-container">
+                    <img src="img/video-preview-2.jpg" alt="Изображение новости" class="news__image" />
+                  </a>
+                  <div class="news__description">
+                    <div class="news__info">
+                      <span class="news__info-block news__date">
+                        <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
+                          <use xlink:href="#news-calendar" />
+                        </svg>
+                        24.11.2019 г.
+                      </span>
+                      <span class="news__info-block news__views">
+                        <svg width="17" height="9" aria-hidden="true" class="icon-news-views">
+                          <use xlink:href="#news-views" />
+                        </svg>
+                        1 913
+                      </span>
+                      <a href="#" class="news__info-block news__comments">
+                        <svg width="16" height="13" aria-hidden="true" class="icon-news-comments">
+                          <use xlink:href="#news-comments" />
+                        </svg>
+                        22
+                      </a>
+                    </div>
+                    <p class="news__source">
+                      Источник: www.ak-bars.ru
+                    </p>
+                    <a href="news-details.html" class="news__details-link">
+                      <h3 class="news__news-item-heading">
+                        Артём Лукоянов: «неприятный осадок, но всё поправимо»
+                      </h3>
+                    </a>
+                  </div>
+                </li>
               </ul>
               <a href="#" class="news__show-more">
                 Показать больше
@@ -646,6 +684,7 @@
             </div>
           </section>
         </div>
+
       </div>
     </main>
     <footer class="page-footer">
