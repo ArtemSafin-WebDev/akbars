@@ -115,7 +115,8 @@ gulp.task('clean', function() {
 gulp.task('serve', function() {
   browserSync.init({
     server: 'build/',
-    port: 7000
+    port: 7000,
+    host: '192.168.1.172'
   })
   gulp.watch('./src/**/*.html', gulp.series('html'))
   gulp.watch('./src/img/icons/*svg', gulp.series('sprite', 'html'))
