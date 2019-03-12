@@ -19,6 +19,8 @@ body {
   color: $green;
   font-family: 'Supermolot', 'Helvetica', sans-serif;
   min-width: 1320px;
+  display: flex;
+  flex-direction: column;
   > * {
     flex-shrink: 0;
   }

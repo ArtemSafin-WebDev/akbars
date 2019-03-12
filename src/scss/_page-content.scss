@@ -4,10 +4,11 @@
   transition: filter .4s;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  flex-grow: 1;
   background-image: url('../img/bg-pattern-test.jpg');
   background-size: 960px;
-  // overflow: hidden;
+ 
+  overflow-y: hidden;
 }
 
 

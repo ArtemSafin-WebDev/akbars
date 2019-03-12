@@ -162,7 +162,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
   const choicesOptions = {
     itemSelectText: '',
-    noResultsText: ''
+    noResultsText: '',
+    shouldSort: false
   }
   const seasonSelect = document.getElementById('season')
 
@@ -171,9 +172,11 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
     $('.staff .choices__list--dropdown .choices__list').wrap("<div class='choices__list-wrapper'></div>")
 
-    const isIE = /Trident|MSIE/.test(navigator.userAgent);
+    const isIE = /Trident|MSIE/.test(navigator.userAgent)
     if (!isIE) {
-      new SimpleBar(document.querySelector('.staff .choices__list--dropdown .choices__list-wrapper'), { autoHide: false })
+      new SimpleBar(document.querySelector('.staff .choices__list--dropdown .choices__list-wrapper'), {
+        autoHide: false
+      })
     }
   }
 
@@ -183,7 +186,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     var bodyElement = document.body
     var selection = getSelection()
     var href = document.location.href
-    var copyright = "<br><br>Источник: <a href='" + href + "'>" + href + '</a><br>© Официальный сайт ХК АкБарс'
+    var copyright = "<br><br>Источник: <a href='" + href + "'>" + href + '</a><br>© Официальный сайт ХК Ак Барс'
     var text = selection + copyright
     var divElement = document.createElement('div')
     divElement.style.position = 'absolute'
@@ -196,10 +199,60 @@ document.addEventListener('DOMContentLoaded', function(event) {
     }, 0)
   }
 
+  // Сортировка таблиц
 
-  
-  
+  // const table = document.querySelector('.staff__info-table')
+  // if (table) {
+
+  //   //  Получаем ряды, находящиеся в tBody таблицы
+
+  //   const tBody = table.tBodies[0]
+  //   const tRows = Array.from(tBody.rows)
+
+  //   let column = 3;
+  //   let dateColumn = 3;
+
+  //   // Нужно написать дополнительную логику для сортировки дат
+
+  //   // Сортируем, сравнивая значение колонки текущего ряда со значением колонки из следующего
+
+  //   let tRowsSorted = tRows.sort((a, b) => {
+  //     let valueRowA = a.cells[column - 1].textContent.trim();
+  //     let valueRowB = b.cells[column - 1].textContent.trim();
+  //     if (column === dateColumn) {
+  //       valueRowA = valueRowA.split('.').reverse().join('');
+  //       valueRowB = valueRowB.split('.').reverse().join('');
+  //     }
+  //     return $.isNumeric(valueRowA) && $.isNumeric(valueRowB) ? valueRowA - valueRowB : valueRowA.toString().localeCompare(valueRowB);
+  //   })
+
+  //   // Перемещаем ряды в новом порядке
+
+  //   tRowsSorted.forEach(tr => {
+  //     tBody.appendChild(tr)
+  //   })
+  // }
+
+  $.fn.dataTable.moment('DD.MM.YYYY')
+
+  $.fn.dataTable.moment = function(format, locale) {
+    var types = $.fn.dataTable.ext.type
+
+    // Add type detection
+    types.detect.unshift(function(d) {
+      return moment(d, format, locale, true).isValid() ? 'moment-' + format : null
+    })
+
+    // Add sorting method - use an integer for the sorting
+    types.order['moment-' + format + '-pre'] = function(d) {
+      return moment(d, format, locale, true).unix()
+    }
+  }
+
+  $('.staff__info-table').DataTable({
+    paging: false,
+    info: false,
+    searching: false,
+    aaSorting: []
+  })
 })
-
-
-

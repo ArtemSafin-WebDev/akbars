@@ -5,25 +5,25 @@
   width: 100%;
   padding: 20px;
   z-index: 12000;
-  background-color: rgba($green, .9);
-  transition: all .3s;
+  background-color: rgba($green, 0.9);
+  transition: all 0.3s;
   opacity: 0;
   visibility: hidden;
-  
+
   > .container {
     display: flex;
     align-items: center;
   }
 
   &.shown {
-   opacity: 1;
-   visibility: visible;
+    opacity: 1;
+    visibility: visible;
   }
 }
 
 .cookie-policy__text {
   width: 50%;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 20px;
   color: white;
 }
@@ -39,18 +39,24 @@
 
 .cookie-policy__accept-button {
   border: 2px solid white;
-  padding: 15px 35px;
   margin-left: 20px;
   font-weight: 400;
-  text-transform: uppercase;
+  // text-transform: uppercase;
   outline: none;
-  transition: all .3s;
+  transition: all 0.3s;
+  outline: none;
+  font-size: 16px;
+  line-height: 20px;
+  border: 2px solid #fff;
 
-  background-color: #fff;
-  color: $red;
+  padding: 13px 37px;
+  padding-bottom: 11px;
+  color: white;
+  
+  
   &:hover,
   &:focus {
-    
-    
+    background-color: #fff;
+    color: $green;
   }
 }
