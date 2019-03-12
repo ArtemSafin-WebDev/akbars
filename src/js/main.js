@@ -249,7 +249,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     }
   }
 
-  $('.staff__info-table').DataTable({
+  $('.js-table-sortable').DataTable({
     paging: false,
     info: false,
     searching: false,
