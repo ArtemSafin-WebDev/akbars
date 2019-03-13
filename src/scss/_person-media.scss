@@ -1,0 +1,11 @@
+.person-media {
+  width: 960px;
+  margin-left: auto;
+
+  .tabs__navigation button {
+    width: 190px;
+    &:first-of-type {
+      width: 210px;
+    }
+  }
+}

@@ -3,24 +3,16 @@
   width: 240px;
 }
 
-
 .sidebar-nav {
   width: 190px;
 }
-
-.sidebar-nav__list {
-
-}
-
-
-
 
 .sidebar-nav__link {
   color: $green;
   font-size: 16px;
   line-height: 20px;
   padding: 8px 20px;
-  transition: all .2s;
+  transition: all 0.2s;
   display: block;
   width: 100%;
   &:link,
@@ -28,12 +20,10 @@
     color: $green;
   }
 
-
   &:hover,
   &:focus {
     color: $red;
   }
-
 
   .active & {
     background-color: $green;
@@ -43,6 +33,17 @@
       color: white;
     }
   }
-
-  
 }
+
+// .flex-row--staff-details .sidebar-nav__list-item {
+//   &:nth-child(2) {
+//     .sidebar-nav__link {
+//       background-color: $green;
+//       color: white;
+//       &:hover,
+//       &:focus {
+//         color: white;
+//       }
+//     }
+//   }
+// }

@@ -18,28 +18,8 @@
     <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
       <!-- partial:img/symbol/sprite.svg --><!-- partial -->
     </div>
-    <div class="cookie-policy js-cookie-policy">
-      <div class="container">
-        <p class="cookie-policy__text">
-          Мы <a href="#" class="cookie-policy__privacy-policy-link">используем cookies</a>, чтобы вам было проще и
-          удобнее работать с сайтом. Продолжая просмотр, вы соглашаетесь на использование ваших файлов cookie.
-        </p>
-        <button class="cookie-policy__accept-button js-cookie-policy-accept">
-          Хорошо, спасибо
-        </button>
-      </div>
-    </div>
-    <div class="search-modal">
-      <form action="/" class="search-modal__form" method="GET">
-        <input type="text" name="q" class="search-modal__input" placeholder="Введите поисковый запрос" />
-        <button type="submit" class="search-modal__submit">
-          <svg width="20" height="20" aria-hidden="true" class="icon-search-modal">
-            <use xlink:href="#search" />
-          </svg>
-          Найти
-        </button>
-      </form>
-    </div>
+    <!-- partial:partials/_cookie-policy.html --><!-- partial -->
+    <!-- partial:partials/_search-modal.html --><!-- partial -->
     <div class="page-content">
       <div class="khl-placeholder">
         <div class="container">
@@ -50,60 +30,7 @@
       <main>
         <div class="container">
           <div class="flex-row">
-            <section class="sidebar">
-              <nav class="sidebar-nav">
-                <ul class="sidebar-nav__list">
-                  <li class="sidebar-nav__list-item active">
-                    <a href="#" class="sidebar-nav__link">
-                      Команда
-                    </a>
-                  </li>
-                  <li class="sidebar-nav__list-item">
-                    <a href="#" class="sidebar-nav__link">
-                      Календарь
-                    </a>
-                  </li>
-                  <li class="sidebar-nav__list-item">
-                    <a href="#" class="sidebar-nav__link">
-                      Результаты
-                    </a>
-                  </li>
-                  <li class="sidebar-nav__list-item">
-                    <a href="#" class="sidebar-nav__link">
-                      Таблицы
-                    </a>
-                  </li>
-                  <li class="sidebar-nav__list-item">
-                    <a href="#" class="sidebar-nav__link">
-                      Статистика
-                    </a>
-                  </li>
-                  <li class="sidebar-nav__list-item">
-                    <a href="#" class="sidebar-nav__link">
-                      Плей-офф
-                    </a>
-                  </li>
-                  <li class="sidebar-nav__list-item">
-                    <a href="#" class="sidebar-nav__link">
-                      Регламент
-                    </a>
-                  </li>
-                  <li class="sidebar-nav__list-item">
-                    <a href="#" class="sidebar-nav__link">
-                      История
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-              <div class="banner-column banner-column--left banner-column--news">
-                <div class="banner-column__item">
-                  #АЙДА ЗА ХОКАМИ
-                </div>
-                <div class="banner-column__item" style="color: #256963">
-                  #ГИМН ХК «АК БАРС»
-                </div>
-              </div>
-            </section>
+            <!-- partial:partials/_sidebar.html --><!-- partial -->
             <section class="staff">
               <h1 class="staff__main-heading">
                 Команда

@@ -71,7 +71,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
   $('.js-conference-tables-slider').slick({
     arrows: false,
     dots: false,
-    draggable: false
+    draggable: false,
+    adaptiveHeight: true
   })
 
   $('.js-khl-name-slider').slick({
@@ -88,15 +89,15 @@ document.addEventListener('DOMContentLoaded', function(event) {
     draggable: false
   })
 
-  $('.js-division-name-slider').slick({
+  $('.js-playoff-name-slider').slick({
     arrows: true,
     dots: false,
-    prevArrow: '.js-division-slider-prev',
-    nextArrow: '.js-division-slider-next',
-    asNavFor: '.js-division-tables-slider'
+    prevArrow: '.js-playoff-slider-prev',
+    nextArrow: '.js-playoff-slider-next',
+    asNavFor: '.js-playoff-tables-slider'
   })
 
-  $('.js-division-tables-slider').slick({
+  $('.js-playoff-tables-slider').slick({
     arrows: false,
     dots: false,
     draggable: false
@@ -113,8 +114,9 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
   // Модальное окно поиска
 
-  const searchButton = document.getElementById('search-button')
-  const searchModal = document.querySelector('.search-modal')
+  const searchButton = document.querySelector('.js-search-modal-open')
+  const searchModal = document.querySelector('.js-search-modal')
+  const searchModalClose = document.querySelector('.js-search-modal-close')
 
   if (searchModal) {
     searchButton.addEventListener('click', event => {
@@ -127,6 +129,11 @@ document.addEventListener('DOMContentLoaded', function(event) {
       if (event.target === searchModal) {
         document.body.classList.remove('search-modal-open')
       }
+    })
+
+    searchModalClose.addEventListener('click', event => {
+      event.preventDefault()
+      document.body.classList.remove('search-modal-open')
     })
   }
 

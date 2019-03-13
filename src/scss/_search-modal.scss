@@ -50,6 +50,7 @@
     line-height: 22px;
     padding: 12px 54px 12px 38px;
     transition: color .2s;
+    outline: none;
     &:hover,
     &:focus {
       color: $red;
@@ -71,4 +72,16 @@
 .search-modal-open .search-modal {
   opacity: 1;
   visibility: visible;
+}
+
+
+.search-modal__close {
+  position: absolute;
+  top: 117px;
+  right: 184px;
+  outline: none;
+  > svg {
+    fill: white;
+  }
+
 }
