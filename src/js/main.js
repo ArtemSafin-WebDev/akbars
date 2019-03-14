@@ -262,4 +262,57 @@ document.addEventListener('DOMContentLoaded', function(event) {
     searching: false,
     aaSorting: []
   })
+
+  // Скролл внутри блока плей-офф
+
+  const playoffScrollElement = document.querySelector('.js-playoff-simplebar')
+  let playoffSimplebar
+  if (playoffScrollElement) {
+    playoffSimplebar = new SimpleBar(playoffScrollElement)
+  }
+
+  if (playoffSimplebar) {
+    const conferenceGradient = document.querySelector('.js-playoff-top-gradient')
+    playoffSimplebar.getScrollElement().addEventListener('scroll', function() {
+      const scrollTop = this.scrollTop
+      if (scrollTop > 0) {
+        conferenceGradient.classList.add('shown')
+        console.log('Gradient shown')
+      } else {
+        conferenceGradient.classList.remove('shown')
+        console.log('Gradient removed')
+      }
+    })
+  }
+
+  const conferenceScrollElement = document.querySelector('.js-conference-info-simplebar')
+  let conferenceInfoSimplebar
+  if (conferenceScrollElement) {
+    conferenceInfoSimplebar = new SimpleBar(conferenceScrollElement)
+  }
+
+  if (conferenceInfoSimplebar) {
+    const conferenceGradient = document.querySelector('.js-conference-top-gradient')
+    conferenceInfoSimplebar.getScrollElement().addEventListener('scroll', function() {
+      const scrollTop = this.scrollTop
+      if (scrollTop > 0) {
+        conferenceGradient.classList.add('shown')
+        console.log('Gradient shown')
+      } else {
+        conferenceGradient.classList.remove('shown')
+        console.log('Gradient removed')
+      }
+    })
+  }
+
+  const historyLinks = Array.from(document.querySelectorAll('.conference__playoff-history'))
+
+  historyLinks.forEach(link => {
+    link.addEventListener('click', function(event) {
+      event.preventDefault()
+      const tooltip = link.parentElement.parentElement.parentElement.querySelector('.conference__playoff-table-tooltip')
+      tooltip.classList.toggle('shown')
+      $(tooltip).slideDown();
+    })
+  })
 })

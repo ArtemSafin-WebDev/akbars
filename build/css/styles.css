@@ -3085,7 +3085,7 @@ svg {
   .conference__all-tables::before {
     content: '';
     width: 100%;
-    height: 220px;
+    height: 160px;
     left: 0;
     bottom: 0;
     position: absolute;
@@ -3157,27 +3157,36 @@ svg {
       .conference__playoff-table thead th:hover .conference__playoff-tooltip {
         visibility: visible;
         opacity: 1; }
-  .conference__playoff-table tbody:last-child tr:last-child td:first-child::before {
+  .conference__playoff-table tbody:last-child tr:last-child td:first-child::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -3px;
     left: 20px;
     width: calc(100% - 20px);
     height: 3px;
     background-color: #ebebeb; }
-  .conference__playoff-table tbody:last-child tr:last-child td:last-child::before {
+  .conference__playoff-table tbody:last-child tr:last-child td:first-child::before {
+    display: none; }
+  .conference__playoff-table tbody:last-child tr:last-child td:last-child::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -3px;
     right: 20px;
     width: calc(100% - 20px);
     height: 3px;
     background-color: #ebebeb; }
-  .conference__playoff-table tbody:hover tr td {
+  .conference__playoff-table tbody:last-child tr:last-child td:last-child::before {
+    display: none; }
+  .conference__playoff-table tbody:hover tr:not(:nth-child(4n)):not(.selected) td {
     background-color: #dde8e7;
     border-color: #dde8e7; }
-  .conference__playoff-table tbody:hover tr:nth-child(3n + 1) td {
+  .conference__playoff-table tbody:hover tr:not(:nth-child(4n)):not(.selected):nth-child(3n + 1) td {
     border-color: #dde8e7; }
+  .conference__playoff-table tbody:hover tr:not(:nth-child(4n)):not(.selected):nth-child(3n) td:last-child::before {
+    background-color: #dde8e7;
+    bottom: 0; }
+  .conference__playoff-table tbody:hover tr.selected + tr.selected + tr td {
+    background-color: #fff !important; }
   .conference__playoff-table tbody td {
     font-size: 14px;
     line-height: 24px;
@@ -3186,24 +3195,24 @@ svg {
     transition: color 0.15s;
     position: relative;
     font-weight: 400;
-    -webkit-transition: background-color .2s, border .2s;
-    transition: background-color .2s, border .2s; }
+    -webkit-transition: background-color 0.2s, border 0.2s;
+    transition: background-color 0.2s, border 0.2s; }
     .conference__playoff-table tbody td sup {
       color: #94999f;
       font-size: 10px;
       line-height: 24px; }
-    .conference__playoff-table tbody td:first-child {
+    .conference__playoff-table tbody td:first-child:not([colspan="2"]) {
       padding-left: 20px;
       padding-right: 10px;
       font-weight: 700;
       font-size: 16px;
       line-height: 24px; }
-    .conference__playoff-table tbody td:last-child {
+    .conference__playoff-table tbody td:last-child:not([colspan="2"]) {
       padding-right: 20px;
       padding-left: 10px;
       font-size: 14px;
       line-height: 24px; }
-  .conference__playoff-table tbody tr:nth-child(3n + 1) td {
+  .conference__playoff-table tbody tr:nth-child(4n + 1) td {
     border-top: 18px solid white;
     padding-top: 3px; }
   .conference__playoff-table tbody tr:nth-child(2) td, .conference__playoff-table tbody tr:nth-child(3n - 1) td {
@@ -3215,10 +3224,14 @@ svg {
       content: '';
       position: absolute;
       bottom: 0;
-      right: 20px;
-      width: 247px;
+      right: 0;
+      width: 268px;
       height: 1px;
-      background-color: #ebebeb; }
+      background-color: #ebebeb;
+      -webkit-transition: background-color 0.2s;
+      transition: background-color 0.2s; }
+  .conference__playoff-table tbody tr:nth-child(4n) td {
+    padding-left: 58px; }
   .conference__playoff-table tbody tr.selected td:last-child {
     background-color: #D81E23;
     color: white; }
@@ -3238,7 +3251,8 @@ svg {
   line-height: 24px;
   letter-spacing: 0.2px;
   color: #94999f;
-  position: relative; }
+  position: relative;
+  outline: none; }
   .conference__playoff-history::before {
     content: '';
     position: absolute;
@@ -3246,7 +3260,11 @@ svg {
     bottom: 3px;
     height: 1px;
     width: 100%;
-    background-color: #94999f; }
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(33%, #94999f), color-stop(0%, rgba(255, 255, 255, 0)));
+    background-image: linear-gradient(to right, #94999f 33%, rgba(255, 255, 255, 0) 0%);
+    background-position: bottom;
+    background-size: 3px 1px;
+    background-repeat: repeat-x; }
   .conference__playoff-history:link, .conference__playoff-history:visited {
     color: #94999f; }
 
@@ -3277,6 +3295,104 @@ svg {
     left: 10px;
     border: 10px solid transparent;
     border-bottom: 10px solid #fff; }
+
+.conference__playoff-table-tooltip {
+  width: 100%;
+  position: relative;
+  z-index: 50;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  display: none; }
+  .conference__playoff-table-tooltip-table-wrapper {
+    padding: 10px 15px; }
+  .conference__playoff-table-tooltip::after {
+    content: '';
+    bottom: 100%;
+    left: 0;
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: #ebebeb; }
+  .conference__playoff-table-tooltip::before {
+    content: '';
+    position: absolute;
+    bottom: calc(100% + 1px);
+    left: 20px;
+    border: 10px solid transparent;
+    border-bottom: 10px solid #ebebeb;
+    z-index: 60; }
+  .conference__playoff-table-tooltip-content {
+    position: relative;
+    background-color: #ebebeb;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    z-index: 50;
+    overflow: hidden; }
+  .conference__playoff-table-tooltip .table-simulation {
+    display: table;
+    border-collapse: collapse;
+    width: 100%; }
+    .conference__playoff-table-tooltip .table-simulation .table-row-simulation {
+      display: table-row; }
+      .conference__playoff-table-tooltip .table-simulation .table-row-simulation span {
+        display: table-cell;
+        font-size: 14px;
+        line-height: 24px;
+        color: #242f37;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 400; }
+        .conference__playoff-table-tooltip .table-simulation .table-row-simulation span:last-child {
+          font-weight: 700;
+          padding-right: 20px; }
+      .conference__playoff-table-tooltip .table-simulation .table-row-simulation:nth-child(2n):not(:last-child) span {
+        padding-bottom: 10px; }
+      .conference__playoff-table-tooltip .table-simulation .table-row-simulation:nth-child(2n + 1) span {
+        color: #94999F;
+        font-size: 12px;
+        line-height: 18px; }
+
+.conference__playoff-history:hover + .conference__playoff-table-tooltip {
+  opacity: 1;
+  visibility: visible; }
+
+.conference__top-gradient {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  background-image: linear-gradient(to bottom, white 5px, rgba(255, 255, 255, 0));
+  height: 100px;
+  z-index: 50;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s ease-out, visibility 0s linear 0.3s;
+  transition: opacity 0.3s ease-out, visibility 0s linear 0.3s; }
+  .conference__top-gradient.shown {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; }
+
+.conference__playoff-gradient-wrapper {
+  position: relative; }
+
+.conference__playoff-card {
+  position: relative;
+  margin-bottom: 40px; }
+
+@-webkit-keyframes fadeEffect {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 
 .shop {
   background-color: #fff;
@@ -4945,12 +5061,6 @@ svg {
 
 .staff__content {
   margin-top: 40px; }
-
-@-webkit-keyframes fadeEffect {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
 
 @keyframes fadeEffect {
   from {

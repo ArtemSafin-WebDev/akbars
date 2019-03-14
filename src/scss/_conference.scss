@@ -214,6 +214,8 @@
           width: calc(100% - 20px);
         }
       }
+
+    
     }
 
     .conference__number {
@@ -238,7 +240,7 @@
   &::before {
     content: '';
     width: 100%;
-    height: 220px;
+    height: 160px;
     left: 0;
     bottom: 0;
     position: absolute;
@@ -337,25 +339,31 @@
         &:last-child {
           td {
             &:first-child {
-              &::before {
+              &::after {
                 content: '';
                 position: absolute;
-                bottom: 0;
+                bottom: -3px;
                 left: 20px;
                 width: calc(100% - 20px);
                 height: 3px;
                 background-color: #ebebeb;
               }
+              &::before {
+                display: none;
+              }
             }
             &:last-child {
-              &::before {
+              &::after {
                 content: '';
                 position: absolute;
-                bottom: 0;
+                bottom: -3px;
                 right: 20px;
                 width: calc(100% - 20px);
                 height: 3px;
                 background-color: #ebebeb;
+              }
+              &::before {
+                display: none;
               }
             }
           }
@@ -364,7 +372,7 @@
     }
 
     &:hover {
-      tr {
+      tr:not(:nth-child(4n)):not(.selected) {
         td {
           background-color: #dde8e7;
           border-color: #dde8e7;
@@ -373,6 +381,23 @@
           td {
             border-color: #dde8e7;
           }
+        }
+
+        &:nth-child(3n) {
+          td {
+            &:last-child {
+              &::before {
+                background-color: #dde8e7;
+                bottom: 0;
+              }
+            }
+          }
+        }
+      }
+
+      tr.selected + tr.selected + tr {
+        td {
+          background-color: #fff !important;
         }
       }
     }
@@ -384,21 +409,21 @@
       transition: color 0.15s;
       position: relative;
       font-weight: 400;
-      transition: background-color .2s, border .2s;
+      transition: background-color 0.2s, border 0.2s;
       sup {
         color: #94999f;
         font-size: 10px;
         line-height: 24px;
       }
 
-      &:first-child {
+      &:first-child:not([colspan="2"]) {
         padding-left: 20px;
         padding-right: 10px;
         font-weight: 700;
         font-size: 16px;
         line-height: 24px;
       }
-      &:last-child {
+      &:last-child:not([colspan="2"]) {
         padding-right: 20px;
         padding-left: 10px;
         font-size: 14px;
@@ -407,11 +432,11 @@
     }
 
     tr {
-      &:nth-child(3n + 1) {
-       
+      &:nth-child(4n + 1) {
         td {
           border-top: 18px solid white;
           padding-top: 3px;
+          
         }
       }
 
@@ -432,13 +457,21 @@
               content: '';
               position: absolute;
               bottom: 0;
-              right: 20px;
-              width: 247px;
+              right: 0;
+              width: 268px;
               height: 1px;
               background-color: #ebebeb;
+              transition: background-color 0.2s;
             }
           }
         }
+      }
+
+      &:nth-child(4n) {
+        td {
+          padding-left: 58px;
+        }
+        
       }
 
       &.selected {
@@ -482,10 +515,8 @@
   line-height: 24px;
   letter-spacing: 0.2px;
   color: #94999f;
-  // text-decoration: underline dashed;
-  // display: block;
-  // margin-left: 4px;
   position: relative;
+  outline: none;
   &::before {
     content: '';
     position: absolute;
@@ -493,7 +524,11 @@
     bottom: 3px;
     height: 1px;
     width: 100%;
-    background-color: #94999f;
+    // background-color: #94999f;
+    background-image: linear-gradient(to right, #94999f 33%, rgba(255,255,255,0) 0%);
+    background-position: bottom;
+    background-size: 3px 1px;
+    background-repeat: repeat-x;
   }
   &:link,
   &:visited {
@@ -529,3 +564,133 @@
     border-bottom: 10px solid #fff;
   }
 }
+
+.conference__playoff-table-tooltip {
+
+  width: 100%;
+  position: relative;
+  // top: -1px;
+  z-index: 50;
+  transition: all 0.2s;
+  display: none;
+  // animation: fadeEffect 1s;
+
+  // &.shown {
+  //   display: block;
+  // }
+
+  &-table-wrapper {
+    padding: 10px 15px;
+  }
+
+  &::after {
+    content: '';
+    bottom: 100%;
+    left: 0;
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: #ebebeb;
+  }
+  
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: calc(100% + 1px);
+    left: 20px;
+    border: 10px solid transparent;
+    border-bottom: 10px solid #ebebeb;
+    z-index: 60;
+  }
+  &-content {
+    position: relative;
+    background-color: #ebebeb;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    z-index: 50;
+    overflow: hidden;
+    
+    // filter: drop-shadow(0px 5px 30px rgba(black, 0.2));
+    
+  }
+
+  .table-simulation {
+    display: table;
+    border-collapse: collapse;
+    width: 100%;
+    .table-row-simulation {
+      display: table-row;
+      span {
+        display: table-cell;
+        font-size: 14px;
+        line-height: 24px;
+        color: #242f37;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        &:last-child {
+          font-weight: 700;
+          padding-right: 20px;
+        }
+      }
+
+      &:nth-child(2n):not(:last-child) {
+        span {
+          padding-bottom: 10px;
+        }
+      }
+
+
+      &:nth-child(2n + 1) {
+        span {
+          color: #94999F;
+          font-size: 12px;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+}
+
+.conference__playoff-history:hover + .conference__playoff-table-tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+.conference__top-gradient {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  background-image: linear-gradient(to bottom, white 5px, rgba(white, 0));
+  height: 100px;
+  z-index: 50;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-out, visibility 0s linear 0.3s;
+  &.shown {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s;
+  }
+}
+
+.conference__playoff-gradient-wrapper {
+  position: relative;
+}
+
+.conference__playoff-card {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+
+
