@@ -100,7 +100,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
   $('.js-playoff-tables-slider').slick({
     arrows: false,
     dots: false,
-    draggable: false
+    draggable: false,
+    adaptiveHeight: true
   })
 
   $('.js-products-slider').slick({
@@ -263,7 +264,12 @@ document.addEventListener('DOMContentLoaded', function(event) {
     aaSorting: []
   })
 
+  
+  ///////////////////////////////
   // Скролл внутри блока плей-офф
+  //////////////////////////////
+
+  // Для колонки плей-офф
 
   const playoffScrollElement = document.querySelector('.js-playoff-simplebar')
   let playoffSimplebar
@@ -285,6 +291,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
     })
   }
 
+  // Для обычной колонки конференций и дивизионов
+
   const conferenceScrollElement = document.querySelector('.js-conference-info-simplebar')
   let conferenceInfoSimplebar
   if (conferenceScrollElement) {
@@ -297,22 +305,50 @@ document.addEventListener('DOMContentLoaded', function(event) {
       const scrollTop = this.scrollTop
       if (scrollTop > 0) {
         conferenceGradient.classList.add('shown')
-        console.log('Gradient shown')
       } else {
         conferenceGradient.classList.remove('shown')
-        console.log('Gradient removed')
       }
     })
   }
 
+
+  //////////////////////////
+  // Ссылки "История встреч"
+  /////////////////////////
+
+
+  // Находим все ссылки и превращаем Node List в массив
+
   const historyLinks = Array.from(document.querySelectorAll('.conference__playoff-history'))
 
-  historyLinks.forEach(link => {
-    link.addEventListener('click', function(event) {
+
+  // Функция-обработчик в форме замыкания
+
+  function makeTooltipOpener(link) {
+    event.preventDefault()
+    var open = false
+    let tooltip = link.parentElement.parentElement.parentElement.querySelector('.conference__playoff-table-tooltip')
+    let tooltipContent;
+    if (tooltip) {
+      tooltipContent = tooltip.querySelector('.conference__playoff-table-tooltip-content');
+    }
+    return function(event) {
       event.preventDefault()
-      const tooltip = link.parentElement.parentElement.parentElement.querySelector('.conference__playoff-table-tooltip')
-      tooltip.classList.toggle('shown')
-      $(tooltip).slideDown();
-    })
+      if (!open) {
+        tooltip.classList.add('shown')
+        $(tooltipContent).slideDown()
+        open = true
+      } else {
+        tooltip.classList.remove('shown')
+        open = false
+        $(tooltipContent).slideUp()
+      }
+    }
+  }
+
+  // Создаем и назначаем обработчик для каждой ссылки из массива
+
+  historyLinks.forEach(link => {
+    link.addEventListener('click', makeTooltipOpener(link))
   })
 })

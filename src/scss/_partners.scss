@@ -25,32 +25,52 @@
 .partners__list {
   display: flex;
   margin-top: 30px;
-  justify-content: center;
+  flex-wrap: wrap;
   &-item {
-    margin-right: 15px;
+    width: 20%;
+    flex-shrink: 0;
+    margin-bottom: 30px;
   }
 }
 
 .partners__logo-container {
-  width: 100px;
+  width: 100%;
   height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .partner__logo {
   position: relative;
+  height: 80%;
+  width: auto;
+ 
   &--megafon {
     bottom: -5px;
   }
 
   &--hankook {
     bottom: -5px;
+    height: 70%;
   }
 
   &--se {
     bottom: -12px;
+  }
+
+  &--haier {
+    height: 50%;
+  }
+
+  &--ey {
+    left: 15px;
+  }
+
+
+  &--durex {
+    height: 70%;
   }
 }
 

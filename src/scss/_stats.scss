@@ -4,10 +4,6 @@
     button {
       width: 230px;
       text-align: center;
-      background-color: #C0C0C0;
-      &.active {
-        background-color: $green;
-      }
     }
   }
 }

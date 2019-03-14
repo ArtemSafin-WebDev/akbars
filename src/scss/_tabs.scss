@@ -27,15 +27,17 @@
     }
     &.active {
       background-color: $green;
+      cursor: default;
     }
 
     &[disabled] {
+      background-color: #C0C0C0;
       cursor: default;
     }
 
     &:hover,
     &:focus {
-      &:not([disabled]) {
+      &:not([disabled]):not(.active) {
         background-color: #3c8f88;
       }
     }

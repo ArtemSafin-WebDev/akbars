@@ -249,10 +249,7 @@
   }
 }
 
-// table.dataTable thead table.dataTable tbody th,
-// table.dataTable tbody td {
-//   padding: 0;
-// }
+
 
 .staff__info-table,
 .staff__info-table.dataTable {
@@ -306,17 +303,18 @@
         padding-top: 5px;
         padding-bottom: 5px;
         padding: 5px 10px;
-        cursor: pointer;
         white-space: nowrap;
         transition: background-color .2s;
+        cursor: default;
+        &.sorting {
+          cursor: pointer;
+          outline: none;
+        }
         &.sorting_asc,
         &.sorting_desc {
           background-color: #D5D5D5;
         }
-        // &:hover,
-        // &:focus {
-        //   background-color: #C0C0C0;
-        // }
+        
       }
     }
   }
@@ -329,9 +327,9 @@
       position: relative;
       padding: 10px;
       transition: all 0.2s;
-      &.sorting_1 {
-        background-color: #E6E7E7;
-      }
+      // &.sorting_1 {
+      //   background-color: #E6E7E7;
+      // }
       &:first-child {
         font-weight: 700;
         &::before {
@@ -387,12 +385,12 @@
             background-color: #dde8e7;
           }
 
-          &.sorting_1 {
-            background-color: #C9D3D3;
-            &::before {
-              background-color: #C9D3D3;
-            }
-          }
+          // &.sorting_1 {
+          //   background-color: #C9D3D3;
+          //   &::before {
+          //     background-color: #C9D3D3;
+          //   }
+          // }
 
           &:first-child,
           &:last-child {
@@ -407,11 +405,11 @@
             &::before {
               background-color: #dde8e7;
             }
-            &.sorting_1 {
-              &::before {
-                background-color: #C9D3D3;
-              }
-            }
+            // &.sorting_1 {
+            //   &::before {
+            //     background-color: #C9D3D3;
+            //   }
+            // }
           }
         }
       }

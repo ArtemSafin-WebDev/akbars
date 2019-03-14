@@ -24,10 +24,10 @@
     tabsControls.forEach((button, index) => {
       if (index === (activeTab - 1)) {
         button.classList.add('active');
-        button.disabled = true;
+        
       } else {
         button.classList.remove('active');
-        button.disabled = false;
+       
       }
     })
     tabs.forEach((tab, index) => {
@@ -45,8 +45,11 @@
   tabsControls.forEach(button => button.addEventListener('click', function(event) {
     event.preventDefault();
     const activeTab = tabsControls.indexOf(this) + 1;
-    setActiveTab(activeTab);
-    
+    if (this.disabled === true) {
+      return false;
+    } else {
+      setActiveTab(activeTab);
+    }
   }))
 
   setActiveTab(activeTab);
