@@ -2650,7 +2650,7 @@ svg {
         -ms-flex-align: end;
             align-items: flex-end;
     position: relative; }
-    .calendar__dates td .calendar__date-info.last-month {
+    .calendar__dates td .calendar__date-info.another-month {
       color: #c0c0c0; }
   .calendar__dates td .calendar__date-info-day {
     position: relative;
@@ -2688,26 +2688,6 @@ svg {
     transition: all 0.3s;
     z-index: 2;
     transition: all 0.3s; }
-    .calendar__dates td .calendar__date-link.marked-red {
-      border: 2px solid #D81E23; }
-      .calendar__dates td .calendar__date-link.marked-red:hover, .calendar__dates td .calendar__date-link.marked-red:focus {
-        background-color: #D81E23; }
-        .calendar__dates td .calendar__date-link.marked-red:hover ~ .calendar__date-info-day, .calendar__dates td .calendar__date-link.marked-red:focus ~ .calendar__date-info-day {
-          color: white; }
-          .calendar__dates td .calendar__date-link.marked-red:hover ~ .calendar__date-info-day::after, .calendar__dates td .calendar__date-link.marked-red:focus ~ .calendar__date-info-day::after {
-            text-stroke: 3px #D81E23;
-            -moz-text-stroke-color: #D81E23;
-            -webkit-text-stroke-color: #D81E23; }
-    .calendar__dates td .calendar__date-link.marked-green {
-      border: 2px solid #256963; }
-      .calendar__dates td .calendar__date-link.marked-green:hover, .calendar__dates td .calendar__date-link.marked-green:focus {
-        background-color: #256963; }
-        .calendar__dates td .calendar__date-link.marked-green:hover ~ .calendar__date-info-day, .calendar__dates td .calendar__date-link.marked-green:focus ~ .calendar__date-info-day {
-          color: white; }
-          .calendar__dates td .calendar__date-link.marked-green:hover ~ .calendar__date-info-day::after, .calendar__dates td .calendar__date-link.marked-green:focus ~ .calendar__date-info-day::after {
-            text-stroke: 3px #256963;
-            -moz-text-stroke-color: #256963;
-            -webkit-text-stroke-color: #256963; }
     .calendar__dates td .calendar__date-link > img {
       width: 100%;
       height: 100%;
@@ -2717,6 +2697,29 @@ svg {
       -o-object-position: center;
          object-position: center;
       font-family: 'object-fit: cover; object-position: center;'; }
+  .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-red {
+    border: 2px solid #D81E23; }
+    .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-red:hover, .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-red:focus {
+      background-color: #D81E23; }
+      .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-red:hover ~ .calendar__date-info-day, .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-red:focus ~ .calendar__date-info-day {
+        color: white; }
+        .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-red:hover ~ .calendar__date-info-day::after, .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-red:focus ~ .calendar__date-info-day::after {
+          text-stroke: 3px #D81E23;
+          -moz-text-stroke-color: #D81E23;
+          -webkit-text-stroke-color: #D81E23; }
+  .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-green {
+    border: 2px solid #256963; }
+    .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-green:hover, .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-green:focus {
+      background-color: #256963; }
+      .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-green:hover ~ .calendar__date-info-day, .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-green:focus ~ .calendar__date-info-day {
+        color: white; }
+        .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-green:hover ~ .calendar__date-info-day::after, .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-green:focus ~ .calendar__date-info-day::after {
+          text-stroke: 3px #256963;
+          -moz-text-stroke-color: #256963;
+          -webkit-text-stroke-color: #256963; }
+
+.calendar__date-info.another-month .calendar__date-link {
+  opacity: .5; }
 
 .calendar__legend {
   display: -webkit-box;
@@ -2738,18 +2741,18 @@ svg {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-right: 42px; }
+  margin-right: 42px;
+  cursor: default; }
   .calendar__legend-item::before {
     content: '';
     display: block;
     width: 14px;
     height: 14px;
-    border: 1px solid #606366;
     margin-right: 12px; }
   .calendar__legend-item--home::before {
-    border-color: #256963; }
+    background-color: #256963; }
   .calendar__legend-item--guest::before {
-    border-color: #D81E23; }
+    background-color: #D81E23; }
 
 .calendar__links {
   display: -webkit-box;
@@ -4813,8 +4816,7 @@ svg {
   border: 2px solid #256963;
   padding: 5px 15px;
   height: 140px;
-  outline: none;
-  margin-bottom: 30px; }
+  outline: none; }
   .news-comments__textarea::-webkit-input-placeholder {
     font-family: Arial, Helvetica, sans-serif;
     color: #C0C0C0;
@@ -4848,9 +4850,14 @@ svg {
   -ms-flex-item-align: start;
       align-self: flex-start;
   -webkit-transition: background-color .2s;
-  transition: background-color .2s; }
+  transition: background-color .2s;
+  margin-top: 30px; }
   .news-comments__submit:hover, .news-comments__submit:focus {
     background-color: #3C8F88; }
+  .news-comments__submit--small {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 14px 48px; }
 
 .news-comments__smiles {
   display: -webkit-box;

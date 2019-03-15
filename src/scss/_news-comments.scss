@@ -369,7 +369,6 @@
   padding: 5px 15px;
   height: 140px;
   outline: none;
-  margin-bottom: 30px;
   @include placeholder {
     font-family: Arial, Helvetica, sans-serif;
     color: #C0C0C0;
@@ -390,9 +389,16 @@
   outline: none;
   align-self: flex-start;
   transition: background-color .2s;
+  margin-top: 30px;
   &:hover,
   &:focus {
     background-color: #3C8F88;
+  }
+
+  &--small {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 14px 48px;
   }
 }
 
