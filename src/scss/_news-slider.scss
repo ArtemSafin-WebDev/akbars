@@ -37,12 +37,10 @@
   display: flex;
   flex-grow: 1;
   min-height: 462px;
-  // flex-direction: column;
 }
 
 .news-slider__image-container {
   width: 654px;
-  // min-height: 462px;
   background-color: #fff;
   overflow: hidden;
   &:hover {
