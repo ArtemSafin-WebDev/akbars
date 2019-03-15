@@ -309,6 +309,10 @@
         &.sorting {
           cursor: pointer;
           outline: none;
+          &:hover,
+          &:focus {
+            background-color: #DEDEDE;
+          }
         }
         &.sorting_asc,
         &.sorting_desc {

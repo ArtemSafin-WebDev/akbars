@@ -338,111 +338,119 @@
   }
 }
 
-// .news-comments__form-block {
-//   width: 100%;
-//   display: flex;
-//   align-items: flex-start;
-//   margin-top: 0;
-//   &--main {
-//     margin-top: 40px;
-//     width: 620px;
-//   }
-// }
 
-// .news-comments__form {
-//   display: flex;
-//   flex-direction: column;
-//   width: 50%;
-//   flex-grow: 1;
-// }
 
-// .news-comments__smiles {
-//   width: 150px;
-//   margin-left: 15px;
-//   display: flex;
-//   flex-wrap: wrap;
-//   align-content: flex-start;
-//   align-items: center;
-//   flex-shrink: 0;
-// }
+.news-comments__form-block {
+  width: 100%;
+  display: flex;
+  margin-top: 25px;
+}
 
-// .news-comments__smile {
-//   margin-right: 15px;
-//   margin-bottom: 15px;
-//   &:nth-child(4n) {
-//     margin-right: 0;
-//   }
+.news-comments__form {
+  width: 624px;
+  display: flex;
+  flex-direction: column;
+}
 
-//   .news-comments__form-block--small & {
-//     &:nth-child(4n) {
-//       margin-right: 15px;
-//     }
-//     &:nth-child(3n) {
-//       margin-right: 0;
-//     }
-//   }
-// }
 
-// .news-comments__smile-add-smile {
-//   width: 42px;
-//   height: 42px;
-//   background-color: #dde8e7;
-//   outline: none;
-//   display: flex;
-// }
+.news-comments__textarea {
+  width: 100%;
+  resize: none;
+  font: inherit;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #242F37;
+  font-size: 16px;
+  line-height: 30px;
+  resize: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+  width: 100%;
+  border: 2px solid $green;
+  padding: 5px 15px;
+  height: 140px;
+  outline: none;
+  margin-bottom: 30px;
+  @include placeholder {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #C0C0C0;
+    font-size: 16px;
+    line-height: 30px;
+  }
+}
 
-// .news-comments__smile-image-container {
-//   width: 100%;
-//   height: 100%;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   overflow: hidden;
-//   > img {
-//     display: block;
-//     height: auto;
-//     margin: 0 auto;
-//   }
-// }
 
-// .news-comments__textarea {
-//   border: 2px solid $green;
-//   resize: none;
-//   -webkit-appearance: none;
-//   border-radius: 0;
-//   outline: none;
-//   height: 150px;
-//   padding: 13px 15px;
-//   font: inherit;
-//   font-family: Arial, Helvetica, sans-serif;
-//   font-size: 16px;
-//   line-height: 20px;
-//   @include placeholder {
-//     font-family: Arial, Helvetica, sans-serif;
-//     font-size: 16px;
-//     line-height: 20px;
-//     color: #c0c0c0;
-//   }
-// }
+.news-comments__submit {
+  background-color: $green;
+  color: white;
+  text-transform: uppercase;
+  padding: 17px 54px;
+  padding-bottom: 15px;
+  font-size: 14px;
+  line-height: 18px;
+  outline: none;
+  align-self: flex-start;
+  transition: background-color .2s;
+  &:hover,
+  &:focus {
+    background-color: #3C8F88;
+  }
+}
 
-// .news-comments__submit {
-//   font-size: 14px;
-//   line-height: 18px;
-//   border: 2px solid $green;
-//   display: inline-block;
-//   padding: 10px 32px;
-//   transition: all 0.3s;
-//   color: $green;
-//   margin-top: 20px;
-//   align-self: flex-end;
-//   margin-top: 15px;
-//   &:link,
-//   &:visited {
-//     color: $green;
-//   }
 
-//   &:hover,
-//   &:focus {
-//     border: 2px solid $red;
-//   }
-// }
+.news-comments__smiles {
+  // flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: flex-start;
+  width: 170px;
+  margin-left: auto;
+}
+
+.news-comments__smile {
+  width: 50px;
+  height: 35px;
+  margin-right: 0;
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+  
+}
+
+.news-comments__smile-add-smile {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  .news-comments__smile-image-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .news-comments__smile-image {
+      height: 60%;
+      width: auto;
+      max-width: initial;
+      display: block;
+      position: relative;
+      &--champion {
+        height: 85%;
+        bottom: -1px;
+      }
+
+      &--nepyhti {
+        height: 80%;
+        left: 14px;
+        bottom: 3px;
+      }
+
+      &--confused {
+        height: 78%;
+        bottom: 3px;
+      }
+    }
+  }
+}
