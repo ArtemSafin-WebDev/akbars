@@ -2216,6 +2216,56 @@ svg {
       width: 30px;
       height: 22px; }
 
+.match-banner {
+  width: 326px;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.match-banner__info {
+  background-color: #256963;
+  color: white;
+  text-align: center;
+  padding: 20px; }
+
+.match-banner__date {
+  display: block;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  margin-bottom: 10px; }
+
+.match-banner__time-and-place {
+  display: block;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 20px; }
+
+.match-banner__teams {
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 24px; }
+
+.match-banner__image {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+  .match-banner__image > img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+    font-family: 'object-fit: cover; object-position: center;'; }
+
 .tabs {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -2253,10 +2303,12 @@ svg {
     .tabs__navigation > button:not(:last-of-type) {
       margin-right: 2px; }
     .tabs__navigation > button.active {
-      background-color: #256963; }
-    .tabs__navigation > button[disabled] {
+      background-color: #256963;
       cursor: default; }
-    .tabs__navigation > button:hover:not([disabled]), .tabs__navigation > button:focus:not([disabled]) {
+    .tabs__navigation > button[disabled] {
+      background-color: #C0C0C0;
+      cursor: default; }
+    .tabs__navigation > button:hover:not([disabled]):not(.active), .tabs__navigation > button:focus:not([disabled]):not(.active) {
       background-color: #3c8f88; }
 
 .tabs__content {
@@ -2598,7 +2650,7 @@ svg {
         -ms-flex-align: end;
             align-items: flex-end;
     position: relative; }
-    .calendar__dates td .calendar__date-info.last-month {
+    .calendar__dates td .calendar__date-info.another-month {
       color: #c0c0c0; }
   .calendar__dates td .calendar__date-info-day {
     position: relative;
@@ -2636,26 +2688,6 @@ svg {
     transition: all 0.3s;
     z-index: 2;
     transition: all 0.3s; }
-    .calendar__dates td .calendar__date-link.marked-red {
-      border: 2px solid #D81E23; }
-      .calendar__dates td .calendar__date-link.marked-red:hover, .calendar__dates td .calendar__date-link.marked-red:focus {
-        background-color: #D81E23; }
-        .calendar__dates td .calendar__date-link.marked-red:hover ~ .calendar__date-info-day, .calendar__dates td .calendar__date-link.marked-red:focus ~ .calendar__date-info-day {
-          color: white; }
-          .calendar__dates td .calendar__date-link.marked-red:hover ~ .calendar__date-info-day::after, .calendar__dates td .calendar__date-link.marked-red:focus ~ .calendar__date-info-day::after {
-            text-stroke: 3px #D81E23;
-            -moz-text-stroke-color: #D81E23;
-            -webkit-text-stroke-color: #D81E23; }
-    .calendar__dates td .calendar__date-link.marked-green {
-      border: 2px solid #256963; }
-      .calendar__dates td .calendar__date-link.marked-green:hover, .calendar__dates td .calendar__date-link.marked-green:focus {
-        background-color: #256963; }
-        .calendar__dates td .calendar__date-link.marked-green:hover ~ .calendar__date-info-day, .calendar__dates td .calendar__date-link.marked-green:focus ~ .calendar__date-info-day {
-          color: white; }
-          .calendar__dates td .calendar__date-link.marked-green:hover ~ .calendar__date-info-day::after, .calendar__dates td .calendar__date-link.marked-green:focus ~ .calendar__date-info-day::after {
-            text-stroke: 3px #256963;
-            -moz-text-stroke-color: #256963;
-            -webkit-text-stroke-color: #256963; }
     .calendar__dates td .calendar__date-link > img {
       width: 100%;
       height: 100%;
@@ -2665,6 +2697,29 @@ svg {
       -o-object-position: center;
          object-position: center;
       font-family: 'object-fit: cover; object-position: center;'; }
+  .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-red {
+    border: 2px solid #D81E23; }
+    .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-red:hover, .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-red:focus {
+      background-color: #D81E23; }
+      .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-red:hover ~ .calendar__date-info-day, .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-red:focus ~ .calendar__date-info-day {
+        color: white; }
+        .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-red:hover ~ .calendar__date-info-day::after, .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-red:focus ~ .calendar__date-info-day::after {
+          text-stroke: 3px #D81E23;
+          -moz-text-stroke-color: #D81E23;
+          -webkit-text-stroke-color: #D81E23; }
+  .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-green {
+    border: 2px solid #256963; }
+    .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-green:hover, .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-green:focus {
+      background-color: #256963; }
+      .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-green:hover ~ .calendar__date-info-day, .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-green:focus ~ .calendar__date-info-day {
+        color: white; }
+        .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-green:hover ~ .calendar__date-info-day::after, .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-green:focus ~ .calendar__date-info-day::after {
+          text-stroke: 3px #256963;
+          -moz-text-stroke-color: #256963;
+          -webkit-text-stroke-color: #256963; }
+
+.calendar__date-info.another-month .calendar__date-link {
+  opacity: .5; }
 
 .calendar__legend {
   display: -webkit-box;
@@ -2686,18 +2741,18 @@ svg {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-right: 42px; }
+  margin-right: 42px;
+  cursor: default; }
   .calendar__legend-item::before {
     content: '';
     display: block;
     width: 14px;
     height: 14px;
-    border: 1px solid #606366;
     margin-right: 12px; }
   .calendar__legend-item--home::before {
-    border-color: #256963; }
+    background-color: #256963; }
   .calendar__legend-item--guest::before {
-    border-color: #D81E23; }
+    background-color: #D81E23; }
 
 .calendar__links {
   display: -webkit-box;
@@ -3157,36 +3212,20 @@ svg {
       .conference__playoff-table thead th:hover .conference__playoff-tooltip {
         visibility: visible;
         opacity: 1; }
-  .conference__playoff-table tbody:last-child tr:last-child td:first-child::after {
+  .conference__playoff-table tbody:last-child tr:nth-child(3) td:last-child::after {
     content: '';
     position: absolute;
     bottom: -3px;
-    left: 20px;
-    width: calc(100% - 20px);
+    right: 0;
+    width: 266px;
     height: 3px;
     background-color: #ebebeb; }
-  .conference__playoff-table tbody:last-child tr:last-child td:first-child::before {
+  .conference__playoff-table tbody:last-child tr:nth-child(3) td:last-child::before {
     display: none; }
-  .conference__playoff-table tbody:last-child tr:last-child td:last-child::after {
-    content: '';
-    position: absolute;
-    bottom: -3px;
-    right: 20px;
-    width: calc(100% - 20px);
-    height: 3px;
-    background-color: #ebebeb; }
-  .conference__playoff-table tbody:last-child tr:last-child td:last-child::before {
-    display: none; }
-  .conference__playoff-table tbody:hover tr:not(:nth-child(4n)):not(.selected) td {
-    background-color: #dde8e7;
-    border-color: #dde8e7; }
-  .conference__playoff-table tbody:hover tr:not(:nth-child(4n)):not(.selected):nth-child(3n + 1) td {
-    border-color: #dde8e7; }
-  .conference__playoff-table tbody:hover tr:not(:nth-child(4n)):not(.selected):nth-child(3n) td:last-child::before {
-    background-color: #dde8e7;
-    bottom: 0; }
-  .conference__playoff-table tbody:hover tr.selected + tr.selected + tr td {
-    background-color: #fff !important; }
+  .conference__playoff-table tbody:hover tr:not(.selected):nth-child(1) td:last-child {
+    background-color: #dde8e7; }
+  .conference__playoff-table tbody:hover tr:not(.selected):nth-child(2) td:last-child {
+    background-color: #dde8e7; }
   .conference__playoff-table tbody td {
     font-size: 14px;
     line-height: 24px;
@@ -3225,13 +3264,13 @@ svg {
       position: absolute;
       bottom: 0;
       right: 0;
-      width: 268px;
+      width: 266px;
       height: 1px;
       background-color: #ebebeb;
       -webkit-transition: background-color 0.2s;
       transition: background-color 0.2s; }
   .conference__playoff-table tbody tr:nth-child(4n) td {
-    padding-left: 58px; }
+    padding-left: 60px; }
   .conference__playoff-table tbody tr.selected td:last-child {
     background-color: #D81E23;
     color: white; }
@@ -3300,9 +3339,15 @@ svg {
   width: 100%;
   position: relative;
   z-index: 50;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  display: none; }
+  -webkit-transition: opacity 0.3s, visibility 0s linear .3s;
+  transition: opacity 0.3s, visibility 0s linear .3s;
+  opacity: 0;
+  visibility: hidden; }
+  .conference__playoff-table-tooltip.shown {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: all .3s;
+    transition: all .3s; }
   .conference__playoff-table-tooltip-table-wrapper {
     padding: 10px 15px; }
   .conference__playoff-table-tooltip::after {
@@ -3328,7 +3373,8 @@ svg {
     font-size: 14px;
     line-height: 16px;
     z-index: 50;
-    overflow: hidden; }
+    overflow: hidden;
+    display: none; }
   .conference__playoff-table-tooltip .table-simulation {
     display: table;
     border-collapse: collapse;
@@ -3361,8 +3407,9 @@ svg {
   top: 0px;
   left: 0;
   width: 100%;
-  background-image: linear-gradient(to bottom, white 5px, rgba(255, 255, 255, 0));
-  height: 100px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(rgba(255, 255, 255, 0)));
+  background-image: linear-gradient(to bottom, white, rgba(255, 255, 255, 0));
+  height: 70px;
   z-index: 50;
   pointer-events: none;
   opacity: 0;
@@ -3636,12 +3683,41 @@ svg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: auto; }
+  margin-left: auto;
+  position: relative; }
+  .subscribe__form .parsley-errors-list {
+    position: absolute;
+    top: calc(100% + 15px);
+    padding: 5px 20px;
+    border-radius: 5px;
+    background-color: white;
+    color: #D81E23;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    z-index: 20;
+    -webkit-filter: drop-shadow(0px 5px 20px rgba(0, 0, 0, 0.2));
+            filter: drop-shadow(0px 5px 20px rgba(0, 0, 0, 0.2));
+    display: none;
+    -webkit-animation: fadeEffect .3s;
+            animation: fadeEffect .3s; }
+    .subscribe__form .parsley-errors-list.filled {
+      display: block; }
+    .subscribe__form .parsley-errors-list::before {
+      content: '';
+      position: absolute;
+      display: block;
+      bottom: 100%;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
+      border: 10px solid transparent;
+      border-bottom: 12px solid #fff; }
 
 .subscribe__input {
   background-color: #fff;
   border: none;
-  color: #242F37;
+  color: #242f37;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 50px;
@@ -3658,25 +3734,25 @@ svg {
     font-size: 16px;
     line-height: 24px;
     line-height: 50px;
-    color: #C0C0C0; }
+    color: #c0c0c0; }
   .subscribe__input:-moz-placeholder {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 24px;
     line-height: 50px;
-    color: #C0C0C0; }
+    color: #c0c0c0; }
   .subscribe__input::-moz-placeholder {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 24px;
     line-height: 50px;
-    color: #C0C0C0; }
+    color: #c0c0c0; }
   .subscribe__input:-ms-input-placeholder {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 24px;
     line-height: 50px;
-    color: #C0C0C0; }
+    color: #c0c0c0; }
 
 .subscribe__submit {
   background-color: #D81E23;
@@ -3685,10 +3761,16 @@ svg {
   line-height: 18px;
   width: 190px;
   outline: none;
-  -webkit-transition: background-color .2s;
-  transition: background-color .2s; }
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s; }
   .subscribe__submit:hover, .subscribe__submit:focus {
-    background-color: #B9181C; }
+    background-color: #b9181c; }
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 
 .sponsors {
   background-color: #fff;
@@ -3770,10 +3852,7 @@ svg {
   width: 980px; }
   .stats .tabs__navigation button {
     width: 230px;
-    text-align: center;
-    background-color: #C0C0C0; }
-    .stats .tabs__navigation button.active {
-      background-color: #256963; }
+    text-align: center; }
 
 .tabs__item--players {
   padding: 30px;
@@ -4705,6 +4784,138 @@ svg {
   .news-comments__all-comments:hover, .news-comments__all-comments:focus {
     border: 2px solid #D81E23; }
 
+.news-comments__form-block {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 25px; }
+
+.news-comments__form {
+  width: 624px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.news-comments__textarea {
+  width: 100%;
+  resize: none;
+  font: inherit;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #242F37;
+  font-size: 16px;
+  line-height: 30px;
+  resize: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+  width: 100%;
+  border: 2px solid #256963;
+  padding: 5px 15px;
+  height: 140px;
+  outline: none; }
+  .news-comments__textarea::-webkit-input-placeholder {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #C0C0C0;
+    font-size: 16px;
+    line-height: 30px; }
+  .news-comments__textarea:-moz-placeholder {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #C0C0C0;
+    font-size: 16px;
+    line-height: 30px; }
+  .news-comments__textarea::-moz-placeholder {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #C0C0C0;
+    font-size: 16px;
+    line-height: 30px; }
+  .news-comments__textarea:-ms-input-placeholder {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #C0C0C0;
+    font-size: 16px;
+    line-height: 30px; }
+
+.news-comments__submit {
+  background-color: #256963;
+  color: white;
+  text-transform: uppercase;
+  padding: 17px 54px;
+  padding-bottom: 15px;
+  font-size: 14px;
+  line-height: 18px;
+  outline: none;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -webkit-transition: background-color .2s;
+  transition: background-color .2s;
+  margin-top: 30px; }
+  .news-comments__submit:hover, .news-comments__submit:focus {
+    background-color: #3C8F88; }
+  .news-comments__submit--small {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 14px 48px; }
+
+.news-comments__smiles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  width: 170px;
+  margin-left: auto; }
+
+.news-comments__smile {
+  width: 50px;
+  height: 35px;
+  margin-right: 0; }
+  .news-comments__smile:nth-child(3n) {
+    margin-right: 0; }
+
+.news-comments__smile-add-smile {
+  width: 100%;
+  height: 100%;
+  position: relative; }
+  .news-comments__smile-add-smile .news-comments__smile-image-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .news-comments__smile-add-smile .news-comments__smile-image-container .news-comments__smile-image {
+      height: 60%;
+      width: auto;
+      max-width: initial;
+      display: block;
+      position: relative; }
+      .news-comments__smile-add-smile .news-comments__smile-image-container .news-comments__smile-image--champion {
+        height: 85%;
+        bottom: -1px; }
+      .news-comments__smile-add-smile .news-comments__smile-image-container .news-comments__smile-image--nepyhti {
+        height: 80%;
+        left: 14px;
+        bottom: 3px; }
+      .news-comments__smile-add-smile .news-comments__smile-image-container .news-comments__smile-image--confused {
+        height: 78%;
+        bottom: 3px; }
+
 .last-news {
   width: 960px;
   background-color: #fff;
@@ -4820,14 +5031,16 @@ svg {
   display: -ms-flexbox;
   display: flex;
   margin-top: 30px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
   .partners__list-item {
-    margin-right: 15px; }
+    width: 20%;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    margin-bottom: 30px; }
 
 .partners__logo-container {
-  width: 100px;
+  width: 100%;
   height: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4837,16 +5050,28 @@ svg {
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  max-width: initial;
+  -ms-flex-negative: 0;
+      flex-shrink: 0; }
 
 .partner__logo {
-  position: relative; }
+  position: relative;
+  height: 80%;
+  width: auto; }
   .partner__logo--megafon {
     bottom: -5px; }
   .partner__logo--hankook {
-    bottom: -5px; }
+    bottom: -5px;
+    height: 70%; }
   .partner__logo--se {
     bottom: -12px; }
+  .partner__logo--haier {
+    height: 50%; }
+  .partner__logo--ey {
+    left: 15px; }
+  .partner__logo--durex {
+    height: 70%; }
 
 .partners__link {
   color: #7F7F7F;
@@ -5138,10 +5363,18 @@ svg {
     padding-top: 5px;
     padding-bottom: 5px;
     padding: 5px 10px;
-    cursor: pointer;
     white-space: nowrap;
     -webkit-transition: background-color .2s;
-    transition: background-color .2s; }
+    transition: background-color .2s;
+    cursor: default; }
+    .staff__info-table thead tr th.sorting,
+    .staff__info-table.dataTable thead tr th.sorting {
+      cursor: pointer;
+      outline: none; }
+      .staff__info-table thead tr th.sorting:hover, .staff__info-table thead tr th.sorting:focus,
+      .staff__info-table.dataTable thead tr th.sorting:hover,
+      .staff__info-table.dataTable thead tr th.sorting:focus {
+        background-color: #DEDEDE; }
     .staff__info-table thead tr th.sorting_asc, .staff__info-table thead tr th.sorting_desc,
     .staff__info-table.dataTable thead tr th.sorting_asc,
     .staff__info-table.dataTable thead tr th.sorting_desc {
@@ -5155,9 +5388,6 @@ svg {
     padding: 10px;
     -webkit-transition: all 0.2s;
     transition: all 0.2s; }
-    .staff__info-table tbody td.sorting_1,
-    .staff__info-table.dataTable tbody td.sorting_1 {
-      background-color: #E6E7E7; }
     .staff__info-table tbody td:first-child,
     .staff__info-table.dataTable tbody td:first-child {
       font-weight: 700; }
@@ -5205,12 +5435,6 @@ svg {
       .staff__info-table tbody tr:hover td::before,
       .staff__info-table.dataTable tbody tr:hover td::before {
         background-color: #dde8e7; }
-      .staff__info-table tbody tr:hover td.sorting_1,
-      .staff__info-table.dataTable tbody tr:hover td.sorting_1 {
-        background-color: #C9D3D3; }
-        .staff__info-table tbody tr:hover td.sorting_1::before,
-        .staff__info-table.dataTable tbody tr:hover td.sorting_1::before {
-          background-color: #C9D3D3; }
       .staff__info-table tbody tr:hover td:first-child::before, .staff__info-table tbody tr:hover td:last-child::before,
       .staff__info-table.dataTable tbody tr:hover td:first-child::before,
       .staff__info-table.dataTable tbody tr:hover td:last-child::before {
@@ -5218,9 +5442,6 @@ svg {
     .staff__info-table tbody tr:hover + tr td::before,
     .staff__info-table.dataTable tbody tr:hover + tr td::before {
       background-color: #dde8e7; }
-    .staff__info-table tbody tr:hover + tr td.sorting_1::before,
-    .staff__info-table.dataTable tbody tr:hover + tr td.sorting_1::before {
-      background-color: #C9D3D3; }
 
 .staff__section:not(.staff__section--players) .staff__info-table tbody tr td:first-child {
   white-space: nowrap;
