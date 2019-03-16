@@ -1,0 +1,28 @@
+import './fotorama'
+import playerPhotoDataSource from './data/zaripovPhoto'
+
+export default function() {
+  if (playerPhotoDataSource) {
+    $('.js-player-photogallery')
+      .on('fotorama:show', function(e, fotorama, extra) {
+        $('.js-player-photo-description').html(fotorama.activeFrame.title)
+      })
+      .fotorama({
+        data: playerPhotoDataSource,
+        width: '100%',
+        ratio: '1200/800',
+        loop: true,
+        allowfullscreen: true,
+        nav: 'thumbs',
+        navposition: 'top',
+        hash: true,
+        keyboard: true,
+        shadows: false,
+        margin: 10,
+        thumbwidth: 120,
+        thumbheight: 80,
+        thumbmargin: 10,
+        arrows: true
+      })
+  }
+}

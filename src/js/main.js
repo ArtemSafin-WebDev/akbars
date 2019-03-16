@@ -1,25 +1,31 @@
 import '@babel/polyfill'
-// import $ from 'jquery'
 import '@fancyapps/fancybox'
+import objectFitImages from 'object-fit-images'
+import smoothscroll from 'smoothscroll-polyfill';
 
 import setTabsOnPage from './tabs'
-import objectFitImages from 'object-fit-images'
-import initializeSliders from './sliders';
-import searchModal from './search';
-import addCopyrightText from './copyrightText';
+import initializeSliders from './sliders'
+import searchModal from './search'
+import addCopyrightText from './copyrightText'
 import cookiePolicy from './cookiePolicy'
-import SimpleBar from 'simplebar'
-import customSelect from './customSelect';
-import tableSorting from './tableSorting';
-import formValidation from './formValidation';
+import customSelect from './customSelect'
+import tableSorting from './tableSorting'
+import formValidation from './formValidation'
+import photoGallery from './photogallery'
+import playoffTooltips from './playoffTooltips'
+import customScrollbars from './customScrollbars'
+import scrollableTable from './scrollableTable'
 
-
-
-document.addEventListener('DOMContentLoaded', function(event) {
+document.addEventListener('DOMContentLoaded', function() {
   // Полифилл для CSS свойства ObjectFit(заполнение контейнера изображением)
   objectFitImages()
 
+  // Полифилл для плавного скроллинга
+
+  smoothscroll.polyfill()
+
   // Инициализиуем слайдеры на странице
+
   initializeSliders()
 
   // Добавляем сведения об источнике при копировании текста с сайта
@@ -42,7 +48,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
   customSelect()
 
-
   // Сортировка таблиц
 
   tableSorting()
@@ -51,89 +56,21 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
   formValidation()
 
-  
-  ///////////////////////////////
-  // Скролл внутри блока плей-офф
-  //////////////////////////////
+  // Фотогалерея
 
-  // Для колонки плей-офф
+  photoGallery()
 
-  const playoffScrollElement = document.querySelector('.js-playoff-simplebar')
-  let playoffSimplebar
-  if (playoffScrollElement) {
-    playoffSimplebar = new SimpleBar(playoffScrollElement)
-  }
+  // Тултипы "История встреч" в разделе плей-офф
 
-  if (playoffSimplebar) {
-    const conferenceGradient = document.querySelector('.js-playoff-top-gradient')
-    playoffSimplebar.getScrollElement().addEventListener('scroll', function() {
-      const scrollTop = this.scrollTop
-      if (scrollTop > 0) {
-        conferenceGradient.classList.add('shown')
-      } else {
-        conferenceGradient.classList.remove('shown')
-      }
-    })
-  }
+  playoffTooltips()
 
-  // Для обычной колонки конференций и дивизионов
+  // Кастомный скроллбар
 
-  const conferenceScrollElement = document.querySelector('.js-conference-info-simplebar')
-  let conferenceInfoSimplebar
-  if (conferenceScrollElement) {
-    conferenceInfoSimplebar = new SimpleBar(conferenceScrollElement)
-  }
+  customScrollbars()
 
-  if (conferenceInfoSimplebar) {
-    const conferenceGradient = document.querySelector('.js-conference-top-gradient')
-    conferenceInfoSimplebar.getScrollElement().addEventListener('scroll', function() {
-      const scrollTop = this.scrollTop
-      if (scrollTop > 0) {
-        conferenceGradient.classList.add('shown')
-      } else {
-        conferenceGradient.classList.remove('shown')
-      }
-    })
-  }
+  // Таблицы с горизонтальной прокруткой
+
+  scrollableTable()
 
 
-  //////////////////////////
-  // Ссылки "История встреч"
-  /////////////////////////
-
-
-  // Находим все ссылки и превращаем Node List в массив
-
-  const historyLinks = Array.from(document.querySelectorAll('.conference__playoff-history'))
-
-
-  // Функция-обработчик в форме замыкания
-
-  function makeTooltipOpener(link) {
-    event.preventDefault()
-    var open = false
-    let tooltip = link.parentElement.parentElement.parentElement.querySelector('.conference__playoff-table-tooltip')
-    let tooltipContent;
-    if (tooltip) {
-      tooltipContent = tooltip.querySelector('.conference__playoff-table-tooltip-content');
-    }
-    return function(event) {
-      event.preventDefault()
-      if (!open) {
-        tooltip.classList.add('shown')
-        $(tooltipContent).slideDown()
-        open = true
-      } else {
-        tooltip.classList.remove('shown')
-        open = false
-        $(tooltipContent).slideUp()
-      }
-    }
-  }
-
-  // Создаем и назначаем обработчик для каждой ссылки из массива
-
-  historyLinks.forEach(link => {
-    link.addEventListener('click', makeTooltipOpener(link))
-  })
 })

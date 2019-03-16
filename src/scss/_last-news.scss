@@ -29,14 +29,14 @@
 .last-news__link {
   color: $green;
   outline: none;
-
+  transition: color .2s;
   &:link,
   &:visited {
     color: $green;
   }
   &:hover,
   &:focus {
-    text-decoration: underline;
+    color: $red;
   }
 }
 

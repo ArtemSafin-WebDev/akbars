@@ -34,9 +34,9 @@
             <ul class="news-slider__list js-news-slider">
               <li class="news-slider__list-item">
                 <div class="news-slider__slide-content">
-                  <div class="news-slider__image-container">
+                  <a href="#" class="news-slider__image-container">
                     <img src="img/Зарипов.jpg" alt="" class="news-slider__image" />
-                  </div>
+                  </a>
                   <div class="news-slider__text-container">
                     <div class="news-slider__news-info">
                       <span class="news-slider__info-block">
@@ -87,9 +87,9 @@
               </li>
               <li class="news-slider__list-item">
                 <div class="news-slider__slide-content">
-                  <div class="news-slider__image-container">
+                  <a href="#" class="news-slider__image-container">
                     <img src="img/Avangard.jpg" alt="" class="news-slider__image" />
-                  </div>
+                  </a>
                   <div class="news-slider__text-container">
                     <div class="news-slider__news-info">
                       <span class="news-slider__info-block">
@@ -140,13 +140,13 @@
               </li>
               <li class="news-slider__list-item">
                 <div class="news-slider__slide-content">
-                  <div class="news-slider__image-container">
+                  <a href="#" class="news-slider__image-container">
                     <img
                       src="https://www.ak-bars.ru/files/image/news/2019/03/00de0cdccf.jpg"
                       alt=""
                       class="news-slider__image"
                     />
-                  </div>
+                  </a>
                   <div class="news-slider__text-container">
                     <div class="news-slider__news-info">
                       <span class="news-slider__info-block">
@@ -197,9 +197,9 @@
               </li>
               <li class="news-slider__list-item">
                 <div class="news-slider__slide-content">
-                  <div class="news-slider__image-container">
+                  <a href="#" class="news-slider__image-container">
                     <img src="img/Avangard.jpg" alt="" class="news-slider__image" />
-                  </div>
+                  </a>
                   <div class="news-slider__text-container">
                     <div class="news-slider__news-info">
                       <span class="news-slider__info-block">
@@ -250,13 +250,13 @@
               </li>
               <li class="news-slider__list-item">
                 <div class="news-slider__slide-content">
-                  <div class="news-slider__image-container">
+                  <a href="#" class="news-slider__image-container">
                     <img
                       src="https://www.ak-bars.ru/files/image/news/2019/03/00de0cdccf.jpg"
                       alt=""
                       class="news-slider__image"
                     />
-                  </div>
+                  </a>
                   <div class="news-slider__text-container">
                     <div class="news-slider__news-info">
                       <span class="news-slider__info-block">
@@ -312,7 +312,7 @@
               </a>
             </div>
           </section>
-          <div class="banner-long" style="background-image: url(img/banners/banner-tickets.png)"></div>
+          <a href="#" class="banner-long" style="background-image: url(img/banners/banner-tickets.png)"></a>
           <div class="flex-row">
             <section class="ak-bars-info">
               <div class="tabs js-tabs-container">
@@ -500,6 +500,9 @@
                   <button class="js-tab-button">
                     <span>Следующий матч</span>
                   </button>
+                  <!-- <button class="js-tab-button">
+                    <span>Матч сегодня</span>
+                  </button> -->
                 </nav>
                 <ul class="tabs__content">
                   <li class="tabs__item match-info__item js-tab">
@@ -620,11 +623,83 @@
                       </li>
                       <li class="match-info__media-item">
                         <a href="#" class="match-info__media-link">
-                          <svg width="22" height="22" aria-hidden="true" class="icon-search-protocol">
-                            <use xlink:href="#protocol" />
+                          <svg width="22" height="22" aria-hidden="true" class="icon-live">
+                            <use xlink:href="#live" />
                           </svg>
                           <span class="match-info__media-link-description">
-                            Протокол
+                            Трансляции
+                          </span>
+                        </a>
+                      </li>
+                      <li class="match-info__media-item">
+                        <a href="#" class="match-info__media-link">
+                          <svg width="22" height="22" aria-hidden="true" class="icon-tickets-match">
+                            <use xlink:href="#tickets-match" />
+                          </svg>
+                          <span class="match-info__media-link-description">
+                            Билеты
+                          </span>
+                        </a>
+                      </li>
+                      
+                    </ul>
+                  </li>
+                  <!-- Третий блок - Матч сегодня. Вместе с ним нужно раскомментировать кнопку -->
+
+                  <!-- <li class="tabs__item match-info__item js-tab">
+                    <div class="match-info__date-time">
+                      <span class="match-info__date">
+                        Сегодня
+                      </span>
+                      <span class="match-info__place-and-time"> Пятница, 12:12 КЗН<br />«ТАТНЕФТЬ АРЕНА» </span>
+                    </div>
+                    <div class="match-info__teams">
+                      <div class="match-info__team">
+                        <span class="match-info__team-logo">
+                          <img src="img/logo/akbars-logo.svg" alt="Лого Ак Барс" width="96" />
+                        </span>
+                        <span class="match-info__team-name">Ак Барс</span>
+                        <span class="match-info__team-origin">Казань</span>
+                      </div>
+                      <div class="match-info__score">
+                        7:3
+                      </div>
+                      <div class="match-info__team">
+                        <span class="match-info__team-logo">
+                          <img src="img/logo/dynamo-logo.svg" alt="Лого Ак Барс" width="96" />
+                        </span>
+                        <span class="match-info__team-name">Динамо</span>
+                        <span class="match-info__team-origin">Москва</span>
+                      </div>
+                    </div>
+                    <ul class="match-info__media">
+                      <li class="match-info__media-item">
+                        <a href="#" class="match-info__media-link">
+                          <svg width="22" height="22" aria-hidden="true" class="icon-search-publications">
+                            <use xlink:href="#publications" />
+                          </svg>
+                          <span class="match-info__media-link-description">
+                            Публикации
+                          </span>
+                        </a>
+                      </li>
+                      <li class="match-info__media-item">
+                        <a href="#" class="match-info__media-link">
+                          <svg width="22" height="22" aria-hidden="true" class="icon-tv">
+                            <use xlink:href="#tv" />
+                          </svg>
+                          <span class="match-info__media-link-description">
+                            Телепрограмма
+                          </span>
+                        </a>
+                      </li>
+                      <li class="match-info__media-item">
+                        <a href="#" class="match-info__media-link">
+                          <svg width="22" height="22" aria-hidden="true" class="icon-live">
+                            <use xlink:href="#live" />
+                          </svg>
+                          <span class="match-info__media-link-description">
+                            Трансляции
                           </span>
                         </a>
                       </li>
@@ -638,31 +713,13 @@
                           </span>
                         </a>
                       </li>
-                      <li class="match-info__media-item">
-                        <a href="#" class="match-info__media-link">
-                          <svg width="22" height="22" aria-hidden="true" class="icon-search-goals">
-                            <use xlink:href="#goals" />
-                          </svg>
-                          <span class="match-info__media-link-description">
-                            Голы
-                          </span>
-                        </a>
-                      </li>
-                      <li class="match-info__media-item">
-                        <a href="#" class="match-info__media-link">
-                          <svg width="22" height="22" aria-hidden="true" class="icon-search-photo">
-                            <use xlink:href="#photo" />
-                          </svg>
-                          <span class="match-info__media-link-description">
-                            Фото
-                          </span>
-                        </a>
-                      </li>
                     </ul>
-                  </li>
+                  </li> -->
                 </ul>
               </div>
             </section>
+            <!-- Баннер для межсезонья, когда нет игр -->
+
             <!-- <section class="match-banner">
               <div class="match-banner__info">
                 <span class="match-banner__date">
@@ -680,8 +737,8 @@
               </div>
             </section> -->
             <div class="banner-column">
-              <div class="banner-column__item" style="background-image: url(img/banners/partner.png)"></div>
-              <div class="banner-column__item" style="background-image: url(img/banners/hoki.png)"></div>
+              <a href="#" class="banner-column__item" style="background-image: url(img/banners/partner.png)"></a>
+              <a href="#" class="banner-column__item" style="background-image: url(img/banners/hoki.png)"></a>
             </div>
           </div>
           <div class="flex-row">
@@ -1662,7 +1719,7 @@
                     <div class="conference__playoff-gradient-wrapper">
                       <div class="conference__info js-playoff-simplebar">
                         <ul class="conference__info-slider js-playoff-tables-slider">
-                          <li class="conference__info-slider-item">
+                          <li class="conference__info-slider-item conference__info-slider-item--playoff">
                             <div class="conference__playoff-card">
                               <h3 class="conference__conference-heading">
                                 Восточная конференция
@@ -2276,7 +2333,7 @@
                               </table>
                             </div>
                           </li>
-                          <li class="conference__info-slider-item">
+                          <li class="conference__info-slider-item conference__info-slider-item--playoff">
                             <div class="conference__playoff-card">
                               <h3 class="conference__conference-heading">
                                 Восточная конференция
@@ -2904,13 +2961,10 @@
               </div>
             </section>
             <div class="banner-column">
-              <div class="banner-column__item">
-                #КОНКУРС
-              </div>
-              <div class="banner-column__item" style="background-image: url(img/banners/гимн.png)"></div>
+              <a href="#" class="banner-column__item" style="background-image: url(img/banners/гимн.png)"></a>
             </div>
           </div>
-          <div class="banner-long" style="background-image: url(img/banners/uvt.png)"></div>
+          <a href="#" class="banner-long" style="background-image: url(img/banners/uvt.png)"></a>
           <div class="flex-row">
             <section class="stats">
               <div class="tabs js-tabs-container">
@@ -3182,9 +3236,7 @@
                 </ul>
               </div>
             </section>
-            <div class="banner banner--high">
-              #РЕКЛАМА СТРАХОВАНИЯ
-            </div>
+            <a href="#" class="banner banner--high" style="background-image: url(img/banners/sogaz2018.jpg)"> </a>
           </div>
           <section class="shop">
             <h2 class="shop__heading">Официальный интернет-магазин</h2>

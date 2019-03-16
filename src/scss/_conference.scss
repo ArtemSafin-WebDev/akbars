@@ -287,6 +287,9 @@
   display: flex !important;
   flex-direction: column;
   padding-bottom: 160px;
+  &--playoff {
+    padding-bottom: 260px;
+  }
 }
 
 .conference__conference-heading {

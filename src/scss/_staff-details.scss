@@ -4,6 +4,7 @@
   border-top: 2px solid $green;
   position: relative;
   z-index: 1;
+  overflow-y: hidden;
   &::before {
     content: '';
     background-color: #EBEBEB;

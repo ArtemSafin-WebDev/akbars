@@ -377,13 +377,15 @@
                   </div>
                 </div>
                 <div class="news-comments__form-block news-comments__form-block--small news-comments__form-block--main">
-                  <form action="/comments/add.php" method="POST" class="news-comments__form">
-                    <textarea
-                      name="message"
-                      class="news-comments__textarea"
-                      placeholder="Напишите ваш комментарий"
-                      required
-                    ></textarea>
+                  <form action="/comments/add.php" method="POST" class="news-comments__form" data-parsley-validate>
+                    <div class="news-comments__textarea-wrapper">
+                      <textarea
+                        name="message"
+                        class="news-comments__textarea"
+                        placeholder="Напишите ваш комментарий"
+                        required
+                      ></textarea>
+                    </div>
                     <button type="submit" class="news-comments__submit">Отправить</button>
                   </form>
                   <ul class="news-comments__smiles">
@@ -765,14 +767,23 @@
                           <div
                             class="news-comments__form-block news-comments__form-block--small news-comments__form-block--main"
                           >
-                            <form action="/comments/add.php" method="POST" class="news-comments__form">
-                              <textarea
-                                name="message"
-                                class="news-comments__textarea"
-                                placeholder="Напишите ваш комментарий"
-                                required
-                              ></textarea>
-                              <button type="submit" class="news-comments__submit news-comments__submit--small">Отправить</button>
+                            <form
+                              action="/comments/add.php"
+                              method="POST"
+                              class="news-comments__form"
+                              data-parsley-validate
+                            >
+                              <div class="news-comments__textarea-wrapper">
+                                <textarea
+                                  name="message"
+                                  class="news-comments__textarea"
+                                  placeholder="Напишите ваш комментарий"
+                                  required
+                                ></textarea>
+                              </div>
+                              <button type="submit" class="news-comments__submit news-comments__submit--small">
+                                Отправить
+                              </button>
                             </form>
                             <ul class="news-comments__smiles">
                               <li class="news-comments__smile">
