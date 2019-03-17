@@ -1,4 +1,5 @@
 import SimpleBar from 'simplebar'
+import { throttle } from 'lodash'
 
 export default function() {
   // Для колонки плей-офф
@@ -11,14 +12,14 @@ export default function() {
 
   if (playoffSimplebar) {
     const conferenceGradient = document.querySelector('.js-playoff-top-gradient')
-    playoffSimplebar.getScrollElement().addEventListener('scroll', function() {
+    playoffSimplebar.getScrollElement().addEventListener('scroll', throttle(function() {
       const scrollTop = this.scrollTop
       if (scrollTop > 0) {
         conferenceGradient.classList.add('shown')
       } else {
         conferenceGradient.classList.remove('shown')
       }
-    })
+    }, 200))
   }
 
   // Для обычной колонки конференций и дивизионов
@@ -31,14 +32,14 @@ export default function() {
 
   if (conferenceInfoSimplebar) {
     const conferenceGradient = document.querySelector('.js-conference-top-gradient')
-    conferenceInfoSimplebar.getScrollElement().addEventListener('scroll', function() {
+    conferenceInfoSimplebar.getScrollElement().addEventListener('scroll', throttle(function() {
       const scrollTop = this.scrollTop
       if (scrollTop > 0) {
         conferenceGradient.classList.add('shown')
       } else {
         conferenceGradient.classList.remove('shown')
       }
-    })
+    }, 200))
   }
 
 

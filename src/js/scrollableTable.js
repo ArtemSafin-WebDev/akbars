@@ -1,5 +1,6 @@
 
 import SimpleBar from 'simplebar'
+import { throttle } from 'lodash'
 
 export default function() {
   const scrollableTables = Array.from(document.querySelectorAll('.js-scrollable-table'))
@@ -26,9 +27,12 @@ export default function() {
       scrollableElement.scrollBy({ top: 0, left: scrollIncrement, behavior: 'smooth' });
     })
 
-    scrollableElement.addEventListener('scroll', function(event) {
-      console.log(this.scrollLeft)
-      console.log(event)
-    })
+    scrollableElement.addEventListener('scroll', throttle(function(event) {
+      if (this.scrollLeft > 40) {
+        gradient.classList.add('shown')
+      } else {
+        gradient.classList.remove('shown')
+      }
+    }, 200))
   })
 }
