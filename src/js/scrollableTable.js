@@ -6,8 +6,8 @@ export default function() {
 
   scrollableTables.forEach(table => {
     console.log('Adding custom scrollbar')
-    
-    const statisticsScrollBar = new SimpleBar(table.querySelector('.js-scrollable-table-wrapper'), {autoHide: false})
+    const scrollableWrapper = table.querySelector('.js-scrollable-table-wrapper')
+    const statisticsScrollBar = new SimpleBar(scrollableWrapper, {autoHide: false})
     const scrollableElement = statisticsScrollBar.getScrollElement()
     const scrollIncrement = 150;
     
@@ -15,13 +15,20 @@ export default function() {
     const scrollRightButton = table.querySelector('.js-statistics-scroll-button-right')
     const gradient = table.querySelector('.js-scrollable-table-gradient')
 
-    scrollLeftButton.addEventListener('click', function() {
+    scrollLeftButton.addEventListener('click', function(event) {
+      event.preventDefault()
       // scrollableElement.scrollLeft -= 30;
       scrollableElement.scrollBy({ top: 0, left: -scrollIncrement, behavior: 'smooth' });
     })
-    scrollRightButton.addEventListener('click', function() {
+    scrollRightButton.addEventListener('click', function(event) {
+      event.preventDefault()
       // scrollableElement.scrollLeft += 30;
       scrollableElement.scrollBy({ top: 0, left: scrollIncrement, behavior: 'smooth' });
+    })
+
+    scrollableElement.addEventListener('scroll', function(event) {
+      console.log(this.scrollLeft)
+      console.log(event)
     })
   })
 }

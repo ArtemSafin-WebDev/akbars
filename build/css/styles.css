@@ -1668,7 +1668,8 @@ svg {
 
 .choices {
   -webkit-box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.05);
-          box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.05); }
+          box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.05);
+  z-index: 100; }
   .choices .simplebar-scrollbar {
     right: 0;
     width: 10px; }
@@ -5979,18 +5980,30 @@ svg {
     -webkit-transition: background-color .2s;
     transition: background-color .2s;
     cursor: default; }
-    .staff__info-table thead tr th.sorting,
-    .staff__info-table.dataTable thead tr th.sorting {
+    .staff__info-table thead tr th.sorting, .staff__info-table thead tr th.sorting_asc, .staff__info-table thead tr th.sorting_desc,
+    .staff__info-table.dataTable thead tr th.sorting,
+    .staff__info-table.dataTable thead tr th.sorting_asc,
+    .staff__info-table.dataTable thead tr th.sorting_desc {
       cursor: pointer;
       outline: none; }
-      .staff__info-table thead tr th.sorting:hover, .staff__info-table thead tr th.sorting:focus,
+      .staff__info-table thead tr th.sorting:hover, .staff__info-table thead tr th.sorting:focus, .staff__info-table thead tr th.sorting_asc:hover, .staff__info-table thead tr th.sorting_asc:focus, .staff__info-table thead tr th.sorting_desc:hover, .staff__info-table thead tr th.sorting_desc:focus,
       .staff__info-table.dataTable thead tr th.sorting:hover,
-      .staff__info-table.dataTable thead tr th.sorting:focus {
+      .staff__info-table.dataTable thead tr th.sorting:focus,
+      .staff__info-table.dataTable thead tr th.sorting_asc:hover,
+      .staff__info-table.dataTable thead tr th.sorting_asc:focus,
+      .staff__info-table.dataTable thead tr th.sorting_desc:hover,
+      .staff__info-table.dataTable thead tr th.sorting_desc:focus {
         background-color: #DEDEDE; }
     .staff__info-table thead tr th.sorting_asc, .staff__info-table thead tr th.sorting_desc,
     .staff__info-table.dataTable thead tr th.sorting_asc,
     .staff__info-table.dataTable thead tr th.sorting_desc {
       background-color: #D5D5D5; }
+      .staff__info-table thead tr th.sorting_asc:hover, .staff__info-table thead tr th.sorting_asc:focus, .staff__info-table thead tr th.sorting_desc:hover, .staff__info-table thead tr th.sorting_desc:focus,
+      .staff__info-table.dataTable thead tr th.sorting_asc:hover,
+      .staff__info-table.dataTable thead tr th.sorting_asc:focus,
+      .staff__info-table.dataTable thead tr th.sorting_desc:hover,
+      .staff__info-table.dataTable thead tr th.sorting_desc:focus {
+        background-color: #D5D5D5; }
   .staff__info-table tbody td,
   .staff__info-table.dataTable tbody td {
     color: #242f37;
@@ -6434,18 +6447,30 @@ svg {
     -webkit-transition: background-color 0.2s;
     transition: background-color 0.2s;
     cursor: default; }
-    .person-media__games-history-table thead tr th.sorting,
-    .person-media__games-history-table.dataTable thead tr th.sorting {
+    .person-media__games-history-table thead tr th.sorting, .person-media__games-history-table thead tr th.sorting_asc, .person-media__games-history-table thead tr th.sorting_desc,
+    .person-media__games-history-table.dataTable thead tr th.sorting,
+    .person-media__games-history-table.dataTable thead tr th.sorting_asc,
+    .person-media__games-history-table.dataTable thead tr th.sorting_desc {
       cursor: pointer;
       outline: none; }
-      .person-media__games-history-table thead tr th.sorting:hover, .person-media__games-history-table thead tr th.sorting:focus,
+      .person-media__games-history-table thead tr th.sorting:hover, .person-media__games-history-table thead tr th.sorting:focus, .person-media__games-history-table thead tr th.sorting_asc:hover, .person-media__games-history-table thead tr th.sorting_asc:focus, .person-media__games-history-table thead tr th.sorting_desc:hover, .person-media__games-history-table thead tr th.sorting_desc:focus,
       .person-media__games-history-table.dataTable thead tr th.sorting:hover,
-      .person-media__games-history-table.dataTable thead tr th.sorting:focus {
+      .person-media__games-history-table.dataTable thead tr th.sorting:focus,
+      .person-media__games-history-table.dataTable thead tr th.sorting_asc:hover,
+      .person-media__games-history-table.dataTable thead tr th.sorting_asc:focus,
+      .person-media__games-history-table.dataTable thead tr th.sorting_desc:hover,
+      .person-media__games-history-table.dataTable thead tr th.sorting_desc:focus {
         background-color: #dedede; }
     .person-media__games-history-table thead tr th.sorting_asc, .person-media__games-history-table thead tr th.sorting_desc,
     .person-media__games-history-table.dataTable thead tr th.sorting_asc,
     .person-media__games-history-table.dataTable thead tr th.sorting_desc {
       background-color: #d5d5d5; }
+      .person-media__games-history-table thead tr th.sorting_asc:hover, .person-media__games-history-table thead tr th.sorting_asc:focus, .person-media__games-history-table thead tr th.sorting_desc:hover, .person-media__games-history-table thead tr th.sorting_desc:focus,
+      .person-media__games-history-table.dataTable thead tr th.sorting_asc:hover,
+      .person-media__games-history-table.dataTable thead tr th.sorting_asc:focus,
+      .person-media__games-history-table.dataTable thead tr th.sorting_desc:hover,
+      .person-media__games-history-table.dataTable thead tr th.sorting_desc:focus {
+        background-color: #d5d5d5; }
   .person-media__games-history-table tbody td,
   .person-media__games-history-table.dataTable tbody td {
     color: #242f37;
@@ -6836,18 +6861,30 @@ svg {
     -webkit-transition: background-color 0.2s;
     transition: background-color 0.2s;
     cursor: default; }
-    .statistics__card-table thead tr th.sorting,
-    .statistics__card-table.dataTable thead tr th.sorting {
+    .statistics__card-table thead tr th.sorting, .statistics__card-table thead tr th.sorting_asc, .statistics__card-table thead tr th.sorting_desc,
+    .statistics__card-table.dataTable thead tr th.sorting,
+    .statistics__card-table.dataTable thead tr th.sorting_asc,
+    .statistics__card-table.dataTable thead tr th.sorting_desc {
       cursor: pointer;
       outline: none; }
-      .statistics__card-table thead tr th.sorting:hover, .statistics__card-table thead tr th.sorting:focus,
+      .statistics__card-table thead tr th.sorting:hover, .statistics__card-table thead tr th.sorting:focus, .statistics__card-table thead tr th.sorting_asc:hover, .statistics__card-table thead tr th.sorting_asc:focus, .statistics__card-table thead tr th.sorting_desc:hover, .statistics__card-table thead tr th.sorting_desc:focus,
       .statistics__card-table.dataTable thead tr th.sorting:hover,
-      .statistics__card-table.dataTable thead tr th.sorting:focus {
+      .statistics__card-table.dataTable thead tr th.sorting:focus,
+      .statistics__card-table.dataTable thead tr th.sorting_asc:hover,
+      .statistics__card-table.dataTable thead tr th.sorting_asc:focus,
+      .statistics__card-table.dataTable thead tr th.sorting_desc:hover,
+      .statistics__card-table.dataTable thead tr th.sorting_desc:focus {
         background-color: #dedede; }
     .statistics__card-table thead tr th.sorting_asc, .statistics__card-table thead tr th.sorting_desc,
     .statistics__card-table.dataTable thead tr th.sorting_asc,
     .statistics__card-table.dataTable thead tr th.sorting_desc {
       background-color: #d5d5d5; }
+      .statistics__card-table thead tr th.sorting_asc:hover, .statistics__card-table thead tr th.sorting_asc:focus, .statistics__card-table thead tr th.sorting_desc:hover, .statistics__card-table thead tr th.sorting_desc:focus,
+      .statistics__card-table.dataTable thead tr th.sorting_asc:hover,
+      .statistics__card-table.dataTable thead tr th.sorting_asc:focus,
+      .statistics__card-table.dataTable thead tr th.sorting_desc:hover,
+      .statistics__card-table.dataTable thead tr th.sorting_desc:focus {
+        background-color: #d5d5d5; }
   .statistics__card-table tbody td,
   .statistics__card-table.dataTable tbody td {
     color: #242f37;
@@ -6915,8 +6952,10 @@ svg {
   width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
-  padding-bottom: 20px;
   -webkit-overflow-scrolling: touch; }
+
+.statistics__padding-div {
+  padding-bottom: 20px; }
 
 .statistics__card-data {
   position: relative; }

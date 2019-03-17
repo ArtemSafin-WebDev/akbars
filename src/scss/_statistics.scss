@@ -73,6 +73,7 @@
   border-collapse: collapse;
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
+ 
   &.no-footer {
     border-bottom: none;
   }
@@ -112,7 +113,9 @@
         white-space: nowrap;
         transition: background-color 0.2s;
         cursor: default;
-        &.sorting {
+        &.sorting,
+        &.sorting_asc,
+        &.sorting_desc {
           cursor: pointer;
           outline: none;
           &:hover,
@@ -123,6 +126,10 @@
         &.sorting_asc,
         &.sorting_desc {
           background-color: #d5d5d5;
+          &:hover,
+          &:focus {
+            background-color: #d5d5d5;
+          }
         }
       }
     }
@@ -202,6 +209,12 @@
         }
       }
 
+      // &:last-child {
+      //   td {
+      //     border-bottom: 20px solid white;
+      //   }
+      // }
+
       
     }
   }
@@ -211,8 +224,13 @@
   width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
-  padding-bottom: 20px;
+  // padding-bottom: 20px;
   -webkit-overflow-scrolling: touch;
+  
+}
+
+.statistics__padding-div {
+  padding-bottom: 20px;
 }
 
 

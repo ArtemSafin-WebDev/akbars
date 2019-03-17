@@ -118,7 +118,9 @@
         white-space: nowrap;
         transition: background-color .2s;
         cursor: default;
-        &.sorting {
+        &.sorting,
+        &.sorting_asc,
+        &.sorting_desc {
           cursor: pointer;
           outline: none;
           &:hover,
@@ -129,6 +131,10 @@
         &.sorting_asc,
         &.sorting_desc {
           background-color: #D5D5D5;
+          &:hover,
+          &:focus {
+            background-color: #D5D5D5;
+          }
         }
         
       }
