@@ -24,4 +24,9 @@ document.addEventListener('DOMContentLoaded', function() {
   // Иниализация всех табов на странице с помощью фабрики функций
 
   setTabsOnPage()
+
+
+  window.addEventListener('touchmove', function (event) {
+    event.preventDefault()
+  }, {passive: false})
 })
