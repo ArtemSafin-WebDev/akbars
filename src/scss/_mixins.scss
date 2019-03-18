@@ -37,6 +37,12 @@
   font-family: 'object-fit: cover; object-position: center;';
 }
 
+@mixin objectFitCoverTop() {
+  object-fit: cover;
+	object-position: top;
+	font-family: 'object-fit: cover; object-position: top;';
+}
+
 @mixin objectFitContain() {
   object-fit: contain;
   font-family: 'object-fit: contain;';

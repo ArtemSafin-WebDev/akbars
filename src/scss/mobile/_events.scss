@@ -189,10 +189,19 @@
   transition: all 0.3s;
   z-index: 2;
   transition: all 0.3s;
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
  
   > img {
     width: 100%;
     height: 100%;
+
+
+    width: calc(100% - 5px);
+    height: calc(100% - 5px);
     display: block;
     @include objectFitContain();
   }

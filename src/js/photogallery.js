@@ -1,8 +1,9 @@
 import './fotorama'
-import playerPhotoDataSource from './data/zaripovPhoto'
+
 
 export default function() {
-  if (playerPhotoDataSource) {
+
+  if (playerPhotoDataSource && playerPhotoDataSource.length > 0) {
     $('.js-player-photogallery')
       .on('fotorama:show', function(e, fotorama, extra) {
         $('.js-player-photo-description').html(fotorama.activeFrame.title)

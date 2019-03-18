@@ -26,7 +26,5 @@ document.addEventListener('DOMContentLoaded', function() {
   setTabsOnPage()
 
 
-  window.addEventListener('touchmove', function (event) {
-    event.preventDefault()
-  }, {passive: false})
+  
 })
