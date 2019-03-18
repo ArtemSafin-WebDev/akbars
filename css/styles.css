@@ -2876,7 +2876,7 @@ svg {
   margin-top: 30px; }
 
 .match-info__team-logo {
-  width: 96px;
+  width: 94px;
   height: 90px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3482,11 +3482,20 @@ svg {
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
     z-index: 2;
-    transition: all 0.3s; }
+    transition: all 0.3s;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
     .calendar__dates td .calendar__date-link > img {
-      width: 100%;
-      height: 100%;
       display: block;
+      width: 65px;
+      height: 48.75px;
       -o-object-fit: contain;
          object-fit: contain;
       font-family: 'object-fit: contain;'; }
@@ -6157,9 +6166,9 @@ svg {
   display: block;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  font-family: 'object-fit: cover; object-position: center;'; }
+  -o-object-position: top;
+     object-position: top;
+  font-family: 'object-fit: cover; object-position: top;'; }
 
 .staff__table-heading-content {
   display: -webkit-box;
@@ -6756,8 +6765,8 @@ svg {
   width: 600px; }
   .page-footer__information p {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    line-height: 20px; }
+    font-size: 14px;
+    line-height: 16px; }
     .page-footer__information p:not(:last-child) {
       margin-bottom: 6px; }
   .page-footer__information a {
