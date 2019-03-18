@@ -3,7 +3,7 @@ import './fotorama'
 
 export default function() {
 
-  if (playerPhotoDataSource && playerPhotoDataSource.length > 0) {
+  if (typeof playerPhotoDataSource !== 'undefined' && playerPhotoDataSource.length > 0) {
     $('.js-player-photogallery')
       .on('fotorama:show', function(e, fotorama, extra) {
         $('.js-player-photo-description').html(fotorama.activeFrame.title)
