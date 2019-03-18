@@ -4697,9 +4697,9 @@ svg {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  font-family: 'object-fit: cover; object-position: center;'; }
+  -o-object-position: top;
+     object-position: top;
+  font-family: 'object-fit: cover; object-position: top;'; }
 
 .stats__players table {
   width: 100%;
