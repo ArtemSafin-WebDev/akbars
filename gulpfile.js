@@ -84,15 +84,28 @@ gulp.task('styles', function() {
     .pipe(browserSync.stream())
 })
 
+gulp.task('styles-mobile', function() {
+  return gulp
+    .src('src/scss/mobile/styles.scss')
+    .pipe(plumber())
+    .pipe(sass())
+    .pipe(autoprefixer())
+    .pipe(gulp.dest('build/css/mobile'))
+    .pipe(cssMinify())
+    .pipe(rename('styles.min.css'))
+    .pipe(gulp.dest('build/css/mobile'))
+    .pipe(browserSync.stream())
+})
+
 gulp.task('scripts', function() {
   return gulp
     .src('./src/js/**/*')
     .pipe(plumber())
     .pipe(webpackstream(webpackconfig, webpack))
     .pipe(gulp.dest('./build/js/'))
-    .pipe(rename('bundle.min.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest('./build/js/'))
+    // .pipe(rename('bundle.min.js'))
+    // .pipe(uglify())
+    // .pipe(gulp.dest('./build/js/'))
     .pipe(browserSync.stream())
 })
 
@@ -120,7 +133,7 @@ gulp.task('serve', function() {
   })
   gulp.watch('./src/**/*.html', gulp.series('html'))
   gulp.watch('./src/img/icons/*svg', gulp.series('sprite', 'html'))
-  gulp.watch('./src/scss/**/*.scss', gulp.series('styles'))
+  gulp.watch('./src/scss/**/*.scss', gulp.series('styles', 'styles-mobile'))
   gulp.watch('./src/js/**/*.js', gulp.series('scripts'))
   gulp.watch('./src/img/**/*', gulp.series('images'))
   gulp.watch('./src/misc/**/*', gulp.series('miscellaneous'))
@@ -151,7 +164,7 @@ gulp.task(
     'images',
     'sprite',
     'html',
-    gulp.parallel('miscellaneous', 'styles', 'scripts')
+    gulp.parallel('miscellaneous', 'styles',  'styles-mobile', 'scripts')
   )
 )
 
@@ -162,7 +175,7 @@ gulp.task(
     'images',
     'sprite',
     'html',
-    gulp.parallel('miscellaneous', 'styles', 'scripts-production')
+    gulp.parallel('miscellaneous', 'styles', 'styles-mobile', 'scripts-production')
   )
 )
 

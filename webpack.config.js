@@ -2,11 +2,12 @@ const path = require("path");
 
 module.exports = {
   entry: {
-    App: "./src/js/main.js"
+    App: "./src/js/main.js",
+    Mobile: "./src/js/main-m.js"
   },
   output: {
     path: path.resolve(__dirname, "./build/js"),
-    filename: "bundle.js"
+    filename: '[name].js'
   },
   module: {
     rules: [

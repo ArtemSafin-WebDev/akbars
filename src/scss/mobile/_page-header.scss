@@ -1,0 +1,12 @@
+.page-header {
+  background-color: $green;
+  color: white;
+  height: 37px;
+  display: flex;
+  flex-direction: column;
+  > .container {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
+}
