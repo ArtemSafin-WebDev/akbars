@@ -115,9 +115,21 @@ gulp.task('scripts-production', function() {
     .pipe(plumber())
     .pipe(webpackstream({ ...webpackconfig, mode: 'production' }, webpack))
     .pipe(gulp.dest('./build/js/'))
-    .pipe(rename('bundle.min.js'))
-    .pipe(uglify())
+    // .pipe(rename('bundle.min.js'))
+    // .pipe(uglify())
+    // .pipe(gulp.dest('./build/js/'))
+    .pipe(browserSync.stream())
+})
+
+gulp.task('mobile-scripts-production', function() {
+  return gulp
+    .src('./src/js/**/*')
+    .pipe(plumber())
+    .pipe(webpackstream({ ...webpackconfig, mode: 'production' }, webpack))
     .pipe(gulp.dest('./build/js/'))
+    // .pipe(rename('bundle.min.js'))
+    // .pipe(uglify())
+    // .pipe(gulp.dest('./build/js/'))
     .pipe(browserSync.stream())
 })
 
@@ -175,7 +187,7 @@ gulp.task(
     'images',
     'sprite',
     'html',
-    gulp.parallel('miscellaneous', 'styles', 'styles-mobile', 'scripts-production')
+    gulp.parallel('miscellaneous', 'styles', 'styles-mobile', 'scripts-production', 'mobile-scripts-production')
   )
 )
 
