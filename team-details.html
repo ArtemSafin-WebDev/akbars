@@ -352,6 +352,186 @@
       </svg>
     </button>
   </div>
+  <style>
+    .preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      z-index: 20000;
+      background-image: url('../img/bg-pattern-test.jpg');
+      background-size: 960px;
+      text-align: center;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .preloader.shown {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .preloader__content {
+      margin: auto;
+      width: 350px;
+    }
+
+    .preloader__logo {
+      width: 200px;
+      margin-bottom: 25px;
+    }
+
+    .progress {
+      position: relative;
+      height: 4px;
+      display: block;
+      width: 100%;
+      background-color: white;
+      margin: 0.5rem 0 1rem 0;
+      overflow: hidden;
+    }
+
+    .progress .indeterminate:before {
+      content: '';
+      position: absolute;
+      background-color: inherit;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      will-change: left, right;
+      -webkit-animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+      animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+    }
+
+    .progress .indeterminate:after {
+      content: '';
+      position: absolute;
+      background-color: inherit;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      will-change: left, right;
+      -webkit-animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+      animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+      -webkit-animation-delay: 1.15s;
+      animation-delay: 1.15s;
+    }
+
+    .indeterminate {
+      background-color: #3c8f88;
+    }
+
+    .progress .indeterminate:before {
+      content: '';
+      position: absolute;
+      background-color: inherit;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      will-change: left, right;
+      -webkit-animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+      animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+    }
+
+    .progress .indeterminate:after {
+      content: '';
+      position: absolute;
+      background-color: inherit;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      will-change: left, right;
+      -webkit-animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+      animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+      -webkit-animation-delay: 1.15s;
+      animation-delay: 1.15s;
+    }
+
+    @-webkit-keyframes indeterminate {
+      0% {
+        left: -35%;
+        right: 100%;
+      }
+
+      60% {
+        left: 100%;
+        right: -90%;
+      }
+
+      100% {
+        left: 100%;
+        right: -90%;
+      }
+    }
+
+    @keyframes indeterminate {
+      0% {
+        left: -35%;
+        right: 100%;
+      }
+
+      60% {
+        left: 100%;
+        right: -90%;
+      }
+
+      100% {
+        left: 100%;
+        right: -90%;
+      }
+    }
+
+    @-webkit-keyframes indeterminate-short {
+      0% {
+        left: -200%;
+        right: 100%;
+      }
+
+      60% {
+        left: 107%;
+        right: -8%;
+      }
+
+      100% {
+        left: 107%;
+        right: -8%;
+      }
+    }
+
+    @keyframes indeterminate-short {
+      0% {
+        left: -200%;
+        right: 100%;
+      }
+
+      60% {
+        left: 107%;
+        right: -8%;
+      }
+
+      100% {
+        left: 107%;
+        right: -8%;
+      }
+    }
+  </style>
+  <div class="preloader shown js-preloader">
+    <div class="preloader__content">
+      <img src="img/logo/akbars-logo.svg" alt="Логотип в прелоадере" class="preloader__logo" />
+      <div class="preloader__spinner">
+        <div class="progress">
+          <div class="indeterminate"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="page-content">
     <div class="khl-placeholder">
       <div class="container">
@@ -366,7 +546,7 @@
       <div class="container">
         <div class="page-header__top-panel">
           <section class="team">
-            <a href="/" class="team__page-link">
+            <a href="index.html" class="team__page-link">
               <img src="img/logo/akbars-logo.svg" width="162" height="92" alt="Логотип команды" class="team__logo" />
             </a>
             <div class="team__slider">
@@ -490,7 +670,7 @@
               </svg>
               <span class="visually-hidden">Поиск</span>
             </a>
-            <a href="#" class="utility__icon-link">
+            <a href="home-m.html" class="utility__icon-link">
               <svg width="20" height="20" aria-hidden="true" class="icon-mobile">
                 <use xlink:href="#mobile" />
               </svg>
@@ -508,7 +688,7 @@
           <nav class="main-nav">
             <ul class="main-nav__list">
               <li class="main-nav__list-item" tabindex="0">
-                <a href="#" class="main-nav__link">Ак Барс</a>
+                <a href="index.html" class="main-nav__link">Ак Барс</a>
                 <div class="main-nav__submenu">
                   <div class="main-nav__submenu-content">
                     <h2 class="main-nav__submenu-heading">Ак Барс</h2>
@@ -523,13 +703,13 @@
                         <a href="statistics.html" class="main-nav__submenu-link">Статистика</a>
                       </li>
                       <li class="main-nav__submenu-list-item">
-                        <a href="#" class="main-nav__submenu-link">Календарь</a>
+                        <a href="calendar.html" class="main-nav__submenu-link">Календарь</a>
                       </li>
                       <li class="main-nav__submenu-list-item">
-                        <a href="calendar.html" class="main-nav__submenu-link">Плей-офф</a>
+                        <a href="#" class="main-nav__submenu-link">Плей-офф</a>
                       </li>
                       <li class="main-nav__submenu-list-item">
-                        <a href="#" class="main-nav__submenu-link">Результаты</a>
+                        <a href="results.html" class="main-nav__submenu-link">Результаты</a>
                       </li>
                       <li class="main-nav__submenu-list-item">
                         <a href="#" class="main-nav__submenu-link">Регламент</a>
@@ -545,7 +725,7 @@
                     <h2 class="main-nav__submenu-heading">Болельщики</h2>
                     <ul class="main-nav__submenu-list">
                       <li class="main-nav__submenu-list-item">
-                        <a href="#" class="main-nav__submenu-link">
+                        <a href="https://hock.ak-bars.ru/" class="main-nav__submenu-link">
                           <span class="main-nav__submenu-icon">
                             <svg width="30" height="30" aria-hidden="true" class="icon-card">
                               <use xlink:href="#card" />
@@ -555,10 +735,10 @@
                         </a>
                       </li>
                       <li class="main-nav__submenu-list-item">
-                        <a href="#" class="main-nav__submenu-link">Прогнозы</a>
+                        <a href="prognosis.html" class="main-nav__submenu-link">Прогнозы</a>
                       </li>
                       <li class="main-nav__submenu-list-item">
-                        <a href="#" class="main-nav__submenu-link">Фан-сектор</a>
+                        <a href="prognosis.html" class="main-nav__submenu-link">Фан-сектор</a>
                       </li>
                       <li class="main-nav__submenu-list-item">
                         <a href="#" class="main-nav__submenu-link">Голосования</a>
@@ -645,17 +825,17 @@
             <nav class="sidebar-nav">
               <ul class="sidebar-nav__list">
                 <li class="sidebar-nav__list-item active">
-                  <a href="#" class="sidebar-nav__link">
+                  <a href="team.html" class="sidebar-nav__link">
                     Команда
                   </a>
                 </li>
                 <li class="sidebar-nav__list-item">
-                  <a href="#" class="sidebar-nav__link">
+                  <a href="calendar.html" class="sidebar-nav__link">
                     Календарь
                   </a>
                 </li>
                 <li class="sidebar-nav__list-item">
-                  <a href="#" class="sidebar-nav__link">
+                  <a href="results.html" class="sidebar-nav__link">
                     Результаты
                   </a>
                 </li>
@@ -665,7 +845,7 @@
                   </a>
                 </li>
                 <li class="sidebar-nav__list-item">
-                  <a href="#" class="sidebar-nav__link">
+                  <a href="statistics.html" class="sidebar-nav__link">
                     Статистика
                   </a>
                 </li>
@@ -687,11 +867,9 @@
               </ul>
             </nav>
             <div class="banner-column banner-column--left banner-column--news">
-              <div class="banner-column__item">
-                #АЙДА ЗА ХОКАМИ
+              <div class="banner-column__item" style="background-image: url(img/banners/hoki.png)">
               </div>
-              <div class="banner-column__item" style="color: #256963">
-                #ГИМН ХК «АК БАРС»
+              <div class="banner-column__item" style="background-image: url(img/banners/гимн.png)">
               </div>
             </div>
           </section>
@@ -824,29 +1002,38 @@
                             </th>
                             <th>
                               <span class="person-media__games-history-table-heading-content">
-                                Игры
+                                И
 
                                 <svg width="7" height="11" aria-hidden="true" class="icon-sort">
                                   <use xlink:href="#sort" />
                                 </svg>
+                                <span class="person-media__legend">
+                                  <span class="person-media__legend-content">Игры</span>
+                                </span>
                               </span>
                             </th>
                             <th>
                               <span class="person-media__games-history-table-heading-content">
-                                Голы
+                                Г
 
                                 <svg width="7" height="11" aria-hidden="true" class="icon-sort">
                                   <use xlink:href="#sort" />
                                 </svg>
+                                <span class="person-media__legend">
+                                  <span class="person-media__legend-content">Голы</span>
+                                </span>
                               </span>
                             </th>
                             <th>
                               <span class="person-media__games-history-table-heading-content">
-                                Передачи
+                                П
 
                                 <svg width="7" height="11" aria-hidden="true" class="icon-sort">
                                   <use xlink:href="#sort" />
                                 </svg>
+                                <span class="person-media__legend">
+                                  <span class="person-media__legend-content">Передачи</span>
+                                </span>
                               </span>
                             </th>
                             <th>
@@ -856,15 +1043,20 @@
                                 <svg width="7" height="11" aria-hidden="true" class="icon-sort">
                                   <use xlink:href="#sort" />
                                 </svg>
+                                <!-- <span class="person-media__legend">
+                                    <span class="person-media__legend-content">Очки</span>
+                                  </span> -->
                               </span>
                             </th>
                             <th>
                               <span class="person-media__games-history-table-heading-content">
-                                Штраф. вр.
-
+                                Ш.вр.
                                 <svg width="7" height="11" aria-hidden="true" class="icon-sort">
                                   <use xlink:href="#sort" />
                                 </svg>
+                                <span class="person-media__legend">
+                                  <span class="person-media__legend-content">Штраф. вр.</span>
+                                </span>
                               </span>
                             </th>
                           </tr>
