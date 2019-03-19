@@ -126,6 +126,10 @@
           right: auto;
         }
       }
+
+
+   
+
      
 
       &::before {
@@ -227,16 +231,24 @@
 }
 
 
-.calendar-page__team-name {
-  transition: color 0.2s;
-  font-weight: 400;
-  &.home {
-    color: $green;
-    font-weight: 700;
-  }
-  
+.calendar-page__table tbody td {
+  &.home,
   &.guest {
-    color: $red;
     font-weight: 700;
   }
 }
+
+
+// .calendar-page__team-name {
+//   transition: color 0.2s;
+//   font-weight: 400;
+//   &.home {
+//     // color: $green;
+//     font-weight: 700;
+//   }
+  
+//   &.guest {
+//     // color: $red;
+//     font-weight: 700;
+//   }
+// }

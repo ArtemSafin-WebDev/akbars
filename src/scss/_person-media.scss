@@ -136,6 +136,7 @@
         white-space: nowrap;
         transition: background-color 0.2s;
         cursor: default;
+        position: relative;
         &.sorting,
         &.sorting_asc,
         &.sorting_desc {
@@ -152,6 +153,14 @@
           &:hover,
           &:focus {
             background-color: #d5d5d5;
+          }
+        }
+
+        &:hover,
+        &:focus {
+          .person-media__legend {
+            opacity: 1;
+            visibility: visible;
           }
         }
       }
@@ -184,7 +193,8 @@
       }
       &:nth-child(3) {
         font-weight: 700;
-        width: 220px;
+        white-space: nowrap;
+        // width: 1200px;
       }
 
       &::before {
@@ -201,7 +211,6 @@
 
     tr {
       cursor: default;
-      
 
       &:hover {
         td {
@@ -231,14 +240,12 @@
         }
       }
 
-
-
       &:last-child {
         td {
           &::after {
             content: '';
             position: absolute;
-            background-color: #EBEBEB;
+            background-color: #ebebeb;
             bottom: -3px;
             height: 3px;
             width: 100%;
@@ -261,13 +268,11 @@
               width: 100%;
             }
           }
-         
         }
       }
     }
   }
 }
-
 
 .person-media__games-history-table-heading-content {
   display: flex;
@@ -279,7 +284,6 @@
   }
 }
 
-
 .person-media__videos {
   padding-top: 10px;
   display: flex;
@@ -290,12 +294,48 @@
     flex-direction: column;
   }
 
-
   .ak-bars-info__video-link {
     width: 240px;
     height: 164px;
     margin-right: 40px;
     flex-shrink: 0;
+  }
+}
 
+.person-media__legend {
+  position: absolute;
+  top: calc(100% - 2px);
+  left: 0;
+  z-index: 20;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+  padding-top: 7px;
+}
+
+.person-media__legend-content {
+  background-color: white;
+  color: #242f37;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  display: block;
+  position: relative;
+  box-shadow: 0px 5px 30px rgba(black, 0.2);
+  @supports (filter: drop-shadow(0 5px 30px rgba(black, 0.2))) {
+    filter: drop-shadow(0 5px 30px rgba(black, 0.2));
+    box-shadow: none;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: 100%;
+    left: 15px;
+    border: 10px solid transparent;
+    border-bottom: 10px solid white;
+    pointer-events: none;
   }
 }

@@ -28,7 +28,7 @@
 
 .choices {
   box-shadow: 0px 8px 30px rgba(black, 0.05);
-  z-index: 100;
+  // z-index: 100;
   .simplebar-scrollbar {
     right: 0;
     width: 10px;
@@ -81,6 +81,7 @@
   min-height: 35px;
   display: flex;
   align-items: center;
+  
 }
 
 .choices[data-type*='select-one'] .choices__inner {
@@ -98,7 +99,7 @@
   border: none;
   margin: 0;
   border-radius: 0;
-
+  z-index: 60;
   &::after {
     content: '';
     position: absolute;
@@ -159,17 +160,14 @@
 .choices__list--dropdown .choices__item {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
-  line-height: 40px;
+  line-height: 20px;
   color: #242f37;
-  padding: 0 20px;
   transition: all 0.2s;
   &:last-child {
     margin-bottom: 30px;
   }
 
   &:only-child {
-    padding-top: 0;
-    padding-bottom: 0;
     margin-bottom: 0;
     position: relative;
     z-index: 20;

@@ -69,7 +69,7 @@
               </div>
               <div class="checkbox-block">
                 <span class="checkbox">
-                  <input type="checkbox" class="checkbox__input" id="home" name="home" />
+                  <input type="checkbox" class="checkbox__input" id="home" name="home" checked/>
                   <label for="home" class="checkbox__label">
                     <span class="checkbox__label-icon">
                       <svg width="10" height="7" aria-hidden="true" class="icon-checkbox">
@@ -80,7 +80,7 @@
                   </label>
                 </span>
                 <span class="checkbox">
-                  <input type="checkbox" class="checkbox__input" id="guest" name="guest" />
+                  <input type="checkbox" class="checkbox__input" id="guest" name="guest" checked/>
                   <label for="guest" class="checkbox__label">
                     <span class="checkbox__label-icon">
                       <svg width="10" height="7" aria-hidden="true" class="icon-checkbox">
@@ -92,7 +92,7 @@
                 </span>
               </div>
               <div class="calendar-page__content">
-                <table class="calendar-page__table js-table-sortable">
+                <table class="calendar-page__table js-table-sortable-calendar">
                   <thead>
                     <tr>
                       <th>
@@ -151,18 +151,18 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
+                    <tr class="old played-home">
                       <td>
                         12.08.2018
                       </td>
                       <td>
                         13:00
                       </td>
-                      <td>
-                        <span class="calendar-page__team-name home">Барс (Казань)</span>
+                      <td class="home">
+                        Барс (Казань)
                       </td>
                       <td>
-                        <span class="calendar-page__team-name">ХК Рязань (Рязань)</span>
+                        ХК Рязань (Рязань)
                       </td>
                       <td>
                         <a href="#" class="calendar-page__score">
@@ -173,7 +173,7 @@
                         Кубок Дизеля
                       </td>
                     </tr>
-                    <tr>
+                    <tr class="played-guest">
                       <td>
                           10.09.2018
                       </td>
@@ -181,10 +181,10 @@
                           17:00
                       </td>
                       <td>
-                        <span class="calendar-page__team-name">КРС-ОЭРДЖИ (Пекин)</span>
+                        КРС-ОЭРДЖИ (Пекин)
                       </td>
-                      <td>
-                        <span class="calendar-page__team-name guest">Барс (Казань)</span>
+                      <td class="guest">
+                        Барс (Казань)
                       </td>
                       <td>
                         <a href="#" class="calendar-page__score">
@@ -195,7 +195,7 @@
                         Кубок Дизеля
                       </td>
                     </tr>
-                    <tr>
+                    <tr class="played-guest">
                       <td>
                         30.07.2018
                       </td>
@@ -203,10 +203,10 @@
                         18:30
                       </td>
                       <td>
-                        <span class="calendar-page__team-name">Нефтяник (Альметьевск)</span>
+                        Нефтяник (Альметьевск)
                       </td>
-                      <td>
-                        <span class="calendar-page__team-name guest">Барс (Казань)</span>
+                      <td class="guest">
+                        Барс (Казань)
                       </td>
                       <td>
                         <a href="#" class="calendar-page__score">
@@ -217,18 +217,18 @@
                         Контрольный матч
                       </td>
                     </tr>
-                    <tr>
+                    <tr class="played-home">
                       <td>
                         12.08.2018
                       </td>
                       <td>
                         13:00
                       </td>
-                      <td>
-                        <span class="calendar-page__team-name home">Барс (Казань)</span>
+                      <td class="home">
+                        Барс (Казань)
                       </td>
                       <td>
-                        <span class="calendar-page__team-name">ХК Рязань (Рязань)</span>
+                        ХК Рязань (Рязань)
                       </td>
                       <td>
                         <a href="#" class="calendar-page__score">
@@ -239,7 +239,7 @@
                         Кубок Дизеля
                       </td>
                     </tr>
-                    <tr>
+                    <tr class="played-guest">
                       <td>
                           10.09.2018
                       </td>
@@ -247,10 +247,10 @@
                           17:00
                       </td>
                       <td>
-                        <span class="calendar-page__team-name">КРС-ОЭРДЖИ (Пекин)</span>
+                        КРС-ОЭРДЖИ (Пекин)
                       </td>
-                      <td>
-                        <span class="calendar-page__team-name guest">Барс (Казань)</span>
+                      <td class="guest">
+                        Барс (Казань)
                       </td>
                       <td>
                         <a href="#" class="calendar-page__score">
@@ -261,7 +261,7 @@
                         Кубок Дизеля
                       </td>
                     </tr>
-                    <tr>
+                    <tr class="played-guest">
                       <td>
                         30.07.2018
                       </td>
@@ -269,10 +269,10 @@
                         18:30
                       </td>
                       <td>
-                        <span class="calendar-page__team-name">Нефтяник (Альметьевск)</span>
+                        Нефтяник (Альметьевск)
                       </td>
-                      <td>
-                        <span class="calendar-page__team-name guest">Барс (Казань)</span>
+                      <td class="guest">
+                        Барс (Казань)
                       </td>
                       <td>
                         <a href="#" class="calendar-page__score">
@@ -283,18 +283,18 @@
                         Контрольный матч
                       </td>
                     </tr>
-                    <tr>
+                    <tr class="played-home">
                       <td>
                         12.08.2018
                       </td>
                       <td>
                         13:00
                       </td>
-                      <td>
-                        <span class="calendar-page__team-name home">Барс (Казань)</span>
+                      <td class="home">
+                        Барс (Казань)
                       </td>
                       <td>
-                        <span class="calendar-page__team-name">ХК Рязань (Рязань)</span>
+                        ХК Рязань (Рязань)
                       </td>
                       <td>
                         <a href="#" class="calendar-page__score">
@@ -305,116 +305,7 @@
                         Кубок Дизеля
                       </td>
                     </tr>
-                    <tr>
-                      <td>
-                          10.09.2018
-                      </td>
-                      <td>
-                          17:00
-                      </td>
-                      <td>
-                        <span class="calendar-page__team-name">КРС-ОЭРДЖИ (Пекин)</span>
-                      </td>
-                      <td>
-                        <span class="calendar-page__team-name guest">Барс (Казань)</span>
-                      </td>
-                      <td>
-                        <a href="#" class="calendar-page__score">
-                          6 : 3
-                        </a>
-                      </td>
-                      <td>
-                        Кубок Дизеля
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        30.07.2018
-                      </td>
-                      <td>
-                        18:30
-                      </td>
-                      <td>
-                        <span class="calendar-page__team-name">Нефтяник (Альметьевск)</span>
-                      </td>
-                      <td>
-                        <span class="calendar-page__team-name guest">Барс (Казань)</span>
-                      </td>
-                      <td>
-                        <a href="#" class="calendar-page__score">
-                          1 : 3
-                        </a>
-                      </td>
-                      <td>
-                        Контрольный матч
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        12.08.2018
-                      </td>
-                      <td>
-                        13:00
-                      </td>
-                      <td>
-                        <span class="calendar-page__team-name home">Барс (Казань)</span>
-                      </td>
-                      <td>
-                        <span class="calendar-page__team-name">ХК Рязань (Рязань)</span>
-                      </td>
-                      <td>
-                        <a href="#" class="calendar-page__score">
-                          4 : 3
-                        </a>
-                      </td>
-                      <td>
-                        Кубок Дизеля
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                          10.09.2018
-                      </td>
-                      <td>
-                          17:00
-                      </td>
-                      <td>
-                        <span class="calendar-page__team-name">КРС-ОЭРДЖИ (Пекин)</span>
-                      </td>
-                      <td>
-                        <span class="calendar-page__team-name guest">Барс (Казань)</span>
-                      </td>
-                      <td>
-                        <a href="#" class="calendar-page__score">
-                          6 : 3
-                        </a>
-                      </td>
-                      <td>
-                        Кубок Дизеля
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        30.07.2018
-                      </td>
-                      <td>
-                        18:30
-                      </td>
-                      <td>
-                        <span class="calendar-page__team-name">Нефтяник (Альметьевск)</span>
-                      </td>
-                      <td>
-                        <span class="calendar-page__team-name guest">Барс (Казань)</span>
-                      </td>
-                      <td>
-                        <a href="#" class="calendar-page__score">
-                          1 : 3
-                        </a>
-                      </td>
-                      <td>
-                        Контрольный матч
-                      </td>
-                    </tr>
+                    
                   </tbody>
                 </table>
               </div>

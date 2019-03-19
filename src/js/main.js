@@ -1,5 +1,7 @@
 import '@babel/polyfill'
 import '@fancyapps/fancybox'
+import 'lightcase'
+
 import objectFitImages from 'object-fit-images'
 import smoothscroll from 'smoothscroll-polyfill';
 
@@ -74,3 +76,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 })
+
+
+
+
+window.addEventListener("load", function(event) {
+  const preloader = document.querySelector('.js-preloader')
+
+  if (preloader) {
+    preloader.classList.remove('shown')
+  }
+});

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <!-- partial:partials/_meta.html -->
+    <!-- partial -->
+    <title>
+      Архив ленты новостей о хоккейной команде «Ак Барс»
+    </title>
+    <noscript>
+      <style>
+        [data-simplebar] {
+          overflow: auto;
+        }
+      </style>
+    </noscript>
+  </head>
+  <body>
+    <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
+      <!-- partial:img/symbol/sprite.svg --><!-- partial -->
+    </div>
+    <!-- partial:partials/_cookie-policy.html --><!-- partial -->
+    <!-- partial:partials/_search-modal.html --><!-- partial -->
+    <!-- partial:partials/_preloader.html --><!-- partial -->
+    <div class="page-content">
+      <div class="khl-placeholder">
+        <div class="container">
+          Заглушка панели KHL
+        </div>
+      </div>
+
+      <!-- partial:partials/_header.html --><!-- partial -->
+      <main>
+        <div class="container">
+          <div class="flex-row">
+            <div class="banner-column banner-column--left banner-column--news-details">
+              <div class="banner-column__item" style="background-image: url(img/banners/hoki.png)">
+              </div>
+              <div class="banner-column__item" style="background-image: url(img/banners/гимн.png)">
+              </div>
+            </div>
+            <section class="results-page">
+              <h1 class="results-page__main-heading">
+                Результаты игр. <span class="results-page__main-heading-season">Сезон 2018-2019</span>
+              </h1>
+              <div class="results-page__selects-block">
+                <div class="results-page__select js-custom-select">
+                  <select name="game" id="game" onchange="return console.log('Changed')" required>
+                    <option value="0" selected="selected">Все игры</option>
+                    <option value="191">Игры межсезонья 2018-2019</option>
+                    <option value="192">XIII Турнир памяти Ю.И.Моисеева</option>
+                    <option value="193">Чемпионат ВХЛ. Регулярный. Сезон 2018-2019</option>
+                    <option value="195">Кубок Дизеля</option>
+                    <option value="199">Чемпионат ВХЛ. Плеф-офф. Сезон 2018-2019</option>
+                  </select>
+                </div>
+                <div class="results-page__select js-custom-select">
+                  <select name="season" id="season" onchange="return console.log('Changed')" required>
+                    <option value="2018-2" selected="selected">Сезон 2018-2019</option>
+                    <option value="2017-2">Сезон 2017-2018</option>
+                    <option value="2016-2">Сезон 2016-2017</option>
+                    <option value="2015-2">Сезон 2015-2016</option>
+                    <option value="2014-2">Сезон 2014-2015</option>
+                    <option value="2013-2">Сезон 2013-2014</option>
+                    <option value="2012-2">Сезон 2012-2013</option>
+                    <option value="2011-2">Сезон 2011-2012</option>
+                    <option value="2010-2">Сезон 2010-2011</option>
+                    <option value="2009-2">Сезон 2009-2010</option>
+                    <option value="2008-2">Сезон 2008-2009</option>
+                    <option value="2007-2">Сезон 2007-2008</option>
+                  </select>
+                </div>
+
+                <div class="results-page__select js-custom-select">
+                  <select name="team" id="team" onchange="return console.log('Changed')" required>
+                    <option value="0" selected="selected">Все команды</option>
+                    <option value="2">Барс (Казань)</option>
+                    <option value="231">Буран (Воронеж)</option>
+                    <option value="263">Горняк (Учалы)</option>
+                    <option value="227">Дизель (Пенза)</option>
+                    <option value="253">Динамо (Санкт-Петербург)</option>
+                    <option value="219">Ермак (Ангарск)</option>
+                    <option value="223">Зауралье (Курган)</option>
+                    <option value="271">Звезда (Москва)</option>
+                    <option value="239">Звезда (Чехов)</option>
+                    <option value="214">Ижсталь (Ижевск)</option>
+                    <option value="269">КРС-ОЭРДЖИ (Пекин)</option>
+                    <option value="26">Лада (Тольятти)</option>
+                    <option value="13">Металлург (Новокузнецк)</option>
+                    <option value="221">Молот-Прикамье (Пермь)</option>
+                    <option value="159">Нефтяник (Альметьевск)</option>
+                    <option value="217">Рубин (Тюмень)</option>
+                    <option value="216">Сарыарка (Караганда)</option>
+                    <option value="241">СКА-Нева (Санкт-Петербург)</option>
+                    <option value="224">Сокол (Красноярск)</option>
+                    <option value="220">Торос (Нефтекамск)</option>
+                    <option value="242">Торпедо (Усть-Каменогорск)</option>
+                    <option value="243">Химик (Воскресенск)</option>
+                    <option value="229">ХК Рязань (Рязань)</option>
+                    <option value="226">ХК Саров (Саров)</option>
+                    <option value="267">ХК Тамбов (Тамбов)</option>
+                    <option value="261">Ценг Тоу (Цзилинь)</option>
+                    <option value="260">ЦСК ВВС (Самара)</option>
+                    <option value="213">Челмет (Челябинск)</option>
+                    <option value="24">Югра (Ханты-Мансийск)</option>
+                    <option value="222">Южный Урал (Орск)</option>
+                  </select>
+                </div>
+              </div>
+              <div class="results-page__content">
+                <table class="results-page__table">
+                  <thead>
+                    <tr>
+                      <th>
+                        Команды
+                      </th>
+                      <th>
+                        Счет
+                      </th>
+                      <th>
+                        Примечание
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="results-page__date-row">
+                      <th colspan="3">
+                        17.03.2019
+                      </th>
+                    </tr>
+                    <tr>
+                      <td>
+                        Звезда (Москва) - Рубин (Тюмень)
+                      </td>
+                      <td>
+                        1 : 2 ОТ
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Сарыарка (Караганда) - Нефтяник (Альметьевск)
+                      </td>
+                      <td>
+                        6 : 5
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr class="results-page__date-row">
+                      <th colspan="3">
+                        16.03.2019
+                      </th>
+                    </tr>
+                    <tr>
+                      <td>
+                        Звезда (Москва) - Рубин (Тюмень)
+                      </td>
+                      <td>
+                        3 : 1
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Зауралье (Курган) - Торос (Нефтекамск)
+                      </td>
+                      <td>
+                        3 : 2 ОТ
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Сарыарка (Караганда) - Нефтяник (Альметьевск)
+                      </td>
+                      <td>
+                        3 : 1
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Сокол (Красноярск) - СКА-Нева (Санкт-Петербург)
+                      </td>
+                      <td>
+                        2 : 1 ОТ
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr class="results-page__date-row">
+                      <th colspan="3">
+                        15.03.2019
+                      </th>
+                    </tr>
+                    <tr>
+                      <td>
+                        Звезда (Москва) - Рубин (Тюмень)
+                      </td>
+                      <td>
+                        3 : 1
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Зауралье (Курган) - Торос (Нефтекамск)
+                      </td>
+                      <td>
+                        3 : 2 ОТ
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Сарыарка (Караганда) - Нефтяник (Альметьевск)
+                      </td>
+                      <td>
+                        3 : 1
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Сокол (Красноярск) - СКА-Нева (Санкт-Петербург)
+                      </td>
+                      <td>
+                        2 : 1 ОТ
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Звезда (Москва) - Рубин (Тюмень)
+                      </td>
+                      <td>
+                        3 : 1
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Зауралье (Курган) - Торос (Нефтекамск)
+                      </td>
+                      <td>
+                        3 : 2 ОТ
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Сарыарка (Караганда) - Нефтяник (Альметьевск)
+                      </td>
+                      <td>
+                        3 : 1
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Сокол (Красноярск) - СКА-Нева (Санкт-Петербург)
+                      </td>
+                      <td>
+                        2 : 1 ОТ
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr class="results-page__date-row">
+                      <th colspan="3">
+                        27.02.2019
+                      </th>
+                    </tr>
+                    <tr>
+                      <td>
+                        Звезда (Москва) - Рубин (Тюмень)
+                      </td>
+                      <td>
+                        3 : 1
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Зауралье (Курган) - Торос (Нефтекамск)
+                      </td>
+                      <td>
+                        3 : 2 ОТ
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Сарыарка (Караганда) - Нефтяник (Альметьевск)
+                      </td>
+                      <td>
+                        3 : 1
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Сокол (Красноярск) - СКА-Нева (Санкт-Петербург)
+                      </td>
+                      <td>
+                        2 : 1 ОТ
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Звезда (Москва) - Рубин (Тюмень)
+                      </td>
+                      <td>
+                        3 : 1
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Зауралье (Курган) - Торос (Нефтекамск)
+                      </td>
+                      <td>
+                        3 : 2 ОТ
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Сарыарка (Караганда) - Нефтяник (Альметьевск)
+                      </td>
+                      <td>
+                        3 : 1
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Сокол (Красноярск) - СКА-Нева (Санкт-Петербург)
+                      </td>
+                      <td>
+                        2 : 1 ОТ
+                      </td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </div>
+        </div>
+      </main>
+      <!-- partial:partials/_footer.html --><!-- partial -->
+    </div>
+  </body>
+</html>

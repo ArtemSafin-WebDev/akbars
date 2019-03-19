@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/styles.min.css" />
 
   <title>
-    Состав хоккейной команды «Барс» в сезоне 2018-2019 гг.
+    Архив ленты новостей о хоккейной команде «Ак Барс»
   </title>
   <noscript>
     <style>
@@ -247,12 +247,193 @@
       </svg>
     </button>
   </div>
+  <style>
+    .preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      z-index: 20000;
+      background-image: url('../img/bg-pattern-test.jpg');
+      background-size: 960px;
+      text-align: center;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .preloader.shown {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .preloader__content {
+      margin: auto;
+      width: 350px;
+    }
+
+    .preloader__logo {
+      width: 200px;
+      margin-bottom: 25px;
+    }
+
+    .progress {
+      position: relative;
+      height: 4px;
+      display: block;
+      width: 100%;
+      background-color: white;
+      margin: 0.5rem 0 1rem 0;
+      overflow: hidden;
+    }
+
+    .progress .indeterminate:before {
+      content: '';
+      position: absolute;
+      background-color: inherit;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      will-change: left, right;
+      -webkit-animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+      animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+    }
+
+    .progress .indeterminate:after {
+      content: '';
+      position: absolute;
+      background-color: inherit;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      will-change: left, right;
+      -webkit-animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+      animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+      -webkit-animation-delay: 1.15s;
+      animation-delay: 1.15s;
+    }
+
+    .indeterminate {
+      background-color: #3c8f88;
+    }
+
+    .progress .indeterminate:before {
+      content: '';
+      position: absolute;
+      background-color: inherit;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      will-change: left, right;
+      -webkit-animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+      animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+    }
+
+    .progress .indeterminate:after {
+      content: '';
+      position: absolute;
+      background-color: inherit;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      will-change: left, right;
+      -webkit-animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+      animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+      -webkit-animation-delay: 1.15s;
+      animation-delay: 1.15s;
+    }
+
+    @-webkit-keyframes indeterminate {
+      0% {
+        left: -35%;
+        right: 100%;
+      }
+
+      60% {
+        left: 100%;
+        right: -90%;
+      }
+
+      100% {
+        left: 100%;
+        right: -90%;
+      }
+    }
+
+    @keyframes indeterminate {
+      0% {
+        left: -35%;
+        right: 100%;
+      }
+
+      60% {
+        left: 100%;
+        right: -90%;
+      }
+
+      100% {
+        left: 100%;
+        right: -90%;
+      }
+    }
+
+    @-webkit-keyframes indeterminate-short {
+      0% {
+        left: -200%;
+        right: 100%;
+      }
+
+      60% {
+        left: 107%;
+        right: -8%;
+      }
+
+      100% {
+        left: 107%;
+        right: -8%;
+      }
+    }
+
+    @keyframes indeterminate-short {
+      0% {
+        left: -200%;
+        right: 100%;
+      }
+
+      60% {
+        left: 107%;
+        right: -8%;
+      }
+
+      100% {
+        left: 107%;
+        right: -8%;
+      }
+    }
+  </style>
+  <div class="preloader shown js-preloader">
+    <div class="preloader__content">
+      <img src="img/logo/akbars-logo.svg" alt="Логотип в прелоадере" class="preloader__logo" />
+      <div class="preloader__spinner">
+        <div class="progress">
+          <div class="indeterminate"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="page-content">
     <div class="khl-placeholder">
       <div class="container">
         Заглушка панели KHL
       </div>
     </div>
+
     <header class="page-header">
       <!-- <div id="n_menu_bl" class="s_khl_menu_n_menu_bl"></div>
   <script src="//www.khl.ru/nav/js/scripts.php?type=khl&lang=ru"></script> -->
@@ -535,333 +716,314 @@
     <main>
       <div class="container">
         <div class="flex-row">
-          <section class="sidebar">
-            <nav class="sidebar-nav">
-              <ul class="sidebar-nav__list">
-                <li class="sidebar-nav__list-item active">
-                  <a href="team.html" class="sidebar-nav__link">
-                    Команда
-                  </a>
-                </li>
-                <li class="sidebar-nav__list-item">
-                  <a href="calendar.html" class="sidebar-nav__link">
-                    Календарь
-                  </a>
-                </li>
-                <li class="sidebar-nav__list-item">
-                  <a href="results.html" class="sidebar-nav__link">
-                    Результаты
-                  </a>
-                </li>
-                <li class="sidebar-nav__list-item">
-                  <a href="#" class="sidebar-nav__link">
-                    Таблицы
-                  </a>
-                </li>
-                <li class="sidebar-nav__list-item">
-                  <a href="statistics.html" class="sidebar-nav__link">
-                    Статистика
-                  </a>
-                </li>
-                <li class="sidebar-nav__list-item">
-                  <a href="#" class="sidebar-nav__link">
-                    Плей-офф
-                  </a>
-                </li>
-                <li class="sidebar-nav__list-item">
-                  <a href="#" class="sidebar-nav__link">
-                    Регламент
-                  </a>
-                </li>
-                <li class="sidebar-nav__list-item">
-                  <a href="#" class="sidebar-nav__link">
-                    История
-                  </a>
-                </li>
-              </ul>
-            </nav>
-            <div class="banner-column banner-column--left banner-column--news">
-              <div class="banner-column__item" style="background-image: url(img/banners/hoki.png)">
-              </div>
-              <div class="banner-column__item" style="background-image: url(img/banners/гимн.png)">
-              </div>
+          <div class="banner-column banner-column--left banner-column--news-details">
+            <div class="banner-column__item" style="background-image: url(img/banners/hoki.png)">
             </div>
-          </section>
-
-
-          <section class="calendar-page">
-            <h1 class="calendar-page__main-heading">
-              Календарь
+            <div class="banner-column__item" style="background-image: url(img/banners/гимн.png)">
+            </div>
+          </div>
+          <section class="results-page">
+            <h1 class="results-page__main-heading">
+              Результаты игр. <span class="results-page__main-heading-season">Сезон 2018-2019</span>
             </h1>
-            <div class="calendar-page__select js-custom-select">
-              <select name="season" id="season" onchange="return console.log('Changed')">
-                <option value="0">Все команды</option>
-                <option value="3">Авангард (Омская обл.)</option>
-                <option value="4">Автомобилист (Екатеринбург)</option>
-                <option value="189">Адмирал (Владивосток)</option>
-                <option value="1" selected="selected">Ак Барс (Казань)</option>
-                <option value="5">Амур (Хабаровск)</option>
-                <option value="7">Барыс (Астана)</option>
-                <option value="208">Витязь (Московская обл.)</option>
-                <option value="9">Динамо (Минск)</option>
-                <option value="10">Динамо (Рига)</option>
-                <option value="211">Йокерит (Хельсинки)</option>
-                <option value="252">Куньлунь Ред Стар (Пекин)</option>
-                <option value="11">Локомотив (Ярославль)</option>
-                <option value="12">Металлург (Магнитогорск)</option>
-                <option value="14">Нефтехимик (Нижнекамск)</option>
-                <option value="16">Салават Юлаев (Уфа)</option>
-                <option value="17">Северсталь (Череповец)</option>
-                <option value="209">Сибирь (Новосибирская обл.)</option>
-                <option value="19">СКА (Санкт-Петербург)</option>
-                <option value="156">Слован (Братислава)</option>
-                <option value="20">Спартак (Москва)</option>
-                <option value="21">Торпедо (Нижний Новгород)</option>
-                <option value="22">Трактор (Челябинск)</option>
-                <option value="258">ХК Динамо (Москва)</option>
-                <option value="212">ХК Сочи (Сочи)</option>
-                <option value="23">ЦСКА (Москва)</option>
-              </select>
+            <div class="results-page__selects-block">
+              <div class="results-page__select js-custom-select">
+                <select name="game" id="game" onchange="return console.log('Changed')" required>
+                  <option value="0" selected="selected">Все игры</option>
+                  <option value="191">Игры межсезонья 2018-2019</option>
+                  <option value="192">XIII Турнир памяти Ю.И.Моисеева</option>
+                  <option value="193">Чемпионат ВХЛ. Регулярный. Сезон 2018-2019</option>
+                  <option value="195">Кубок Дизеля</option>
+                  <option value="199">Чемпионат ВХЛ. Плеф-офф. Сезон 2018-2019</option>
+                </select>
+              </div>
+              <div class="results-page__select js-custom-select">
+                <select name="season" id="season" onchange="return console.log('Changed')" required>
+                  <option value="2018-2" selected="selected">Сезон 2018-2019</option>
+                  <option value="2017-2">Сезон 2017-2018</option>
+                  <option value="2016-2">Сезон 2016-2017</option>
+                  <option value="2015-2">Сезон 2015-2016</option>
+                  <option value="2014-2">Сезон 2014-2015</option>
+                  <option value="2013-2">Сезон 2013-2014</option>
+                  <option value="2012-2">Сезон 2012-2013</option>
+                  <option value="2011-2">Сезон 2011-2012</option>
+                  <option value="2010-2">Сезон 2010-2011</option>
+                  <option value="2009-2">Сезон 2009-2010</option>
+                  <option value="2008-2">Сезон 2008-2009</option>
+                  <option value="2007-2">Сезон 2007-2008</option>
+                </select>
+              </div>
+
+              <div class="results-page__select js-custom-select">
+                <select name="team" id="team" onchange="return console.log('Changed')" required>
+                  <option value="0" selected="selected">Все команды</option>
+                  <option value="2">Барс (Казань)</option>
+                  <option value="231">Буран (Воронеж)</option>
+                  <option value="263">Горняк (Учалы)</option>
+                  <option value="227">Дизель (Пенза)</option>
+                  <option value="253">Динамо (Санкт-Петербург)</option>
+                  <option value="219">Ермак (Ангарск)</option>
+                  <option value="223">Зауралье (Курган)</option>
+                  <option value="271">Звезда (Москва)</option>
+                  <option value="239">Звезда (Чехов)</option>
+                  <option value="214">Ижсталь (Ижевск)</option>
+                  <option value="269">КРС-ОЭРДЖИ (Пекин)</option>
+                  <option value="26">Лада (Тольятти)</option>
+                  <option value="13">Металлург (Новокузнецк)</option>
+                  <option value="221">Молот-Прикамье (Пермь)</option>
+                  <option value="159">Нефтяник (Альметьевск)</option>
+                  <option value="217">Рубин (Тюмень)</option>
+                  <option value="216">Сарыарка (Караганда)</option>
+                  <option value="241">СКА-Нева (Санкт-Петербург)</option>
+                  <option value="224">Сокол (Красноярск)</option>
+                  <option value="220">Торос (Нефтекамск)</option>
+                  <option value="242">Торпедо (Усть-Каменогорск)</option>
+                  <option value="243">Химик (Воскресенск)</option>
+                  <option value="229">ХК Рязань (Рязань)</option>
+                  <option value="226">ХК Саров (Саров)</option>
+                  <option value="267">ХК Тамбов (Тамбов)</option>
+                  <option value="261">Ценг Тоу (Цзилинь)</option>
+                  <option value="260">ЦСК ВВС (Самара)</option>
+                  <option value="213">Челмет (Челябинск)</option>
+                  <option value="24">Югра (Ханты-Мансийск)</option>
+                  <option value="222">Южный Урал (Орск)</option>
+                </select>
+              </div>
             </div>
-            <div class="checkbox-block">
-              <span class="checkbox">
-                <input type="checkbox" class="checkbox__input" id="home" name="home" checked />
-                <label for="home" class="checkbox__label">
-                  <span class="checkbox__label-icon">
-                    <svg width="10" height="7" aria-hidden="true" class="icon-checkbox">
-                      <use xlink:href="#checkbox" />
-                    </svg>
-                  </span>
-                  <span class="checkbox__label-text">Дома</span>
-                </label>
-              </span>
-              <span class="checkbox">
-                <input type="checkbox" class="checkbox__input" id="guest" name="guest" checked />
-                <label for="guest" class="checkbox__label">
-                  <span class="checkbox__label-icon">
-                    <svg width="10" height="7" aria-hidden="true" class="icon-checkbox">
-                      <use xlink:href="#checkbox" />
-                    </svg>
-                  </span>
-                  <span class="checkbox__label-text">Гостевые</span>
-                </label>
-              </span>
-            </div>
-            <div class="calendar-page__content">
-              <table class="calendar-page__table js-table-sortable-calendar">
+            <div class="results-page__content">
+              <table class="results-page__table">
                 <thead>
                   <tr>
                     <th>
-                      <span class="calendar-page__table-heading-content">
-                        Дата
-
-                        <svg width="7" height="11" aria-hidden="true" class="icon-sort">
-                          <use xlink:href="#sort" />
-                        </svg>
-                      </span>
+                      Команды
                     </th>
                     <th>
-                      <span class="calendar-page__table-heading-content">
-                        Время
-
-                        <svg width="7" height="11" aria-hidden="true" class="icon-sort">
-                          <use xlink:href="#sort" />
-                        </svg>
-                      </span>
+                      Счет
                     </th>
                     <th>
-                      <span class="calendar-page__table-heading-content">
-                        Дома
-
-                        <svg width="7" height="11" aria-hidden="true" class="icon-sort">
-                          <use xlink:href="#sort" />
-                        </svg>
-                      </span>
-                    </th>
-                    <th>
-                      <span class="calendar-page__table-heading-content">
-                        В гостях
-
-                        <svg width="7" height="11" aria-hidden="true" class="icon-sort">
-                          <use xlink:href="#sort" />
-                        </svg>
-                      </span>
-                    </th>
-                    <th>
-                      <span class="calendar-page__table-heading-content">
-                        Счет
-
-                        <svg width="7" height="11" aria-hidden="true" class="icon-sort">
-                          <use xlink:href="#sort" />
-                        </svg>
-                      </span>
-                    </th>
-                    <th>
-                      <span class="calendar-page__table-heading-content">
-                        Примечание
-                        <svg width="7" height="11" aria-hidden="true" class="icon-sort">
-                          <use xlink:href="#sort" />
-                        </svg>
-                      </span>
+                      Примечание
                     </th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr class="old played-home">
-                    <td>
-                      12.08.2018
-                    </td>
-                    <td>
-                      13:00
-                    </td>
-                    <td class="home">
-                      Барс (Казань)
-                    </td>
-                    <td>
-                      ХК Рязань (Рязань)
-                    </td>
-                    <td>
-                      <a href="#" class="calendar-page__score">
-                        4 : 3
-                      </a>
-                    </td>
-                    <td>
-                      Кубок Дизеля
-                    </td>
+                  <tr class="results-page__date-row">
+                    <th colspan="3">
+                      17.03.2019
+                    </th>
                   </tr>
-                  <tr class="played-guest">
+                  <tr>
                     <td>
-                      10.09.2018
-                    </td>
-                    <td>
-                      17:00
+                      Звезда (Москва) - Рубин (Тюмень)
                     </td>
                     <td>
-                      КРС-ОЭРДЖИ (Пекин)
+                      1 : 2 ОТ
                     </td>
-                    <td class="guest">
-                      Барс (Казань)
-                    </td>
-                    <td>
-                      <a href="#" class="calendar-page__score">
-                        6 : 3
-                      </a>
-                    </td>
-                    <td>
-                      Кубок Дизеля
-                    </td>
+                    <td></td>
                   </tr>
-                  <tr class="played-guest">
+                  <tr>
                     <td>
-                      30.07.2018
-                    </td>
-                    <td>
-                      18:30
+                      Сарыарка (Караганда) - Нефтяник (Альметьевск)
                     </td>
                     <td>
-                      Нефтяник (Альметьевск)
+                      6 : 5
                     </td>
-                    <td class="guest">
-                      Барс (Казань)
-                    </td>
-                    <td>
-                      <a href="#" class="calendar-page__score">
-                        1 : 3
-                      </a>
-                    </td>
-                    <td>
-                      Контрольный матч
-                    </td>
+                    <td></td>
                   </tr>
-                  <tr class="played-home">
-                    <td>
-                      12.08.2018
-                    </td>
-                    <td>
-                      13:00
-                    </td>
-                    <td class="home">
-                      Барс (Казань)
-                    </td>
-                    <td>
-                      ХК Рязань (Рязань)
-                    </td>
-                    <td>
-                      <a href="#" class="calendar-page__score">
-                        4 : 3
-                      </a>
-                    </td>
-                    <td>
-                      Кубок Дизеля
-                    </td>
+                  <tr class="results-page__date-row">
+                    <th colspan="3">
+                      16.03.2019
+                    </th>
                   </tr>
-                  <tr class="played-guest">
+                  <tr>
                     <td>
-                      10.09.2018
-                    </td>
-                    <td>
-                      17:00
+                      Звезда (Москва) - Рубин (Тюмень)
                     </td>
                     <td>
-                      КРС-ОЭРДЖИ (Пекин)
+                      3 : 1
                     </td>
-                    <td class="guest">
-                      Барс (Казань)
-                    </td>
-                    <td>
-                      <a href="#" class="calendar-page__score">
-                        6 : 3
-                      </a>
-                    </td>
-                    <td>
-                      Кубок Дизеля
-                    </td>
+                    <td></td>
                   </tr>
-                  <tr class="played-guest">
+                  <tr>
                     <td>
-                      30.07.2018
-                    </td>
-                    <td>
-                      18:30
+                      Зауралье (Курган) - Торос (Нефтекамск)
                     </td>
                     <td>
-                      Нефтяник (Альметьевск)
+                      3 : 2 ОТ
                     </td>
-                    <td class="guest">
-                      Барс (Казань)
-                    </td>
-                    <td>
-                      <a href="#" class="calendar-page__score">
-                        1 : 3
-                      </a>
-                    </td>
-                    <td>
-                      Контрольный матч
-                    </td>
+                    <td></td>
                   </tr>
-                  <tr class="played-home">
+                  <tr>
                     <td>
-                      12.08.2018
-                    </td>
-                    <td>
-                      13:00
-                    </td>
-                    <td class="home">
-                      Барс (Казань)
+                      Сарыарка (Караганда) - Нефтяник (Альметьевск)
                     </td>
                     <td>
-                      ХК Рязань (Рязань)
+                      3 : 1
                     </td>
-                    <td>
-                      <a href="#" class="calendar-page__score">
-                        4 : 3
-                      </a>
-                    </td>
-                    <td>
-                      Кубок Дизеля
-                    </td>
+                    <td></td>
                   </tr>
-
+                  <tr>
+                    <td>
+                      Сокол (Красноярск) - СКА-Нева (Санкт-Петербург)
+                    </td>
+                    <td>
+                      2 : 1 ОТ
+                    </td>
+                    <td></td>
+                  </tr>
+                  <tr class="results-page__date-row">
+                    <th colspan="3">
+                      15.03.2019
+                    </th>
+                  </tr>
+                  <tr>
+                    <td>
+                      Звезда (Москва) - Рубин (Тюмень)
+                    </td>
+                    <td>
+                      3 : 1
+                    </td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Зауралье (Курган) - Торос (Нефтекамск)
+                    </td>
+                    <td>
+                      3 : 2 ОТ
+                    </td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Сарыарка (Караганда) - Нефтяник (Альметьевск)
+                    </td>
+                    <td>
+                      3 : 1
+                    </td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Сокол (Красноярск) - СКА-Нева (Санкт-Петербург)
+                    </td>
+                    <td>
+                      2 : 1 ОТ
+                    </td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Звезда (Москва) - Рубин (Тюмень)
+                    </td>
+                    <td>
+                      3 : 1
+                    </td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Зауралье (Курган) - Торос (Нефтекамск)
+                    </td>
+                    <td>
+                      3 : 2 ОТ
+                    </td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Сарыарка (Караганда) - Нефтяник (Альметьевск)
+                    </td>
+                    <td>
+                      3 : 1
+                    </td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Сокол (Красноярск) - СКА-Нева (Санкт-Петербург)
+                    </td>
+                    <td>
+                      2 : 1 ОТ
+                    </td>
+                    <td></td>
+                  </tr>
+                  <tr class="results-page__date-row">
+                    <th colspan="3">
+                      27.02.2019
+                    </th>
+                  </tr>
+                  <tr>
+                    <td>
+                      Звезда (Москва) - Рубин (Тюмень)
+                    </td>
+                    <td>
+                      3 : 1
+                    </td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Зауралье (Курган) - Торос (Нефтекамск)
+                    </td>
+                    <td>
+                      3 : 2 ОТ
+                    </td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Сарыарка (Караганда) - Нефтяник (Альметьевск)
+                    </td>
+                    <td>
+                      3 : 1
+                    </td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Сокол (Красноярск) - СКА-Нева (Санкт-Петербург)
+                    </td>
+                    <td>
+                      2 : 1 ОТ
+                    </td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Звезда (Москва) - Рубин (Тюмень)
+                    </td>
+                    <td>
+                      3 : 1
+                    </td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Зауралье (Курган) - Торос (Нефтекамск)
+                    </td>
+                    <td>
+                      3 : 2 ОТ
+                    </td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Сарыарка (Караганда) - Нефтяник (Альметьевск)
+                    </td>
+                    <td>
+                      3 : 1
+                    </td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Сокол (Красноярск) - СКА-Нева (Санкт-Петербург)
+                    </td>
+                    <td>
+                      2 : 1 ОТ
+                    </td>
+                    <td></td>
+                  </tr>
                 </tbody>
               </table>
             </div>

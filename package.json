@@ -19,6 +19,7 @@
     "choices.js": "^6.0.3",
     "fotorama": "^4.6.4",
     "jquery": "^3.3.1",
+    "lightcase": "^2.5.0",
     "lodash": "^4.17.11",
     "object-fit-images": "^3.2.4",
     "parsleyjs": "^2.8.1",
