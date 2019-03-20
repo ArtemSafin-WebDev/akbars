@@ -5536,6 +5536,16 @@ svg {
   .news-details__news-article-content strong {
     font-size: 16px;
     line-height: 30px; }
+  .news-details__news-article-content a {
+    color: #256963;
+    outline: none;
+    -webkit-transition: color .2s;
+    transition: color .2s; }
+    .news-details__news-article-content a:link, .news-details__news-article-content a:visited {
+      color: #256963; }
+    .news-details__news-article-content a:hover, .news-details__news-article-content a:focus {
+      color: #D81E23;
+      text-decoration: underline; }
   .news-details__news-article-content p {
     font-size: 16px;
     line-height: 30px;
@@ -5565,14 +5575,19 @@ svg {
           -ms-flex-align: center;
               align-items: center;
       font-size: 16px;
-      line-height: 30px; }
+      line-height: 30px;
+      margin-bottom: 10px; }
+      .news-details__news-article-content ul li:last-child {
+        margin-bottom: 0; }
       .news-details__news-article-content ul li::before {
         content: '';
         width: 7px;
         height: 7px;
         background-color: #256963;
         margin-right: 12px;
-        border-radius: 50%; }
+        border-radius: 50%;
+        -ms-flex-negative: 0;
+            flex-shrink: 0; }
   .news-details__news-article-content .photo-center {
     width: 100%;
     display: block;
@@ -8632,3 +8647,105 @@ svg {
     color: #256963; }
   .tables-page__other-pages-link:hover, .tables-page__other-pages-link:focus {
     color: #D81E23; }
+
+.history {
+  width: 960px; }
+
+.history__main-heading {
+  color: #242f37;
+  font-size: 34px;
+  line-height: 44px;
+  text-transform: uppercase;
+  margin: 0; }
+
+.history__content {
+  background-color: #fff;
+  margin-top: 40px;
+  border-top: 2px solid #256963;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #242F37;
+  padding: 40px;
+  padding-top: 30px; }
+  .history__content h2 {
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center; }
+  .history__content h3 {
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 700;
+    text-align: center;
+    color: #808080; }
+  .history__content strong {
+    font-size: 16px;
+    line-height: 30px; }
+  .history__content a {
+    color: #256963;
+    outline: none;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+    font-size: 16px;
+    line-height: 30px; }
+    .history__content a:link, .history__content a:visited {
+      color: #256963; }
+    .history__content a:hover, .history__content a:focus {
+      color: #D81E23; }
+  .history__content p {
+    font-size: 16px;
+    line-height: 30px;
+    margin-top: 8px;
+    margin-bottom: 25px; }
+    .history__content p a {
+      color: #256963;
+      outline: none;
+      -webkit-transition: color 0.2s;
+      transition: color 0.2s; }
+      .history__content p a:link, .history__content p a:visited {
+        color: #256963; }
+      .history__content p a:hover, .history__content p a:focus {
+        color: #D81E23;
+        text-decoration: underline; }
+  .history__content em {
+    color: #256963;
+    font-style: normal; }
+  .history__content ul {
+    margin-top: 8px;
+    margin-bottom: 25px; }
+    .history__content ul li {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      font-size: 16px;
+      line-height: 30px;
+      margin-bottom: 15px; }
+      .history__content ul li:last-child {
+        margin-bottom: 0; }
+      .history__content ul li::before {
+        content: '';
+        width: 7px;
+        height: 7px;
+        background-color: #256963;
+        margin-right: 12px;
+        border-radius: 50%;
+        -ms-flex-negative: 0;
+            flex-shrink: 0; }
+  .history__content table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse; }
+    .history__content table th,
+    .history__content table td {
+      text-align: center;
+      padding: 5px; }
+    .history__content table th {
+      background-color: #EBEBEB; }
+    .history__content table td {
+      border: 2px solid #EBEBEB; }
+      .history__content table td[colspan] {
+        text-align: left;
+        padding: 10px; }

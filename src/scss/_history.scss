@@ -1,0 +1,135 @@
+.history {
+  width: 960px;
+}
+
+.history__main-heading {
+  color: #242f37;
+  font-size: 34px;
+  line-height: 44px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.history__content {
+  background-color: #fff;
+  margin-top: 40px;
+  border-top: 2px solid $green;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #242F37;
+  padding: 40px;
+  padding-top: 30px;
+  h2 {
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 700;
+    text-align: center;
+    color: #808080;
+  }
+
+  strong {
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  a {
+    color: $green;
+    outline: none;
+    transition: color 0.2s;
+    font-size: 16px;
+    line-height: 30px;
+    &:link,
+    &:visited {
+      color: $green;
+    }
+    &:hover,
+    &:focus {
+      color: $red;
+      
+    }
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 30px;
+
+    margin-top: 8px;
+    margin-bottom: 25px;
+    a {
+      color: $green;
+      outline: none;
+      transition: color 0.2s;
+      &:link,
+      &:visited {
+        color: $green;
+      }
+      &:hover,
+      &:focus {
+        color: $red;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  em {
+    color: $green;
+    font-style: normal;
+  }
+
+  ul {
+    margin-top: 8px;
+    margin-bottom: 25px;
+    li {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      line-height: 30px;
+      margin-bottom: 15px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &::before {
+        content: '';
+        width: 7px;
+        height: 7px;
+        background-color: $green;
+        margin-right: 12px;
+        border-radius: 50%;
+        flex-shrink: 0;
+      }
+    }
+  }
+
+  table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    th,
+    td {
+      text-align: center;
+      padding: 5px;
+    }
+    th {
+      background-color: #EBEBEB;
+     
+    }
+    td {
+      border: 2px solid #EBEBEB;
+      &[colspan] {
+        text-align: left;
+        padding: 10px;
+      }
+    }
+
+    
+  }
+
+  
+}
