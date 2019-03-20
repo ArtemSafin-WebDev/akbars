@@ -3551,8 +3551,8 @@ svg {
     font-size: 14px;
     line-height: 18px;
     padding: 15px 20px;
-    padding-top: 18px;
-    padding-bottom: 14px;
+    padding-top: 13px;
+    padding-bottom: 9px;
     -webkit-transition: background-color 0.3s;
     transition: background-color 0.3s;
     outline: none;
@@ -6249,7 +6249,9 @@ svg {
   color: #256963;
   outline: none;
   -webkit-transition: color .2s;
-  transition: color .2s; }
+  transition: color .2s;
+  font-size: 16px;
+  line-height: 20px; }
   .last-news__link:link, .last-news__link:visited {
     color: #256963; }
   .last-news__link:hover, .last-news__link:focus {
@@ -7064,6 +7066,9 @@ svg {
   .person-media__games-history-table tbody tr,
   .person-media__games-history-table.dataTable tbody tr {
     cursor: default; }
+    .person-media__games-history-table tbody tr:first-child td::before,
+    .person-media__games-history-table.dataTable tbody tr:first-child td::before {
+      display: none; }
     .person-media__games-history-table tbody tr:hover td,
     .person-media__games-history-table.dataTable tbody tr:hover td {
       background-color: #dde8e7; }
@@ -8308,3 +8313,322 @@ svg {
 .abonements__schema {
   width: 900px;
   margin: 0 auto; }
+
+.tables-page {
+  width: 960px; }
+
+.tables-page__main-heading {
+  color: #242f37;
+  text-transform: uppercase;
+  font-size: 34px;
+  line-height: 44px;
+  margin-bottom: 40px;
+  margin: 0;
+  margin-top: 5px; }
+
+.tables-page__selects-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 35px; }
+
+.tables-page__select {
+  width: 100%;
+  position: relative;
+  z-index: 30;
+  margin-bottom: 20px; }
+  .tables-page__select:nth-child(1) {
+    width: 250px;
+    z-index: 30;
+    margin-right: 30px; }
+  .tables-page__select:nth-child(2) {
+    width: 520px;
+    z-index: 20; }
+
+.tables-page__content {
+  background-color: #fff;
+  border-top: 2px solid #256963;
+  margin-top: 30px; }
+
+.tables-page__games-history-table,
+.tables-page__games-history-table.dataTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+  .tables-page__games-history-table.no-footer,
+  .tables-page__games-history-table.dataTable.no-footer {
+    border-bottom: none; }
+  .tables-page__games-history-table th,
+  .tables-page__games-history-table td,
+  .tables-page__games-history-table.dataTable th,
+  .tables-page__games-history-table.dataTable td {
+    padding: 0;
+    padding-right: 30px;
+    vertical-align: middle;
+    text-align: left;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+    .tables-page__games-history-table th:first-child,
+    .tables-page__games-history-table td:first-child,
+    .tables-page__games-history-table.dataTable th:first-child,
+    .tables-page__games-history-table.dataTable td:first-child {
+      padding-left: 40px; }
+    .tables-page__games-history-table th:last-child,
+    .tables-page__games-history-table td:last-child,
+    .tables-page__games-history-table.dataTable th:last-child,
+    .tables-page__games-history-table.dataTable td:last-child {
+      padding-right: 40px; }
+  .tables-page__games-history-table thead .sorting,
+  .tables-page__games-history-table thead .sorting_asc,
+  .tables-page__games-history-table thead .sorting_desc,
+  .tables-page__games-history-table.dataTable thead .sorting,
+  .tables-page__games-history-table.dataTable thead .sorting_asc,
+  .tables-page__games-history-table.dataTable thead .sorting_desc {
+    background-image: none; }
+  .tables-page__games-history-table thead tr th,
+  .tables-page__games-history-table.dataTable thead tr th {
+    border: none;
+    padding: 0;
+    background-color: #ebebeb;
+    color: #242f37;
+    font-size: 16px;
+    line-height: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding: 5px 10px;
+    white-space: nowrap;
+    -webkit-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+    cursor: default;
+    position: relative; }
+    .tables-page__games-history-table thead tr th.sorting, .tables-page__games-history-table thead tr th.sorting_asc, .tables-page__games-history-table thead tr th.sorting_desc,
+    .tables-page__games-history-table.dataTable thead tr th.sorting,
+    .tables-page__games-history-table.dataTable thead tr th.sorting_asc,
+    .tables-page__games-history-table.dataTable thead tr th.sorting_desc {
+      cursor: pointer;
+      outline: none; }
+      .tables-page__games-history-table thead tr th.sorting:hover, .tables-page__games-history-table thead tr th.sorting:focus, .tables-page__games-history-table thead tr th.sorting_asc:hover, .tables-page__games-history-table thead tr th.sorting_asc:focus, .tables-page__games-history-table thead tr th.sorting_desc:hover, .tables-page__games-history-table thead tr th.sorting_desc:focus,
+      .tables-page__games-history-table.dataTable thead tr th.sorting:hover,
+      .tables-page__games-history-table.dataTable thead tr th.sorting:focus,
+      .tables-page__games-history-table.dataTable thead tr th.sorting_asc:hover,
+      .tables-page__games-history-table.dataTable thead tr th.sorting_asc:focus,
+      .tables-page__games-history-table.dataTable thead tr th.sorting_desc:hover,
+      .tables-page__games-history-table.dataTable thead tr th.sorting_desc:focus {
+        background-color: #dedede; }
+    .tables-page__games-history-table thead tr th.sorting_asc, .tables-page__games-history-table thead tr th.sorting_desc,
+    .tables-page__games-history-table.dataTable thead tr th.sorting_asc,
+    .tables-page__games-history-table.dataTable thead tr th.sorting_desc {
+      background-color: #d5d5d5; }
+      .tables-page__games-history-table thead tr th.sorting_asc:hover, .tables-page__games-history-table thead tr th.sorting_asc:focus, .tables-page__games-history-table thead tr th.sorting_desc:hover, .tables-page__games-history-table thead tr th.sorting_desc:focus,
+      .tables-page__games-history-table.dataTable thead tr th.sorting_asc:hover,
+      .tables-page__games-history-table.dataTable thead tr th.sorting_asc:focus,
+      .tables-page__games-history-table.dataTable thead tr th.sorting_desc:hover,
+      .tables-page__games-history-table.dataTable thead tr th.sorting_desc:focus {
+        background-color: #d5d5d5; }
+    .tables-page__games-history-table thead tr th:nth-last-child(1) .tables-page__legend, .tables-page__games-history-table thead tr th:nth-last-child(2) .tables-page__legend, .tables-page__games-history-table thead tr th:nth-last-child(3) .tables-page__legend,
+    .tables-page__games-history-table.dataTable thead tr th:nth-last-child(1) .tables-page__legend,
+    .tables-page__games-history-table.dataTable thead tr th:nth-last-child(2) .tables-page__legend,
+    .tables-page__games-history-table.dataTable thead tr th:nth-last-child(3) .tables-page__legend {
+      right: 0;
+      left: auto; }
+      .tables-page__games-history-table thead tr th:nth-last-child(1) .tables-page__legend .tables-page__legend-content::before, .tables-page__games-history-table thead tr th:nth-last-child(2) .tables-page__legend .tables-page__legend-content::before, .tables-page__games-history-table thead tr th:nth-last-child(3) .tables-page__legend .tables-page__legend-content::before,
+      .tables-page__games-history-table.dataTable thead tr th:nth-last-child(1) .tables-page__legend .tables-page__legend-content::before,
+      .tables-page__games-history-table.dataTable thead tr th:nth-last-child(2) .tables-page__legend .tables-page__legend-content::before,
+      .tables-page__games-history-table.dataTable thead tr th:nth-last-child(3) .tables-page__legend .tables-page__legend-content::before {
+        left: auto;
+        right: 20px; }
+    .tables-page__games-history-table thead tr th:last-child .tables-page__legend,
+    .tables-page__games-history-table.dataTable thead tr th:last-child .tables-page__legend {
+      right: 35px; }
+    .tables-page__games-history-table thead tr th:hover .tables-page__legend, .tables-page__games-history-table thead tr th:focus .tables-page__legend,
+    .tables-page__games-history-table.dataTable thead tr th:hover .tables-page__legend,
+    .tables-page__games-history-table.dataTable thead tr th:focus .tables-page__legend {
+      opacity: 1;
+      visibility: visible; }
+  .tables-page__games-history-table tbody td,
+  .tables-page__games-history-table.dataTable tbody td {
+    color: #242f37;
+    font-size: 14px;
+    line-height: 25px;
+    position: relative;
+    padding: 19px 10px;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    white-space: nowrap; }
+    .tables-page__games-history-table tbody td:first-child,
+    .tables-page__games-history-table.dataTable tbody td:first-child {
+      font-weight: 400; }
+      .tables-page__games-history-table tbody td:first-child::before,
+      .tables-page__games-history-table.dataTable tbody td:first-child::before {
+        width: calc(100% - 40px);
+        right: 0;
+        left: auto; }
+    .tables-page__games-history-table tbody td:last-child::before,
+    .tables-page__games-history-table.dataTable tbody td:last-child::before {
+      width: calc(100% - 40px);
+      left: 0;
+      right: auto; }
+    .tables-page__games-history-table tbody td:nth-child(2),
+    .tables-page__games-history-table.dataTable tbody td:nth-child(2) {
+      font-weight: 700; }
+    .tables-page__games-history-table tbody td::before,
+    .tables-page__games-history-table.dataTable tbody td::before {
+      content: '';
+      width: 100%;
+      height: 1px;
+      background-color: #ebebeb;
+      position: absolute;
+      top: -1px;
+      left: 0;
+      -webkit-transition: background-color 0.2s;
+      transition: background-color 0.2s; }
+  .tables-page__games-history-table tbody tr,
+  .tables-page__games-history-table.dataTable tbody tr {
+    cursor: default; }
+    .tables-page__games-history-table tbody tr:first-child td::before,
+    .tables-page__games-history-table.dataTable tbody tr:first-child td::before {
+      display: none; }
+    .tables-page__games-history-table tbody tr:hover td,
+    .tables-page__games-history-table.dataTable tbody tr:hover td {
+      background-color: #dde8e7; }
+      .tables-page__games-history-table tbody tr:hover td .tables-page__team-name,
+      .tables-page__games-history-table.dataTable tbody tr:hover td .tables-page__team-name {
+        -webkit-transition: color 0.2s;
+        transition: color 0.2s;
+        color: #D81E23; }
+      .tables-page__games-history-table tbody tr:hover td::before,
+      .tables-page__games-history-table.dataTable tbody tr:hover td::before {
+        background-color: #dde8e7; }
+      .tables-page__games-history-table tbody tr:hover td:first-child::before, .tables-page__games-history-table tbody tr:hover td:last-child::before,
+      .tables-page__games-history-table.dataTable tbody tr:hover td:first-child::before,
+      .tables-page__games-history-table.dataTable tbody tr:hover td:last-child::before {
+        width: 100%; }
+    .tables-page__games-history-table tbody tr:hover + tr td::before,
+    .tables-page__games-history-table.dataTable tbody tr:hover + tr td::before {
+      background-color: #dde8e7; }
+    .tables-page__games-history-table tbody tr:last-child td::after,
+    .tables-page__games-history-table.dataTable tbody tr:last-child td::after {
+      content: '';
+      position: absolute;
+      background-color: #ebebeb;
+      bottom: -3px;
+      height: 3px;
+      width: 100%;
+      left: 0;
+      right: auto; }
+    .tables-page__games-history-table tbody tr:last-child td:first-child::after,
+    .tables-page__games-history-table.dataTable tbody tr:last-child td:first-child::after {
+      content: '';
+      right: 0;
+      left: auto;
+      width: calc(100% - 40px); }
+    .tables-page__games-history-table tbody tr:last-child td:last-child::after,
+    .tables-page__games-history-table.dataTable tbody tr:last-child td:last-child::after {
+      content: '';
+      left: 0;
+      right: auto;
+      width: 100%; }
+
+.tables-page__games-history-table-heading-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .tables-page__games-history-table-heading-content > svg {
+    -webkit-transition: fill 0.3s;
+    transition: fill 0.3s;
+    fill: #256963;
+    margin-left: 5px; }
+
+.tables-page__legend {
+  position: absolute;
+  top: calc(100% - 2px);
+  left: 0;
+  z-index: 20;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  padding-top: 7px; }
+
+.tables-page__legend-content {
+  background-color: white;
+  color: #242f37;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  display: block;
+  position: relative;
+  -webkit-box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.2); }
+  @supports ((-webkit-filter: drop-shadow(0 5px 30px rgba(0, 0, 0, 0.2))) or (filter: drop-shadow(0 5px 30px rgba(0, 0, 0, 0.2)))) {
+    .tables-page__legend-content {
+      -webkit-filter: drop-shadow(0 5px 30px rgba(0, 0, 0, 0.2));
+              filter: drop-shadow(0 5px 30px rgba(0, 0, 0, 0.2));
+      -webkit-box-shadow: none;
+              box-shadow: none; } }
+  .tables-page__legend-content::before {
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: 100%;
+    left: 6px;
+    border: 10px solid transparent;
+    border-bottom: 10px solid white;
+    pointer-events: none; }
+
+.tables-page__other-pages {
+  width: 960px;
+  background-color: #fff;
+  border-top: 2px solid #256963;
+  padding: 40px 40px;
+  margin-top: 40px; }
+
+.tables-page__other-pages-heading {
+  font-size: 26px;
+  line-height: 38px;
+  margin-left: -40px; }
+
+.tables-page__other-pages-content {
+  padding: 0 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.tables-page__other-pages-list {
+  margin-top: 28px;
+  border-bottom: 3px solid #ebebeb;
+  padding-bottom: 22px; }
+
+.tables-page__other-pages-list-item {
+  margin-bottom: 16px; }
+  .tables-page__other-pages-list-item:last-child {
+    margin-bottom: 0; }
+
+.tables-page__other-pages-link {
+  color: #256963;
+  outline: none;
+  -webkit-transition: color .2s;
+  transition: color .2s;
+  font-size: 16px;
+  line-height: 20px; }
+  .tables-page__other-pages-link:link, .tables-page__other-pages-link:visited {
+    color: #256963; }
+  .tables-page__other-pages-link:hover, .tables-page__other-pages-link:focus {
+    color: #D81E23; }
