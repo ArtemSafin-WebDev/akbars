@@ -19,11 +19,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Слайдеры мобильной версии
 
-  mobileSliders()
+  // mobileSliders()
 
   // Иниализация всех табов на странице с помощью фабрики функций
 
-  setTabsOnPage()
+  // setTabsOnPage()
 
 
   
