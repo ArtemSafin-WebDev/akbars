@@ -2,6 +2,7 @@ import '@babel/polyfill'
 import '@fancyapps/fancybox'
 import 'lightcase'
 
+
 import objectFitImages from 'object-fit-images'
 import smoothscroll from 'smoothscroll-polyfill';
 
@@ -17,6 +18,7 @@ import photoGallery from './photogallery'
 import playoffTooltips from './playoffTooltips'
 import customScrollbars from './customScrollbars'
 import scrollableTable from './scrollableTable'
+import highlightMaps from './highlightMaps'
 
 document.addEventListener('DOMContentLoaded', function() {
   // Полифилл для CSS свойства ObjectFit(заполнение контейнера изображением)
@@ -74,7 +76,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
   scrollableTable()
 
+  // Подсвечиваем карту зала 
 
+  highlightMaps()
+  
 })
 
 
