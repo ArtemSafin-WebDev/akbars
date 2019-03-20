@@ -1,98 +1,52 @@
-.person-media {
+.tables-page {
   width: 960px;
-  margin-left: auto;
-
-  .tabs__navigation button {
-    width: 190px;
-    &:first-of-type {
-      width: 210px;
-    }
-  }
 }
 
-.person-media__wrapper {
-  display: block;
-  width: 100%;
-  padding: 20px;
-  padding-top: 10px;
-  padding-bottom: 40px;
+.tables-page__main-heading {
+  color: #242f37;
+  text-transform: uppercase;
+  font-size: 34px;
+  line-height: 44px;
+  margin-bottom: 40px;
+  margin: 0;
+  margin-top: 5px;
 }
 
-.fotorama__thumb-border {
-  border-color: $red;
-}
-
-.person-media__photogallery-photo-description {
-  color: #94999f;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
-  line-height: 30px;
-  font-weight: 700;
-  min-height: 35px;
+.tables-page__selects-block {
   display: flex;
   align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-top: 35px;
 }
 
-.person-media__photogallery-photo-copyright {
-  color: #94999f;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
-  line-height: 20px;
-  width: 500px;
-}
+.tables-page__select {
+  width: 100%;
+  position: relative;
+  z-index: 30;
 
-.fotorama__arr,
-.fotorama__fullscreen-icon,
-.fotorama__video-close,
-.fotorama__video-play {
-  background-image: url('../img/fotorama.png');
-}
+  margin-bottom: 20px;
+  &:nth-child(1) {
+    width: 250px;
+    z-index: 30;
+    margin-right: 30px;
+  }
 
-@media (-webkit-min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-  .fotorama__arr,
-  .fotorama__fullscreen-icon,
-  .fotorama__video-close,
-  .fotorama__video-play {
-    background-image: url('../img/fotorama@2x.png');
+  &:nth-child(2) {
+    width: 520px;
+    z-index: 20;
+    // flex-grow: 1;
   }
 }
 
-.person-media__publications {
-  padding-top: 10px;
-  display: flex;
-  flex-direction: column;
+.tables-page__content {
+  background-color: #fff;
+  border-top: 2px solid $green;
+  margin-top: 30px;
 }
 
-.person-media__publications-show-more {
-  font-size: 14px;
-  line-height: 18px;
-  border: 2px solid $green;
-  display: inline-block;
-  padding: 14px 32px;
-  transition: all 0.3s;
-  color: $green;
-  align-self: flex-start;
-  margin-top: 50px;
-  outline: none;
-  align-self: center;
-  &:link,
-  &:visited {
-    color: $green;
-  }
-
-  &:hover,
-  &:focus {
-    border: 2px solid $red;
-  }
-}
-
-.person-media__games-history {
-  padding-top: 10px;
-  padding-bottom: 30px;
-}
-
-.person-media__games-history-table,
-.person-media__games-history-table.dataTable {
+.tables-page__games-history-table,
+.tables-page__games-history-table.dataTable {
   width: 100%;
   border-collapse: collapse;
   font-family: Arial, Helvetica, sans-serif;
@@ -156,11 +110,33 @@
           }
         }
 
+        &:nth-last-child(1),
+        &:nth-last-child(2),
+        &:nth-last-child(3) {
+          .tables-page__legend {
+            right: 0;
+            left: auto;
+            .tables-page__legend-content {
+              &::before {
+                left: auto;
+                right: 20px;
+              }
+            }
+          }
+        }
+
+        &:last-child {
+          .tables-page__legend {
+            right: 35px;
+          }
+        }
+
         &:hover,
         &:focus {
-          .person-media__legend {
+          .tables-page__legend {
             opacity: 1;
             visibility: visible;
+            
           }
         }
       }
@@ -175,6 +151,7 @@
       position: relative;
       padding: 19px 10px;
       transition: all 0.2s;
+      white-space: nowrap;
       &:first-child {
         font-weight: 400;
         &::before {
@@ -185,16 +162,14 @@
       }
       &:last-child {
         &::before {
-          // width: calc(100% - 40px);
-          width: 100%;
+          width: calc(100% - 40px);
+          // width: 100%;
           left: 0;
           right: auto;
         }
       }
-      &:nth-child(3) {
+      &:nth-child(2) {
         font-weight: 700;
-        white-space: nowrap;
-        // width: 1200px;
       }
 
       &::before {
@@ -222,7 +197,7 @@
       &:hover {
         td {
           background-color: #dde8e7;
-          .person-media__team-name {
+          .tables-page__team-name {
             transition: color 0.2s;
             color: $red;
           }
@@ -281,7 +256,7 @@
   }
 }
 
-.person-media__games-history-table-heading-content {
+.tables-page__games-history-table-heading-content {
   display: flex;
   align-items: center;
   > svg {
@@ -291,25 +266,7 @@
   }
 }
 
-.person-media__videos {
-  padding-top: 10px;
-  display: flex;
-  flex-direction: column;
-  .news__description {
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .ak-bars-info__video-link {
-    width: 240px;
-    height: 164px;
-    margin-right: 40px;
-    flex-shrink: 0;
-  }
-}
-
-.person-media__legend {
+.tables-page__legend {
   position: absolute;
   top: calc(100% - 2px);
   left: 0;
@@ -320,7 +277,7 @@
   padding-top: 7px;
 }
 
-.person-media__legend-content {
+.tables-page__legend-content {
   background-color: white;
   color: #242f37;
   border-radius: 5px;
@@ -340,9 +297,59 @@
     position: absolute;
     display: block;
     bottom: 100%;
-    left: 15px;
+    left: 6px;
     border: 10px solid transparent;
     border-bottom: 10px solid white;
     pointer-events: none;
+  }
+}
+
+
+.tables-page__other-pages {
+  width: 960px;
+  background-color: #fff;
+  border-top: 2px solid $green;
+  padding: 40px 40px;
+  margin-top: 40px;
+}
+
+.tables-page__other-pages-heading {
+  font-size: 26px;
+  line-height: 38px;
+  margin-left: -40px;
+}
+
+.tables-page__other-pages-content {
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tables-page__other-pages-list {
+  margin-top: 28px;
+  border-bottom: 3px solid #ebebeb;
+  padding-bottom: 22px;
+}
+
+.tables-page__other-pages-list-item {
+  margin-bottom: 16px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.tables-page__other-pages-link {
+  color: $green;
+  outline: none;
+  transition: color .2s;
+  font-size: 16px;
+  line-height: 20px;
+  &:link,
+  &:visited {
+    color: $green;
+  }
+  &:hover,
+  &:focus {
+    color: $red;
   }
 }

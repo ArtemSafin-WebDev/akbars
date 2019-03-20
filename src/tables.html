@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <!-- partial:partials/_meta.html -->
+    <!-- partial -->
+    <title>
+      Архив ленты новостей о хоккейной команде «Ак Барс»
+    </title>
+    <noscript>
+      <style>
+        [data-simplebar] {
+          overflow: auto;
+        }
+      </style>
+    </noscript>
+  </head>
+  <body>
+    <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
+      <!-- partial:img/symbol/sprite.svg --><!-- partial -->
+    </div>
+    <!-- partial:partials/_cookie-policy.html --><!-- partial -->
+    <!-- partial:partials/_search-modal.html --><!-- partial -->
+    <!-- partial:partials/_preloader.html --><!-- partial -->
+    <div class="page-content">
+      <div class="khl-placeholder">
+        <div class="container">
+          Заглушка панели KHL
+        </div>
+      </div>
+
+      <!-- partial:partials/_header.html --><!-- partial -->
+      <main>
+        <div class="container">
+          <div class="flex-row">
+            <div class="banner-column banner-column--left banner-column--news-details">
+              <div class="banner-column__item" style="background-image: url(img/banners/hoki.png)"></div>
+              <div class="banner-column__item" style="background-image: url(img/banners/гимн.png)"></div>
+            </div>
+            <section class="tables-page">
+              <h1 class="tables-page__main-heading">
+                КХЛ. Конференция "Восток". Турнирная таблица. Сезон 2018-2019
+              </h1>
+              <div class="tables-page__selects-block">
+                <div class="tables-page__select js-custom-select">
+                  <select name="season" id="season" onchange="return console.log('Changed')" required>
+                    <option value="2018-01" selected="selected">Сезон 2018/2019</option>
+                    <option value="2017-01">Сезон 2017/2018</option>
+                    <option value="2016-01">Сезон 2016/2017</option>
+                    <option value="2015-01">Сезон 2015/2016</option>
+                    <option value="2014-01">Сезон 2014/2015</option>
+                    <option value="2013-01">Сезон 2013/2014</option>
+                    <option value="2012-01">Сезон 2012/2013</option>
+                    <option value="2011-01">Сезон 2011/2012</option>
+                    <option value="2010-01">Сезон 2010/2011</option>
+                    <option value="2009-01">Сезон 2009/2010</option>
+                    <option value="2008-01">Сезон 2008/2009</option>
+                    <option value="2007-01">Сезон 2007/2008</option>
+                    <option value="2006-01">Сезон 2006/2007</option>
+                    <option value="2005-01">Сезон 2005/2006</option>
+                    <option value="2004-01">Сезон 2004/2005</option>
+                    <option value="2003-01">Сезон 2003/2004</option>
+                    <option value="2002-01">Сезон 2002/2003</option>
+                    <option value="2001-01">Сезон 2001/2002</option>
+                    <option value="2000-01">Сезон 2000/2001</option>
+                    <option value="1999-01">Сезон 1999/2000</option>
+                    <option value="1998-01">Сезон 1998/1999</option>
+                    <option value="1997-01">Сезон 1997/1998</option>
+                    <option value="1996-01">Сезон 1996/1997</option>
+                  </select>
+                </div>
+                <div class="tables-page__select js-custom-select">
+                  <select name="table" id="team" onchange="return console.log('Changed')" required>
+                    <option value="01" selected="selected"
+                      >КХЛ. Конференция &quot;Восток&quot; - турнирная таблица</option
+                    >
+                    <option value="02">КХЛ. Конференция &quot;Запад&quot; - турнирная таблица</option>
+                    <option value="03">КХЛ. Дивизион Боброва - турнирная таблица</option>
+                    <option value="04">КХЛ. Дивизион Тарасова - турнирная таблица</option>
+                    <option value="05">КХЛ. Дивизион Харламова - турнирная таблица</option>
+                    <option value="06">КХЛ. Дивизион Чернышева - турнирная таблица</option>
+                    <option value="07">КХЛ - турнирная таблица</option>
+                  </select>
+                </div>
+              </div>
+              <div class="tables-page__content">
+                <table class="tables-page__games-history-table js-table-sortable">
+                  <thead>
+                    <tr>
+                      <th>
+                        <span class="tables-page__games-history-table-heading-content">
+                          №
+
+                          <svg width="7" height="11" aria-hidden="true" class="icon-sort">
+                            <use xlink:href="#sort" />
+                          </svg>
+                        </span>
+                      </th>
+                      <th>
+                        <span class="tables-page__games-history-table-heading-content">
+                          Команда
+
+                          <svg width="7" height="11" aria-hidden="true" class="icon-sort">
+                            <use xlink:href="#sort" />
+                          </svg>
+                        </span>
+                      </th>
+                      <th>
+                        <span class="tables-page__games-history-table-heading-content">
+                          И
+
+                          <svg width="7" height="11" aria-hidden="true" class="icon-sort">
+                            <use xlink:href="#sort" />
+                          </svg>
+                          <span class="tables-page__legend">
+                            <span class="tables-page__legend-content">Количество игр</span>
+                          </span>
+                        </span>
+                      </th>
+                      <th>
+                        <span class="tables-page__games-history-table-heading-content">
+                          В
+
+                          <svg width="7" height="11" aria-hidden="true" class="icon-sort">
+                            <use xlink:href="#sort" />
+                          </svg>
+                          <span class="tables-page__legend">
+                            <span class="tables-page__legend-content">Выиграно игр</span>
+                          </span>
+                        </span>
+                      </th>
+                      <th>
+                        <span class="tables-page__games-history-table-heading-content">
+                          ВО
+
+                          <svg width="7" height="11" aria-hidden="true" class="icon-sort">
+                            <use xlink:href="#sort" />
+                          </svg>
+                          <span class="tables-page__legend">
+                            <span class="tables-page__legend-content">Выиграно в овертайме</span>
+                          </span>
+                        </span>
+                      </th>
+                      <th>
+                        <span class="tables-page__games-history-table-heading-content">
+                          ВБ
+
+                          <svg width="7" height="11" aria-hidden="true" class="icon-sort">
+                            <use xlink:href="#sort" />
+                          </svg>
+                          <span class="tables-page__legend">
+                            <span class="tables-page__legend-content">Выиграно по буллитам</span>
+                          </span>
+                        </span>
+                      </th>
+                      <th>
+                        <span class="tables-page__games-history-table-heading-content">
+                          ПБ
+
+                          <svg width="7" height="11" aria-hidden="true" class="icon-sort">
+                            <use xlink:href="#sort" />
+                          </svg>
+                          <span class="tables-page__legend">
+                            <span class="tables-page__legend-content">Поражения по буллитам</span>
+                          </span>
+                        </span>
+                      </th>
+                      <th>
+                        <span class="tables-page__games-history-table-heading-content">
+                          ПО
+                          <svg width="7" height="11" aria-hidden="true" class="icon-sort">
+                            <use xlink:href="#sort" />
+                          </svg>
+                          <span class="tables-page__legend">
+                            <span class="tables-page__legend-content">Поражения в овертайме</span>
+                          </span>
+                        </span>
+                      </th>
+                      <th>
+                        <span class="tables-page__games-history-table-heading-content">
+                          П
+                          <svg width="7" height="11" aria-hidden="true" class="icon-sort">
+                            <use xlink:href="#sort" />
+                          </svg>
+                          <span class="tables-page__legend">
+                            <span class="tables-page__legend-content">Поражения</span>
+                          </span>
+                        </span>
+                      </th>
+                      <th>
+                        <span class="tables-page__games-history-table-heading-content">
+                          Ш
+                          <svg width="7" height="11" aria-hidden="true" class="icon-sort">
+                            <use xlink:href="#sort" />
+                          </svg>
+                          <span class="tables-page__legend">
+                            <span class="tables-page__legend-content">Забито-пропущено шайб</span>
+                          </span>
+                        </span>
+                      </th>
+                      <th>
+                        <span class="tables-page__games-history-table-heading-content">
+                          +/-
+                          <svg width="7" height="11" aria-hidden="true" class="icon-sort">
+                            <use xlink:href="#sort" />
+                          </svg>
+                          <span class="tables-page__legend">
+                            <span class="tables-page__legend-content">Разница забитых/пропущенных шайб</span>
+                          </span>
+                        </span>
+                      </th>
+                      <th>
+                        <span class="tables-page__games-history-table-heading-content">
+                          О
+                          <svg width="7" height="11" aria-hidden="true" class="icon-sort">
+                            <use xlink:href="#sort" />
+                          </svg>
+                          <span class="tables-page__legend">
+                            <span class="tables-page__legend-content">Очки</span>
+                          </span>
+                        </span>
+                      </th>
+                      <th>
+                        <span class="tables-page__games-history-table-heading-content">
+                          %О
+                          <svg width="7" height="11" aria-hidden="true" class="icon-sort">
+                            <use xlink:href="#sort" />
+                          </svg>
+                          <span class="tables-page__legend">
+                            <span class="tables-page__legend-content">Процент набранных очков (из 100 возможных)</span>
+                          </span>
+                        </span>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        1
+                      </td>
+                      <td>
+                        <span class="tables-page__team-name">Автомобилист (Екатеринбург)</span>
+                      </td>
+                      <td>
+                        62
+                      </td>
+                      <td>
+                        39
+                      </td>
+                      <td>
+                        6
+                      </td>
+                      <td>
+                        2
+                      </td>
+                      <td>
+                        0
+                      </td>
+                      <td>
+                        1
+                      </td>
+                      <td>
+                        14
+                      </td>
+                      <td>
+                        191-125
+                      </td>
+                      <td>
+                        +66
+                      </td>
+                      <td>
+                        95
+                      </td>
+                      <td>
+                        76.61
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        2
+                      </td>
+                      <td>
+                        <span class="tables-page__team-name">Барыс (Астана)</span>
+                      </td>
+                      <td>
+                        62
+                      </td>
+                      <td>
+                        28
+                      </td>
+                      <td>
+                        5
+                      </td>
+                      <td>
+                        5
+                      </td>
+                      <td>
+                        4
+                      </td>
+                      <td>
+                        6
+                      </td>
+                      <td>
+                        14
+                      </td>
+                      <td>
+                        190-149
+                      </td>
+                      <td>
+                        +41
+                      </td>
+                      <td>
+                        86
+                      </td>
+                      <td>
+                        69.35
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        3
+                      </td>
+                      <td>
+                        <span class="tables-page__team-name">Автомобилист (Екатеринбург)</span>
+                      </td>
+                      <td>
+                        62
+                      </td>
+                      <td>
+                        39
+                      </td>
+                      <td>
+                        6
+                      </td>
+                      <td>
+                        2
+                      </td>
+                      <td>
+                        0
+                      </td>
+                      <td>
+                        1
+                      </td>
+                      <td>
+                        14
+                      </td>
+                      <td>
+                        191-125
+                      </td>
+                      <td>
+                        +66
+                      </td>
+                      <td>
+                        95
+                      </td>
+                      <td>
+                        76.61
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        4
+                      </td>
+                      <td>
+                        <span class="tables-page__team-name">Барыс (Астана)</span>
+                      </td>
+                      <td>
+                        62
+                      </td>
+                      <td>
+                        28
+                      </td>
+                      <td>
+                        5
+                      </td>
+                      <td>
+                        5
+                      </td>
+                      <td>
+                        4
+                      </td>
+                      <td>
+                        6
+                      </td>
+                      <td>
+                        14
+                      </td>
+                      <td>
+                        190-149
+                      </td>
+                      <td>
+                        +41
+                      </td>
+                      <td>
+                        86
+                      </td>
+                      <td>
+                        69.35
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        5
+                      </td>
+                      <td>
+                        <span class="tables-page__team-name">Автомобилист (Екатеринбург)</span>
+                      </td>
+                      <td>
+                        62
+                      </td>
+                      <td>
+                        39
+                      </td>
+                      <td>
+                        6
+                      </td>
+                      <td>
+                        2
+                      </td>
+                      <td>
+                        0
+                      </td>
+                      <td>
+                        1
+                      </td>
+                      <td>
+                        14
+                      </td>
+                      <td>
+                        191-125
+                      </td>
+                      <td>
+                        +66
+                      </td>
+                      <td>
+                        95
+                      </td>
+                      <td>
+                        76.61
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        6
+                      </td>
+                      <td>
+                        <span class="tables-page__team-name">Барыс (Астана)</span>
+                      </td>
+                      <td>
+                        62
+                      </td>
+                      <td>
+                        28
+                      </td>
+                      <td>
+                        5
+                      </td>
+                      <td>
+                        5
+                      </td>
+                      <td>
+                        4
+                      </td>
+                      <td>
+                        6
+                      </td>
+                      <td>
+                        14
+                      </td>
+                      <td>
+                        190-149
+                      </td>
+                      <td>
+                        +41
+                      </td>
+                      <td>
+                        86
+                      </td>
+                      <td>
+                        69.35
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        7
+                      </td>
+                      <td>
+                        <span class="tables-page__team-name">Автомобилист (Екатеринбург)</span>
+                      </td>
+                      <td>
+                        62
+                      </td>
+                      <td>
+                        39
+                      </td>
+                      <td>
+                        6
+                      </td>
+                      <td>
+                        2
+                      </td>
+                      <td>
+                        0
+                      </td>
+                      <td>
+                        1
+                      </td>
+                      <td>
+                        14
+                      </td>
+                      <td>
+                        191-125
+                      </td>
+                      <td>
+                        +66
+                      </td>
+                      <td>
+                        95
+                      </td>
+                      <td>
+                        76.61
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        8
+                      </td>
+                      <td>
+                        <span class="tables-page__team-name">Барыс (Астана)</span>
+                      </td>
+                      <td>
+                        62
+                      </td>
+                      <td>
+                        28
+                      </td>
+                      <td>
+                        5
+                      </td>
+                      <td>
+                        5
+                      </td>
+                      <td>
+                        4
+                      </td>
+                      <td>
+                        6
+                      </td>
+                      <td>
+                        14
+                      </td>
+                      <td>
+                        190-149
+                      </td>
+                      <td>
+                        +41
+                      </td>
+                      <td>
+                        86
+                      </td>
+                      <td>
+                        69.35
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        9
+                      </td>
+                      <td>
+                        <span class="tables-page__team-name">Автомобилист (Екатеринбург)</span>
+                      </td>
+                      <td>
+                        62
+                      </td>
+                      <td>
+                        39
+                      </td>
+                      <td>
+                        6
+                      </td>
+                      <td>
+                        2
+                      </td>
+                      <td>
+                        0
+                      </td>
+                      <td>
+                        1
+                      </td>
+                      <td>
+                        14
+                      </td>
+                      <td>
+                        191-125
+                      </td>
+                      <td>
+                        +66
+                      </td>
+                      <td>
+                        95
+                      </td>
+                      <td>
+                        76.61
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        10
+                      </td>
+                      <td>
+                        <span class="tables-page__team-name">Барыс (Астана)</span>
+                      </td>
+                      <td>
+                        62
+                      </td>
+                      <td>
+                        28
+                      </td>
+                      <td>
+                        5
+                      </td>
+                      <td>
+                        5
+                      </td>
+                      <td>
+                        4
+                      </td>
+                      <td>
+                        6
+                      </td>
+                      <td>
+                        14
+                      </td>
+                      <td>
+                        190-149
+                      </td>
+                      <td>
+                        +41
+                      </td>
+                      <td>
+                        86
+                      </td>
+                      <td>
+                        69.35
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        11
+                      </td>
+                      <td>
+                        <span class="tables-page__team-name">Автомобилист (Екатеринбург)</span>
+                      </td>
+                      <td>
+                        62
+                      </td>
+                      <td>
+                        39
+                      </td>
+                      <td>
+                        6
+                      </td>
+                      <td>
+                        2
+                      </td>
+                      <td>
+                        0
+                      </td>
+                      <td>
+                        1
+                      </td>
+                      <td>
+                        14
+                      </td>
+                      <td>
+                        191-125
+                      </td>
+                      <td>
+                        +66
+                      </td>
+                      <td>
+                        95
+                      </td>
+                      <td>
+                        76.61
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        12
+                      </td>
+                      <td>
+                        <span class="tables-page__team-name">Барыс (Астана)</span>
+                      </td>
+                      <td>
+                        62
+                      </td>
+                      <td>
+                        28
+                      </td>
+                      <td>
+                        5
+                      </td>
+                      <td>
+                        5
+                      </td>
+                      <td>
+                        4
+                      </td>
+                      <td>
+                        6
+                      </td>
+                      <td>
+                        14
+                      </td>
+                      <td>
+                        190-149
+                      </td>
+                      <td>
+                        +41
+                      </td>
+                      <td>
+                        86
+                      </td>
+                      <td>
+                        69.35
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        13
+                      </td>
+                      <td>
+                        <span class="tables-page__team-name">Автомобилист (Екатеринбург)</span>
+                      </td>
+                      <td>
+                        62
+                      </td>
+                      <td>
+                        39
+                      </td>
+                      <td>
+                        6
+                      </td>
+                      <td>
+                        2
+                      </td>
+                      <td>
+                        0
+                      </td>
+                      <td>
+                        1
+                      </td>
+                      <td>
+                        14
+                      </td>
+                      <td>
+                        191-125
+                      </td>
+                      <td>
+                        +66
+                      </td>
+                      <td>
+                        95
+                      </td>
+                      <td>
+                        76.61
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        14
+                      </td>
+                      <td>
+                        <span class="tables-page__team-name">Барыс (Астана)</span>
+                      </td>
+                      <td>
+                        62
+                      </td>
+                      <td>
+                        28
+                      </td>
+                      <td>
+                        5
+                      </td>
+                      <td>
+                        5
+                      </td>
+                      <td>
+                        4
+                      </td>
+                      <td>
+                        6
+                      </td>
+                      <td>
+                        14
+                      </td>
+                      <td>
+                        190-149
+                      </td>
+                      <td>
+                        +41
+                      </td>
+                      <td>
+                        86
+                      </td>
+                      <td>
+                        69.35
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        15
+                      </td>
+                      <td>
+                        <span class="tables-page__team-name">Автомобилист (Екатеринбург)</span>
+                      </td>
+                      <td>
+                        62
+                      </td>
+                      <td>
+                        39
+                      </td>
+                      <td>
+                        6
+                      </td>
+                      <td>
+                        2
+                      </td>
+                      <td>
+                        0
+                      </td>
+                      <td>
+                        1
+                      </td>
+                      <td>
+                        14
+                      </td>
+                      <td>
+                        191-125
+                      </td>
+                      <td>
+                        +66
+                      </td>
+                      <td>
+                        95
+                      </td>
+                      <td>
+                        76.61
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        16
+                      </td>
+                      <td>
+                        <span class="tables-page__team-name">Барыс (Астана)</span>
+                      </td>
+                      <td>
+                        62
+                      </td>
+                      <td>
+                        28
+                      </td>
+                      <td>
+                        5
+                      </td>
+                      <td>
+                        5
+                      </td>
+                      <td>
+                        4
+                      </td>
+                      <td>
+                        6
+                      </td>
+                      <td>
+                        14
+                      </td>
+                      <td>
+                        190-149
+                      </td>
+                      <td>
+                        +41
+                      </td>
+                      <td>
+                        86
+                      </td>
+                      <td>
+                        69.35
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="tables-page__other-pages">
+                <div class="tables-page__other-pages-content">
+                  <h2 class="tables-page__other-pages-heading">
+                    См. другие таблицы сезона 2018/2019:
+                  </h2>
+                  <ul class="tables-page__other-pages-list">
+                    <li class="tables-page__other-pages-list-item">
+                      <a href="#" class="tables-page__other-pages-link">КХЛ. Конференция "Запад" - турнирная таблица</a>
+                    </li>
+                    <li class="tables-page__other-pages-list-item">
+                      <a href="#" class="tables-page__other-pages-link">КХЛ. Дивизион Боброва - турнирная таблица</a>
+                    </li>
+                    <li class="tables-page__other-pages-list-item">
+                      <a href="#" class="tables-page__other-pages-link">КХЛ. Дивизион Тарасова - турнирная таблица</a>
+                    </li>
+                    <li class="tables-page__other-pages-list-item">
+                      <a href="#" class="tables-page__other-pages-link">КХЛ. Дивизион Харламова - турнирная таблица</a>
+                    </li>
+                    <li class="tables-page__other-pages-list-item">
+                      <a href="#" class="tables-page__other-pages-link">КХЛ. Дивизион Чернышева - турнирная таблица</a>
+                    </li>
+                    <li class="tables-page__other-pages-list-item">
+                      <a href="#" class="tables-page__other-pages-link">КХЛ - турнирная таблица</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </main>
+      <!-- partial:partials/_footer.html --><!-- partial -->
+    </div>
+  </body>
+</html>
