@@ -3,6 +3,7 @@ import '@babel/polyfill'
 import objectFitImages from 'object-fit-images'
 
 import mobileMenu from './mobileMenu'
+import hideOnScroll from './mobileHideOnScroll'
 import mobileSliders from './mobileSliders'
 import setTabsOnPage from './tabs'
 import 'simplebar'
@@ -17,7 +18,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
   mobileMenu()
 
+  // Скрываем шапку при скролле
+
+  hideOnScroll()
+
   // Слайдеры мобильной версии
+  
 
   // mobileSliders()
 

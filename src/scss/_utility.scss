@@ -42,7 +42,7 @@
   &__icon-link {
     margin-left: 14px;
     outline: none;
-    
+
     > svg {
       fill: $green;
       width: 24px;
@@ -58,9 +58,6 @@
     }
   }
 }
-
-
-
 
 .utility__social {
   display: flex;
@@ -79,7 +76,7 @@
 }
 
 .utility__social-toggle {
-  cursor: pointer;
+  cursor: default;
 }
 
 .utility__social-wrapper {
@@ -93,10 +90,8 @@
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s;
- 
+
   padding-top: 10px;
-  
-  
 }
 
 .utility__social-menu {
@@ -105,15 +100,15 @@
   width: 215px;
   background-color: #fff;
   position: relative;
-  filter: drop-shadow(0px 15px 60px rgba(black, .15));
+  filter: drop-shadow(0px 15px 60px rgba(black, 0.15));
   &::before {
     content: '';
     position: absolute;
     display: block;
     bottom: 100%;
     right: 55px;
-    border: 15px solid transparent; 
-    border-bottom: 15px solid #fff; 
+    border: 15px solid transparent;
+    border-bottom: 15px solid #fff;
   }
 }
 
@@ -157,3 +152,78 @@
   }
 }
 
+.utility__login {
+  margin-left: 14px;
+  position: relative;
+  &:hover {
+    .utility__login-wrapper {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .utility__login-link {
+      > svg {
+        fill: $red;
+      }
+      
+    }
+  }
+}
+
+.utility__login-link {
+  outline: none;
+
+  > svg {
+    fill: $green;
+    width: 24px;
+    height: 24px;
+    transition: fill 0.2s;
+  }
+
+  &:hover,
+  &:focus {
+    > svg {
+      fill: $red;
+    }
+  }
+}
+
+
+.utility__login-wrapper {
+  width: 215px;
+  z-index: 400;
+  background-color: transparent;
+  position: absolute;
+  top: 100%;
+  right: -18px;
+  // transform: translateX(50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+
+  padding-top: 10px;
+  &:focus-within {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+
+.utility__login-content {
+  padding: 15px 22px;
+  border-radius: 5px;
+  width: 350px;
+  background-color: #fff;
+  position: relative;
+  filter: drop-shadow(0px 15px 60px rgba(black, 0.15));
+  cursor: default;
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: 100%;
+    right: 15px;
+    border: 15px solid transparent;
+    border-bottom: 15px solid #fff;
+  }
+}

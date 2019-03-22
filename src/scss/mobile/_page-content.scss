@@ -1,15 +1,12 @@
 .page-content {
-  overflow: hidden;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  backface-visibility: hidden;
-  transform: translate3d(0, 0, 0);
   transition: filter .3s;
-  // &.blurred {
-  //   filter: blur(3px);
-  //   @supports (backdrop-filter: blur(3px)) {
-  //     filter: none;
-  //   }
-  // }
 }
+
+
+
+
+
+

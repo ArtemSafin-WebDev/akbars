@@ -87,11 +87,11 @@
     margin-top: 8px;
     margin-bottom: 25px;
     li {
-      display: flex;
-      align-items: center;
+      padding-left: 20px;
       font-size: 16px;
       line-height: 30px;
       margin-bottom: 15px;
+      position: relative;
       &:last-child {
         margin-bottom: 0;
       }
@@ -100,7 +100,9 @@
         width: 7px;
         height: 7px;
         background-color: $green;
-        margin-right: 12px;
+        position: absolute;
+        left: 0;
+        top: calc(50% - 3.5px);
         border-radius: 50%;
         flex-shrink: 0;
       }
@@ -118,7 +120,7 @@
     }
     th {
       background-color: #EBEBEB;
-     
+      border: 2px solid #EBEBEB;
     }
     td {
       border: 2px solid #EBEBEB;

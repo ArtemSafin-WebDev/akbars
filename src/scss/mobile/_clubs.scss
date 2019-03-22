@@ -1,0 +1,57 @@
+.clubs {
+
+}
+
+.clubs__academy {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: white;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 0 16px;
+  margin-bottom: 10px;
+  &:link,
+  &:visited {
+    color: white;
+  }
+  > svg {
+    fill: white;
+    margin-right: 6px;
+  }
+}
+
+.clubs__list {
+  &-item {
+
+  }
+}
+
+.clubs__link {
+  color: white;
+  outline: none;
+  font-size: 14px;
+  line-height: 35px;
+  text-transform: uppercase;
+  display: block;
+  padding: 0 40px;
+  position: relative;
+  &:link,
+  &:visited {
+    color: white;
+  }
+  .selected & {
+    &::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background-color: $red;
+      display: block;
+      position: absolute;
+      left: 20px;
+      top: calc(50% - 4px);
+      border-radius: 50%;
+    }
+  }
+  
+}

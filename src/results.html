@@ -33,26 +33,14 @@
         <div class="container">
           <div class="flex-row">
             <div class="banner-column banner-column--left banner-column--news-details">
-              <div class="banner-column__item" style="background-image: url(img/banners/hoki.png)">
-              </div>
-              <div class="banner-column__item" style="background-image: url(img/banners/гимн.png)">
-              </div>
+              <div class="banner-column__item" style="background-image: url(img/banners/hoki.png)"></div>
+              <div class="banner-column__item" style="background-image: url(img/banners/гимн.png)"></div>
             </div>
             <section class="results-page">
               <h1 class="results-page__main-heading">
-                Результаты игр. <span class="results-page__main-heading-season">Сезон 2018-2019</span>
+                Результаты
               </h1>
               <div class="results-page__selects-block">
-                <div class="results-page__select js-custom-select">
-                  <select name="game" id="game" onchange="return console.log('Changed')" required>
-                    <option value="0" selected="selected">Все игры</option>
-                    <option value="191">Игры межсезонья 2018-2019</option>
-                    <option value="192">XIII Турнир памяти Ю.И.Моисеева</option>
-                    <option value="193">Чемпионат ВХЛ. Регулярный. Сезон 2018-2019</option>
-                    <option value="195">Кубок Дизеля</option>
-                    <option value="199">Чемпионат ВХЛ. Плеф-офф. Сезон 2018-2019</option>
-                  </select>
-                </div>
                 <div class="results-page__select js-custom-select">
                   <select name="season" id="season" onchange="return console.log('Changed')" required>
                     <option value="2018-2" selected="selected">Сезон 2018-2019</option>
@@ -69,7 +57,16 @@
                     <option value="2007-2">Сезон 2007-2008</option>
                   </select>
                 </div>
-
+                <div class="results-page__select js-custom-select">
+                  <select name="game" id="game" onchange="return console.log('Changed')" required>
+                    <option value="0" selected="selected">Все игры</option>
+                    <option value="191">Игры межсезонья 2018-2019</option>
+                    <option value="192">XIII Турнир памяти Ю.И.Моисеева</option>
+                    <option value="193">Чемпионат ВХЛ. Регулярный. Сезон 2018-2019</option>
+                    <option value="195">Кубок Дизеля</option>
+                    <option value="199">Чемпионат ВХЛ. Плеф-офф. Сезон 2018-2019</option>
+                  </select>
+                </div>
                 <div class="results-page__select js-custom-select">
                   <select name="team" id="team" onchange="return console.log('Changed')" required>
                     <option value="0" selected="selected">Все команды</option>
@@ -110,235 +107,532 @@
                 <table class="results-page__table">
                   <thead>
                     <tr>
-                      <th>
-                        Команды
-                      </th>
-                      <th>
-                        Счет
-                      </th>
-                      <th>
-                        Примечание
+                      <th colspan="3">
+                        Февраль 2019
                       </th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr class="results-page__date-row">
                       <th colspan="3">
-                        17.03.2019
+                        22.04.2018
                       </th>
                     </tr>
                     <tr>
                       <td>
-                        Звезда (Москва) - Рубин (Тюмень)
+                        <span class="results-page__team-text">
+                          <span class="results-page__team-name">
+                            Торпедо
+                          </span>
+                          <span class="results-page__team-city">
+                            Новосибирская область
+                          </span>
+                        </span>
+                        <span class="results-page__team-image-container">
+                          <img src="img/logo/torpedo-logo.svg" alt="Лого Торпедо" />
+                        </span>
                       </td>
                       <td>
-                        1 : 2 ОТ
+                        <a href="#" class="results-page__score">
+                          <span class="results-page__score-numbers">5:1</span>
+                          <span class="results-page__score-overtime">
+                            ОТ
+                          </span>
+                          <span class="results-page__legend">
+                            <span class="results-page__legend-content">Подробнее о матче</span>
+                          </span>
+                        </a>
+                        <span class="results-page__match-type">
+                          Регулярный чемпионат
+                        </span>
                       </td>
-                      <td></td>
+                      <td>
+                        <span class="results-page__team-image-container">
+                          <img src="img/logo/akbars-logo.svg" alt="Лого АкБарс" />
+                        </span>
+                        <span class="results-page__team-text">
+                          <span class="results-page__team-name">
+                            Ак Барс
+                          </span>
+                          <span class="results-page__team-city">
+                            Казань
+                          </span>
+                        </span>
+                      </td>
                     </tr>
                     <tr>
                       <td>
-                        Сарыарка (Караганда) - Нефтяник (Альметьевск)
+                        <span class="results-page__team-text">
+                          <span class="results-page__team-name">
+                            Торпедо
+                          </span>
+                          <span class="results-page__team-city">
+                            Уфа
+                          </span>
+                        </span>
+                        <span class="results-page__team-image-container">
+                          <img src="img/logo/amur-logo.png" alt="Лого Торпедо" />
+                        </span>
                       </td>
                       <td>
-                        6 : 5
+                        <a href="#" class="results-page__score">
+                          <span class="results-page__score-numbers">4:5</span>
+                          <span class="results-page__score-overtime"></span>
+                          <span class="results-page__legend">
+                            <span class="results-page__legend-content">Подробнее о матче</span>
+                          </span>
+                        </a>
+                        <span class="results-page__match-type">
+                          Финал конференции
+                        </span>
                       </td>
-                      <td></td>
+                      <td>
+                        <span class="results-page__team-image-container">
+                          <img src="img/logo/dynamo-logo.png" alt="Лого Динамо" />
+                        </span>
+                        <span class="results-page__team-text">
+                          <span class="results-page__team-name">
+                            Динамо
+                          </span>
+                          <span class="results-page__team-city">
+                            Омская область
+                          </span>
+                        </span>
+                      </td>
                     </tr>
+                    <tr>
+                      <td>
+                        <span class="results-page__team-text">
+                          <span class="results-page__team-name">
+                            Спартак
+                          </span>
+                          <span class="results-page__team-city">
+                            Москва
+                          </span>
+                        </span>
+                        <span class="results-page__team-image-container">
+                          <img src="img/logo/spartak-logo.svg" alt="Лого Спартак" />
+                        </span>
+                      </td>
+                      <td>
+                        <a href="#" class="results-page__score">
+                          <span class="results-page__score-numbers">5:14</span>
+                          <span class="results-page__score-overtime">
+                            ОТ
+                          </span>
+                          <span class="results-page__legend">
+                            <span class="results-page__legend-content">Подробнее о матче</span>
+                          </span>
+                        </a>
+                        <span class="results-page__match-type">
+                          Регулярный чемпионат
+                        </span>
+                      </td>
+                      <td>
+                        <span class="results-page__team-image-container">
+                          <img src="img/logo/akbars-logo.svg" alt="Лого АкБарс" />
+                        </span>
+                        <span class="results-page__team-text">
+                          <span class="results-page__team-name">
+                            Ак Барс
+                          </span>
+                          <span class="results-page__team-city">
+                            Казань
+                          </span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="results-page__team-text">
+                          <span class="results-page__team-name">
+                            Ак Барс
+                          </span>
+                          <span class="results-page__team-city">
+                            Казань
+                          </span>
+                        </span>
+                        <span class="results-page__team-image-container">
+                          <img src="img/logo/akbars-logo.svg" alt="Лого Торпедо" />
+                        </span>
+                      </td>
+                      <td>
+                        <a href="#" class="results-page__score">
+                          <span class="results-page__score-numbers">2:4</span>
+                          <span class="results-page__score-overtime">
+                            б
+                          </span>
+                          <span class="results-page__legend">
+                            <span class="results-page__legend-content">Подробнее о матче</span>
+                          </span>
+                        </a>
+                        <span class="results-page__match-type">
+                          Регулярный чемпионат
+                        </span>
+                      </td>
+                      <td>
+                        <span class="results-page__team-image-container">
+                          <img src="img/logo/avangard-logo.svg" alt="Лого Авангард" />
+                        </span>
+                        <span class="results-page__team-text">
+                          <span class="results-page__team-name">
+                            Авангард
+                          </span>
+                          <span class="results-page__team-city">
+                            Омская область
+                          </span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="results-page__team-text">
+                          <span class="results-page__team-name">
+                            Сочи
+                          </span>
+                          <span class="results-page__team-city">
+                            Сочинская область
+                          </span>
+                        </span>
+                        <span class="results-page__team-image-container">
+                          <img src="img/logo/sochi-logo.png" alt="Лого Торпедо" />
+                        </span>
+                      </td>
+                      <td>
+                        <a href="#" class="results-page__score">
+                          <span class="results-page__score-numbers">12:24</span>
+                          <span class="results-page__score-overtime">
+                            ОТ
+                          </span>
+                          <span class="results-page__legend">
+                            <span class="results-page__legend-content">Подробнее о матче</span>
+                          </span>
+                        </a>
+                        <span class="results-page__match-type">
+                          Регулярный чемпионат
+                        </span>
+                      </td>
+                      <td>
+                        <span class="results-page__team-image-container">
+                          <img src="img/logo/yulayev-logo.svg" alt="Лого Юлаева" />
+                        </span>
+                        <span class="results-page__team-text">
+                          <span class="results-page__team-name">
+                            Салават Юлаев
+                          </span>
+                          <span class="results-page__team-city">
+                            Уфа
+                          </span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="results-page__team-text">
+                          <span class="results-page__team-name">
+                            СКА
+                          </span>
+                          <span class="results-page__team-city">
+                            Санкт-Петербург
+                          </span>
+                        </span>
+                        <span class="results-page__team-image-container">
+                          <img src="img/logo/cka-logo.svg" alt="Лого СКА" />
+                        </span>
+                      </td>
+                      <td>
+                        <a href="#" class="results-page__score">
+                          <span class="results-page__score-numbers">12:24</span>
+                          <span class="results-page__score-overtime">
+                            ОТ
+                          </span>
+                          <span class="results-page__legend">
+                            <span class="results-page__legend-content">Подробнее о матче</span>
+                          </span>
+                        </a>
+                        <span class="results-page__match-type">
+                          Регулярный чемпионат
+                        </span>
+                      </td>
+                      <td>
+                        <span class="results-page__team-image-container">
+                          <img src="img/logo/yulayev-logo.svg" alt="Лого Юлаева" />
+                        </span>
+                        <span class="results-page__team-text">
+                          <span class="results-page__team-name">
+                            Салават Юлаев
+                          </span>
+                          <span class="results-page__team-city">
+                            Уфа
+                          </span>
+                        </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table class="results-page__table">
+                  <thead>
+                    <tr>
+                      <th colspan="3">
+                        Январь 2019
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
                     <tr class="results-page__date-row">
                       <th colspan="3">
-                        16.03.2019
+                        22.04.2018
                       </th>
                     </tr>
                     <tr>
                       <td>
-                        Звезда (Москва) - Рубин (Тюмень)
+                        <span class="results-page__team-text">
+                          <span class="results-page__team-name">
+                            Торпедо
+                          </span>
+                          <span class="results-page__team-city">
+                            Новосибирская область
+                          </span>
+                        </span>
+                        <span class="results-page__team-image-container">
+                          <img src="img/logo/torpedo-logo.svg" alt="Лого Торпедо" />
+                        </span>
                       </td>
                       <td>
-                        3 : 1
+                        <a href="#" class="results-page__score">
+                          <span class="results-page__score-numbers">5:1</span>
+                          <span class="results-page__score-overtime">
+                            ОТ
+                          </span>
+                          <span class="results-page__legend">
+                            <span class="results-page__legend-content">Подробнее о матче</span>
+                          </span>
+                        </a>
+                        <span class="results-page__match-type">
+                          Регулярный чемпионат
+                        </span>
                       </td>
-                      <td></td>
+                      <td>
+                        <span class="results-page__team-image-container">
+                          <img src="img/logo/akbars-logo.svg" alt="Лого АкБарс" />
+                        </span>
+                        <span class="results-page__team-text">
+                          <span class="results-page__team-name">
+                            Ак Барс
+                          </span>
+                          <span class="results-page__team-city">
+                            Казань
+                          </span>
+                        </span>
+                      </td>
                     </tr>
                     <tr>
                       <td>
-                        Зауралье (Курган) - Торос (Нефтекамск)
+                        <span class="results-page__team-text">
+                          <span class="results-page__team-name">
+                            Торпедо
+                          </span>
+                          <span class="results-page__team-city">
+                            Уфа
+                          </span>
+                        </span>
+                        <span class="results-page__team-image-container">
+                          <img src="img/logo/amur-logo.png" alt="Лого Торпедо" />
+                        </span>
                       </td>
                       <td>
-                        3 : 2 ОТ
+                        <a href="#" class="results-page__score">
+                          <span class="results-page__score-numbers">4:5</span>
+                          <span class="results-page__score-overtime"></span>
+                          <span class="results-page__legend">
+                            <span class="results-page__legend-content">Подробнее о матче</span>
+                          </span>
+                        </a>
+                        <span class="results-page__match-type">
+                          Финал конференции
+                        </span>
                       </td>
-                      <td></td>
+                      <td>
+                        <span class="results-page__team-image-container">
+                          <img src="img/logo/dynamo-logo.png" alt="Лого Динамо" />
+                        </span>
+                        <span class="results-page__team-text">
+                          <span class="results-page__team-name">
+                            Динамо
+                          </span>
+                          <span class="results-page__team-city">
+                            Омская область
+                          </span>
+                        </span>
+                      </td>
                     </tr>
                     <tr>
                       <td>
-                        Сарыарка (Караганда) - Нефтяник (Альметьевск)
+                        <span class="results-page__team-text">
+                          <span class="results-page__team-name">
+                            Спартак
+                          </span>
+                          <span class="results-page__team-city">
+                            Москва
+                          </span>
+                        </span>
+                        <span class="results-page__team-image-container">
+                          <img src="img/logo/spartak-logo.svg" alt="Лого Спартак" />
+                        </span>
                       </td>
                       <td>
-                        3 : 1
+                        <a href="#" class="results-page__score">
+                          <span class="results-page__score-numbers">5:14</span>
+                          <span class="results-page__score-overtime">
+                            ОТ
+                          </span>
+                          <span class="results-page__legend">
+                            <span class="results-page__legend-content">Подробнее о матче</span>
+                          </span>
+                        </a>
+                        <span class="results-page__match-type">
+                          Регулярный чемпионат
+                        </span>
                       </td>
-                      <td></td>
+                      <td>
+                        <span class="results-page__team-image-container">
+                          <img src="img/logo/akbars-logo.svg" alt="Лого АкБарс" />
+                        </span>
+                        <span class="results-page__team-text">
+                          <span class="results-page__team-name">
+                            Ак Барс
+                          </span>
+                          <span class="results-page__team-city">
+                            Казань
+                          </span>
+                        </span>
+                      </td>
                     </tr>
                     <tr>
                       <td>
-                        Сокол (Красноярск) - СКА-Нева (Санкт-Петербург)
+                        <span class="results-page__team-text">
+                          <span class="results-page__team-name">
+                            Ак Барс
+                          </span>
+                          <span class="results-page__team-city">
+                            Казань
+                          </span>
+                        </span>
+                        <span class="results-page__team-image-container">
+                          <img src="img/logo/akbars-logo.svg" alt="Лого Торпедо" />
+                        </span>
                       </td>
                       <td>
-                        2 : 1 ОТ
-                      </td>
-                      <td></td>
-                    </tr>
-                    <tr class="results-page__date-row">
-                      <th colspan="3">
-                        15.03.2019
-                      </th>
-                    </tr>
-                    <tr>
-                      <td>
-                        Звезда (Москва) - Рубин (Тюмень)
-                      </td>
-                      <td>
-                        3 : 1
-                      </td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        Зауралье (Курган) - Торос (Нефтекамск)
+                        <a href="#" class="results-page__score">
+                          <span class="results-page__score-numbers">2:4</span>
+                          <span class="results-page__score-overtime">
+                            б
+                          </span>
+                          <span class="results-page__legend">
+                            <span class="results-page__legend-content">Подробнее о матче</span>
+                          </span>
+                        </a>
+                        <span class="results-page__match-type">
+                          Регулярный чемпионат
+                        </span>
                       </td>
                       <td>
-                        3 : 2 ОТ
+                        <span class="results-page__team-image-container">
+                          <img src="img/logo/avangard-logo.svg" alt="Лого Авангард" />
+                        </span>
+                        <span class="results-page__team-text">
+                          <span class="results-page__team-name">
+                            Авангард
+                          </span>
+                          <span class="results-page__team-city">
+                            Омская область
+                          </span>
+                        </span>
                       </td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        Сарыарка (Караганда) - Нефтяник (Альметьевск)
-                      </td>
-                      <td>
-                        3 : 1
-                      </td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        Сокол (Красноярск) - СКА-Нева (Санкт-Петербург)
-                      </td>
-                      <td>
-                        2 : 1 ОТ
-                      </td>
-                      <td></td>
                     </tr>
                     <tr>
                       <td>
-                        Звезда (Москва) - Рубин (Тюмень)
+                        <span class="results-page__team-text">
+                          <span class="results-page__team-name">
+                            Сочи
+                          </span>
+                          <span class="results-page__team-city">
+                            Сочинская область
+                          </span>
+                        </span>
+                        <span class="results-page__team-image-container">
+                          <img src="img/logo/sochi-logo.png" alt="Лого Торпедо" />
+                        </span>
                       </td>
                       <td>
-                        3 : 1
+                        <a href="#" class="results-page__score">
+                          <span class="results-page__score-numbers">12:24</span>
+                          <span class="results-page__score-overtime">
+                            ОТ
+                          </span>
+                          <span class="results-page__legend">
+                            <span class="results-page__legend-content">Подробнее о матче</span>
+                          </span>
+                        </a>
+                        <span class="results-page__match-type">
+                          Регулярный чемпионат
+                        </span>
                       </td>
-                      <td></td>
+                      <td>
+                        <span class="results-page__team-image-container">
+                          <img src="img/logo/yulayev-logo.svg" alt="Лого Юлаева" />
+                        </span>
+                        <span class="results-page__team-text">
+                          <span class="results-page__team-name">
+                            Салават Юлаев
+                          </span>
+                          <span class="results-page__team-city">
+                            Уфа
+                          </span>
+                        </span>
+                      </td>
                     </tr>
                     <tr>
                       <td>
-                        Зауралье (Курган) - Торос (Нефтекамск)
+                        <span class="results-page__team-text">
+                          <span class="results-page__team-name">
+                            СКА
+                          </span>
+                          <span class="results-page__team-city">
+                            Санкт-Петербург
+                          </span>
+                        </span>
+                        <span class="results-page__team-image-container">
+                          <img src="img/logo/cka-logo.svg" alt="Лого СКА" />
+                        </span>
                       </td>
                       <td>
-                        3 : 2 ОТ
-                      </td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        Сарыарка (Караганда) - Нефтяник (Альметьевск)
-                      </td>
-                      <td>
-                        3 : 1
-                      </td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        Сокол (Красноярск) - СКА-Нева (Санкт-Петербург)
+                        <a href="#" class="results-page__score">
+                          <span class="results-page__score-numbers">12:24</span>
+                          <span class="results-page__score-overtime">
+                            ОТ
+                          </span>
+                          <span class="results-page__legend">
+                            <span class="results-page__legend-content">Подробнее о матче</span>
+                          </span>
+                        </a>
+                        <span class="results-page__match-type">
+                          Регулярный чемпионат
+                        </span>
                       </td>
                       <td>
-                        2 : 1 ОТ
+                        <span class="results-page__team-image-container">
+                          <img src="img/logo/yulayev-logo.svg" alt="Лого Юлаева" />
+                        </span>
+                        <span class="results-page__team-text">
+                          <span class="results-page__team-name">
+                            Салават Юлаев
+                          </span>
+                          <span class="results-page__team-city">
+                            Уфа
+                          </span>
+                        </span>
                       </td>
-                      <td></td>
-                    </tr>
-                    <tr class="results-page__date-row">
-                      <th colspan="3">
-                        27.02.2019
-                      </th>
-                    </tr>
-                    <tr>
-                      <td>
-                        Звезда (Москва) - Рубин (Тюмень)
-                      </td>
-                      <td>
-                        3 : 1
-                      </td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        Зауралье (Курган) - Торос (Нефтекамск)
-                      </td>
-                      <td>
-                        3 : 2 ОТ
-                      </td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        Сарыарка (Караганда) - Нефтяник (Альметьевск)
-                      </td>
-                      <td>
-                        3 : 1
-                      </td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        Сокол (Красноярск) - СКА-Нева (Санкт-Петербург)
-                      </td>
-                      <td>
-                        2 : 1 ОТ
-                      </td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        Звезда (Москва) - Рубин (Тюмень)
-                      </td>
-                      <td>
-                        3 : 1
-                      </td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        Зауралье (Курган) - Торос (Нефтекамск)
-                      </td>
-                      <td>
-                        3 : 2 ОТ
-                      </td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        Сарыарка (Караганда) - Нефтяник (Альметьевск)
-                      </td>
-                      <td>
-                        3 : 1
-                      </td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        Сокол (Красноярск) - СКА-Нева (Санкт-Петербург)
-                      </td>
-                      <td>
-                        2 : 1 ОТ
-                      </td>
-                      <td></td>
                     </tr>
                   </tbody>
                 </table>

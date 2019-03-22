@@ -1,12 +1,27 @@
+
+
+
 .page-header {
   background-color: $green;
   color: white;
-  height: 37px;
+  height: 45px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  transition: all .3s;
+  transform-origin: center bottom;
   > .container {
     display: flex;
     align-items: center;
-    flex-grow: 1;
+    button {
+      margin-left: auto;
+    }
+  }
+
+  &.hidden {
+    transform: translateY(-100%);
   }
 }

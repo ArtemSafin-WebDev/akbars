@@ -1,0 +1,35 @@
+.shop-and-tickets {
+  background-color: #EBEBEB;
+  color: $green;
+  padding: 22px 14px;
+}
+
+
+.shop-and-tickets__link {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: $green;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 22px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &:link,
+  &:visited {
+    color: $green;
+  }
+}
+
+.shop-and-tickets__icon-container {
+  width: 22px;
+  height: 22px;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  > svg {
+    fill: $red;
+  }
+}
