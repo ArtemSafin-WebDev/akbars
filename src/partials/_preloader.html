@@ -9,14 +9,17 @@
     display: -ms-flexbox;
     display: flex;
     z-index: 20000;
-    background-color: #E4E4E2;
-    background-image: url('img/bg-pattern-test.jpg');
+    background-image: url('../img/bg-pattern-test.jpg');
     background-size: 960px;
     text-align: center;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
     opacity: 0;
     visibility: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
   .preloader.shown {
     opacity: 1;
@@ -26,11 +29,20 @@
   .preloader__content {
     margin: auto;
     width: 350px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 
   .preloader__logo {
     width: 200px;
     margin-bottom: 25px;
+    -ms-flex-item-align: center;
+    align-self: center;
   }
 
   .progress {
@@ -41,6 +53,8 @@
     background-color: white;
     margin: 0.5rem 0 1rem 0;
     overflow: hidden;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
   }
 
   .progress .indeterminate:before {

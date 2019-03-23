@@ -22,12 +22,14 @@
 .preloader__content {
   margin: auto;
   width: 350px;
-  
+  display: flex;
+  flex-direction: column;
 }
 
 .preloader__logo {
   width: 200px;
   margin-bottom: 25px;
+  align-self: center;
 }
 
 .progress {
@@ -39,6 +41,7 @@
   // border-radius: 2px;
   margin: 0.5rem 0 1rem 0;
   overflow: hidden;
+  align-self: stretch;
 }
 
 .progress .indeterminate:before {
