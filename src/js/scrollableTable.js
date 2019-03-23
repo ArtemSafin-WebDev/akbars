@@ -12,8 +12,8 @@ export default function() {
     const scrollableElement = statisticsScrollBar.getScrollElement()
     const scrollIncrement = 150;
     
-    const scrollLeftButton = table.querySelector('.js-statistics-scroll-button-left')
-    const scrollRightButton = table.querySelector('.js-statistics-scroll-button-right')
+    const scrollLeftButton = table.querySelector('.js-table-scroll-button-left')
+    const scrollRightButton = table.querySelector('.js-table-scroll-button-right')
     const gradient = table.querySelector('.js-scrollable-table-gradient')
 
     scrollLeftButton.addEventListener('click', function(event) {

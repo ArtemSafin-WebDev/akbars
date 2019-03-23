@@ -19,13 +19,16 @@ export default function() {
     fade: true,
     dots: false,
     asNavFor: '.team__slider-text'
+   
   })
 
   $('.js-news-slider').slick({
     arrows: false,
     fade: true,
     dots: true,
-    appendDots: '.news-slider__controls'
+    appendDots: '.news-slider__controls',
+    autoplay: true,
+    autoplaySpeed: 5000
   })
 
   $('.js-videos-slider').slick({

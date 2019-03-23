@@ -4,7 +4,6 @@
 }
 
 .news-slider__list {
- 
   .slick-slide {
     outline: none;
   }
@@ -62,9 +61,8 @@
   display: block;
   width: 100%;
   height: 100%;
-  transition: transform .8s ease-out;
+  transition: transform 0.8s ease-out;
   @include objectFitCover();
-  
 }
 
 .news-slider__news-info {
@@ -131,7 +129,6 @@
     }
   }
 }
-
 
 .news-slider__divider {
   width: 1.5px;
@@ -209,7 +206,6 @@
   }
 }
 
-
 .news-slider__controls {
   display: flex;
   align-items: center;
@@ -240,17 +236,16 @@
       background-color: transparent;
       border: 2px solid white;
       position: relative;
-      transition: all .3s;
+      transition: all 0.3s;
       outline: 1px solid transparent;
-      &:hover,
-      &:focus {
+      &:hover {
         transform: scale(1.5);
       }
     }
 
     li.slick-active button {
       transform: scale(1.6);
-      
+
       background-color: #fff;
     }
   }
@@ -276,7 +271,3 @@
     background-color: #fff;
   }
 }
-
-
-
-

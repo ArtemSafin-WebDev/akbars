@@ -1,12 +1,10 @@
 .khl-placeholder {
-  background-color: #242F37;
+  background-color: #242f37;
   height: 54px;
   color: white;
   display: flex;
   align-items: center;
 }
-
-
 
 // Стили кастомного скроллбара
 
@@ -19,10 +17,6 @@
   opacity: 0.8;
   transition: opacity 0s linear;
 }
-
-
-
-
 
 // Стили кастомного селекта
 
@@ -81,7 +75,6 @@
   min-height: 35px;
   display: flex;
   align-items: center;
-  
 }
 
 .choices[data-type*='select-one'] .choices__inner {
@@ -103,9 +96,7 @@
     top: 0;
     height: 100%;
     width: 40px;
-    background-image: linear-gradient(to left, white 10px,
-    rgba(white, 0));
-
+    background-image: linear-gradient(to left, white 10px, rgba(white, 0));
   }
 }
 
@@ -233,13 +224,11 @@
   z-index: 20;
 }
 
-
-
 // Чекбокс
 
 .checkbox {
   font-family: Arial, Helvetica, sans-serif;
-  color: #242F37;
+  color: #242f37;
   font-size: 16px;
   line-height: 24px;
   display: block;
@@ -248,7 +237,6 @@
 .checkbox__input {
   @include visuallyHidden();
 }
-
 
 .checkbox-block {
   display: flex;
@@ -260,7 +248,6 @@
     }
   }
 }
-
 
 .checkbox__label {
   display: flex;
@@ -276,12 +263,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background-color .2s;
+  transition: background-color 0.2s;
   > svg {
     width: 10px;
     height: 7px;
     fill: white;
-    transition: opacity .2s;
+    transition: opacity 0.2s;
     opacity: 0;
   }
 }
@@ -290,7 +277,6 @@
   user-select: none;
 }
 
-
 .checkbox__input:checked ~ .checkbox__label .checkbox__label-icon {
   background-color: $green;
   > svg {
@@ -298,7 +284,214 @@
   }
 }
 
+// Датапикер
+
+.datepicker {
+  font-family: 'Supermolot', 'Helvetica', sans-serif;
+  color: #242f37;
+  border: none;
+  box-shadow: 0px 5px 30px rgba(black, 0.2);
+  width: 310px;
+  margin-left: 40px;
+  margin-top: 8px;
+  z-index: 20;
+  @supports (filter: drop-shadow(0px 5px 30px rgba(black, 0.2))) {
+    box-shadow: none;
+    filter: drop-shadow(0px 5px 30px rgba(black, 0.2));
+  }
+}
+
+.datepicker--content {
+  padding: 15px;
+  padding-top: 0;
+}
+
+.datepicker--day-name {
+  color: $green;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.datepicker--pointer {
+  border: none;
+  // display: none;
+  width: auto;
+  height: auto;
+  border: 13px solid transparent;
+  border-bottom: 15px solid #fff;
+  background-color: transparent;
+  
+}
+
+.-bottom-right- .datepicker--pointer, .-top-right- .datepicker--pointer {
+  right: 80px;
+}
+
+.-bottom-center- .datepicker--pointer, .-bottom-left- .datepicker--pointer, .-bottom-right- .datepicker--pointer {
+  transform: rotate(0);
+  bottom: 100%;
+}
+
+.datepicker--nav {
+  min-height: 35px;
+  border: none;
+  padding: 15px;
+  padding-bottom: 0;
+}
+
+.datepicker--nav-action {
+  border-radius: 0;
+  background-color: $green;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  position: relative;
+  &:hover,
+  &:focus {
+    background-color: #3c8f88;
+  }
+
+  &[data-action='prev'] {
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url("data:image/svg+xml,%3Csvg fill='white' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8.48 14.14'%3E%3Cpath d='M8.48 1.42L7.07 0 0 7.07l7.07 7.06 1.41-1.41-5.65-5.65 5.65-5.65z'/%3E%3C/svg%3E");
+      background-size: 8px 12px;
+    }
+  }
+  &[data-action='next'] {
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url("data:image/svg+xml,%3Csvg fill='white' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8.48 14.14'%3E%3Cpath d='M1.41 0L0 1.41l5.65 5.66L0 12.72l1.41 1.41 7.07-7.06L1.41 0z'/%3E%3C/svg%3E");
+      background-size: 8px 12px;
+    }
+  }
+}
+
+.datepicker--nav-action svg {
+  display: none;
+}
+
+.datepicker--nav-action path {
+  stroke: white;
+}
+
+.datepicker--nav-title {
+  border-radius: 0;
+  font-family: 'Supermolot', 'Helvetica', sans-serif;
+  color: #242f37;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 700;
+  flex-grow: 1;
+  background-color: #ebebeb;
+  transition: all 0.2s;
+  i {
+    color: #242f37;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 700;
+  }
+}
+
+.datepicker--cell {
+  border-radius: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 40px;
+  transition: all 0.2s;
+  &.-focus- {
+    background-color: $green;
+    color: white;
+  }
+}
+
+.datepicker--cell-day {
+  background-color: #ebebeb;
+  border: 2.5px solid white;
+}
+
+.datepicker--cell-month {
+  border: 2.5px solid white;
+}
+
+.datepicker--cell.-selected-, .datepicker--cell.-selected-.-current- {
+  background-color: $green;
+  color: white;
+}
+
+.datepicker--cell-year {
+  border: 2.5px solid white;
+}
+
+.datepicker--cell.-selected- {
+  background: $green;
+  color: white;
+  border: 2.5px solid white;
+  &.-focus- {
+    background-color: $green;
+  }
+}
+
+.-disabled-.-focus-.datepicker--cell-day.-other-month-,
+.-disabled-.-focus-.datepicker--cell-year.-other-decade-,
+.datepicker--cell-day.-other-month-,
+.datepicker--cell-year.-other-decade- {
+  color: #c0c0c0;
+}
+
+.datepicker--cell-day.-other-month- {
+  &.-focus- {
+    color: white;
+  }
+}
+
+.datepicker--cell.-disabled- {
+  cursor: default;
+  background-color: #EBEBEB;
+  color: #C0C0C0;
+  &.-focus- {
+    background-color: #EBEBEB;
+  color: #C0C0C0;
+  }
+}
+
+.datepicker--cell-year.-other-decade- {
+  &.-focus- {
+    color: white;
+  }
+}
+
+.datepicker--months,
+.datepicker--years {
+  padding-top: 2.5px;
+}
+
+.datepicker--cell.-current-,
+.datepicker--cell.-current-.-in-range- {
+  color: $red;
+  &.-focus- {
+    color: white;
+    background-color: $red;
+  }
+}
 
 
-
-
+.datepicker--nav-action.-disabled- {
+  visibility: visible;
+}

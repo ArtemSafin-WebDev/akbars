@@ -8,6 +8,13 @@
   background-image: url('../img/bg-pattern-test.jpg');
   background-size: 960px;
   overflow-y: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+
+.datepickers-container {
+  z-index: 2;
 }
 
 

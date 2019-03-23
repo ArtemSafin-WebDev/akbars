@@ -19,6 +19,9 @@ import playoffTooltips from './playoffTooltips'
 import customScrollbars from './customScrollbars'
 import scrollableTable from './scrollableTable'
 import highlightMaps from './highlightMaps'
+import datepickers from './datepickers'
+import loginOpen from './loginOpen'
+import socialOpen from './socialOpen'
 
 document.addEventListener('DOMContentLoaded', function() {
   // Полифилл для CSS свойства ObjectFit(заполнение контейнера изображением)
@@ -79,6 +82,18 @@ document.addEventListener('DOMContentLoaded', function() {
   // Подсвечиваем карту зала 
 
   highlightMaps()
+
+  // Включаем датапикеры
+
+  datepickers()
+
+  // Открытие меню логина
+
+  loginOpen()
+
+  // Открытие меню социальных сетей
+
+  socialOpen()
   
 })
 

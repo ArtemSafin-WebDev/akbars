@@ -147,6 +147,9 @@
         margin-right: 20px;
       }
     }
+    &:nth-child(2) {
+      justify-content: center;
+    }
     &:nth-child(3) {
       justify-content: flex-start;
       align-items: center;
@@ -199,6 +202,7 @@
   position: relative;
   outline: none;
   display: block;
+  font-family: 'Supermolot', 'Helvetica', sans-serif;
   .results-page__score-numbers {
     position: relative;
     &::before {
@@ -213,7 +217,7 @@
       background-size: 3px 3px;
       background-repeat: repeat-x;
       opacity: 0;
-      transition: opacity .3s;
+      transition: opacity 0.3s;
     }
   }
 
@@ -222,16 +226,18 @@
     color: $green;
   }
 
-  &:hover,
-  &:focus {
-    .results-page__legend {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    .results-page__score-numbers {
-      &::before {
+  &[href] {
+    &:hover,
+    &:focus {
+      .results-page__legend {
         opacity: 1;
+        visibility: visible;
+      }
+
+      .results-page__score-numbers {
+        &::before {
+          opacity: 1;
+        }
       }
     }
   }

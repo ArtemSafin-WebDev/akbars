@@ -47,8 +47,8 @@
         <a href="bars.html" class="utility__text-link">ХК «Барс»</a>
         <span class="utility__divider"></span>
         <div class="utility__social">
-          <a class="utility__text-link utility__social-toggle">Мы в соц. сетях</a>
-          <div class="utility__social-wrapper">
+          <a class="utility__text-link utility__social-toggle js-social-open">Мы в соц. сетях</a>
+          <div class="utility__social-wrapper js-social-wrapper">
             <ul class="utility__social-menu">
               <li class="utility__social-menu-item">
                 <a href="#" class="utility__social-link">
@@ -136,15 +136,65 @@
           <span class="visually-hidden">Мобильная версия</span>
         </a>
         <div class="utility__login">
-          <a class="utility__login-link">
+          <a class="utility__login-open js-login-open">
             <svg width="20" height="20" aria-hidden="true" class="icon-search">
               <use xlink:href="#person" />
             </svg>
             <span class="visually-hidden">Личный кабинет</span>
           </a>
-          <div class="utility__login-wrapper">
+          <div class="utility__login-wrapper js-login-wrapper">
             <div class="utility__login-content">
-              Login Content
+             
+              <div class="utility__login-controls">
+                
+                <form action="/" class="utility__login-form" method="POST">
+                  <div class="utility__login-form-row">
+                    <div class="utility__login-avatar">
+                      <img src="img/avatar-placeholder.svg" alt="Заглушка аватара" class="utility__login-link-icon" />
+                    </div>
+                    <span class="utility__login-links">
+                      <a class="utility__login-link">Войти</a>/<a href="#" class="utility__login-link"
+                        >Зарегистрироваться</a
+                      >
+                    </span>
+                  </div>
+                  <div class="utility__login-form-row">
+                    <input autocomplete="off" type="text" name="nickname" class="utility__login-input" placeholder="Логин или E-mail" />
+                    <input
+                      autocomplete="off"
+                      type="password"
+                      name="password"
+                      class="utility__login-input"
+                      placeholder="Пароль"
+                    />
+                  </div>
+                  <div class="utility__login-form-row">
+                    <span class="checkbox">
+                      <input type="checkbox" class="checkbox__input" name="savepassword" id="savepassword"/>
+                      <label for="savepassword" class="checkbox__label">
+                        <span class="checkbox__label-icon">
+                          <svg width="10" height="7" aria-hidden="true" class="icon-checkbox">
+                            <use xlink:href="#checkbox" />
+                          </svg>
+                        </span>
+                        <span class="checkbox__label-text">Сохранить пароль</span>
+                      </label>
+                    </span>
+                    <a href="#" class="utility__login-remember-password-link">Забыли пароль?</a>
+                  </div>
+                  <div class="utility__login-form-row">
+                    <a href="#" class="utility__login-social-login-link">
+                      Войти через соцсеть:
+                      <svg width="20" height="20" aria-hidden="true" class="icon-vk">
+                        <use xlink:href="#vk" />
+                      </svg>
+                    </a>
+                    <button type="submit" class="utility__login-submit">
+                      Войти
+                    </button>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
@@ -172,13 +222,13 @@
                     <a href="calendar.html" class="main-nav__submenu-link">Календарь</a>
                   </li>
                   <li class="main-nav__submenu-list-item">
-                    <a href="#" class="main-nav__submenu-link">Плей-офф</a>
+                    <a href="play-off.html" class="main-nav__submenu-link">Плей-офф</a>
                   </li>
                   <li class="main-nav__submenu-list-item">
                     <a href="results.html" class="main-nav__submenu-link">Результаты</a>
                   </li>
                   <li class="main-nav__submenu-list-item">
-                    <a href="#" class="main-nav__submenu-link">Регламент</a>
+                    <a href="reglament.html" class="main-nav__submenu-link">Регламент</a>
                   </li>
                 </ul>
               </div>

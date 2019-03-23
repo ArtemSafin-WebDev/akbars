@@ -45,6 +45,22 @@
                 <h1 class="news__main-heading">Новости</h1>
                 <form action="/" class="news__search-form" method="GET">
                   <input type="text" class="news__search-input" name="q" placeholder="Поиск по новостям" />
+                  <span class="news__search-form-divider"></span>
+                  <label for="from" class="news__search-text-label">c</label>
+                  <input autocomplete="off" type="text" class="news__search-input" id="from" name="from">
+                  <label for="from" class="news__search-icon-label">
+                    <svg width="18" height="18" aria-hidden="true" class="icon-calendar-search">
+                      <use xlink:href="#calendar-search" />
+                    </svg>
+                  </label>
+                  <span class="news__search-form-divider"></span>
+                  <label for="to" class="news__search-text-label">по</label>
+                  <input autocomplete="off" type="text" class="news__search-input" name="to" id="to">
+                  <label for="to" class="news__search-icon-label">
+                      <svg width="18" height="18" aria-hidden="true" class="icon-calendar-search">
+                        <use xlink:href="#calendar-search" />
+                      </svg>
+                    </label>
                   <button type="submit" class="news__search-submit">
                     <span class="news__search-submit-content">
                       <svg width="16" height="16" aria-hidden="true" class="icon-search">

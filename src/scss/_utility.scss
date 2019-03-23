@@ -63,25 +63,28 @@
   display: flex;
   margin-left: 20px;
   position: relative;
-  &:hover {
-    .utility__social-wrapper {
-      opacity: 1;
-      visibility: visible;
-    }
+}
 
-    .utility__social-toggle {
-      color: $red;
-    }
+.social-shown {
+  .utility__social-wrapper {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .utility__social-toggle {
+    color: $red;
   }
 }
 
 .utility__social-toggle {
-  cursor: default;
+  cursor: pointer;
+  position: relative;
+  z-index: 50;
 }
 
 .utility__social-wrapper {
   width: 215px;
-  z-index: 400;
+  z-index: 40;
   background-color: transparent;
   position: absolute;
   top: 100%;
@@ -155,64 +158,49 @@
 .utility__login {
   margin-left: 14px;
   position: relative;
-  &:hover {
-    .utility__login-wrapper {
-      opacity: 1;
-      visibility: visible;
-    }
+  // &:hover {
+  //   .utility__login-wrapper {
+  //     opacity: 1;
+  //     visibility: visible;
+  //   }
 
-    .utility__login-link {
-      > svg {
-        fill: $red;
-      }
-      
-    }
-  }
+  //   .utility__login-link {
+  //     > svg {
+  //       fill: $red;
+  //     }
+  //   }
+  // }
 }
 
-.utility__login-link {
-  outline: none;
-
-  > svg {
-    fill: $green;
-    width: 24px;
-    height: 24px;
-    transition: fill 0.2s;
-  }
-
-  &:hover,
-  &:focus {
-    > svg {
-      fill: $red;
-    }
-  }
-}
 
 
 .utility__login-wrapper {
-  width: 215px;
-  z-index: 400;
+  width: 450px;
+  z-index: 30;
   background-color: transparent;
   position: absolute;
   top: 100%;
   right: -18px;
-  // transform: translateX(50%);
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s;
-
   padding-top: 10px;
-  &:focus-within {
+
+  .login-shown & {
     opacity: 1;
     visibility: visible;
   }
+  
 }
 
 
+ 
+
 .utility__login-content {
-  padding: 15px 22px;
+  padding: 15px;
+  padding-bottom: 2px;
   border-radius: 5px;
-  width: 350px;
+  width: 100%;
   background-color: #fff;
   position: relative;
   filter: drop-shadow(0px 15px 60px rgba(black, 0.15));
@@ -226,4 +214,158 @@
     border: 15px solid transparent;
     border-bottom: 15px solid #fff;
   }
+}
+
+
+.utility__login-form {
+  .checkbox {
+    font-family: 'Supermolot', 'Helvetica', sans-serif;
+  }
+
+  .checkbox__label-text {
+    position: relative;
+    bottom: -1px;
+  }
+}
+
+.utility__login-avatar {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid $green;
+  border-radius: 5px;
+}
+
+.utility__login-link-icon {
+  width: 30px;
+  height: 30px;
+}
+
+
+
+.utility__login-form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.utility__login-links {
+  margin-left: auto;
+}
+
+.utility__login-open {
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 40;
+  > svg {
+    fill: $green;
+    width: 24px;
+    height: 24px;
+    transition: fill 0.2s;
+  }
+
+  &:hover,
+  &:focus {
+    > svg {
+      fill: $red;
+    }
+  }
+
+  .login-shown & {
+    > svg {
+      fill: $red;
+    }
+  }
+}
+
+.utility__login-link {
+  color: $green;
+  cursor: pointer;
+  &:link,
+  &:visited {
+    color: $red;
+    cursor: pointer;
+  }
+
+  &[href] {
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+.utility__login-input {
+  font-size: 16px;
+  line-height: 35px;
+  -webkit-appearance: none;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #242F37;
+  border: none;
+  width: 40%;
+  margin-right: 20px;
+  flex-grow: 1;
+  padding: 0 10px;
+  border: 2px solid $green;
+  outline: none;
+  &:last-child {
+    margin-right: 0;
+  }
+  @include placeholder {
+    font-size: 16px;
+    line-height: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #C0C0C0;
+  }
+}
+
+
+.utility__login-remember-password-link {
+  color: $green;
+  margin-left: auto;
+  &:link,
+  &:visited {
+    color: $green;
+  }
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+
+.utility__login-social-login-link {
+  display: flex;
+  align-items: center;
+  outline: none;
+  > svg {
+    fill: $green;
+    margin-left: 5px;
+  }
+  &:link,
+  &:visited {
+    color: $green;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+
+.utility__login-submit {
+  outline: none;
+  font-size: 16px;
+  line-height: 20px;
+  color: $green;
+  padding: 6px 20px;
+  border: 2px solid $red;
+  margin-left: auto;
+  background-color: $red;
+  color: white;
 }
