@@ -48,6 +48,15 @@
         <path d="M19.59 9.86h-4.86l-1.56-4.23a.51.51 0 0 0-.46-.33.47.47 0 0 0-.47.31l-1.78 4.25H6a.49.49 0 0 0-.47.34.5.5 0 0 0 .17.56l3.8 2.87L8 18.1a.49.49 0 0 0 .17.55.48.48 0 0 0 .57 0l3.94-2.55 4.35 2.57a.59.59 0 0 0 .26.07.55.55 0 0 0 .33-.13.51.51 0 0 0 .13-.57l-1.93-4.55 4-2.73a.53.53 0 0 0 .2-.57.52.52 0 0 0-.43-.33zM15 12.92a.49.49 0 0 0-.18.61l1.49 3.52-3.3-2a.51.51 0 0 0-.53 0l-3 1.95 1.14-3.46a.51.51 0 0 0-.18-.55l-2.9-2.19h3.26a.5.5 0 0 0 .46-.31l1.41-3.38 1.24 3.37a.5.5 0 0 0 .47.32H18z" fill="currentColor" />
         <path d="M20.4 22.18a12.51 12.51 0 1 0-16.17-.33L1.57 26.5a.5.5 0 0 0 0 .55.51.51 0 0 0 .53.18l4-1.06 1.06 3.95a.49.49 0 0 0 .42.37h.06a.48.48 0 0 0 .43-.25l3-5.33a10.89 10.89 0 0 0 1.43.09c.31 0 .62 0 .93-.05l3.05 5.29a.5.5 0 0 0 .44.25H17a.5.5 0 0 0 .42-.37l1.06-3.95 3.95 1.06a.5.5 0 0 0 .56-.74zM7.79 28.69l-.87-3.26a.48.48 0 0 0-.24-.3.46.46 0 0 0-.38-.05L3 26l2-3.46a12.42 12.42 0 0 0 5 2.26zM1 12.5A11.5 11.5 0 1 1 12.5 24 11.51 11.51 0 0 1 1 12.5zm17.24 12.58a.51.51 0 0 0-.62.35l-.87 3.27-2.24-3.88a12.4 12.4 0 0 0 5.08-2L21.48 26z" />
       </symbol>
+      <symbol viewBox="0 0 17.22 18" id="calendar-search" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17 2.76l-2-1.69V1a.58.58 0 0 0-.19 0h-2.36V.5a.5.5 0 0 0-1 0V1H4.56V.5a.5.5 0 0 0-.5-.5.5.5 0 0 0-.5.5V1H.5a.5.5 0 0 0-.5.5v14a.5.5 0 0 0 .14.35l2 2a.51.51 0 0 0 .36.15h14.22a.5.5 0 0 0 .5-.5V3.14a.48.48 0 0 0-.22-.38zM1 2h2.56v.7a.5.5 0 0 0 .5.5.5.5 0 0 0 .5-.5V2h6.89v.7a.5.5 0 0 0 1 0V2h2.06l1.71 1.7v1.52H1zm1.72 15L1 15.26v-9h15.22V17z" />
+        <circle cx="4.25" cy="9.75" r="1.25" />
+        <circle cx="8.66" cy="9.75" r="1.25" />
+        <circle class="ahcls-2" cx="13.06" cy="9.75" r="1.25" />
+        <circle cx="4.25" cy="13.67" r="1.25" />
+        <circle cx="8.66" cy="13.67" r="1.25" />
+        <circle cx="13.06" cy="13.67" r="1.25" />
+      </symbol>
       <symbol viewBox="0 0 18.22 19" id="calendar-white" xmlns="http://www.w3.org/2000/svg">
         <path d="M17.87 2.88l-2-1.69a1 1 0 0 0-.18-.1L15.58 1a1.16 1.16 0 0 0-.37 0h-1.77a1 1 0 0 0-2 0H5.55a1 1 0 0 0-2 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 .29.7l2 2A1 1 0 0 0 3 19h14.22a1 1 0 0 0 1-1V3.64a1 1 0 0 0-.35-.76zM2 3h1.56v.2a1 1 0 1 0 2 0V3h5.89v.2a1 1 0 0 0 2 0V3h1.35l1.42 1.4v.82H2zm1.43 14L2 15.56V7.22h14.22V17z" />
         <circle cx="4.75" cy="10.25" r="1.25" />
@@ -249,174 +258,165 @@
   </div>
   <style>
     .preloader {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      z-index: 20000;
-      background-color: #E4E4E2;
-      background-image: url('img/bg-pattern-test.jpg');
-      background-size: 960px;
-      text-align: center;
-      -webkit-transition: all 0.3s;
-      transition: all 0.3s;
-      opacity: 0;
-      visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    z-index: 20000;
+    background-color: #E4E4E2;
+    background-image: url('img/bg-pattern-test.jpg');
+    background-size: 960px;
+    text-align: center;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .preloader.shown {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .preloader__content {
+    margin: auto;
+    width: 350px;
+  }
+
+  .preloader__logo {
+    width: 200px;
+    margin-bottom: 25px;
+  }
+
+  .progress {
+    position: relative;
+    height: 4px;
+    display: block;
+    width: 100%;
+    background-color: white;
+    margin: 0.5rem 0 1rem 0;
+    overflow: hidden;
+  }
+
+  .progress .indeterminate:before {
+    content: '';
+    position: absolute;
+    background-color: inherit;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    will-change: left, right;
+    -webkit-animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+    animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+  }
+
+  .progress .indeterminate:after {
+    content: '';
+    position: absolute;
+    background-color: inherit;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    will-change: left, right;
+    -webkit-animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+    animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+    -webkit-animation-delay: 1.15s;
+    animation-delay: 1.15s;
+  }
+
+  .indeterminate {
+    background-color: #3c8f88;
+  }
+
+  .progress .indeterminate:before {
+    content: '';
+    position: absolute;
+    background-color: inherit;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    will-change: left, right;
+    -webkit-animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+    animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+  }
+
+  .progress .indeterminate:after {
+    content: '';
+    position: absolute;
+    background-color: inherit;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    will-change: left, right;
+    -webkit-animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+    animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+    -webkit-animation-delay: 1.15s;
+    animation-delay: 1.15s;
+  }
+
+  @-webkit-keyframes indeterminate {
+    0% {
+      left: -35%;
+      right: 100%;
     }
-
-    .preloader.shown {
-      opacity: 1;
-      visibility: visible;
+    60% {
+      left: 100%;
+      right: -90%;
     }
-
-    .preloader__content {
-      margin: auto;
-      width: 350px;
+    100% {
+      left: 100%;
+      right: -90%;
     }
+  }
 
-    .preloader__logo {
-      width: 200px;
-      margin-bottom: 25px;
+  @keyframes indeterminate {
+    0% {
+      left: -35%;
+      right: 100%;
     }
-
-    .progress {
-      position: relative;
-      height: 4px;
-      display: block;
-      width: 100%;
-      background-color: white;
-      margin: 0.5rem 0 1rem 0;
-      overflow: hidden;
+    60% {
+      left: 100%;
+      right: -90%;
     }
-
-    .progress .indeterminate:before {
-      content: '';
-      position: absolute;
-      background-color: inherit;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      will-change: left, right;
-      -webkit-animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
-      animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+    100% {
+      left: 100%;
+      right: -90%;
     }
+  }
 
-    .progress .indeterminate:after {
-      content: '';
-      position: absolute;
-      background-color: inherit;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      will-change: left, right;
-      -webkit-animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
-      animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
-      -webkit-animation-delay: 1.15s;
-      animation-delay: 1.15s;
+  @-webkit-keyframes indeterminate-short {
+    0% {
+      left: -200%;
+      right: 100%;
     }
-
-    .indeterminate {
-      background-color: #3c8f88;
+    60% {
+      left: 107%;
+      right: -8%;
     }
-
-    .progress .indeterminate:before {
-      content: '';
-      position: absolute;
-      background-color: inherit;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      will-change: left, right;
-      -webkit-animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
-      animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+    100% {
+      left: 107%;
+      right: -8%;
     }
+  }
 
-    .progress .indeterminate:after {
-      content: '';
-      position: absolute;
-      background-color: inherit;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      will-change: left, right;
-      -webkit-animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
-      animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
-      -webkit-animation-delay: 1.15s;
-      animation-delay: 1.15s;
+  @keyframes indeterminate-short {
+    0% {
+      left: -200%;
+      right: 100%;
     }
-
-    @-webkit-keyframes indeterminate {
-      0% {
-        left: -35%;
-        right: 100%;
-      }
-
-      60% {
-        left: 100%;
-        right: -90%;
-      }
-
-      100% {
-        left: 100%;
-        right: -90%;
-      }
+    60% {
+      left: 107%;
+      right: -8%;
     }
-
-    @keyframes indeterminate {
-      0% {
-        left: -35%;
-        right: 100%;
-      }
-
-      60% {
-        left: 100%;
-        right: -90%;
-      }
-
-      100% {
-        left: 100%;
-        right: -90%;
-      }
+    100% {
+      left: 107%;
+      right: -8%;
     }
-
-    @-webkit-keyframes indeterminate-short {
-      0% {
-        left: -200%;
-        right: 100%;
-      }
-
-      60% {
-        left: 107%;
-        right: -8%;
-      }
-
-      100% {
-        left: 107%;
-        right: -8%;
-      }
-    }
-
-    @keyframes indeterminate-short {
-      0% {
-        left: -200%;
-        right: 100%;
-      }
-
-      60% {
-        left: 107%;
-        right: -8%;
-      }
-
-      100% {
-        left: 107%;
-        right: -8%;
-      }
-    }
-  </style>
+  }
+</style>
   <div class="preloader shown js-preloader">
     <div class="preloader__content">
       <img src="img/logo/akbars-logo.svg" alt="Логотип в прелоадере" class="preloader__logo" />
@@ -483,8 +483,8 @@
             <a href="bars.html" class="utility__text-link">ХК «Барс»</a>
             <span class="utility__divider"></span>
             <div class="utility__social">
-              <a class="utility__text-link utility__social-toggle">Мы в соц. сетях</a>
-              <div class="utility__social-wrapper">
+              <a class="utility__text-link utility__social-toggle js-social-open">Мы в соц. сетях</a>
+              <div class="utility__social-wrapper js-social-wrapper">
                 <ul class="utility__social-menu">
                   <li class="utility__social-menu-item">
                     <a href="#" class="utility__social-link">
@@ -572,15 +572,57 @@
               <span class="visually-hidden">Мобильная версия</span>
             </a>
             <div class="utility__login">
-              <a class="utility__login-link">
+              <a class="utility__login-open js-login-open">
                 <svg width="20" height="20" aria-hidden="true" class="icon-search">
                   <use xlink:href="#person" />
                 </svg>
                 <span class="visually-hidden">Личный кабинет</span>
               </a>
-              <div class="utility__login-wrapper">
+              <div class="utility__login-wrapper js-login-wrapper">
                 <div class="utility__login-content">
-                  Login Content
+
+                  <div class="utility__login-controls">
+
+                    <form action="/" class="utility__login-form" method="POST">
+                      <div class="utility__login-form-row">
+                        <div class="utility__login-avatar">
+                          <img src="img/avatar-placeholder.svg" alt="Заглушка аватара" class="utility__login-link-icon" />
+                        </div>
+                        <span class="utility__login-links">
+                          <a class="utility__login-link">Войти</a>/<a href="#" class="utility__login-link">Зарегистрироваться</a>
+                        </span>
+                      </div>
+                      <div class="utility__login-form-row">
+                        <input autocomplete="off" type="text" name="nickname" class="utility__login-input" placeholder="Логин или E-mail" />
+                        <input autocomplete="off" type="password" name="password" class="utility__login-input" placeholder="Пароль" />
+                      </div>
+                      <div class="utility__login-form-row">
+                        <span class="checkbox">
+                          <input type="checkbox" class="checkbox__input" name="savepassword" id="savepassword" />
+                          <label for="savepassword" class="checkbox__label">
+                            <span class="checkbox__label-icon">
+                              <svg width="10" height="7" aria-hidden="true" class="icon-checkbox">
+                                <use xlink:href="#checkbox" />
+                              </svg>
+                            </span>
+                            <span class="checkbox__label-text">Сохранить пароль</span>
+                          </label>
+                        </span>
+                        <a href="#" class="utility__login-remember-password-link">Забыли пароль?</a>
+                      </div>
+                      <div class="utility__login-form-row">
+                        <a href="#" class="utility__login-social-login-link">
+                          Войти через соцсеть:
+                          <svg width="20" height="20" aria-hidden="true" class="icon-vk">
+                            <use xlink:href="#vk" />
+                          </svg>
+                        </a>
+                        <button type="submit" class="utility__login-submit">
+                          Войти
+                        </button>
+                      </div>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>
@@ -608,13 +650,13 @@
                         <a href="calendar.html" class="main-nav__submenu-link">Календарь</a>
                       </li>
                       <li class="main-nav__submenu-list-item">
-                        <a href="#" class="main-nav__submenu-link">Плей-офф</a>
+                        <a href="play-off.html" class="main-nav__submenu-link">Плей-офф</a>
                       </li>
                       <li class="main-nav__submenu-list-item">
                         <a href="results.html" class="main-nav__submenu-link">Результаты</a>
                       </li>
                       <li class="main-nav__submenu-list-item">
-                        <a href="#" class="main-nav__submenu-link">Регламент</a>
+                        <a href="reglament.html" class="main-nav__submenu-link">Регламент</a>
                       </li>
                     </ul>
                   </div>
