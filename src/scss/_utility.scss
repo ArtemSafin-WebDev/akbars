@@ -42,7 +42,9 @@
   &__icon-link {
     margin-left: 14px;
     outline: none;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
     > svg {
       fill: $green;
       width: 24px;
@@ -158,28 +160,16 @@
 .utility__login {
   margin-left: 14px;
   position: relative;
-  // &:hover {
-  //   .utility__login-wrapper {
-  //     opacity: 1;
-  //     visibility: visible;
-  //   }
-
-  //   .utility__login-link {
-  //     > svg {
-  //       fill: $red;
-  //     }
-  //   }
-  // }
+  display: flex;
+  flex-direction: column;
 }
-
-
 
 .utility__login-wrapper {
   width: 450px;
   z-index: 30;
   background-color: transparent;
   position: absolute;
-  top: 100%;
+  top: calc(100% + 5px);
   right: -18px;
   opacity: 0;
   visibility: hidden;
@@ -190,11 +180,7 @@
     opacity: 1;
     visibility: visible;
   }
-  
 }
-
-
- 
 
 .utility__login-content {
   padding: 15px;
@@ -215,7 +201,6 @@
     border-bottom: 15px solid #fff;
   }
 }
-
 
 .utility__login-form {
   .checkbox {
@@ -243,8 +228,6 @@
   height: 30px;
 }
 
-
-
 .utility__login-form-row {
   display: flex;
   align-items: center;
@@ -259,7 +242,11 @@
   outline: none;
   cursor: pointer;
   position: relative;
-  z-index: 40;
+  z-index: 50;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   > svg {
     fill: $green;
     width: 24px;
@@ -284,6 +271,7 @@
 .utility__login-link {
   color: $green;
   cursor: pointer;
+
   &:link,
   &:visited {
     color: $red;
@@ -298,18 +286,18 @@
   }
 }
 
-
 .utility__login-input {
   font-size: 16px;
-  line-height: 35px;
+  line-height: 20px;
+
   -webkit-appearance: none;
   font-family: Arial, Helvetica, sans-serif;
-  color: #242F37;
+  color: #242f37;
   border: none;
   width: 40%;
   margin-right: 20px;
   flex-grow: 1;
-  padding: 0 10px;
+  padding: 6px 10px;
   border: 2px solid $green;
   outline: none;
   &:last-child {
@@ -319,10 +307,9 @@
     font-size: 16px;
     line-height: 20px;
     font-family: Arial, Helvetica, sans-serif;
-    color: #C0C0C0;
+    color: #c0c0c0;
   }
 }
-
 
 .utility__login-remember-password-link {
   color: $green;
@@ -336,7 +323,6 @@
     text-decoration: underline;
   }
 }
-
 
 .utility__login-social-login-link {
   display: flex;
@@ -356,7 +342,6 @@
     text-decoration: underline;
   }
 }
-
 
 .utility__login-submit {
   outline: none;

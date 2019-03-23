@@ -12,6 +12,7 @@
   transition: all .3s;
   opacity: 0;
   visibility: hidden;
+  flex-direction: column;
   &.shown { 
     opacity: 1;
     visibility: visible;

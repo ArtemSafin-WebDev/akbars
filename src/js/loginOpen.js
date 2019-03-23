@@ -5,7 +5,7 @@ export default function() {
 
   const outsideClickListener = event => {
     if (!loginWindow.contains(event.target) && loginWindowOpen && !loginOpen.contains(event.target)) {
-      
+      console.log('closing login')
       // or use: event.target.closest(selector) === null
 
       document.body.classList.remove('login-shown')
@@ -24,8 +24,10 @@ export default function() {
 
   if (loginWindow && loginOpen) {
     loginOpen.addEventListener('click', function(event) {
+      console.log('clicked')
       event.preventDefault()
       if (!loginWindowOpen) {
+        console.log('opening login')
         loginWindowOpen = true
         document.addEventListener('click', outsideClickListener)
         // this.classList.add('login-shown')

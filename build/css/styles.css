@@ -3714,7 +3714,16 @@ svg {
     margin-left: 20px; }
   .utility__icon-link {
     margin-left: 14px;
-    outline: none; }
+    outline: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
     .utility__icon-link > svg {
       fill: #256963;
       width: 24px;
@@ -3820,14 +3829,21 @@ svg {
 
 .utility__login {
   margin-left: 14px;
-  position: relative; }
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
 
 .utility__login-wrapper {
   width: 450px;
   z-index: 30;
   background-color: transparent;
   position: absolute;
-  top: 100%;
+  top: calc(100% + 5px);
   right: -18px;
   opacity: 0;
   visibility: hidden;
@@ -3899,7 +3915,19 @@ svg {
   outline: none;
   cursor: pointer;
   position: relative;
-  z-index: 40; }
+  z-index: 50;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
   .utility__login-open > svg {
     fill: #256963;
     width: 24px;
@@ -3922,17 +3950,17 @@ svg {
 
 .utility__login-input {
   font-size: 16px;
-  line-height: 35px;
+  line-height: 20px;
   -webkit-appearance: none;
   font-family: Arial, Helvetica, sans-serif;
-  color: #242F37;
+  color: #242f37;
   border: none;
   width: 40%;
   margin-right: 20px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  padding: 0 10px;
+  padding: 6px 10px;
   border: 2px solid #256963;
   outline: none; }
   .utility__login-input:last-child {
@@ -3941,22 +3969,22 @@ svg {
     font-size: 16px;
     line-height: 20px;
     font-family: Arial, Helvetica, sans-serif;
-    color: #C0C0C0; }
+    color: #c0c0c0; }
   .utility__login-input:-moz-placeholder {
     font-size: 16px;
     line-height: 20px;
     font-family: Arial, Helvetica, sans-serif;
-    color: #C0C0C0; }
+    color: #c0c0c0; }
   .utility__login-input::-moz-placeholder {
     font-size: 16px;
     line-height: 20px;
     font-family: Arial, Helvetica, sans-serif;
-    color: #C0C0C0; }
+    color: #c0c0c0; }
   .utility__login-input:-ms-input-placeholder {
     font-size: 16px;
     line-height: 20px;
     font-family: Arial, Helvetica, sans-serif;
-    color: #C0C0C0; }
+    color: #c0c0c0; }
 
 .utility__login-remember-password-link {
   color: #256963;
