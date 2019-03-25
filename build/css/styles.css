@@ -3088,7 +3088,9 @@ svg {
       -ms-flex-align: center;
           align-items: center;
   -webkit-transition: background-color 0.2s;
-  transition: background-color 0.2s; }
+  transition: background-color 0.2s;
+  -ms-flex-negative: 0;
+      flex-shrink: 0; }
   .checkbox__label-icon > svg {
     width: 10px;
     height: 7px;
@@ -10538,10 +10540,13 @@ svg {
   margin-bottom: 30px; }
   .videos__list-item:last-child {
     margin-bottom: 0; }
-  .videos__list-item--match-video {
+  .videos__list--match-videos .videos__list-item {
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center; }
+            align-items: center;
+    margin-bottom: 20px; }
+    .videos__list--match-videos .videos__list-item:last-child {
+      margin-bottom: 0; }
 
 .videos__card {
   padding: 20px;
@@ -10557,6 +10562,17 @@ svg {
   font-weight: 700;
   margin-bottom: 30px; }
 
+.videos__card-heading-score-link {
+  color: #256963;
+  text-decoration: underline;
+  outline: none;
+  -webkit-transition: color .2s;
+  transition: color .2s; }
+  .videos__card-heading-score-link:link, .videos__card-heading-score-link:visited {
+    color: #256963; }
+  .videos__card-heading-score-link:hover, .videos__card-heading-score-link:focus {
+    color: #D81E23; }
+
 .videos__video-link {
   display: block;
   width: 240px;
@@ -10567,6 +10583,11 @@ svg {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   margin-top: 8px; }
+  .videos__list--match-videos .videos__video-link {
+    width: 120px;
+    height: 80px;
+    margin-top: 0;
+    margin-right: 20px; }
   .videos__video-link:hover .videos__play-icon, .videos__video-link:focus .videos__play-icon {
     fill-opacity: 1; }
 
@@ -10580,6 +10601,9 @@ svg {
   fill-opacity: 0.8;
   -webkit-transition: fill-opacity 0.3s;
   transition: fill-opacity 0.3s; }
+  .videos__list--match-videos .videos__play-icon {
+    width: 46px;
+    height: 46px; }
 
 .videos__video-preview {
   display: block;
@@ -10605,6 +10629,11 @@ svg {
   line-height: 30px;
   font-weight: 700;
   margin-bottom: 15px; }
+  .videos__list--match-videos .videos__video-heading {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    margin-bottom: 0; }
 
 .videos__video-heading-link {
   color: #256963;
@@ -10728,7 +10757,7 @@ svg {
         fill: #D81E23; }
 
 .registration__form {
-  width: 70%;
+  width: 50%;
   margin: 0 auto;
   margin-top: 20px; }
   .registration__form input {
@@ -10803,24 +10832,12 @@ svg {
   line-height: 18px;
   margin-top: 5px; }
 
-.registration__submit-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%;
-  margin-top: 20px; }
-
 .registration__form-submit {
   outline: none;
   font-size: 16px;
   line-height: 20px;
   padding: 10px 22px;
+  margin-top: 20px;
   background-color: #D81E23;
   color: #fff;
   -webkit-transition: background-color .2s;
@@ -10830,7 +10847,10 @@ svg {
 
 .registration__legend {
   font-size: 14px;
-  line-height: 18px; }
+  line-height: 18px;
+  width: 100%;
+  display: block;
+  margin-top: 20px; }
   .registration__legend sup {
     color: #D81E23;
     font-weight: 700; }
