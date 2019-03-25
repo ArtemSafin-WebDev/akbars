@@ -3196,7 +3196,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var choi
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var air_datepicker__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! air-datepicker */ \"./node_modules/air-datepicker/src/js/air-datepicker.js\");\n/* harmony import */ var air_datepicker__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(air_datepicker__WEBPACK_IMPORTED_MODULE_0__);\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\n  $('#from').datepicker({\n    position: \"bottom right\"\n  });\n  $('#to').datepicker({\n    position: \"bottom right\",\n    maxDate: new Date()\n  });\n});\n\n//# sourceURL=webpack:///./src/js/datepickers.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var air_datepicker__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! air-datepicker */ \"./node_modules/air-datepicker/src/js/air-datepicker.js\");\n/* harmony import */ var air_datepicker__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(air_datepicker__WEBPACK_IMPORTED_MODULE_0__);\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\n  $('#from').datepicker({\n    position: \"bottom right\"\n  });\n  $('#to').datepicker({\n    position: \"bottom right\",\n    maxDate: new Date()\n  });\n  $('.js-birthday-input').datepicker({\n    maxDate: new Date()\n  });\n});\n\n//# sourceURL=webpack:///./src/js/datepickers.js?");
 
 /***/ }),
 
