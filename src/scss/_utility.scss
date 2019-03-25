@@ -106,6 +106,9 @@
   background-color: #fff;
   position: relative;
   filter: drop-shadow(0px 15px 60px rgba(black, 0.15));
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
   &::before {
     content: '';
     position: absolute;
@@ -190,6 +193,9 @@
   background-color: #fff;
   position: relative;
   filter: drop-shadow(0px 15px 60px rgba(black, 0.15));
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
   cursor: default;
   &::before {
     content: '';
@@ -247,6 +253,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
   &::before {
     content: '';
     position: absolute;

@@ -60,16 +60,20 @@
 .shop__products {
   margin-top: -6px;
   position: relative;
+  &-list {
+    margin-top: -20px;
+  }
   .slick-track {
     display: flex !important;
     box-sizing: border-box;
+   
   }
 
   .slick-slide {
     height: inherit !important;
     display: flex;
     flex-direction: column;
-    margin: 40px 0;
+    margin: 60px 0;
     padding: 0 20px;
     outline: none;
     > div {
@@ -110,7 +114,10 @@
   width: 240px;
   text-align: center;
   box-shadow: 0px 0px 60px rgba(black, 0.12);
-  transition: box-shadow 0.2s ease-in-out;
+  // transition: box-shadow 0.2s ease-in-out;
+  // transform: translateZ(0);
+  // backface-visibility: hidden;
+  // transform-style: preserve-3d;
   display: flex !important;
   flex-direction: column;
   flex-grow: 1;
@@ -136,9 +143,9 @@
   }
 }
 
-.slick-slide.slick-active .shop__products-list-item {
-  box-shadow: 0px 0px 60px rgba(black, 0.12);
-}
+// .slick-slide.slick-active .shop__products-list-item {
+//   box-shadow: 0px 0px 60px rgba(black, 0.12);
+// }
 
 // .slick-list.draggable:active .shop__products-list-item {
 //   box-shadow: 0px 0px 60px rgba(black, .12);
@@ -195,8 +202,7 @@
     }
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
     svg {
       polyline {
         stroke: $green;
@@ -220,7 +226,7 @@
 .shop__all-products {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: -10px;
   &-link {
     font-size: 16px;
     line-height: 20px;
