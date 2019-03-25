@@ -1,12 +1,13 @@
-const path = require("path");
+const path = require('path')
+const MomentLocalesPlugin = require('moment-locales-webpack-plugin')
 
 module.exports = {
   entry: {
-    App: "./src/js/main.js",
-    Mobile: "./src/js/main-m.js"
+    App: './src/js/main.js',
+    Mobile: './src/js/main-m.js'
   },
   output: {
-    path: path.resolve(__dirname, "./build/js"),
+    path: path.resolve(__dirname, './build/js'),
     filename: '[name].js'
   },
   module: {
@@ -15,13 +16,18 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
+          loader: 'babel-loader'
         }
       }
     ]
   },
-  mode: "development",
+  mode: 'development',
   externals: {
     jquery: 'jQuery'
-  }
-};
+  },
+  plugins: [
+    new MomentLocalesPlugin({
+      localesToKeep: ['es-us', 'ru']
+    })
+  ]
+}

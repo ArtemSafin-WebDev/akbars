@@ -22,6 +22,7 @@ import highlightMaps from './highlightMaps'
 import datepickers from './datepickers'
 import loginOpen from './loginOpen'
 import socialOpen from './socialOpen'
+import selectsGroups from './selectsGroup'
 
 document.addEventListener('DOMContentLoaded', function() {
   // Полифилл для CSS свойства ObjectFit(заполнение контейнера изображением)
@@ -47,7 +48,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
   setTabsOnPage()
 
+  // Активируем группы селектов
+
+  selectsGroups()
+
   // Политика по кукам
+  
 
   cookiePolicy()
 

@@ -1,7 +1,8 @@
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
 
 export default function() {
-  const open = document.getElementById('open')
+  const open = document.querySelector('.js-sidebar-open')
+  const close = document.querySelector('.js-burger-close')
   const sidebar = document.querySelector('.js-sidebar')
   const overlay = document.querySelector('.js-overlay')
   let sidebarOpen = false
@@ -25,8 +26,20 @@ export default function() {
     })
   })
 
-  if (sidebar && open) {
+  if (sidebar && open && close) {
     open.addEventListener('click', function() {
+      if (sidebarOpen) {
+        document.body.classList.remove('shown')
+        enableBodyScroll(sidebar)
+        sidebarOpen = false
+      } else {
+        document.body.classList.add('shown')
+        disableBodyScroll(sidebar)
+        sidebarOpen = true
+      }
+    })
+
+    close.addEventListener('click', function() {
       if (sidebarOpen) {
         document.body.classList.remove('shown')
         enableBodyScroll(sidebar)

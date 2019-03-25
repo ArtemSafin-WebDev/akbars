@@ -18,9 +18,7 @@
   padding-bottom: 40px;
 }
 
-.fotorama__thumb-border {
-  border-color: $red;
-}
+
 
 .person-media__photogallery-photo-description {
   color: #94999f;
@@ -41,21 +39,7 @@
   width: 500px;
 }
 
-.fotorama__arr,
-.fotorama__fullscreen-icon,
-.fotorama__video-close,
-.fotorama__video-play {
-  background-image: url('../img/fotorama.png');
-}
 
-@media (-webkit-min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-  .fotorama__arr,
-  .fotorama__fullscreen-icon,
-  .fotorama__video-close,
-  .fotorama__video-play {
-    background-image: url('../img/fotorama@2x.png');
-  }
-}
 
 .person-media__publications {
   padding-top: 10px;

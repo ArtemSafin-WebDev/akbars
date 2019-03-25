@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <!-- partial:partials/_meta.html -->
+    <!-- partial -->
+    <title>
+      Архив ленты новостей о хоккейной команде «Ак Барс»
+    </title>
+    <noscript>
+      <style>
+        [data-simplebar] {
+          overflow: auto;
+        }
+      </style>
+    </noscript>
+  </head>
+  <body>
+    <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
+      <!-- partial:img/symbol/sprite.svg --><!-- partial -->
+    </div>
+    <!-- partial:partials/_cookie-policy.html --><!-- partial -->
+    <!-- partial:partials/_search-modal.html --><!-- partial -->
+    <!-- partial:partials/_preloader.html --><!-- partial -->
+    <div class="page-content">
+      <div class="khl-placeholder">
+        <div class="container">
+          Заглушка панели KHL
+        </div>
+      </div>
+
+      <!-- partial:partials/_header.html --><!-- partial -->
+      <main>
+        <div class="container">
+          <div class="flex-row">
+            <div class="banner-column banner-column--left banner-column--news">
+              <a href="#" class="banner-column__item" style="background-image: url(img/banners/hoki.png)"> </a>
+              <a href="#" class="banner-column__item" style="background-image: url(img/banners/гимн.png)"> </a>
+            </div>
+            <section class="registration">
+              <h1 class="registration__main-heading">Регистрация</h1>
+              <div class="registration__content">
+                <p class="registration__type">
+                  Для получения доступа к основным функциям сайта вы можете использовать упрощенную регистрацию через
+                  социальные сети:
+                  <a href="#" class="registration__type-link registration__type-link--icon-link"
+                    ><svg width="20" height="20" aria-hidden="true" class="icon-vk">
+                      <use xlink:href="#vk" /></svg
+                  ></a>
+                </p>
+                <p class="registration__type">
+                  Для регистрации карты болельщика необходимо зарегистрироваться в
+                  <a href="#" class="registration__type-link">программе лояльности</a>
+                </p>
+                <form action="/" method="POST" class="registration__form" data-parsley-validate>
+                  <div class="registration__form-row">
+                    <label for="nickname">Ваше имя/ник <sup>*</sup> (не менее 3 символов):</label>
+                    <input type="text" id="nickname" name="nickname" maxlength="25" minlength="3" required />
+                  </div>
+                  <div class="registration__form-row">
+                    <label for="password1">Пароль <sup>*</sup> (не менее 6 символов):</label>
+                    <input type="password" id="password1" name="password1" maxlength="25" minlength="6" required />
+                  </div>
+                  <div class="registration__form-row">
+                    <label for="password2">Подтверждение пароля <sup>*</sup>:</label>
+                    <input type="password" id="password2" name="password2" data-parsley-equalto="#password1" required />
+                  </div>
+                  <div class="registration__form-row">
+                    <label for="birthday">Дата рождения:</label>
+                    <input autocomplete="off" type="text" id="birthday" name="birthday" class="datepicker-here js-date-input-mask" data-parsley-moment/>
+                  </div>
+                  <div class="registration__form-row">
+                    <label for="city">Город:</label>
+                    <input type="text" id="city" name="city" maxlength="25" />
+                  </div>
+                  <div class="registration__form-row">
+                    <label for="email">Ваш e-mail <sup>*</sup>:</label>
+                    <input type="email" id="email" name="email" maxlength="40" required />
+                    <span class="registration__remark">
+                      Вводите реальный e-mail, на него будет выслано письмо для подтверждения регистрации
+                    </span>
+                  </div>
+                  <div class="registration__form-row">
+                    <span class="checkbox">
+                      <input type="checkbox" class="checkbox__input" name="hidemail" id="hidemail" />
+                      <label for="hidemail" class="checkbox__label">
+                        <span class="checkbox__label-icon">
+                          <svg width="10" height="7" aria-hidden="true" class="icon-checkbox">
+                            <use xlink:href="#checkbox" />
+                          </svg>
+                        </span>
+                        <span class="checkbox__label-text">Скрывать мой email от других посетителей</span>
+                      </label>
+                    </span>
+                  </div>
+                  <div class="registration__form-row">
+                    <span class="checkbox">
+                      <input type="checkbox" class="checkbox__input" name="remindoff" id="remindoff" />
+                      <label for="remindoff" class="checkbox__label">
+                        <span class="checkbox__label-icon">
+                          <svg width="10" height="7" aria-hidden="true" class="icon-checkbox">
+                            <use xlink:href="#checkbox" />
+                          </svg>
+                        </span>
+                        <span class="checkbox__label-text"> Отключить функцию восстановления пароля</span>
+                      </label>
+                    </span>
+                    <span class="registration__remark">
+                      Отключив эту функцию вы не сможете восстановить пароль в том случае если вы его забудете
+                    </span>
+                  </div>
+                  <div class="registration__form-row">
+                    <span class="checkbox">
+                      <input type="checkbox" class="checkbox__input" name="hiddenuser" id="hiddenuser" />
+                      <label for="hiddenuser" class="checkbox__label">
+                        <span class="checkbox__label-icon">
+                          <svg width="10" height="7" aria-hidden="true" class="icon-checkbox">
+                            <use xlink:href="#checkbox" />
+                          </svg>
+                        </span>
+                        <span class="checkbox__label-text"
+                          >Скрывать мое присутствие на сайте от других пользователей</span
+                        >
+                      </label>
+                    </span>
+                  </div>
+                  <div class="registration__form-row">
+                    <span class="checkbox">
+                      <input type="checkbox" class="checkbox__input" name="pmnotify" id="pmnotify" checked />
+                      <label for="pmnotify" class="checkbox__label">
+                        <span class="checkbox__label-icon">
+                          <svg width="10" height="7" aria-hidden="true" class="icon-checkbox">
+                            <use xlink:href="#checkbox" />
+                          </svg>
+                        </span>
+                        <span class="checkbox__label-text"
+                          >Включить уведомление на e-mail о новых приватных сообщениях</span
+                        >
+                      </label>
+                    </span>
+                  </div>
+                  <div class="registration__form-row">
+                    <span class="checkbox">
+                      <input type="checkbox" class="checkbox__input" name="khl_menu" id="khl_menu" checked />
+                      <label for="khl_menu" class="checkbox__label">
+                        <span class="checkbox__label-icon">
+                          <svg width="10" height="7" aria-hidden="true" class="icon-checkbox">
+                            <use xlink:href="#checkbox" />
+                          </svg>
+                        </span>
+                        <span class="checkbox__label-text">Показывать сверху меню КХЛ</span>
+                      </label>
+                    </span>
+                  </div>
+                  <div class="registration__form-row">
+                    <span class="checkbox">
+                      <input type="checkbox" class="checkbox__input" name="plain_view" id="plain_view" />
+                      <label for="plain_view" class="checkbox__label">
+                        <span class="checkbox__label-icon">
+                          <svg width="10" height="7" aria-hidden="true" class="icon-checkbox">
+                            <use xlink:href="#checkbox" />
+                          </svg>
+                        </span>
+                        <span class="checkbox__label-text">Показывать гостевую/комментарии линейным списком</span>
+                      </label>
+                    </span>
+                  </div>
+                  <div class="registration__form-row">
+                    <span class="checkbox">
+                      <input type="checkbox" class="checkbox__input" name="subscribe" id="subscribe" />
+                      <label for="subscribe" class="checkbox__label">
+                        <span class="checkbox__label-icon">
+                          <svg width="10" height="7" aria-hidden="true" class="icon-checkbox">
+                            <use xlink:href="#checkbox" />
+                          </svg>
+                        </span>
+                        <span class="checkbox__label-text">Согласен на получение сообщений клуба на e-mail</span>
+                      </label>
+                    </span>
+                  </div>
+                  <div class="registration__form-row">
+                    <textarea name="info" id="info"></textarea>
+                    <span class="registration__remark">
+                      Введите любую информацию о себе, которая будет доступна другим посетителям
+                    </span>
+                  </div>
+                  <div class="registration__form-row">
+                    <span class="checkbox">
+                      <input type="checkbox" class="checkbox__input" name="agree" id="agree" />
+                      <label for="agree" class="checkbox__label">
+                        <span class="checkbox__label-icon">
+                          <svg width="10" height="7" aria-hidden="true" class="icon-checkbox">
+                            <use xlink:href="#checkbox" />
+                          </svg>
+                        </span>
+                        <span class="checkbox__label-text"
+                          >Я соглашаюсь с <a href="#" target="_blank">правилами</a> и соглашаюсь на
+                          <a href="#" target="_blank">обработку персональных данных</a></span
+                        >
+                      </label>
+                    </span>
+                  </div>
+                  <div class="registration__submit-container">
+                    <button class="registration__form-submit">
+                      Зарегистрироваться
+                    </button>
+                    <span class="registration__legend">
+                      <sup>*</sup> - поля, обязательные для заполнения
+                    </span>
+                  </div>
+                </form>
+              </div>
+            </section>
+          </div>
+        </div>
+      </main>
+      <!-- partial:partials/_footer.html --><!-- partial -->
+    </div>
+  </body>
+</html>

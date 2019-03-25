@@ -32,38 +32,7 @@
 
 .play-off__block {
   margin-bottom: 50px;
-  .simplebar-track {
-    z-index: 100;
-  }
-
-  .simplebar-track.simplebar-horizontal {
-    height: 20px;
-    background-color: #ebebeb;
-  }
-
-  .simplebar-track.simplebar-horizontal {
-    left: 60px;
-    right: 60px;
-  }
-
-  .simplebar-track.simplebar-horizontal .simplebar-scrollbar {
-    top: 5px;
-    height: 10px;
-  }
-
-  .simplebar-track.simplebar-horizontal .simplebar-scrollbar:before {
-    left: 8px;
-    right: 8px;
-  }
-
-  .choices .simplebar-track .simplebar-scrollbar.simplebar-visible:before,
-  .simplebar-track .simplebar-scrollbar.simplebar-visible:before {
-    opacity: 1;
-  }
-
-  .simplebar-scrollbar:before {
-    background-color: #dedede;
-  }
+  
 }
 
 .play-off__block-heading {
@@ -78,7 +47,7 @@
   border-collapse: collapse;
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
-
+  width: 100%;
   th,
   td {
     padding: 0;
@@ -114,9 +83,9 @@
         background-color: lightgrey;
       }
 
-      &:last-child {
-        padding-right: 120px;
-      }
+      // &:last-child {
+      //   padding-right: 120px;
+      // }
     }
   }
 
@@ -194,77 +163,56 @@
   }
 }
 
-.play-off__card-table-wrapper {
-  width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-  // padding-bottom: 20px;
-  -webkit-overflow-scrolling: touch;
-}
-
-.play-off__padding-wrapper {
-  padding-bottom: 20px;
-}
-
-.play-off__card-data {
+.play-off__team-name {
+  font-weight: 700;
+  color: $green;
+  
   position: relative;
+  &:hover {
+    .play-off__legend {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
 }
 
-.play-off__scroll-button {
-  width: 20px;
-  height: 20px;
+.play-off__legend {
   position: absolute;
-  bottom: 0;
-  background-color: $green;
-  outline: none;
-  transition: background-color 0.2s;
-  z-index: 50;
-  outline: none;
-  &--left {
-    left: 40px;
-  }
-  &--right {
-    right: 40px;
-  }
-
-  &:hover,
-  &:focus {
-    background-color: #3c8f88;
-  }
-}
-
-.play-off__scroll-button-content {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  > svg {
-    fill: white;
-  }
-}
-
-.play-off__gradient {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 120px;
-  pointer-events: none;
+  top: calc(100% + 5px);
+  left: -20px;
+  
   z-index: 20;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s;
-  &--left {
-    left: 0;
-    background-image: linear-gradient(to right, white 20px, rgba(white, 0));
+  padding-top: 7px;
+}
+
+.play-off__legend-content {
+  background-color: white;
+  color: #242F37;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  display: block;
+  position: relative;
+  box-shadow: 0px 5px 30px rgba(black, 0.2);
+  @supports (filter: drop-shadow(0 5px 30px rgba(black, 0.2))) {
+    filter: drop-shadow(0 5px 30px rgba(black, 0.2));
+    box-shadow: none;
   }
-  &--right {
-    right: 0;
-    background-image: linear-gradient(to left, white 20px, rgba(white, 0));
-  }
-  &.shown {
-    opacity: 1;
-    visibility: visible;
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: 100%;
+    left: 15px;
+    border: 10px solid transparent;
+    border-bottom: 10px solid white;
+    pointer-events: none;
   }
 }
+
+

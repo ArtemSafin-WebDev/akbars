@@ -1,6 +1,19 @@
 import 'parsleyjs'
+import moment from 'moment'
 
 export default function() {
+  window.Parsley.addValidator("moment", {
+    requirementType: "string",
+    validateString: function(value) {
+      return moment(value, 'D.M.YYYY', true).isValid();
+    },
+    messages: {
+      en: "Please enter a valid date.",
+      ru: "Укажите правильную дату в формате дд.мм.гггг"
+    }
+  });
+
+
   Parsley.addMessages("ru", {
     defaultMessage: "Некорректное значение.",
     type: {

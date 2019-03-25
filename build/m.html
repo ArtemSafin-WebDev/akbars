@@ -18,7 +18,8 @@
 
 <body>
   <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
-    <?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <?xml version="1.0" encoding="utf-8"?>
+    <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <symbol viewBox="0 0 22 18.5" id="51" xmlns="http://www.w3.org/2000/svg">
         <path class="aacls-2" d="M19 0H3a3 3 0 0 0-3 3v9a3 3 0 0 0 3 3h1v2.5a1 1 0 0 0 2 0V15h10v2.5a1 1 0 0 0 2 0V15h1a3 3 0 0 0 3-3V3a3 3 0 0 0-3-3zm1 12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1z" />
         <path class="aacls-2" d="M8.83 6.18a1 1 0 0 0 0-2H6.1a1 1 0 0 0-1 1v2.69a1 1 0 0 0 1 1h1.73v.69H6.1a1 1 0 0 0 0 2h2.73a1 1 0 0 0 1-1V7.87a1 1 0 0 0-1-1H7.1v-.69zM11.7 6a.67.67 0 1 0 .67.67.67.67 0 0 0-.67-.67zm0 2.12a.67.67 0 1 0 .67.67.67.67 0 0 0-.67-.67zm4.21-3.94h-1.1a1 1 0 0 0 0 2h.1v4.38a1 1 0 0 0 2 0V5.18a1 1 0 0 0-1-1z" />
@@ -74,6 +75,9 @@
       </symbol>
       <symbol viewBox="0 0 16.41 16.41" id="cross-fat" xmlns="http://www.w3.org/2000/svg">
         <path d="M16.41 1.41L15 0 8.21 6.79 1.41 0 0 1.41l6.79 6.8L0 15l1.41 1.41 6.8-6.79L15 16.41 16.41 15 9.62 8.21l6.79-6.8z" />
+      </symbol>
+      <symbol viewBox="0 0 433.5 433.5" id="download" xmlns="http://www.w3.org/2000/svg">
+        <path d="M395.25 153h-102V0h-153v153h-102l178.5 178.5L395.25 153zm-357 229.5v51h357v-51h-357z" />
       </symbol>
       <symbol viewBox="0 0 6.12 7.82" id="downvote" xmlns="http://www.w3.org/2000/svg">
         <path fill="currentColor" d="M5.21 3.52H4.06V.5h-2v3.02H.91l2.15 3.37 2.15-3.37z" />
@@ -404,15 +408,375 @@
   <div class="page-content">
     <header class="page-header js-header">
       <div class="container">
-        <h2>This is header</h2>
-        <button id="open">
-          Открыть меню
+
+        <button class="page-header__menu-open js-sidebar-open">
+          <span class="page-header__menu-open-content">
+            <span class="page-header__menu-open-bar"></span>
+            <span class="page-header__menu-open-bar"></span>
+            <span class="page-header__menu-open-bar"></span>
+          </span>
         </button>
+
+
+        <a href="m.html" class="page-header__logo-link">
+          <img src="img/logo/akbars-logo.svg" alt="Логотип Ак Барс" width="48" height="28" class="page-header__logo">
+        </a>
       </div>
     </header>
 
     <main>
-      <div class="container">Content</div>
+      <div class="news-wrapper">
+        <section class="news">
+          <ul class="news__slider js-mobile-news-slider">
+            <li class="news__slider-item">
+              <a href="#" class="news__image-container">
+                <img src="img/Зарипов.jpg" alt="Изображение новости" />
+              </a>
+              <div class="news__description">
+                <h3 class="news__heading">
+                  ДАНИС ЗАРИПОВ — ЛУЧШИЙ СНАЙПЕР«АК БАРСА» В КХЛ
+                </h3>
+              </div>
+            </li>
+            <li class="news__slider-item">
+              <a href="#" class="news__image-container">
+                <img src="img/Avangard.jpg" alt="Изображение новости" />
+              </a>
+              <div class="news__description">
+                <h3 class="news__heading">
+                  ДАНИС ЗАРИПОВ — ЛУЧШИЙ СНАЙПЕР«АК БАРСА» В КХЛ
+                </h3>
+              </div>
+            </li>
+            <li class="news__slider-item">
+              <a href="#" class="news__image-container">
+                <img src="img/Зарипов.jpg" alt="Изображение новости" />
+              </a>
+              <div class="news__description">
+                <h3 class="news__heading">
+                  ДАНИС ЗАРИПОВ — ЛУЧШИЙ СНАЙПЕР«АК БАРСА» В КХЛ
+                </h3>
+              </div>
+            </li>
+            <li class="news__slider-item">
+              <a href="#" class="news__image-container">
+                <img src="img/Avangard.jpg" alt="Изображение новости" />
+              </a>
+              <div class="news__description">
+                <h3 class="news__heading">
+                  ДАНИС ЗАРИПОВ — ЛУЧШИЙ СНАЙПЕР«АК БАРСА» В КХЛ
+                </h3>
+              </div>
+            </li>
+            <li class="news__slider-item">
+              <a href="#" class="news__image-container">
+                <img src="img/Зарипов.jpg" alt="Изображение новости" />
+              </a>
+              <div class="news__description">
+                <h3 class="news__heading">
+                  ДАНИС ЗАРИПОВ — ЛУЧШИЙ СНАЙПЕР«АК БАРСА» В КХЛ
+                </h3>
+              </div>
+            </li>
+          </ul>
+          <div class="news__slider-controls js-news-dots">
+            <a href="#" class="news__all-news-link">Все новости</a>
+          </div>
+        </section>
+        <section class="events">
+          <h2 class="events__heading">СОБЫТИЯ</h2>
+          <div class="tabs js-tabs-container">
+            <nav class="tabs__navigation">
+              <button class="js-tab-button js-tab-button-info">
+                <span class="tabs__button-content">
+                  <svg width="18" height="18" aria-hidden="true" class="icon-calendar-white">
+                    <use xlink:href="#calendar-white" />
+                  </svg>
+                  Календарь
+                </span>
+              </button>
+              <button class="js-tab-button js-tab-button-photos">
+                <span class="tabs__button-content">
+                  <svg width="20" height="20" aria-hidden="true" class="icon-51">
+                    <use xlink:href="#51" />
+                  </svg>
+                  Результаты
+                </span>
+              </button>
+            </nav>
+            <ul class="tabs__content">
+              <li class="tabs__item js-tab">
+                <section class="events__calendar">
+                  <div class="calendar__controls">
+                    <button class="calendar__button" title="Предыдущий месяц">
+                      <span class="calendar__button-content">
+                        <svg width="8" height="12" aria-hidden="true" class="icon-arrow-left">
+                          <use xlink:href="#arrow-left" />
+                        </svg>
+                      </span>
+                    </button>
+                    <span class="calendar__month">
+                      Февраль
+                    </span>
+                    <button class="calendar__button" title="Следующий месяц">
+                      <span class="calendar__button-content">
+                        <svg width="8" height="12" aria-hidden="true" class="icon-arrow-right">
+                          <use xlink:href="#arrow-right" />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="calendar__dates">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Пн</th>
+                          <th>Вт</th>
+                          <th>Ср</th>
+                          <th>Чт</th>
+                          <th>Пт</th>
+                          <th>Сб</th>
+                          <th>Вс</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <span class="calendar__date-info another-month">
+                              <span class="calendar__date-info-day" data-day="28">28</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info another-month">
+                              <a class="calendar__date-link marked-red">
+                                <img src="img/logo/torpedo-logo.png" alt="Лого Торпедо" class="calendar__date-image" />
+                              </a>
+                              <span class="calendar__date-info-day" data-day="29">29</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info another-month">
+                              <span class="calendar__date-info-day" data-day="30">30</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              <span class="calendar__date-info-day" data-day="1">1</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              <a href="#" class="calendar__date-link marked-red">
+                                <img src="img/logo/amur-logo.png" alt="Лого Амура" class="calendar__date-image" />
+                              </a>
+                              <span class="calendar__date-info-day" data-day="2">2</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              <span class="calendar__date-info-day" data-day="3">3</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              <span class="calendar__date-info-day" data-day="4">4</span>
+                            </span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <span class="calendar__date-info">
+                              <span class="calendar__date-info-day" data-day="5">5</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              <span class="calendar__date-info-day" data-day="6">6</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              <a href="#" class="calendar__date-link marked-green">
+                                <img src="img/logo/dynamo-logo.png" alt="Лого Динамо" class="calendar__date-image" />
+                              </a>
+                              <span class="calendar__date-info-day" data-day="7">7</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              <span class="calendar__date-info-day" data-day="8">8</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              <span class="calendar__date-info-day" data-day="9">9</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              <span class="calendar__date-info-day" data-day="10">10</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              <span class="calendar__date-info-day" data-day="11">11</span>
+                            </span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <span class="calendar__date-info">
+                              <span class="calendar__date-info-day" data-day="12">12</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              <span class="calendar__date-info-day" data-day="13">13</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              <a href="#" class="calendar__date-link marked-green">
+                                <img src="img/logo/metallurg-logo.png" alt="Лого Металурга" class="calendar__date-image" />
+                              </a>
+                              <span class="calendar__date-info-day" data-day="14">14</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              <span class="calendar__date-info-day" data-day="15">15</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              <a href="#" class="calendar__date-link marked-green">
+                                <img src="img/logo/sochi-logo.png" alt="Лого Сочи" class="calendar__date-image" />
+                              </a>
+                              <span class="calendar__date-info-day" data-day="16">16</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              <span class="calendar__date-info-day" data-day="17">17</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              <span class="calendar__date-info-day" data-day="18">18</span>
+                            </span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <span class="calendar__date-info">
+                              <span class="calendar__date-info-day" data-day="19">19</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              <a href="#" class="calendar__date-link marked-red">
+                                <img src="img/logo/torpedo-logo.png" alt="Лого Торпедо" class="calendar__date-image" />
+                              </a>
+                              <span class="calendar__date-info-day" data-day="20">20</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              <span class="calendar__date-info-day" data-day="21">21</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              <span class="calendar__date-info-day" data-day="22">22</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              <span class="calendar__date-info-day" data-day="23">23</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              <span class="calendar__date-info-day" data-day="24">24</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              <a href="#" class="calendar__date-link marked-red">
+                                <img src="img/logo/sibir-logo.png" alt="Лого Сибирь" class="calendar__date-image" />
+                              </a>
+                              <span class="calendar__date-info-day" data-day="25">25</span>
+                            </span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <span class="calendar__date-info">
+                              <span class="calendar__date-info-day" data-day="26">26</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              <span class="calendar__date-info-day" data-day="27">27</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info">
+                              <span class="calendar__date-info-day" data-day="28">28</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info another-month">
+                              <span class="calendar__date-info-day" data-day="1">1</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info another-month">
+                              <a class="calendar__date-link marked-green">
+                                <img src="img/logo/sochi-logo.png" alt="Лого Сочи" class="calendar__date-image" />
+                              </a>
+                              <span class="calendar__date-info-day" data-day="2">2</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info another-month">
+                              <span class="calendar__date-info-day" data-day="3">3</span>
+                            </span>
+                          </td>
+                          <td>
+                            <span class="calendar__date-info another-month">
+                              <span class="calendar__date-info-day" data-day="4">4</span>
+                            </span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="calendar__legend">
+                      <span class="calendar__legend-item calendar__legend-item--home">
+                        Домашние матчи
+                      </span>
+                      <span class="calendar__legend-item calendar__legend-item--guest">
+                        Гостевые матчи
+                      </span>
+                    </div>
+                    <div class="calendar__links">
+                      <a href="#" class="calendar__team-calendar-link">
+                        Календарь Ак Барса
+                      </a>
+                      <a href="#" class="calendar__all-calendar-link">
+                        <span class="calendar__all-calendar-link-text">Весь календарь</span>
+                      </a>
+                    </div>
+                  </div>
+                </section>
+              </li>
+              <li class="tabs__item js-tab">
+                Результаты
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
     </main>
     <footer class="page-footer">
       <div class="container">

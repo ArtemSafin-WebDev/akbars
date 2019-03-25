@@ -292,7 +292,7 @@
   border: none;
   box-shadow: 0px 5px 30px rgba(black, 0.2);
   width: 310px;
-  margin-left: 40px;
+  // margin-left: 40px;
   margin-top: 8px;
   z-index: 20;
   @supports (filter: drop-shadow(0px 5px 30px rgba(black, 0.2))) {
@@ -494,4 +494,28 @@
 
 .datepicker--nav-action.-disabled- {
   visibility: visible;
+}
+
+
+// Фотогалерея
+
+
+.fotorama__thumb-border {
+  border-color: $red;
+}
+
+.fotorama__arr,
+.fotorama__fullscreen-icon,
+.fotorama__video-close,
+.fotorama__video-play {
+  background-image: url('../img/fotorama.png');
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .fotorama__arr,
+  .fotorama__fullscreen-icon,
+  .fotorama__video-close,
+  .fotorama__video-play {
+    background-image: url('../img/fotorama@2x.png');
+  }
 }
