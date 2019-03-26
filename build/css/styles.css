@@ -3317,12 +3317,16 @@ svg {
   .page-header__top-panel {
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center; }
+            align-items: center;
+    position: relative;
+    z-index: 100; }
   .page-header__bottom-panel {
     margin-top: 15px;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center; }
+            align-items: center;
+    position: relative;
+    z-index: 90; }
 
 .cookie-policy {
   position: fixed;
@@ -3676,7 +3680,11 @@ svg {
           justify-content: center;
   outline: none;
   -webkit-transition: border-color .2s;
-  transition: border-color .2s; }
+  transition: border-color .2s;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: .2px;
+  margin-bottom: 10px; }
   .main-nav__submenu-buy-link > svg {
     fill: #256963;
     margin-right: 8px; }
@@ -3770,7 +3778,8 @@ svg {
   display: -ms-flexbox;
   display: flex;
   margin-top: 15px;
-  margin-left: 29px; }
+  margin-left: 29px;
+  position: relative; }
   .utility__text-link {
     color: #256963;
     text-transform: uppercase;
@@ -10937,3 +10946,45 @@ svg {
   .registration__legend sup {
     color: #D81E23;
     font-weight: 700; }
+
+.terminals {
+  width: 960px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.terminals__main-heading {
+  color: #242f37;
+  text-transform: uppercase;
+  font-size: 34px;
+  line-height: 44px;
+  margin-bottom: 40px;
+  margin: 0;
+  margin-top: 5px; }
+
+.terminals__content {
+  width: 100%;
+  background-color: #fff;
+  border-top: 2px solid #256963;
+  min-height: 300px;
+  margin-top: 35px;
+  padding: 20px 30px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  font-family: Arial, Helvetica, sans-serif; }
+  .terminals__content p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 15px 0;
+    color: #242f37;
+    outline: none; }
+    .terminals__content p a:link, .terminals__content p a:visited {
+      color: #256963; }
+    .terminals__content p a:hover, .terminals__content p a:focus {
+      text-decoration: underline; }

@@ -8,10 +8,14 @@
   }
   &__top-panel {
     align-items: center;
+    position: relative;
+    z-index: 100;
   }
   &__bottom-panel {
     margin-top: 15px;
     align-items: center;
+    position: relative;
+    z-index: 90;
   }
 
 }
