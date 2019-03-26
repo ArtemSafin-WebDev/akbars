@@ -1,59 +1,80 @@
 .main-nav {
   position: relative;
   z-index: 5000;
-  &__list {
-    display: flex;
+}
+
+.main-nav__list {
+  display: flex;
+}
+
+.main-nav__list-item {
+  margin-right: 2px;
+  display: flex;
+  flex-direction: column;
+  &:last-child {
+    margin-right: 0;
   }
-
-  &__list-item {
-    margin-right: 2px;
-    
-    &:last-child {
-      margin-right: 0;
+  &:hover,
+  &:focus {
+    .main-nav__submenu {
+      opacity: 1;
+      visibility: visible;
+      box-shadow: 0px 10px 50px rgba(black, 0.2);
     }
-    &:hover,
-    &:focus {
-      .main-nav__submenu {
-        opacity: 1;
-        visibility: visible;
-        box-shadow: 0px 10px 50px rgba(black, 0.2);
-      }
 
-      .main-nav__link {
-        background-color: #3c8f88;
-      }
+    .main-nav__link {
+      background-color: #3c8f88;
+    }
+
+    .main-nav__link--tickets {
+      background-color: $red;
     }
   }
+}
 
-  &__link {
-    display: block;
-    padding: 15px 0;
-    padding-top: 17px;
-    padding-bottom: 13px;
-    min-width: 190px;
-    text-align: center;
+.main-nav__link {
+  display: block;
+  padding: 10px;
+  min-width: 165px;
+  min-height: 50px;
+  padding-top: 14px;
+  text-align: center;
+  color: white;
+  background-color: $green;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+  outline: none;
+  font-size: 14px;
+  cursor: default;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  > svg {
+    margin-right: 5px;
+    fill: white;
+  }
+  &:link,
+  &:visited {
     color: white;
-    background-color: $green;
-    text-transform: uppercase;
-    transition: background-color 0.3s;
-    outline: none;
-    font-size: 14px;
-    cursor: default;
-    &:link,
-    &:visited {
-      color: white;
-      cursor: pointer;
-    }
+    cursor: pointer;
+  }
 
+  &:not(.main-nav__link--tickets) {
     &:hover,
     &:focus {
       background-color: #3c8f88;
     }
   }
 
-  
+  &--tickets {
+    background-color: $red;
+    &:hover,
+    &:focus {
+      background-color: $red;
+    }
+  }
 }
-
 
 .main-nav__submenu {
   background-color: #fff;
@@ -76,73 +97,105 @@
     visibility: visible;
     box-shadow: 0px 10px 50px rgba(black, 0.2);
   }
-  &-content {
-    display: flex;
-  }
-  &-heading {
-    font-size: 34px;
-    line-height: 60px;
-    color: $green;
-    text-transform: uppercase;
-    flex-shrink: 0;
-    margin-right: 35px;
-  }
+}
 
-  &-list {
-    display: flex;
-    flex-wrap: wrap;
-    width: 69%;
-    margin-left: auto;
-    margin-top: 18px;
-    &-item {
-      width: 50%;
-     
-      &:nth-child(even) {
-        padding-left: 17px;
-      }
-    }
-  }
+.main-nav__submenu-content {
+  display: flex;
+}
 
-  &-link {
-    color: $green;
-    outline: none;
-    width: 100%;
-    font-size: 16px;
-    line-height: 38px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    &:link,
-    &:visited {
-      color: $green;
-    }
-    &:hover,
-    &:focus {
-      color: $red;
-    }
-  }
-
-  &-icon {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 23px;
-    height: 23px;
-    margin-left: -33px;
-    > svg {
-      width: 15px;
-      height: 15px;
-      fill: $red;
-      &.icon-card {
-        width: 23px;
-        height: 16px;
-      }
+.main-nav__submenu-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 69%;
+  margin-left: auto;
+  margin-top: 18px;
+  &-item {
+    width: 50%;
+    &:nth-child(even) {
+      padding-left: 17px;
     }
   }
 }
 
+.main-nav__submenu-info {
+  margin-right: 35px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
 
+.main-nav__submenu-heading {
+  font-size: 34px;
+  line-height: 60px;
+  color: $green;
+  text-transform: uppercase;
+ 
+  
+}
+
+.main-nav__submenu-link {
+  color: $green;
+  outline: none;
+  width: 100%;
+  font-size: 16px;
+  line-height: 38px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  &:link,
+  &:visited {
+    color: $green;
+  }
+  &:hover,
+  &:focus {
+    color: $red;
+  }
+}
+
+
+.main-nav__submenu-buy-link {
+  color: $green;
+  margin-top: auto;
+  border: 2px solid $green;
+  padding: 12px 18px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  transition: border-color .2s;
+  > svg {
+    fill: $green;
+    margin-right: 8px;
+  }
+  &:link,
+  &:visited {
+    color: $green;
+  }
+  &:hover,
+  &:focus {
+    border-color: $red;
+  }
+}
+
+.main-nav__submenu-icon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 23px;
+  height: 23px;
+  margin-left: -33px;
+  > svg {
+    width: 15px;
+    height: 15px;
+    fill: $red;
+    &.icon-card {
+      width: 23px;
+      height: 16px;
+    }
+  }
+}
 
 .main-nav__submenu--fans {
   .main-nav__submenu-list {

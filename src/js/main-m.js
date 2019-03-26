@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Иниализация всех табов на странице с помощью фабрики функций
 
-  // setTabsOnPage()
+  setTabsOnPage()
 
 
   

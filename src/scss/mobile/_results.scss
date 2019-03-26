@@ -1,0 +1,12 @@
+.results {
+  flex-grow: 1;
+  position: relative;
+}
+
+
+
+.results__wrapper {
+  height: 400px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
