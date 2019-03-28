@@ -23,6 +23,10 @@ import datepickers from './datepickers'
 import loginOpen from './loginOpen'
 import socialOpen from './socialOpen'
 import selectsGroups from './selectsGroup'
+import plansTables from './plansTables'
+import abonementAccordions from './abonementsAccordions'
+import smoothScrollingLinks from './anchorLinksSmoothScrolling'
+import abonementsModals from './abonementsModals'
 
 document.addEventListener('DOMContentLoaded', function() {
   // Полифилл для CSS свойства ObjectFit(заполнение контейнера изображением)
@@ -100,6 +104,24 @@ document.addEventListener('DOMContentLoaded', function() {
   // Открытие меню социальных сетей
 
   socialOpen()
+
+
+  // Таблицы абонементов
+
+  plansTables()
+
+
+  // Аккордионы абонементов
+
+  abonementAccordions()
+
+  // Плавная прокрутка якорей
+
+  smoothScrollingLinks()
+
+  // Модальные окна абонементов
+
+  abonementsModals()
   
 })
 
