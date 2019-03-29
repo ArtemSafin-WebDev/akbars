@@ -11676,3 +11676,30 @@ svg {
       color: #256963; }
     .vip__content p a:hover, .vip__content p a:focus {
       text-decoration: underline; }
+
+.tickets {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #242F37; }
+  .tickets h2 {
+    font-size: 18px;
+    line-height: 24px;
+    color: #242F37; }
+  .tickets table {
+    width: 100%;
+    margin: 20px auto;
+    font-size: 14px;
+    line-height: 18px;
+    border-collapse: collapse; }
+    .tickets table th,
+    .tickets table td {
+      text-align: center;
+      padding: 5px; }
+    .tickets table th {
+      border: 2px solid #EBEBEB; }
+      .tickets table th:nth-child(1) {
+        white-space: nowrap; }
+    .tickets table td {
+      border: 2px solid #EBEBEB; }
+      .tickets table td[colspan] {
+        text-align: left;
+        padding: 10px; }
