@@ -10,6 +10,7 @@
   overflow-y: hidden;
   position: relative;
   z-index: 1;
+  will-change: filter;
 }
 
 
@@ -19,5 +20,8 @@
 
 
 .search-modal-open .page-content {
+  filter: blur(16px);
+}
+.abonement-popup-open .page-content {
   filter: blur(16px);
 }

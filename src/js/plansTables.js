@@ -5,7 +5,7 @@ export default function() {
     const discountSelects = Array.from(table.querySelectorAll('.js-select-discount'))
     const discountedPriceCells = Array.from(table.querySelectorAll('.js-discounted-price'))
     const bonusCells = Array.from(table.querySelectorAll('.js-bonus'))
-    
+    const percents = Array.from(table.querySelectorAll('.js-percent'))
 
     discountSelects.forEach((button, buttonIndex) => {
       button.addEventListener('click', function() {
@@ -32,6 +32,13 @@ export default function() {
               bonusAmount.classList.remove('selected')
             }
           })
+        })
+        percents.forEach((percent, percentIndex) => {
+          if (percentIndex === buttonIndex) {
+            percent.classList.add('selected')
+          } else {
+            percent.classList.remove('selected')
+          }
         })
         console.log(`Selected ${buttonIndex + 1} discount plan`)
       })
