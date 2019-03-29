@@ -4,7 +4,7 @@ import SimpleBar from 'simplebar'
 export default function() {
   const choicesOptions = {
     itemSelectText: '',
-    noResultsText: '',
+    noResultsText: 'По вашему запросу ничего не найдено',
     shouldSort: false,
     searchResultLimit: 999
   }

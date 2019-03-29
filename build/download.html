@@ -858,44 +858,13 @@
             </div>
           </section>
 
-          <section class="videos">
-            <h1 class="videos__main-heading">
-              Видео
+          <section class="download">
+            <h1 class="download__main-heading">
+              Материалы для скачивания
             </h1>
             <div class="selects-group-container">
               <div class="selects-group js-selects-group">
-                <div class="videos__select js-custom-select">
-                  <select name="season" onchange="return console.log('Changed')" required>
-                    <option value="2018" selected>Сезон 2018/2019</option>
-                    <option value="2017">Сезон 2017/2018</option>
-                    <option value="2016">Сезон 2016/2017</option>
-                    <option value="2015">Сезон 2015/2016</option>
-                    <option value="2014">Сезон 2014/2015</option>
-                    <option value="2013">Сезон 2013/2014</option>
-                    <option value="2012">Сезон 2012/2013</option>
-                    <option value="2011">Сезон 2011/2012</option>
-                    <option value="2010">Сезон 2010/2011</option>
-                    <option value="2009">Сезон 2009/2010</option>
-                    <option value="2008">Сезон 2008/2009</option>
-                    <option value="2007">Сезон 2007/2008</option>
-                    <option value="2006">Сезон 2006/2007</option>
-                    <option value="2005">Сезон 2005/2006</option>
-                    <option value="2004">Сезон 2004/2005</option>
-                    <option value="2003">Сезон 2003/2004</option>
-                  </select>
-                </div>
-
-                <div class="videos__select js-custom-select">
-                  <select name="game" onchange="return console.log('Changed')" required>
-                    <option value="0" selected="selected">Все видео</option>
-                    <option value="2">Промо</option>
-                    <option value="1">Ак Барс - Инфо</option>
-                    <option value="3">ТВ передачи</option>
-                  </select>
-                </div>
-              </div>
-              <div class="selects-group js-selects-group">
-                <div class="videos__select js-custom-select">
+                <div class="download__select js-custom-select">
                   <select name="season" onchange="return console.log('Changed')" required>
                     <option value="2018" selected>Сезон 2018/2019</option>
                     <option value="2017">Сезон 2017/2018</option>
@@ -916,275 +885,332 @@
                   </select>
                 </div>
               </div>
+              <div class="selects-group js-selects-group"></div>
             </div>
-            <div class="videos__content">
+            <div class="download__content">
               <div class="tabs js-tabs-container">
                 <nav class="tabs__navigation">
                   <button class="js-tab-button js-select-group-button">
-                    <span>Видео-ролики</span>
+                    <span>Программки</span>
                   </button>
                   <button class="js-tab-button js-select-group-button">
-                    <span>Видео с матчей</span>
+                    <span>Скачать</span>
                   </button>
                 </nav>
                 <ul class="tabs__content">
                   <li class="tabs__item js-tab">
-                    <div class="videos__card">
-                      <ul class="videos__list">
-                        <li class="videos__list-item">
-                          <a class="videos__video-link" data-fancybox data-width="640" data-height="360" href="https://www.youtube.com/watch?v=ffEjvFkkhm8">
-                            <img src="img/selected-video-preview.jpg" alt="" class="videos__video-preview" />
-                            <svg width="60" height="60" aria-hidden="true" class="icon-play videos__play-icon">
-                              <use xlink:href="#play" />
-                            </svg>
-                          </a>
-                          <div class="videos__description">
-                            <h3 class="videos__video-heading">
-                              <a href="#" class="videos__video-heading-link">Зарипов зовёт в «Татнефть Арену». Кто победил в двусторонке «Ак Барса»?</a>
-                            </h3>
-                            <p class="videos__paragraph">
-                              29 марта в 19:00 на льду «Татнефть Арены» состоится официальное закрытие хоккейного
-                              сезона – в программе много интересного, но главным событием станет матч между
-                              перемешанными командами «Белых» и «Зелёных». Хоккеисты уже начали подготовку к
-                              ответственной игре, сыграв двусторонку на базе, и вот как это было!
-                            </p>
-                            <span class="videos__info">
-                              <span class="videos__date">
-                                <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
-                                  <use xlink:href="#news-calendar" />
-                                </svg>
-                                24.03.2019 10:39
-                              </span>
-                              <a href="#" class="videos__download-link">
-                                <svg width="13" height="13" aria-hidden="true" class="icon-download">
-                                  <use xlink:href="#download" />
-                                </svg>
-                              </a>
+                    <div class="download__programs">
+                      <h2 class="download-programs__heading">
+                        Программки к домашним матчам
+                      </h2>
+                      <ul class="download__programs-list">
+                        <li class="download__programs-list-item">
+                          <a href="https://www.ak-bars.ru/programs/2018/01.pdf" class="download__programs-materials">
+                            <span class="download__programs-number">
+                              № 1
                             </span>
-                          </div>
+                            <span class="download__programs-team">
+                              01.09.2018 СКА (Санкт-Петербург)
+                            </span>
+                            <img alt="Просмотреть программку к матчу" height="180" width="126" src="https://www.ak-bars.ru/programs/2018/01/files/thumb/1.jpg" class="download__programs-image" />
+                          </a>
                         </li>
-                        <li class="videos__list-item">
-                          <a class="videos__video-link" data-fancybox data-width="640" data-height="360" href="https://www.youtube.com/watch?v=ffEjvFkkhm8">
-                            <img src="img/video-preview-1.jpg" alt="" class="videos__video-preview" />
-                            <svg width="60" height="60" aria-hidden="true" class="icon-play videos__play-icon">
-                              <use xlink:href="#play" />
-                            </svg>
-                          </a>
-                          <div class="videos__description">
-                            <h3 class="videos__video-heading">
-                              <a href="#" class="videos__video-heading-link">Угадай игрока «Ак Барса» по фото! | Клинкхаммер & Постма</a>
-                            </h3>
-                            <p class="videos__paragraph">
-                              Роб и Пол стали топовыми экспертами по дурацким стрижкам из прошлого, а в команде
-                              неожиданно появились Шарынкевич, Ткичов и Вечеслев.
-                            </p>
-                            <span class="videos__info">
-                              <span class="videos__date">
-                                <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
-                                  <use xlink:href="#news-calendar" />
-                                </svg>
-                                24.03.2019 10:39
-                              </span>
-                              <a href="#" class="videos__download-link">
-                                <svg width="13" height="13" aria-hidden="true" class="icon-download">
-                                  <use xlink:href="#download" />
-                                </svg>
-                              </a>
+                        <li class="download__programs-list-item">
+                          <a href="https://www.ak-bars.ru/programs/2018/01.pdf" class="download__programs-materials">
+                            <span class="download__programs-number">
+                              № 2
                             </span>
-                          </div>
+                            <span class="download__programs-team">
+                              03.09.2018 Динамо (Миснк)
+                            </span>
+                            <span class="download__programs-team">
+                              05.09.2018 Витсязь (Московская область)
+                            </span>
+                            <span class="download__programs-team">
+                              07.09.2018 Барыс (Астана)
+                            </span>
+                            <img alt="Просмотреть программку к матчу" height="180" width="126" src="https://www.ak-bars.ru/programs/2018/02/files/thumb/1.jpg" class="download__programs-image" />
+                          </a>
                         </li>
-                        <li class="videos__list-item">
-                          <a class="videos__video-link" data-fancybox data-width="640" data-height="360" href="https://www.youtube.com/watch?v=ffEjvFkkhm8">
-                            <img src="img/video-preview-2.jpg" alt="" class="videos__video-preview" />
-                            <svg width="60" height="60" aria-hidden="true" class="icon-play videos__play-icon">
-                              <use xlink:href="#play" />
-                            </svg>
-                          </a>
-                          <div class="videos__description">
-                            <h3 class="videos__video-heading">
-                              <a href="#" class="videos__video-heading-link">«Надели коньки – выкладывайтесь». Мастер-класс Зарипова в Аксубаево</a>
-                            </h3>
-                            <p class="videos__paragraph">
-                              Хоккей в Татарстане продолжается! 18 марта Федерация хоккея РТ вместе с нападающим «Ак
-                              Барса» Данисом Зариповым провели на открытом воздухе мастер-класс для юных хоккеистов
-                              Аксубаевского района. Важнейшие советы от пятикратного обладателя Кубка Гагарина, ценные
-                              хоккейные подарки и память на всю жизнь – итог встречи детей с профессионалами из
-                              большого спорта.
-                            </p>
-                            <span class="videos__info">
-                              <span class="videos__date">
-                                <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
-                                  <use xlink:href="#news-calendar" />
-                                </svg>
-                                19.03.2019 12:17
-                              </span>
-                              <a href="#" class="videos__download-link">
-                                <svg width="13" height="13" aria-hidden="true" class="icon-download">
-                                  <use xlink:href="#download" />
-                                </svg>
-                              </a>
+                        <li class="download__programs-list-item">
+                          <a href="https://www.ak-bars.ru/programs/2018/01.pdf" class="download__programs-materials">
+                            <span class="download__programs-number">
+                              № 3
                             </span>
-                          </div>
+                            <span class="download__programs-team">
+                              24.09.2018 Сибирь (Новосибирская область)
+                            </span>
+                            <span class="download__programs-team">
+                              26.09.2018 Куньлунь Ред Стар (Пекин)
+                            </span>
+
+                            <img alt="Просмотреть программку к матчу" height="180" width="126" src="https://www.ak-bars.ru/programs/2018/03/files/thumb/1.jpg" class="download__programs-image" />
+                          </a>
                         </li>
-                        <li class="videos__list-item">
-                          <a class="videos__video-link" data-fancybox data-width="640" data-height="360" href="https://www.youtube.com/watch?v=ffEjvFkkhm8">
-                            <img src="img/video-preview-3.jpg" alt="" class="videos__video-preview" />
-                            <svg width="60" height="60" aria-hidden="true" class="icon-play videos__play-icon">
-                              <use xlink:href="#play" />
-                            </svg>
-                          </a>
-                          <div class="videos__description">
-                            <h3 class="videos__video-heading">
-                              <a href="#" class="videos__video-heading-link">Выпуск №14 программы Pro Ак Барс от 14.03.2019</a>
-                            </h3>
-                            <p class="videos__paragraph">
-                              Раньше чем все…ждали. «Ак Барс» закончил сезон. Его итоги – словами самих хоккеистов. -
-                              А вот они в финале! Как началась весна для будущих звезд главной команды? - Новые ангелы
-                              старого состава. Кто эти девушки, кому удалось попасть в группу поддержки казанского «Ак
-                              Барса»?
-                            </p>
-                            <span class="videos__info">
-                              <span class="videos__date">
-                                <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
-                                  <use xlink:href="#news-calendar" />
-                                </svg>
-                                15.03.2019 15:50
-                              </span>
-                              <a href="#" class="videos__download-link">
-                                <svg width="13" height="13" aria-hidden="true" class="icon-download">
-                                  <use xlink:href="#download" />
-                                </svg>
-                              </a>
+                        <li class="download__programs-list-item">
+                          <a href="https://www.ak-bars.ru/programs/2018/01.pdf" class="download__programs-materials">
+                            <span class="download__programs-number">
+                              № 4
                             </span>
-                          </div>
+                            <span class="download__programs-team">
+                              28.09.2018 Амур (Хабаровск)
+                            </span>
+                            <span class="download__programs-team">
+                              30.09.2018 Адмирал (Владивосток)
+                            </span>
+
+                            <img alt="Просмотреть программку к матчу" height="180" width="126" src="https://www.ak-bars.ru/programs/2018/04/files/thumb/1.jpg" class="download__programs-image" />
+                          </a>
+                        </li>
+                        <li class="download__programs-list-item">
+                          <a href="https://www.ak-bars.ru/programs/2018/01.pdf" class="download__programs-materials">
+                            <span class="download__programs-number">
+                              № 5
+                            </span>
+                            <span class="download__programs-team">
+                              11.10.2018 Спартак (Москва)
+                            </span>
+                            <span class="download__programs-team">
+                              13.10.2018 ХК Сочи (Сочи)
+                            </span>
+
+                            <img alt="Просмотреть программку к матчу" height="180" width="126" src="https://www.ak-bars.ru/programs/2018/05/files/thumb/1.jpg" class="download__programs-image" />
+                          </a>
+                        </li>
+                        <li class="download__programs-list-item">
+                          <a href="https://www.ak-bars.ru/programs/2018/01.pdf" class="download__programs-materials">
+                            <span class="download__programs-number">
+                              № 6
+                            </span>
+                            <span class="download__programs-team">
+                              16.10.2018 Йокерит (Хельсинки)
+                            </span>
+                            <span class="download__programs-team">
+                              18.10.2018 Салават Юлаев (Уфа)
+                            </span>
+
+                            <img alt="Просмотреть программку к матчу" height="180" width="126" src="https://www.ak-bars.ru/programs/2018/06/files/thumb/1.jpg" class="download__programs-image" />
+                          </a>
+                        </li>
+                        <li class="download__programs-list-item">
+                          <a href="https://www.ak-bars.ru/programs/2018/01.pdf" class="download__programs-materials">
+                            <span class="download__programs-number">
+                              № 7
+                            </span>
+                            <span class="download__programs-team">
+                              13.11.2018 Слован (Братислава)
+                            </span>
+                            <span class="download__programs-team">
+                              15.11.2018 ЦСКА (Москва)
+                            </span>
+                            <span class="download__programs-team">
+                              17.11.2018 Динамо (Рига)
+                            </span>
+
+                            <img alt="Просмотреть программку к матчу" height="180" width="126" src="https://www.ak-bars.ru/programs/2018/07/files/thumb/1.jpg" class="download__programs-image" />
+                          </a>
+                        </li>
+                        <li class="download__programs-list-item">
+                          <a href="https://www.ak-bars.ru/programs/2018/01.pdf" class="download__programs-materials">
+                            <span class="download__programs-number">
+                              № 8
+                            </span>
+                            <span class="download__programs-team">
+                              26.11.2018 Нефтехимик (Нижнекамск)
+                            </span>
+                            <span class="download__programs-team">
+                              28.11.2018 Торпедо (Нижегородская область)
+                            </span>
+
+                            <img alt="Просмотреть программку к матчу" height="180" width="126" src="https://www.ak-bars.ru/programs/2018/08/files/thumb/1.jpg" class="download__programs-image" />
+                          </a>
+                        </li>
+                        <li class="download__programs-list-item">
+                          <a href="https://www.ak-bars.ru/programs/2018/01.pdf" class="download__programs-materials">
+                            <span class="download__programs-number">
+                              № 9
+                            </span>
+                            <span class="download__programs-team">
+                              30.11.2018 Локомотив (Ярославль)
+                            </span>
+                            <span class="download__programs-team">
+                              03.12.2018 Северсталь (Череповец)
+                            </span>
+
+                            <img alt="Просмотреть программку к матчу" height="180" width="126" src="https://www.ak-bars.ru/programs/2018/09/files/thumb/1.jpg" class="download__programs-image" />
+                          </a>
+                        </li>
+                        <li class="download__programs-list-item">
+                          <a href="https://www.ak-bars.ru/programs/2018/01.pdf" class="download__programs-materials">
+                            <span class="download__programs-number">
+                              № 10
+                            </span>
+                            <span class="download__programs-team">
+                              17.12.2018 Автомобилист (Екатеринбург)
+                            </span>
+                            <span class="download__programs-team">
+                              19.12.2018 Металлург (Магнитогорск)
+                            </span>
+                            <span class="download__programs-team">
+                              21.12.2018 Трактор (Челябинск)
+                            </span>
+
+                            <img alt="Просмотреть программку к матчу" height="180" width="126" src="https://www.ak-bars.ru/programs/2018/10/files/thumb/1.jpg" class="download__programs-image" />
+                          </a>
+                        </li>
+                        <li class="download__programs-list-item">
+                          <a href="https://www.ak-bars.ru/programs/2018/01.pdf" class="download__programs-materials">
+                            <span class="download__programs-number">
+                              № 11
+                            </span>
+                            <span class="download__programs-team">
+                              30.12.2018 Нефтехимик (Нижнекамск)
+                            </span>
+                            <span class="download__programs-team">
+                              03.01.2019 Авангард (Омская область)
+                            </span>
+                            <span class="download__programs-team">
+                              04.01.2019 Салават Юлаев (Уфа)
+                            </span>
+
+                            <img alt="Просмотреть программку к матчу" height="180" width="126" src="https://www.ak-bars.ru/programs/2018/11/files/thumb/1.jpg" class="download__programs-image" />
+                          </a>
+                        </li>
+                        <li class="download__programs-list-item">
+                          <a href="https://www.ak-bars.ru/programs/2018/01.pdf" class="download__programs-materials">
+                            <span class="download__programs-number">
+                              № 12
+                            </span>
+                            <span class="download__programs-team">
+                              11.01.2019 Динамо (Москва)
+                            </span>
+
+                            <img alt="Просмотреть программку к матчу" height="180" width="126" src="https://www.ak-bars.ru/programs/2018/11/files/thumb/1.jpg" class="download__programs-image" />
+                          </a>
+                        </li>
+                        <li class="download__programs-list-item">
+                          <a href="https://www.ak-bars.ru/programs/2018/01.pdf" class="download__programs-materials">
+                            <span class="download__programs-number">
+                              № 13
+                            </span>
+                            <span class="download__programs-team">
+                              26.01.2019 Трактор (Челябинск)
+                            </span>
+                            <span class="download__programs-team">
+                              29.01.2019 Автомобилист (Екатеринбург)
+                            </span>
+
+                            <img alt="Просмотреть программку к матчу" height="180" width="126" src="https://www.ak-bars.ru/programs/2018/13/files/thumb/1.jpg" class="download__programs-image" />
+                          </a>
+                        </li>
+                        <li class="download__programs-list-item">
+                          <a href="https://www.ak-bars.ru/programs/2018/01.pdf" class="download__programs-materials">
+                            <span class="download__programs-number">
+                              № 14
+                            </span>
+                            <span class="download__programs-team">
+                              05.02.2019 Торпедо (Нижегородская область)
+                            </span>
+
+                            <img alt="Просмотреть программку к матчу" height="180" width="126" src="https://www.ak-bars.ru/programs/2018/14/files/thumb/1.jpg" class="download__programs-image" />
+                          </a>
+                        </li>
+                        <li class="download__programs-list-item">
+                          <a href="https://www.ak-bars.ru/programs/2018/01.pdf" class="download__programs-materials">
+                            <span class="download__programs-number">
+                              № 15
+                            </span>
+                            <span class="download__programs-team">
+                              13.02.2019 ЦСКА (Москва)
+                            </span>
+
+                            <img alt="Просмотреть программку к матчу" height="180" width="126" src="https://www.ak-bars.ru/programs/2018/15/files/thumb/1.jpg" class="download__programs-image" />
+                          </a>
+                        </li>
+                        <li class="download__programs-list-item">
+                          <a href="https://www.ak-bars.ru/programs/2018/01.pdf" class="download__programs-materials">
+                            <span class="download__programs-number">
+                              № 16
+                            </span>
+                            <span class="download__programs-team">
+                              18.02.2019 Металлург (Магнитогорск)
+                            </span>
+                            <img alt="Просмотреть программку к матчу" height="180" width="126" src="https://www.ak-bars.ru/programs/2018/16/files/thumb/1.jpg" class="download__programs-image" />
+                          </a>
+                        </li>
+                        <li class="download__programs-list-item">
+                          <a href="https://www.ak-bars.ru/programs/2018/01.pdf" class="download__programs-materials">
+                            <span class="download__programs-number">
+                              № 17
+                            </span>
+                            <span class="download__programs-team">
+                              01.03.2019 Авангард (Омская область)
+                            </span>
+                            <span class="download__programs-team">
+                              03.03.2019 Авангард (Омская область)
+                            </span>
+                            <img alt="Просмотреть программку к матчу" height="180" width="126" src="https://www.ak-bars.ru/programs/2018/17/files/thumb/1.jpg" class="download__programs-image" />
+                          </a>
                         </li>
                       </ul>
                     </div>
                   </li>
                   <li class="tabs__item js-tab">
-                    <div class="videos__card">
-                      <h2 class="videos__card-heading">
-                        03.03.2019 - «Ак Барс» (Казань) - «Авангард» (Омская обл.) - <a href="#" class="videos__card-heading-score-link">2 : 3</a>
+                    <div class="download__songs">
+                      <h2 class="download-programs__heading">
+                        Песни и гимны, посвященные ХК «Ак Барс»
                       </h2>
-                      <ul class="videos__list videos__list--match-videos">
-                        <li class="videos__list-item">
-                          <a class="videos__video-link" data-fancybox data-width="640" data-height="360" href="https://www.youtube.com/watch?v=ffEjvFkkhm8">
-                            <img src="img/selected-video-preview.jpg" alt="" class="videos__video-preview" />
-                            <svg width="60" height="60" aria-hidden="true" class="icon-play videos__play-icon">
-                              <use xlink:href="#play" />
-                            </svg>
-                          </a>
-                          <div class="videos__description">
-                            <h3 class="videos__video-heading">
-                              <a href="#" class="videos__video-heading-link"><b>1:0</b> Манухов (Свитов, 05:27)</a>
-                            </h3>
-                          </div>
+                      <span class="download__songs-hymn-author">
+                        <img src="https://www.ak-bars.ru/downloads/andreev.jpg" alt="">
+                        <p>Кирилл Андреев "Иванушки International" презентовал новый гимн «Ак Барса»</p>
+                      </span>
+                      <p class="download__songs-hymn-text">
+                        Ак Барс, Ак Барс, Ак Барс, Ак Барс<br />
+                        <b>1.</b> Вот бьется сердце стадиона.<br />
+                        И снова, словно в первый раз,<br />
+                        На лед выходят Чемпионы<br />
+                        Под взглядом миллионов глаз.<br /><br />
+                        Ак Барс, Ак Барс, Ак Барс, Ак Барс<br />
+                        <b>2.</b> Вот быстрый пас – и мы в атаке.<br />
+                        Красивый гол и бег волны.<br />
+                        Поют фанаты. Реют флаги.<br />
+                        Когда мы вместе – мы сильны!<br /><br />
+                        Ак Барс, Ак Барс, Ак Барс, Ак Барс<br />
+                        Здесь и сейчас.<br />
+                        Все как один.<br />
+                        Вперед, Ак Барс!<br />
+                        Мы победим!<br />
+                        Свои ворота взять не дашь,<br />
+                        Все знают –<br />
+                        Кубок будет наш!<br /><br />
+                        <b>3.</b> Сраженья барсов закалили,<br />
+                        Казань никто не сможет взять!<br />
+                        Пусть рев трибун придаст нам силы,<br />
+                        Терпеть и снова побеждать!<br />
+                        Ак Барс, Ак Барс,<br />
+                        и дальше одновременно с кричалкой<br />
+                        (рык барса)<br />
+                      </p>
+                      <ol class="download__songs-list">
+                        <li class="download__songs-list-item">
+                          <a href="https://www.ak-bars.ru/downloads/gimn-akbars2014.mp3">Гимн ХК «Ак Барс» в исполнении Кирилла Андреева</a>
                         </li>
-                        <li class="videos__list-item videos__list-item--match-video">
-                          <a class="videos__video-link" data-fancybox data-width="640" data-height="360" href="https://www.youtube.com/watch?v=ffEjvFkkhm8">
-                            <img src="img/video-preview-1.jpg" alt="" class="videos__video-preview" />
-                            <svg width="60" height="60" aria-hidden="true" class="icon-play videos__play-icon">
-                              <use xlink:href="#play" />
-                            </svg>
-                          </a>
-                          <div class="videos__description">
-                            <h3 class="videos__video-heading">
-                              <a href="#" class="videos__video-heading-link"><b>1:1</b> Ландер (Азеведо, Постма, 6:22, бол.)
-                              </a>
-                            </h3>
-                          </div>
+                        <li class="download__songs-list-item">
+                          <a href="https://www.ak-bars.ru/downloads/hymn.mp3">Гимн ХК «Ак Барс» в исполнении Рената Ибрагимова</a>
                         </li>
-                        <li class="videos__list-item videos__list-item--match-video">
-                          <a class="videos__video-link" data-fancybox data-width="640" data-height="360" href="https://www.youtube.com/watch?v=ffEjvFkkhm8">
-                            <img src="img/video-preview-2.jpg" alt="" class="videos__video-preview" />
-                            <svg width="60" height="60" aria-hidden="true" class="icon-play videos__play-icon">
-                              <use xlink:href="#play" />
-                            </svg>
-                          </a>
-                          <div class="videos__description">
-                            <h3 class="videos__video-heading">
-                              <a href="#" class="videos__video-heading-link">Интервью с П.Постмой после 1го периода
-                              </a>
-                            </h3>
-                          </div>
+                        <li class="download__songs-list-item">
+                          <a href="https://www.ak-bars.ru/downloads/gimn-akbars.mp3">Гимн ХК «Ак Барс» в исполнении Николая Носкова</a>
                         </li>
-                        <li class="videos__list-item videos__list-item--match-video">
-                          <a class="videos__video-link" data-fancybox data-width="640" data-height="360" href="https://www.youtube.com/watch?v=ffEjvFkkhm8">
-                            <img src="img/video-preview-3.jpg" alt="" class="videos__video-preview" />
-                            <svg width="60" height="60" aria-hidden="true" class="icon-play videos__play-icon">
-                              <use xlink:href="#play" />
-                            </svg>
-                          </a>
-                          <div class="videos__description">
-                            <h3 class="videos__video-heading">
-                              <a href="#" class="videos__video-heading-link"><b>1:3</b> Шумаков (Бек, Зернов, 30:38, бол.)
-                              </a>
-                            </h3>
-                          </div>
+                        <li class="download__songs-list-item">
+                          <a href="https://www.ak-bars.ru/downloads/let-lux_akbars.mp3">Let Lux &mdash; «Ак Барс» </a>
                         </li>
-                      </ul>
-                    </div>
-                    <div class="videos__card">
-                      <h2 class="videos__card-heading">
-                        01.03.2019 - «Ак Барс» (Казань) - «Авангард» (Омская обл.) - <a href="#" class="videos__card-heading-score-link">1 : 4</a>
-                      </h2>
-                      <ul class="videos__list videos__list--match-videos">
-                        <li class="videos__list-item">
-                          <a class="videos__video-link" data-fancybox data-width="640" data-height="360" href="https://www.youtube.com/watch?v=ffEjvFkkhm8">
-                            <img src="img/selected-video-preview.jpg" alt="" class="videos__video-preview" />
-                            <svg width="60" height="60" aria-hidden="true" class="icon-play videos__play-icon">
-                              <use xlink:href="#play" />
-                            </svg>
-                          </a>
-                          <div class="videos__description">
-                            <h3 class="videos__video-heading">
-                              <a href="#" class="videos__video-heading-link"><b>1:0</b> Манухов (Свитов, 05:27)</a>
-                            </h3>
-                          </div>
+                        <li class="download__songs-list-item">
+                          <a href="https://www.ak-bars.ru/downloads/masha_semenova_ak_bars.mp3">Маша Семенова &mdash; «Ак Барс» </a>
                         </li>
-                        <li class="videos__list-item videos__list-item--match-video">
-                          <a class="videos__video-link" data-fancybox data-width="640" data-height="360" href="https://www.youtube.com/watch?v=ffEjvFkkhm8">
-                            <img src="img/video-preview-1.jpg" alt="" class="videos__video-preview" />
-                            <svg width="60" height="60" aria-hidden="true" class="icon-play videos__play-icon">
-                              <use xlink:href="#play" />
-                            </svg>
-                          </a>
-                          <div class="videos__description">
-                            <h3 class="videos__video-heading">
-                              <a href="#" class="videos__video-heading-link"><b>1:1</b> Ландер (Азеведо, Постма, 6:22, бол.)
-                              </a>
-                            </h3>
-                          </div>
+                        <li class="download__songs-list-item">
+                          <a href="https://www.ak-bars.ru/downloads/alladinskyi_sverkaet_zolotom_vostok.mp3">Евгений Аладинский &mdash; Сверкает золотом восток </a>
                         </li>
-                        <li class="videos__list-item videos__list-item--match-video">
-                          <a class="videos__video-link" data-fancybox data-width="640" data-height="360" href="https://www.youtube.com/watch?v=ffEjvFkkhm8">
-                            <img src="img/video-preview-2.jpg" alt="" class="videos__video-preview" />
-                            <svg width="60" height="60" aria-hidden="true" class="icon-play videos__play-icon">
-                              <use xlink:href="#play" />
-                            </svg>
-                          </a>
-                          <div class="videos__description">
-                            <h3 class="videos__video-heading">
-                              <a href="#" class="videos__video-heading-link">Интервью с П.Постмой после 1го периода
-                              </a>
-                            </h3>
-                          </div>
-                        </li>
-                        <li class="videos__list-item videos__list-item--match-video">
-                          <a class="videos__video-link" data-fancybox data-width="640" data-height="360" href="https://www.youtube.com/watch?v=ffEjvFkkhm8">
-                            <img src="img/video-preview-3.jpg" alt="" class="videos__video-preview" />
-                            <svg width="60" height="60" aria-hidden="true" class="icon-play videos__play-icon">
-                              <use xlink:href="#play" />
-                            </svg>
-                          </a>
-                          <div class="videos__description">
-                            <h3 class="videos__video-heading">
-                              <a href="#" class="videos__video-heading-link"><b>1:3</b> Шумаков (Бек, Зернов, 30:38, бол.)
-                              </a>
-                            </h3>
-                          </div>
-                        </li>
-                      </ul>
+                      </ol>
                     </div>
                   </li>
                 </ul>

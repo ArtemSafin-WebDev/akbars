@@ -1,0 +1,181 @@
+.download {
+  width: 960px;
+  display: flex;
+  flex-direction: column;
+  .tabs__content {
+    background-color: transparent;
+  }
+
+  .tabs__item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tabs__navigation button {
+    width: 200px;
+  }
+
+  .selects-group {
+    height: 35px;
+    &-container {
+      margin-top: 20px;
+    }
+  }
+}
+
+.download__main-heading {
+  color: #242f37;
+  text-transform: uppercase;
+  font-size: 34px;
+  line-height: 44px;
+  margin-bottom: 40px;
+  margin: 0;
+  margin-top: 5px;
+}
+
+.download__content {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.download__select {
+  width: 100%;
+  position: relative;
+  z-index: 30;
+  // margin-bottom: 20px;
+  &:nth-child(1) {
+    width: 250px;
+    margin-right: 30px;
+  }
+  &:nth-child(2) {
+    width: 250px;
+  }
+}
+
+.download__programs {
+  flex-grow: 1;
+  background-color: #fff;
+  padding: 15px 20px;
+}
+
+.download__songs {
+  flex-grow: 1;
+  background-color: #fff;
+  padding: 15px 20px;
+}
+
+.download-programs__heading {
+  color: $green;
+  font-size: 26px;
+  line-height: 38px;
+  margin-bottom: 20px;
+}
+
+
+.download__programs-list {
+  display: flex;
+  margin: 0 -10px;
+  flex-wrap: wrap;
+  &-item {
+    width: 50%;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+}
+
+
+.download__programs-materials {
+  // background-color: orange;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #242F37;
+  font-size: 14px;
+  line-height: 18px;
+  box-shadow: 0px 0px 10px rgba(black, .1);
+  flex-grow: 1;
+}
+
+
+.download__programs-number {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.download__programs-team {
+  margin-bottom: 5px;
+  // font-size: 12px;
+}
+
+.download__programs-image {
+  display: block;
+  align-self: center;
+  margin-bottom: 8px;
+  margin-top: auto;
+}
+
+
+.download__songs-hymn-text {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #242F37;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+
+.download__songs-hymn-author {
+  float: right;
+  text-align: center;
+  width: 300px;
+  margin: 10px 0;
+  p {
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #606366;
+  }
+}
+
+
+.download__songs-list {
+  list-style: none;
+  margin: 20px 0;
+  margin-top: 70px;
+  counter-reset: songs-counter;
+  &-item {
+    margin-bottom: 10px;
+    counter-increment: songs-counter;
+    padding-left: 20px;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: counter(songs-counter) ". ";
+      left: 0;
+
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: $green;
+      outline: none;
+      &:link,
+      &:visited {
+        color: $green;
+      }
+      &:hover,
+      &:focus {
+        color: $red;
+      }
+    }
+  }
+  
+}

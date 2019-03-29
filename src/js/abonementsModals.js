@@ -26,6 +26,13 @@ export default function() {
         linkModal.classList.remove('active')
         document.body.classList.remove('abonement-popup-open')
       })
-    }  
+
+      document.addEventListener('keydown', function(evt) {
+        if (evt.keyCode === 27) {
+          linkModal.classList.remove('active')
+          document.body.classList.remove('abonement-popup-open')
+        }
+      })
+    }
   })
 }
