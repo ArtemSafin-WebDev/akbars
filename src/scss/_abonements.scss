@@ -224,16 +224,21 @@
   }
 }
 
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
 .abonements__accordions-content {
   padding: 0 25px;
   border-left: 2px solid #ebebeb;
   border-right: 2px solid #ebebeb;
   border-bottom: 2px solid #ebebeb;
-
+  display: none;
+  overflow: hidden;
   flex-direction: column;
   padding-bottom: 30px;
-  display: none;
-
+  
   > p {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;

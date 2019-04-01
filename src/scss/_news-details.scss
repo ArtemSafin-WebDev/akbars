@@ -28,7 +28,6 @@
   }
 }
 
-
 .news-details__news-article {
   padding: 0 40px;
 }
@@ -40,7 +39,6 @@
   font-size: 26px;
   line-height: 38px;
   padding-right: 210px;
-  
 }
 
 .news-details__news-article-information {
@@ -52,7 +50,7 @@
 .news-details__news-article-info-block {
   display: flex;
   align-items: center;
-  color: #94999F;
+  color: #94999f;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   line-height: 24px;
@@ -63,7 +61,7 @@
 
   &:link,
   &:visited {
-    color: #94999F;
+    color: #94999f;
   }
 
   &[href] {
@@ -73,7 +71,7 @@
     }
   }
   > svg {
-    fill: #94999F;
+    fill: #94999f;
     margin-right: 10px;
   }
 }
@@ -81,42 +79,67 @@
 .news-details__news-article-divider {
   height: 14px;
   width: 1px;
-  background-color: #94999F;
+  background-color: #94999f;
   margin-right: 30px;
   margin-left: 10px;
 }
 
-
 .news-details__news-article-content {
   font-family: Arial, Helvetica, sans-serif;
-  color: #242F37;
+  color: #242f37;
   font-size: 16px;
   line-height: 20px;
   margin-top: 32px;
 
-  b {
-    font-size: 18px;
-    line-height: 30px;
-    font-weight: 700;
+  h2 {
+    font-size: 26px;
+    line-height: 38px;
+    margin-bottom: 10px;
   }
 
-  strong {
-    font-size: 16px;
+  h3 {
+    font-size: 20px;
     line-height: 30px;
   }
+
 
   a {
     color: $green;
     outline: none;
-    transition: color .2s;
+    position: relative;
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 5px;
+      height: 1px;
+      width: 100%;
+      background-position: bottom;
+      background-size: 3px 3px;
+      background-repeat: repeat-x;
+      transition: opacity 0.3s;
+    }
+    &::before {
+      background-image: linear-gradient(to right, $green 33%, rgba(255, 255, 255, 0) 0%);
+    }
+    &::after {
+      background-image: linear-gradient(to right, #3c8f88 33%, rgba(255, 255, 255, 0) 0%);
+      opacity: 0;
+    }
     &:link,
     &:visited {
       color: $green;
     }
     &:hover,
     &:focus {
-      color: $red;
-      text-decoration: underline;
+      color: #3c8f88;
+      &::before {
+        opacity: 0;
+      }
+      &::after {
+        opacity: 1;
+      }
     }
   }
 
@@ -126,21 +149,6 @@
     width: 624px;
     margin-top: 8px;
     margin-bottom: 25px;
-    a {
-      color: $green;
-      outline: none;
-      transition: color .2s;
-      &:link,
-      &:visited {
-        color: $green;
-      }
-      &:hover,
-      &:focus {
-        color: $red;
-        text-decoration: underline;
-      }
-
-    }
   }
 
   em {
@@ -183,7 +191,7 @@
     }
 
     > figcaption {
-      color: #94999F;
+      color: #94999f;
       width: 460px;
       display: block;
       .news-details__news-article-photo-author {
@@ -221,8 +229,8 @@
     transform: translate(-50%, -50%);
     z-index: 10;
     fill: white;
-    fill-opacity: .7;
-    transition: fill-opacity .3s;
+    fill-opacity: 0.7;
+    transition: fill-opacity 0.3s;
   }
 
   &:hover,
@@ -233,19 +241,16 @@
   }
 }
 
-
 .news-details__news-article-footer {
   display: flex;
-  border-top: 3px solid #EBEBEB;
+  border-top: 3px solid #ebebeb;
   margin-top: 35px;
   padding-top: 10px;
 }
 
 .news-details__news-article-sponsor {
   width: 230px;
-
 }
-
 
 .news-details__news-article-sponsor-link {
   display: flex;
@@ -261,11 +266,9 @@
   }
 }
 
-
 .news-details__news-article-sponsor-logo {
   width: 178px;
 }
-
 
 .news-details__news-article-sponsor-text {
   padding-left: 33px;
@@ -277,7 +280,7 @@
   display: flex;
   align-items: center;
   font-family: Arial, Helvetica, sans-serif;
-  color: #94999F;
+  color: #94999f;
   font-size: 14px;
   line-height: 30px;
   font-weight: 700;
@@ -295,7 +298,6 @@
   }
 }
 
-
 .news-details__news-article-share-link {
   display: flex;
   align-items: center;
@@ -304,7 +306,7 @@
   height: 22px;
   border: 1px solid $green;
   outline: none;
-  transition: border .2s;
+  transition: border 0.2s;
   &:hover,
   &:focus {
     border: 1px solid $red;
@@ -314,7 +316,7 @@
   }
   > svg {
     fill: $green;
-    transition: fill .2s;
+    transition: fill 0.2s;
     &.icon-telegram {
       width: 13px;
       height: 12px;

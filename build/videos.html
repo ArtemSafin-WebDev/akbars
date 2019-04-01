@@ -654,7 +654,7 @@
           <nav class="main-nav">
             <ul class="main-nav__list">
               <li class="main-nav__list-item" tabindex="0">
-                <a class="main-nav__link">Ак Барс</a>
+                <span class="main-nav__link">Ак Барс</span>
                 <div class="main-nav__submenu">
                   <div class="main-nav__submenu-content">
                     <div class="main-nav__submenu-info">
@@ -689,8 +689,8 @@
                   </div>
                 </div>
               </li>
-              <li class="main-nav__list-item">
-                <a class="main-nav__link">Болельщики</a>
+              <li class="main-nav__list-item" tabindex="0">
+                <span class="main-nav__link">Болельщики</span>
                 <div class="main-nav__submenu">
                   <div class="main-nav__submenu-content">
                     <div class="main-nav__submenu-info">
@@ -730,7 +730,7 @@
                 <a href="news.html" class="main-nav__link">Новости</a>
               </li>
               <li class="main-nav__list-item">
-                <a class="main-nav__link">Медиа</a>
+                <span class="main-nav__link">Медиа</span>
                 <div class="main-nav__submenu">
                   <div class="main-nav__submenu-content">
                     <div class="main-nav__submenu-info">
@@ -754,13 +754,13 @@
                   </div>
                 </div>
               </li>
-              <li class="main-nav__list-item">
-                <a class="main-nav__link main-nav__link--tickets">
+              <li class="main-nav__list-item" tabindex="0">
+                <span class="main-nav__link main-nav__link--tickets">
                   <svg width="20" height="22" aria-hidden="true" class="icon-tickets">
                     <use xlink:href="#tickets" />
                   </svg>
                   Билеты
-                </a>
+                </span>
                 <div class="main-nav__submenu">
                   <div class="main-nav__submenu-content">
                     <div class="main-nav__submenu-info">
@@ -939,6 +939,15 @@
                             </svg>
                           </a>
                           <div class="videos__description">
+                            <span class="videos__info">
+                              <span class="videos__date">
+                                <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
+                                  <use xlink:href="#news-calendar" />
+                                </svg>
+                                24.03.2019 10:39
+                              </span>
+
+                            </span>
                             <h3 class="videos__video-heading">
                               <a href="#" class="videos__video-heading-link">Зарипов зовёт в «Татнефть Арену». Кто победил в двусторонке «Ак Барса»?</a>
                             </h3>
@@ -948,19 +957,6 @@
                               перемешанными командами «Белых» и «Зелёных». Хоккеисты уже начали подготовку к
                               ответственной игре, сыграв двусторонку на базе, и вот как это было!
                             </p>
-                            <span class="videos__info">
-                              <span class="videos__date">
-                                <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
-                                  <use xlink:href="#news-calendar" />
-                                </svg>
-                                24.03.2019 10:39
-                              </span>
-                              <a href="#" class="videos__download-link">
-                                <svg width="13" height="13" aria-hidden="true" class="icon-download">
-                                  <use xlink:href="#download" />
-                                </svg>
-                              </a>
-                            </span>
                           </div>
                         </li>
                         <li class="videos__list-item">
@@ -971,13 +967,6 @@
                             </svg>
                           </a>
                           <div class="videos__description">
-                            <h3 class="videos__video-heading">
-                              <a href="#" class="videos__video-heading-link">Угадай игрока «Ак Барса» по фото! | Клинкхаммер & Постма</a>
-                            </h3>
-                            <p class="videos__paragraph">
-                              Роб и Пол стали топовыми экспертами по дурацким стрижкам из прошлого, а в команде
-                              неожиданно появились Шарынкевич, Ткичов и Вечеслев.
-                            </p>
                             <span class="videos__info">
                               <span class="videos__date">
                                 <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
@@ -985,12 +974,15 @@
                                 </svg>
                                 24.03.2019 10:39
                               </span>
-                              <a href="#" class="videos__download-link">
-                                <svg width="13" height="13" aria-hidden="true" class="icon-download">
-                                  <use xlink:href="#download" />
-                                </svg>
-                              </a>
+
                             </span>
+                            <h3 class="videos__video-heading">
+                              <a href="#" class="videos__video-heading-link">Угадай игрока «Ак Барса» по фото! | Клинкхаммер & Постма</a>
+                            </h3>
+                            <p class="videos__paragraph">
+                              Роб и Пол стали топовыми экспертами по дурацким стрижкам из прошлого, а в команде
+                              неожиданно появились Шарынкевич, Ткичов и Вечеслев.
+                            </p>
                           </div>
                         </li>
                         <li class="videos__list-item">
@@ -1001,6 +993,15 @@
                             </svg>
                           </a>
                           <div class="videos__description">
+                            <span class="videos__info">
+                              <span class="videos__date">
+                                <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
+                                  <use xlink:href="#news-calendar" />
+                                </svg>
+                                19.03.2019 12:17
+                              </span>
+
+                            </span>
                             <h3 class="videos__video-heading">
                               <a href="#" class="videos__video-heading-link">«Надели коньки – выкладывайтесь». Мастер-класс Зарипова в Аксубаево</a>
                             </h3>
@@ -1011,19 +1012,6 @@
                               хоккейные подарки и память на всю жизнь – итог встречи детей с профессионалами из
                               большого спорта.
                             </p>
-                            <span class="videos__info">
-                              <span class="videos__date">
-                                <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
-                                  <use xlink:href="#news-calendar" />
-                                </svg>
-                                19.03.2019 12:17
-                              </span>
-                              <a href="#" class="videos__download-link">
-                                <svg width="13" height="13" aria-hidden="true" class="icon-download">
-                                  <use xlink:href="#download" />
-                                </svg>
-                              </a>
-                            </span>
                           </div>
                         </li>
                         <li class="videos__list-item">
@@ -1034,6 +1022,15 @@
                             </svg>
                           </a>
                           <div class="videos__description">
+                            <span class="videos__info">
+                              <span class="videos__date">
+                                <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
+                                  <use xlink:href="#news-calendar" />
+                                </svg>
+                                15.03.2019 15:50
+                              </span>
+
+                            </span>
                             <h3 class="videos__video-heading">
                               <a href="#" class="videos__video-heading-link">Выпуск №14 программы Pro Ак Барс от 14.03.2019</a>
                             </h3>
@@ -1043,19 +1040,6 @@
                               старого состава. Кто эти девушки, кому удалось попасть в группу поддержки казанского «Ак
                               Барса»?
                             </p>
-                            <span class="videos__info">
-                              <span class="videos__date">
-                                <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
-                                  <use xlink:href="#news-calendar" />
-                                </svg>
-                                15.03.2019 15:50
-                              </span>
-                              <a href="#" class="videos__download-link">
-                                <svg width="13" height="13" aria-hidden="true" class="icon-download">
-                                  <use xlink:href="#download" />
-                                </svg>
-                              </a>
-                            </span>
                           </div>
                         </li>
                       </ul>
@@ -1064,7 +1048,8 @@
                   <li class="tabs__item js-tab">
                     <div class="videos__card">
                       <h2 class="videos__card-heading">
-                        03.03.2019 - «Ак Барс» (Казань) - «Авангард» (Омская обл.) - <a href="#" class="videos__card-heading-score-link">2 : 3</a>
+                        03.03.2019 - «Ак Барс» (Казань) - «Авангард» (Омская обл.) -
+                        <a href="#" class="videos__card-heading-score-link">2 : 3</a>
                       </h2>
                       <ul class="videos__list videos__list--match-videos">
                         <li class="videos__list-item">
@@ -1126,7 +1111,8 @@
                     </div>
                     <div class="videos__card">
                       <h2 class="videos__card-heading">
-                        01.03.2019 - «Ак Барс» (Казань) - «Авангард» (Омская обл.) - <a href="#" class="videos__card-heading-score-link">1 : 4</a>
+                        01.03.2019 - «Ак Барс» (Казань) - «Авангард» (Омская обл.) -
+                        <a href="#" class="videos__card-heading-score-link">1 : 4</a>
                       </h2>
                       <ul class="videos__list videos__list--match-videos">
                         <li class="videos__list-item">
@@ -1196,15 +1182,15 @@
           <h3 class="partners__heading">Партнеры Чемпионата КХЛ сезона 2018/2019</h3>
           <ul class="partners__list">
             <li class="partners__list-item">
-              <a href="http://www.sogaz.ru/" class="partners__link">
+              <a href="http://www.sogaz.ru/" target="_blank" class="partners__link">
                 <div class="partners__logo-container">
-                  <img src="img/partners/sogaz.svg" alt="Согаз" class="partner__logo" width="74" />
+                  <img src="img/partners/sogaz.svg" alt="Согаз" class="partner__logo partner__logo--sogaz" width="74" />
                 </div>
                 <span class="partner__status">Генеральный партнер</span>
               </a>
             </li>
             <li class="partners__list-item">
-              <a href="http://www.mastercard.ru/" class="partners__link">
+              <a href="http://www.mastercard.ru/" target="_blank" class="partners__link">
                 <div class="partners__logo-container">
                   <img src="img/partners/mastercard.svg" alt="Мастеркард" class="partner__logo partner__logo--mastercard" width="54" />
                 </div>
@@ -1212,15 +1198,15 @@
               </a>
             </li>
             <li class="partners__list-item">
-              <a href="http://www.eriell.com/ru/" class="partners__link">
+              <a href="http://www.eriell.com/ru/" target="_blank" class="partners__link">
                 <div class="partners__logo-container">
-                  <img src="img/partners/eriell.png" alt="Eriell" class="partner__logo" width="100" />
+                  <img src="img/partners/eriell.svg" alt="Eriell" class="partner__logo partner__logo--eriell" width="100" />
                 </div>
                 <span class="partner__status">Официальный партнер</span>
               </a>
             </li>
             <li class="partners__list-item">
-              <a href="http://www.durex.ru/" class="partners__link">
+              <a href="http://www.durex.ru/" target="_blank" class="partners__link">
                 <div class="partners__logo-container">
                   <img src="img/partners/durex.png" alt="Дюрекс" class="partner__logo partner__logo--durex" width="100" />
                 </div>
@@ -1228,15 +1214,15 @@
               </a>
             </li>
             <li class="partners__list-item">
-              <a href="http://www.rt.ru/" class="partners__link">
+              <a href="http://www.rt.ru/" target="_blank" class="partners__link">
                 <div class="partners__logo-container">
-                  <img src="img/partners/rostelecom.svg" alt="Ростелеком" class="partner__logo" width="120" />
+                  <img src="img/partners/rostelecom.svg" alt="Ростелеком" class="partner__logo partner__logo--rostelecom" width="120" />
                 </div>
                 <span class="partner__status">Партнер</span>
               </a>
             </li>
             <li class="partners__list-item">
-              <a href="http://www.megafon.ru/" class="partners__link">
+              <a href="http://www.megafon.ru/" target="_blank" class="partners__link">
                 <div class="partners__logo-container">
                   <img src="img/partners/megafon.svg" alt="Мегафон" class="partner__logo partner__logo--megafon" width="130" />
                 </div>
@@ -1244,7 +1230,15 @@
               </a>
             </li>
             <li class="partners__list-item">
-              <a href="http://www.haier.com/ru/" class="partners__link">
+              <a href="https://www.sap.com/cis/index.html" target="_blank" class="partners__link">
+                <div class="partners__logo-container">
+                  <img src="img/partners/sap.svg" alt="SAP" class="partner__logo partner__logo--sap" width="130" />
+                </div>
+                <span class="partner__status">Партнер</span>
+              </a>
+            </li>
+            <li class="partners__list-item">
+              <a href="http://www.haier.com/ru/" target="_blank" class="partners__link">
                 <div class="partners__logo-container">
                   <img src="img/partners/haier.svg" alt="Haier" class="partner__logo partner__logo--haier" width="90" />
                 </div>
@@ -1252,15 +1246,15 @@
               </a>
             </li>
             <li class="partners__list-item">
-              <a href="http://www.hankooktire.com/ru" class="partners__link">
+              <a href="http://www.hankooktire.com/ru" target="_blank" class="partners__link">
                 <div class="partners__logo-container">
-                  <img src="img/partners/hankook.png" alt="hankook" class="partner__logo partner__logo--hankook" width="120" />
+                  <img src="img/partners/hankook.svg" alt="hankook" class="partner__logo partner__logo--hankook" width="120" />
                 </div>
                 <span class="partner__status">Поставщик</span>
               </a>
             </li>
             <li class="partners__list-item">
-              <a href="https://www.ey.com/ru/ru/home" class="partners__link">
+              <a href="https://www.ey.com/ru/ru/home" target="_blank" class="partners__link">
                 <div class="partners__logo-container">
                   <img src="img/partners/EY.svg" alt="EY" class="partner__logo partner__logo--ey" width="60" />
                 </div>
@@ -1268,9 +1262,9 @@
               </a>
             </li>
             <li class="partners__list-item">
-              <a href="https://www.sport-express.ru/" class="partners__link">
+              <a href="https://www.sport-express.ru/" target="_blank" class="partners__link">
                 <div class="partners__logo-container">
-                  <img src="img/partners/sportexpress.png" alt="EY" class="partner__logo partner__logo--se" width="60" />
+                  <img src="img/partners/sport-express.svg" alt="Спортэкспресс" class="partner__logo partner__logo--se" width="60" />
                 </div>
                 <span class="partner__status">Информационный партнер</span>
               </a>

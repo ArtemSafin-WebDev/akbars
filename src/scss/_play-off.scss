@@ -40,7 +40,7 @@
   color: $green;
   font-size: 26px;
   line-height: 38px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 
 .play-off__card-table {
@@ -80,7 +80,13 @@
       position: relative;
       &[colspan] {
         text-align: left;
-        background-color: lightgrey;
+        background-color: transparent;
+        color: $green;
+        font-size: 20px;
+        line-height: 30px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-family: 'Supermolot', 'Helvetica', sans-serif;
       }
 
       // &:last-child {
@@ -164,9 +170,9 @@
 }
 
 .play-off__team-name {
-  font-weight: 700;
-  color: $green;
-  
+  // font-weight: 700;
+  // color: $green;
+  display: inline-block;
   position: relative;
   &:hover {
     .play-off__legend {
@@ -178,9 +184,10 @@
 
 .play-off__legend {
   position: absolute;
-  top: calc(100% + 5px);
-  left: -20px;
-  
+  top: 100%;
+  margin-top: 2px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 20;
   opacity: 0;
   visibility: hidden;
@@ -198,9 +205,9 @@
   line-height: 20px;
   display: block;
   position: relative;
-  box-shadow: 0px 5px 30px rgba(black, 0.2);
+  box-shadow: 0px 5px 30px rgba(black, 0.3);
   @supports (filter: drop-shadow(0 5px 30px rgba(black, 0.2))) {
-    filter: drop-shadow(0 5px 30px rgba(black, 0.2));
+    filter: drop-shadow(0 5px 30px rgba(black, 0.3));
     box-shadow: none;
   }
   &::before {
@@ -208,7 +215,8 @@
     position: absolute;
     display: block;
     bottom: 100%;
-    left: 15px;
+    left: 50%;
+    transform: translateX(-50%);
     border: 10px solid transparent;
     border-bottom: 10px solid white;
     pointer-events: none;

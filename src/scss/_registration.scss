@@ -170,12 +170,12 @@
   padding: 10px 22px;
   // border: 2px solid $red;
   margin-top: 20px;
-  background-color: $red;
+  background-color: $green;
   color: #fff;
   transition: background-color .2s;
   &:hover,
   &:focus {
-    background-color: $green;
+    background-color: $red;
   }
   
 }

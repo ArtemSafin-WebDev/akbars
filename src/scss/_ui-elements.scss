@@ -59,6 +59,80 @@
       right: 0;
     }
   }
+
+  .ps__rail-x,
+  .ps__rail-y {
+    opacity: 1;
+  }
+
+  .ps__rail-y {
+    &::before {
+      content: '';
+      top: 0;
+      left: 0;
+      width: 10px;
+      height: 7px;
+      background-color: white;
+      position: absolute;
+      z-index: 50;
+      pointer-events: none;
+    }
+    &::after {
+      content: '';
+      bottom: 0;
+      left: 0;
+      width: 10px;
+      height: 7px;
+      background-color: white;
+      position: absolute;
+      z-index: 50;
+      pointer-events: none;
+    }
+  }
+
+  .ps__thumb-x,
+  .ps__thumb-y {
+    background-color: #c0c0c0;
+    border-radius: 0;
+  }
+
+  .ps__thumb-y {
+    right: 0;
+    width: 10px;
+    
+  }
+
+  .ps--active-x > .ps__rail-x,
+  .ps--active-y > .ps__rail-y {
+    background-color: #ebebeb;
+    // margin-right: 10px;
+    border-right: 10px solid white;
+    border-left: 10px solid white;
+    // border-top: 7px solid white;
+    // border-bottom: 7px solid white;
+    width: 30px;
+  }
+
+  .ps__rail-y.ps--clicking .ps__thumb-y,
+  .ps__rail-y:focus > .ps__thumb-y,
+  .ps__rail-y:hover > .ps__thumb-y {
+    background-color: #c0c0c0;
+    width: 10px;
+  }
+
+  .ps--focus > .ps__rail-x,
+  .ps--focus > .ps__rail-y,
+  .ps--scrolling-x > .ps__rail-x,
+  .ps--scrolling-y > .ps__rail-y,
+  .ps:hover > .ps__rail-x,
+  .ps:hover > .ps__rail-y {
+    opacity: 1;
+  }
+
+  .ps-container > .ps-scrollbar-x-rail,
+  .ps-container > .ps-scrollbar-y-rail {
+    opacity: 1;
+  }
 }
 
 .choices__list--dropdown .choices__item--selectable {
@@ -113,7 +187,7 @@
   display: block;
   opacity: 0;
   visibility: hidden;
-  transition: all .2s;
+  transition: all 0.2s;
   &::after {
     content: '';
     position: absolute;
@@ -123,15 +197,15 @@
     height: 50px;
 
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+20,ffffff+100&0+20,1+100 */
-    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 1) 100%); /* FF3.6-15 */
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(
       top,
-      rgba(255, 255, 255, 0) 20%,
+      rgba(255, 255, 255, 0) 0%,
       rgba(255, 255, 255, 1) 100%
     ); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(
       to bottom,
-      rgba(255, 255, 255, 0) 20%,
+      rgba(255, 255, 255, 0) 0%,
       rgba(255, 255, 255, 1) 100%
     ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
@@ -155,12 +229,19 @@
     pointer-events: none;
     z-index: 25;
   }
+
+  &.hide-gradient {
+    &::after {
+      opacity: 0;
+      
+    }
+  }
 }
 
-.choices__list-wrapper {
-  max-height: 300px;
-  overflow-y: auto;
-}
+// .choices__list-wrapper {
+//   max-height: 300px;
+//   overflow-y: auto;
+// }
 
 .choices__list--dropdown.is-active {
   box-shadow: 0px 8px 30px rgba(black, 0.05);
@@ -170,7 +251,12 @@
 
 .choices__list--dropdown .choices__list {
   max-height: none;
-  // overflow-y: hidden;
+  overflow: hidden;
+
+  width: 100%;
+  position: relative;
+  max-height: 300px;
+  overflow-y: auto;
 }
 
 .choices__list--dropdown .choices__item {
@@ -180,15 +266,6 @@
   color: #242f37;
   transition: all 0.2s;
   padding-right: 35px;
-  &:last-child {
-    margin-bottom: 30px;
-  }
-
-  &:only-child {
-    margin-bottom: 0;
-    position: relative;
-    z-index: 20;
-  }
 }
 
 .choices__list--dropdown .choices__item--selectable.is-highlighted {
@@ -205,7 +282,6 @@
   height: 35px;
   width: 35px;
   z-index: 10;
-  
 }
 
 .choices[data-type*='select-one']::before {
@@ -220,7 +296,7 @@
   height: 35px;
   width: 35px;
   z-index: 20;
-  transition: transform .2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: transform 0.2s ease-out;
 
   background-position: center top 14px;
   background-repeat: no-repeat;
@@ -230,7 +306,6 @@
 
 .choices[data-type*='select-one'].is-open:after {
   margin: 0;
-  
 }
 
 .choices[data-type*='select-one'].is-open:before {
@@ -243,7 +318,7 @@
   font-family: Arial, Helvetica, sans-serif;
   padding: 0 10px;
   padding-right: 40px;
-  color: $green;
+  // color: $green;
   line-height: 30px;
   height: 46px;
   font-size: 16px;
@@ -348,14 +423,16 @@
   border: 13px solid transparent;
   border-bottom: 15px solid #fff;
   background-color: transparent;
-  
 }
 
-.-bottom-right- .datepicker--pointer, .-top-right- .datepicker--pointer {
+.-bottom-right- .datepicker--pointer,
+.-top-right- .datepicker--pointer {
   right: 80px;
 }
 
-.-bottom-center- .datepicker--pointer, .-bottom-left- .datepicker--pointer, .-bottom-right- .datepicker--pointer {
+.-bottom-center- .datepicker--pointer,
+.-bottom-left- .datepicker--pointer,
+.-bottom-right- .datepicker--pointer {
   transform: rotate(0);
   bottom: 100%;
 }
@@ -458,7 +535,8 @@
   border: 2.5px solid white;
 }
 
-.datepicker--cell.-selected-, .datepicker--cell.-selected-.-current- {
+.datepicker--cell.-selected-,
+.datepicker--cell.-selected-.-current- {
   background-color: $green;
   color: white;
 }
@@ -491,11 +569,11 @@
 
 .datepicker--cell.-disabled- {
   cursor: default;
-  background-color: #EBEBEB;
-  color: #C0C0C0;
+  background-color: #ebebeb;
+  color: #c0c0c0;
   &.-focus- {
-    background-color: #EBEBEB;
-  color: #C0C0C0;
+    background-color: #ebebeb;
+    color: #c0c0c0;
   }
 }
 
@@ -519,14 +597,11 @@
   }
 }
 
-
 .datepicker--nav-action.-disabled- {
   visibility: visible;
 }
 
-
 // Фотогалерея
-
 
 .fotorama__thumb-border {
   border-color: $red;

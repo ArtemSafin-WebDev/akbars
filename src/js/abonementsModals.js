@@ -2,9 +2,9 @@ export default function() {
   const modalOpenLinks = Array.from(document.querySelectorAll('.js-arena-modal-link'))
 
   modalOpenLinks.forEach(link => {
-    console.log(link.href.baseVal)
+    
     const linkModal = document.querySelector(link.href.baseVal)
-    console.log(linkModal)
+   
     if (linkModal) {
       const modalClose = linkModal.querySelector('.js-arena-modal-close')
       // const modalContent = linkModal.querySelector('.js-arena-modal-content')
