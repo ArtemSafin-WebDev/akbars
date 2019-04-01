@@ -7824,9 +7824,12 @@ svg {
   display: flex;
   margin-top: 30px;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
   .partners__list-item {
-    width: 20%;
+    width: 16.6666%;
     -ms-flex-negative: 0;
         flex-shrink: 0;
     margin-bottom: 30px; }
@@ -7849,7 +7852,7 @@ svg {
 
 .partner__logo {
   position: relative;
-  height: 80%;
+  height: 70%;
   width: auto;
   max-width: auto; }
   .partner__logo--sogaz {
@@ -7857,15 +7860,15 @@ svg {
   .partner__logo--eriell {
     height: 65%; }
   .partner__logo--rostelecom {
-    height: 70%; }
-  .partner__logo--megafon {
-    height: 55%; }
-  .partner__logo--haier {
     height: 60%; }
+  .partner__logo--megafon {
+    height: 45%; }
+  .partner__logo--haier {
+    height: 50%; }
   .partner__logo--ey {
     height: 100%; }
   .partner__logo--se {
-    height: 70%; }
+    height: 65%; }
 
 .partners__link {
   color: #7F7F7F;
@@ -11995,13 +11998,13 @@ svg {
       -ms-flex-positive: 1;
           flex-grow: 1;
   background-color: #fff;
-  padding: 15px 20px; }
+  padding: 20px; }
 
 .download-programs__heading {
   color: #256963;
   font-size: 26px;
   line-height: 38px;
-  margin-bottom: 20px; }
+  margin-bottom: 10px; }
 
 .download__programs-list {
   display: -webkit-box;
@@ -12033,7 +12036,7 @@ svg {
   text-align: center;
   padding: 15px;
   font-family: Arial, Helvetica, sans-serif;
-  color: #242F37;
+  color: #242f37;
   font-size: 14px;
   line-height: 18px;
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -12058,9 +12061,10 @@ svg {
 
 .download__songs-hymn-text {
   font-family: Arial, Helvetica, sans-serif;
-  color: #242F37;
+  color: #242f37;
   font-size: 16px;
-  line-height: 30px; }
+  line-height: 30px;
+  margin-bottom: 35px; }
 
 .download__songs-hymn-author {
   float: right;
@@ -12076,8 +12080,7 @@ svg {
 
 .download__songs-list {
   list-style: none;
-  margin: 20px 0;
-  margin-top: 70px;
+  margin-bottom: 50px;
   counter-reset: songs-counter; }
   .download__songs-list-item {
     margin-bottom: 10px;
@@ -12098,9 +12101,11 @@ svg {
       .download__songs-list-item a:hover, .download__songs-list-item a:focus {
         color: #D81E23; }
 
-.download__video-block {
-  margin-top: 50px;
-  margin-bottom: 20px; }
+.download__songs-tertiary-heading {
+  margin: 0;
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 10px; }
 
 .message {
   width: 960px;
