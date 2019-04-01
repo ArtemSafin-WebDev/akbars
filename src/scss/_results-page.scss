@@ -62,6 +62,7 @@
 
   tr {
     display: flex;
+    align-items: flex-start;
     position: relative;
     transition: background-color 0.2s;
   }
@@ -74,7 +75,7 @@
       flex-grow: 1;
     }
     &:nth-child(2) {
-      width: 150px;
+      width: 130px;
       flex-shrink: 0;
     }
     &:nth-child(3) {
@@ -102,19 +103,22 @@
 
   tbody {
     tr:not(.results-page__date-row) {
-      // padding-bottom: 20px;
-      // padding-top: 20px;
-      padding: 30px 0;
+      
+      padding: 16px 0;
       position: relative;
       &:last-child {
         &::after {
           height: 3px;
+          margin-left: auto;
+          left: 20px;
+          width: calc(100% - 40px);
         }
       }
       &::after {
         content: '';
-        width: calc(100% - 40px);
-        left: 20px;
+        width: 190px;
+        left: 50%;
+        margin-left: -95px;
         bottom: 0;
         height: 1px;
         background-color: #ebebeb;
@@ -148,7 +152,8 @@
       }
     }
     &:nth-child(2) {
-      justify-content: center;
+      padding-top: 17px;
+      justify-content: flex-start;
     }
     &:nth-child(3) {
       justify-content: flex-start;
@@ -174,6 +179,7 @@
 
 .results-page__team-text {
   display: block;
+  // margin-top: -30px;
 }
 
 .results-page__team-name {
@@ -203,6 +209,7 @@
   outline: none;
   display: block;
   font-family: 'Supermolot', 'Helvetica', sans-serif;
+  margin-bottom: 10px;
   .results-page__score-numbers {
     position: relative;
     &::before {
@@ -249,7 +256,11 @@
   line-height: 38px;
   position: absolute;
   margin-left: 5px;
+  font-weight: 400;
+  letter-spacing: .6px;
   bottom: -5px;
+
+  text-transform: lowercase;
 }
 
 .results-page__team-image-container {
@@ -259,6 +270,7 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  // margin-top: -30px;
   > img {
     width: 90%;
     height: 90%;
@@ -293,8 +305,8 @@
   background-color: white;
   color: #606366;
   font-family: Arial, Helvetica, sans-serif;
-  border-radius: 5px;
-  padding: 5px 10px;
+ 
+  padding: 8px 10px;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
