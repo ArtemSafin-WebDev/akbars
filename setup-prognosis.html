@@ -452,6 +452,7 @@
     </div>
   </div>
 
+  <div class="match-prognosis__modal active"></div>
   <div class="page-content">
     <div class="khl-placeholder">
       <div class="container">
@@ -829,184 +830,374 @@
     <main>
       <div class="container">
         <div class="flex-row">
-          <section class="sidebar">
+          <section class="sidebar sidebar--prognosis-sidebar">
             <nav class="sidebar-nav">
               <ul class="sidebar-nav__list">
-                <li class="sidebar-nav__list-item active">
-                  <a href="team.html" class="sidebar-nav__link">
-                    Команда
+                <li class="sidebar-nav__list-item">
+                  <a href="abonements.html" class="sidebar-nav__link">
+                    Карта болельщика
                   </a>
                 </li>
                 <li class="sidebar-nav__list-item">
-                  <a href="calendar.html" class="sidebar-nav__link">
-                    Календарь
+                  <a href="prognosis.html" class="sidebar-nav__link sidebar-nav__link--has-submenu">
+                    Прогнозы
+                  </a>
+                  <ul class="sidebar-nav__submenu">
+                    <li class="sidebar-nav__submenu-list-item active">
+                      <a href="match-prognosis.html" class="sidebar-nav__submenu-link">Прогнозы на матчи</a>
+                    </li>
+                    <li class="sidebar-nav__submenu-list-item">
+                      <a href="#" class="sidebar-nav__submenu-link">История прогнозов</a>
+                    </li>
+                    <li class="sidebar-nav__submenu-list-item">
+                      <a href="#" class="sidebar-nav__submenu-link">Лучшие по очкам</a>
+                    </li>
+                    <li class="sidebar-nav__submenu-list-item">
+                      <a href="#" class="sidebar-nav__submenu-link">Топ эффективности</a>
+                    </li>
+                    <li class="sidebar-nav__submenu-list-item">
+                      <a href="#" class="sidebar-nav__submenu-link">Статистика</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="sidebar-nav__list-item">
+                  <a href="fan.html" class="sidebar-nav__link">
+                    Фан-сектор
+                  </a>
+                </li>
+
+                <li class="sidebar-nav__list-item">
+                  <a href="guest.html" class="sidebar-nav__link">
+                    Гостевая книга
                   </a>
                 </li>
                 <li class="sidebar-nav__list-item">
-                  <a href="results.html" class="sidebar-nav__link">
-                    Результаты
-                  </a>
-                </li>
-                <li class="sidebar-nav__list-item">
-                  <a href="#" class="sidebar-nav__link">
-                    Таблицы
-                  </a>
-                </li>
-                <li class="sidebar-nav__list-item">
-                  <a href="statistics.html" class="sidebar-nav__link">
-                    Статистика
-                  </a>
-                </li>
-                <li class="sidebar-nav__list-item">
-                  <a href="#" class="sidebar-nav__link">
-                    Плей-офф
-                  </a>
-                </li>
-                <li class="sidebar-nav__list-item">
-                  <a href="#" class="sidebar-nav__link">
-                    Регламент
-                  </a>
-                </li>
-                <li class="sidebar-nav__list-item">
-                  <a href="#" class="sidebar-nav__link">
-                    История
+                  <a href="useful.html" class="sidebar-nav__link">
+                    Полезные ссылки
                   </a>
                 </li>
               </ul>
             </nav>
-            <div class="banner-column banner-column--left banner-column--match-prognosis">
+            <div class="banner-column banner-column--left banner-column--news">
               <div class="banner-column__item" style="background-image: url(img/banners/hoki.png)">
               </div>
               <div class="banner-column__item" style="background-image: url(img/banners/гимн.png)">
               </div>
             </div>
           </section>
-          <section class="reglament">
-            <h1 class="reglament__main-heading">
-              Регламент
+          <section class="match-prognosis">
+            <h1 class="match-prognosis__main-heading">
+              Ваш прогноз на матчи 4 апреля 2019
             </h1>
-            <div class="reglament__content">
-              <div class="reglament__block">
-                <h2 class="reglament__block-heading">СЕЗОН 2018-2019</h2>
-                <ul class="reglament__list">
-                  <li class="reglament__list-item">
-                    <a href="#" class="reglament__link">
-                      Термины, определения и сокращения <span class="reglament__size">(492 Кб)</span>
-                    </a>
-                  </li>
-                  <li class="reglament__list-item">
-                    <a href="#" class="reglament__link">
-                      Правовой регламент <span class="reglament__size">(1.7 Мб)</span>
-                    </a>
-                  </li>
-                  <li class="reglament__list-item">
-                    <a href="#" class="reglament__link">
-                      Спортивный регламент <span class="reglament__size">(1.2 Мб)</span>
-                    </a>
-                  </li>
-                  <li class="reglament__list-item">
-                    <a href="#" class="reglament__link">
-                      Технический регламент <span class="reglament__size">(1.6 Мб)</span>
-                    </a>
-                  </li>
-                  <li class="reglament__list-item">
-                    <a href="#" class="reglament__link">
-                      Правила поведения в спортсооружении <span class="reglament__size">(317 Кб)</span>
-                    </a>
-                  </li>
-                  <li class="reglament__list-item">
-                    <a href="#" class="reglament__link">
-                      Медицинский регламент <span class="reglament__size">(864 Кб)</span>
-                    </a>
-                  </li>
-                  <li class="reglament__list-item">
-                    <a href="#" class="reglament__link">
-                      Регламент по маркетингу и коммуникациям КХЛ <span class="reglament__size">(820 Кб)</span>
-                    </a>
-                  </li>
-                </ul>
+            <form class="match-prognosis__content" method="POST" action="/">
+              <div class="match-prognosis__modal-content">
+                <div class="match-prognosis__modal-header">
+                  <div>
+                    <h2 class="match-prognosis__modal-heading">
+                      Ваш прогноз
+                    </h2>
+                    <span class="match-prognosis__modal-date">
+                      28 февраля 2019
+                    </span>
+                  </div>
+                  <!-- Дальше добавлен класс js-test-submit просто для демонстрации переключения, при натяжке убрать -->
+                  <button type="button" class="match-prognosis__modal-submit js-test-submit">
+                    <span class="match-prognosis__modal-submit-content">
+                      <span class="loading">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </span>
+                      <span class="save-prognosis visible">
+                        Сохранить прогноз
+                      </span>
+                      <div class="prognosis-saved">
+                        Прогноз сохранен
+                      </div>
+
+                    </span>
+                  </button>
+                </div>
+                <table class="match-prognosis__table">
+                  <thead>
+                    <tr>
+                      <th>Команды</th>
+                      <th>Ваш прогноз</th>
+                      <th>Исход матча</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <span class="teams">
+                          <strong>Ак Барс</strong> (Казань) – <strong>Сибирь</strong> (Новосибирская область)
+                        </span>
+                      </td>
+                      <td>
+                        <div class="prognosis-number-inputs">
+                          <input autocomplete="score" type="text" name="first-team-score[]" placeholder="-" class="js-input-type-number" />
+                          <span class="divider">:</span>
+                          <input autocomplete="score" type="text" name="second-team-score[]" placeholder="-" class="js-input-type-number" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="time-select js-custom-select">
+                          <select name="select" onchange="return console.log('Changed')" required>
+                            <option value="no-prognosis" selected="selected">Прогноз не сделан</option>
+                            <option value="main-time">В основное время</option>
+                            <option value="overtime">В овертайме</option>
+                            <option value="bullit">По буллитам</option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="teams">
+                          <strong>Ак Барс</strong> (Казань) – <strong>Сибирь</strong> (Новосибирская область)
+                        </span>
+                      </td>
+                      <td>
+                        <div class="prognosis-number-inputs">
+                          <input autocomplete="score" value="5" type="text" name="first-team-score[]" placeholder="-" class="js-input-type-number" />
+                          <span class="divider">:</span>
+                          <input autocomplete="score" value="4" type="text" name="second-team-score[]" placeholder="-" class="js-input-type-number" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="time-select js-custom-select">
+                          <select name="select" onchange="return console.log('Changed')" required>
+                            <option value="no-prognosis">Прогноз не сделан</option>
+                            <option value="main-time" selected>В основное время</option>
+                            <option value="overtime">В овертайме</option>
+                            <option value="bullit">По буллитам</option>
+                          </select>
+                        </div>
+                        <button class="remove-prognosis">
+                          <svg width="16" height="16" aria-hidden="true" class="icon-cross">
+                            <use xlink:href="#cross" />
+                          </svg>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="teams">
+                          <strong>Ак Барс</strong> (Казань) – <strong>Сибирь</strong> (Новосибирская область)
+                        </span>
+                      </td>
+                      <td>
+                        <div class="prognosis-number-inputs">
+                          <input autocomplete="score" type="text" name="first-team-score[]" placeholder="-" class="js-input-type-number" />
+                          <span class="divider">:</span>
+                          <input autocomplete="score" type="text" name="second-team-score[]" placeholder="-" class="js-input-type-number" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="time-select js-custom-select">
+                          <select name="select" onchange="return console.log('Changed')" required>
+                            <option value="no-prognosis" selected="selected">Прогноз не сделан</option>
+                            <option value="main-time">В основное время</option>
+                            <option value="overtime">В овертайме</option>
+                            <option value="bullit">По буллитам</option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="teams">
+                          <strong>Ак Барс</strong> (Казань) – <strong>Сибирь</strong> (Новосибирская область)
+                        </span>
+                      </td>
+                      <td>
+                        <div class="prognosis-number-inputs">
+                          <input autocomplete="score" value="5" type="text" name="first-team-score[]" placeholder="-" class="js-input-type-number" />
+                          <span class="divider">:</span>
+                          <input autocomplete="score" value="4" type="text" name="second-team-score[]" placeholder="-" class="js-input-type-number" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="time-select js-custom-select">
+                          <select name="select" onchange="return console.log('Changed')" required>
+                            <option value="no-prognosis">Прогноз не сделан</option>
+                            <option value="main-time" selected>В основное время</option>
+                            <option value="overtime">В овертайме</option>
+                            <option value="bullit">По буллитам</option>
+                          </select>
+                        </div>
+                        <button class="remove-prognosis">
+                          <svg width="16" height="16" aria-hidden="true" class="icon-cross">
+                            <use xlink:href="#cross" />
+                          </svg>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="teams">
+                          <strong>Ак Барс</strong> (Казань) – <strong>Сибирь</strong> (Новосибирская область)
+                        </span>
+                      </td>
+                      <td>
+                        <div class="prognosis-number-inputs">
+                          <input autocomplete="score" type="text" name="first-team-score[]" placeholder="-" class="js-input-type-number" />
+                          <span class="divider">:</span>
+                          <input autocomplete="score" type="text" name="second-team-score[]" placeholder="-" class="js-input-type-number" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="time-select js-custom-select">
+                          <select name="select" onchange="return console.log('Changed')" required>
+                            <option value="no-prognosis" selected="selected">Прогноз не сделан</option>
+                            <option value="main-time">В основное время</option>
+                            <option value="overtime">В овертайме</option>
+                            <option value="bullit">По буллитам</option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="teams">
+                          <strong>Ак Барс</strong> (Казань) – <strong>Сибирь</strong> (Новосибирская область)
+                        </span>
+                      </td>
+                      <td>
+                        <div class="prognosis-number-inputs">
+                          <input autocomplete="score" value="5" type="text" name="first-team-score[]" placeholder="-" class="js-input-type-number" />
+                          <span class="divider">:</span>
+                          <input autocomplete="score" value="4" type="text" name="second-team-score[]" placeholder="-" class="js-input-type-number" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="time-select js-custom-select">
+                          <select name="select" onchange="return console.log('Changed')" required>
+                            <option value="no-prognosis">Прогноз не сделан</option>
+                            <option value="main-time" selected>В основное время</option>
+                            <option value="overtime">В овертайме</option>
+                            <option value="bullit">По буллитам</option>
+                          </select>
+                        </div>
+                        <button class="remove-prognosis">
+                          <svg width="16" height="16" aria-hidden="true" class="icon-cross">
+                            <use xlink:href="#cross" />
+                          </svg>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="teams">
+                          <strong>Ак Барс</strong> (Казань) – <strong>Сибирь</strong> (Новосибирская область)
+                        </span>
+                      </td>
+                      <td>
+                        <div class="prognosis-number-inputs">
+                          <input autocomplete="score" type="text" name="first-team-score[]" placeholder="-" class="js-input-type-number" />
+                          <span class="divider">:</span>
+                          <input autocomplete="score" type="text" name="second-team-score[]" placeholder="-" class="js-input-type-number" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="time-select js-custom-select">
+                          <select name="select" onchange="return console.log('Changed')" required>
+                            <option value="no-prognosis" selected="selected">Прогноз не сделан</option>
+                            <option value="main-time">В основное время</option>
+                            <option value="overtime">В овертайме</option>
+                            <option value="bullit">По буллитам</option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="teams">
+                          <strong>Ак Барс</strong> (Казань) – <strong>Сибирь</strong> (Новосибирская область)
+                        </span>
+                      </td>
+                      <td>
+                        <div class="prognosis-number-inputs">
+                          <input autocomplete="score" value="5" type="text" name="first-team-score[]" placeholder="-" class="js-input-type-number" />
+                          <span class="divider">:</span>
+                          <input autocomplete="score" value="4" type="text" name="second-team-score[]" placeholder="-" class="js-input-type-number" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="time-select js-custom-select">
+                          <select name="select" onchange="return console.log('Changed')" required>
+                            <option value="no-prognosis">Прогноз не сделан</option>
+                            <option value="main-time" selected>В основное время</option>
+                            <option value="overtime">В овертайме</option>
+                            <option value="bullit">По буллитам</option>
+                          </select>
+                        </div>
+                        <button class="remove-prognosis">
+                          <svg width="16" height="16" aria-hidden="true" class="icon-cross">
+                            <use xlink:href="#cross" />
+                          </svg>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="teams">
+                          <strong>Ак Барс</strong> (Казань) – <strong>Сибирь</strong> (Новосибирская область)
+                        </span>
+                      </td>
+                      <td>
+                        <div class="prognosis-number-inputs">
+                          <input autocomplete="score" type="text" name="first-team-score[]" placeholder="-" class="js-input-type-number" />
+                          <span class="divider">:</span>
+                          <input autocomplete="score" type="text" name="second-team-score[]" placeholder="-" class="js-input-type-number" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="time-select js-custom-select">
+                          <select name="select" onchange="return console.log('Changed')" required>
+                            <option value="no-prognosis" selected="selected">Прогноз не сделан</option>
+                            <option value="main-time">В основное время</option>
+                            <option value="overtime">В овертайме</option>
+                            <option value="bullit">По буллитам</option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="teams">
+                          <strong>Ак Барс</strong> (Казань) – <strong>Сибирь</strong> (Новосибирская область)
+                        </span>
+                      </td>
+                      <td>
+                        <div class="prognosis-number-inputs">
+                          <input autocomplete="score" value="5" type="text" name="first-team-score[]" placeholder="-" class="js-input-type-number" />
+                          <span class="divider">:</span>
+                          <input autocomplete="score" value="4" type="text" name="second-team-score[]" placeholder="-" class="js-input-type-number" />
+                        </div>
+                      </td>
+                      <td>
+                        <div class="time-select js-custom-select">
+                          <select name="select" onchange="return console.log('Changed')" required>
+                            <option value="no-prognosis">Прогноз не сделан</option>
+                            <option value="main-time" selected>В основное время</option>
+                            <option value="overtime">В овертайме</option>
+                            <option value="bullit">По буллитам</option>
+                          </select>
+                        </div>
+                        <button class="remove-prognosis">
+                          <svg width="16" height="16" aria-hidden="true" class="icon-cross">
+                            <use xlink:href="#cross" />
+                          </svg>
+                        </button>
+                      </td>
+                    </tr>
+
+                  </tbody>
+                </table>
               </div>
-              <div class="reglament__block">
-                <h2 class="reglament__block-heading">СЕЗОН 2017-2018</h2>
-                <ul class="reglament__list">
-                  <li class="reglament__list-item">
-                    <a href="#" class="reglament__link">
-                      Термины, определения и сокращения <span class="reglament__size">(492 Кб)</span>
-                    </a>
-                  </li>
-                  <li class="reglament__list-item">
-                    <a href="#" class="reglament__link">
-                      Правовой регламент <span class="reglament__size">(1.7 Мб)</span>
-                    </a>
-                  </li>
-                  <li class="reglament__list-item">
-                    <a href="#" class="reglament__link">
-                      Спортивный регламент <span class="reglament__size">(1.2 Мб)</span>
-                    </a>
-                  </li>
-                  <li class="reglament__list-item">
-                    <a href="#" class="reglament__link">
-                      Технический регламент <span class="reglament__size">(1.6 Мб)</span>
-                    </a>
-                  </li>
-                  <li class="reglament__list-item">
-                    <a href="#" class="reglament__link">
-                      Правила поведения в спортсооружении <span class="reglament__size">(317 Кб)</span>
-                    </a>
-                  </li>
-                  <li class="reglament__list-item">
-                    <a href="#" class="reglament__link">
-                      Медицинский регламент <span class="reglament__size">(864 Кб)</span>
-                    </a>
-                  </li>
-                  <li class="reglament__list-item">
-                    <a href="#" class="reglament__link">
-                      Регламент по маркетингу и коммуникациям КХЛ <span class="reglament__size">(820 Кб)</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="reglament__block">
-                <h2 class="reglament__block-heading">СЕЗОН 2016-2017</h2>
-                <ul class="reglament__list">
-                  <li class="reglament__list-item">
-                    <a href="#" class="reglament__link">
-                      Термины, определения и сокращения <span class="reglament__size">(492 Кб)</span>
-                    </a>
-                  </li>
-                  <li class="reglament__list-item">
-                    <a href="#" class="reglament__link">
-                      Правовой регламент <span class="reglament__size">(1.7 Мб)</span>
-                    </a>
-                  </li>
-                  <li class="reglament__list-item">
-                    <a href="#" class="reglament__link">
-                      Спортивный регламент <span class="reglament__size">(1.2 Мб)</span>
-                    </a>
-                  </li>
-                  <li class="reglament__list-item">
-                    <a href="#" class="reglament__link">
-                      Технический регламент <span class="reglament__size">(1.6 Мб)</span>
-                    </a>
-                  </li>
-                  <li class="reglament__list-item">
-                    <a href="#" class="reglament__link">
-                      Правила поведения в спортсооружении <span class="reglament__size">(317 Кб)</span>
-                    </a>
-                  </li>
-                  <li class="reglament__list-item">
-                    <a href="#" class="reglament__link">
-                      Медицинский регламент <span class="reglament__size">(864 Кб)</span>
-                    </a>
-                  </li>
-                  <li class="reglament__list-item">
-                    <a href="#" class="reglament__link">
-                      Регламент по маркетингу и коммуникациям КХЛ <span class="reglament__size">(820 Кб)</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+            </form>
           </section>
         </div>
       </div>
