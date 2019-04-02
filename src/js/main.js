@@ -2,9 +2,8 @@ import '@babel/polyfill'
 import '@fancyapps/fancybox'
 import 'lightcase'
 
-
 import objectFitImages from 'object-fit-images'
-import smoothscroll from 'smoothscroll-polyfill';
+import smoothscroll from 'smoothscroll-polyfill'
 
 import setTabsOnPage from './tabs'
 import initializeSliders from './sliders'
@@ -57,7 +56,6 @@ document.addEventListener('DOMContentLoaded', function() {
   selectsGroups()
 
   // Политика по кукам
-  
 
   cookiePolicy()
 
@@ -89,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   scrollableTable()
 
-  // Подсвечиваем карту зала 
+  // Подсвечиваем карту зала
 
   highlightMaps()
 
@@ -105,11 +103,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   socialOpen()
 
-
   // Таблицы абонементов
 
   plansTables()
-
 
   // Аккордионы абонементов
 
@@ -122,16 +118,41 @@ document.addEventListener('DOMContentLoaded', function() {
   // Модальные окна абонементов
 
   abonementsModals()
-  
+
+  const prognosisSubmit = document.querySelector('.js-test-submit')
+  if (prognosisSubmit) {
+    const loading = prognosisSubmit.querySelector('.loading')
+    const save = prognosisSubmit.querySelector('.save-prognosis')
+    const saved = prognosisSubmit.querySelector('.prognosis-saved')
+    let active = false
+    prognosisSubmit.addEventListener('click', function(event) {
+      if (active) {
+        return false
+      } else {
+        event.preventDefault()
+        active = true
+        prognosisSubmit.classList.add('active')
+        save.classList.remove('visible')
+        loading.classList.add('visible')
+        setTimeout(() => {
+          loading.classList.remove('visible')
+          saved.classList.add('visible')
+          setTimeout(() => {
+            saved.classList.remove('visible')
+            save.classList.add('visible')
+            prognosisSubmit.classList.remove('active')
+            active = false;
+          }, 1000)
+        }, 3000)
+      }
+    })
+  }
 })
 
-
-
-
-window.addEventListener("load", function(event) {
+window.addEventListener('load', function(event) {
   const preloader = document.querySelector('.js-preloader')
 
   if (preloader) {
     preloader.classList.remove('shown')
   }
-});
+})

@@ -3,8 +3,15 @@
   width: 240px;
 }
 
+
+
 .sidebar-nav {
   width: 190px;
+}
+
+
+.sidebar--prognosis-sidebar .sidebar-nav {
+  width: 208px;
 }
 
 .sidebar-nav__link {
@@ -15,6 +22,7 @@
   transition: all 0.2s;
   display: block;
   width: 100%;
+  position: relative;
   &:link,
   &:visited {
     color: $green;
@@ -33,17 +41,64 @@
       color: white;
     }
   }
+
+  &--has-submenu {
+    &::before {
+      position: absolute;
+      content: '';
+      left: 6px;
+      width: 8px;
+      height: 1px;
+      background-color: $green;
+      top: 50%;
+      margin-top: -.5px;
+      transition: background-color .2s;
+    }
+
+    &:hover,
+    &:focus {
+      color: $red;
+      &::before {
+        background-color: $red;
+      }
+    }
+  }
 }
 
-// .flex-row--staff-details .sidebar-nav__list-item {
-//   &:nth-child(2) {
-//     .sidebar-nav__link {
-//       background-color: $green;
-//       color: white;
-//       &:hover,
-//       &:focus {
-//         color: white;
-//       }
-//     }
-//   }
-// }
+
+.sidebar-nav__submenu {
+
+}
+
+.sidebar-nav__submenu-list-item {
+ 
+}
+
+.sidebar-nav__submenu-link {
+  color: $green;
+  font-size: 14px;
+  line-height: 35px;
+  letter-spacing: .2px;
+  padding-left: 30px;
+  display: block;
+  outline: none;
+  transition: color .2s;
+  &:link,
+  &:visited {
+    color: $green;
+  }
+
+  &:hover,
+  &:focus {
+    color: $red;
+  }
+
+  .active & {
+    background-color: $green;
+    color: white;
+  }
+}
+
+
+
+

@@ -106,6 +106,8 @@
       &::after {
         opacity: 1;
       }
+
+      
     }
   }
 
@@ -196,6 +198,13 @@
       &[colspan] {
         text-align: left;
         padding: 10px;
+      }
+    }
+
+    a {
+      &::before,
+      &::after {
+        display: none;
       }
     }
   }
@@ -413,10 +422,33 @@
       fill: #fff;
       fill-opacity: 0.8;
       transition: fill-opacity 0.3s;
+      &--green {
+        fill: $green;
+      }
     }
     &:hover,
     &:focus {
       .standard-video__play-icon {
+        fill-opacity: 1;
+      }
+    }
+  }
+
+
+  .hoverable-icon {
+    fill-opacity: 0.8;
+    transition: fill-opacity 0.3s;
+  }
+
+  .icon-link {
+    outline: none;
+    &::before,
+    &::after {
+      display: none;
+    }
+    &:hover,
+    &:focus {
+      .hoverable-icon {
         fill-opacity: 1;
       }
     }
