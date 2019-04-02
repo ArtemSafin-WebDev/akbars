@@ -12474,6 +12474,9 @@ svg {
       border-bottom: 16px solid white;
       pointer-events: none; }
 
+.match-prognosis__modal-content {
+  margin-top: 20px; }
+
 .match-prognosis__modal-heading {
   font-size: 34px;
   line-height: 40px;
