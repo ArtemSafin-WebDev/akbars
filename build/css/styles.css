@@ -12757,6 +12757,10 @@ svg {
   .match-prognosis__table .time-select .choices[data-type*='select-one']::before {
     background-size: 12px;
     background-position: center top 15px; }
+  .match-prognosis__table .time-select .choices[data-type*="select-one"] .choices__input {
+    display: none; }
+  .match-prognosis__table .time-select .choices__list--dropdown::before {
+    display: none; }
   .match-prognosis__table .remove-prognosis {
     position: absolute;
     outline: none;

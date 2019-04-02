@@ -569,6 +569,15 @@
       background-size: 12px;
       background-position: center top 15px;
     }
+
+    .choices[data-type*="select-one"] .choices__input {
+      display: none;
+    }
+
+    .choices__list--dropdown::before {
+      display: none;
+    }
+
   }
 
   .remove-prognosis {
