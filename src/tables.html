@@ -42,7 +42,7 @@
               </h1>
               <div class="tables-page__selects-block">
                 <div class="tables-page__select js-custom-select">
-                  <select name="season" id="season" onchange="return console.log('Changed')" required>
+                  <select name="season" id="season" onchange="return console.log(event.target.value)" required>
                     <option value="2018-01" selected="selected">Сезон 2018/2019</option>
                     <option value="2017-01">Сезон 2017/2018</option>
                     <option value="2016-01">Сезон 2016/2017</option>

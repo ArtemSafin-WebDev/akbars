@@ -14,13 +14,15 @@ export default function() {
   const customSelects = Array.from(document.querySelectorAll('.js-custom-select'))
   const isIE = /Trident|MSIE/.test(navigator.userAgent)
 
+  var selectInstances = []
+
   customSelects.forEach(select => {
     const selectElement = select.querySelector('select')
    
     let scrolledToTop = false
 
     if (selectElement) {
-      new Choices(selectElement, choicesOptions)
+      selectInstances.push(new Choices(selectElement, choicesOptions))
     } else {
       throw new Error('No select input element present')
     }
@@ -61,4 +63,8 @@ export default function() {
       false
     )
   })
+
+  
+
+  window.selectInstances = selectInstances
 }
