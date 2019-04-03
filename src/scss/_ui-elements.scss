@@ -99,7 +99,6 @@
   .ps__thumb-y {
     right: 0;
     width: 10px;
-    
   }
 
   .ps--active-x > .ps__rail-x,
@@ -233,7 +232,6 @@
   &.hide-gradient {
     &::after {
       opacity: 0;
-      
     }
   }
 }
@@ -620,5 +618,50 @@
   .fotorama__video-close,
   .fotorama__video-play {
     background-image: url('../img/fotorama@2x.png');
+  }
+}
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 16px;
+  input {
+    @include visuallyHidden();
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ebebeb;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    &::before {
+      position: absolute;
+      content: '';
+      height: 22px;
+      width: 22px;
+      left: 0px;
+      bottom: -3px;
+      background-color: $green;
+      transition: 0.4s;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    .slider {
+      &::before {
+        background-color: #3C8F88;
+      }
+    }
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(26px);
   }
 }
