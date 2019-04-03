@@ -3491,6 +3491,47 @@ svg {
   .fotorama__video-play {
     background-image: url("../img/fotorama@2x.png"); } }
 
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 16px; }
+  .toggle input {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; }
+  .toggle .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ebebeb;
+    -webkit-transition: 0.4s;
+    transition: 0.4s; }
+    .toggle .slider::before {
+      position: absolute;
+      content: '';
+      height: 22px;
+      width: 22px;
+      left: 0px;
+      bottom: -3px;
+      background-color: #256963;
+      -webkit-transition: 0.4s;
+      transition: 0.4s; }
+  .toggle:hover .slider::before, .toggle:focus .slider::before {
+    background-color: #3C8F88; }
+  .toggle input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+            transform: translateX(26px); }
+
 .page-header {
   margin-top: 20px;
   position: relative;
@@ -13311,7 +13352,7 @@ svg {
   cursor: pointer;
   margin-top: 15px; }
   .default-ui button[type='submit']:hover, .default-ui button[type='submit']:focus {
-    background-color: #D81E23; }
+    background-color: #3C8F88; }
 
 .default-ui .row {
   display: -webkit-box;
