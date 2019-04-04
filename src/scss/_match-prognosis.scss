@@ -589,6 +589,11 @@
     .choices__list--dropdown::before {
       display: none;
     }
+
+    .choices[data-type*=select-one]::after, .choices[data-type*=select-one]::before {
+      height: 34px;
+      width: 34px;
+    }
   }
 
   .remove-prognosis {
