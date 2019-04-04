@@ -11,11 +11,12 @@
   margin-right: 2px;
   display: flex;
   flex-direction: column;
+  outline: none;
   &:last-child {
     margin-right: 0;
   }
-  &:hover,
-  &:focus {
+
+  &:hover {
     .main-nav__submenu {
       opacity: 1;
       visibility: visible;
@@ -30,6 +31,8 @@
       background-color: $red;
     }
   }
+
+  
 }
 
 .main-nav__link {

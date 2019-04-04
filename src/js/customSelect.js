@@ -22,7 +22,10 @@ export default function() {
     let scrolledToTop = false
 
     if (selectElement) {
-      selectInstances.push(new Choices(selectElement, choicesOptions))
+      selectInstances.push({
+        original: selectElement,
+        choices: new Choices(selectElement, choicesOptions)
+      })
     } else {
       throw new Error('No select input element present')
     }

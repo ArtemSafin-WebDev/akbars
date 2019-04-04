@@ -2891,12 +2891,14 @@ svg {
           flex-direction: column;
   margin-left: 20px;
   width: 240px;
-  margin-top: 52px; }
+  margin-top: 42px; }
   .banner-column--left {
     margin-left: 0;
     margin-right: 40px; }
   .banner-column--news {
     margin-top: 80px; }
+  .banner-column--prognosis {
+    margin-top: 40px; }
   .banner-column--match-prognosis {
     margin-top: 60px; }
   .banner-column--news-details {
@@ -3491,6 +3493,31 @@ svg {
   .fotorama__video-play {
     background-image: url("../img/fotorama@2x.png"); } }
 
+.fotorama__nav-wrap {
+  position: relative; }
+  .fotorama__nav-wrap::before {
+    content: '';
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 60px;
+    height: 100%;
+    background: -webkit-gradient(linear, left top, right top, from(white), to(rgba(255, 255, 255, 0)));
+    background: linear-gradient(to right, white, rgba(255, 255, 255, 0));
+    z-index: 40;
+    pointer-events: none; }
+  .fotorama__nav-wrap::after {
+    content: '';
+    right: 0;
+    top: 0;
+    position: absolute;
+    width: 60px;
+    height: 100%;
+    background: -webkit-gradient(linear, right top, left top, from(white), to(rgba(255, 255, 255, 0)));
+    background: linear-gradient(to left, white, rgba(255, 255, 255, 0));
+    z-index: 40;
+    pointer-events: none; }
+
 .toggle {
   position: relative;
   display: inline-block;
@@ -3755,17 +3782,18 @@ svg {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column; }
+          flex-direction: column;
+  outline: none; }
   .main-nav__list-item:last-child {
     margin-right: 0; }
-  .main-nav__list-item:hover .main-nav__submenu, .main-nav__list-item:focus .main-nav__submenu {
+  .main-nav__list-item:hover .main-nav__submenu {
     opacity: 1;
     visibility: visible;
     -webkit-box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.2);
             box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.2); }
-  .main-nav__list-item:hover .main-nav__link, .main-nav__list-item:focus .main-nav__link {
+  .main-nav__list-item:hover .main-nav__link {
     background-color: #3c8f88; }
-  .main-nav__list-item:hover .main-nav__link--tickets, .main-nav__list-item:focus .main-nav__link--tickets {
+  .main-nav__list-item:hover .main-nav__link--tickets {
     background-color: #D81E23; }
 
 .main-nav__link {
@@ -7976,6 +8004,21 @@ svg {
     color: #D81E23; }
     .sidebar-nav__link--has-submenu:hover::before, .sidebar-nav__link--has-submenu:focus::before {
       background-color: #D81E23; }
+  .sidebar-nav__link--collapsed::after {
+    position: absolute;
+    content: '';
+    left: 6px;
+    width: 8px;
+    height: 1px;
+    background-color: #256963;
+    top: 50%;
+    margin-top: -.5px;
+    -webkit-transition: background-color .2s;
+    transition: background-color .2s;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg); }
+  .active .sidebar-nav__link--has-submenu::before, .active .sidebar-nav__link--has-submenu::after {
+    background-color: white; }
 
 .sidebar-nav__submenu-link {
   color: #256963;
@@ -8303,7 +8346,7 @@ svg {
           align-items: center;
   margin-right: 40px; }
 
-.staff-details__khl-link {
+.staff-details__external-link {
   color: #256963;
   font-size: 16px;
   line-height: 20px;
@@ -8313,12 +8356,35 @@ svg {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 20px; }
-  .staff-details__khl-link:link, .staff-details__khl-link:visited {
+  margin-top: 10px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -webkit-transition: color .2s;
+  transition: color .2s; }
+  .staff-details__external-link:link, .staff-details__external-link:visited {
     color: #256963; }
-  .staff-details__khl-link > svg {
-    fill: #D81E23;
-    margin-left: 10px; }
+  .staff-details__external-link svg {
+    fill: #256963;
+    -webkit-transition: fill .2s;
+    transition: fill .2s; }
+  .staff-details__external-link:hover, .staff-details__external-link:focus {
+    color: #D81E23; }
+    .staff-details__external-link:hover svg, .staff-details__external-link:focus svg {
+      fill: #D81E23; }
+
+.staff-details__external-link-icon-container {
+  margin-right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 16px;
+  height: 16px; }
 
 .staff-details__link-back {
   font-size: 16px;
@@ -9450,7 +9516,7 @@ svg {
   background-color: #fff;
   border-top: 2px solid #256963;
   padding: 40px;
-  padding-bottom: 20px;
+  padding-bottom: 60px;
   position: relative;
   z-index: 1;
   display: -webkit-box;
@@ -9463,7 +9529,7 @@ svg {
   .prognosis::before {
     content: '';
     width: 100%;
-    height: 225px;
+    height: 100px;
     top: 0;
     left: 0;
     background-color: #EBEBEB;
@@ -9486,16 +9552,22 @@ svg {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-top: 30px; }
+  margin: 0 -10px; }
 
 .prognosis__links-list-item {
-  background-color: #fff;
+  background-color: transparent;
+  width: 50%;
   margin-right: auto;
-  -webkit-box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.12);
-          box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.12);
+  padding: 0 10px;
   margin-bottom: 20px; }
   .prognosis__links-list-item:nth-child(2n) {
     margin-right: 0; }
+  .prognosis__links-list-item--wide {
+    width: 100%; }
+    .prognosis__links-list-item--wide .prognosis__link {
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
 
 .prognosis__icon {
   width: 30px;
@@ -9509,7 +9581,8 @@ svg {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-right: 20px; }
+  margin-right: 20px;
+  margin-bottom: 3px; }
   .prognosis__icon > svg {
     color: #D81E23;
     fill: #256963; }
@@ -9528,8 +9601,12 @@ svg {
   outline: none;
   -webkit-transition: color .2s;
   transition: color .2s;
-  width: 430px;
-  padding: 37px 40px; }
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.12);
+  min-height: 100px;
+  padding: 35px 40px;
+  padding-bottom: 32px; }
   .prognosis__link:link, .prognosis__link:visited {
     color: #256963; }
   .prognosis__link:hover, .prognosis__link:focus {
@@ -12254,6 +12331,13 @@ svg {
   margin-bottom: 40px;
   margin: 0;
   margin-top: 5px; }
+  .match-prognosis__main-heading a {
+    color: #256963;
+    outline: none; }
+    .match-prognosis__main-heading a:link, .match-prognosis__main-heading a:visited {
+      color: #256963; }
+    .match-prognosis__main-heading a:hover, .match-prognosis__main-heading a:focus {
+      text-decoration: underline; }
 
 .match-prognosis__content {
   width: 100%;
@@ -12843,6 +12927,10 @@ svg {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1; }
+  .match-prognosis__table-content--no-flex-grow {
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0; }
 
 .match-prognosis__history-table-block table {
   width: 100%;
@@ -12950,6 +13038,9 @@ svg {
       color: white; }
     .match-prognosis__history-table-block table tr.matched + tr td::before {
       display: none; }
+    .match-prognosis__history-table-block table tr.cancelled td {
+      color: #D81E23;
+      text-decoration: line-through; }
     .match-prognosis__history-table-block table tr.summary td {
       background-color: #D81E23;
       color: white; }
@@ -13001,6 +13092,12 @@ svg {
     border: 10px solid transparent;
     border-bottom: 10px solid white;
     pointer-events: none; }
+
+.match-prognosis__rules {
+  padding: 30px 40px; }
+
+.match-prognosis__remark-block {
+  padding: 20px 40px; }
 
 .default {
   width: 960px;
@@ -13076,6 +13173,8 @@ svg {
   color: #242f37; }
   .default-ui p:last-child {
     margin-bottom: 0; }
+  .default-ui p:first-child {
+    margin-top: 0; }
 
 .default-ui a {
   color: #256963;
@@ -13143,6 +13242,10 @@ svg {
       border-radius: 50%;
       -ms-flex-negative: 0;
           flex-shrink: 0; }
+
+.default-ui sup {
+  color: #D81E23;
+  font-weight: 700; }
 
 .default-ui ol {
   margin: 10px;

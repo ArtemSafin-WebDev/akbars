@@ -26,14 +26,21 @@ import plansTables from './plansTables'
 import abonementAccordions from './abonementsAccordions'
 import smoothScrollingLinks from './anchorLinksSmoothScrolling'
 import abonementsModals from './abonementsModals'
+import prognosisSubmitTest from './prognosisSubmitTest';
+import touchDetection from './touchDetection';
 
 document.addEventListener('DOMContentLoaded', function() {
+  
   // Полифилл для CSS свойства ObjectFit(заполнение контейнера изображением)
   objectFitImages()
 
   // Полифилл для плавного скроллинга
 
   smoothscroll.polyfill()
+
+  // Определяем тач устройства
+
+  touchDetection()
 
   // Инициализиуем слайдеры на странице
 
@@ -119,34 +126,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
   abonementsModals()
 
-  const prognosisSubmit = document.querySelector('.js-test-submit')
-  if (prognosisSubmit) {
-    const loading = prognosisSubmit.querySelector('.loading')
-    const save = prognosisSubmit.querySelector('.save-prognosis')
-    const saved = prognosisSubmit.querySelector('.prognosis-saved')
-    let active = false
-    prognosisSubmit.addEventListener('click', function(event) {
-      if (active) {
-        return false
-      } else {
-        event.preventDefault()
-        active = true
-        prognosisSubmit.classList.add('active')
-        save.classList.remove('visible')
-        loading.classList.add('visible')
-        setTimeout(() => {
-          loading.classList.remove('visible')
-          saved.classList.add('visible')
-          setTimeout(() => {
-            saved.classList.remove('visible')
-            save.classList.add('visible')
-            prognosisSubmit.classList.remove('active')
-            active = false;
-          }, 1000)
-        }, 3000)
-      }
-    })
-  }
+  // Тест кнопки прогноза
+
+  prognosisSubmitTest()
+
 })
 
 window.addEventListener('load', function(event) {

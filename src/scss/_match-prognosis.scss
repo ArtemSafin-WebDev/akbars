@@ -12,6 +12,18 @@
   margin-bottom: 40px;
   margin: 0;
   margin-top: 5px;
+  a {
+    color: $green;
+    outline: none;
+    &:link,
+    &:visited {
+      color: $green;
+    }
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
 }
 
 .match-prognosis__content {
@@ -627,6 +639,9 @@
   margin-top: 35px;
   padding: 0;
   flex-grow: 1;
+  &--no-flex-grow {
+    flex-grow: 0;
+  }
 }
 
 .match-prognosis__history-table-block {
@@ -800,6 +815,13 @@
         }
       }
 
+      &.cancelled {
+        td {
+          color: $red;
+          text-decoration: line-through;
+        }
+      }
+
       &.summary {
         td {
           background-color: $red;
@@ -864,4 +886,15 @@
     border-bottom: 10px solid white;
     pointer-events: none;
   }
+}
+
+
+.match-prognosis__rules {
+  padding: 30px 40px;
+}
+
+
+.match-prognosis__remark-block {
+  padding: 20px 40px;
+
 }

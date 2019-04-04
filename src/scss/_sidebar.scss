@@ -63,6 +63,29 @@
       }
     }
   }
+
+  &--collapsed {
+    &::after {
+      position: absolute;
+      content: '';
+      left: 6px;
+      width: 8px;
+      height: 1px;
+      background-color: $green;
+      top: 50%;
+      margin-top: -.5px;
+      transition: background-color .2s;
+      transform: rotate(90deg);
+    }
+  }
+
+
+  .active &--has-submenu {
+    &::before,
+    &::after {
+      background-color: white;
+    }
+  }
 }
 
 

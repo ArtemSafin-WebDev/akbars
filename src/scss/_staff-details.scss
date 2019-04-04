@@ -32,22 +32,44 @@
   margin-right: 40px;
 }
 
-.staff-details__khl-link {
+.staff-details__external-link {
   color: $green;
   font-size: 16px;
   line-height: 20px;
   display: flex;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 10px;
+  align-self: flex-start;
+  transition: color .2s;
   &:link,
   &:visited {
     color: $green;
   }
 
-  > svg {
-    fill: $red;
-    margin-left: 10px;
+  svg {
+    fill: $green;
+    
+    transition: fill .2s;
   }
+
+  &:hover,
+  &:focus {
+    color: $red;
+    svg {
+      fill: $red;
+    }
+  }
+}
+
+
+.staff-details__external-link-icon-container {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  
 }
 
 .staff-details__link-back {
@@ -93,6 +115,7 @@
   
   outline: none;
   position: relative;
+ 
   > img {
     width: 100%;
     height: 100%;

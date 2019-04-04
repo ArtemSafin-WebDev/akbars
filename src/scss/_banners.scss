@@ -25,7 +25,7 @@
   flex-direction: column;
   margin-left: 20px;
   width: 240px;
-  margin-top: 52px;
+  margin-top: 42px;
   &--left {
     margin-left: 0;
     margin-right: 40px;
@@ -33,6 +33,10 @@
 
   &--news {
     margin-top: 80px;
+  }
+
+  &--prognosis {
+    margin-top: 40px;
   }
 
   &--match-prognosis {
