@@ -695,7 +695,14 @@
 .pagination {
   display: flex;
   align-items: center;
-  margin-bottom: 60px;
+ 
+  &--top {
+    margin-bottom: 60px;
+  }
+
+  &--bottom {
+    margin-top: 60px;
+  }
 }
 
 .pagination__pages-list {

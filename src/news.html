@@ -67,7 +67,7 @@
                 </form>
               </div>
               <div class="news__content">
-                <div class="pagination">
+                <div class="pagination pagination--top">
                   <ul class="pagination__pages-list">
                     <li class="pagination__pages-list-item">
                       <a href="#" class="pagination__prev-page-link">
@@ -99,7 +99,7 @@
                     <select name="showperpage" onchange="return console.log('Changed')" required>
                       <option value="10" selected="selected">Показывать по 10</option>
                       <option value="20">Показывать по 20</option>
-                      <option value="30">Показывать по 30</option>   
+                      <option value="30">Показывать по 30</option>
                     </select>
                   </div>
                 </div>
@@ -455,9 +455,42 @@
                     </div>
                   </li>
                 </ul>
-                <a href="#" class="news__show-more">
-                  Показать больше
-                </a>
+                <div class="pagination pagination--bottom">
+                  <ul class="pagination__pages-list">
+                    <li class="pagination__pages-list-item">
+                      <a href="#" class="pagination__prev-page-link">
+                        <svg width="6" height="12" aria-hidden="true" class="icon-arrow-left">
+                          <use xlink:href="#arrow-left" />
+                        </svg>
+                        Назад
+                      </a>
+                    </li>
+                    <li class="pagination__pages-list-item">
+                      <a href="#" class="pagination__page-link current">4</a>
+                    </li>
+                    <li class="pagination__pages-list-item">
+                      <a href="#" class="pagination__page-link">5</a>
+                    </li>
+                    <li class="pagination__pages-list-item">
+                      <a href="#" class="pagination__page-link">6</a>
+                    </li>
+                    <li class="pagination__pages-list-item">
+                      <a href="#" class="pagination__next-page-link">
+                        Вперед
+                        <svg width="6" height="12" aria-hidden="true" class="icon-arrow-right">
+                          <use xlink:href="#arrow-right" />
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="pagination__select js-custom-select">
+                    <select name="showperpage" onchange="return console.log('Changed')" required>
+                      <option value="10" selected="selected">Показывать по 10</option>
+                      <option value="20">Показывать по 20</option>
+                      <option value="30">Показывать по 30</option>
+                    </select>
+                  </div>
+                </div>
               </div>
             </section>
           </div>
