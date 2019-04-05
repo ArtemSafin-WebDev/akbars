@@ -135,11 +135,16 @@
 
   &--fans {
     width: 52.8%;
-    &-item {
-      &:nth-child(even) {
-        padding-left: 32px;
-      }
-    }
+  }
+
+
+}
+
+
+.main-nav__submenu-list--fans .main-nav__submenu-list-item {
+  width: 100%;
+  &:nth-child(even) {
+    padding-left: 0;
   }
 }
 
@@ -193,7 +198,7 @@
   font-size: 14px;
   line-height: 20px;
   letter-spacing: .2px;
-  margin-bottom: 15px;
+  align-self: flex-start;
   > svg {
     fill: $green;
     margin-right: 8px;

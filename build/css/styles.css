@@ -4048,8 +4048,11 @@ svg {
     width: 60%; }
   .main-nav__submenu-list--fans {
     width: 52.8%; }
-    .main-nav__submenu-list--fans-item:nth-child(even) {
-      padding-left: 32px; }
+
+.main-nav__submenu-list--fans .main-nav__submenu-list-item {
+  width: 100%; }
+  .main-nav__submenu-list--fans .main-nav__submenu-list-item:nth-child(even) {
+    padding-left: 0; }
 
 .main-nav__submenu-info {
   margin-right: 35px;
@@ -4108,7 +4111,8 @@ svg {
   font-size: 14px;
   line-height: 20px;
   letter-spacing: .2px;
-  margin-bottom: 15px; }
+  -ms-flex-item-align: start;
+      align-self: flex-start; }
   .main-nav__submenu-buy-link > svg {
     fill: #256963;
     margin-right: 8px; }
@@ -13812,7 +13816,23 @@ svg {
 .match-summary__translation {
   background: #e6e6e6;
   color: #242F37;
-  font-family: Arial, Helvetica, sans-serif; }
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
 .match-summary__videos {
   padding: 40px; }
