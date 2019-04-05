@@ -699,6 +699,11 @@ main {
       cursor: default; }
     .tabs__navigation > button:hover:not([disabled]):not(.active), .tabs__navigation > button:focus:not([disabled]):not(.active) {
       background-color: #3c8f88; }
+  .tabs__navigation--full-width > button {
+    width: 100px;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
 
 .tabs__content {
   background-color: #fff;

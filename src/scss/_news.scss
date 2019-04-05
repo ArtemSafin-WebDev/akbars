@@ -35,18 +35,18 @@
   padding-top: 2px;
   -webkit-appearance: none;
   border-radius: 0;
-  &:nth-of-type(1) {
+  &--query {
     padding: 0 15px;
     flex-grow: 1;
   }
-  &:nth-of-type(2) {
+  &--from {
     width: 100px;
     font-family: 'Supermolot', 'Helvetica', sans-serif;
     font-size: 14px;
     font-weight: 700;
     line-height: 35px;
   }
-  &:nth-of-type(3) {
+  &--to {
     width: 100px;
     font-family: 'Supermolot', 'Helvetica', sans-serif;
     font-size: 14px;
