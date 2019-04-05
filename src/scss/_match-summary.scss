@@ -2,7 +2,6 @@
   width: 960px;
   display: flex;
   flex-direction: column;
-  
 }
 
 .match-summary__main-heading {
@@ -79,6 +78,7 @@
   line-height: 42px;
   letter-spacing: 0.2px;
   position: relative;
+
   .overtime-and-bullits {
     position: absolute;
     bottom: -2px;
@@ -134,7 +134,6 @@
     font-size: 16px;
     line-height: 20px;
     font-weight: 700;
-    
   }
 
   .team-city {
@@ -183,7 +182,6 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 15px;
-  
 }
 
 .match-summary__judge-type {
@@ -195,30 +193,36 @@
   margin-bottom: 4px;
 }
 
-
 .match-summary__judges {
-  color: #94999F;
+  color: #94999f;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   line-height: 20px;
 }
 
-.match-summary__protocol-tab {
+.match-summary__tabs-block {
+  margin-top: 60px;
+}
+
+.match-summary__column-tab {
   display: flex;
   flex-direction: column;
 }
 
+.match-summary__protocol-block {
+  margin-bottom: 80px;
+  width: 100%;
+}
 
 .match-summary__protocol-table {
+  color: #242f37;
   width: 100%;
-  table {
-    color: #242F37;
-    width: 100%;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    line-height: 30px;
-  }
-  
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 30px;
+  display: flex;
+  flex-direction: column;
+
   table,
   td,
   th,
@@ -231,12 +235,31 @@
   tr {
     display: flex;
     align-items: center;
+    position: relative;
+  }
+
+  tr:not(.heading) {
+    padding: 5px 0;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 40px;
+      right: 40px;
+      height: 1px;
+      background-color: #ebebeb;
+    }
+    &:last-child {
+      &::after {
+        height: 3px;
+      }
+    }
   }
 
   th {
     align-items: center;
-    background-color: #EBEBEB;
-    &[colspan="3"] {
+    background-color: #ebebeb;
+    &[colspan='3'] {
       width: 100%;
     }
   }
@@ -272,7 +295,49 @@
   }
 
   .numbers {
-    color: #94999F;
+    color: #94999f;
+  }
+
+  .tooltip {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    padding-top: 20px;
+    z-index: 60;
+  }
+
+  .tooltip__content {
+    background-color: white;
+    color: #606366;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    padding: 8px 20px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    display: block;
+    position: relative;
+    white-space: nowrap;
+    text-align: center;
+    box-shadow: 0px 5px 30px rgba(black, 0.2);
+    @supports (filter: drop-shadow(0 5px 30px rgba(black, 0.2))) {
+      filter: drop-shadow(0 5px 30px rgba(black, 0.2));
+      box-shadow: none;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      bottom: 100%;
+      left: calc(50% - 10px);
+      border: 12px solid transparent;
+      border-bottom: 16px solid white;
+      pointer-events: none;
+    }
   }
 
   .score {
@@ -282,23 +347,58 @@
     font-family: 'Supermolot', 'Helvetica', sans-serif;
     color: $green;
     margin-top: 5px;
+    position: relative;
+    cursor: default;
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 5px;
+      height: 1px;
+      width: 100%;
+      background-position: bottom;
+      background-size: 3px 3px;
+      background-repeat: repeat-x;
+      transition: opacity 0.2s;
+    }
+    &::before {
+      background-image: linear-gradient(to right, $green 33%, rgba(255, 255, 255, 0) 0%);
+    }
+    &::after {
+      background-image: linear-gradient(to right, #3c8f88 33%, rgba(255, 255, 255, 0) 0%);
+      opacity: 0;
+    }
   }
 
-  .remark {
-    color: #94999F;
-    font-size: 14px;
-    line-height: 20px;
-    
-  }
-
-  .remark-small {
-    color: #94999F;
-    font-size: 12px;
-    line-height: 14px;
-    letter-spacing: .2px;
+  .timeout {
+    font-size: 26px;
+    line-height: 38px;
+    font-weight: 700;
+    font-family: 'Supermolot', 'Helvetica', sans-serif;
+    color: $green;
     margin-top: 5px;
   }
 
+  .remark {
+    color: #94999f;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .remark-small {
+    color: #94999f;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.2px;
+    margin-top: 5px;
+  }
+
+  .overtime-score {
+    font-size: 18px;
+    line-height: 30px;
+    color: $green;
+  }
 
   .moment {
     color: $green;
@@ -309,6 +409,8 @@
     flex-direction: column;
     align-items: center;
     margin-top: 7px;
+    transition: 0.2s;
+    position: relative;
     &:link,
     &:visited {
       color: $green;
@@ -317,6 +419,20 @@
     &:hover,
     &:focus {
       text-decoration: none;
+      color: #3c8f88;
+      &__units {
+        &::before {
+          opacity: 0;
+        }
+        &::after {
+          opacity: 1;
+        }
+      }
+
+      .tooltip {
+        opacity: 1;
+        visibility: visible;
+      }
     }
 
     &__timing {
@@ -328,6 +444,46 @@
     &__units {
       font-size: 14px;
       line-height: 16px;
+      position: relative;
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0px;
+        height: 1px;
+        width: 100%;
+        background-position: bottom;
+        background-size: 3px 3px;
+        background-repeat: repeat-x;
+        transition: opacity 0.2s;
+      }
+      &::before {
+        background-image: linear-gradient(to right, $green 33%, rgba(255, 255, 255, 0) 0%);
+      }
+      &::after {
+        background-image: linear-gradient(to right, #3c8f88 33%, rgba(255, 255, 255, 0) 0%);
+        opacity: 0;
+      }
     }
+  }
+}
+
+.match-summary__stats-block-heading {
+  font-size: 26px;
+  line-height: 38px;
+  padding-left: 40px;
+  margin-bottom: 30px;
+}
+
+.match-summary__stats-block {
+  padding-bottom: 45px;
+  .tabs__navigation > button {
+    width: 200px;
+  }
+
+  .statistics__card {
+    margin-top: 35px;
+    margin-bottom: 0;
   }
 }
