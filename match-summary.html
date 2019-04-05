@@ -832,468 +832,391 @@
     <main>
       <div class="container">
         <div class="flex-row">
-          <div class="banner-column banner-column--left banner-column--news">
-            <a href="#" class="banner-column__item" style="background-image: url(img/banners/hoki.png)"> </a>
-            <a href="#" class="banner-column__item" style="background-image: url(img/banners/гимн.png)"> </a>
-          </div>
-          <section class="news">
-            <div class="news__top-block">
-              <h1 class="news__main-heading">Новости</h1>
-              <form action="/" class="news__search-form" method="GET">
-                <input type="text" class="news__search-input news__search-input--query" name="q" placeholder="Поиск по новостям" />
-                <span class="news__search-form-divider"></span>
-                <label for="from" class="news__search-text-label">c</label>
-                <input autocomplete="off" type="text" class="news__search-input news__search-input--from" id="from" name="from" value="15.03.2019" />
-                <label for="from" class="news__search-icon-label">
-                  <svg width="18" height="18" aria-hidden="true" class="icon-calendar-search">
-                    <use xlink:href="#calendar-search" />
-                  </svg>
-                </label>
-                <span class="news__search-form-divider"></span>
-                <label for="to" class="news__search-text-label">по</label>
-                <input autocomplete="off" type="text" class="news__search-input news__search-input--to" name="to" id="to" />
-                <label for="to" class="news__search-icon-label">
-                  <svg width="18" height="18" aria-hidden="true" class="icon-calendar-search">
-                    <use xlink:href="#calendar-search" />
-                  </svg>
-                </label>
-                <button type="submit" class="news__search-submit">
-                  <span class="news__search-submit-content">
-                    <svg width="16" height="16" aria-hidden="true" class="icon-search">
-                      <use xlink:href="#search" />
-                    </svg>
-                  </span>
-                </button>
-              </form>
-            </div>
-            <div class="news__content">
-              <div class="pagination pagination--top">
-                <ul class="pagination__pages-list">
-                  <li class="pagination__pages-list-item">
-                    <a href="#" class="pagination__prev-page-link">
-                      <svg width="6" height="12" aria-hidden="true" class="icon-arrow-left">
-                        <use xlink:href="#arrow-left" />
-                      </svg>
-                      Назад
-                    </a>
-                  </li>
-                  <li class="pagination__pages-list-item">
-                    <a href="#" class="pagination__page-link current">1</a>
-                  </li>
-                  <li class="pagination__pages-list-item">
-                    <a href="#" class="pagination__page-link">2</a>
-                  </li>
-                  <li class="pagination__pages-list-item">
-                    <a href="#" class="pagination__page-link">3</a>
-                  </li>
-                  <li class="pagination__pages-list-item">
-                    <a href="#" class="pagination__next-page-link">
-                      Вперед
-                      <svg width="6" height="12" aria-hidden="true" class="icon-arrow-right">
-                        <use xlink:href="#arrow-right" />
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-                <div class="pagination__select js-custom-select">
-                  <select name="showperpage" onchange="return console.log('Changed')" required>
-                    <option value="10" selected="selected">Показывать по 10</option>
-                    <option value="20">Показывать по 20</option>
-                    <option value="30">Показывать по 30</option>
-                  </select>
-                </div>
-              </div>
-              <ul class="news__list">
-                <li class="news__list-item">
-                  <a href="news-details.html" class="news__image-container">
-                    <img src="img/Зарипов.jpg" alt="Изображение новости" class="news__image" />
+          <section class="sidebar">
+            <nav class="sidebar-nav">
+              <ul class="sidebar-nav__list">
+                <li class="sidebar-nav__list-item active">
+                  <a href="team.html" class="sidebar-nav__link">
+                    Команда
                   </a>
-                  <div class="news__description">
-                    <div class="news__info">
-                      <span class="news__info-block news__date">
-                        <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
-                          <use xlink:href="#news-calendar" />
-                        </svg>
-                        24.11.2019 г.
-                      </span>
-                      <span class="news__info-block news__views">
-                        <svg width="17" height="9" aria-hidden="true" class="icon-news-views">
-                          <use xlink:href="#news-views" />
-                        </svg>
-                        1 913
-                      </span>
-                      <a href="#" class="news__info-block news__comments">
-                        <svg width="16" height="13" aria-hidden="true" class="icon-news-comments">
-                          <use xlink:href="#news-comments" />
-                        </svg>
-                        22
-                      </a>
-                    </div>
-                    <p class="news__source">
-                      Источник: www.ak-bars.ru
-                    </p>
-                    <a href="news-details.html" class="news__details-link">
-                      <h3 class="news__news-item-heading">
-                        Данис Зарипов — лучший снайпер «Ак Барса» в КХЛ
-                      </h3>
-                    </a>
-                  </div>
                 </li>
-                <li class="news__list-item">
-                  <a href="news-details.html" class="news__image-container">
-                    <img src="img/Avangard.jpg" alt="Изображение новости" class="news__image" />
+                <li class="sidebar-nav__list-item">
+                  <a href="calendar.html" class="sidebar-nav__link">
+                    Календарь
                   </a>
-                  <div class="news__description">
-                    <div class="news__info">
-                      <span class="news__info-block news__date">
-                        <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
-                          <use xlink:href="#news-calendar" />
-                        </svg>
-                        24.11.2019 г.
-                      </span>
-                      <span class="news__info-block news__views">
-                        <svg width="17" height="9" aria-hidden="true" class="icon-news-views">
-                          <use xlink:href="#news-views" />
-                        </svg>
-                        1 913
-                      </span>
-                      <a href="#" class="news__info-block news__comments">
-                        <svg width="16" height="13" aria-hidden="true" class="icon-news-comments">
-                          <use xlink:href="#news-comments" />
-                        </svg>
-                        22
-                      </a>
-                    </div>
-                    <p class="news__source">
-                      Источник: www.ak-bars.ru
-                    </p>
-                    <a href="news-details.html" class="news__details-link">
-                      <h3 class="news__news-item-heading">
-                        Абонемент на матчи «Ак Барса» в подарок от «Мойдодыра»!
-                      </h3>
-                    </a>
-                  </div>
                 </li>
-                <li class="news__list-item">
-                  <a href="news-details.html" class="news__image-container">
-                    <img src="img/video-preview-2.jpg" alt="Изображение новости" class="news__image" />
+                <li class="sidebar-nav__list-item">
+                  <a href="results.html" class="sidebar-nav__link">
+                    Результаты
                   </a>
-                  <div class="news__description">
-                    <div class="news__info">
-                      <span class="news__info-block news__date">
-                        <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
-                          <use xlink:href="#news-calendar" />
-                        </svg>
-                        24.11.2019 г.
-                      </span>
-                      <span class="news__info-block news__views">
-                        <svg width="17" height="9" aria-hidden="true" class="icon-news-views">
-                          <use xlink:href="#news-views" />
-                        </svg>
-                        1 913
-                      </span>
-                      <a href="#" class="news__info-block news__comments">
-                        <svg width="16" height="13" aria-hidden="true" class="icon-news-comments">
-                          <use xlink:href="#news-comments" />
-                        </svg>
-                        22
-                      </a>
-                    </div>
-                    <p class="news__source">
-                      Источник: www.ak-bars.ru
-                    </p>
-                    <a href="news-details.html" class="news__details-link">
-                      <h3 class="news__news-item-heading">
-                        Артём Лукоянов: «неприятный осадок, но всё поправимо»
-                      </h3>
-                    </a>
-                  </div>
                 </li>
-                <li class="news__list-item">
-                  <a href="news-details.html" class="news__image-container">
-                    <img src="img/video-preview-1.jpg" alt="Изображение новости" class="news__image" />
+                <li class="sidebar-nav__list-item">
+                  <a href="#" class="sidebar-nav__link">
+                    Таблицы
                   </a>
-                  <div class="news__description">
-                    <div class="news__info">
-                      <span class="news__info-block news__date">
-                        <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
-                          <use xlink:href="#news-calendar" />
-                        </svg>
-                        24.11.2019 г.
-                      </span>
-                      <span class="news__info-block news__views">
-                        <svg width="17" height="9" aria-hidden="true" class="icon-news-views">
-                          <use xlink:href="#news-views" />
-                        </svg>
-                        1 913
-                      </span>
-                      <a href="#" class="news__info-block news__comments">
-                        <svg width="16" height="13" aria-hidden="true" class="icon-news-comments">
-                          <use xlink:href="#news-comments" />
-                        </svg>
-                        22
-                      </a>
-                    </div>
-                    <p class="news__source">
-                      Источник: www.ak-bars.ru
-                    </p>
-                    <a href="news-details.html" class="news__details-link">
-                      <h3 class="news__news-item-heading">
-                        Зинэтула Билялетдинов: «допустили ошибки в обороне – это привело к неудачному счёту»
-                      </h3>
-                    </a>
-                  </div>
                 </li>
-                <li class="news__list-item">
-                  <a href="news-details.html" class="news__image-container">
-                    <img src="img/video-preview-2.jpg" alt="Изображение новости" class="news__image" />
+                <li class="sidebar-nav__list-item">
+                  <a href="statistics.html" class="sidebar-nav__link">
+                    Статистика
                   </a>
-                  <div class="news__description">
-                    <div class="news__info">
-                      <span class="news__info-block news__date">
-                        <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
-                          <use xlink:href="#news-calendar" />
-                        </svg>
-                        24.11.2019 г.
-                      </span>
-                      <span class="news__info-block news__views">
-                        <svg width="17" height="9" aria-hidden="true" class="icon-news-views">
-                          <use xlink:href="#news-views" />
-                        </svg>
-                        1 913
-                      </span>
-                      <a href="#" class="news__info-block news__comments">
-                        <svg width="16" height="13" aria-hidden="true" class="icon-news-comments">
-                          <use xlink:href="#news-comments" />
-                        </svg>
-                        22
-                      </a>
-                    </div>
-                    <p class="news__source">
-                      Источник: www.ak-bars.ru
-                    </p>
-                    <a href="news-details.html" class="news__details-link">
-                      <h3 class="news__news-item-heading">
-                        Артём Лукоянов: «неприятный осадок, но всё поправимо»
-                      </h3>
-                    </a>
-                  </div>
                 </li>
-                <li class="news__list-item">
-                  <a href="news-details.html" class="news__image-container">
-                    <img src="img/Зарипов.jpg" alt="Изображение новости" class="news__image" />
+                <li class="sidebar-nav__list-item">
+                  <a href="#" class="sidebar-nav__link">
+                    Плей-офф
                   </a>
-                  <div class="news__description">
-                    <div class="news__info">
-                      <span class="news__info-block news__date">
-                        <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
-                          <use xlink:href="#news-calendar" />
-                        </svg>
-                        24.11.2019 г.
-                      </span>
-                      <span class="news__info-block news__views">
-                        <svg width="17" height="9" aria-hidden="true" class="icon-news-views">
-                          <use xlink:href="#news-views" />
-                        </svg>
-                        1 913
-                      </span>
-                      <a href="#" class="news__info-block news__comments">
-                        <svg width="16" height="13" aria-hidden="true" class="icon-news-comments">
-                          <use xlink:href="#news-comments" />
-                        </svg>
-                        22
-                      </a>
-                    </div>
-                    <p class="news__source">
-                      Источник: www.ak-bars.ru
-                    </p>
-                    <a href="news-details.html" class="news__details-link">
-                      <h3 class="news__news-item-heading">
-                        Данис Зарипов — лучший снайпер «Ак Барса» в КХЛ
-                      </h3>
-                    </a>
-                  </div>
                 </li>
-                <li class="news__list-item">
-                  <a href="news-details.html" class="news__image-container">
-                    <img src="img/Avangard.jpg" alt="Изображение новости" class="news__image" />
+                <li class="sidebar-nav__list-item">
+                  <a href="#" class="sidebar-nav__link">
+                    Регламент
                   </a>
-                  <div class="news__description">
-                    <div class="news__info">
-                      <span class="news__info-block news__date">
-                        <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
-                          <use xlink:href="#news-calendar" />
-                        </svg>
-                        24.11.2019 г.
-                      </span>
-                      <span class="news__info-block news__views">
-                        <svg width="17" height="9" aria-hidden="true" class="icon-news-views">
-                          <use xlink:href="#news-views" />
-                        </svg>
-                        1 913
-                      </span>
-                      <a href="#" class="news__info-block news__comments">
-                        <svg width="16" height="13" aria-hidden="true" class="icon-news-comments">
-                          <use xlink:href="#news-comments" />
-                        </svg>
-                        22
-                      </a>
-                    </div>
-                    <p class="news__source">
-                      Источник: www.ak-bars.ru
-                    </p>
-                    <a href="news-details.html" class="news__details-link">
-                      <h3 class="news__news-item-heading">
-                        Абонемент на матчи «Ак Барса» в подарок от «Мойдодыра»!
-                      </h3>
-                    </a>
-                  </div>
                 </li>
-                <li class="news__list-item">
-                  <a href="news-details.html" class="news__image-container">
-                    <img src="img/video-preview-2.jpg" alt="Изображение новости" class="news__image" />
+                <li class="sidebar-nav__list-item">
+                  <a href="#" class="sidebar-nav__link">
+                    История
                   </a>
-                  <div class="news__description">
-                    <div class="news__info">
-                      <span class="news__info-block news__date">
-                        <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
-                          <use xlink:href="#news-calendar" />
-                        </svg>
-                        24.11.2019 г.
-                      </span>
-                      <span class="news__info-block news__views">
-                        <svg width="17" height="9" aria-hidden="true" class="icon-news-views">
-                          <use xlink:href="#news-views" />
-                        </svg>
-                        1 913
-                      </span>
-                      <a href="#" class="news__info-block news__comments">
-                        <svg width="16" height="13" aria-hidden="true" class="icon-news-comments">
-                          <use xlink:href="#news-comments" />
-                        </svg>
-                        22
-                      </a>
-                    </div>
-                    <p class="news__source">
-                      Источник: www.ak-bars.ru
-                    </p>
-                    <a href="news-details.html" class="news__details-link">
-                      <h3 class="news__news-item-heading">
-                        Артём Лукоянов: «неприятный осадок, но всё поправимо»
-                      </h3>
-                    </a>
-                  </div>
-                </li>
-                <li class="news__list-item">
-                  <a href="news-details.html" class="news__image-container">
-                    <img src="img/video-preview-1.jpg" alt="Изображение новости" class="news__image" />
-                  </a>
-                  <div class="news__description">
-                    <div class="news__info">
-                      <span class="news__info-block news__date">
-                        <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
-                          <use xlink:href="#news-calendar" />
-                        </svg>
-                        24.11.2019 г.
-                      </span>
-                      <span class="news__info-block news__views">
-                        <svg width="17" height="9" aria-hidden="true" class="icon-news-views">
-                          <use xlink:href="#news-views" />
-                        </svg>
-                        1 913
-                      </span>
-                      <a href="#" class="news__info-block news__comments">
-                        <svg width="16" height="13" aria-hidden="true" class="icon-news-comments">
-                          <use xlink:href="#news-comments" />
-                        </svg>
-                        22
-                      </a>
-                    </div>
-                    <p class="news__source">
-                      Источник: www.ak-bars.ru
-                    </p>
-                    <a href="news-details.html" class="news__details-link">
-                      <h3 class="news__news-item-heading">
-                        Зинэтула Билялетдинов: «допустили ошибки в обороне – это привело к неудачному счёту»
-                      </h3>
-                    </a>
-                  </div>
-                </li>
-                <li class="news__list-item">
-                  <a href="news-details.html" class="news__image-container">
-                    <img src="img/video-preview-2.jpg" alt="Изображение новости" class="news__image" />
-                  </a>
-                  <div class="news__description">
-                    <div class="news__info">
-                      <span class="news__info-block news__date">
-                        <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
-                          <use xlink:href="#news-calendar" />
-                        </svg>
-                        24.11.2019 г.
-                      </span>
-                      <span class="news__info-block news__views">
-                        <svg width="17" height="9" aria-hidden="true" class="icon-news-views">
-                          <use xlink:href="#news-views" />
-                        </svg>
-                        1 913
-                      </span>
-                      <a href="#" class="news__info-block news__comments">
-                        <svg width="16" height="13" aria-hidden="true" class="icon-news-comments">
-                          <use xlink:href="#news-comments" />
-                        </svg>
-                        22
-                      </a>
-                    </div>
-                    <p class="news__source">
-                      Источник: www.ak-bars.ru
-                    </p>
-                    <a href="news-details.html" class="news__details-link">
-                      <h3 class="news__news-item-heading">
-                        Артём Лукоянов: «неприятный осадок, но всё поправимо»
-                      </h3>
-                    </a>
-                  </div>
                 </li>
               </ul>
-              <div class="pagination pagination--bottom">
-                <ul class="pagination__pages-list">
-                  <li class="pagination__pages-list-item">
-                    <a href="#" class="pagination__prev-page-link">
-                      <svg width="6" height="12" aria-hidden="true" class="icon-arrow-left">
-                        <use xlink:href="#arrow-left" />
-                      </svg>
-                      Назад
-                    </a>
-                  </li>
-                  <li class="pagination__pages-list-item">
-                    <a href="#" class="pagination__page-link current">4</a>
-                  </li>
-                  <li class="pagination__pages-list-item">
-                    <a href="#" class="pagination__page-link">5</a>
-                  </li>
-                  <li class="pagination__pages-list-item">
-                    <a href="#" class="pagination__page-link">6</a>
-                  </li>
-                  <li class="pagination__pages-list-item">
-                    <a href="#" class="pagination__next-page-link">
-                      Вперед
-                      <svg width="6" height="12" aria-hidden="true" class="icon-arrow-right">
-                        <use xlink:href="#arrow-right" />
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-                <div class="pagination__select js-custom-select">
-                  <select name="showperpage" onchange="return console.log('Changed')" required>
-                    <option value="10" selected="selected">Показывать по 10</option>
-                    <option value="20">Показывать по 20</option>
-                    <option value="30">Показывать по 30</option>
-                  </select>
+            </nav>
+            <div class="banner-column banner-column--left banner-column--match-prognosis">
+              <div class="banner-column__item" style="background-image: url(img/banners/hoki.png)">
+              </div>
+              <div class="banner-column__item" style="background-image: url(img/banners/гимн.png)">
+              </div>
+            </div>
+          </section>
+          <section class="match-summary">
+            <h1 class="match-summary__main-heading">
+              ИНФОРМАЦИЯ О МАТЧЕ
+            </h1>
+
+            <div class="match-summary__content">
+              <div class="match-summary__info">
+                <div class="match-summary__dateblock">
+                  <span class="match-summary__date">22.04.2018</span>
+                  <span class="match-summary__status">
+                    Матч завершен
+                  </span>
+                </div>
+                <div class="match-summary__teams-block">
+                  <div class="match-summary__team match-summary__team--left">
+                    <div class="match-summary__team-names">
+                      <span class="team-name">
+                        Ак Барс
+                      </span>
+                      <span class="team-city">
+                        Казань
+                      </span>
+                    </div>
+                    <div class="match-summary__team-logo-container">
+                      <img src="img/logo/akbars-logo.svg" alt="Лого Ак Барс" class="match-summary__team-logo" />
+                    </div>
+                  </div>
+                  <div class="match-summary__score">
+                    <span class="match-summary__score-digits"> 4:3 <span class="overtime-and-bullits">б</span> </span>
+                    <span class="match-summary__score-rounds">
+                      (1:1, 1:1, 1:1, 0:0, 1:0)
+                    </span>
+                  </div>
+                  <div class="match-summary__team match-summary__team--right">
+                    <div class="match-summary__team-logo-container">
+                      <img src="img/logo/torpedo-logo.svg" alt="Лого Торпедо" class="match-summary__team-logo" />
+                    </div>
+                    <div class="match-summary__team-names">
+                      <span class="team-name">
+                        Торпедо
+                      </span>
+                      <span class="team-city">
+                        Новосибирская область
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <span class="match-summary__arena-name">
+                  КРК «Нагорный»
+                </span>
+                <span class="match-summary__viewers-count">
+                  5 500 зрителей
+                </span>
+                <span class="match-summary__divider"></span>
+
+                <div class="match-summary__judge-block">
+                  <span class="match-summary__judge-type">
+                    Главные судьи
+                  </span>
+                  <span class="match-summary__judges">
+                    Акузовский Николай, Наумов Денис
+                  </span>
+                </div>
+                <div class="match-summary__judge-block">
+                  <span class="match-summary__judge-type">
+                    Линейные судьи
+                  </span>
+                  <span class="match-summary__judges">
+                    Берсенёв Максим, Юдин Евгений
+                  </span>
+                </div>
+              </div>
+              <div class="match-summary__tabs-block">
+                <div class="tabs js-tabs-container">
+                  <nav class="tabs__navigation tabs__navigation--full-width">
+                    <button class="js-tab-button">
+                      <span>Протокол</span>
+                    </button>
+                    <button class="js-tab-button">
+                      <span>Публикации</span>
+                    </button>
+                    <button class="js-tab-button">
+                      <span>Фото</span>
+                    </button>
+                    <button class="js-tab-button">
+                      <span>Трансляции</span>
+                    </button>
+                    <button class="js-tab-button">
+                      <span>Ролики</span>
+                    </button>
+                    <button class="js-tab-button">
+                      <span>Голы/Интервью</span>
+                    </button>
+                  </nav>
+                  <ul class="tabs__content">
+                    <li class="tabs__item match-summary__protocol-tab js-tab">
+                      <div class="match-summary__protocol-table">
+                        <table>
+                          <tr>
+                            <th colspan="3">Вратари</th>
+                          </tr>
+                          <tr>
+                            <td>
+                              <a href="#">Шарыченков Александр</a>
+                              <span class="numbers">
+                                (00.00-35.19)
+                              </span>
+                            </td>
+                            <td>
+                              &nbsp;
+                            </td>
+                            <td>
+                              <a href="#">Браст Барри</a>
+                              <span class="numbers">
+                                (00.00-58.00, 58.11-60.00)
+                              </span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <a href="#"> Подъяпольский Владислав</a>
+                              <span class="numbers">
+                                (36.03-58.27, 58.59-60.37)
+                              </span>
+                            </td>
+                            <td>
+                              &nbsp;
+                            </td>
+                            <td>
+                              &nbsp;
+                            </td>
+                          </tr>
+                          <tr>
+                            <th colspan="3">Штрафы в матче</th>
+                          </tr>
+                          <tr>
+                            <td>
+                              4 (2, 2, 0)
+                            </td>
+                            <td>
+                              &nbsp;
+                            </td>
+                            <td>
+                              20 (0, 4, 16)
+                            </td>
+                          </tr>
+                          <tr>
+                            <th colspan="3">1 период</th>
+                          </tr>
+                          <tr>
+                            <td>
+                              <a href="#">Зарипов Данис</a>
+                              <p class="remark">
+                                Манухов Роман, Лукоянов Артём
+                              </p>
+                              <p class="remark-small">
+                                в равных составах
+                              </p>
+                            </td>
+                            <td>
+                              <span class="score">
+                                1:0
+                              </span>
+                              <span class="time">
+                                02:13
+                              </span>
+                            </td>
+                            <td>
+                              &nbsp;
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <p class="remark">
+                                Удаление
+                              </p>
+                              Командный штраф
+                              <p class="remark-small">
+                                Нарушение численного состава
+                              </p>
+                            </td>
+                            <td>
+                              <a href="#" class="moment">
+                                <span class="moment__timing">2</span>
+                                <span class="moment__units">мин</span>
+                              </a>
+
+                              <span class="time">
+                                08:28
+                              </span>
+                            </td>
+                            <td>
+                              &nbsp;
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>&nbsp;</td>
+                            <td>
+                              <span class="score">
+                                1:1
+                              </span>
+                              <span class="time">
+                                10:13
+                              </span>
+                            </td>
+                            <td>
+                              <a href="#">Макаренко Павел</a>
+                              <p class="remark">
+                                Сёмин Дмитрий
+                              </p>
+                              <p class="remark-small">
+                                в большинстве (+1)
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+                      </div>
+                    </li>
+                    <li class="tabs__item js-tab">
+                      Публикации
+                    </li>
+                    <li class="tabs__item js-tab">
+                      Фото
+                    </li>
+                    <li class="tabs__item js-tab">
+                      Трансляции
+                    </li>
+                    <li class="tabs__item js-tab">
+                      Ролики
+                    </li>
+                    <li class="tabs__item js-tab">
+                      Голы/Интервью
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
           </section>
         </div>
+        <div class="partners">
+          <h3 class="partners__heading">Партнеры Чемпионата КХЛ сезона 2018/2019</h3>
+          <ul class="partners__list">
+            <li class="partners__list-item">
+              <a href="http://www.sogaz.ru/" target="_blank" class="partners__link">
+                <div class="partners__logo-container">
+                  <img src="img/partners/sogaz.svg" alt="Согаз" class="partner__logo partner__logo--sogaz" width="74" />
+                </div>
+                <span class="partner__status">Генеральный партнер</span>
+              </a>
+            </li>
+            <li class="partners__list-item">
+              <a href="http://www.mastercard.ru/" target="_blank" class="partners__link">
+                <div class="partners__logo-container">
+                  <img src="img/partners/mastercard.svg" alt="Мастеркард" class="partner__logo partner__logo--mastercard" width="54" />
+                </div>
+                <span class="partner__status">Официальный партнер</span>
+              </a>
+            </li>
+            <li class="partners__list-item">
+              <a href="http://www.eriell.com/ru/" target="_blank" class="partners__link">
+                <div class="partners__logo-container">
+                  <img src="img/partners/eriell.svg" alt="Eriell" class="partner__logo partner__logo--eriell" width="100" />
+                </div>
+                <span class="partner__status">Официальный партнер</span>
+              </a>
+            </li>
+            <li class="partners__list-item">
+              <a href="http://www.durex.ru/" target="_blank" class="partners__link">
+                <div class="partners__logo-container">
+                  <img src="img/partners/durex.png" alt="Дюрекс" class="partner__logo partner__logo--durex" width="100" />
+                </div>
+                <span class="partner__status">Официальный партнер</span>
+              </a>
+            </li>
+            <li class="partners__list-item">
+              <a href="http://www.rt.ru/" target="_blank" class="partners__link">
+                <div class="partners__logo-container">
+                  <img src="img/partners/rostelecom.svg" alt="Ростелеком" class="partner__logo partner__logo--rostelecom" width="120" />
+                </div>
+                <span class="partner__status">Партнер</span>
+              </a>
+            </li>
+            <li class="partners__list-item">
+              <a href="http://www.megafon.ru/" target="_blank" class="partners__link">
+                <div class="partners__logo-container">
+                  <img src="img/partners/megafon.svg" alt="Мегафон" class="partner__logo partner__logo--megafon" width="130" />
+                </div>
+                <span class="partner__status">Партнер</span>
+              </a>
+            </li>
+            <li class="partners__list-item">
+              <a href="https://www.sap.com/cis/index.html" target="_blank" class="partners__link">
+                <div class="partners__logo-container">
+                  <img src="img/partners/sap.svg" alt="SAP" class="partner__logo partner__logo--sap" width="130" />
+                </div>
+                <span class="partner__status">Партнер</span>
+              </a>
+            </li>
+            <li class="partners__list-item">
+              <a href="http://www.haier.com/ru/" target="_blank" class="partners__link">
+                <div class="partners__logo-container">
+                  <img src="img/partners/haier.svg" alt="Haier" class="partner__logo partner__logo--haier" width="90" />
+                </div>
+                <span class="partner__status">Поставщик</span>
+              </a>
+            </li>
+            <li class="partners__list-item">
+              <a href="http://www.hankooktire.com/ru" target="_blank" class="partners__link">
+                <div class="partners__logo-container">
+                  <img src="img/partners/hankook.svg" alt="hankook" class="partner__logo partner__logo--hankook" width="120" />
+                </div>
+                <span class="partner__status">Поставщик</span>
+              </a>
+            </li>
+            <li class="partners__list-item">
+              <a href="https://www.ey.com/ru/ru/home" target="_blank" class="partners__link">
+                <div class="partners__logo-container">
+                  <img src="img/partners/ey.svg" alt="EY" class="partner__logo partner__logo--ey" width="60" />
+                </div>
+                <span class="partner__status">Поставщик</span>
+              </a>
+            </li>
+            <li class="partners__list-item">
+              <a href="https://www.sport-express.ru/" target="_blank" class="partners__link">
+                <div class="partners__logo-container">
+                  <img src="img/partners/sport-express.svg" alt="Спортэкспресс" class="partner__logo partner__logo--se" width="60" />
+                </div>
+                <span class="partner__status">Информационный партнер</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
       </div>
     </main>
     <footer class="page-footer">
