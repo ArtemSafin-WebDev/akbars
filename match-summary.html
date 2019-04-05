@@ -19,6 +19,76 @@
         }
       </style>
   </noscript>
+  <script>
+    var photogalleryDetailsDataSource = [
+        {
+          img: 'https://www.ak-bars.ru/photo/gallery/misc/20190322/ti2_5523.jpg',
+          thumb: 'https://www.ak-bars.ru/photo/gallery/misc/20190322/small/ti2_5523.jpg',
+          id: 'img80058',
+          title: 'Фото: Ильнар Плейсхолдер'
+        },
+        {
+          img: 'https://www.ak-bars.ru/photo/gallery/misc/20190322/ti2_5539.jpg',
+          thumb: 'https://www.ak-bars.ru/photo/gallery/misc/20190322/small/ti2_5539.jpg',
+          id: 'img80060',
+          title: 'Фото: Ильнар Тухбатов'
+        },
+        {
+          img: 'https://www.ak-bars.ru/photo/gallery/misc/20190322/ti2_5541.jpg',
+          thumb: 'https://www.ak-bars.ru/photo/gallery/misc/20190322/small/ti2_5541.jpg',
+          id: 'img80061',
+          title: 'Фото: Ильнар Тухбатов'
+        },
+        {
+          img: 'https://www.ak-bars.ru/photo/gallery/misc/20190322/ti2_5550.jpg',
+          thumb: 'https://www.ak-bars.ru/photo/gallery/misc/20190322/small/ti2_5550.jpg',
+          id: 'img80062',
+          title: 'Фото: Ильнар Тухбатов'
+        },
+        {
+          img: 'https://www.ak-bars.ru/photo/gallery/misc/20190322/ti2_5558.jpg',
+          thumb: 'https://www.ak-bars.ru/photo/gallery/misc/20190322/small/ti2_5558.jpg',
+          id: 'img80064',
+          title: 'Фото: Ильнар Тухбатов'
+        },
+        {
+          img: 'https://www.ak-bars.ru/photo/gallery/misc/20190322/ti2_5567.jpg',
+          thumb: 'https://www.ak-bars.ru/photo/gallery/misc/20190322/small/ti2_5567.jpg',
+          id: 'img80067',
+          title: 'Фото: Ильнар Тухбатов'
+        },
+        {
+          img: 'https://www.ak-bars.ru/photo/gallery/misc/20190322/ti2_5569.jpg',
+          thumb: 'https://www.ak-bars.ru/photo/gallery/misc/20190322/small/ti2_5569.jpg',
+          id: 'img80068',
+          title: 'Фото: Ильнар Тухбатов'
+        },
+        {
+          img: 'https://www.ak-bars.ru/photo/gallery/misc/20190322/ti2_5585.jpg',
+          thumb: 'https://www.ak-bars.ru/photo/gallery/misc/20190322/small/ti2_5585.jpg',
+          id: 'img80070',
+          title: 'Фото: Ильнар Тухбатов'
+        },
+        {
+          img: 'https://www.ak-bars.ru/photo/gallery/misc/20190322/ti2_5591.jpg',
+          thumb: 'https://www.ak-bars.ru/photo/gallery/misc/20190322/small/ti2_5591.jpg',
+          id: 'img80071',
+          title: 'Фото: Ильнар Тухбатов'
+        },
+        {
+          img: 'https://www.ak-bars.ru/photo/gallery/misc/20190322/ti2_5600.jpg',
+          thumb: 'https://www.ak-bars.ru/photo/gallery/misc/20190322/small/ti2_5600.jpg',
+          id: 'img80072',
+          title: 'Фото: Ильнар Тухбатов'
+        },
+        {
+          img: 'https://www.ak-bars.ru/photo/gallery/misc/20190322/ti2_5605.jpg',
+          thumb: 'https://www.ak-bars.ru/photo/gallery/misc/20190322/small/ti2_5605.jpg',
+          id: 'img80073',
+          title: 'Фото: Ильнар Тухбатов'
+        }
+      ]
+    </script>
 </head>
 
 <body>
@@ -254,7 +324,7 @@
     </div>
   </div>
   <div class="search-modal js-search-modal">
-    <form action="/" class="search-modal__form" method="GET">
+    <form action="/search.html" class="search-modal__form" method="GET">
       <input type="text" name="q" class="search-modal__input" placeholder="Введите поисковый запрос" />
       <button type="submit" class="search-modal__submit js-search-modal-submit">
         <svg width="20" height="20" aria-hidden="true" class="icon-search-modal">
@@ -1281,14 +1351,368 @@
                             </td>
                           </tr>
                         </table>
-
                       </div>
                     </li>
                     <li class="tabs__item js-tab">
-                      Публикации
+                      <div class="match-summary__publications">
+                        <ul class="news__list">
+                          <li class="news__list-item">
+                            <a href="news-details.html" class="news__image-container">
+                              <img src="img/Зарипов.jpg" alt="Изображение новости" class="news__image" />
+                            </a>
+                            <div class="news__description">
+                              <div class="news__info">
+                                <span class="news__info-block news__date">
+                                  <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
+                                    <use xlink:href="#news-calendar" />
+                                  </svg>
+                                  24.11.2019 г.
+                                </span>
+                                <span class="news__info-block news__views">
+                                  <svg width="17" height="9" aria-hidden="true" class="icon-news-views">
+                                    <use xlink:href="#news-views" />
+                                  </svg>
+                                  1 913
+                                </span>
+                                <a href="#" class="news__info-block news__comments">
+                                  <svg width="16" height="13" aria-hidden="true" class="icon-news-comments">
+                                    <use xlink:href="#news-comments" />
+                                  </svg>
+                                  22
+                                </a>
+                              </div>
+                              <p class="news__source">
+                                Источник: www.ak-bars.ru
+                              </p>
+                              <a href="news-details.html" class="news__details-link">
+                                <h3 class="news__news-item-heading">
+                                  Данис Зарипов — лучший снайпер «Ак Барса» в КХЛ
+                                </h3>
+                              </a>
+                            </div>
+                          </li>
+                          <li class="news__list-item">
+                            <a href="news-details.html" class="news__image-container">
+                              <img src="img/Avangard.jpg" alt="Изображение новости" class="news__image" />
+                            </a>
+                            <div class="news__description">
+                              <div class="news__info">
+                                <span class="news__info-block news__date">
+                                  <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
+                                    <use xlink:href="#news-calendar" />
+                                  </svg>
+                                  24.11.2019 г.
+                                </span>
+                                <span class="news__info-block news__views">
+                                  <svg width="17" height="9" aria-hidden="true" class="icon-news-views">
+                                    <use xlink:href="#news-views" />
+                                  </svg>
+                                  1 913
+                                </span>
+                                <a href="#" class="news__info-block news__comments">
+                                  <svg width="16" height="13" aria-hidden="true" class="icon-news-comments">
+                                    <use xlink:href="#news-comments" />
+                                  </svg>
+                                  22
+                                </a>
+                              </div>
+                              <p class="news__source">
+                                Источник: www.ak-bars.ru
+                              </p>
+                              <a href="news-details.html" class="news__details-link">
+                                <h3 class="news__news-item-heading">
+                                  Абонемент на матчи «Ак Барса» в подарок от «Мойдодыра»!
+                                </h3>
+                              </a>
+                            </div>
+                          </li>
+                          <li class="news__list-item">
+                            <a href="news-details.html" class="news__image-container">
+                              <img src="img/video-preview-2.jpg" alt="Изображение новости" class="news__image" />
+                            </a>
+                            <div class="news__description">
+                              <div class="news__info">
+                                <span class="news__info-block news__date">
+                                  <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
+                                    <use xlink:href="#news-calendar" />
+                                  </svg>
+                                  24.11.2019 г.
+                                </span>
+                                <span class="news__info-block news__views">
+                                  <svg width="17" height="9" aria-hidden="true" class="icon-news-views">
+                                    <use xlink:href="#news-views" />
+                                  </svg>
+                                  1 913
+                                </span>
+                                <a href="#" class="news__info-block news__comments">
+                                  <svg width="16" height="13" aria-hidden="true" class="icon-news-comments">
+                                    <use xlink:href="#news-comments" />
+                                  </svg>
+                                  22
+                                </a>
+                              </div>
+                              <p class="news__source">
+                                Источник: www.ak-bars.ru
+                              </p>
+                              <a href="news-details.html" class="news__details-link">
+                                <h3 class="news__news-item-heading">
+                                  Артём Лукоянов: «неприятный осадок, но всё поправимо»
+                                </h3>
+                              </a>
+                            </div>
+                          </li>
+                          <li class="news__list-item">
+                            <a href="news-details.html" class="news__image-container">
+                              <img src="img/video-preview-1.jpg" alt="Изображение новости" class="news__image" />
+                            </a>
+                            <div class="news__description">
+                              <div class="news__info">
+                                <span class="news__info-block news__date">
+                                  <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
+                                    <use xlink:href="#news-calendar" />
+                                  </svg>
+                                  24.11.2019 г.
+                                </span>
+                                <span class="news__info-block news__views">
+                                  <svg width="17" height="9" aria-hidden="true" class="icon-news-views">
+                                    <use xlink:href="#news-views" />
+                                  </svg>
+                                  1 913
+                                </span>
+                                <a href="#" class="news__info-block news__comments">
+                                  <svg width="16" height="13" aria-hidden="true" class="icon-news-comments">
+                                    <use xlink:href="#news-comments" />
+                                  </svg>
+                                  22
+                                </a>
+                              </div>
+                              <p class="news__source">
+                                Источник: www.ak-bars.ru
+                              </p>
+                              <a href="news-details.html" class="news__details-link">
+                                <h3 class="news__news-item-heading">
+                                  Зинэтула Билялетдинов: «допустили ошибки в обороне – это привело к неудачному счёту»
+                                </h3>
+                              </a>
+                            </div>
+                          </li>
+                          <li class="news__list-item">
+                            <a href="news-details.html" class="news__image-container">
+                              <img src="img/video-preview-2.jpg" alt="Изображение новости" class="news__image" />
+                            </a>
+                            <div class="news__description">
+                              <div class="news__info">
+                                <span class="news__info-block news__date">
+                                  <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
+                                    <use xlink:href="#news-calendar" />
+                                  </svg>
+                                  24.11.2019 г.
+                                </span>
+                                <span class="news__info-block news__views">
+                                  <svg width="17" height="9" aria-hidden="true" class="icon-news-views">
+                                    <use xlink:href="#news-views" />
+                                  </svg>
+                                  1 913
+                                </span>
+                                <a href="#" class="news__info-block news__comments">
+                                  <svg width="16" height="13" aria-hidden="true" class="icon-news-comments">
+                                    <use xlink:href="#news-comments" />
+                                  </svg>
+                                  22
+                                </a>
+                              </div>
+                              <p class="news__source">
+                                Источник: www.ak-bars.ru
+                              </p>
+                              <a href="news-details.html" class="news__details-link">
+                                <h3 class="news__news-item-heading">
+                                  Артём Лукоянов: «неприятный осадок, но всё поправимо»
+                                </h3>
+                              </a>
+                            </div>
+                          </li>
+                          <li class="news__list-item">
+                            <a href="news-details.html" class="news__image-container">
+                              <img src="img/Зарипов.jpg" alt="Изображение новости" class="news__image" />
+                            </a>
+                            <div class="news__description">
+                              <div class="news__info">
+                                <span class="news__info-block news__date">
+                                  <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
+                                    <use xlink:href="#news-calendar" />
+                                  </svg>
+                                  24.11.2019 г.
+                                </span>
+                                <span class="news__info-block news__views">
+                                  <svg width="17" height="9" aria-hidden="true" class="icon-news-views">
+                                    <use xlink:href="#news-views" />
+                                  </svg>
+                                  1 913
+                                </span>
+                                <a href="#" class="news__info-block news__comments">
+                                  <svg width="16" height="13" aria-hidden="true" class="icon-news-comments">
+                                    <use xlink:href="#news-comments" />
+                                  </svg>
+                                  22
+                                </a>
+                              </div>
+                              <p class="news__source">
+                                Источник: www.ak-bars.ru
+                              </p>
+                              <a href="news-details.html" class="news__details-link">
+                                <h3 class="news__news-item-heading">
+                                  Данис Зарипов — лучший снайпер «Ак Барса» в КХЛ
+                                </h3>
+                              </a>
+                            </div>
+                          </li>
+                          <li class="news__list-item">
+                            <a href="news-details.html" class="news__image-container">
+                              <img src="img/Avangard.jpg" alt="Изображение новости" class="news__image" />
+                            </a>
+                            <div class="news__description">
+                              <div class="news__info">
+                                <span class="news__info-block news__date">
+                                  <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
+                                    <use xlink:href="#news-calendar" />
+                                  </svg>
+                                  24.11.2019 г.
+                                </span>
+                                <span class="news__info-block news__views">
+                                  <svg width="17" height="9" aria-hidden="true" class="icon-news-views">
+                                    <use xlink:href="#news-views" />
+                                  </svg>
+                                  1 913
+                                </span>
+                                <a href="#" class="news__info-block news__comments">
+                                  <svg width="16" height="13" aria-hidden="true" class="icon-news-comments">
+                                    <use xlink:href="#news-comments" />
+                                  </svg>
+                                  22
+                                </a>
+                              </div>
+                              <p class="news__source">
+                                Источник: www.ak-bars.ru
+                              </p>
+                              <a href="news-details.html" class="news__details-link">
+                                <h3 class="news__news-item-heading">
+                                  Абонемент на матчи «Ак Барса» в подарок от «Мойдодыра»!
+                                </h3>
+                              </a>
+                            </div>
+                          </li>
+                          <li class="news__list-item">
+                            <a href="news-details.html" class="news__image-container">
+                              <img src="img/video-preview-2.jpg" alt="Изображение новости" class="news__image" />
+                            </a>
+                            <div class="news__description">
+                              <div class="news__info">
+                                <span class="news__info-block news__date">
+                                  <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
+                                    <use xlink:href="#news-calendar" />
+                                  </svg>
+                                  24.11.2019 г.
+                                </span>
+                                <span class="news__info-block news__views">
+                                  <svg width="17" height="9" aria-hidden="true" class="icon-news-views">
+                                    <use xlink:href="#news-views" />
+                                  </svg>
+                                  1 913
+                                </span>
+                                <a href="#" class="news__info-block news__comments">
+                                  <svg width="16" height="13" aria-hidden="true" class="icon-news-comments">
+                                    <use xlink:href="#news-comments" />
+                                  </svg>
+                                  22
+                                </a>
+                              </div>
+                              <p class="news__source">
+                                Источник: www.ak-bars.ru
+                              </p>
+                              <a href="news-details.html" class="news__details-link">
+                                <h3 class="news__news-item-heading">
+                                  Артём Лукоянов: «неприятный осадок, но всё поправимо»
+                                </h3>
+                              </a>
+                            </div>
+                          </li>
+                          <li class="news__list-item">
+                            <a href="news-details.html" class="news__image-container">
+                              <img src="img/video-preview-1.jpg" alt="Изображение новости" class="news__image" />
+                            </a>
+                            <div class="news__description">
+                              <div class="news__info">
+                                <span class="news__info-block news__date">
+                                  <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
+                                    <use xlink:href="#news-calendar" />
+                                  </svg>
+                                  24.11.2019 г.
+                                </span>
+                                <span class="news__info-block news__views">
+                                  <svg width="17" height="9" aria-hidden="true" class="icon-news-views">
+                                    <use xlink:href="#news-views" />
+                                  </svg>
+                                  1 913
+                                </span>
+                                <a href="#" class="news__info-block news__comments">
+                                  <svg width="16" height="13" aria-hidden="true" class="icon-news-comments">
+                                    <use xlink:href="#news-comments" />
+                                  </svg>
+                                  22
+                                </a>
+                              </div>
+                              <p class="news__source">
+                                Источник: www.ak-bars.ru
+                              </p>
+                              <a href="news-details.html" class="news__details-link">
+                                <h3 class="news__news-item-heading">
+                                  Зинэтула Билялетдинов: «допустили ошибки в обороне – это привело к неудачному счёту»
+                                </h3>
+                              </a>
+                            </div>
+                          </li>
+                          <li class="news__list-item">
+                            <a href="news-details.html" class="news__image-container">
+                              <img src="img/video-preview-2.jpg" alt="Изображение новости" class="news__image" />
+                            </a>
+                            <div class="news__description">
+                              <div class="news__info">
+                                <span class="news__info-block news__date">
+                                  <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
+                                    <use xlink:href="#news-calendar" />
+                                  </svg>
+                                  24.11.2019 г.
+                                </span>
+                                <span class="news__info-block news__views">
+                                  <svg width="17" height="9" aria-hidden="true" class="icon-news-views">
+                                    <use xlink:href="#news-views" />
+                                  </svg>
+                                  1 913
+                                </span>
+                                <a href="#" class="news__info-block news__comments">
+                                  <svg width="16" height="13" aria-hidden="true" class="icon-news-comments">
+                                    <use xlink:href="#news-comments" />
+                                  </svg>
+                                  22
+                                </a>
+                              </div>
+                              <p class="news__source">
+                                Источник: www.ak-bars.ru
+                              </p>
+                              <a href="news-details.html" class="news__details-link">
+                                <h3 class="news__news-item-heading">
+                                  Артём Лукоянов: «неприятный осадок, но всё поправимо»
+                                </h3>
+                              </a>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
                     </li>
                     <li class="tabs__item js-tab">
-                      Фото
+                      <div class="match-summary__photo">
+                        <div class="photogallery__images js-photogallery"></div>
+                      </div>
                     </li>
                     <li class="tabs__item js-tab">
                       Трансляции
@@ -1301,7 +1725,6 @@
                     </li>
                   </ul>
                 </div>
-
               </div>
               <div class="match-summary__stats-block">
                 <h2 class="match-summary__stats-block-heading">

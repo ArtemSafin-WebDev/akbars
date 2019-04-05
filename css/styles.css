@@ -13801,6 +13801,9 @@ svg {
     margin-top: 35px;
     margin-bottom: 0; }
 
+.match-summary__publications {
+  padding: 40px; }
+
 .default {
   width: 960px;
   display: -webkit-box;
