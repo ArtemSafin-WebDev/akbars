@@ -5,19 +5,19 @@ export default function() {
 
   if (searchModal) {
     searchButton.addEventListener('click', event => {
-      event.preventDefault()
+      // event.preventDefault()
       document.body.classList.toggle('search-modal-open')
     })
 
     searchModal.addEventListener('click', event => {
-      event.preventDefault()
+      // event.preventDefault()
       if (event.target === searchModal) {
         document.body.classList.remove('search-modal-open')
       }
     })
 
     searchModalClose.addEventListener('click', event => {
-      event.preventDefault()
+      // event.preventDefault()
       document.body.classList.remove('search-modal-open')
     })
   }
