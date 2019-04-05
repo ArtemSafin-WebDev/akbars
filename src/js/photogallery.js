@@ -29,6 +29,7 @@ export default function() {
 
 
   if (typeof photogalleryDetailsDataSource !== 'undefined' && photogalleryDetailsDataSource.length > 0) {
+    console.log('Gallery initialized')
     $('.js-photogallery')
       .on('fotorama:show', function(e, fotorama, extra) {
         $('.js-photogallery-photo-description').html(fotorama.activeFrame.title)
