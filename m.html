@@ -16,7 +16,7 @@
   </title>
 </head>
 
-<body>
+<body ontouchstart="">
   <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
     <?xml version="1.0" encoding="utf-8"?>
     <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -235,9 +235,10 @@
       <symbol viewBox="0 0 22.8 16.68" id="youtube" xmlns="http://www.w3.org/2000/svg">
         <path d="M22.64 3.58a5.06 5.06 0 0 0-.9-2.39 3.21 3.21 0 0 0-2.28-1c-3.18-.2-8-.2-8-.2s-4.77 0-8 .2a3.24 3.24 0 0 0-2.29 1A5 5 0 0 0 .2 3.58C.1 4.87 0 6.16 0 7.45v1.78c0 1.3.1 2.59.2 3.88a4.91 4.91 0 0 0 .89 2.38 3.93 3.93 0 0 0 2.48 1c1.79.2 7.75.2 7.75.2s4.76 0 8-.3a3.25 3.25 0 0 0 2.29-1 5.12 5.12 0 0 0 .93-2.39c.1-1.29.2-2.59.2-3.88V7.35a16.38 16.38 0 0 0-.1-3.77zm-13.5 7.84V4.67L15.29 8z" />
       </symbol>
-    </svg>
-  </div>
+    </svg></div>
+
   <div class="overlay js-overlay"></div>
+
   <div class="sidebar js-sidebar">
     <div class="sidebar__content">
       <div class="toggles">
@@ -434,375 +435,1045 @@
     </header>
 
     <main>
-      <div class="news-wrapper">
-        <section class="news">
-          <ul class="news__slider js-mobile-news-slider">
-            <li class="news__slider-item">
-              <a href="#" class="news__image-container">
-                <img src="img/Зарипов.jpg" alt="Изображение новости" />
-              </a>
-              <div class="news__description">
-                <h3 class="news__heading">
-                  ДАНИС ЗАРИПОВ — ЛУЧШИЙ СНАЙПЕР«АК БАРСА» В КХЛ
-                </h3>
-              </div>
-            </li>
-            <li class="news__slider-item">
-              <a href="#" class="news__image-container">
-                <img src="img/Avangard.jpg" alt="Изображение новости" />
-              </a>
-              <div class="news__description">
-                <h3 class="news__heading">
-                  ДАНИС ЗАРИПОВ — ЛУЧШИЙ СНАЙПЕР«АК БАРСА» В КХЛ
-                </h3>
-              </div>
-            </li>
-            <li class="news__slider-item">
-              <a href="#" class="news__image-container">
-                <img src="img/Зарипов.jpg" alt="Изображение новости" />
-              </a>
-              <div class="news__description">
-                <h3 class="news__heading">
-                  ДАНИС ЗАРИПОВ — ЛУЧШИЙ СНАЙПЕР«АК БАРСА» В КХЛ
-                </h3>
-              </div>
-            </li>
-            <li class="news__slider-item">
-              <a href="#" class="news__image-container">
-                <img src="img/Avangard.jpg" alt="Изображение новости" />
-              </a>
-              <div class="news__description">
-                <h3 class="news__heading">
-                  ДАНИС ЗАРИПОВ — ЛУЧШИЙ СНАЙПЕР«АК БАРСА» В КХЛ
-                </h3>
-              </div>
-            </li>
-            <li class="news__slider-item">
-              <a href="#" class="news__image-container">
-                <img src="img/Зарипов.jpg" alt="Изображение новости" />
-              </a>
-              <div class="news__description">
-                <h3 class="news__heading">
-                  ДАНИС ЗАРИПОВ — ЛУЧШИЙ СНАЙПЕР«АК БАРСА» В КХЛ
-                </h3>
-              </div>
-            </li>
-          </ul>
-          <div class="news__slider-controls js-news-dots">
-            <a href="#" class="news__all-news-link">Все новости</a>
-          </div>
-        </section>
-        <section class="events">
-          <h2 class="events__heading">СОБЫТИЯ</h2>
-          <div class="tabs js-tabs-container">
-            <nav class="tabs__navigation">
-              <button class="js-tab-button js-tab-button-info">
-                <span class="tabs__button-content">
-                  <svg width="18" height="18" aria-hidden="true" class="icon-calendar-white">
-                    <use xlink:href="#calendar-white" />
-                  </svg>
-                  Календарь
-                </span>
-              </button>
-              <button class="js-tab-button js-tab-button-photos">
-                <span class="tabs__button-content">
-                  <svg width="20" height="20" aria-hidden="true" class="icon-51">
-                    <use xlink:href="#51" />
-                  </svg>
-                  Результаты
-                </span>
-              </button>
-            </nav>
-            <ul class="tabs__content">
-              <li class="tabs__item js-tab">
-                <section class="events__calendar">
-                  <div class="calendar__controls">
-                    <button class="calendar__button" title="Предыдущий месяц">
-                      <span class="calendar__button-content">
-                        <svg width="8" height="12" aria-hidden="true" class="icon-arrow-left">
-                          <use xlink:href="#arrow-left" />
-                        </svg>
-                      </span>
-                    </button>
-                    <span class="calendar__month">
-                      Февраль
+      <section class="news">
+        <ul class="news__slider js-mobile-news-slider">
+          <li class="news__slider-item">
+            <a href="#" class="news__image-container">
+              <img src="img/Зарипов.jpg" alt="Изображение новости" />
+            </a>
+            <div class="news__description">
+              <h3 class="news__heading">
+                ДАНИС ЗАРИПОВ — ЛУЧШИЙ СНАЙПЕР«АК БАРСА» В КХЛ
+              </h3>
+            </div>
+          </li>
+          <li class="news__slider-item">
+            <a href="#" class="news__image-container">
+              <img src="img/Avangard.jpg" alt="Изображение новости" />
+            </a>
+            <div class="news__description">
+              <h3 class="news__heading">
+                ДАНИС ЗАРИПОВ — ЛУЧШИЙ СНАЙПЕР«АК БАРСА» В КХЛ
+              </h3>
+            </div>
+          </li>
+          <li class="news__slider-item">
+            <a href="#" class="news__image-container">
+              <img src="img/Зарипов.jpg" alt="Изображение новости" />
+            </a>
+            <div class="news__description">
+              <h3 class="news__heading">
+                ДАНИС ЗАРИПОВ — ЛУЧШИЙ СНАЙПЕР«АК БАРСА» В КХЛ
+              </h3>
+            </div>
+          </li>
+          <li class="news__slider-item">
+            <a href="#" class="news__image-container">
+              <img src="img/Avangard.jpg" alt="Изображение новости" />
+            </a>
+            <div class="news__description">
+              <h3 class="news__heading">
+                ДАНИС ЗАРИПОВ — ЛУЧШИЙ СНАЙПЕР«АК БАРСА» В КХЛ
+              </h3>
+            </div>
+          </li>
+          <li class="news__slider-item">
+            <a href="#" class="news__image-container">
+              <img src="img/Зарипов.jpg" alt="Изображение новости" />
+            </a>
+            <div class="news__description">
+              <h3 class="news__heading">
+                ДАНИС ЗАРИПОВ — ЛУЧШИЙ СНАЙПЕР«АК БАРСА» В КХЛ
+              </h3>
+            </div>
+          </li>
+        </ul>
+        <div class="news__slider-controls js-news-dots">
+          <a href="#" class="news__all-news-link">Все новости</a>
+        </div>
+      </section>
+      <section class="events">
+        <h2 class="events__heading">СОБЫТИЯ</h2>
+        <div class="tabs js-tabs-container">
+          <nav class="tabs__navigation">
+            <button class="js-tab-button js-tab-button-info">
+              <span class="tabs__button-content">
+                <svg width="18" height="18" aria-hidden="true" class="icon-calendar-white">
+                  <use xlink:href="#calendar-white" />
+                </svg>
+                Календарь
+              </span>
+            </button>
+            <button class="js-tab-button js-tab-button-photos">
+              <span class="tabs__button-content">
+                <svg width="20" height="20" aria-hidden="true" class="icon-51">
+                  <use xlink:href="#51" />
+                </svg>
+                Результаты
+              </span>
+            </button>
+          </nav>
+          <ul class="tabs__content">
+            <li class="tabs__item js-tab">
+              <section class="events__calendar">
+                <div class="calendar__controls">
+                  <button class="calendar__button" title="Предыдущий месяц">
+                    <span class="calendar__button-content">
+                      <svg width="8" height="12" aria-hidden="true" class="icon-arrow-left">
+                        <use xlink:href="#arrow-left" />
+                      </svg>
                     </span>
-                    <button class="calendar__button" title="Следующий месяц">
-                      <span class="calendar__button-content">
-                        <svg width="8" height="12" aria-hidden="true" class="icon-arrow-right">
-                          <use xlink:href="#arrow-right" />
-                        </svg>
-                      </span>
-                    </button>
+                  </button>
+                  <span class="calendar__month">
+                    Февраль
+                  </span>
+                  <button class="calendar__button" title="Следующий месяц">
+                    <span class="calendar__button-content">
+                      <svg width="8" height="12" aria-hidden="true" class="icon-arrow-right">
+                        <use xlink:href="#arrow-right" />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+                <div class="calendar__dates">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Пн</th>
+                        <th>Вт</th>
+                        <th>Ср</th>
+                        <th>Чт</th>
+                        <th>Пт</th>
+                        <th>Сб</th>
+                        <th>Вс</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <span class="calendar__date-info another-month">
+                            <span class="calendar__date-info-day" data-day="28">28</span>
+                          </span>
+                        </td>
+                        <td>
+                          <span class="calendar__date-info another-month">
+                            <a class="calendar__date-link marked-red">
+                              <img src="img/logo/torpedo-logo.png" alt="Лого Торпедо" class="calendar__date-image" />
+                            </a>
+                            <span class="calendar__date-info-day" data-day="29">29</span>
+                          </span>
+                        </td>
+                        <td>
+                          <span class="calendar__date-info another-month">
+                            <span class="calendar__date-info-day" data-day="30">30</span>
+                          </span>
+                        </td>
+                        <td>
+                          <span class="calendar__date-info">
+                            <span class="calendar__date-info-day" data-day="1">1</span>
+                          </span>
+                        </td>
+                        <td>
+                          <span class="calendar__date-info">
+                            <a href="#" class="calendar__date-link marked-red">
+                              <img src="img/logo/amur-logo.png" alt="Лого Амура" class="calendar__date-image" />
+                            </a>
+                            <span class="calendar__date-info-day" data-day="2">2</span>
+                          </span>
+                        </td>
+                        <td>
+                          <span class="calendar__date-info">
+                            <span class="calendar__date-info-day" data-day="3">3</span>
+                          </span>
+                        </td>
+                        <td>
+                          <span class="calendar__date-info">
+                            <span class="calendar__date-info-day" data-day="4">4</span>
+                          </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="calendar__date-info">
+                            <span class="calendar__date-info-day" data-day="5">5</span>
+                          </span>
+                        </td>
+                        <td>
+                          <span class="calendar__date-info">
+                            <span class="calendar__date-info-day" data-day="6">6</span>
+                          </span>
+                        </td>
+                        <td>
+                          <span class="calendar__date-info">
+                            <a href="#" class="calendar__date-link marked-green">
+                              <img src="img/logo/dynamo-logo.png" alt="Лого Динамо" class="calendar__date-image" />
+                            </a>
+                            <span class="calendar__date-info-day" data-day="7">7</span>
+                          </span>
+                        </td>
+                        <td>
+                          <span class="calendar__date-info">
+                            <span class="calendar__date-info-day" data-day="8">8</span>
+                          </span>
+                        </td>
+                        <td>
+                          <span class="calendar__date-info">
+                            <span class="calendar__date-info-day" data-day="9">9</span>
+                          </span>
+                        </td>
+                        <td>
+                          <span class="calendar__date-info">
+                            <span class="calendar__date-info-day" data-day="10">10</span>
+                          </span>
+                        </td>
+                        <td>
+                          <span class="calendar__date-info">
+                            <span class="calendar__date-info-day" data-day="11">11</span>
+                          </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="calendar__date-info">
+                            <span class="calendar__date-info-day" data-day="12">12</span>
+                          </span>
+                        </td>
+                        <td>
+                          <span class="calendar__date-info">
+                            <span class="calendar__date-info-day" data-day="13">13</span>
+                          </span>
+                        </td>
+                        <td>
+                          <span class="calendar__date-info">
+                            <a href="#" class="calendar__date-link marked-green">
+                              <img src="img/logo/metallurg-logo.png" alt="Лого Металурга" class="calendar__date-image" />
+                            </a>
+                            <span class="calendar__date-info-day" data-day="14">14</span>
+                          </span>
+                        </td>
+                        <td>
+                          <span class="calendar__date-info">
+                            <span class="calendar__date-info-day" data-day="15">15</span>
+                          </span>
+                        </td>
+                        <td>
+                          <span class="calendar__date-info">
+                            <a href="#" class="calendar__date-link marked-green">
+                              <img src="img/logo/sochi-logo.png" alt="Лого Сочи" class="calendar__date-image" />
+                            </a>
+                            <span class="calendar__date-info-day" data-day="16">16</span>
+                          </span>
+                        </td>
+                        <td>
+                          <span class="calendar__date-info">
+                            <span class="calendar__date-info-day" data-day="17">17</span>
+                          </span>
+                        </td>
+                        <td>
+                          <span class="calendar__date-info">
+                            <span class="calendar__date-info-day" data-day="18">18</span>
+                          </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="calendar__date-info">
+                            <span class="calendar__date-info-day" data-day="19">19</span>
+                          </span>
+                        </td>
+                        <td>
+                          <span class="calendar__date-info">
+                            <a href="#" class="calendar__date-link marked-red">
+                              <img src="img/logo/torpedo-logo.png" alt="Лого Торпедо" class="calendar__date-image" />
+                            </a>
+                            <span class="calendar__date-info-day" data-day="20">20</span>
+                          </span>
+                        </td>
+                        <td>
+                          <span class="calendar__date-info">
+                            <span class="calendar__date-info-day" data-day="21">21</span>
+                          </span>
+                        </td>
+                        <td>
+                          <span class="calendar__date-info">
+                            <span class="calendar__date-info-day" data-day="22">22</span>
+                          </span>
+                        </td>
+                        <td>
+                          <span class="calendar__date-info">
+                            <span class="calendar__date-info-day" data-day="23">23</span>
+                          </span>
+                        </td>
+                        <td>
+                          <span class="calendar__date-info">
+                            <span class="calendar__date-info-day" data-day="24">24</span>
+                          </span>
+                        </td>
+                        <td>
+                          <span class="calendar__date-info">
+                            <a href="#" class="calendar__date-link marked-red">
+                              <img src="img/logo/sibir-logo.png" alt="Лого Сибирь" class="calendar__date-image" />
+                            </a>
+                            <span class="calendar__date-info-day" data-day="25">25</span>
+                          </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="calendar__date-info">
+                            <span class="calendar__date-info-day" data-day="26">26</span>
+                          </span>
+                        </td>
+                        <td>
+                          <span class="calendar__date-info">
+                            <span class="calendar__date-info-day" data-day="27">27</span>
+                          </span>
+                        </td>
+                        <td>
+                          <span class="calendar__date-info">
+                            <span class="calendar__date-info-day" data-day="28">28</span>
+                          </span>
+                        </td>
+                        <td>
+                          <span class="calendar__date-info another-month">
+                            <span class="calendar__date-info-day" data-day="1">1</span>
+                          </span>
+                        </td>
+                        <td>
+                          <span class="calendar__date-info another-month">
+                            <a class="calendar__date-link marked-green">
+                              <img src="img/logo/sochi-logo.png" alt="Лого Сочи" class="calendar__date-image" />
+                            </a>
+                            <span class="calendar__date-info-day" data-day="2">2</span>
+                          </span>
+                        </td>
+                        <td>
+                          <span class="calendar__date-info another-month">
+                            <span class="calendar__date-info-day" data-day="3">3</span>
+                          </span>
+                        </td>
+                        <td>
+                          <span class="calendar__date-info another-month">
+                            <span class="calendar__date-info-day" data-day="4">4</span>
+                          </span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="calendar__legend">
+                    <span class="calendar__legend-item calendar__legend-item--home">
+                      Домашние матчи
+                    </span>
+                    <span class="calendar__legend-item calendar__legend-item--guest">
+                      Гостевые матчи
+                    </span>
                   </div>
-                  <div class="calendar__dates">
-                    <table>
-                      <thead>
+                  <div class="calendar__links">
+                    <a href="#" class="calendar__team-calendar-link">
+                      Календарь Ак Барса
+                    </a>
+                    <a href="#" class="calendar__all-calendar-link">
+                      <span class="calendar__all-calendar-link-text">Весь календарь</span>
+                    </a>
+                  </div>
+                </div>
+              </section>
+            </li>
+            <li class="tabs__item js-tab">
+              <section class="results">
+                <div class="results__wrapper">
+                  <div class="results__short">
+                    <table class="results__table">
+                      <tr>
+                        <th colspan="2">13.02.2019</th>
+                      </tr>
+                      <tbody class="match">
                         <tr>
-                          <th>Пн</th>
-                          <th>Вт</th>
-                          <th>Ср</th>
-                          <th>Чт</th>
-                          <th>Пт</th>
-                          <th>Сб</th>
-                          <th>Вс</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>
-                            <span class="calendar__date-info another-month">
-                              <span class="calendar__date-info-day" data-day="28">28</span>
-                            </span>
+                          <td class="score">
+                            5
                           </td>
-                          <td>
-                            <span class="calendar__date-info another-month">
-                              <a class="calendar__date-link marked-red">
-                                <img src="img/logo/torpedo-logo.png" alt="Лого Торпедо" class="calendar__date-image" />
-                              </a>
-                              <span class="calendar__date-info-day" data-day="29">29</span>
-                            </span>
-                          </td>
-                          <td>
-                            <span class="calendar__date-info another-month">
-                              <span class="calendar__date-info-day" data-day="30">30</span>
-                            </span>
-                          </td>
-                          <td>
-                            <span class="calendar__date-info">
-                              <span class="calendar__date-info-day" data-day="1">1</span>
-                            </span>
-                          </td>
-                          <td>
-                            <span class="calendar__date-info">
-                              <a href="#" class="calendar__date-link marked-red">
-                                <img src="img/logo/amur-logo.png" alt="Лого Амура" class="calendar__date-image" />
-                              </a>
-                              <span class="calendar__date-info-day" data-day="2">2</span>
-                            </span>
-                          </td>
-                          <td>
-                            <span class="calendar__date-info">
-                              <span class="calendar__date-info-day" data-day="3">3</span>
-                            </span>
-                          </td>
-                          <td>
-                            <span class="calendar__date-info">
-                              <span class="calendar__date-info-day" data-day="4">4</span>
-                            </span>
+                          <td class="team">
+                            Ак Барс (Казань)
                           </td>
                         </tr>
                         <tr>
-                          <td>
-                            <span class="calendar__date-info">
-                              <span class="calendar__date-info-day" data-day="5">5</span>
-                            </span>
+                          <td class="score">
+                            1
                           </td>
-                          <td>
-                            <span class="calendar__date-info">
-                              <span class="calendar__date-info-day" data-day="6">6</span>
-                            </span>
+                          <td class="team">
+                            Торпедо (Новосибирская область)
                           </td>
-                          <td>
-                            <span class="calendar__date-info">
-                              <a href="#" class="calendar__date-link marked-green">
-                                <img src="img/logo/dynamo-logo.png" alt="Лого Динамо" class="calendar__date-image" />
-                              </a>
-                              <span class="calendar__date-info-day" data-day="7">7</span>
-                            </span>
+                        </tr>
+                      </tbody>
+                      <tbody class="match">
+                        <tr>
+                          <td class="score">
+                            5
                           </td>
-                          <td>
-                            <span class="calendar__date-info">
-                              <span class="calendar__date-info-day" data-day="8">8</span>
-                            </span>
-                          </td>
-                          <td>
-                            <span class="calendar__date-info">
-                              <span class="calendar__date-info-day" data-day="9">9</span>
-                            </span>
-                          </td>
-                          <td>
-                            <span class="calendar__date-info">
-                              <span class="calendar__date-info-day" data-day="10">10</span>
-                            </span>
-                          </td>
-                          <td>
-                            <span class="calendar__date-info">
-                              <span class="calendar__date-info-day" data-day="11">11</span>
-                            </span>
+                          <td class="team">
+                            Ак Барс (Казань)
                           </td>
                         </tr>
                         <tr>
-                          <td>
-                            <span class="calendar__date-info">
-                              <span class="calendar__date-info-day" data-day="12">12</span>
-                            </span>
+                          <td class="score">
+                            1
                           </td>
-                          <td>
-                            <span class="calendar__date-info">
-                              <span class="calendar__date-info-day" data-day="13">13</span>
-                            </span>
+                          <td class="team">
+                            Торпедо (Новосибирская область)
                           </td>
-                          <td>
-                            <span class="calendar__date-info">
-                              <a href="#" class="calendar__date-link marked-green">
-                                <img src="img/logo/metallurg-logo.png" alt="Лого Металурга" class="calendar__date-image" />
-                              </a>
-                              <span class="calendar__date-info-day" data-day="14">14</span>
-                            </span>
+                        </tr>
+                      </tbody>
+                      <tbody class="match">
+                        <tr>
+                          <td class="score">
+                            5
                           </td>
-                          <td>
-                            <span class="calendar__date-info">
-                              <span class="calendar__date-info-day" data-day="15">15</span>
-                            </span>
-                          </td>
-                          <td>
-                            <span class="calendar__date-info">
-                              <a href="#" class="calendar__date-link marked-green">
-                                <img src="img/logo/sochi-logo.png" alt="Лого Сочи" class="calendar__date-image" />
-                              </a>
-                              <span class="calendar__date-info-day" data-day="16">16</span>
-                            </span>
-                          </td>
-                          <td>
-                            <span class="calendar__date-info">
-                              <span class="calendar__date-info-day" data-day="17">17</span>
-                            </span>
-                          </td>
-                          <td>
-                            <span class="calendar__date-info">
-                              <span class="calendar__date-info-day" data-day="18">18</span>
-                            </span>
+                          <td class="team">
+                            Ак Барс (Казань)
                           </td>
                         </tr>
                         <tr>
-                          <td>
-                            <span class="calendar__date-info">
-                              <span class="calendar__date-info-day" data-day="19">19</span>
-                            </span>
+                          <td class="score">
+                            1
                           </td>
-                          <td>
-                            <span class="calendar__date-info">
-                              <a href="#" class="calendar__date-link marked-red">
-                                <img src="img/logo/torpedo-logo.png" alt="Лого Торпедо" class="calendar__date-image" />
-                              </a>
-                              <span class="calendar__date-info-day" data-day="20">20</span>
-                            </span>
+                          <td class="team">
+                            Торпедо (Новосибирская область)
                           </td>
-                          <td>
-                            <span class="calendar__date-info">
-                              <span class="calendar__date-info-day" data-day="21">21</span>
-                            </span>
+                        </tr>
+                      </tbody>
+                      <tbody class="match">
+                        <tr>
+                          <td class="score">
+                            5
                           </td>
-                          <td>
-                            <span class="calendar__date-info">
-                              <span class="calendar__date-info-day" data-day="22">22</span>
-                            </span>
-                          </td>
-                          <td>
-                            <span class="calendar__date-info">
-                              <span class="calendar__date-info-day" data-day="23">23</span>
-                            </span>
-                          </td>
-                          <td>
-                            <span class="calendar__date-info">
-                              <span class="calendar__date-info-day" data-day="24">24</span>
-                            </span>
-                          </td>
-                          <td>
-                            <span class="calendar__date-info">
-                              <a href="#" class="calendar__date-link marked-red">
-                                <img src="img/logo/sibir-logo.png" alt="Лого Сибирь" class="calendar__date-image" />
-                              </a>
-                              <span class="calendar__date-info-day" data-day="25">25</span>
-                            </span>
+                          <td class="team">
+                            Ак Барс (Казань)
                           </td>
                         </tr>
                         <tr>
-                          <td>
-                            <span class="calendar__date-info">
-                              <span class="calendar__date-info-day" data-day="26">26</span>
-                            </span>
+                          <td class="score">
+                            1
                           </td>
-                          <td>
-                            <span class="calendar__date-info">
-                              <span class="calendar__date-info-day" data-day="27">27</span>
-                            </span>
+                          <td class="team">
+                            Торпедо (Новосибирская область)
                           </td>
-                          <td>
-                            <span class="calendar__date-info">
-                              <span class="calendar__date-info-day" data-day="28">28</span>
-                            </span>
+                        </tr>
+                      </tbody>
+                      <tbody class="match">
+                        <tr>
+                          <td class="score">
+                            5
                           </td>
-                          <td>
-                            <span class="calendar__date-info another-month">
-                              <span class="calendar__date-info-day" data-day="1">1</span>
-                            </span>
+                          <td class="team">
+                            Ак Барс (Казань)
                           </td>
-                          <td>
-                            <span class="calendar__date-info another-month">
-                              <a class="calendar__date-link marked-green">
-                                <img src="img/logo/sochi-logo.png" alt="Лого Сочи" class="calendar__date-image" />
-                              </a>
-                              <span class="calendar__date-info-day" data-day="2">2</span>
-                            </span>
+                        </tr>
+                        <tr>
+                          <td class="score">
+                            1
                           </td>
-                          <td>
-                            <span class="calendar__date-info another-month">
-                              <span class="calendar__date-info-day" data-day="3">3</span>
-                            </span>
+                          <td class="team">
+                            Торпедо (Новосибирская область)
                           </td>
-                          <td>
-                            <span class="calendar__date-info another-month">
-                              <span class="calendar__date-info-day" data-day="4">4</span>
-                            </span>
+                        </tr>
+                      </tbody>
+                      <tr>
+                        <th colspan="2">05.02.2019</th>
+                      </tr>
+                      <tbody class="match">
+                        <tr>
+                          <td class="score">
+                            5
+                          </td>
+                          <td class="team">
+                            Ак Барс (Казань)
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="score">
+                            1
+                          </td>
+                          <td class="team">
+                            Торпедо (Новосибирская область)
+                          </td>
+                        </tr>
+                      </tbody>
+                      <tbody class="match">
+                        <tr>
+                          <td class="score">
+                            5
+                          </td>
+                          <td class="team">
+                            Ак Барс (Казань)
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="score">
+                            1
+                          </td>
+                          <td class="team">
+                            Торпедо (Новосибирская область)
+                          </td>
+                        </tr>
+                      </tbody>
+                      <tbody class="match">
+                        <tr>
+                          <td class="score">
+                            5
+                          </td>
+                          <td class="team">
+                            Ак Барс (Казань)
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="score">
+                            1
+                          </td>
+                          <td class="team">
+                            Торпедо (Новосибирская область)
+                          </td>
+                        </tr>
+                      </tbody>
+                      <tbody class="match">
+                        <tr>
+                          <td class="score">
+                            5
+                          </td>
+                          <td class="team">
+                            Ак Барс (Казань)
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="score">
+                            1
+                          </td>
+                          <td class="team">
+                            Торпедо (Новосибирская область)
+                          </td>
+                        </tr>
+                      </tbody>
+                      <tbody class="match">
+                        <tr>
+                          <td class="score">
+                            5
+                          </td>
+                          <td class="team">
+                            Ак Барс (Казань)
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="score">
+                            1
+                          </td>
+                          <td class="team">
+                            Торпедо (Новосибирская область)
                           </td>
                         </tr>
                       </tbody>
                     </table>
-                    <div class="calendar__legend">
-                      <span class="calendar__legend-item calendar__legend-item--home">
-                        Домашние матчи
-                      </span>
-                      <span class="calendar__legend-item calendar__legend-item--guest">
-                        Гостевые матчи
-                      </span>
-                    </div>
-                    <div class="calendar__links">
-                      <a href="#" class="calendar__team-calendar-link">
-                        Календарь Ак Барса
-                      </a>
-                      <a href="#" class="calendar__all-calendar-link">
-                        <span class="calendar__all-calendar-link-text">Весь календарь</span>
-                      </a>
-                    </div>
                   </div>
-                </section>
-              </li>
-              <li class="tabs__item js-tab">
-                <section class="results">
-                  <div class="results__wrapper" data-simplebar>
-                    <div class="results__short">
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro eligendi eveniet mollitia asperiores voluptatem sit repellendus ex ab voluptatibus dolor, aut quae amet numquam ipsa rem recusandae placeat velit iste perferendis, quasi dolores harum? Laboriosam nulla eum molestias qui non unde nisi repudiandae repellat culpa optio? Deserunt maiores animi excepturi ipsa beatae quos provident maxime hic adipisci voluptate facilis esse sit veritatis aliquid iste sint consequatur minus molestiae, cum in ducimus eius modi est? Facere non exercitationem reiciendis quo tempora veniam laboriosam? Nulla nostrum aut tempora labore itaque ullam beatae, iusto vel voluptatum exercitationem, aperiam omnis? Adipisci officiis quia rerum, quo minus harum dignissimos eveniet, optio modi mollitia voluptatem. Reiciendis magnam laudantium esse libero veniam quia consequatur et, aut facilis ex explicabo quod debitis at similique nam earum odio accusantium dicta maiores veritatis eos excepturi voluptas modi aspernatur. Porro magnam quod nulla dolor minus, recusandae reprehenderit nisi dolorem vero nostrum eaque consectetur voluptatum neque hic cupiditate, autem quia enim placeat iste asperiores quos. Odit dolorem mollitia eaque ut nulla doloribus vero? Quo assumenda voluptate, libero autem nam quas sunt expedita tempora laboriosam nostrum eaque quam aperiam alias tenetur amet earum possimus sint. Itaque laborum laboriosam ut, vero, dolorem dignissimos sed aliquid iure, quis consequuntur error magnam! Rerum voluptatibus asperiores cupiditate nemo suscipit perferendis et recusandae praesentium quod. Dicta cupiditate nesciunt aut error minima modi repellat repudiandae inventore harum minus eligendi exercitationem corporis vitae sapiente quos, ab aperiam qui animi quibusdam! Blanditiis reprehenderit doloremque eligendi minima aut ipsam sint accusamus, corrupti odio atque amet veniam, quisquam alias ducimus? Illo excepturi nam et dolore praesentium laborum quam consectetur optio quisquam in, earum animi reiciendis iste amet provident vel atque, nesciunt nostrum cum ipsum saepe reprehenderit rem! Obcaecati quod odio quas perferendis, voluptatibus ea aliquid! Delectus, voluptatem voluptas. Officia laudantium nihil molestiae veritatis eaque itaque saepe ex harum sint placeat provident ipsum molestias, delectus necessitatibus quidem atque quae nobis at quas debitis praesentium in sed inventore? Ad numquam assumenda officia tempora esse molestiae atque, fugit nisi quae quis laboriosam fugiat in sequi perferendis enim, aliquam facilis libero totam, perspiciatis molestias tempore! Rerum dolores officia veniam non sint quasi autem quia maxime esse sapiente nemo totam harum voluptates ratione odit placeat repellat doloribus id, explicabo facilis molestiae temporibus? Cumque quidem aperiam accusamus. Voluptate eveniet quod repellendus quo earum nihil molestias non! Ipsam eius ipsum laboriosam odit perspiciatis, sapiente, quia, ullam repudiandae illum soluta dignissimos.
-                    </div>
-                  </div>
-                </section>
-              </li>
-            </ul>
+                </div>
+                <a href="#" class="results__all-results-link">Все результаты</a>
+              </section>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="media">
+        <h2 class="media__heading">Медиа</h2>
+        <div class="tabs js-tabs-container">
+          <div class="tabs__navigation-wrapper" data-simplebar>
+            <nav class="tabs__navigation">
+              <button class="js-tab-button js-tab-button-info">
+                <span class="tabs__button-content">
+                  <svg width="18" height="18" aria-hidden="true" class="icon-video-white">
+                    <use xlink:href="#video-white" />
+                  </svg>
+                  Ак Барс Инфо
+                </span>
+              </button>
+              <button class="js-tab-button js-tab-button-photos">
+                <span class="tabs__button-content">
+                  <svg width="18" height="18" aria-hidden="true" class="icon-photo-white">
+                    <use xlink:href="#photo-white" />
+                  </svg>
+                  Фотогалерея
+                </span>
+              </button>
+            </nav>
           </div>
-        </section>
-      </div>
+          <ul class="tabs__content">
+            <li class="tabs__item tabs__item--column js-tab">
+              <div class="media__ak-bars-info">
+                <div class="swiper-container js-ak-bars-info-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="media__ak-bars-info-video">
+                        <a href="#" class="media__ak-bars-info-video-link">
+                          <img src="img/video-preview-1.jpg" alt="" class="media__ak-bars-info-video-preview" />
+                          <svg width="60" height="60" aria-hidden="true" class="media__ak-bars-info-video__play-icon">
+                            <use xlink:href="#play" />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="media__ak-bars-info-video">
+                        <a href="#" class="media__ak-bars-info-video-link">
+                          <img src="img/video-preview-2.jpg" alt="" class="media__ak-bars-info-video-preview" />
+                          <svg width="60" height="60" aria-hidden="true" class="media__ak-bars-info-video__play-icon">
+                            <use xlink:href="#play" />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="media__ak-bars-info-video">
+                        <a href="#" class="media__ak-bars-info-video-link">
+                          <img src="img/video-preview-3.jpg" alt="" class="media__ak-bars-info-video-preview" />
+                          <svg width="60" height="60" aria-hidden="true" class="media__ak-bars-info-video__play-icon">
+                            <use xlink:href="#play" />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="media__ak-bars-info-all-videos-link-container">
+                  <a href="#" class="media__ak-bars-info-all-videos-link">Все видео</a>
+                </div>
+              </div>
+            </li>
+            <li class="tabs__item tabs__item--column js-tab">
+              <div class="media__ak-bars-info">
+                <div class="swiper-container js-ak-bars-info-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="media__ak-bars-info-video">
+                        <a href="#" class="media__ak-bars-info-video-link">
+                          <img src="img/video-preview-1.jpg" alt="" class="media__ak-bars-info-video-preview" />
+                        </a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="media__ak-bars-info-video">
+                        <a href="#" class="media__ak-bars-info-video-link">
+                          <img src="img/video-preview-2.jpg" alt="" class="media__ak-bars-info-video-preview" />
+                        </a>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="media__ak-bars-info-video">
+                        <a href="#" class="media__ak-bars-info-video-link">
+                          <img src="img/video-preview-3.jpg" alt="" class="media__ak-bars-info-video-preview" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="media__ak-bars-info-all-videos-link-container">
+                  <a href="#" class="media__ak-bars-info-all-videos-link">Все фотографии</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="stats">
+        <h2 class="stats__heading">
+          СТАТИСТИКА
+        </h2>
+        <div class="tabs js-tabs-container">
+          <div class="tabs__navigation-wrapper" data-simplebar>
+            <nav class="tabs__navigation">
+              <button class="js-tab-button js-tab-button-info">
+                <span class="tabs__button-content">
+                  <svg width="18" height="18" aria-hidden="true" class="icon-video-white">
+                    <use xlink:href="#video-white" />
+                  </svg>
+                  Регулярный чемпионат
+                </span>
+              </button>
+              <button class="js-tab-button js-tab-button-photos" disabled>
+                <span class="tabs__button-content">
+                  <svg width="18" height="18" aria-hidden="true" class="icon-photo-white">
+                    <use xlink:href="#photo-white" />
+                  </svg>
+                  Плей-офф
+                </span>
+              </button>
+            </nav>
+          </div>
+          <ul class="tabs__content">
+            <li class="tabs__item tabs__item--column js-tab">
+              <div class="stats__player-slider-block">
+                <div class="swiper-container js-players-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="stats__player-card">
+                        <p class="stats__player-category">
+                          Бомбардиры
+                        </p>
+                        <div class="stats__player-image-container">
+                          <img src="img/players/player-1.jpg" alt="Изображение игрока" class="stats__player-image" />
+                        </div>
+                        <table class="stats__player-table">
+                          <tr>
+                            <td>1</td>
+                            <td>Секач Иржи</td>
+                            <td>4</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Азеведо Джастин</td>
+                            <td>4</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Зарипов Данис</td>
+                            <td>3</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="stats__player-card">
+                        <p class="stats__player-category">
+                          Снайперы
+                        </p>
+                        <div class="stats__player-image-container">
+                          <img src="img/players/player-2.jpg" alt="Изображение игрока" class="stats__player-image" />
+                        </div>
+                        <table class="stats__player-table">
+                          <tr>
+                            <td>1</td>
+                            <td>Секач Иржи</td>
+                            <td>4</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Азеведо Джастин</td>
+                            <td>4</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Зарипов Данис</td>
+                            <td>3</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="stats__player-card">
+                        <p class="stats__player-category">
+                          Ассистенты
+                        </p>
+                        <div class="stats__player-image-container">
+                          <img src="img/players/player-1.jpg" alt="Изображение игрока" class="stats__player-image" />
+                        </div>
+                        <table class="stats__player-table">
+                          <tr>
+                            <td>1</td>
+                            <td>Секач Иржи</td>
+                            <td>4</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Азеведо Джастин</td>
+                            <td>4</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Зарипов Данис</td>
+                            <td>3</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="tabs__item tabs__item--column js-tab">
+              <div class="stats__player-slider-block">
+                <div class="swiper-container js-players-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="stats__player-card">
+                        <p class="stats__player-category">
+                          Бомбардиры
+                        </p>
+                        <div class="stats__player-image-container">
+                          <img src="img/players/player-1.jpg" alt="Изображение игрока" class="stats__player-image" />
+                        </div>
+                        <table class="stats__player-table">
+                          <tr>
+                            <td>1</td>
+                            <td>Секач Иржи</td>
+                            <td>4</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Азеведо Джастин</td>
+                            <td>4</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Зарипов Данис</td>
+                            <td>3</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="stats__player-card">
+                        <p class="stats__player-category">
+                          Снайперы
+                        </p>
+                        <div class="stats__player-image-container">
+                          <img src="img/players/player-2.jpg" alt="Изображение игрока" class="stats__player-image" />
+                        </div>
+                        <table class="stats__player-table">
+                          <tr>
+                            <td>1</td>
+                            <td>Секач Иржи</td>
+                            <td>4</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Азеведо Джастин</td>
+                            <td>4</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Зарипов Данис</td>
+                            <td>3</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="stats__player-card">
+                        <p class="stats__player-category">
+                          Ассистенты
+                        </p>
+                        <div class="stats__player-image-container">
+                          <img src="img/players/player-1.jpg" alt="Изображение игрока" class="stats__player-image" />
+                        </div>
+                        <table class="stats__player-table">
+                          <tr>
+                            <td>1</td>
+                            <td>Секач Иржи</td>
+                            <td>4</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Азеведо Джастин</td>
+                            <td>4</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Зарипов Данис</td>
+                            <td>3</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="stats__all-stats-link-container">
+          <a href="#" class="stats__all-stats-link">Вся статистика</a>
+        </div>
+      </section>
+      <section class="shop">
+        <h2 class="shop__heading">
+          ИНТЕРНЕТ-МАГАЗИН
+        </h2>
+        <div class="shop__wrapper">
+          <div class="swiper-container js-shop-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="#" class="shop__card">
+                  <span class="shop__card-image-wrapper">
+                    <span class="shop__card-image-container">
+                      <img src="https://www.ak-bars.ru/img/shop/small_item_7819.png" alt="" class="shop__card-image" />
+                    </span>
+                  </span>
+                  <span class="shop__card-product-name">Лонгслив АКБ детский (зел. и красн. рукава)</span>
+                  <span class="shop__card-price">
+                    1 700 ₽
+                  </span>
+                  <span class="shop__card-buy">
+                    Купить
+                  </span>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="shop__card">
+                  <span class="shop__card-image-wrapper">
+                    <span class="shop__card-image-container">
+                      <img src="https://www.ak-bars.ru/img/shop/small_item_10265.png" alt="" class="shop__card-image" />
+                    </span>
+                  </span>
+                  <span class="shop__card-product-name">Кресло-мешок Ак Барс</span>
+                  <span class="shop__card-price">
+                    6 000 ₽
+                  </span>
+                  <span class="shop__card-buy">
+                    Купить
+                  </span>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="shop__card">
+                  <span class="shop__card-image-wrapper">
+                    <span class="shop__card-image-container">
+                      <img src="https://www.ak-bars.ru/img/shop/small_item_10138.png" alt="" class="shop__card-image" />
+                    </span>
+                  </span>
+                  <span class="shop__card-product-name">Футболка Hockey мужская зеленая</span>
+                  <span class="shop__card-price">
+                    1 700 ₽
+                  </span>
+                  <span class="shop__card-buy">
+                    Купить
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="shop__all-products-container">
+          <a href="#" class="shop__all-products">
+            Все товары
+          </a>
+        </div>
+      </section>
+      <section class="subscribe">
+        <div class="container">
+          <div class="subscribe__content">
+            <h2 class="subscribe__heading">
+              БУДЬТЕ В КУРСЕ НАШИХ СОБЫТИЙ
+            </h2>
+            <form action="/" method="POST" class="subscribe__form">
+              <input type="email" name="email" placeholder="Введите ваш e-mail" required />
+              <button type="submit">Подписаться</button>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="page-footer">
       <div class="container">
-        Mobile Footer
+        <img src="img/logo/akbars-logo.svg" alt="Логотип команды" width="70" class="page-footer__team-logo" />
+        <p>
+          Официальный сайт ООО «СКП «Татнефть - Ак Барс». © 2000-2019
+        </p>
+        <p>
+          При использовании материалов сайта ссылка на источник обязательна По вопросам размещения рекламы обращайтесь по
+          тел/факс: +7 843 53-38-232
+        </p>
+        <a href="#">
+          Стать партнером ХК «Ак Барс»
+        </a>
+        <a href="#" class="page-footer__callback-form-link">
+          <span class="page-footer__callback-form-link-text">
+            Форма обратной связи
+          </span>
+        </a>
+        <ul class="page-footer__special-links-list">
+          <li class="page-footer__special-links-list-item">
+            <a href="#" class="page-footer__special-link">
+              <span class="page-footer__special-link-icon-container">
+                <svg width="20" height="18" aria-hidden="true" class="icon-academy">
+                  <use xlink:href="#academy" />
+                </svg>
+              </span>
+              Академия
+            </a>
+          </li>
+          <li class="page-footer__special-links-list-item">
+            <a href="#" class="page-footer__special-link">
+              <span class="page-footer__special-link-icon-container">
+                <svg width="20" height="22" aria-hidden="true" class="icon-tickets">
+                  <use xlink:href="#tickets" />
+                </svg>
+              </span>
+              Билеты
+            </a>
+          </li>
+          <li class="page-footer__special-links-list-item">
+            <a href="#" class="page-footer__special-link">
+              <span class="page-footer__special-link-icon-container">
+                <svg width="16" height="18" aria-hidden="true" class="icon-shop">
+                  <use xlink:href="#shop" />
+                </svg>
+              </span>
+              Магазин
+            </a>
+          </li>
+        </ul>
+        <ul class="page-footer__social-list">
+          <li class="page-footer__social-list-item">
+            <a href="#" class="page-footer__social-link">
+              <svg width="28" height="18" aria-hidden="true" class="icon-vk">
+                <use xlink:href="#vk" />
+              </svg>
+            </a>
+          </li>
+          <li class="page-footer__social-list-item">
+            <a href="#" class="page-footer__social-link">
+              <svg width="25" height="25" aria-hidden="true" class="icon-instagram">
+                <use xlink:href="#instagram" />
+              </svg>
+            </a>
+          </li>
+          <li class="page-footer__social-list-item">
+            <a href="#" class="page-footer__social-link">
+              <svg width="28" height="20" aria-hidden="true" class="icon-youtube">
+                <use xlink:href="#youtube" />
+              </svg>
+            </a>
+          </li>
+          <li class="page-footer__social-list-item">
+            <a href="#" class="page-footer__social-link">
+              <svg width="24" height="20" aria-hidden="true" class="icon-twitter">
+                <use xlink:href="#twitter" />
+              </svg>
+            </a>
+          </li>
+
+          <li class="page-footer__social-list-item">
+            <a href="#" class="page-footer__social-link">
+              <svg width="13" height="22" aria-hidden="true" class="icon-fb">
+                <use xlink:href="#fb" />
+              </svg>
+            </a>
+          </li>
+          <li class="page-footer__social-list-item">
+            <a href="#" class="page-footer__social-link">
+              <svg width="16" height="24" aria-hidden="true" class="icon-ok">
+                <use xlink:href="#ok" />
+              </svg>
+            </a>
+          </li>
+          <li class="page-footer__social-list-item">
+            <a href="#" class="page-footer__social-link">
+              <svg width="27" height="22" aria-hidden="true" class="icon-telegram">
+                <use xlink:href="#telegram" />
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
-    <script src="https://cdn.datatables.net/plug-ins/1.10.19/sorting/datetime-moment.js"></script>
     <script src="js/Mobile.js"></script>
+
   </div>
 </body>
 
