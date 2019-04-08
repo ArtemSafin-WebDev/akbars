@@ -1185,6 +1185,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  max-width: 800px;
   font-family: 'Supermolot', 'Helvetica', sans-serif; }
   body > * {
     -ms-flex-negative: 0;
