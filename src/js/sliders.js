@@ -90,7 +90,7 @@ export default function() {
     arrows: false,
     dots: false,
     draggable: false,
-    adaptiveHeight: true
+    // adaptiveHeight: true
   })
 
   $('.js-products-slider').slick({

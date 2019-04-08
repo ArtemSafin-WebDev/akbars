@@ -13700,8 +13700,9 @@ svg {
     font-family: 'Supermolot', 'Helvetica', sans-serif;
     color: #256963;
     margin-top: 5px;
-    position: relative;
-    cursor: default; }
+    position: relative; }
+    .match-summary__protocol-table .score:link, .match-summary__protocol-table .score:visited {
+      color: #256963; }
     .match-summary__protocol-table .score::before, .match-summary__protocol-table .score::after {
       content: '';
       position: absolute;

@@ -348,7 +348,10 @@
     color: $green;
     margin-top: 5px;
     position: relative;
-    cursor: default;
+    &:link,
+    &:visited {
+      color: $green;
+    }
     &::before,
     &::after {
       content: '';
