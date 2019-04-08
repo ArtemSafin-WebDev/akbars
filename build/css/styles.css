@@ -7204,6 +7204,15 @@ svg {
 
 .news-details__news-article {
   padding: 0 40px; }
+  .news-details__news-article a {
+    color: #256963;
+    outline: none;
+    position: relative;
+    display: inline; }
+    .news-details__news-article a:link, .news-details__news-article a:visited {
+      color: #256963; }
+    .news-details__news-article a:hover, .news-details__news-article a:focus {
+      text-decoration: underline; }
 
 .news-details__news-article-main-heading {
   margin: 0;
@@ -7267,34 +7276,12 @@ svg {
   .news-details__news-article-content a {
     color: #256963;
     outline: none;
-    position: relative; }
-    .news-details__news-article-content a::before, .news-details__news-article-content a::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: 5px;
-      height: 1px;
-      width: 100%;
-      background-position: bottom;
-      background-size: 3px 3px;
-      background-repeat: repeat-x;
-      -webkit-transition: opacity 0.3s;
-      transition: opacity 0.3s; }
-    .news-details__news-article-content a::before {
-      background-image: -webkit-gradient(linear, left top, right top, color-stop(33%, #256963), color-stop(0%, rgba(255, 255, 255, 0)));
-      background-image: linear-gradient(to right, #256963 33%, rgba(255, 255, 255, 0) 0%); }
-    .news-details__news-article-content a::after {
-      background-image: -webkit-gradient(linear, left top, right top, color-stop(33%, #3c8f88), color-stop(0%, rgba(255, 255, 255, 0)));
-      background-image: linear-gradient(to right, #3c8f88 33%, rgba(255, 255, 255, 0) 0%);
-      opacity: 0; }
+    position: relative;
+    display: inline; }
     .news-details__news-article-content a:link, .news-details__news-article-content a:visited {
       color: #256963; }
     .news-details__news-article-content a:hover, .news-details__news-article-content a:focus {
-      color: #3c8f88; }
-      .news-details__news-article-content a:hover::before, .news-details__news-article-content a:focus::before {
-        opacity: 0; }
-      .news-details__news-article-content a:hover::after, .news-details__news-article-content a:focus::after {
-        opacity: 1; }
+      text-decoration: underline; }
   .news-details__news-article-content p {
     font-size: 16px;
     line-height: 30px;
