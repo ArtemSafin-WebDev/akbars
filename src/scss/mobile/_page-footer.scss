@@ -1,0 +1,137 @@
+.page-footer {
+  color: $green;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  align-items: center;
+
+  p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    color: #606366;
+    margin-bottom: 20px;
+  }
+
+  a {
+    color: $green;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    &:link,
+    &:visited {
+      color: $green;
+    }
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+.page-footer__team-logo {
+  display: block;
+  margin-bottom: 40px;
+}
+
+
+.page-footer__special-links-list {
+  margin-top: 40px;
+  &-item {
+    margin-bottom: 15px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+a.page-footer__special-link {
+  display: flex;
+  align-items: center;
+  font-family: 'Supermolot', 'Helvetica', sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: .2px;
+  text-transform: uppercase;
+  transition: .2s;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $red;
+  }
+}
+
+
+.page-footer__special-link-icon-container {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  padding-bottom: 2px;
+  > svg {
+    fill: $red;
+  }
+}
+
+
+a.page-footer__callback-form-link {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: 'Supermolot', 'Helvetica', sans-serif;
+  color: $green;
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  transition: .2s;
+  &::after {
+    content: ' >';
+    color: $red;
+    margin-left: 5px;
+  }
+  &:link,
+  &:visited {
+    color: $green;
+  }
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $red;
+  }
+}
+
+
+.page-footer__social-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  max-width: 250px;
+  margin-top: 50px;
+  &-item {
+    margin-right: 25px;
+    margin-bottom: 18px;
+  }
+}
+
+
+.page-footer__social-link {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  > svg {
+    fill: $green;
+    transition: .2s;
+  }
+  &:hover,
+  &:focus {
+    > svg {
+      fill: $red;
+    }
+  }
+}

@@ -5,6 +5,7 @@ import 'lightcase'
 import objectFitImages from 'object-fit-images'
 import smoothscroll from 'smoothscroll-polyfill'
 
+
 import setTabsOnPage from './tabs'
 import initializeSliders from './sliders'
 import searchModal from './search'

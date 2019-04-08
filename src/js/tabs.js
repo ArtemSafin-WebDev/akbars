@@ -18,6 +18,8 @@ function initializeTabs(element, activeTab = 1) {
     throw new Error('Отсутствуют табы')
   }
 
+  
+
   const setActiveTab = activeTab => {
     tabsControls.forEach((button, index) => {
       if (index === activeTab - 1) {

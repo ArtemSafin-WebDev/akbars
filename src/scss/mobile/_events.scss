@@ -1,4 +1,5 @@
 .events {
+  background-color: #fff;
   .tabs__navigation {
     button {
       width: 50%;
@@ -300,7 +301,7 @@
   flex-direction: column;
   margin-top: 62px;
   margin-top: auto;
-  padding-bottom: 65px;
+  padding-bottom: 15px;
 }
 
 .calendar__team-calendar-link {
@@ -308,7 +309,8 @@
   line-height: 20px;
   border: 2px solid $green;
   display: inline-block;
-  padding: 13px 27px;
+  padding: 11px 27px;
+  padding-bottom: 10px;
   transition: all 0.3s;
   color: $green;
   align-self: stretch;
@@ -321,6 +323,7 @@
   &:hover,
   &:focus {
     border: 2px solid $red;
+    color: $red;
   }
 }
 

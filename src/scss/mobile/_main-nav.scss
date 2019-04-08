@@ -47,11 +47,12 @@
       background-size: 10px 10px;
       background-repeat: no-repeat;
       transition: transform .3s ease-out;
+      transform: rotate(180deg);
     }
 
     &.active {
       &::before {
-        transform: rotate(180deg);
+        transform: rotate(0);
       }
     }
   }

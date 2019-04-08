@@ -10,14 +10,16 @@
   align-items: center;
   transition: all 0.3s;
   transform-origin: center bottom;
-  z-index: 1000;
+  backface-visibility: hidden;
+  transform: translateY(0) translateZ(0);
+  z-index: 40;
   > .container {
     display: flex;
     align-items: center;
   }
 
   &.hidden {
-    transform: translateY(-100%);
+    transform: translateY(-100%) translateZ(0);
   }
 }
 

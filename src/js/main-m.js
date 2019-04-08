@@ -6,13 +6,19 @@ import mobileMenu from './mobileMenu'
 import hideOnScroll from './mobileHideOnScroll'
 import mobileSliders from './mobileSliders'
 import setTabsOnPage from './tabs'
+import touchDetection from './touchDetection'
 import 'simplebar'
+
 
 document.addEventListener('DOMContentLoaded', function() {
 
   // Полифилл для CSS свойства ObjectFit(заполнение контейнера изображением)
 
   objectFitImages()
+
+  // Определение тач девайсов
+
+  touchDetection()
 
   // Мобильное меню навигации
 
@@ -24,13 +30,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Слайдеры мобильной версии
   
-
   mobileSliders()
 
   // Иниализация всех табов на странице с помощью фабрики функций
 
   setTabsOnPage()
 
-
+  
   
 })
