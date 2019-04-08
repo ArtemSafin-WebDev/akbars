@@ -64,11 +64,24 @@ function setTabsOnPage() {
   if (tabContainers.length > 0) {
     tabContainers.forEach(tabContainer => {
       const initializeTab = makeTabsController()
-      initializeTab(tabContainer)
+      let tabToActivate = null
+
+      const activeTab = tabContainer.querySelector('.js-tab.active');
+      if (activeTab) {
+        const index = [...activeTab.parentElement.children].indexOf(activeTab);
+        tabToActivate = index + 1;
+      }
+
+      if (tabToActivate) {
+        initializeTab(tabContainer, tabToActivate)
+      } else {
+        initializeTab(tabContainer, 1)
+      }
+
     })
   }
 }
 
-// Экспортируем фабрику функций
+
 
 export default setTabsOnPage
