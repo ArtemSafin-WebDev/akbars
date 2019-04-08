@@ -33,15 +33,9 @@
   a {
     color: $green;
     outline: none;
-    position: relative;
-    display: inline;
     &:link,
     &:visited {
       color: $green;
-    }
-    &:hover,
-    &:focus {
-      text-decoration: underline;
     }
   }
 }

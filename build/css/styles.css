@@ -7206,13 +7206,9 @@ svg {
   padding: 0 40px; }
   .news-details__news-article a {
     color: #256963;
-    outline: none;
-    position: relative;
-    display: inline; }
+    outline: none; }
     .news-details__news-article a:link, .news-details__news-article a:visited {
       color: #256963; }
-    .news-details__news-article a:hover, .news-details__news-article a:focus {
-      text-decoration: underline; }
 
 .news-details__news-article-main-heading {
   margin: 0;
