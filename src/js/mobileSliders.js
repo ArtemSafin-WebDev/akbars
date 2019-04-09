@@ -9,63 +9,81 @@ export default function() {
     appendDots: '.js-news-dots'
   })
 
-  const akBarsInfoSwiper = new Swiper('.js-ak-bars-info-swiper', {
-    loop: true,
-    centeredSlides: true,
-    slidesPerView: 'auto',
-    spaceBetween: 15
+
+  const mediaSwiperElements = Array.from(document.querySelectorAll('.js-ak-bars-info-swiper'))
+
+  mediaSwiperElements.forEach(element => {
+    new Swiper(element, {
+      loop: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      spaceBetween: 15
+    })
   })
 
-  const shopSlider = new Swiper('.js-shop-slider', {
-    loop: true,
-    centeredSlides: true,
-    slidesPerView: 'auto',
-    spaceBetween: 15
-  })
+  const shopSwiperElement = document.querySelector('.js-shop-slider')
 
-  const playersSlider = new Swiper('.js-players-swiper', {
-    loop: true,
-    centeredSlides: true,
-    slidesPerView: 'auto',
-    spaceBetween: 15
-  })
-
-  let regularNameSlider = new Swiper('.js-swiper-regular-name-slider', {
-    loop: true,
-    navigation: {
-      nextEl: '.js-swiper-regular-next',
-      prevEl: '.js-swiper-regular-prev'
-    }
-  })
-
-  let regularTableSlider = new Swiper('.js-swiper-regular-table', {
-    loop: true
-  })
-
-  if (regularNameSlider && regularTableSlider) {
-    regularNameSlider.controller.control = regularTableSlider
-    regularTableSlider.controller.control = regularNameSlider
+  if (shopSwiperElement) {
+    new Swiper(shopSwiperElement, {
+      loop: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      spaceBetween: 15
+    })
   }
 
-  let playoffNameSlider = new Swiper('.js-swiper-playoff-name-slider', {
-    loop: true,
-    navigation: {
-      nextEl: '.js-swiper-playoff-next',
-      prevEl: '.js-swiper-playoff-prev'
-    }
-  })
+  const playerSwiperElement = document.querySelector('.js-players-swiper')
+
+  if (playerSwiperElement) {
+    new Swiper(playerSwiperElement, {
+      loop: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      spaceBetween: 15
+    })
+  }
+
+  const regularNameSliderElement = document.querySelector('.js-swiper-regular-name-slider')
+  const regularTableSliderElement = document.querySelector('.js-swiper-regular-table')
+
+  if (regularNameSliderElement && regularTableSliderElement) {
+    let regularNameSlider = new Swiper(regularNameSliderElement, {
+      loop: true,
+      navigation: {
+        nextEl: '.js-swiper-regular-next',
+        prevEl: '.js-swiper-regular-prev'
+      }
+    })
+
+    let regularTableSlider = new Swiper(regularTableSliderElement, {
+      loop: true
+    })
+
+    regularNameSlider.controller.control = regularTableSlider
+    regularTableSlider.controller.control = regularNameSlider
+    
+  }
 
 
-  let playoffTableSlider = new Swiper('.js-swiper-playoff-table', {
-    loop: true
-  })
+  const playoffNameSliderElement = document.querySelector('.js-swiper-playoff-name-slider')
+  const playoffTableSliderElement = document.querySelector('.js-swiper-playoff-table')
 
+  if (playoffNameSliderElement && playoffTableSliderElement) {
+    let playoffNameSlider = new Swiper(playoffNameSliderElement, {
+      loop: true,
+      navigation: {
+        nextEl: '.js-swiper-playoff-next',
+        prevEl: '.js-swiper-playoff-prev'
+      }
+    })
 
-  if (playoffNameSlider && playoffTableSlider) {
+    let playoffTableSlider = new Swiper(playoffTableSliderElement, {
+      loop: true
+    })
+
     playoffNameSlider.controller.control = playoffTableSlider
     playoffTableSlider.controller.control = playoffNameSlider
   }
-  
 
 
 

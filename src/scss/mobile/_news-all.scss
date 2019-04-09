@@ -65,6 +65,11 @@
     &:visited {
       color: $green;
     }
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
   }
 }
 

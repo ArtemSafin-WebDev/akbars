@@ -1172,8 +1172,6 @@ html {
 body {
   min-width: 320px;
   min-height: 100%;
-  -ms-scroll-chaining: none;
-      overscroll-behavior: none;
   line-height: 1.4;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1351,6 +1349,7 @@ main {
   top: 0;
   left: 0;
   width: 100%;
+  max-width: 800px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1365,7 +1364,9 @@ main {
           backface-visibility: hidden;
   -webkit-transform: translateY(0) translateZ(0);
           transform: translateY(0) translateZ(0);
-  z-index: 40; }
+  z-index: 40;
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1); }
   .page-header > .container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1375,7 +1376,9 @@ main {
             align-items: center; }
   .page-header.hidden {
     -webkit-transform: translateY(-100%) translateZ(0);
-            transform: translateY(-100%) translateZ(0); }
+            transform: translateY(-100%) translateZ(0);
+    -webkit-box-shadow: none;
+            box-shadow: none; }
 
 .page-header__menu-open {
   outline: none;
@@ -2352,8 +2355,8 @@ a.page-footer__callback-form-link {
   color: #242F37; }
   .results__table thead,
   .results__table tbody,
-  .results__table td,
-  .results__table th {
+  .results__table th,
+  .results__table td {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2364,34 +2367,66 @@ a.page-footer__callback-form-link {
   .results__table tr {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; }
-  .results__table .match {
-    padding: 20px 20px;
-    position: relative; }
-    .results__table .match::before {
-      content: '';
-      position: absolute;
-      height: 1px;
-      background-color: #EBEBEB;
-      bottom: 0;
-      left: 20px;
-      right: 20px; }
-  .results__table th[colspan="2"] {
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .results__table td:first-child {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
+  .results__table .month th {
     width: 100%;
-    text-align: center;
-    padding: 10px 0;
     background-color: #EBEBEB;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 5px; }
+  .results__table .match {
+    padding: 0 20px; }
+  .results__table .team-score {
+    color: #256963;
+    font-weight: 700; }
+  .results__table .team-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .results__table .team-logo-container {
+    width: 60px;
+    height: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-right: 10px; }
+    .results__table .team-logo-container > img {
+      display: block;
+      width: 90%;
+      height: 90%;
+      -o-object-fit: contain;
+         object-fit: contain;
+      font-family: 'object-fit: contain;'; }
+  .results__table .team-name {
+    font-size: 16px;
+    line-height: 22px;
+    font-family: 'Supermolot', 'Helvetica', sans-serif;
+    font-weight: 700; }
+  .results__table .team-city {
     font-size: 14px;
     line-height: 18px;
-    letter-spacing: .2px;
-    font-weight: 700; }
-  .results__table td {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
-    line-height: 24px; }
-    .results__table td:nth-child(1) {
-      font-weight: 700;
-      margin-right: 5px; }
+    color: #94999F;
+    font-family: Arial, Helvetica, sans-serif; }
 
 .results__all-results-link {
   color: #256963;
@@ -3234,6 +3269,8 @@ a.page-footer__callback-form-link {
   margin-bottom: 10px; }
   .news-all__news-card-heading a:link, .news-all__news-card-heading a:visited {
     color: #256963; }
+  .news-all__news-card-heading a:hover, .news-all__news-card-heading a:focus {
+    text-decoration: underline; }
 
 .news-all__text {
   font-size: 16px;
