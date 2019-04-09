@@ -73,7 +73,7 @@
   }
 
 
-  .leave-comment {
+  a.leave-comment {
     font-size: 14px;
     line-height: 20px;
     border: 2px solid $green;
@@ -93,6 +93,8 @@
     &:hover,
     &:focus {
       color: $red;
+      text-decoration: none;
+      border-color: $red;
     }
   }
 
