@@ -1218,6 +1218,17 @@ img {
   color: white;
   background: #256963; }
 
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap; }
+
 main {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -2868,3 +2879,276 @@ a.page-footer__callback-form-link {
   .stats__all-stats-link:hover, .stats__all-stats-link:focus {
     color: #D81E23;
     border-color: #D81E23; }
+
+.table {
+  background-color: #fff;
+  position: relative; }
+  .table .tabs__navigation-wrapper {
+    position: relative;
+    z-index: 30;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; }
+    .table .tabs__navigation-wrapper .simplebar-track.simplebar-horizontal {
+      display: none !important; }
+  .table .tabs__navigation button {
+    width: 50%;
+    -ms-flex-negative: 0;
+        flex-shrink: 0; }
+    .table .tabs__navigation button .tabs__button-content {
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+  .table .swiper-container {
+    width: 100%; }
+  .table .swiper-slide {
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+
+.table__all-tables {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  position: relative;
+  z-index: 30;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .table__all-tables::before {
+    content: '';
+    width: 100%;
+    height: 100px;
+    background-image: linear-gradient(to top, white 10px, rgba(255, 255, 255, 0));
+    position: absolute;
+    left: 0;
+    bottom: 100%; }
+
+.table__all-tables-link {
+  color: #256963;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: .2px;
+  border: 2px solid #256963;
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 14px 10px 12px;
+  -webkit-transition: .2s;
+  transition: .2s; }
+  .table__all-tables-link:link, .table__all-tables-link:visited {
+    color: #256963; }
+  .table__all-tables-link:hover, .table__all-tables-link:focus {
+    color: #D81E23;
+    border-color: #D81E23; }
+
+.table__heading {
+  font-size: 18px;
+  line-height: 35px;
+  letter-spacing: 0.3px;
+  font-weight: 700;
+  text-align: center;
+  padding: 40px 0;
+  color: #256963; }
+
+.table__card-name-slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px; }
+
+.table__card-name-slider-name {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background-color: #ebebeb;
+  color: #242f37;
+  font-weight: 700;
+  width: 50%; }
+
+.table__card-name-slider-button-content {
+  background-color: #256963;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 35px;
+  height: 35px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s; }
+  .table__card-name-slider-button-content > svg {
+    fill: white;
+    -webkit-transition: 0.2s;
+    transition: 0.2s; }
+
+.table__card-name-slider-button:hover .table__card-name-slider-button-content {
+  background-color: #3c8f88; }
+
+.table__card-name-slider-name-text {
+  height: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: default; }
+
+.table__card-heading {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 700;
+  padding: 0 20px;
+  margin-bottom: 5px; }
+
+.table__card-content {
+  height: 70vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  color: #242f37; }
+  .table__card-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px; }
+    .table__card-content table:last-child {
+      margin-bottom: 100px; }
+  .table__card-content th,
+  .table__card-content td {
+    padding: 8px 10px;
+    cursor: default;
+    font-size: 16px;
+    line-height: 22px; }
+    .table__card-content th:first-child,
+    .table__card-content td:first-child {
+      padding-left: 20px;
+      padding-right: 0px; }
+      .table__card-content th:first-child::before,
+      .table__card-content td:first-child::before {
+        width: auto;
+        left: 20px;
+        right: 0; }
+    .table__card-content th:last-child,
+    .table__card-content td:last-child {
+      padding-right: 20px; }
+      .table__card-content th:last-child::before,
+      .table__card-content td:last-child::before {
+        width: auto;
+        right: 20px;
+        left: 0; }
+    .table__card-content th:nth-child(2),
+    .table__card-content td:nth-child(2) {
+      width: 100%; }
+  .table__card-content td {
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    position: relative; }
+    .table__card-content td:last-child {
+      font-weight: 700; }
+    .table__card-content td::before {
+      content: '';
+      height: 1px;
+      background-color: #ebebeb;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%; }
+  .table__card-content thead th {
+    background-color: #ebebeb;
+    color: #242f37; }
+  .table__card-content tr:first-child td::before {
+    display: none; }
+  .table__card-content tr.selected td {
+    background-color: #D81E23;
+    color: white; }
+    .table__card-content tr.selected td::before {
+      background-color: #D81E23; }
+  .table__card-content tr.selected + tr td::before {
+    background-color: #D81E23;
+    width: 100%;
+    left: 0;
+    right: auto; }
+  .table__card-content tr:not(.selected):hover td {
+    background-color: #dde8e7; }
+    .table__card-content tr:not(.selected):hover td::before {
+      background-color: #dde8e7; }
+  .table__card-content tr:not(.selected):hover + tr:not(.selected) td::before {
+    background-color: #dde8e7;
+    width: 100%;
+    left: 0;
+    right: auto; }
+
+.table__card-playoff-content {
+  height: 70vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  color: #242f37; }
+  .table__card-playoff-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px; }
+    .table__card-playoff-content table:last-child {
+      margin-bottom: 100px; }
+  .table__card-playoff-content thead th {
+    background-color: #ebebeb; }
+  .table__card-playoff-content tbody tr:first-child {
+    border-top: 20px solid white; }
+  .table__card-playoff-content tbody tr:last-child td {
+    position: relative;
+    border-bottom: 10px solid white; }
+  .table__card-playoff-content th,
+  .table__card-playoff-content td {
+    padding: 8px 10px;
+    cursor: default;
+    font-size: 16px;
+    line-height: 22px; }
+    .table__card-playoff-content th:first-child,
+    .table__card-playoff-content td:first-child {
+      padding-left: 20px;
+      padding-right: 20px;
+      font-weight: 700; }
+    .table__card-playoff-content th:last-child,
+    .table__card-playoff-content td:last-child {
+      padding-right: 20px; }
+    .table__card-playoff-content th:nth-child(2),
+    .table__card-playoff-content td:nth-child(2) {
+      width: 100%; }
+  .table__card-playoff-content td {
+    padding: 5px 10px;
+    -webkit-transition: .2s;
+    transition: .2s; }
+  .table__card-playoff-content sup {
+    color: #94999F; }
+  .table__card-playoff-content tr.defeated td:nth-child(2) {
+    color: #94999F; }
+  .table__card-playoff-content tr.selected sup {
+    color: #EFA5A7; }
+  .table__card-playoff-content tr.selected td:nth-child(2) {
+    background-color: #D81E23;
+    color: white; }
+  .table__card-playoff-content tr.selected.defeated td:nth-child(2) {
+    color: #EFA5A7; }
+  .table__card-playoff-content tbody:hover tr:not(.selected) td:nth-child(2) {
+    background-color: #DDE8E7; }

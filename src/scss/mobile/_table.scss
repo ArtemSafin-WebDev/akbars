@@ -1,0 +1,373 @@
+.table {
+  background-color: #fff;
+  position: relative;
+  .tabs__navigation-wrapper {
+    position: relative;
+    z-index: 30;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    .simplebar-track.simplebar-horizontal {
+      display: none !important;
+    }
+  }
+
+  .tabs__navigation button {
+    width: 50%;
+    flex-shrink: 0;
+    .tabs__button-content {
+      justify-content: center;
+    }
+  }
+
+  .swiper-container {
+    width: 100%;
+  }
+
+  .swiper-slide {
+    // width: calc(100% - 80px);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+.table__all-tables {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  // height: 100px;
+ 
+  position: relative;
+  z-index: 30;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  &::before {
+    content: '';
+    width: 100%;
+    height: 100px;
+    background-image: linear-gradient(to top, white 10px, rgba(white, 0));
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+  }
+}
+
+.table__all-tables-link {
+  color: $green;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: .2px;
+  border: 2px solid $green;
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 14px 10px 12px;
+  transition: .2s;
+  
+  &:link,
+  &:visited {
+    color: $green;
+  }
+  &:hover,
+  &:focus {
+    color: $red;
+    border-color: $red;
+  }
+}
+
+.table__heading {
+  font-size: 18px;
+  line-height: 35px;
+  letter-spacing: 0.3px;
+  font-weight: 700;
+  text-align: center;
+  padding: 40px 0;
+  color: $green;
+}
+
+.table__card-name-slider {
+  display: flex;
+  padding: 20px;
+}
+
+.table__card-name-slider-name {
+  flex-grow: 1;
+  background-color: #ebebeb;
+  color: #242f37;
+  font-weight: 700;
+  width: 50%;
+}
+
+.table__card-name-slider-button {
+  &-content {
+    background-color: $green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 35px;
+    height: 35px;
+    transition: 0.2s;
+    > svg {
+      fill: white;
+      transition: 0.2s;
+    }
+  }
+
+  &:hover &-content {
+    background-color: #3c8f88;
+  }
+}
+
+.table__card-name-slider-name-text {
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+}
+
+.table__card-heading {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 700;
+  padding: 0 20px;
+  margin-bottom: 5px;
+}
+
+.table__card-content {
+  height: 70vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  color: #242f37;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 100px;
+    }
+  }
+
+  th,
+  td {
+    padding: 8px 10px;
+    cursor: default;
+    font-size: 16px;
+    line-height: 22px;
+    &:first-child {
+      padding-left: 20px;
+      padding-right: 0px;
+      &::before {
+        width: auto;
+        left: 20px;
+        right: 0;
+      }
+    }
+    &:last-child {
+      padding-right: 20px;
+      &::before {
+        width: auto;
+        right: 20px;
+        left: 0;
+      }
+    }
+    &:nth-child(2) {
+      width: 100%;
+    }
+  }
+
+  td {
+    transition: 0.2s;
+    position: relative;
+
+    &:last-child {
+      font-weight: 700;
+    }
+    &::before {
+      content: '';
+      height: 1px;
+      background-color: #ebebeb;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+  }
+
+  thead {
+    th {
+      background-color: #ebebeb;
+      color: #242f37;
+    }
+  }
+
+  tr {
+    &:first-child {
+      td {
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  tr.selected {
+    td {
+      background-color: $red;
+      color: white;
+      &::before {
+        background-color: $red;
+      }
+    }
+    + tr {
+      td {
+        &::before {
+          background-color: $red;
+          width: 100%;
+          left: 0;
+          right: auto;
+        }
+      }
+    }
+  }
+
+  tr:not(.selected):hover {
+    td {
+      background-color: #dde8e7;
+      &::before {
+        background-color: #dde8e7;
+      }
+    }
+
+    + tr:not(.selected) {
+      td {
+        &::before {
+          background-color: #dde8e7;
+          width: 100%;
+          left: 0;
+          right: auto;
+        }
+      }
+    }
+  }
+}
+
+.table__card-playoff-content {
+  height: 70vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  color: #242f37;
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 100px;
+    }
+  }
+
+  thead {
+    th {
+      background-color: #ebebeb;
+    }
+  }
+
+  tbody {
+    tr:first-child {
+      border-top: 20px solid white;
+    }
+    tr:last-child {
+      td {
+        position: relative;
+        border-bottom: 10px solid white;
+        // &::after {
+        //   content: '';
+        //   height: 1px; 
+        //   background-color: #ebebeb;
+        //   width: 100%;
+        //   position: absolute;
+        //   bottom: -9px;
+        //   left: 0;
+        // }
+      }
+    }
+  }
+
+  th,
+  td {
+    padding: 8px 10px;
+    cursor: default;
+    font-size: 16px;
+    line-height: 22px;
+    &:first-child {
+      padding-left: 20px;
+      padding-right: 20px;
+      font-weight: 700;
+    }
+    &:last-child {
+      padding-right: 20px;
+    }
+    &:nth-child(2) {
+      width: 100%;
+    }
+  }
+
+  td {
+    padding: 5px 10px;
+    transition: .2s;
+  }
+
+  sup {
+    color: #94999F;
+  }
+
+  tr.defeated {
+    td {
+      &:nth-child(2) {
+        color: #94999F;
+      }
+    }
+    
+  }
+
+  tr.selected {
+    sup {
+      color: #EFA5A7;        
+    }
+    td {
+      &:nth-child(2) {
+        background-color: $red;
+        color: white;
+      }
+    }
+
+    &.defeated {
+      td {
+        &:nth-child(2) {
+          color: #EFA5A7;
+          
+        }
+      }
+      
+    }
+  }
+
+
+  tbody:hover {
+    tr:not(.selected) {
+      td {
+        &:nth-child(2) {
+          background-color: #DDE8E7;
+        }
+      }
+    }
+  }
+}

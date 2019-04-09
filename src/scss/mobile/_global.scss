@@ -61,6 +61,11 @@ img {
 } 
 
 
+.visually-hidden {
+  @include visuallyHidden();
+}
+
+
 
 
 footer {
