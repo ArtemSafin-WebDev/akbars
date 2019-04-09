@@ -5363,7 +5363,9 @@ svg {
   .tabs__button-content > svg {
     fill: white;
     display: block;
-    margin-right: 10px; }
+    margin-right: 10px;
+    -ms-flex-negative: 0;
+        flex-shrink: 0; }
 
 .ak-bars-info {
   width: 634px;
