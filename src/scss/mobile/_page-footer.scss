@@ -149,7 +149,7 @@ a.page-footer__callback-form-link {
 }
 
 
-.page-footer__bottom-nav-link {
+a.page-footer__bottom-nav-link {
   color: $green;
   font-size: 16px;
   line-height: 20px;
@@ -166,5 +166,6 @@ a.page-footer__callback-form-link {
   &:hover,
   &:focus {
     color: $red;
+    text-decoration: none;
   }
 }

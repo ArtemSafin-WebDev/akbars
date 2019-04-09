@@ -8185,7 +8185,7 @@ svg {
     transition: background-color .2s; }
   .sidebar-nav__link--has-submenu:hover, .sidebar-nav__link--has-submenu:focus {
     color: #D81E23; }
-    .sidebar-nav__link--has-submenu:hover::before, .sidebar-nav__link--has-submenu:focus::before {
+    .sidebar-nav__link--has-submenu:hover::before, .sidebar-nav__link--has-submenu:hover::after, .sidebar-nav__link--has-submenu:focus::before, .sidebar-nav__link--has-submenu:focus::after {
       background-color: #D81E23; }
   .sidebar-nav__link--collapsed::after {
     position: absolute;

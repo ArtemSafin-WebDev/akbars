@@ -58,7 +58,8 @@
     &:hover,
     &:focus {
       color: $red;
-      &::before {
+      &::before,
+      &::after {
         background-color: $red;
       }
     }
