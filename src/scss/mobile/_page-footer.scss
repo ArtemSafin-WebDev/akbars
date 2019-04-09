@@ -15,9 +15,9 @@
 
   a {
     color: $green;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    line-height: 16px;
+    
+    // font-size: 14px;
+    // line-height: 16px;
     &:link,
     &:visited {
       color: $green;
@@ -56,6 +56,7 @@ a.page-footer__special-link {
   letter-spacing: .2px;
   text-transform: uppercase;
   transition: .2s;
+  font-weight: 400;
   &:hover,
   &:focus {
     text-decoration: none;
@@ -133,5 +134,36 @@ a.page-footer__callback-form-link {
     > svg {
       fill: $red;
     }
+  }
+}
+
+
+.page-footer__bottom-nav-list {
+  margin: 40px 0;
+  &-item {
+    margin-bottom: 5px;
+    margin-bottom: 25px;
+  }
+  
+}
+
+
+.page-footer__bottom-nav-link {
+  color: $green;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: .2px;
+  text-transform: uppercase;
+  font-family: 'Supermolot', 'Helvetica', sans-serif;
+  display: block;
+  padding-left: 32px;
+  transition: .2s;
+  &:link,
+  &:visited {
+    color: $green;
+  }
+  &:hover,
+  &:focus {
+    color: $red;
   }
 }

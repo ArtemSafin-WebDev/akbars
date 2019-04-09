@@ -5,17 +5,17 @@
   .tabs__navigation-wrapper {
     position: relative;
     z-index: 30;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    .simplebar-track.simplebar-horizontal {
-      display: none !important;
-    }
+    // overflow-x: auto;
+    // -webkit-overflow-scrolling: touch;
+    // .simplebar-track.simplebar-horizontal {
+    //   display: none !important;
+    // }
   }
 
 
   .tabs__navigation button {
     width: 50%;
-    flex-shrink: 0;
+    // flex-shrink: 0;
     .tabs__button-content {
       justify-content: center;
     }

@@ -1,23 +1,19 @@
 .media {
   background-color: #fff;
-  .tabs__navigation-wrapper {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    .simplebar-track.simplebar-horizontal {
-      display: none !important;
-    }
-  }
+  // .tabs__navigation-wrapper {
+  //   overflow-x: auto;
+  //   -webkit-overflow-scrolling: touch;
+  //   .simplebar-track.simplebar-horizontal {
+  //     display: none !important;
+  //   }
+  // }
  
   .tabs__navigation button {
     width: 50%;
-    flex-shrink: 0;
+    // flex-shrink: 0;
+    
     .tabs__button-content {
       justify-content: center;
-      @media screen and (max-width: 360px) {
-        > svg {
-          display: none;
-        }
-      }
     }
   }
 
