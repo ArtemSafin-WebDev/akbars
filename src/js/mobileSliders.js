@@ -32,16 +32,17 @@ export default function() {
     })
   }
 
-  const playerSwiperElement = document.querySelector('.js-players-swiper')
+  const playerSwiperElements = document.querySelectorAll('.js-players-swiper')
 
-  if (playerSwiperElement) {
-    new Swiper(playerSwiperElement, {
+  playerSwiperElements.forEach(element => {
+    new Swiper(element, {
       loop: true,
       centeredSlides: true,
       slidesPerView: 'auto',
       spaceBetween: 15
     })
-  }
+  })
+  
 
   const regularNameSliderElement = document.querySelector('.js-swiper-regular-name-slider')
   const regularTableSliderElement = document.querySelector('.js-swiper-regular-table')
