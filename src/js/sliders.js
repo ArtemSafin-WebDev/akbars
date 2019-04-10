@@ -35,7 +35,7 @@ export default function() {
     vertical: true,
     slidesToShow: 3,
     arrows: true,
-    draggable: false,
+    // draggable: false,
     prevArrow: '.js-videos-slider-prev',
     nextArrow: '.js-videos-slider-next'
   })
