@@ -3514,31 +3514,6 @@ svg {
   .fotorama__video-play {
     background-image: url("../img/fotorama@2x.png"); } }
 
-.fotorama__nav-wrap {
-  position: relative; }
-  .fotorama__nav-wrap::before {
-    content: '';
-    left: 0;
-    top: 0;
-    position: absolute;
-    width: 60px;
-    height: 100%;
-    background: -webkit-gradient(linear, left top, right top, from(white), to(rgba(255, 255, 255, 0)));
-    background: linear-gradient(to right, white, rgba(255, 255, 255, 0));
-    z-index: 40;
-    pointer-events: none; }
-  .fotorama__nav-wrap::after {
-    content: '';
-    right: 0;
-    top: 0;
-    position: absolute;
-    width: 60px;
-    height: 100%;
-    background: -webkit-gradient(linear, right top, left top, from(white), to(rgba(255, 255, 255, 0)));
-    background: linear-gradient(to left, white, rgba(255, 255, 255, 0));
-    z-index: 40;
-    pointer-events: none; }
-
 .toggle {
   position: relative;
   display: inline-block;

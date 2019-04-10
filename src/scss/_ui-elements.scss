@@ -621,31 +621,31 @@
   }
 }
 
-.fotorama__nav-wrap {
-  position: relative;
-  &::before {
-    content: '';
-    left: 0;
-    top: 0;
-    position: absolute;
-    width: 60px;
-    height: 100%;
-    background: linear-gradient(to right, white, rgba(white, 0));
-    z-index: 40;
-    pointer-events: none;
-  }
-  &::after {
-    content: '';
-    right: 0;
-    top: 0;
-    position: absolute;
-    width: 60px;
-    height: 100%;
-    background: linear-gradient(to left, white, rgba(white, 0));
-    z-index: 40;
-    pointer-events: none;
-  }
-}
+// .fotorama__nav-wrap {
+//   position: relative;
+//   &::before {
+//     content: '';
+//     left: 0;
+//     top: 0;
+//     position: absolute;
+//     width: 60px;
+//     height: 100%;
+//     background: linear-gradient(to right, white, rgba(white, 0));
+//     z-index: 40;
+//     pointer-events: none;
+//   }
+//   &::after {
+//     content: '';
+//     right: 0;
+//     top: 0;
+//     position: absolute;
+//     width: 60px;
+//     height: 100%;
+//     background: linear-gradient(to left, white, rgba(white, 0));
+//     z-index: 40;
+//     pointer-events: none;
+//   }
+// }
 
 .toggle {
   position: relative;

@@ -7,7 +7,7 @@ import hideOnScroll from './mobileHideOnScroll'
 import mobileSliders from './mobileSliders'
 import setTabsOnPage from './tabs'
 import touchDetection from './touchDetection'
-
+import photogallery from './mobilePhotogallery'
 import 'simplebar'
 
 
@@ -37,6 +37,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   setTabsOnPage()
 
-  
+  // Фотогалерея
+
+  photogallery()
   
 })
