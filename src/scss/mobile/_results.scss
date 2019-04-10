@@ -70,6 +70,7 @@
 
 
   .full-date {
+    margin-bottom: -20px;
     th {
       text-align: center;
       width: 100%;
@@ -83,9 +84,9 @@
   .match {
     padding: 15px 20px;
     position: relative;
-    &:first-of-type {
-      padding-top: 0;
-    }
+    // &:first-of-type {
+    //   padding-top: 0;
+    // }
     &::after {
       content: '';
       position: absolute;

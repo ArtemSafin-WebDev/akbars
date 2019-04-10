@@ -429,157 +429,561 @@
     </header>
 
     <main>
-      <section class="news-all">
-        <div class="container">
-          <h1 class="news-all__heading">
-            Новости
-          </h1>
-          <ul class="news-all__list">
-            <li class="news-all__list-item">
-              <div class="news-all__news-card">
-                <a href="news-details-m.html" class="news-all__preview-container">
-                  <img src="img/video-preview-1.jpg" alt="" class="news-all__preview" />
-                </a>
-                <span class="news-all__info">
-                  <div class="news-all__info">
-                    <span class="news-all__info-block news__date">
-                      <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
-                        <use xlink:href="#news-calendar"></use>
-                      </svg>
-                      24.11.2019 г.
-                    </span>
-                    <span class="news-all__info-block news__views">
-                      <svg width="17" height="9" aria-hidden="true" class="icon-news-views">
-                        <use xlink:href="#news-views"></use>
-                      </svg>
-                      1 913
-                    </span>
-                    <a href="#" class="news-all__info-block news__comments">
-                      <svg width="16" height="13" aria-hidden="true" class="icon-news-comments">
-                        <use xlink:href="#news-comments"></use>
-                      </svg>
-                      22
-                    </a>
+      <section class="results-page">
+        <h1 class="results-page__heading">
+          Результаты
+        </h1>
+
+        <div class="tabs js-tabs-container">
+          <nav class="tabs__navigation">
+            <button class="js-tab-button js-tab-button-info">
+              <span class="tabs__button-content">
+                По командам
+              </span>
+            </button>
+            <button class="js-tab-button js-tab-button-photos">
+              <span class="tabs__button-content">
+                Все результаты
+              </span>
+            </button>
+          </nav>
+          <ul class="tabs__content">
+            <li class="tabs__item tabs__item--column js-tab">
+              <div class="results-page__card">
+                <div class="results-page__select">
+                  <select name="team" onchange="return console.log(event.target.value)" required>
+                    <option value="0">Все команды</option>
+                    <option value="3">Авангард (Омская обл.)</option>
+                    <option value="4">Автомобилист (Екатеринбург)</option>
+                    <option value="189">Адмирал (Владивосток)</option>
+                    <option value="1" selected="selected">Ак Барс (Казань)</option>
+                    <option value="5">Амур (Хабаровск)</option>
+                    <option value="7">Барыс (Астана)</option>
+                    <option value="208">Витязь (Московская обл.)</option>
+                    <option value="266">Давос (Швейцария)</option>
+                    <option value="10">Динамо (Рига)</option>
+                    <option value="9">Динамо (Минск)</option>
+                    <option value="211">Йокерит (Хельсинки)</option>
+                    <option value="252">Куньлунь Ред Стар (Пекин)</option>
+                    <option value="11">Локомотив (Ярославль)</option>
+                    <option value="12">Металлург (Магнитогорск)</option>
+                    <option value="14">Нефтехимик (Нижнекамск)</option>
+                    <option value="159">Нефтяник (Альметьевск)</option>
+                    <option value="265">Олимпийская сборная России ()</option>
+                    <option value="16">Салават Юлаев (Уфа)</option>
+                    <option value="17">Северсталь (Череповец)</option>
+                    <option value="209">Сибирь (Новосибирская обл.)</option>
+                    <option value="19">СКА (Санкт-Петербург)</option>
+                    <option value="156">Слован (Братислава)</option>
+                    <option value="20">Спартак (Москва)</option>
+                    <option value="21">Торпедо (Нижний Новгород)</option>
+                    <option value="22">Трактор (Челябинск)</option>
+                    <option value="258">ХК Динамо (Москва)</option>
+                    <option value="212">ХК Сочи (Сочи)</option>
+                    <option value="23">ЦСКА (Москва)</option>
+                  </select>
+                </div>
+                <div class="results-page__card-content">
+                  <div class="results__short">
+                    <table class="results__table">
+                      <tr class="month">
+                        <th colspan="2">Февраль 2019</th>
+                      </tr>
+                      <tr class="full-date">
+                        <th colspan="2">22.04.2018 14:30</th>
+                      </tr>
+                      <tbody class="match">
+                        <tr>
+                          <td>
+                            <div class="team-info">
+                              <div class="team-logo-container">
+                                <img src="img/logo/akbars-logo.svg" alt="" class="team-logo" />
+                              </div>
+                              <div class="team-name-and-city">
+                                <p class="team-name">Ак Барс</p>
+                                <p class="team-city">Казань</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="team-score">
+                              1
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="team-info">
+                              <div class="team-logo-container">
+                                <img src="img/logo/torpedo-logo.svg" alt="" class="team-logo" />
+                              </div>
+                              <div class="team-name-and-city">
+                                <p class="team-name">Торпедо</p>
+                                <p class="team-city">Новосибирская область</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="team-score">
+                              5
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                      <tbody class="match overtime">
+                        <tr>
+                          <td>
+                            <div class="team-info">
+                              <div class="team-logo-container">
+                                <img src="img/logo/akbars-logo.svg" alt="" class="team-logo" />
+                              </div>
+                              <div class="team-name-and-city">
+                                <p class="team-name">Ак Барс</p>
+                                <p class="team-city">Казань</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="team-score">
+                              1
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="team-info">
+                              <div class="team-logo-container">
+                                <img src="img/logo/torpedo-logo.svg" alt="" class="team-logo" />
+                              </div>
+                              <div class="team-name-and-city">
+                                <p class="team-name">Торпедо</p>
+                                <p class="team-city">Новосибирская область</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="team-score">
+                              5
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                      <tbody class="match bullit">
+                        <tr>
+                          <td>
+                            <div class="team-info">
+                              <div class="team-logo-container">
+                                <img src="img/logo/yulayev-logo.svg" alt="" class="team-logo" />
+                              </div>
+                              <div class="team-name-and-city">
+                                <p class="team-name">Салават Юлаев</p>
+                                <p class="team-city">Уфа</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="team-score">
+                              1
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="team-info">
+                              <div class="team-logo-container">
+                                <img src="img/logo/torpedo-logo.svg" alt="" class="team-logo" />
+                              </div>
+                              <div class="team-name-and-city">
+                                <p class="team-name">Торпедо</p>
+                                <p class="team-city">Новосибирская область</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="team-score">
+                              5
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                      <tbody class="match">
+                        <tr>
+                          <td>
+                            <div class="team-info">
+                              <div class="team-logo-container">
+                                <img src="img/logo/akbars-logo.svg" alt="" class="team-logo" />
+                              </div>
+                              <div class="team-name-and-city">
+                                <p class="team-name">Ак Барс</p>
+                                <p class="team-city">Казань</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="team-score">
+                              1
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="team-info">
+                              <div class="team-logo-container">
+                                <img src="img/logo/torpedo-logo.svg" alt="" class="team-logo" />
+                              </div>
+                              <div class="team-name-and-city">
+                                <p class="team-name">Торпедо</p>
+                                <p class="team-city">Новосибирская область</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="team-score">
+                              5
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                      <tbody class="match overtime">
+                        <tr>
+                          <td>
+                            <div class="team-info">
+                              <div class="team-logo-container">
+                                <img src="img/logo/akbars-logo.svg" alt="" class="team-logo" />
+                              </div>
+                              <div class="team-name-and-city">
+                                <p class="team-name">Ак Барс</p>
+                                <p class="team-city">Казань</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="team-score">
+                              1
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="team-info">
+                              <div class="team-logo-container">
+                                <img src="img/logo/torpedo-logo.svg" alt="" class="team-logo" />
+                              </div>
+                              <div class="team-name-and-city">
+                                <p class="team-name">Торпедо</p>
+                                <p class="team-city">Новосибирская область</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="team-score">
+                              5
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
-                </span>
-                <h3 class="news-all__news-card-heading">
-                  <a href="news-details-m.html">Данис Зарипов: «Хотели набросать сопернику кучу голов и порадовать зрителей»</a>
-                </h3>
-                <span class="news-all__text">
-                  Нападающий «Ак Барса» − о выставочном матче в Набережных Челнах
-                </span>
+                </div>
               </div>
             </li>
-            <li class="news-all__list-item">
-              <div class="news-all__news-card">
-                <a href="news-details-m.html" class="news-all__preview-container">
-                  <img src="img/video-preview-2.jpg" alt="" class="news-all__preview" />
-                </a>
-                <span class="news-all__info">
-                  <div class="news-all__info">
-                    <span class="news-all__info-block news__date">
-                      <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
-                        <use xlink:href="#news-calendar"></use>
-                      </svg>
-                      24.11.2019 г.
-                    </span>
-                    <span class="news-all__info-block news__views">
-                      <svg width="17" height="9" aria-hidden="true" class="icon-news-views">
-                        <use xlink:href="#news-views"></use>
-                      </svg>
-                      1 913
-                    </span>
-                    <a href="#" class="news-all__info-block news__comments">
-                      <svg width="16" height="13" aria-hidden="true" class="icon-news-comments">
-                        <use xlink:href="#news-comments"></use>
-                      </svg>
-                      22
-                    </a>
+            <li class="tabs__item tabs__item--column js-tab">
+              <div class="results-page__card">
+                <div class="results-page__card-content">
+                  <div class="results__short">
+                    <table class="results__table">
+                      <tr class="month">
+                        <th colspan="2">Февраль 2019</th>
+                      </tr>
+                      <tr class="full-date">
+                        <th colspan="2">22.02.2018 14:30</th>
+                      </tr>
+                      <tbody class="match">
+                        <tr>
+                          <td>
+                            <div class="team-info">
+                              <div class="team-logo-container">
+                                <img src="img/logo/akbars-logo.svg" alt="" class="team-logo" />
+                              </div>
+                              <div class="team-name-and-city">
+                                <p class="team-name">Ак Барс</p>
+                                <p class="team-city">Казань</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="team-score">
+                              1
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="team-info">
+                              <div class="team-logo-container">
+                                <img src="img/logo/torpedo-logo.svg" alt="" class="team-logo" />
+                              </div>
+                              <div class="team-name-and-city">
+                                <p class="team-name">Торпедо</p>
+                                <p class="team-city">Новосибирская область</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="team-score">
+                              5
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                      <tbody class="match overtime">
+                        <tr>
+                          <td>
+                            <div class="team-info">
+                              <div class="team-logo-container">
+                                <img src="img/logo/akbars-logo.svg" alt="" class="team-logo" />
+                              </div>
+                              <div class="team-name-and-city">
+                                <p class="team-name">Ак Барс</p>
+                                <p class="team-city">Казань</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="team-score">
+                              1
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="team-info">
+                              <div class="team-logo-container">
+                                <img src="img/logo/torpedo-logo.svg" alt="" class="team-logo" />
+                              </div>
+                              <div class="team-name-and-city">
+                                <p class="team-name">Торпедо</p>
+                                <p class="team-city">Новосибирская область</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="team-score">
+                              5
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                      <tbody class="match bullit">
+                        <tr>
+                          <td>
+                            <div class="team-info">
+                              <div class="team-logo-container">
+                                <img src="img/logo/yulayev-logo.svg" alt="" class="team-logo" />
+                              </div>
+                              <div class="team-name-and-city">
+                                <p class="team-name">Салават Юлаев</p>
+                                <p class="team-city">Уфа</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="team-score">
+                              1
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="team-info">
+                              <div class="team-logo-container">
+                                <img src="img/logo/torpedo-logo.svg" alt="" class="team-logo" />
+                              </div>
+                              <div class="team-name-and-city">
+                                <p class="team-name">Торпедо</p>
+                                <p class="team-city">Новосибирская область</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="team-score">
+                              5
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                      <tbody class="match">
+                        <tr>
+                          <td>
+                            <div class="team-info">
+                              <div class="team-logo-container">
+                                <img src="img/logo/akbars-logo.svg" alt="" class="team-logo" />
+                              </div>
+                              <div class="team-name-and-city">
+                                <p class="team-name">Ак Барс</p>
+                                <p class="team-city">Казань</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="team-score">
+                              1
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="team-info">
+                              <div class="team-logo-container">
+                                <img src="img/logo/torpedo-logo.svg" alt="" class="team-logo" />
+                              </div>
+                              <div class="team-name-and-city">
+                                <p class="team-name">Торпедо</p>
+                                <p class="team-city">Новосибирская область</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="team-score">
+                              5
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                      <tbody class="match overtime">
+                        <tr>
+                          <td>
+                            <div class="team-info">
+                              <div class="team-logo-container">
+                                <img src="img/logo/akbars-logo.svg" alt="" class="team-logo" />
+                              </div>
+                              <div class="team-name-and-city">
+                                <p class="team-name">Ак Барс</p>
+                                <p class="team-city">Казань</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="team-score">
+                              1
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="team-info">
+                              <div class="team-logo-container">
+                                <img src="img/logo/torpedo-logo.svg" alt="" class="team-logo" />
+                              </div>
+                              <div class="team-name-and-city">
+                                <p class="team-name">Торпедо</p>
+                                <p class="team-city">Новосибирская область</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="team-score">
+                              5
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                      <tr class="month">
+                        <th colspan="2">Март 2019</th>
+                      </tr>
+                      <tr class="full-date">
+                        <th colspan="2">15.03.2018 14:30</th>
+                      </tr>
+                      <tbody class="match">
+                        <tr>
+                          <td>
+                            <div class="team-info">
+                              <div class="team-logo-container">
+                                <img src="img/logo/akbars-logo.svg" alt="" class="team-logo" />
+                              </div>
+                              <div class="team-name-and-city">
+                                <p class="team-name">Ак Барс</p>
+                                <p class="team-city">Казань</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="team-score">
+                              1
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="team-info">
+                              <div class="team-logo-container">
+                                <img src="img/logo/torpedo-logo.svg" alt="" class="team-logo" />
+                              </div>
+                              <div class="team-name-and-city">
+                                <p class="team-name">Торпедо</p>
+                                <p class="team-city">Новосибирская область</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="team-score">
+                              5
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                      <tbody class="match overtime">
+                        <tr>
+                          <td>
+                            <div class="team-info">
+                              <div class="team-logo-container">
+                                <img src="img/logo/akbars-logo.svg" alt="" class="team-logo" />
+                              </div>
+                              <div class="team-name-and-city">
+                                <p class="team-name">Ак Барс</p>
+                                <p class="team-city">Казань</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="team-score">
+                              1
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="team-info">
+                              <div class="team-logo-container">
+                                <img src="img/logo/torpedo-logo.svg" alt="" class="team-logo" />
+                              </div>
+                              <div class="team-name-and-city">
+                                <p class="team-name">Торпедо</p>
+                                <p class="team-city">Новосибирская область</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="team-score">
+                              5
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
-                </span>
-                <h3 class="news-all__news-card-heading">
-                  <a href="news-details-m.html">Игроки системы «Ак Барса» провели выставочный матч против ХК «Челны»</a>
-                </h3>
-                <span class="news-all__text">
-                  Встреча завершилась победой казанцев в серии буллитов
-                </span>
-              </div>
-            </li>
-            <li class="news-all__list-item">
-              <div class="news-all__news-card">
-                <a href="news-details-m.html" class="news-all__preview-container">
-                  <img src="img/video-preview-1.jpg" alt="" class="news-all__preview" />
-                </a>
-                <span class="news-all__info">
-                  <div class="news-all__info">
-                    <span class="news-all__info-block news__date">
-                      <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
-                        <use xlink:href="#news-calendar"></use>
-                      </svg>
-                      24.11.2019 г.
-                    </span>
-                    <span class="news-all__info-block news__views">
-                      <svg width="17" height="9" aria-hidden="true" class="icon-news-views">
-                        <use xlink:href="#news-views"></use>
-                      </svg>
-                      1 913
-                    </span>
-                    <a href="#" class="news-all__info-block news__comments">
-                      <svg width="16" height="13" aria-hidden="true" class="icon-news-comments">
-                        <use xlink:href="#news-comments"></use>
-                      </svg>
-                      22
-                    </a>
-                  </div>
-                </span>
-                <h3 class="news-all__news-card-heading">
-                  <a href="news-details-m.html">Данис Зарипов: «Хотели набросать сопернику кучу голов и порадовать зрителей»</a>
-                </h3>
-                <span class="news-all__text">
-                  Нападающий «Ак Барса» − о выставочном матче в Набережных Челнах
-                </span>
-              </div>
-            </li>
-            <li class="news-all__list-item">
-              <div class="news-all__news-card">
-                <a href="news-details-m.html" class="news-all__preview-container">
-                  <img src="img/video-preview-3.jpg" alt="" class="news-all__preview" />
-                </a>
-                <span class="news-all__info">
-                  <div class="news-all__info">
-                    <span class="news-all__info-block news__date">
-                      <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
-                        <use xlink:href="#news-calendar"></use>
-                      </svg>
-                      24.11.2019 г.
-                    </span>
-                    <span class="news-all__info-block news__views">
-                      <svg width="17" height="9" aria-hidden="true" class="icon-news-views">
-                        <use xlink:href="#news-views"></use>
-                      </svg>
-                      1 913
-                    </span>
-                    <a href="#" class="news-all__info-block news__comments">
-                      <svg width="16" height="13" aria-hidden="true" class="icon-news-comments">
-                        <use xlink:href="#news-comments"></use>
-                      </svg>
-                      22
-                    </a>
-                  </div>
-                </span>
-                <h3 class="news-all__news-card-heading">
-                  <a href="news-details-m.html">Игроки системы «Ак Барса» провели выставочный матч против ХК «Челны»</a>
-                </h3>
-                <span class="news-all__text">
-                  Встреча завершилась победой казанцев в серии буллитов
-                </span>
+                </div>
               </div>
             </li>
           </ul>
-          <a href="#" class="news-all__more-news">
-            Загрузить еще
-          </a>
         </div>
+        <div class="sponsor-block">
+          <img src="img/logo/tatneft-logo.svg" alt="" class="sponsor-block__logo" />
+          <p class="sponsor-block__text">
+            Генеральный спонсор
+          </p>
+        </div>
+
       </section>
     </main>
     <footer class="page-footer">

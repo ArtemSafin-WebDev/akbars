@@ -160,10 +160,11 @@
   font-family: 'Supermolot', 'Helvetica', sans-serif;
   color: $green;
   width: 100%;
-  margin-top: 30px;
+  // margin-top: 30px;
   display: flex;
   align-items: center;
   transition: .2s;
+  padding-top: 20px;
   &::before {
     content: '< ';
     color: $red;

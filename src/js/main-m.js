@@ -7,6 +7,7 @@ import hideOnScroll from './mobileHideOnScroll'
 import mobileSliders from './mobileSliders'
 import setTabsOnPage from './tabs'
 import touchDetection from './touchDetection'
+
 import 'simplebar'
 
 
