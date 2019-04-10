@@ -8,12 +8,21 @@ export default function() {
       .on('fotorama:show', function(e, fotorama, extra) {
         $('.js-photogallery-photo-description').html(fotorama.activeFrame.title)
       })
+      .on('fotorama:fullscreenenter fotorama:fullscreenexit', function (e, fotorama) {
+        if (e.type === 'fotorama:fullscreenenter') {
+          // settings for full screen
+          fotorama.setOptions({nav: false});
+        } else {
+          // Back to normal settings
+          fotorama.setOptions({nav: 'thumbs'});
+        }
+      })
       .fotorama({
         data: photogalleryDetailsDataSource,
         width: '100%',
         ratio: '1200/800',
         loop: true,
-        allowfullscreen: true,
+        allowfullscreen: 'native',
         nav: 'thumbs',
         navposition: 'top',
         hash: true,
