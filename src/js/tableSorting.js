@@ -1,7 +1,6 @@
 
 import './dateTimeMoment'
 
-
 export default function() {
   $.fn.dataTable.moment('DD.MM.YYYY')
 
@@ -81,10 +80,6 @@ export default function() {
       calendarTable.draw();
     })
   }
-
-  
-
-  
 }
 
 // const table = document.querySelector('.staff__info-table')
