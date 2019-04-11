@@ -4512,7 +4512,7 @@ a.page-footer__bottom-nav-link {
   background-color: #fff; }
 
 .team .tabs__navigation button {
-  width: 45vw;
+  width: 45%;
   -ms-flex-negative: 0;
       flex-shrink: 0; }
   .team .tabs__navigation button .tabs__button-content {
