@@ -4504,3 +4504,102 @@ a.page-footer__bottom-nav-link {
 
 .fotorama__nav-wrap {
   position: relative; }
+
+.team .tabs__navigation-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  background-color: #fff; }
+
+.team .tabs__navigation button {
+  width: 180px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0; }
+  .team .tabs__navigation button .tabs__button-content {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+
+.team .simplebar-track.simplebar-horizontal {
+  display: none; }
+
+.no-touch .team .simplebar-track.simplebar-horizontal {
+  display: block; }
+
+.team__heading {
+  font-size: 18px;
+  line-height: 35px;
+  letter-spacing: 0.3px;
+  font-weight: 700;
+  color: #256963;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 30px;
+  margin: 0;
+  background-color: #fff;
+  position: relative;
+  z-index: 20; }
+
+.team__secondary-heading {
+  color: #256963;
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 15px;
+  margin-top: 40px; }
+  .team__secondary-heading:first-child {
+    margin-top: 0; }
+
+.team__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 15px; }
+  .team__card:last-child {
+    margin-bottom: 0; }
+  .team__card:link, .team__card:visited {
+    color: #242F37; }
+
+.team__card-image-container {
+  width: 60px;
+  height: 75px;
+  margin-right: 15px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0; }
+  .team__card-image-container > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: top;
+       object-position: top;
+    font-family: 'object-fit: cover; object-position: top;'; }
+
+.team__card-info {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 22px; }
+  .team__card-info .player-name,
+  .team__card-info .staff-name {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 3px; }
+  .team__card-info .player-birthday,
+  .team__card-info .position {
+    display: block;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 3px; }
+  .team__card-info .player-weight,
+  .team__card-info .staff-birthday {
+    display: block;
+    font-size: 14px;
+    line-height: 18px; }
+
+.team__tab-wrapper {
+  padding: 25px 20px;
+  padding-bottom: 50px;
+  background-color: #fff; }
