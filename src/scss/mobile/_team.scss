@@ -1,0 +1,119 @@
+.team {
+  
+  .tabs__navigation-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    background-color: #fff;
+  }
+  
+  
+  .tabs__navigation button {
+    width: 180px;
+    flex-shrink: 0;
+    .tabs__button-content {
+      justify-content: center;
+    }
+  }
+
+
+  .simplebar-track.simplebar-horizontal {
+    display: none;
+  }
+}
+
+
+.no-touch .team .simplebar-track.simplebar-horizontal {
+  display: block;
+}
+
+
+.team__heading {
+  font-size: 18px;
+  line-height: 35px;
+  letter-spacing: 0.3px;
+  font-weight: 700;
+  color: $green;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 30px;
+  margin: 0;
+  background-color: #fff;
+  position: relative;
+  z-index: 20;
+  
+}
+
+
+.team__secondary-heading {
+  color: $green;
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 15px;
+  margin-top: 40px;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+
+.team__card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &:link,
+  &:visited {
+    color: #242F37;
+  }
+}
+
+.team__card-image-container {
+  width: 60px;
+  height: 75px;
+  margin-right: 15px;
+  flex-shrink: 0;
+  > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    @include objectFitCoverTop();
+  }
+}
+
+.team__card-info {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  .player-name,
+  .staff-name {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 3px;
+  }
+
+  .player-birthday,
+  .position {
+    display: block;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 3px;
+  }
+
+
+  .player-weight,
+  .staff-birthday {
+    display: block;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+
+.team__tab-wrapper {
+  padding: 25px 20px;
+  padding-bottom: 50px;
+  background-color: #fff;
+}
