@@ -4512,7 +4512,7 @@ a.page-footer__bottom-nav-link {
   background-color: #fff; }
 
 .team .tabs__navigation button {
-  width: 180px;
+  width: 45vw;
   -ms-flex-negative: 0;
       flex-shrink: 0; }
   .team .tabs__navigation button .tabs__button-content {
@@ -4603,3 +4603,68 @@ a.page-footer__bottom-nav-link {
   padding: 25px 20px;
   padding-bottom: 50px;
   background-color: #fff; }
+
+.team__select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 20px;
+  background-color: #fff;
+  width: 100%; }
+  .team__select-wrapper {
+    position: relative; }
+    .team__select-wrapper::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 2px;
+      width: 40px;
+      background-color: #256963;
+      pointer-events: none; }
+    .team__select-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 2px;
+      width: 40px;
+      background-color: #256963;
+      z-index: 10;
+      pointer-events: none; }
+  .team__select select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    border-radius: 0;
+    font: inherit;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    padding: 8px 20px;
+    padding-right: 60px;
+    border: 2px solid #EBEBEB;
+    border-right: none;
+    position: relative;
+    outline: none;
+    background-image: url("data:image/svg+xml,%3Csvg fill='white' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16.46 10.15'%3E%3Cpath d='M15 0L8.23 7.22 1.46 0 0 1.37l8.23 8.78 8.23-8.78L15 0z'/%3E%3C/svg%3E"), url("data:image/svg+xml,%3Csvg width='100' height='100' preserveAspectRatio='none' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='%23256963'%3E%3Crect x='0' y='0' width='100' height='100'/%3E%3C/svg%3E");
+    background-size: 16px auto, 40px 40px;
+    background-position: right 12px top 14px, right top;
+    background-repeat: no-repeat, no-repeat;
+    background-clip: border-box;
+    cursor: pointer; }
+    .team__select select::-ms-expand {
+      display: none;
+      /* hide the default arrow in ie10 and ie11 */ }
+    @media screen and (min-width: 0\0) {
+      .team__select select {
+        background-image: none\9;
+        padding: 5px\9; } }
