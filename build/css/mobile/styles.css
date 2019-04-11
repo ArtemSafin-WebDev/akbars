@@ -2182,7 +2182,7 @@ a.page-footer__bottom-nav-link {
   position: fixed;
   top: 0;
   right: 100%;
-  width: 280px;
+  width: 305px;
   height: 100%;
   color: white;
   -webkit-transform: translateX(0);
@@ -4684,7 +4684,7 @@ a.page-footer__bottom-nav-link {
     content: '';
     width: 100%;
     display: block;
-    height: 270px;
+    height: 165px;
     background-color: #ebebeb;
     position: absolute;
     top: 0;
@@ -4815,16 +4815,25 @@ a.page-footer__bottom-nav-link {
     -webkit-transition: 0.2s;
     transition: 0.2s; }
 
+.team-details__number {
+  font-size: 26px;
+  line-height: 34px;
+  color: #256963;
+  font-weight: 700;
+  font-family: 'Supermolot', 'Helvetica', sans-serif;
+  margin-top: -5px;
+  display: block;
+  margin-bottom: 20px; }
+  @media screen and (max-width: 600px) {
+    .team-details__number {
+      margin-top: 20px; } }
+
 .team-details__brief {
   border-collapse: collapse;
   width: 100%;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
-  line-height: 22px;
-  margin-top: -7px; }
-  @media screen and (max-width: 600px) {
-    .team-details__brief {
-      margin-top: 20px; } }
+  line-height: 22px; }
   .team-details__brief th,
   .team-details__brief td {
     text-align: left;

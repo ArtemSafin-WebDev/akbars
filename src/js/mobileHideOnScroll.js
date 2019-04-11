@@ -18,7 +18,7 @@ export default function() {
   }, 250)
 
   function hasScrolled() {
-    if (window.innerWidth < 720) {
+    
       var st = window.scrollY
       if (Math.abs(lastScrollTop - st) <= delta) return
       // If current position > last position AND scrolled past navbar...
@@ -33,8 +33,6 @@ export default function() {
         // navbarHidden = false
       }
       lastScrollTop = st
-    } else {
-      return
-    }
+    
   }
 }
