@@ -1,3 +1,7 @@
+
+import './dateTimeMoment'
+
+
 export default function() {
   $.fn.dataTable.moment('DD.MM.YYYY')
 
@@ -18,17 +22,11 @@ export default function() {
   $.fn.dataTable.ext.search.push(function(settings, data, dataIndex) {
     var homeMatch = document.querySelector('#home').checked;
     var guestMatch = document.querySelector('#guest').checked;
-    console.log('homeMatch value')
-    console.log(homeMatch)
-    console.log('guestMatch value')
-    console.log(guestMatch)
-
+    
     var currentRowClass = settings.aoData[dataIndex].nTr.className;
 
 
-    console.log('Current row class')
-    console.log(currentRowClass)
-
+   
     if (homeMatch && guestMatch) {
       return true
     } else if (homeMatch && !guestMatch) {
@@ -72,14 +70,14 @@ export default function() {
 
   if (homeCheckbox) {
     homeCheckbox.addEventListener('change', function() {
-      console.log('1st checkbox changed')
+     
       calendarTable.draw();
     })
   }
 
   if (guestCheckbox) {
     guestCheckbox.addEventListener('change', function() {
-      console.log('2st checkbox changed')
+     
       calendarTable.draw();
     })
   }

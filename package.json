@@ -19,6 +19,7 @@
     "animejs": "^3.0.1",
     "body-scroll-lock": "^2.6.1",
     "choices.js": "^6.0.3",
+    "datatables": "^1.10.18",
     "detect-it": "^3.0.5",
     "fotorama": "^4.6.4",
     "inobounce": "^0.1.6",
