@@ -12,6 +12,7 @@ import photogallery from './mobilePhotogallery'
 import scrollIntoViewButtons from './scrollTabButtonIntoView'
 import mobileHide from './mobileHide'
 import 'simplebar'
+import 'lightcase'
 
 
 document.addEventListener('DOMContentLoaded', function() {
