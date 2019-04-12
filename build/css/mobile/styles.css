@@ -5097,7 +5097,9 @@ a.page-footer__bottom-nav-link {
   .statistics__table-scrollable th,
   .statistics__table-scrollable td {
     padding: 5px 5px;
-    text-align: left; }
+    text-align: left;
+    -webkit-transition: .2s;
+    transition: .2s; }
     .statistics__table-scrollable th:first-child,
     .statistics__table-scrollable td:first-child {
       padding-left: 20px; }
@@ -5107,6 +5109,8 @@ a.page-footer__bottom-nav-link {
     .statistics__table-scrollable th:nth-child(2),
     .statistics__table-scrollable td:nth-child(2) {
       white-space: nowrap; }
+  .statistics__table-scrollable tr:hover td {
+    background-color: #DEE8E8; }
 
 .statistics__legend {
   padding: 0 20px;
@@ -5133,3 +5137,111 @@ a.page-footer__bottom-nav-link {
     display: inline-block; }
     .statistics__legend-list-item:last-child {
       margin-bottom: 0; }
+
+.statistics__rotate-icon-container {
+  width: 45px;
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 15px; }
+  .statistics__rotate-icon-container > svg {
+    display: block;
+    fill: #256963;
+    position: relative;
+    bottom: 2px; }
+
+.statistics__rotate {
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 20px; }
+
+.statistics__rotate-text {
+  font-size: 14px;
+  line-height: 18px; }
+
+.statistics__select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 20px;
+  padding-bottom: 20px;
+  background-color: #fff;
+  width: 100%; }
+  .statistics__select-wrapper {
+    position: relative;
+    -ms-flex-item-align: stretch;
+        align-self: stretch; }
+    .statistics__select-wrapper::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 2px;
+      width: 40px;
+      background-color: #256963;
+      pointer-events: none; }
+    .statistics__select-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 2px;
+      width: 40px;
+      background-color: #256963;
+      z-index: 10;
+      pointer-events: none; }
+  .statistics__select select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    border-radius: 0;
+    font: inherit;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    padding: 8px 20px;
+    padding-right: 60px;
+    border: 2px solid #EBEBEB;
+    border-right: none;
+    position: relative;
+    outline: none;
+    background-image: url("data:image/svg+xml,%3Csvg fill='white' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16.46 10.15'%3E%3Cpath d='M15 0L8.23 7.22 1.46 0 0 1.37l8.23 8.78 8.23-8.78L15 0z'/%3E%3C/svg%3E"), url("data:image/svg+xml,%3Csvg width='100' height='100' preserveAspectRatio='none' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='%23256963'%3E%3Crect x='0' y='0' width='100' height='100'/%3E%3C/svg%3E");
+    background-color: transparent;
+    background-size: 16px auto, 40px 40px;
+    background-position: right 12px top 14px, right top;
+    background-repeat: no-repeat, no-repeat;
+    background-clip: border-box;
+    cursor: pointer;
+    width: 100%; }
+    .statistics__select select::-ms-expand {
+      display: none;
+      /* hide the default arrow in ie10 and ie11 */ }
+    .statistics__select select:focus {
+      background-color: transparent; }
+    @media screen and (min-width: 0\0) {
+      .statistics__select select {
+        background-image: none\9;
+        padding: 5px\9; } }
