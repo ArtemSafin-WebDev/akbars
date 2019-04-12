@@ -1,5 +1,6 @@
 import 'slick-carousel'
 import Swiper from 'swiper/dist/js/swiper.js'
+import goalsSliders from './mobileGoalsItems'
 
 export default function() {
   $('.js-mobile-news-slider').slick({
@@ -85,6 +86,10 @@ export default function() {
     playoffNameSlider.controller.control = playoffTableSlider
     playoffTableSlider.controller.control = playoffNameSlider
   }
+
+
+
+  goalsSliders()
 
 
 

@@ -30,7 +30,16 @@ import abonementsModals from './abonementsModals'
 import prognosisSubmitTest from './prognosisSubmitTest';
 import touchDetection from './touchDetection';
 
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
+
+  // Полифилл .contains для IE 11
+
+  if (!SVGElement.prototype.contains) {
+    SVGElement.prototype.contains = HTMLDivElement.prototype.contains
+  }
   
   // Полифилл для CSS свойства ObjectFit(заполнение контейнера изображением)
   objectFitImages()

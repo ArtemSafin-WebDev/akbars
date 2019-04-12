@@ -138,6 +138,9 @@
   
  
   margin-bottom: 20px;
+  @media (orientation: landscape) {
+    display: none;
+  }
 }
 
 

@@ -2,7 +2,7 @@
   background-color: $green;
   position: fixed;
   top: 0;
-  right: 100%;
+  left: 100%;
   width: 320px;
   height: 100%;
   color: white;
@@ -18,7 +18,7 @@
 
 
 .shown .sidebar {
-  transform: translateX(100%);
+  transform: translateX(-100%);
   visibility: visible;
   transition: all .3s;
   box-shadow: 0px 0px 30px rgba(black, .3);
