@@ -19,6 +19,7 @@ export default function() {
 
   const removeClickListener = () => {
     document.removeEventListener('click', outsideClickListener)
+    
   }
 
   if (loginWindow && loginOpen) {
@@ -31,7 +32,8 @@ export default function() {
         
         loginWindowOpen = true
         document.addEventListener('click', outsideClickListener)
-       
+        
+        
         document.body.classList.add('login-shown')
       } else {
         loginWindowOpen = false

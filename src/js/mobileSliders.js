@@ -1,6 +1,6 @@
 import 'slick-carousel'
 import Swiper from 'swiper/dist/js/swiper.js'
-import goalsSliders from './mobileGoalsItems'
+import goalSliders from './mobileGoalsItems'
 
 export default function() {
   $('.js-mobile-news-slider').slick({
@@ -89,8 +89,29 @@ export default function() {
 
 
 
-  goalsSliders()
+  
 
+  
 
+  // initGoalSliders()
+
+  window.goalSliders = {
+    initialized: [],
+    init: function() {
+      this.destroy()
+      this.initialized = goalSliders()
+    },
+    destroy: function() {
+      if (this.initialized.length > 0) {
+        this.initialized.forEach(function(slider) {
+          slider.destroy(true, false)
+        })
+        this.initialized = []
+      }
+    }
+  }
+
+  window.goalSliders.init()
+  
 
 }
