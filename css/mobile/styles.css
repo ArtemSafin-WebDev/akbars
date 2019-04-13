@@ -2759,12 +2759,30 @@ a.page-footer__bottom-nav-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
+  padding: 12px 14px;
+  padding-bottom: 0; }
+
+.toggles__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
-  padding: 12px 14px;
-  padding-bottom: 11px; }
+  width: 30%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+  .toggles__list-item {
+    width: 50%;
+    margin-bottom: 11px; }
+    .toggles__list-item:nth-child(odd) {
+      width: 40%; }
+    .toggles__list-item:nth-child(even) {
+      width: 60%; }
 
 .toggles__login-link,
 .toggles__full-version-link {
@@ -2780,17 +2798,18 @@ a.page-footer__bottom-nav-link {
   .toggles__full-version-link > svg {
     fill: white;
     margin-right: 5px; }
-  .toggles__login-link:first-child,
-  .toggles__full-version-link:first-child {
-    margin-right: 27px; }
   .toggles__login-link:link, .toggles__login-link:visited,
   .toggles__full-version-link:link,
   .toggles__full-version-link:visited {
     color: white; }
 
 .toggles__close-sidebar-button {
-  margin-left: auto;
-  outline: none; }
+  outline: none;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-top: 2px; }
   .toggles__close-sidebar-button > svg {
     fill: white;
     display: block; }
@@ -6444,6 +6463,38 @@ a.page-footer__bottom-nav-link {
   outline: none; }
   .register__submit:hover, .register__submit:focus {
     background-color: #3c8f88; }
+
+.register__social-login {
+  margin-top: 40px; }
+
+.register__social-login-heading {
+  color: #D81E23;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-family: Arial, Helvetica, sans-serif; }
+
+.register__social-login-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  outline: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #256963;
+  -webkit-transition: all .2s;
+  transition: all .2s; }
+  .register__social-login-link > svg {
+    margin-left: 10px;
+    fill: #256963;
+    bottom: 2px;
+    position: relative; }
+  .register__social-login-link:link, .register__social-login-link:visited {
+    color: #256963; }
+  .register__social-login-link:hover, .register__social-login-link:focus {
+    text-decoration: underline; }
 
 .remember__content {
   background-color: #fff;
