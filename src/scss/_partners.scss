@@ -43,6 +43,9 @@
   justify-content: center;
   max-width: initial;
   flex-shrink: 0;
+  &--bars {
+    height: 100px;
+  }
 }
 
 .partner__logo {

@@ -50,6 +50,13 @@ a {
   vertical-align: top;
 }
 
+a {
+  &:link,
+  &:visited {
+    color: $green;
+  }
+}
+
 main {
   flex-grow: 1;
   display: flex;
