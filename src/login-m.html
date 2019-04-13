@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <!-- partial:partials/_meta-m.html -->
+    <!-- partial -->
+    <title>
+      Официальный сайт хоккейного клуба "Ак Барс" (ООО "СКП "Татнефть-Ак Барс"). Главная страница
+    </title>
+  </head>
+  <body ontouchstart="">
+    <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;"><!-- partial:img/symbol/sprite.svg --><!-- partial --></div>
+
+    <div class="overlay js-overlay"></div>
+
+    <!-- partial:partials/_sidebar-mobile.html --><!-- partial -->
+    <div class="page-content">
+      <!-- partial:partials/_header-m.html --><!-- partial -->
+      <main>
+        <section class="login">
+          <h1 class="login__heading">
+            Логин
+          </h1>
+          <div class="login__content">
+            <form action="/" class="login__form" method="POST" data-parsley-validate>
+              <div class="login__input-group">
+                <label for="nickname" class="login__label">Логин или e-mail:</label>
+                <input type="text" name="nickname" id="nickname" value="" class="login__text-input ym-disable-keys" placeholder="Введите ваш e-mail" required/>
+              </div>
+              <div class="login__input-group">
+                <label for="password" class="login__label">Пароль:</label>
+                <input type="password" name="password" id="password" value="" class="login__text-input ym-disable-keys" placeholder="Введите пароль" required/>
+              </div>  
+              <div class="login__checkbox-group">
+                <span class="checkbox">
+                  <input type="checkbox" class="checkbox__input" name="savepassword" id="savepassword" value="1" />
+                  <label for="savepassword" class="checkbox__label">
+                    <span class="checkbox__label-icon">
+                      <svg width="10" height="7" aria-hidden="true" class="icon-checkbox">
+                        <use xlink:href="#checkbox" />
+                      </svg>
+                    </span>
+                    <span class="checkbox__label-text">Запомнить пароль</span>
+                  </label>
+                </span>
+              </div>
+              
+              <input type="submit" class="login__submit" value="Войти" />
+              <input type="hidden" name="cmd" value="enter" />
+            </form>
+            <div class="login__action-links-block">
+              <a href="#" class="login__action-link">
+                Зарегистрироваться
+              </a>
+              <a href="#" class="login__action-link">
+                Забыли свой пароль?
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- partial:partials/_footer-m.html --><!-- partial -->
+    </div>
+  </body>
+</html>

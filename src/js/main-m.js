@@ -11,6 +11,7 @@ import touchDetection from './touchDetection'
 import photogallery from './mobilePhotogallery'
 import scrollIntoViewButtons from './scrollTabButtonIntoView'
 import mobileHide from './mobileHide'
+import formValidation from './formValidation'
 import 'simplebar'
 import 'lightcase'
 
@@ -64,6 +65,11 @@ document.addEventListener('DOMContentLoaded', function() {
   // Мобильный хайд 
 
   mobileHide()
+
+
+  // Валидация форм
+
+  formValidation()
 
 
   

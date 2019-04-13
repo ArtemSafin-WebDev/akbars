@@ -1,0 +1,115 @@
+.login {
+}
+
+.login__content {
+  background-color: #fff;
+  padding: 0 20px;
+  padding-bottom: 20px;
+}
+
+.login__heading {
+  font-size: 18px;
+  line-height: 35px;
+  letter-spacing: 0.3px;
+  font-weight: 700;
+  color: $green;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 30px;
+  margin: 0;
+  background-color: #fff;
+  padding-bottom: 10px;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  .parsley-errors-list.filled {
+    margin-top: 5px;
+    color: $red;
+  }
+}
+
+.login__label {
+  margin-bottom: 5px;
+  display: block;
+  width: 100%;
+}
+
+.login__text-input {
+  font: inherit;
+  font-size: 16px;
+  line-height: 22px;
+  padding: 6px 12px;
+  -webkit-appearance: none;
+  border: 2px solid $green;
+  transition: border-color .2s;
+  width: 100%;
+  @include placeholder {
+    color: #c0c0c0;
+    font: inherit;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  &:focus {
+    border-color: #3c8f88;
+  }
+}
+
+
+.login__input-group {
+  margin-bottom: 20px;
+}
+
+.login__submit {
+  background-color: $green;
+  color: white;
+  align-self: stretch;
+  -webkit-tap-highlight-color: transparent;
+  font-size: 16px;
+  line-height: 22px;
+  padding: 8px 36px;
+  border: none;
+  margin-top: 20px;
+  font-family: 'Supermolot', 'Helvetica', sans-serif;
+  transition: .2s;
+  outline: none;
+  &:hover,
+  &:focus {
+    background-color: #3c8f88;
+  }
+}
+
+.login__action-links-block {
+  margin-top: 60px;
+}
+
+.login__action-link {
+  font-size: 14px;
+  line-height: 15px;
+  border: 2px solid $green;
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 11px 27px 10px;
+  transition: all 0.3s;
+  color: $green;
+  align-self: stretch;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &:link,
+  &:visited {
+    color: $green;
+  }
+
+  &:hover,
+  &:focus {
+    color: $red;
+    border-color: $red;
+  }
+}

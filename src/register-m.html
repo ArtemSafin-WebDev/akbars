@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <!-- partial:partials/_meta-m.html -->
+    <!-- partial -->
+    <title>
+      Официальный сайт хоккейного клуба "Ак Барс" (ООО "СКП "Татнефть-Ак Барс"). Главная страница
+    </title>
+  </head>
+  <body ontouchstart="">
+    <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;"><!-- partial:img/symbol/sprite.svg --><!-- partial --></div>
+
+    <div class="overlay js-overlay"></div>
+
+    <!-- partial:partials/_sidebar-mobile.html --><!-- partial -->
+    <div class="page-content">
+      <!-- partial:partials/_header-m.html --><!-- partial -->
+      <main>
+        <section class="register">
+          <h1 class="register__heading">
+            Регистрация
+          </h1>
+          <div class="register__content">
+            <div class="register__loyalty-program">
+              Для регистрации карты болельщика необходимо зарегистрироваться в <a href="#">программе лояльности</a>
+            </div>
+            <form action="/" class="register__form" method="POST" data-parsley-validate>
+              <div class="register__input-group">
+                <label for="nickname" class="register__text-label">Ваше имя/никнейм (для отображения на сайте)<sup>*</sup>:</label>
+                <input type="text" class="register__text-input" id="nickname" name="nickname" value="" maxlength="25" required placeholder="Укажите никнейм, длиной до 25 символов"/>
+              </div>
+              <div class="register__input-group">
+                <label for="email" class="register__text-label">Ваш e-mail<sup>*</sup>:</label>
+                <input type="email" class="register__text-input" id="email" name="email" value="" maxlength="40" required placeholder="Укажите ваш e-mail"/>
+              </div>
+              <div class="register__input-group">
+                <label for="city" class="register__text-label">Город:</label>
+                <input type="text" class="register__text-input" name="city" value="" maxlength="25" placeholder="Укажите ваш город" />
+              </div>
+              <div class="register__input-group">
+                <label for="birthday" class="register__text-label">Дата рождения:</label>
+                <input type="text" class="register__text-input" name="birthday" id="birthday" value="" placeholder="Дата рождения в формате ДД.ММ.ГГГГ" data-parsley-moment/>
+              </div>
+              <div class="register__input-group">
+                <label for="password1" class="register__text-label">Пароль (не менее 6 символов)<sup>*</sup>:</label>
+                <input type="password" class="register__text-input" id="password1" name="password1" value="" minlength="6" required placeholder="Введите пароль"/>
+              </div>
+              <div class="register__input-group">
+                <label for="password2" class="register__text-label">Повтор пароля*:</label>
+                <input type="password" class="register__text-input" id="password2" name="password2" value="" required data-parsley-equalto="#password1" placeholder="Подтверждение пароля"/>
+              </div>
+              <div class="register__checkbox-group">
+                <span class="checkbox">
+                  <input type="checkbox" class="checkbox__input" name="hidemail" id="hidemail" value="1" />
+                  <label for="hidemail" class="checkbox__label">
+                    <span class="checkbox__label-icon">
+                      <svg width="10" height="7" aria-hidden="true" class="icon-checkbox">
+                        <use xlink:href="#checkbox" />
+                      </svg>
+                    </span>
+                    <span class="checkbox__label-text">Скрывать мой email от других посетителей</span>
+                  </label>
+                </span>
+              </div>
+              <div class="register__checkbox-group">
+                <span class="checkbox">
+                  <input type="checkbox" class="checkbox__input" name="remindoff" id="remindoff" value="1" />
+                  <label for="remindoff" class="checkbox__label">
+                    <span class="checkbox__label-icon">
+                      <svg width="10" height="7" aria-hidden="true" class="icon-checkbox">
+                        <use xlink:href="#checkbox" />
+                      </svg>
+                    </span>
+                    <span class="checkbox__label-text">Отключить функцию восстановления пароля</span>
+                  </label>
+                </span>
+              </div>
+              <div class="register__checkbox-group">
+                <span class="checkbox">
+                  <input type="checkbox" class="checkbox__input" name="hiddenuser" id="hiddenuser" value="1" />
+                  <label for="hiddenuser" class="checkbox__label">
+                    <span class="checkbox__label-icon">
+                      <svg width="10" height="7" aria-hidden="true" class="icon-checkbox">
+                        <use xlink:href="#checkbox" />
+                      </svg>
+                    </span>
+                    <span class="checkbox__label-text">Скрывать мое присутствие на сайте от других пользователей</span>
+                  </label>
+                </span>
+              </div>
+              <div class="register__checkbox-group">
+                <span class="checkbox">
+                  <input type="checkbox" class="checkbox__input" name="pmnotify" id="pmnotify" value="1" checked/>
+                  <label for="pmnotify" class="checkbox__label">
+                    <span class="checkbox__label-icon">
+                      <svg width="10" height="7" aria-hidden="true" class="icon-checkbox">
+                        <use xlink:href="#checkbox" />
+                      </svg>
+                    </span>
+                    <span class="checkbox__label-text"> Включить уведомление на e-mail о новых приватных сообщениях</span>
+                  </label>
+                </span>
+              </div>
+              <div class="register__checkbox-group">
+                <span class="checkbox">
+                  <input type="checkbox" class="checkbox__input" name="subscribe" id="subscribe" value="1"/>
+                  <label for="subscribe" class="checkbox__label">
+                    <span class="checkbox__label-icon">
+                      <svg width="10" height="7" aria-hidden="true" class="icon-checkbox">
+                        <use xlink:href="#checkbox" />
+                      </svg>
+                    </span>
+                    <span class="checkbox__label-text">  Согласен на получение сообщений клуба на e-mail</span>
+                  </label>
+                </span>
+              </div>
+              
+              <div class="register__textarea-group">
+                <label for="info" class="register__text-label">Введите любую информацию о себе, которая будет доступна другим посетителям:</label>
+                <textarea name="info" id="info" class="register__textarea"></textarea>
+              </div>
+              <div class="register__checkbox-group">
+                <span class="checkbox">
+                  <input type="checkbox" class="checkbox__input" name="agree" id="agree" value="1" required/>
+                  <label for="agree" class="checkbox__label">
+                    <span class="checkbox__label-icon">
+                      <svg width="10" height="7" aria-hidden="true" class="icon-checkbox">
+                        <use xlink:href="#checkbox" />
+                      </svg>
+                    </span>
+                    <span class="checkbox__label-text">Я соглашаюсь с <a href="#" target="_blank">правилами</a> и соглашаюсь на <a href="#" target="_blank">обработку персональных данных</a></span>
+                  </label>
+                </span>
+              </div>
+              
+              <button type="submit" class="register__submit">
+                Зарегистрироваться
+              </button>
+              <input type="hidden" name="cmd" value="registration" />
+            </form>
+          </div>
+        </section>
+      </main>
+      <!-- partial:partials/_footer-m.html --><!-- partial -->
+    </div>
+  </body>
+</html>

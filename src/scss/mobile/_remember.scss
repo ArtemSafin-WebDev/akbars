@@ -1,0 +1,90 @@
+.remember__content {
+  background-color: #fff;
+  padding: 0 20px;
+  padding-bottom: 20px;
+}
+
+.remember__heading {
+  font-size: 18px;
+  line-height: 35px;
+  letter-spacing: 0.3px;
+  font-weight: 700;
+  color: $green;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 30px;
+  margin: 0;
+  background-color: #fff;
+}
+
+
+.remember__form {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+
+  .parsley-errors-list.filled {
+    margin-top: 5px;
+    color: $red;
+  }
+
+  sup {
+    font-weight: 700;
+    color: $red;
+  }
+}
+
+
+.remember__text-label {
+  margin-bottom: 5px;
+  display: block;
+  width: 100%;
+}
+
+
+.remember__text-input {
+  font: inherit;
+  font-size: 16px;
+  line-height: 22px;
+  padding: 6px 12px;
+  -webkit-appearance: none;
+  border: 2px solid $green;
+  width: 100%;
+  transition: border-color .2s;
+  outline: none;
+ 
+  @include placeholder {
+    color: #c0c0c0;
+    font: inherit;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  &:focus {
+    border-color: #3c8f88;
+  }
+
+  &.parsley-error {
+    border-color: $red;
+  }
+}
+
+
+.remember__submit {
+  background-color: $green;
+  color: white;
+  align-self: stretch;
+  -webkit-tap-highlight-color: transparent;
+  font-size: 16px;
+  line-height: 22px;
+  padding: 8px 36px;
+  border: none;
+  margin-top: 20px;
+  font-family: 'Supermolot', 'Helvetica', sans-serif;
+  transition: .2s;
+  outline: none;
+  &:hover,
+  &:focus {
+    background-color: #3c8f88;
+  }
+}
