@@ -1,10 +1,31 @@
 .toggles {
   display: flex;
-  align-items: center;
+  // align-items: center;
   width: 100%;
   padding: 12px 14px;
-  padding-bottom: 11px;
+  padding-bottom: 0;
+  // padding-bottom: 11px;
   
+}
+
+
+.toggles__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 30%;
+  flex-grow: 1;
+  &-item {
+    width: 50%;
+    margin-bottom: 11px;
+    // margin-right: 27px;
+    &:nth-child(odd) {
+      width: 40%;
+    }
+    &:nth-child(even) {
+      width: 60%;
+    }
+  }
 }
 
 .toggles__login-link,
@@ -13,14 +34,15 @@
   align-items: center;
   font-size: 10px;
   line-height: 14px;
+  
   > svg {
     fill: white;
     margin-right: 5px;
   }
 
-  &:first-child {
-    margin-right: 27px;
-  }
+  // &:first-child {
+  //   margin-right: 27px;
+  // }
   &:link,
   &:visited {
     color: white;
@@ -30,8 +52,11 @@
 
 
 .toggles__close-sidebar-button {
-  margin-left: auto;
+  // margin-left: auto;
   outline: none;
+  flex-shrink: 0;
+  align-self: flex-start;
+  margin-top: 2px;
   > svg {
     fill: white;
     display: block;
