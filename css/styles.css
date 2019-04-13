@@ -5675,7 +5675,8 @@ svg {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column; }
+          flex-direction: column;
+  width: 100%; }
 
 .tabs__navigation {
   display: -webkit-box;
@@ -5743,8 +5744,8 @@ svg {
   width: 100%;
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: opacity 0.5s, visibility 0.5s;
+  transition: opacity 0.5s, visibility 0.5s;
   z-index: 1; }
   .tabs__item.active {
     position: relative !important;
@@ -11866,6 +11867,8 @@ svg {
       left: 0;
       -webkit-transition: background-color 0.2s;
       transition: background-color 0.2s; }
+    .play-off__card-table td a:link, .play-off__card-table td a:visited {
+      color: #256963; }
   .play-off__card-table tr {
     cursor: default; }
     .play-off__card-table tr:first-child td::before {
