@@ -3250,6 +3250,9 @@ a {
   display: inline-block;
   vertical-align: top; }
 
+a:link, a:visited {
+  color: #256963; }
+
 main {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -8523,6 +8526,8 @@ svg {
   max-width: initial;
   -ms-flex-negative: 0;
       flex-shrink: 0; }
+  .partners__logo-container--bars {
+    height: 100px; }
 
 .partner__logo {
   position: relative;
