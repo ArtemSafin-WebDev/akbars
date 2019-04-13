@@ -18,12 +18,10 @@
       <main>
         <section class="register">
           <h1 class="register__heading">
-            Регистрация
+              Настройка учетной записи пользователя
           </h1>
           <div class="register__content">
-            <div class="register__loyalty-program">
-              Для регистрации карты болельщика необходимо зарегистрироваться в <a href="#">программе лояльности</a>
-            </div>
+            
             <form action="/" class="register__form" method="POST" data-parsley-validate>
               <div class="register__input-group">
                 <label for="nickname" class="register__text-label">Ваше имя/никнейм (для отображения на сайте)<sup>*</sup>:</label>
@@ -41,14 +39,7 @@
                 <label for="birthday" class="register__text-label">Дата рождения:</label>
                 <input type="text" class="register__text-input" name="birthday" id="birthday" value="" placeholder="Дата рождения в формате ДД.ММ.ГГГГ" data-parsley-moment/>
               </div>
-              <div class="register__input-group">
-                <label for="password1" class="register__text-label">Пароль (не менее 6 символов)<sup>*</sup>:</label>
-                <input type="password" class="register__text-input" id="password1" name="password1" value="" minlength="6" required placeholder="Введите пароль"/>
-              </div>
-              <div class="register__input-group">
-                <label for="password2" class="register__text-label">Повтор пароля<sup>*</sup>:</label>
-                <input type="password" class="register__text-input" id="password2" name="password2" value="" required data-parsley-equalto="#password1" placeholder="Подтверждение пароля"/>
-              </div>
+              
               <div class="register__checkbox-group">
                 <span class="checkbox">
                   <input type="checkbox" class="checkbox__input" name="hidemail" id="hidemail" value="1" />
@@ -119,36 +110,31 @@
                 <label for="info" class="register__text-label">Введите любую информацию о себе, которая будет доступна другим посетителям:</label>
                 <textarea name="info" id="info" class="register__textarea"></textarea>
               </div>
-              <div class="register__checkbox-group">
-                <span class="checkbox">
-                  <input type="checkbox" class="checkbox__input" name="agree" id="agree" value="1" required/>
-                  <label for="agree" class="checkbox__label">
-                    <span class="checkbox__label-icon">
-                      <svg width="10" height="7" aria-hidden="true" class="icon-checkbox">
-                        <use xlink:href="#checkbox" />
-                      </svg>
-                    </span>
-                    <span class="checkbox__label-text">Я соглашаюсь с <a href="#" target="_blank">правилами</a> и соглашаюсь на <a href="#" target="_blank">обработку персональных данных</a></span>
-                  </label>
-                </span>
-              </div>
+             
               
               <button type="submit" class="register__submit">
-                Зарегистрироваться
+                Применить изменения
               </button>
               <input type="hidden" name="cmd" value="registration" />
             </form>
-            <div class="register__social-login">
-              <h3 class="register__social-login-heading">
-                Если у вас нет карты болельщика, вы можете войти через социальные сети:
-              </h3>
-              <a href="#" class="register__social-login-link">
-                Войти через ВКонтакте
-                <svg width="20" height="20" aria-hidden="true" class="icon-vk">
-                  <use xlink:href="#vk" />
-                </svg>
-              </a>
-            </div>
+            <h2 class="register__heading">
+                Установка пароля
+            </h2>
+            <form action="/" class="register__form" method="POST" data-parsley-validate>
+              <div class="register__input-group">
+                <label for="password1" class="register__text-label">Пароль (не менее 6 символов)<sup>*</sup>:</label>
+                <input type="password" class="register__text-input" id="password1" name="password1" value="" minlength="6" required placeholder="Введите пароль"/>
+              </div>
+              <div class="register__input-group">
+                <label for="password2" class="register__text-label">Повтор пароля<sup>*</sup>:</label>
+                <input type="password" class="register__text-input" id="password2" name="password2" value="" required data-parsley-equalto="#password1" placeholder="Подтверждение пароля"/>
+              </div>
+              <input type="hidden" name="cmd" value="password" />
+              <button type="submit" class="register__submit">
+                Установить пароль
+              </button>
+            </form>
+            
           </div>
         </section>
       </main>
