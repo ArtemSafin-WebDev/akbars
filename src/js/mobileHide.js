@@ -30,6 +30,7 @@ export default function() {
   window.hides = {
     initialized: [],
     init: function() {
+      this.destroy()
       this.initialized = initializeHides()
     },
     destroy: function() {
