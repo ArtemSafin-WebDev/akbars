@@ -1,23 +1,17 @@
 .video {
   .tabs__navigation-wrapper {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+  
     width: 100%;
     background-color: #fff;
   }
 
-  .tabs__navigation button {
+  .tabs__navigation a {
     width: 50%;
     flex-shrink: 0;
     .tabs__button-content {
       justify-content: center;
     }
   }
-
-  .simplebar-track.simplebar-horizontal {
-    display: none;
-  }
-
 
   .hide-button {
     padding: 0;

@@ -20,23 +20,23 @@
           <h1 class="video__heading">
             Видео
           </h1>
-          <div class="tabs js-tabs-container">
-            <div class="tabs__navigation-wrapper" data-simplebar>
+          <div class="tabs">
+            <div class="tabs__navigation-wrapper">
               <nav class="tabs__navigation">
-                <button class="js-tab-button js-tab-button-info">
+                <a href="video-m.html" class="active">
                   <span class="tabs__button-content">
                     Видео-ролики
                   </span>
-                </button>
-                <button class="js-tab-button js-tab-button-photos">
+                </a>
+                <a href="goals-m.html">
                   <span class="tabs__button-content">
                     Голы и интервью
                   </span>
-                </button>
+                </a>
               </nav>
             </div>
             <ul class="tabs__content">
-              <li class="tabs__item tabs__item--column js-tab">
+              <li class="tabs__item tabs__item--column active">
                 <div class="video__select">
                   <div class="video__select-wrapper">
                     <select name="season" onchange="return console.log(event.target.value)" required>
@@ -151,223 +151,7 @@
                   </li>
                 </ul>
               </li>
-              <li class="tabs__item tabs__item--column js-tab">
-                <div class="video__select">
-                  <div class="video__select-wrapper">
-                    <select name="season" onchange="return console.log(event.target.value)" required>
-                      <option value="2018-2019">Сезон 2018-2019</option>
-                      <option value="2017-2018">Сезон 2017-2018</option>
-                      <option value="2016-2017">Сезон 2016-2017</option>
-                      <option value="2015-2016">Сезон 2015-2016</option>
-                      <option value="2014-2015">Сезон 2014-2015</option>
-                      <option value="2013-2014">Сезон 2013-2014</option>
-                      <option value="2010-2011">Сезон 2010-2011</option>
-                    </select>
-                  </div>
-                </div>
-                <ul class="video__goals-list">
-                  <li class="video__goals-list-item js-goal-item">
-                    <p class="video__goals-date">
-                      <svg width="16" height="16" aria-hidden="true" class="icon-news-calendar">
-                        <use xlink:href="#news-calendar"></use>
-                      </svg>
-                      24 февраля 2019 г.
-                    </p>
-                    <h3 class="video__goals-heading">
-                      «Ак Барс (Казань) - «Авангард» (Омская обл.) - 2 : 3
-                    </h3>
-                    <div class="swiper-container js-goal-slider">
-                      <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide">
-                          <a href="#" class="video__goals-video">
-                            <img src="img/video-preview-1.jpg" alt="Превью видео" class="video__goals-preview" />
-                            <svg width="60" height="60" aria-hidden="true" class="video__goals-play-icon">
-                              <use xlink:href="#play"></use>
-                            </svg>
-                          </a>
-                          <span class="video__goals-slide-text">
-                            1:1 Ландер (Азеведо, Постма, 6:22, бол.)
-                          </span>
-                        </div>
-                        <div class="swiper-slide">
-                          <a href="#" class="video__goals-video">
-                            <img src="img/video-preview-2.jpg" alt="Превью видео" class="video__goals-preview" />
-                            <svg width="60" height="60" aria-hidden="true" class="video__goals-play-icon">
-                              <use xlink:href="#play"></use>
-                            </svg>
-                          </a>
-                          <span class="video__goals-slide-text">
-                            1:1 Ландер (Азеведо, Постма, 6:22, бол.)
-                          </span>
-                        </div>
-                        <div class="swiper-slide">
-                          <a href="#" class="video__goals-video">
-                            <img src="img/video-preview-1.jpg" alt="Превью видео" class="video__goals-preview" />
-                            <svg width="60" height="60" aria-hidden="true" class="video__goals-play-icon">
-                              <use xlink:href="#play"></use>
-                            </svg>
-                          </a>
-                          <span class="video__goals-slide-text">
-                            1:1 Ландер (Азеведо, Постма, 6:22, бол.)
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <p class="video__goals-pagination js-goals-pagination"></p>
-                  </li>
-                  <li class="video__goals-list-item js-goal-item">
-                    <p class="video__goals-date">
-                      <svg width="16" height="16" aria-hidden="true" class="icon-news-calendar">
-                        <use xlink:href="#news-calendar"></use>
-                      </svg>
-                      24 февраля 2019 г.
-                    </p>
-                    <h3 class="video__goals-heading">
-                      «Ак Барс (Казань) - «Авангард» (Омская обл.) - 2 : 3
-                    </h3>
-                    <div class="swiper-container js-goal-slider">
-                      <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide">
-                          <a href="#" class="video__goals-video">
-                            <img src="img/video-preview-1.jpg" alt="Превью видео" class="video__goals-preview" />
-                            <svg width="60" height="60" aria-hidden="true" class="video__goals-play-icon">
-                              <use xlink:href="#play"></use>
-                            </svg>
-                          </a>
-                          <span class="video__goals-slide-text">
-                            1:1 Ландер (Азеведо, Постма, 6:22, бол.)
-                          </span>
-                        </div>
-                        <div class="swiper-slide">
-                          <a href="#" class="video__goals-video">
-                            <img src="img/video-preview-2.jpg" alt="Превью видео" class="video__goals-preview" />
-                            <svg width="60" height="60" aria-hidden="true" class="video__goals-play-icon">
-                              <use xlink:href="#play"></use>
-                            </svg>
-                          </a>
-                          <span class="video__goals-slide-text">
-                            1:1 Ландер (Азеведо, Постма, 6:22, бол.)
-                          </span>
-                        </div>
-                        <div class="swiper-slide">
-                          <a href="#" class="video__goals-video">
-                            <img src="img/video-preview-1.jpg" alt="Превью видео" class="video__goals-preview" />
-                            <svg width="60" height="60" aria-hidden="true" class="video__goals-play-icon">
-                              <use xlink:href="#play"></use>
-                            </svg>
-                          </a>
-                          <span class="video__goals-slide-text">
-                            1:1 Ландер (Азеведо, Постма, 6:22, бол.)
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <p class="video__goals-pagination js-goals-pagination"></p>
-                  </li>
-                  <li class="video__goals-list-item js-goal-item">
-                    <p class="video__goals-date">
-                      <svg width="16" height="16" aria-hidden="true" class="icon-news-calendar">
-                        <use xlink:href="#news-calendar"></use>
-                      </svg>
-                      24 февраля 2019 г.
-                    </p>
-                    <h3 class="video__goals-heading">
-                      «Ак Барс (Казань) - «Авангард» (Омская обл.) - 2 : 3
-                    </h3>
-                    <div class="swiper-container js-goal-slider">
-                      <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide">
-                          <a href="#" class="video__goals-video">
-                            <img src="img/video-preview-1.jpg" alt="Превью видео" class="video__goals-preview" />
-                            <svg width="60" height="60" aria-hidden="true" class="video__goals-play-icon">
-                              <use xlink:href="#play"></use>
-                            </svg>
-                          </a>
-                          <span class="video__goals-slide-text">
-                            1:1 Ландер (Азеведо, Постма, 6:22, бол.)
-                          </span>
-                        </div>
-                        <div class="swiper-slide">
-                          <a href="#" class="video__goals-video">
-                            <img src="img/video-preview-2.jpg" alt="Превью видео" class="video__goals-preview" />
-                            <svg width="60" height="60" aria-hidden="true" class="video__goals-play-icon">
-                              <use xlink:href="#play"></use>
-                            </svg>
-                          </a>
-                          <span class="video__goals-slide-text">
-                            1:1 Ландер (Азеведо, Постма, 6:22, бол.)
-                          </span>
-                        </div>
-                        <div class="swiper-slide">
-                          <a href="#" class="video__goals-video">
-                            <img src="img/video-preview-1.jpg" alt="Превью видео" class="video__goals-preview" />
-                            <svg width="60" height="60" aria-hidden="true" class="video__goals-play-icon">
-                              <use xlink:href="#play"></use>
-                            </svg>
-                          </a>
-                          <span class="video__goals-slide-text">
-                            1:1 Ландер (Азеведо, Постма, 6:22, бол.)
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <p class="video__goals-pagination js-goals-pagination"></p>
-                  </li>
-                  <li class="video__goals-list-item js-goal-item">
-                    <p class="video__goals-date">
-                      <svg width="16" height="16" aria-hidden="true" class="icon-news-calendar">
-                        <use xlink:href="#news-calendar"></use>
-                      </svg>
-                      24 февраля 2019 г.
-                    </p>
-                    <h3 class="video__goals-heading">
-                      «Ак Барс (Казань) - «Авангард» (Омская обл.) - 2 : 3
-                    </h3>
-                    <div class="swiper-container js-goal-slider">
-                      <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide">
-                          <a href="#" class="video__goals-video">
-                            <img src="img/video-preview-1.jpg" alt="Превью видео" class="video__goals-preview" />
-                            <svg width="60" height="60" aria-hidden="true" class="video__goals-play-icon">
-                              <use xlink:href="#play"></use>
-                            </svg>
-                          </a>
-                          <span class="video__goals-slide-text">
-                            1:1 Ландер (Азеведо, Постма, 6:22, бол.)
-                          </span>
-                        </div>
-                        <div class="swiper-slide">
-                          <a href="#" class="video__goals-video">
-                            <img src="img/video-preview-2.jpg" alt="Превью видео" class="video__goals-preview" />
-                            <svg width="60" height="60" aria-hidden="true" class="video__goals-play-icon">
-                              <use xlink:href="#play"></use>
-                            </svg>
-                          </a>
-                          <span class="video__goals-slide-text">
-                            1:1 Ландер (Азеведо, Постма, 6:22, бол.)
-                          </span>
-                        </div>
-                        <div class="swiper-slide">
-                          <a href="#" class="video__goals-video">
-                            <img src="img/video-preview-1.jpg" alt="Превью видео" class="video__goals-preview" />
-                            <svg width="60" height="60" aria-hidden="true" class="video__goals-play-icon">
-                              <use xlink:href="#play"></use>
-                            </svg>
-                          </a>
-                          <span class="video__goals-slide-text">
-                            1:1 Ландер (Азеведо, Постма, 6:22, бол.)
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <p class="video__goals-pagination js-goals-pagination"></p>
-                  </li>
-                </ul>
-              </li>
+              
             </ul>
           </div>
 

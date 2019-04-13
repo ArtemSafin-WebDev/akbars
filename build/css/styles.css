@@ -5682,7 +5682,8 @@ svg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
-  .tabs__navigation > button {
+  .tabs__navigation > button,
+  .tabs__navigation > a {
     background-color: #7fb1ad;
     color: white;
     text-transform: uppercase;
@@ -5696,14 +5697,22 @@ svg {
     outline: none;
     white-space: nowrap;
     -webkit-tap-highlight-color: transparent; }
-    .tabs__navigation > button > * {
+    .tabs__navigation > button > *,
+    .tabs__navigation > a > * {
       position: relative; }
-    .tabs__navigation > button:not(:last-of-type) {
+    .tabs__navigation > button:link, .tabs__navigation > button:visited,
+    .tabs__navigation > a:link,
+    .tabs__navigation > a:visited {
+      color: white; }
+    .tabs__navigation > button:not(:last-of-type),
+    .tabs__navigation > a:not(:last-of-type) {
       margin-right: 2px; }
-    .tabs__navigation > button.active {
+    .tabs__navigation > button.active,
+    .tabs__navigation > a.active {
       background-color: #256963;
       cursor: default; }
-    .tabs__navigation > button[disabled] {
+    .tabs__navigation > button[disabled],
+    .tabs__navigation > a[disabled] {
       background-color: #c0c0c0;
       cursor: default; }
   .tabs__navigation--full-width > button {
@@ -5712,7 +5721,9 @@ svg {
         -ms-flex-positive: 1;
             flex-grow: 1; }
 
-.no-touch .tabs__navigation > button:hover:not([disabled]):not(.active), .no-touch .tabs__navigation > button:focus:not([disabled]):not(.active) {
+.no-touch .tabs__navigation > button:hover:not([disabled]):not(.active), .no-touch .tabs__navigation > button:focus:not([disabled]):not(.active),
+.no-touch .tabs__navigation > a:hover:not([disabled]):not(.active),
+.no-touch .tabs__navigation > a:focus:not([disabled]):not(.active) {
   background-color: #3c8f88; }
 
 .tabs__content {

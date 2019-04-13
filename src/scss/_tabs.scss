@@ -8,7 +8,8 @@
 .tabs__navigation {
   display: flex;
   // align-items: center;
-  > button {
+  > button,
+  > a {
     background-color: #7fb1ad;
     color: white;
     text-transform: uppercase;
@@ -23,6 +24,11 @@
     -webkit-tap-highlight-color: transparent;
     > * {
       position: relative;
+    }
+    &:link,
+    &:visited {
+      color: white;
+      
     }
     &:not(:last-of-type) {
       margin-right: 2px;
@@ -44,9 +50,13 @@
       flex-grow: 1;
     }
   }
+
+
+  
 }
 
-.no-touch .tabs__navigation > button {
+.no-touch .tabs__navigation > button,
+.no-touch .tabs__navigation > a {
   &:hover,
   &:focus {
     &:not([disabled]):not(.active) {
