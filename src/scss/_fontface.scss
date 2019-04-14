@@ -16,3 +16,12 @@
   font-style: normal;
   font-display: swap;
 }
+
+
+@font-face {
+  font-family: 'lightcase';
+  src: url("../misc/fonts/lightcase.eot?55356177");
+  src: url("../misc/fonts/lightcase.eot?55356177#iefix") format("embedded-opentype"), url("../misc/fonts/lightcase.woff?55356177") format("woff"), url("../misc/fonts/lightcase.ttf?55356177") format("truetype"), url("../misc/fonts/lightcase.svg?55356177#lightcase") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
