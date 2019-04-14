@@ -6550,7 +6550,8 @@ svg {
             align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
-            justify-content: center; }
+            justify-content: center;
+    outline: none; }
     .calendar__dates td .calendar__date-link > img {
       display: block;
       width: 65px;
@@ -6558,29 +6559,31 @@ svg {
       -o-object-fit: contain;
          object-fit: contain;
       font-family: 'object-fit: contain;'; }
-  .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-red {
-    border: 2px solid #D81E23; }
-    .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-red:hover, .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-red:focus {
-      background-color: #D81E23; }
-      .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-red:hover ~ .calendar__date-info-day, .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-red:focus ~ .calendar__date-info-day {
-        color: white; }
-        .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-red:hover ~ .calendar__date-info-day::after, .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-red:focus ~ .calendar__date-info-day::after {
-          text-stroke: 3px #D81E23;
-          -moz-text-stroke-color: #D81E23;
-          -webkit-text-stroke-color: #D81E23; }
-  .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-green {
-    border: 2px solid #256963; }
-    .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-green:hover, .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-green:focus {
-      background-color: #256963; }
-      .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-green:hover ~ .calendar__date-info-day, .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-green:focus ~ .calendar__date-info-day {
-        color: white; }
-        .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-green:hover ~ .calendar__date-info-day::after, .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-green:focus ~ .calendar__date-info-day::after {
-          text-stroke: 3px #256963;
-          -moz-text-stroke-color: #256963;
-          -webkit-text-stroke-color: #256963; }
+  .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link {
+    cursor: pointer; }
+    .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-red {
+      border: 2px solid #D81E23; }
+      .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-red:hover, .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-red:focus {
+        background-color: #D81E23; }
+        .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-red:hover ~ .calendar__date-info-day, .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-red:focus ~ .calendar__date-info-day {
+          color: white; }
+          .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-red:hover ~ .calendar__date-info-day::after, .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-red:focus ~ .calendar__date-info-day::after {
+            text-stroke: 3px #D81E23;
+            -moz-text-stroke-color: #D81E23;
+            -webkit-text-stroke-color: #D81E23; }
+    .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-green {
+      border: 2px solid #256963; }
+      .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-green:hover, .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-green:focus {
+        background-color: #256963; }
+        .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-green:hover ~ .calendar__date-info-day, .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-green:focus ~ .calendar__date-info-day {
+          color: white; }
+          .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-green:hover ~ .calendar__date-info-day::after, .calendar__dates td .calendar__date-info:not(.another-month) .calendar__date-link.marked-green:focus ~ .calendar__date-info-day::after {
+            text-stroke: 3px #256963;
+            -moz-text-stroke-color: #256963;
+            -webkit-text-stroke-color: #256963; }
 
 .calendar__date-info.another-month .calendar__date-link {
-  opacity: .5; }
+  opacity: 0.5; }
 
 .calendar__legend {
   display: -webkit-box;
@@ -6655,6 +6658,113 @@ svg {
     color: #D81E23; }
   .calendar__all-calendar-link:hover, .calendar__all-calendar-link:focus {
     color: #D81E23; }
+
+.calendar__date-match-info-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  z-index: 500; }
+
+.calendar__date-match-info-teams {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.calendar__date-match-info-team {
+  width: 30%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.team-logo {
+  width: 40px;
+  padding-bottom: 40px;
+  position: relative;
+  -ms-flex-item-align: center;
+      align-self: center; }
+  .team-logo > img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+    font-family: 'object-fit: contain;'; }
+
+.team-name {
+  -ms-flex-item-align: center;
+      align-self: center;
+  font-size: 16px;
+  line-height: 22px; }
+
+.calendar__date-match-info-score {
+  color: #256963;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  margin: 0 15px;
+  margin-top: 6px;
+  -ms-flex-item-align: start;
+      align-self: flex-start; }
+
+.calendar__date-match-links-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .calendar__date-match-links-list-item {
+    width: 36px;
+    height: 36px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 10px; }
+
+.calendar__date-match-link {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s; }
+  .calendar__date-match-link:link, .calendar__date-match-link:visited {
+    color: #D81E23; }
+  .calendar__date-match-link:hover > svg, .calendar__date-match-link:focus > svg {
+    fill: #D81E23; }
+  .calendar__date-match-link > svg {
+    fill: #256963;
+    -webkit-transition: 0.2s;
+    transition: 0.2s; }
+
+.calendar__date-match-heading {
+  text-align: center;
+  width: 100%;
+  font-family: 'Supermolot', 'Helvetica', sans-serif;
+  color: #242f37;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+  margin-bottom: 10px; }
 
 .results {
   position: relative; }
@@ -15336,32 +15446,42 @@ svg {
   .default-ui .icon-link:hover .hoverable-icon, .default-ui .icon-link:focus .hoverable-icon {
     fill-opacity: 1; }
 
-.player {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  z-index: 6000000;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: .3s;
-  transition: .3s; }
-  .player.visible {
-    opacity: 1;
-    visibility: visible; }
-  .player__content {
-    margin: auto;
-    width: 800px; }
-    .player__content > video {
-      width: 100%;
-      height: auto;
-      outline: none; }
+.tippy-tooltip.tomato-theme {
+  background-color: white;
+  color: #242f37;
+  border-radius: 0;
+  font-size: 16px;
+  line-height: 22px;
+  -webkit-box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.2); }
+
+.tippy-tooltip.tomato-theme[data-animatefill] {
+  background-color: transparent; }
+
+.tippy-tooltip.tomato-theme .tippy-backdrop {
+  background-color: white;
+  border-radius: 0; }
+
+.tippy-tooltip.tomato-theme[x-placement^='top'] .tippy-arrow {
+  border-top: 12px solid white;
+  border-right: 12px solid transparent;
+  border-left: 12px solid transparent;
+  bottom: -11px; }
+
+.tippy-tooltip.tomato-theme[x-placement^='bottom'] .tippy-arrow {
+  border-bottom: 12px solid white;
+  border-right: 12px solid transparent;
+  border-left: 12px solid transparent;
+  top: -11px; }
+
+.tippy-tooltip.tomato-theme[x-placement^='left'] .tippy-arrow {
+  border-left: 12px solid white;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  right: -11px; }
+
+.tippy-tooltip.tomato-theme[x-placement^='right'] .tippy-arrow {
+  border-right: 12px solid white;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  left: -11px; }
