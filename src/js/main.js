@@ -30,7 +30,7 @@ import abonementsModals from './abonementsModals'
 import prognosisSubmitTest from './prognosisSubmitTest';
 import touchDetection from './touchDetection';
 
-
+import calendarTooltips from './calendarTooltips'
 
 
 
@@ -142,10 +142,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   prognosisSubmitTest()
 
+  // Тултипы календаря
 
-  // Плерр
-
-  player()
+  calendarTooltips()
 
 })
 
