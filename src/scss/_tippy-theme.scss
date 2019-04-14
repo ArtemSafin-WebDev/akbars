@@ -1,0 +1,46 @@
+.tippy-tooltip.tomato-theme {
+  background-color: white;
+  color: #242f37;
+  border-radius: 0;
+  font-size: 16px;
+  line-height: 22px;
+  box-shadow: 0px 5px 30px rgba(black, 0.2);
+ 
+}
+
+.tippy-tooltip.tomato-theme[data-animatefill] {
+  background-color: transparent;
+}
+
+.tippy-tooltip.tomato-theme .tippy-backdrop {
+  background-color: white;
+  border-radius: 0;
+}
+
+.tippy-tooltip.tomato-theme[x-placement^='top'] .tippy-arrow {
+  border-top: 12px solid white;
+  border-right: 12px solid transparent;
+  border-left: 12px solid transparent;
+  bottom: -11px;
+}
+.tippy-tooltip.tomato-theme[x-placement^='bottom'] .tippy-arrow {
+  border-bottom: 12px solid white;
+  border-right: 12px solid transparent;
+  border-left: 12px solid transparent;
+  top: -11px;
+}
+.tippy-tooltip.tomato-theme[x-placement^='left'] .tippy-arrow {
+  border-left: 12px solid white;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  right: -11px;
+}
+.tippy-tooltip.tomato-theme[x-placement^='right'] .tippy-arrow {
+  border-right: 12px solid white;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  left: -11px;
+}
+
+
+
