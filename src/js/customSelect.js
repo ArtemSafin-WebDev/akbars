@@ -3,6 +3,16 @@ import Choices from 'choices.js'
 import PerfectScrollbar from 'perfect-scrollbar'
 
 export default function() {
+  
+  $('select').each(function() {
+    $(this).val(
+      $(this)
+        .find('option[selected]')
+        .val()
+    )
+  })
+  
+
   const choicesOptions = {
     itemSelectText: '',
     noResultsText: 'Нет результатов',
@@ -18,7 +28,7 @@ export default function() {
 
   customSelects.forEach(select => {
     const selectElement = select.querySelector('select')
-   
+
     let scrolledToTop = false
 
     if (selectElement) {
@@ -43,7 +53,7 @@ export default function() {
         dropdown.classList.remove('hide-gradient')
       }
     })
-   
+
     const ps = new PerfectScrollbar(choicesList, {
       wheelSpeed: 1,
       wheelPropagation: false
@@ -52,22 +62,18 @@ export default function() {
     selectElement.addEventListener(
       'search',
       function() {
-        ps.update();
-        
+        ps.update()
       },
       false
     )
     selectElement.addEventListener(
       'showDropdown',
       function() {
-        ps.update();
-        
+        ps.update()
       },
       false
     )
   })
-
-  
 
   window.selectInstances = selectInstances
 }
