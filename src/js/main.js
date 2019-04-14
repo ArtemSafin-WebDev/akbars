@@ -30,6 +30,8 @@ import abonementsModals from './abonementsModals'
 import prognosisSubmitTest from './prognosisSubmitTest';
 import touchDetection from './touchDetection';
 
+import player from './player'
+
 
 
 
@@ -139,6 +141,11 @@ document.addEventListener('DOMContentLoaded', function() {
   // Тест кнопки прогноза
 
   prognosisSubmitTest()
+
+
+  // Плерр
+
+  // player()
 
 })
 

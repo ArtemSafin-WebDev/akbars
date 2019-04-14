@@ -33,7 +33,7 @@ export default function() {
     })
   }
 
-  const playerSwiperElements = document.querySelectorAll('.js-players-swiper')
+  const playerSwiperElements = Array.from(document.querySelectorAll('.js-players-swiper'))
 
   playerSwiperElements.forEach(element => {
     new Swiper(element, {

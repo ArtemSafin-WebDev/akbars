@@ -1,5 +1,5 @@
 export default function() {
-  const mobileHideButtons = Array.from(document.querySelectorAll('.js-hide-button'))
+  
 
   function Hide(button, newText) {
     this.button = button
@@ -22,6 +22,8 @@ export default function() {
   }
 
   function initializeHides() {
+    const mobileHideButtons = Array.from(document.querySelectorAll('.js-hide-button'))
+    
     return mobileHideButtons.map(button => {
       return new Hide(button, 'Скрыть')
     })
@@ -45,15 +47,5 @@ export default function() {
 
   window.hides.init()
 
-  // mobileHideButtons.forEach(button => {
-  //   const originalButtonText = button.textContent;
-  //   const newButtonText = 'Скрыть'
-  //   let hiddenContent = button.parentElement.querySelector('.js-hide-container')
-  //   let hidden = false;
-  //   button.addEventListener('click', function() {
-  //     hiddenContent.classList.toggle('hidden')
-  //     hidden = !hidden
-  //     button.textContent = hidden ? newButtonText : originalButtonText
-  //   })
-  // })
+  
 }
