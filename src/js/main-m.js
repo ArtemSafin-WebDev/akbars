@@ -16,6 +16,9 @@ import 'simplebar'
 import 'lightcase'
 
 
+import calendarTooltips from './mobileCalendarTooltips'
+
+
 document.addEventListener('DOMContentLoaded', function() {
 
   // Полифилл .contains для IE 11
@@ -71,6 +74,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   formValidation()
 
+  // Тултипы календаря
 
-  
+  calendarTooltips()
+
 })
