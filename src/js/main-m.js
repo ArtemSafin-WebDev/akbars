@@ -7,6 +7,7 @@ import mobileMenu from './mobileMenu'
 import hideOnScroll from './mobileHideOnScroll'
 import mobileSliders from './mobileSliders'
 import setTabsOnPage from './tabs'
+import tabURLChange from './tabUrlChange'
 import touchDetection from './touchDetection'
 import photogallery from './mobilePhotogallery'
 import scrollIntoViewButtons from './scrollTabButtonIntoView'
@@ -50,6 +51,10 @@ document.addEventListener('DOMContentLoaded', function() {
   // Слайдеры мобильной версии
   
   mobileSliders()
+
+  // Смена URL при смене таба
+
+  tabURLChange()
 
   // Иниализация всех табов на странице с помощью фабрики функций
 
