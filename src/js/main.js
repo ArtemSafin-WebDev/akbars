@@ -4,6 +4,7 @@ import 'lightcase'
 
 import objectFitImages from 'object-fit-images'
 import smoothscroll from 'smoothscroll-polyfill'
+import customEventsPolyfill from './customEventsPolyfill'
 
 
 import setTabsOnPage from './tabs'
@@ -31,7 +32,7 @@ import prognosisSubmitTest from './prognosisSubmitTest';
 import touchDetection from './touchDetection';
 
 import calendarTooltips from './calendarTooltips'
-
+import tabURLChange from './tabUrlChange'
 
 
 
@@ -50,6 +51,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
   smoothscroll.polyfill()
 
+  // Полифилл кастомных событий
+
+  customEventsPolyfill()
+
   // Определяем тач устройства
 
   touchDetection()
@@ -65,6 +70,10 @@ document.addEventListener('DOMContentLoaded', function() {
   // Модальное окно поиска
 
   searchModal()
+
+   // Смена URL при смене табов
+
+   tabURLChange()
 
   // Иниализация всех табов на странице с помощью фабрики функций
 
@@ -145,6 +154,12 @@ document.addEventListener('DOMContentLoaded', function() {
   // Тултипы календаря
 
   calendarTooltips()
+
+
+
+  
+
+ 
 
 })
 

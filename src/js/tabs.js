@@ -9,6 +9,7 @@ function initializeTabs(element, activeTab = 1) {
   const tabs = Array.from(element.querySelectorAll('.js-tab'))
   const tabsControlsCount = tabsControls.length
   const tabsCount = tabs.length
+  
 
   if (tabsControlsCount !== tabsCount) {
     throw new Error('Количество элементов управления не соответствует количеству табов')
@@ -39,6 +40,16 @@ function initializeTabs(element, activeTab = 1) {
     })
   }
 
+
+  const dispatchTabChange = (activeTab) => {
+    const tabChangeEvent = new CustomEvent('tabchange', {
+      bubbles: true,
+      detail: { tabID: activeTab.getAttribute('id') }
+    });
+
+    activeTab.dispatchEvent(tabChangeEvent)
+  }
+
   tabsControls.forEach(button =>
     button.addEventListener('click', function(event) {
       event.preventDefault()
@@ -47,11 +58,13 @@ function initializeTabs(element, activeTab = 1) {
         return false
       } else {
         setActiveTab(activeTab)
+        dispatchTabChange(tabs[activeTab - 1])
       }
     })
   )
 
   setActiveTab(activeTab)
+  dispatchTabChange(tabs[activeTab - 1])
 }
 
 function makeTabsController() {
