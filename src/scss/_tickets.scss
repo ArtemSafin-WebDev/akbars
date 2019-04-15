@@ -1,40 +1,149 @@
 .tickets {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #242F37;
-  h2 {
-    
-    font-size: 18px;
-    line-height: 24px;
-    color: #242F37;
-  }
+  width: 100%;
+  background-color: #fff;
+  border-top: 2px solid #256963;
+  margin-top: 35px;
+  padding: 20px 30px;
+  padding-bottom: 30px;
+  flex-grow: 1;
+}
 
+.tickets__tertiary-heading {
+  font-family: 'Supermolot', 'Helvetica', sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  color: #242f37;
+  margin-bottom: 20px;
+}
+
+.tickets__table-block {
+  padding: 0 20px;
+  margin-bottom: 60px;
   table {
     width: 100%;
-    margin: 20px auto;
-    font-size: 14px;
-    line-height: 18px;
     border-collapse: collapse;
-    th,
-    td {
-      text-align: center;
-      padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #242f37;
+
+    .regular,
+    .base,
+    .match-day {
+      width: 170px;
     }
-    th {
-      // background-color: #EBEBEB;
-      border: 2px solid #EBEBEB;
-      // border: 2px solid $green;
-      &:nth-child(1) {
-        white-space: nowrap;
-      }
-    }
-    td {
-      border: 2px solid #EBEBEB;
-      &[colspan] {
-        text-align: left;
-        padding: 10px;
+
+    .standard,
+    .special {
+      tr {
+        &:last-child {
+          td {
+            border-bottom: 3px solid #ebebeb;
+          }
+        }
       }
     }
 
-    
+    th {
+      background-color: #ebebeb;
+      font-weight: 700;
+      border: 2px solid white;
+      padding: 10px;
+      vertical-align: top;
+      text-align: left;
+      &[colspan] {
+        vertical-align: center;
+        text-align: center;
+      }
+    }
+
+    td {
+      padding: 16px 10px;
+      // padding-bottom: 10px;
+      border-bottom: 1px solid #ebebeb;
+    }
+
+   
   }
+}
+
+
+.tickets__content {
+  padding: 0 20px;
+}
+
+.tickets__ways-content {
+  color: #242f37;
+  a {
+    &:link,
+    &:visited {
+      color: $green;
+    }
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+.tickets__ways-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+  &-item {
+    width: 33.33%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.tickets__ways-heading {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: .2px;
+}
+
+.tickets__ways-link {
+  font-size: 14px;
+  line-height: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 10px;
+  &:link,
+  &:visited {
+    color: $green;
+  }
+}
+
+.tickets__ways-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  a {
+    display: inline;
+  }
+
+  a[href^="tel:"] {
+    white-space: nowrap;
+  }
+}
+
+
+.tickets__address {
+  font-size: 16px;
+  line-height: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 10px;
+}
+
+
+.tickets__time {
+  font-size: 16px;
+  line-height: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 10px;
 }

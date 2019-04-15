@@ -11288,6 +11288,7 @@ svg {
   border-top: 2px solid #256963;
   margin-top: 35px;
   padding: 20px 30px;
+  padding-bottom: 30px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1; }
@@ -11365,7 +11366,7 @@ svg {
       opacity: 0; }
 
 .abonements__accordions {
-  margin-bottom: 30px; }
+  margin-bottom: 50px; }
 
 .abonements__accordions-item {
   margin-bottom: 15px; }
@@ -11612,27 +11613,28 @@ svg {
   .abonements__buy-link:hover, .abonements__buy-link:focus {
     background-color: #3c8f88; }
 
-.abonements__credit-info {
+.abonements__info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 25px 28px;
   background-color: #ebebeb;
   color: #606366;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.2px;
-  margin-top: 60px;
-  margin-bottom: 20px; }
-  .abonements__credit-info > svg {
+  line-height: 18px;
+  letter-spacing: 0.2px; }
+  .abonements__info > svg {
     fill: #256963;
     -ms-flex-negative: 0;
         flex-shrink: 0;
     margin-right: 30px; }
-  .abonements__credit-info p {
+  .abonements__info p {
     margin-bottom: 10px; }
-    .abonements__credit-info p:last-child {
+    .abonements__info p:last-child {
       margin-bottom: 0; }
 
 .abonements__arena-modal {
@@ -13214,31 +13216,113 @@ svg {
       text-decoration: underline; }
 
 .tickets {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #242F37; }
-  .tickets h2 {
-    font-size: 18px;
-    line-height: 24px;
-    color: #242F37; }
-  .tickets table {
+  width: 100%;
+  background-color: #fff;
+  border-top: 2px solid #256963;
+  margin-top: 35px;
+  padding: 20px 30px;
+  padding-bottom: 30px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+
+.tickets__tertiary-heading {
+  font-family: 'Supermolot', 'Helvetica', sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  color: #242f37;
+  margin-bottom: 20px; }
+
+.tickets__table-block {
+  padding: 0 20px;
+  margin-bottom: 60px; }
+  .tickets__table-block table {
     width: 100%;
-    margin: 20px auto;
+    border-collapse: collapse;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
-    line-height: 18px;
-    border-collapse: collapse; }
-    .tickets table th,
-    .tickets table td {
-      text-align: center;
-      padding: 5px; }
-    .tickets table th {
-      border: 2px solid #EBEBEB; }
-      .tickets table th:nth-child(1) {
-        white-space: nowrap; }
-    .tickets table td {
-      border: 2px solid #EBEBEB; }
-      .tickets table td[colspan] {
-        text-align: left;
-        padding: 10px; }
+    line-height: 20px;
+    color: #242f37; }
+    .tickets__table-block table .regular,
+    .tickets__table-block table .base,
+    .tickets__table-block table .match-day {
+      width: 170px; }
+    .tickets__table-block table .standard tr:last-child td,
+    .tickets__table-block table .special tr:last-child td {
+      border-bottom: 3px solid #ebebeb; }
+    .tickets__table-block table th {
+      background-color: #ebebeb;
+      font-weight: 700;
+      border: 2px solid white;
+      padding: 10px;
+      vertical-align: top;
+      text-align: left; }
+      .tickets__table-block table th[colspan] {
+        vertical-align: center;
+        text-align: center; }
+    .tickets__table-block table td {
+      padding: 16px 10px;
+      border-bottom: 1px solid #ebebeb; }
+
+.tickets__content {
+  padding: 0 20px; }
+
+.tickets__ways-content {
+  color: #242f37; }
+  .tickets__ways-content a:link, .tickets__ways-content a:visited {
+    color: #256963; }
+  .tickets__ways-content a:hover, .tickets__ways-content a:focus {
+    text-decoration: underline; }
+
+.tickets__ways-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -10px; }
+  .tickets__ways-list-item {
+    width: 33.33%;
+    padding: 10px;
+    margin-bottom: 10px; }
+
+.tickets__ways-heading {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: .2px; }
+
+.tickets__ways-link {
+  font-size: 14px;
+  line-height: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 10px; }
+  .tickets__ways-link:link, .tickets__ways-link:visited {
+    color: #256963; }
+
+.tickets__ways-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 20px; }
+  .tickets__ways-text a {
+    display: inline; }
+  .tickets__ways-text a[href^="tel:"] {
+    white-space: nowrap; }
+
+.tickets__address {
+  font-size: 16px;
+  line-height: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 10px; }
+
+.tickets__time {
+  font-size: 16px;
+  line-height: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 10px; }
 
 .download {
   width: 960px;
