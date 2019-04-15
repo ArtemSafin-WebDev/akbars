@@ -78,6 +78,12 @@
   -webkit-overflow-scrolling: touch;
 }
 
+.conference__playoff-scroller {
+  height: 490px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 .conference__regular-table {
   width: 100%;
   border-collapse: collapse;
@@ -286,10 +292,10 @@
 .conference__info-slider-item {
   display: flex !important;
   flex-direction: column;
-  padding-bottom: 160px;
-  &--playoff {
-    padding-bottom: 260px;
-  }
+  // padding-bottom: 160px;
+  // &--playoff {
+  //   padding-bottom: 260px;
+  // }
 }
 
 .conference__conference-heading {
@@ -304,6 +310,14 @@
 
 .conference__card {
   margin-bottom: 25px;
+  &:last-child {
+    &::after {
+      content: '';
+      width: 100%;
+      display: block;
+      height: 160px;
+    }
+  }
 }
 
 .conference__playoff-table {
@@ -664,6 +678,15 @@
 .conference__playoff-card {
   position: relative;
   margin-bottom: 40px;
+  &:last-child {
+    &::after {
+      content: '';
+      width: 100%;
+      display: block;
+      height: 160px;
+    }
+  }
+  
 }
 
 
