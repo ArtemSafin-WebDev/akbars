@@ -8483,7 +8483,13 @@ svg {
   margin: 0 5px; }
 
 .news-comments__auth-required-links-secondary-block {
-  margin-top: 8px; }
+  margin-top: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
 
 .news-comments__auth-link-social {
   color: #94999f;
