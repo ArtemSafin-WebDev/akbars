@@ -6939,11 +6939,6 @@ svg {
     .conference__slider-button-content > svg {
       fill: white; }
 
-.conference__info {
-  height: 490px;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch; }
-
 .conference__playoff-scroller {
   height: 490px;
   overflow-y: auto;
@@ -7094,7 +7089,20 @@ svg {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column; }
+          flex-direction: column;
+  position: relative; }
+
+.conference__gradient {
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 200;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(rgba(255, 255, 255, 0)));
+  background-image: linear-gradient(to bottom, white, rgba(255, 255, 255, 0));
+  pointer-events: none;
+  display: block; }
 
 .conference__conference-heading {
   font-family: Arial, Helvetica, sans-serif;

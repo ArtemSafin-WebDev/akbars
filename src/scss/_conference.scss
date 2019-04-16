@@ -73,9 +73,9 @@
 }
 
 .conference__info {
-  height: 490px;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
+  // height: 490px;
+  // overflow-y: auto;
+  // -webkit-overflow-scrolling: touch;
 }
 
 .conference__playoff-scroller {
@@ -292,10 +292,20 @@
 .conference__info-slider-item {
   display: flex !important;
   flex-direction: column;
-  // padding-bottom: 160px;
-  // &--playoff {
-  //   padding-bottom: 260px;
-  // }
+  position: relative;
+}
+
+
+.conference__gradient {
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 200;
+  background-image: linear-gradient(to bottom, white, rgba(white, 0));
+  pointer-events: none;
+  display: block;
 }
 
 .conference__conference-heading {

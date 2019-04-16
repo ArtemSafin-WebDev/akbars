@@ -61,7 +61,7 @@ export default function() {
     arrows: false,
     dots: false,
     draggable: false,
-    adaptiveHeight: true
+    // adaptiveHeight: true
   })
 
   $('.js-khl-name-slider').slick({
