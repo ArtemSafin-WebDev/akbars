@@ -306,6 +306,13 @@
   background-image: linear-gradient(to bottom, white, rgba(white, 0));
   pointer-events: none;
   display: block;
+  opacity: 0;
+  visibility: hidden;
+  transition: .2s;
+  &.shown {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 .conference__conference-heading {

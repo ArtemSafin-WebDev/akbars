@@ -7102,7 +7102,14 @@ svg {
   background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(to bottom, white, rgba(255, 255, 255, 0));
   pointer-events: none;
-  display: block; }
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: .2s;
+  transition: .2s; }
+  .conference__gradient.shown {
+    opacity: 1;
+    visibility: visible; }
 
 .conference__conference-heading {
   font-family: Arial, Helvetica, sans-serif;

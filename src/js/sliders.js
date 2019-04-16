@@ -49,6 +49,16 @@ export default function() {
     nextArrow: '.js-photos-slider-next'
   })
 
+
+  function scrollTopAllTables() {
+    const tables = window.scrollableConferenceElements
+    if (tables.length > 0) {
+      tables.forEach(table => {
+        table.scrollTop = 0
+      })
+    }
+  }
+
   $('.js-conference-name-slider').slick({
     arrows: true,
     dots: false,
@@ -57,11 +67,15 @@ export default function() {
     asNavFor: '.js-conference-tables-slider'
   })
 
+  $('.js-conference-tables-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    console.log('Executing before change on conference')
+    scrollTopAllTables()
+  });
+
   $('.js-conference-tables-slider').slick({
     arrows: false,
     dots: false,
-    draggable: false,
-    // adaptiveHeight: true
+    draggable: false
   })
 
   $('.js-khl-name-slider').slick({
@@ -77,6 +91,12 @@ export default function() {
     dots: false,
     draggable: false
   })
+
+
+  $('.js-playoff-tables-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    console.log('Executing before change on playoff')
+    scrollTopAllTables()
+  });
 
   $('.js-playoff-name-slider').slick({
     arrows: true,
