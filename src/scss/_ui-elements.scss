@@ -853,3 +853,63 @@
     width: 35px;
   }
 }
+
+
+// Хайды
+
+.hide-button {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: 'Supermolot', 'Helvetica', sans-serif;
+  color: $green;
+  width: 100%;
+  // margin-top: 30px;
+  display: block;
+  transition: 0.2s;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  position: relative;
+  &::after {
+    content: '>';
+
+    color: $red;
+    margin-left: 5px;
+    transform: rotate(90deg);
+    position: absolute;
+    transition: .2s;
+  }
+  &:link,
+  &:visited {
+    color: $green;
+  }
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $red;
+  }
+
+
+  &.active {
+    &::after {
+      transform: rotate(270deg)
+    }
+  }
+}
+
+
+
+
+.hidden-content {
+  animation: fadeEffect 1s;
+  &.hidden {
+    display: none;
+  }
+}
+
+

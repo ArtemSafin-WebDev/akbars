@@ -210,6 +210,7 @@
   display: block;
   font-family: 'Supermolot', 'Helvetica', sans-serif;
   margin-bottom: 10px;
+  transition: color .2s;
   .results-page__score-numbers {
     position: relative;
     &::before {
@@ -223,8 +224,22 @@
       background-position: bottom;
       background-size: 3px 3px;
       background-repeat: repeat-x;
+      transition: .2s;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 3px;
+      height: 1px;
+      width: 100%;
+      background-image: linear-gradient(to right, #3C8F88 33%, rgba(255, 255, 255, 0) 0%);
+      background-position: bottom;
+      background-size: 3px 3px;
+      background-repeat: repeat-x;
       opacity: 0;
-      transition: opacity 0.3s;
+      visibility: hidden;
+      transition: .2s;
     }
   }
 
@@ -236,6 +251,7 @@
   &[href] {
     &:hover,
     &:focus {
+      color: #3C8F88;
       .results-page__legend {
         opacity: 1;
         visibility: visible;
@@ -243,7 +259,12 @@
 
       .results-page__score-numbers {
         &::before {
+          opacity: 0;
+          visibility: hidden;
+        }
+        &::after {
           opacity: 1;
+          visibility: visible;
         }
       }
     }

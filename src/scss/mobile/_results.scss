@@ -58,6 +58,72 @@
     }
   }
 
+
+  td[colspan="2"] {
+    width: 100%;
+  }
+
+  .match-review {
+    color: $green;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: .2px;
+    margin-top: 10px;
+    margin-left: 70px;
+    transition: color .2s;
+    display: inline-block;
+    align-self: flex-start;
+    position: relative;
+    &:link,
+    &:visited {
+      color: $green;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0px;
+      height: 1px;
+      width: 100%;
+      background-image: linear-gradient(to right, $green 33%, rgba(255, 255, 255, 0) 0%);
+      background-position: bottom;
+      background-size: 3px 3px;
+      background-repeat: repeat-x;
+      transition: .2s;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0px;
+      height: 1px;
+      width: 100%;
+      background-image: linear-gradient(to right, #3C8F88 33%, rgba(255, 255, 255, 0) 0%);
+      background-position: bottom;
+      background-size: 3px 3px;
+      background-repeat: repeat-x;
+      opacity: 0;
+      visibility: hidden;
+      transition: .2s;
+    }
+
+
+    &:hover,
+    &:focus {
+      color: #3C8F88;
+      &::before {
+        opacity: 0;
+        visibility: hidden;
+      }
+      &::after {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
   .month {
     th {
       width: 100%;

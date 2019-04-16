@@ -33,6 +33,7 @@ import touchDetection from './touchDetection';
 
 import calendarTooltips from './calendarTooltips'
 import tabURLChange from './tabUrlChange'
+import mobileHide from './mobileHide'
 
 
 
@@ -154,6 +155,10 @@ document.addEventListener('DOMContentLoaded', function() {
   // Тултипы календаря
 
   calendarTooltips()
+
+  // Хайды как на мобильной версии
+
+  mobileHide()
 
 
 

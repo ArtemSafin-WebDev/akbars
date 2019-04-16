@@ -1,5 +1,6 @@
 
 import 'slick-carousel'
+import Swiper from 'swiper/dist/js/swiper.js'
 
 export default function() {
 
@@ -121,5 +122,47 @@ export default function() {
     prevArrow: '.js-shop-slider-prev',
     nextArrow: '.js-shop-slider-next'
   })
+
+  const goalsItems = Array.from(document.querySelectorAll('.js-videos-goals-item'))
+  
+
+  goalsItems.forEach(item => {
+    const slider = item.querySelector('.js-videos-goals-slider')
+    const pagination = item.querySelector('.js-videos-goals-slider-pagination')
+    const gradientWrapper = item.querySelector('.js-gradient-wrapper')
+    console.log(gradientWrapper)
+    const goalSwiper = new Swiper(slider, {
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+      pagination: {
+        el: pagination,
+        type: 'fraction',
+      },
+      navigation: {
+        nextEl: item.querySelector('.js-video-goals-next'),
+        prevEl: item.querySelector('.js-video-goals-prev'),
+      },
+      on: {
+        reachEnd: function() {
+          console.log('END')
+          gradientWrapper.classList.remove('right-gradient-shown')
+        },
+        reachBeginning: function() {
+          console.log('START')
+          gradientWrapper.classList.remove('left-gradient-shown')
+        },
+        fromEdge: function() {
+          console.log('Moving away from start or end')
+          
+          gradientWrapper.classList.add('right-gradient-shown')
+          gradientWrapper.classList.add('left-gradient-shown')
+        }
+
+      }
+    });
+
+    
+  })
+  
 
 }

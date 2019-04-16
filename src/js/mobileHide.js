@@ -6,11 +6,17 @@ export default function() {
     this.originalButtonText = button.textContent
     this.newButtonText = newText.toString()
     this.hiddenContent = button.parentElement.querySelector('.js-hide-container')
-    this.hidden = false
+    this.hidden = true
     this.handleClick = function(event) {
       this.hiddenContent.classList.toggle('hidden')
+      this.button.classList.toggle('active')
       this.hidden = !this.hidden
-      this.textContent = this.hidden ? this.newButtonText : this.originalButtonText
+      if (this.hidden) {
+        this.button.textContent = this.originalButtonText
+      } else {
+        this.button.textContent = this.newButtonText
+      }
+      
     }
     this.handleClickBound = this.handleClick.bind(this)
     this.button.addEventListener('click', this.handleClickBound)

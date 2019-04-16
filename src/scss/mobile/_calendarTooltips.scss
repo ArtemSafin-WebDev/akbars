@@ -15,28 +15,29 @@
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-}
-
-.team-logo {
-  width: 40px;
-  padding-bottom: 40px;
-  position: relative;
-  align-self: center;
-  > img {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    @include objectFitContain();
+  .team-logo {
+    width: 40px;
+    padding-bottom: 40px;
+    position: relative;
+    align-self: center;
+    > img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      @include objectFitContain();
+    }
+  }
+  
+  .team-name {
+    align-self: center;
+    font-size: 16px;
+    line-height: 22px;
   }
 }
 
-.team-name {
-  align-self: center;
-  font-size: 16px;
-  line-height: 22px;
-}
+
 
 .calendar__date-match-info-score {
   color: $green;
