@@ -518,8 +518,9 @@
             </span>
           </a>
           <section class="utility">
-            <a href="irbis.html" class="utility__text-link">ХК «Ирбис»</a>
+
             <a href="bars.html" class="utility__text-link">ХК «Барс»</a>
+            <a href="irbis.html" class="utility__text-link">ХК «Ирбис»</a>
             <span class="utility__divider"></span>
             <div class="utility__social">
               <a class="utility__text-link utility__social-toggle js-social-open">Мы в соц. сетях</a>
@@ -619,19 +620,28 @@
               </a>
               <div class="utility__login-wrapper js-login-wrapper">
                 <div class="utility__login-content">
-                  <div class="utility__login-controls">
-                    <form action="/" class="utility__login-form" method="POST">
+
+                  <div class="utility__login-padding-wrapper">
+                    <h2 class="utility__login-heading">
+                      Вход
+                    </h2>
+                    <div class="utility__account">
+                      <div class="utility__login-avatar">
+                        <img src="img/avatar-placeholder.svg" alt="Заглушка аватара" class="utility__login-avatar-image">
+                      </div>
+                      <a href="#" class="utility__username">
+                        emiliocorleone
+                      </a>
+                    </div>
+                    <form action="/" class="utility__login-form" method="POST" data-parsley-validate>
                       <div class="utility__login-form-row">
-                        <div class="utility__login-avatar">
-                          <img src="img/avatar-placeholder.svg" alt="Заглушка аватара" class="utility__login-link-icon" />
-                        </div>
-                        <span class="utility__login-links">
-                          <a class="utility__login-link">Войти</a>/<a href="registration.html" class="utility__login-link">Зарегистрироваться</a>
-                        </span>
+                        <input autocomplete="off" type="text" name="nickname" class="utility__login-input" placeholder="Логин или E-mail" required />
                       </div>
                       <div class="utility__login-form-row">
-                        <input autocomplete="off" type="text" name="nickname" class="utility__login-input" placeholder="Логин или E-mail" />
-                        <input autocomplete="off" type="password" name="password" class="utility__login-input" placeholder="Пароль" />
+                        <input autocomplete="off" type="password" name="password" class="utility__login-input" placeholder="Пароль" required />
+                      </div>
+                      <div class="utility__login-form-row">
+                        <a href="#" class="utility__login-remember-password-link">Забыли пароль?</a>
                       </div>
                       <div class="utility__login-form-row">
                         <span class="checkbox">
@@ -645,20 +655,27 @@
                             <span class="checkbox__label-text">Сохранить пароль</span>
                           </label>
                         </span>
-                        <a href="#" class="utility__login-remember-password-link">Забыли пароль?</a>
+
                       </div>
                       <div class="utility__login-form-row">
-                        <a href="#" class="utility__login-social-login-link">
-                          Войти через соцсеть:
-                          <svg width="20" height="20" aria-hidden="true" class="icon-vk">
-                            <use xlink:href="#vk" />
-                          </svg>
-                        </a>
                         <button type="submit" class="utility__login-submit">
                           Войти
                         </button>
                       </div>
                     </form>
+                    <div class="utility__login-social-login">
+                      <a href="#" class="utility__login-social-login-link">
+                        Войти через:
+                        <svg width="25" height="25" aria-hidden="true" class="icon-vk">
+                          <use xlink:href="#vk" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="utility__register-exit">
+                    <a href="#" class="utility__register-exit-link">
+                      Регистрация
+                    </a>
                   </div>
                 </div>
               </div>
@@ -1201,26 +1218,64 @@
                       </h3>
                       <ol class="download__songs-list">
                         <li class="download__songs-list-item">
-                          <a href="https://www.ak-bars.ru/downloads/gimn-akbars2014.mp3">Гимн ХК «Ак Барс» в исполнении Кирилла Андреева</a>
+                          <span class="song-name">Гимн ХК «Ак Барс» в исполнении Кирилла Андреева</span>
+                          <div class="download__player-block">
+                            <audio class="js-audio" controls>
+                              <source src="https://www.ak-bars.ru/downloads/gimn-akbars2014.mp3" type="audio/mpeg">
+                              Браузер не поддерживает элемент Аудио
+                            </audio>
+                          </div>
+
                         </li>
                         <li class="download__songs-list-item">
-                          <a href="https://www.ak-bars.ru/downloads/hymn.mp3">Гимн ХК «Ак Барс» в исполнении Рената Ибрагимова</a>
+                          <span class="song-name">Гимн ХК «Ак Барс» в исполнении Рената Ибрагимова</span>
+                          <div class="download__player-block">
+                            <audio class="js-audio" controls>
+                              <source src="https://www.ak-bars.ru/downloads/hymn.mp3" type="audio/mpeg">
+                              Браузер не поддерживает элемент Аудио
+                            </audio>
+                          </div>
                         </li>
                         <li class="download__songs-list-item">
-                          <a href="https://www.ak-bars.ru/downloads/gimn-akbars.mp3">Гимн ХК «Ак Барс» в исполнении Николая Носкова</a>
+                          <span class="song-name">Гимн ХК «Ак Барс» в исполнении Николая Носкова</span>
+                          <div class="download__player-block">
+                            <audio class="js-audio" controls>
+                              <source src="https://www.ak-bars.ru/downloads/gimn-akbars.mp3" type="audio/mpeg">
+                              Браузер не поддерживает элемент Аудио
+                            </audio>
+                          </div>
                         </li>
                         <li class="download__songs-list-item">
-                          <a href="https://www.ak-bars.ru/downloads/let-lux_akbars.mp3">Let Lux &mdash; «Ак Барс» </a>
+                          <span class="song-name">Let Lux &mdash; «Ак Барс» </span>
+                          <div class="download__player-block">
+                            <audio class="js-audio" controls>
+                              <source src="https://www.ak-bars.ru/downloads/let-lux_akbars.mp3" type="audio/mpeg">
+                              Браузер не поддерживает элемент Аудио
+                            </audio>
+                          </div>
                         </li>
                         <li class="download__songs-list-item">
-                          <a href="https://www.ak-bars.ru/downloads/masha_semenova_ak_bars.mp3">Маша Семенова &mdash; «Ак Барс»
-                          </a>
+                          <span class="song-name">Маша Семенова &mdash; «Ак Барс»
+                          </span>
+                          <div class="download__player-block">
+                            <audio class="js-audio" controls>
+                              <source src="https://www.ak-bars.ru/downloads/masha_semenova_ak_bars.mp3" type="audio/mpeg">
+                              Браузер не поддерживает элемент Аудио
+                            </audio>
+                          </div>
                         </li>
                         <li class="download__songs-list-item">
-                          <a href="https://www.ak-bars.ru/downloads/alladinskyi_sverkaet_zolotom_vostok.mp3">Евгений Аладинский &mdash; Сверкает золотом восток
-                          </a>
+                          <span class="song-name">Евгений Аладинский &mdash; Сверкает золотом восток
+                          </span>
+                          <div class="download__player-block">
+                            <audio class="js-audio" controls>
+                              <source src="https://www.ak-bars.ru/downloads/alladinskyi_sverkaet_zolotom_vostok.mp3" type="audio/mpeg">
+                              Браузер не поддерживает элемент Аудио
+                            </audio>
+                          </div>
                         </li>
                       </ol>
+
                       <!-- Здесь нужен гимн https://www.ak-bars.ru/v/v335 -->
                       <div class="default-ui download__video-block">
                         <a class="standard-video" data-fancybox data-width="640" data-height="360" href="https://www.youtube.com/watch?v=ffEjvFkkhm8">

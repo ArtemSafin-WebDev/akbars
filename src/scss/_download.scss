@@ -158,9 +158,11 @@
       margin-bottom: 0;
     }
 
-    a {
+    .songs-name {
       color: $green;
       outline: none;
+      display: block;
+      margin-bottom: 10px;
       &:link,
       &:visited {
         color: $green;
@@ -183,4 +185,26 @@
   line-height: 30px;
   margin-bottom: 10px;
   
+}
+
+
+
+.download__player-block {
+  width: 600px;
+  margin-left: -20px;
+  .plyr--full-ui input[type=range] {
+    color: $green;
+  }
+
+  .plyr--audio .plyr__control.plyr__tab-focus, .plyr--audio .plyr__control:hover, .plyr--audio .plyr__control[aria-expanded=true], .plyr--video .plyr__control.plyr__tab-focus, .plyr--video .plyr__control:hover, .plyr--video .plyr__control[aria-expanded=true] {
+    background-color: $red;
+  }
+
+  .plyr--audio .plyr__control.plyr__tab-focus, .plyr--audio .plyr__control:hover, .plyr--audio .plyr__control[aria-expanded=true], .plyr--video .plyr__control.plyr__tab-focus, .plyr--video .plyr__control:hover, .plyr--video .plyr__control[aria-expanded=true] {
+    background-color: $red;
+  }
+
+  .plyr__control.plyr__tab-focus {
+    box-shadow: none;
+  }
 }

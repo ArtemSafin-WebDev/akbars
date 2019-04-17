@@ -36,6 +36,7 @@
     "parsleyjs": "^2.8.1",
     "perfect-scrollbar": "^1.4.0",
     "picturefill": "^3.0.3",
+    "plyr": "^3.5.3",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
     "simplebar": "^3.1.3",

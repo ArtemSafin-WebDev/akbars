@@ -34,6 +34,7 @@ import touchDetection from './touchDetection';
 import calendarTooltips from './calendarTooltips'
 import tabURLChange from './tabUrlChange'
 import mobileHide from './mobileHide'
+import audioPlayer from './audioPlayer'
 
 
 
@@ -161,7 +162,9 @@ document.addEventListener('DOMContentLoaded', function() {
   mobileHide()
 
 
+  // Аудио плеер
 
+  audioPlayer()
   
 
  
