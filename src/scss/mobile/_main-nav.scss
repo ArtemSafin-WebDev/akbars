@@ -7,7 +7,9 @@
 }
 
 .main-nav__list-item {
-
+  &.active .main-nav__link {
+    background-color: #3C8F88;
+  }
 }
 
 .main-nav__link {

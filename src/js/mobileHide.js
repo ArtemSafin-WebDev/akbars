@@ -22,6 +22,7 @@ export default function() {
     this.button.addEventListener('click', this.handleClickBound)
     this.destroy = function() {
       this.hiddenContent.classList.add('hidden')
+      this.textContent = this.originalButtonText
       this.hidden = true
       this.button.removeEventListener('click', this.handleClickBound)
     }
