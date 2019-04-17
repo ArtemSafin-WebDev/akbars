@@ -1269,8 +1269,9 @@
             </span>
           </a>
           <section class="utility">
-            <a href="irbis.html" class="utility__text-link">ХК «Ирбис»</a>
+
             <a href="bars.html" class="utility__text-link">ХК «Барс»</a>
+            <a href="irbis.html" class="utility__text-link">ХК «Ирбис»</a>
             <span class="utility__divider"></span>
             <div class="utility__social">
               <a class="utility__text-link utility__social-toggle js-social-open">Мы в соц. сетях</a>
@@ -1370,19 +1371,28 @@
               </a>
               <div class="utility__login-wrapper js-login-wrapper">
                 <div class="utility__login-content">
-                  <div class="utility__login-controls">
-                    <form action="/" class="utility__login-form" method="POST">
+
+                  <div class="utility__login-padding-wrapper">
+                    <h2 class="utility__login-heading">
+                      Вход
+                    </h2>
+                    <div class="utility__account">
+                      <div class="utility__login-avatar">
+                        <img src="img/avatar-placeholder.svg" alt="Заглушка аватара" class="utility__login-avatar-image">
+                      </div>
+                      <a href="#" class="utility__username">
+                        emiliocorleone
+                      </a>
+                    </div>
+                    <form action="/" class="utility__login-form" method="POST" data-parsley-validate>
                       <div class="utility__login-form-row">
-                        <div class="utility__login-avatar">
-                          <img src="img/avatar-placeholder.svg" alt="Заглушка аватара" class="utility__login-link-icon" />
-                        </div>
-                        <span class="utility__login-links">
-                          <a class="utility__login-link">Войти</a>/<a href="registration.html" class="utility__login-link">Зарегистрироваться</a>
-                        </span>
+                        <input autocomplete="off" type="text" name="nickname" class="utility__login-input" placeholder="Логин или E-mail" required />
                       </div>
                       <div class="utility__login-form-row">
-                        <input autocomplete="off" type="text" name="nickname" class="utility__login-input" placeholder="Логин или E-mail" />
-                        <input autocomplete="off" type="password" name="password" class="utility__login-input" placeholder="Пароль" />
+                        <input autocomplete="off" type="password" name="password" class="utility__login-input" placeholder="Пароль" required />
+                      </div>
+                      <div class="utility__login-form-row">
+                        <a href="#" class="utility__login-remember-password-link">Забыли пароль?</a>
                       </div>
                       <div class="utility__login-form-row">
                         <span class="checkbox">
@@ -1396,20 +1406,27 @@
                             <span class="checkbox__label-text">Сохранить пароль</span>
                           </label>
                         </span>
-                        <a href="#" class="utility__login-remember-password-link">Забыли пароль?</a>
+
                       </div>
                       <div class="utility__login-form-row">
-                        <a href="#" class="utility__login-social-login-link">
-                          Войти через соцсеть:
-                          <svg width="20" height="20" aria-hidden="true" class="icon-vk">
-                            <use xlink:href="#vk" />
-                          </svg>
-                        </a>
                         <button type="submit" class="utility__login-submit">
                           Войти
                         </button>
                       </div>
                     </form>
+                    <div class="utility__login-social-login">
+                      <a href="#" class="utility__login-social-login-link">
+                        Войти через:
+                        <svg width="25" height="25" aria-hidden="true" class="icon-vk">
+                          <use xlink:href="#vk" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="utility__register-exit">
+                    <a href="#" class="utility__register-exit-link">
+                      Регистрация
+                    </a>
                   </div>
                 </div>
               </div>
