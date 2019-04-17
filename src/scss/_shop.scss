@@ -138,7 +138,7 @@
   &:hover,
   &:focus {
     .shop__buy {
-      background-color: $red;
+      background-color: #3C8F88;
     }
   }
 }
@@ -243,6 +243,7 @@
     &:hover,
     &:focus {
       border: 2px solid $red;
+      color: $red;
     }
   }
 }

@@ -17,6 +17,8 @@
     align-items: center;
     font-size: 14px;
     line-height: 18px;
+    position: relative;
+    
     &:last-of-type {
       margin-right: 10px;
     }
@@ -31,6 +33,7 @@
     &:hover,
     &:focus {
       color: $red;
+      
     }
   }
 
@@ -76,7 +79,15 @@
   }
 
   .utility__social-toggle {
-    color: $red;
+    color: #3C8F88;
+    &::before {
+      opacity: 0;
+      visibility: hidden;
+    }
+    &::after {
+      opacity: 1;
+      visibility: visible;
+    }
   }
 }
 
@@ -84,6 +95,46 @@
   cursor: pointer;
   position: relative;
   z-index: 50;
+  &:hover,
+  &:focus {
+    color: #3C8F88;
+    &::before {
+      opacity: 0;
+      visibility: hidden;
+    }
+    &::after {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    height: 1px;
+    width: 100%;
+    background-image: linear-gradient(to right, $green 33%, rgba(255, 255, 255, 0) 0%);
+    background-position: bottom;
+    background-size: 3px 3px;
+    background-repeat: repeat-x;
+    transition: 0.2s;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    height: 1px;
+    width: 100%;
+    background-image: linear-gradient(to right, #3c8f88 33%, rgba(255, 255, 255, 0) 0%);
+    background-position: bottom;
+    background-size: 3px 3px;
+    background-repeat: repeat-x;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s;
+  }
 }
 
 .utility__social-wrapper {
@@ -180,7 +231,7 @@
   visibility: hidden;
   transition: all 0.3s;
   padding-top: 10px;
-  
+
   .login-shown & {
     opacity: 1;
     visibility: visible;
@@ -198,7 +249,7 @@
   backface-visibility: hidden;
   transform-style: preserve-3d;
   cursor: default;
-  
+
   // overflow: hidden;
   &::before {
     content: '';
@@ -253,7 +304,6 @@
   height: 30px;
   @include objectFitCoverTop();
 }
-
 
 .utility__account {
   display: flex;
@@ -406,7 +456,7 @@
 
   &-link {
     color: darkgrey;
-    transition: color .2s;
+    transition: color 0.2s;
     display: flex;
     align-items: center;
     > svg {
@@ -453,7 +503,7 @@
 }
 
 .utility__register-exit {
-  background-color: #EBEBEB;
+  background-color: #ebebeb;
   text-align: center;
   padding: 14px 24px;
   border-bottom-left-radius: 5px;

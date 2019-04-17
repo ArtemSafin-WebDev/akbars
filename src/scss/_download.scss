@@ -64,6 +64,7 @@
   flex-grow: 1;
   background-color: #fff;
   padding: 20px;
+  padding-bottom: 40px;
 }
 
 .download-programs__heading {
@@ -141,7 +142,7 @@
 
 .download__songs-list {
   list-style: none;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 
   counter-reset: songs-counter;
   &-item {
@@ -175,9 +176,7 @@
   }
 }
 
-.download__video-block {
-  
-}
+
 
 .download__songs-tertiary-heading {
   margin: 0;
