@@ -1,10 +1,8 @@
-
 import 'slick-carousel'
 import Swiper from 'swiper/dist/js/swiper.js'
 
 export default function() {
-
-// Слайдер кубков
+  // Слайдер кубков
 
   $('.team__slider-text').slick({
     arrows: false,
@@ -20,7 +18,6 @@ export default function() {
     fade: true,
     dots: false,
     asNavFor: '.team__slider-text'
-   
   })
 
   $('.js-news-slider').slick({
@@ -50,7 +47,6 @@ export default function() {
     nextArrow: '.js-photos-slider-next'
   })
 
-
   function scrollTopAllTables() {
     const tables = window.scrollableConferenceElements
     if (tables.length > 0) {
@@ -68,10 +64,10 @@ export default function() {
     asNavFor: '.js-conference-tables-slider'
   })
 
-  $('.js-conference-tables-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+  $('.js-conference-tables-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
     console.log('Executing before change on conference')
     scrollTopAllTables()
-  });
+  })
 
   $('.js-conference-tables-slider').slick({
     arrows: false,
@@ -93,11 +89,10 @@ export default function() {
     draggable: false
   })
 
-
-  $('.js-playoff-tables-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+  $('.js-playoff-tables-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
     console.log('Executing before change on playoff')
     scrollTopAllTables()
-  });
+  })
 
   $('.js-playoff-name-slider').slick({
     arrows: true,
@@ -110,7 +105,7 @@ export default function() {
   $('.js-playoff-tables-slider').slick({
     arrows: false,
     dots: false,
-    draggable: false,
+    draggable: false
     // adaptiveHeight: true
   })
 
@@ -123,47 +118,61 @@ export default function() {
     nextArrow: '.js-shop-slider-next'
   })
 
-  const goalsItems = Array.from(document.querySelectorAll('.js-videos-goals-item'))
-  
-
-  goalsItems.forEach(item => {
-    const slider = item.querySelector('.js-videos-goals-slider')
-    const pagination = item.querySelector('.js-videos-goals-slider-pagination')
-    const gradientWrapper = item.querySelector('.js-gradient-wrapper')
-    console.log(gradientWrapper)
-    const goalSwiper = new Swiper(slider, {
-      slidesPerView: 'auto',
-      spaceBetween: 30,
-      pagination: {
-        el: pagination,
-        type: 'fraction',
-      },
-      navigation: {
-        nextEl: item.querySelector('.js-video-goals-next'),
-        prevEl: item.querySelector('.js-video-goals-prev'),
-      },
-      on: {
-        reachEnd: function() {
-          console.log('END')
-          gradientWrapper.classList.remove('right-gradient-shown')
-          gradientWrapper.classList.add('left-gradient-shown')
+  function initGoalSliders() {
+    const goalsItems = Array.from(document.querySelectorAll('.js-videos-goals-item'))
+    const initializedSwipers = []
+    goalsItems.forEach(item => {
+      const slider = item.querySelector('.js-videos-goals-slider')
+      const pagination = item.querySelector('.js-videos-goals-slider-pagination')
+      const gradientWrapper = item.querySelector('.js-gradient-wrapper')
+      const goalSwiper = new Swiper(slider, {
+        slidesPerView: 'auto',
+        spaceBetween: 30,
+        pagination: {
+          el: pagination,
+          type: 'fraction'
         },
-        reachBeginning: function() {
-          console.log('START')
-          gradientWrapper.classList.remove('left-gradient-shown')
+        navigation: {
+          nextEl: item.querySelector('.js-video-goals-next'),
+          prevEl: item.querySelector('.js-video-goals-prev')
         },
-        fromEdge: function() {
-          console.log('Moving away from start or end')
-          
-          gradientWrapper.classList.add('right-gradient-shown')
-          gradientWrapper.classList.remove('left-gradient-shown')
+        on: {
+          reachEnd: function() {
+           
+            gradientWrapper.classList.remove('right-gradient-shown')
+            gradientWrapper.classList.add('left-gradient-shown')
+          },
+          reachBeginning: function() {
+            
+            gradientWrapper.classList.remove('left-gradient-shown')
+          },
+          fromEdge: function() {
+            
+            gradientWrapper.classList.add('right-gradient-shown')
+            gradientWrapper.classList.remove('left-gradient-shown')
+          }
         }
+      })
+      initializedSwipers.push(goalSwiper)
+    })
+    return initializedSwipers
+  }
 
+  window.goalSliders = {
+    initialized: [],
+    init: function() {
+      this.destroy()
+      this.initialized = initGoalSliders()
+    },
+    destroy: function() {
+      if (this.initialized.length > 0) {
+        this.initialized.forEach(function(slider) {
+          slider.destroy(true, false)
+        })
+        this.initialized = []
       }
-    });
+    }
+  }
 
-    
-  })
-  
-
+  window.goalSliders.init()
 }

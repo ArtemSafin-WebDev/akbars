@@ -30,6 +30,7 @@
     "lightcase": "^2.5.0",
     "lodash": "^4.17.11",
     "maphilight": "^1.4.0",
+    "mediaelement": "^4.2.9",
     "moment": "^2.24.0",
     "object-fit-images": "^3.2.4",
     "parsleyjs": "^2.8.1",
