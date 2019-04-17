@@ -146,6 +146,7 @@ export default function() {
         reachEnd: function() {
           console.log('END')
           gradientWrapper.classList.remove('right-gradient-shown')
+          gradientWrapper.classList.add('left-gradient-shown')
         },
         reachBeginning: function() {
           console.log('START')
@@ -155,7 +156,7 @@ export default function() {
           console.log('Moving away from start or end')
           
           gradientWrapper.classList.add('right-gradient-shown')
-          gradientWrapper.classList.add('left-gradient-shown')
+          gradientWrapper.classList.remove('left-gradient-shown')
         }
 
       }
