@@ -15520,11 +15520,11 @@ svg {
     font-size: 26px;
     line-height: 38px;
     font-weight: 700; }
-    .message__content h1.error,
-    .message__content h2.error,
-    .message__content h3.error,
-    .message__content h4.error,
-    .message__content h5.error {
+    .message__content h1.error-text,
+    .message__content h2.error-text,
+    .message__content h3.error-text,
+    .message__content h4.error-text,
+    .message__content h5.error-text {
       color: #D81E23; }
   .message__content p {
     font-size: 16px;
