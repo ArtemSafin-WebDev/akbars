@@ -72,16 +72,13 @@
   }
 }
 
-.conference__info {
-  // height: 490px;
-  // overflow-y: auto;
-  // -webkit-overflow-scrolling: touch;
-}
 
 .conference__playoff-scroller {
   height: 490px;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+
+  
 }
 
 .conference__regular-table {
@@ -89,13 +86,14 @@
   border-collapse: collapse;
 
   thead {
-    background-color: #ebebeb;
+    
     th {
       color: #242f37;
       font-family: Arial, Helvetica, sans-serif;
       font-size: 16px;
       line-height: 40px;
       font-weight: 700;
+      background-color: #ebebeb;
       &:first-child {
         padding-left: 20px;
       }
@@ -343,12 +341,13 @@
   border-collapse: collapse;
   font-family: Arial, Helvetica, sans-serif;
   thead {
-    background-color: #ebebeb;
+    
     th {
       font-size: 16px;
       line-height: 36px;
       font-weight: 700;
       position: relative;
+      background-color: #ebebeb;
       color: $green;
       &:first-child {
         padding-left: 20px;
@@ -446,11 +445,17 @@
     tr {
       &:nth-child(4n + 1) {
         td {
-          border-top: 18px solid white;
+          border-top: 18px solid transparent;
           padding-top: 3px;
           
         }
+
+        th {
+          border-bottom: 0;
+          border-top: 0;
+        }
       }
+      
 
       &:nth-child(2),
       &:nth-child(3n - 1) {
@@ -702,6 +707,13 @@
       width: 100%;
       display: block;
       height: 160px;
+
+      height: 330px;
+      background-image: url('../img/playoff.png');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 60% auto;
+      opacity: .9;
     }
   }
   

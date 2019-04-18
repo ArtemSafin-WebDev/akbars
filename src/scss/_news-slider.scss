@@ -53,8 +53,8 @@
   width: 586px;
   padding: 30px 40px;
   padding-bottom: 85px;
-  background-color: $green;
-  color: white;
+  background-color: white;
+  color: $green;
 }
 
 .news-slider__image {
@@ -78,11 +78,11 @@
   font-size: 14px;
   line-height: 16px;
   text-transform: uppercase;
-  color: white;
+  color: #94999F;
   outline: none;
   &:link,
   &:visited {
-    color: white;
+    color: #94999F;
   }
 
   &[href] {
@@ -96,7 +96,7 @@
     margin-left: 20px;
   }
   > svg {
-    fill: white;
+    fill: #94999F;
     margin-right: 10px;
     display: block;
     position: relative;
@@ -133,15 +133,16 @@
 .news-slider__divider {
   width: 1.5px;
   height: 15px;
-  background-color: #fff;
+  background-color: #94999F;
   margin-left: 20px;
 }
 
 .news-slider__news-heading-link {
   outline: none;
+  color: $green;
   &:link,
   &:visited {
-    color: white;
+    color: $green;
   }
 
   &:hover,
@@ -163,18 +164,19 @@
   font-size: 18px;
   line-height: 30px;
   margin-top: 20px;
+  color: #242F37;
 }
 
 .news-slider__details-link {
   font-size: 16px;
   line-height: 20px;
-  color: white;
+  color: $green;
   outline: none;
   margin-top: 20px;
 
   &:link,
   &:visited {
-    color: white;
+    color: $green;
   }
   &::after {
     content: '>';
@@ -221,7 +223,7 @@
     align-items: center;
     li {
       &:not(:last-child) {
-        margin-right: 12px;
+        margin-right: 16px;
       }
     }
     li button {
@@ -234,7 +236,7 @@
       height: 10px;
       border-radius: 50%;
       background-color: transparent;
-      border: 2px solid white;
+      border: 1.5px solid $green;
       position: relative;
       transition: all 0.3s;
       outline: 1px solid transparent;
@@ -246,7 +248,7 @@
     li.slick-active button {
       transform: scale(1.6);
 
-      background-color: #fff;
+      background-color: $green;
     }
   }
 }

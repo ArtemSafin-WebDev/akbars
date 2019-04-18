@@ -1,11 +1,44 @@
 .tables {
-  
-  
+  .tabs__navigation-wrapper {
+    position: relative;
+    z-index: 30;
+  }
+
+  .tabs__navigation button {
+    width: 50%;
+
+    .tabs__button-content {
+      justify-content: center;
+    }
+  }
+
+  .swiper-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .swiper-slide {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .table__card-playoff-content {
+    height: auto;
+  }
+
+  .table__card-content {
+    height: auto;
+  }
+
+  .table__card-content::after, .table__card-playoff-content::after {
+    display: none;
+  }
 }
 
 .tables__content {
   background-color: #fff;
-  padding-bottom: 20px;
+  padding-bottom: 60px;
 }
 
 .tables__heading {
@@ -56,7 +89,7 @@
     }
   }
   select {
-    -webkit-appearance: none; 
+    -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     border: none;
@@ -67,13 +100,12 @@
     font-weight: 700;
     padding: 8px 20px;
     padding-right: 60px;
-    border: 2px solid #EBEBEB;
+    border: 2px solid #ebebeb;
     border-right: none;
     position: relative;
     outline: none;
-    background-image: 
-    url("data:image/svg+xml,%3Csvg fill='white' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16.46 10.15'%3E%3Cpath d='M15 0L8.23 7.22 1.46 0 0 1.37l8.23 8.78 8.23-8.78L15 0z'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg width='100' height='100' preserveAspectRatio='none' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='%23256963'%3E%3Crect x='0' y='0' width='100' height='100'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg fill='white' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16.46 10.15'%3E%3Cpath d='M15 0L8.23 7.22 1.46 0 0 1.37l8.23 8.78 8.23-8.78L15 0z'/%3E%3C/svg%3E"),
+      url("data:image/svg+xml,%3Csvg width='100' height='100' preserveAspectRatio='none' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='%23256963'%3E%3Crect x='0' y='0' width='100' height='100'/%3E%3C/svg%3E");
     background-color: transparent;
     background-size: 16px auto, 40px 40px;
     background-position: right 12px top 14px, right top;
@@ -81,8 +113,8 @@
     background-clip: border-box;
     cursor: pointer;
     width: 100%;
-    
-    &::-ms-expand { 
+
+    &::-ms-expand {
       display: none; /* hide the default arrow in ie10 and ie11 */
     }
 
@@ -90,8 +122,8 @@
       background-color: transparent;
     }
 
-    @media screen and (min-width:0\0) {
-      background-image:none\9;
+    @media screen and (min-width: 0\0) {
+      background-image: none\9;
       padding: 5px\9;
     }
   }
@@ -122,7 +154,6 @@
     display: none;
   }
 }
-
 
 .tables__rotate-text {
   font-size: 14px;

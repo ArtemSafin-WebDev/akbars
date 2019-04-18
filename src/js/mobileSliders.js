@@ -58,7 +58,9 @@ export default function() {
     })
 
     let regularTableSlider = new Swiper(regularTableSliderElement, {
-      loop: true
+      loop: true,
+      autoHeight: true,
+      allowTouchMove: regularTableSliderElement.getAttribute('data-no-touch') ? false : true
     })
 
     regularNameSlider.controller.control = regularTableSlider
@@ -80,7 +82,9 @@ export default function() {
     })
 
     let playoffTableSlider = new Swiper(playoffTableSliderElement, {
-      loop: true
+      loop: true,
+      autoHeight: true,
+      allowTouchMove: playoffTableSliderElement.getAttribute('data-no-touch') ? false : true
     })
 
     playoffNameSlider.controller.control = playoffTableSlider

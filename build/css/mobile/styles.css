@@ -4287,30 +4287,31 @@ a.page-footer__bottom-nav-link {
       font-size: 14px;
       line-height: 18px; } }
 
-.table__card-name-slider-button-content {
-  background-color: #256963;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  width: 35px;
-  height: 35px;
-  -webkit-transition: 0.2s;
-  transition: 0.2s; }
-  .table__card-name-slider-button-content > svg {
-    fill: white;
+.table__card-name-slider-button {
+  outline: none; }
+  .table__card-name-slider-button-content {
+    background-color: #256963;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    width: 35px;
+    height: 35px;
     -webkit-transition: 0.2s;
     transition: 0.2s; }
-
-.table__card-name-slider-button:hover .table__card-name-slider-button-content {
-  background-color: #3c8f88; }
+    .table__card-name-slider-button-content > svg {
+      fill: white;
+      -webkit-transition: 0.2s;
+      transition: 0.2s; }
+  .table__card-name-slider-button:hover .table__card-name-slider-button-content {
+    background-color: #3c8f88; }
 
 .table__card-name-slider-name-text {
   height: 35px;
@@ -4426,7 +4427,13 @@ a.page-footer__bottom-nav-link {
     content: '';
     display: block;
     width: 100%;
-    height: 100px; }
+    height: 100px;
+    height: 350px;
+    background-image: url("../../img/playoff.png");
+    background-repeat: no-repeat;
+    background-position: 50% 35%;
+    background-size: 60% auto;
+    opacity: .9; }
   .table__card-playoff-content table {
     width: 100%;
     border-collapse: collapse;
@@ -4474,6 +4481,29 @@ a.page-footer__bottom-nav-link {
     color: #EFA5A7; }
   .table__card-playoff-content tbody:hover tr:not(.selected) td:nth-child(2) {
     background-color: #DDE8E7; }
+
+.table__gradient-wrapper {
+  position: relative; }
+  .table__gradient-wrapper::after {
+    content: '';
+    width: 60px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-image: linear-gradient(to left, white 10px, rgba(255, 255, 255, 0));
+    pointer-events: none; }
+
+.table__scrolling-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; }
+  .table__scrolling-wrapper table td,
+  .table__scrolling-wrapper table th {
+    white-space: nowrap; }
+    .table__scrolling-wrapper table td:last-child,
+    .table__scrolling-wrapper table th:last-child {
+      padding-right: 60px; }
 
 .news-all {
   background-color: white;
@@ -5735,12 +5765,19 @@ a.page-footer__bottom-nav-link {
   line-height: 24px;
   color: #242f37;
   margin: 0;
-  text-align: center;
+  text-align: left;
   text-transform: uppercase; }
 
 .statistics__legend-list {
   margin-top: 15px;
-  text-align: center; }
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
   .statistics__legend-list-item {
     color: #242f37;
     font-family: Arial, Helvetica, sans-serif;
@@ -6914,9 +6951,43 @@ a.page-footer__bottom-nav-link {
   color: #94999F;
   text-align: center; }
 
+.tables .tabs__navigation-wrapper {
+  position: relative;
+  z-index: 30; }
+
+.tables .tabs__navigation button {
+  width: 50%; }
+  .tables .tabs__navigation button .tabs__button-content {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+
+.tables .swiper-container {
+  width: 100%;
+  height: auto; }
+
+.tables .swiper-slide {
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.tables .table__card-playoff-content {
+  height: auto; }
+
+.tables .table__card-content {
+  height: auto; }
+
+.tables .table__card-content::after, .tables .table__card-playoff-content::after {
+  display: none; }
+
 .tables__content {
   background-color: #fff;
-  padding-bottom: 20px; }
+  padding-bottom: 60px; }
 
 .tables__heading {
   font-size: 18px;
@@ -6980,7 +7051,7 @@ a.page-footer__bottom-nav-link {
     font-weight: 700;
     padding: 8px 20px;
     padding-right: 60px;
-    border: 2px solid #EBEBEB;
+    border: 2px solid #ebebeb;
     border-right: none;
     position: relative;
     outline: none;

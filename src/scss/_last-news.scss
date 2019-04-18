@@ -89,7 +89,7 @@
   border: 2px solid $green;
   display: inline-block;
   padding: 13px 38px;
-  transition: all 0.3s;
+  transition: all 0.2s;
   color: $green;
   margin-top: 35px;
   align-self: center;
@@ -101,5 +101,6 @@
   &:hover,
   &:focus {
     border: 2px solid $red;
+    color: $red;
   }
 }

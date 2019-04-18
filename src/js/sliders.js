@@ -17,7 +17,9 @@ export default function() {
     arrows: false,
     fade: true,
     dots: false,
-    asNavFor: '.team__slider-text'
+    asNavFor: '.team__slider-text',
+    autoplay: true,
+    autoplaySpeed: 5000
   })
 
   $('.js-news-slider').slick({
