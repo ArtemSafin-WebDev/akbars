@@ -120,6 +120,41 @@ export default function() {
     nextArrow: '.js-shop-slider-next'
   })
 
+  const newsGallery = document.querySelector('.js-news-gallery')
+
+  if (newsGallery) {
+    const gradients = document.querySelector('.js-news-gallery-gradients')
+    
+    new Swiper(newsGallery, {
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+      navigation: {
+        nextEl: document.querySelector('.js-news-gallery-next'),
+        prevEl: document.querySelector('.js-news-gallery-prev')
+      },
+      on: {
+        progress: function(progress) {
+          
+          console.log(progress)
+          if (progress !== -0 && progress !== 1) {
+            console.log('Adding both')
+            gradients.classList.add('left-gradient')
+            gradients.classList.add('right-gradient')
+          }
+        },
+        reachEnd: function() {
+          console.log('Removing right gradient')
+          gradients.classList.remove('right-gradient')
+        },
+        reachBeginning: function() {
+          console.log('Removing left gradient')
+          gradients.classList.remove('left-gradient')
+        },
+        
+      }
+    })
+  }
+
   function initGoalSliders() {
     const goalsItems = Array.from(document.querySelectorAll('.js-videos-goals-item'))
     const initializedSwipers = []
@@ -140,16 +175,13 @@ export default function() {
         },
         on: {
           reachEnd: function() {
-           
             gradientWrapper.classList.remove('right-gradient-shown')
             gradientWrapper.classList.add('left-gradient-shown')
           },
           reachBeginning: function() {
-            
             gradientWrapper.classList.remove('left-gradient-shown')
           },
           fromEdge: function() {
-            
             gradientWrapper.classList.add('right-gradient-shown')
             gradientWrapper.classList.remove('left-gradient-shown')
           }
