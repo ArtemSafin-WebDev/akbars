@@ -5591,6 +5591,8 @@ svg {
   font-size: 16px;
   line-height: 24px;
   display: block; }
+  .checkbox.parsley-error .checkbox__label-icon {
+    border-color: #D81E23; }
 
 .checkbox__input {
   border: 0;
@@ -6489,8 +6491,8 @@ svg {
       -ms-flex-pack: center;
           justify-content: center;
   outline: none;
-  -webkit-transition: border-color .2s;
-  transition: border-color .2s;
+  -webkit-transition: all .2s;
+  transition: all .2s;
   font-size: 14px;
   line-height: 20px;
   letter-spacing: .2px;
@@ -6498,11 +6500,16 @@ svg {
       align-self: flex-start; }
   .main-nav__submenu-buy-link > svg {
     fill: #256963;
-    margin-right: 8px; }
+    margin-right: 8px;
+    -webkit-transition: all .2s;
+    transition: all .2s; }
   .main-nav__submenu-buy-link:link, .main-nav__submenu-buy-link:visited {
     color: #256963; }
   .main-nav__submenu-buy-link:hover, .main-nav__submenu-buy-link:focus {
-    border-color: #D81E23; }
+    border-color: #D81E23;
+    color: #D81E23; }
+    .main-nav__submenu-buy-link:hover > svg, .main-nav__submenu-buy-link:focus > svg {
+      fill: #D81E23; }
 
 .main-nav__submenu-icon {
   position: absolute;
@@ -10827,10 +10834,10 @@ svg {
     color: #256963; }
   .sidebar-nav__link:hover, .sidebar-nav__link:focus {
     color: #D81E23; }
-  .active .sidebar-nav__link {
+  .active > .sidebar-nav__link {
     background-color: #256963;
     color: white; }
-    .active .sidebar-nav__link:hover, .active .sidebar-nav__link:focus {
+    .active > .sidebar-nav__link:hover, .active > .sidebar-nav__link:focus {
       color: white; }
   .sidebar-nav__link--has-submenu::before {
     position: absolute;
@@ -10877,7 +10884,7 @@ svg {
     color: #256963; }
   .sidebar-nav__submenu-link:hover, .sidebar-nav__submenu-link:focus {
     color: #D81E23; }
-  .active .sidebar-nav__submenu-link {
+  .active > .sidebar-nav__submenu-link {
     background-color: #256963;
     color: white; }
 
@@ -12698,11 +12705,11 @@ svg {
   display: block;
   font-family: 'Supermolot', 'Helvetica', sans-serif;
   margin-bottom: 10px;
-  -webkit-transition: color .2s;
-  transition: color .2s; }
-  .results-page__score .results-page__score-numbers {
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s; }
+  .results-page__score[href] .results-page__score-numbers {
     position: relative; }
-    .results-page__score .results-page__score-numbers::before {
+    .results-page__score[href] .results-page__score-numbers::before {
       content: '';
       position: absolute;
       left: 0;
@@ -12714,28 +12721,28 @@ svg {
       background-position: bottom;
       background-size: 3px 3px;
       background-repeat: repeat-x;
-      -webkit-transition: .2s;
-      transition: .2s; }
-    .results-page__score .results-page__score-numbers::after {
+      -webkit-transition: 0.2s;
+      transition: 0.2s; }
+    .results-page__score[href] .results-page__score-numbers::after {
       content: '';
       position: absolute;
       left: 0;
       bottom: 3px;
       height: 1px;
       width: 100%;
-      background-image: -webkit-gradient(linear, left top, right top, color-stop(33%, #3C8F88), color-stop(0%, rgba(255, 255, 255, 0)));
-      background-image: linear-gradient(to right, #3C8F88 33%, rgba(255, 255, 255, 0) 0%);
+      background-image: -webkit-gradient(linear, left top, right top, color-stop(33%, #3c8f88), color-stop(0%, rgba(255, 255, 255, 0)));
+      background-image: linear-gradient(to right, #3c8f88 33%, rgba(255, 255, 255, 0) 0%);
       background-position: bottom;
       background-size: 3px 3px;
       background-repeat: repeat-x;
       opacity: 0;
       visibility: hidden;
-      -webkit-transition: .2s;
-      transition: .2s; }
+      -webkit-transition: 0.2s;
+      transition: 0.2s; }
   .results-page__score:link, .results-page__score:visited {
     color: #256963; }
   .results-page__score[href]:hover, .results-page__score[href]:focus {
-    color: #3C8F88; }
+    color: #3c8f88; }
     .results-page__score[href]:hover .results-page__legend, .results-page__score[href]:focus .results-page__legend {
       opacity: 1;
       visibility: visible; }
@@ -12753,7 +12760,7 @@ svg {
   position: absolute;
   margin-left: 5px;
   font-weight: 400;
-  letter-spacing: .6px;
+  letter-spacing: 0.6px;
   bottom: -2px;
   text-transform: lowercase; }
 
