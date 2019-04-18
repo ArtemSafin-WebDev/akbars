@@ -27,14 +27,14 @@
   padding: 30px;
 }
 
-.events {
-}
+
 
 .events__calendar {
   width: 100%;
   padding: 20px;
-  padding-bottom: 30px; 
+ 
   padding-top: 15px;
+  padding-bottom: 0;
 }
 
 
@@ -42,7 +42,6 @@
   display: flex;
   background-color: #ebebeb;
   width: 100%;
-  // justify-content: space-between;
   align-items: center;
 }
 
@@ -265,7 +264,6 @@
   display: flex;
   align-items: center;
   margin-top: 10px;
-  margin-bottom: 20px;
   justify-content: space-between;
 }
 

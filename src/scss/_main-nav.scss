@@ -110,6 +110,7 @@
 .main-nav__submenu-list {
   display: flex;
   flex-wrap: wrap;
+  align-content: flex-start;
   width: 60%;
   margin-left: auto;
   margin-top: 18px;

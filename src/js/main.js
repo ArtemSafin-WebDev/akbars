@@ -1,5 +1,5 @@
 import '@babel/polyfill'
-import '@fancyapps/fancybox'
+// import '@fancyapps/fancybox'
 import 'lightcase'
 
 import objectFitImages from 'object-fit-images'

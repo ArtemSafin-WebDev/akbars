@@ -1,6 +1,8 @@
 .news {
-  background-color: $green;
-  color: white;
+  // background-color: $green;
+  // color: white;
+  background-color: #fff;
+  color: $green;
 }
 
 .news__heading {
@@ -54,7 +56,7 @@
       height: 10px;
       border-radius: 50%;
       background-color: transparent;
-      border: 2px solid white;
+      border: 1.5px solid $green;
       position: relative;
       transition: all .3s;
       outline: 1px solid transparent;
@@ -67,31 +69,30 @@
     li.slick-active button {
       transform: scale(1.6);
       
-      background-color: #fff;
+      background-color: $green;
     }
   }
 }
 
 
 .news__all-news-link {
-  color: white;
+  color: $green;
   font-size: 16px;
   line-height: 20px;
-  border: 2px solid white;
+  border: 2px solid $green;
   display: inline-block;
   padding: 13px 37px;
-  transition: all 0.3s;
+  transition: all 0.2s;
   text-align: center;
-  margin-bottom: 48px;
   &:link,
   &:visited {
-    color: white;
+    color: $green;
   }
 
   &:hover,
   &:focus {
-    color: $green;
-    background-color: #fff;
+    color: $red;
+    border-color: $red;
   }
 }
 

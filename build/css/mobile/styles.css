@@ -3030,8 +3030,8 @@ a.page-footer__bottom-nav-link {
   display: block; }
 
 .news {
-  background-color: #256963;
-  color: white; }
+  background-color: #fff;
+  color: #256963; }
 
 .news__heading {
   font-size: 18px;
@@ -3092,7 +3092,7 @@ a.page-footer__bottom-nav-link {
       height: 10px;
       border-radius: 50%;
       background-color: transparent;
-      border: 2px solid white;
+      border: 1.5px solid #256963;
       position: relative;
       -webkit-transition: all .3s;
       transition: all .3s;
@@ -3103,24 +3103,23 @@ a.page-footer__bottom-nav-link {
     .news__slider-controls .slick-dots li.slick-active button {
       -webkit-transform: scale(1.6);
               transform: scale(1.6);
-      background-color: #fff; }
+      background-color: #256963; }
 
 .news__all-news-link {
-  color: white;
+  color: #256963;
   font-size: 16px;
   line-height: 20px;
-  border: 2px solid white;
+  border: 2px solid #256963;
   display: inline-block;
   padding: 13px 37px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  text-align: center;
-  margin-bottom: 48px; }
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  text-align: center; }
   .news__all-news-link:link, .news__all-news-link:visited {
-    color: white; }
+    color: #256963; }
   .news__all-news-link:hover, .news__all-news-link:focus {
-    color: #256963;
-    background-color: #fff; }
+    color: #D81E23;
+    border-color: #D81E23; }
 
 .events {
   background-color: #fff; }
@@ -3152,8 +3151,8 @@ a.page-footer__bottom-nav-link {
 .events__calendar {
   width: 100%;
   padding: 20px;
-  padding-bottom: 30px;
-  padding-top: 15px; }
+  padding-top: 15px;
+  padding-bottom: 0; }
 
 .calendar__controls {
   display: -webkit-box;
@@ -3382,7 +3381,6 @@ a.page-footer__bottom-nav-link {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 10px;
-  margin-bottom: 20px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
@@ -3739,8 +3737,7 @@ a.page-footer__bottom-nav-link {
   padding: 30px; }
 
 .media__ak-bars-info {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 40px;
   width: 100%; }
 
 .media__ak-bars-info-all-videos-link-container {
@@ -3896,7 +3893,7 @@ a.page-footer__bottom-nav-link {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-bottom: 110px; }
+  padding-bottom: 60px; }
   .shop .swiper-slide {
     width: calc(100% - 80px);
     height: auto;
@@ -3918,7 +3915,7 @@ a.page-footer__bottom-nav-link {
   letter-spacing: .3px;
   font-weight: 700;
   text-align: center;
-  padding: 20px 10px; }
+  padding: 40px 10px; }
 
 .shop__card {
   display: -webkit-box;
@@ -4022,8 +4019,7 @@ a.page-footer__bottom-nav-link {
     color: #D81E23; }
 
 .stats {
-  background-color: #fff;
-  padding-bottom: 80px; }
+  background-color: #fff; }
   .stats .tabs__navigation-wrapper {
     position: relative;
     z-index: 30; }
