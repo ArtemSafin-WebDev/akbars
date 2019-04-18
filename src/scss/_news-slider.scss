@@ -35,7 +35,7 @@
 .news-slider__slide-content {
   display: flex;
   flex-grow: 1;
-  min-height: 462px;
+  min-height: 445px;
 }
 
 .news-slider__image-container {
@@ -154,9 +154,9 @@
 .news-slider__news-heading {
   font-size: 34px;
   line-height: 44px;
-  // padding-right: 110px;
+ 
   margin-top: 24px;
-  text-transform: uppercase;
+  
 }
 
 .news-slider__news-paragraph {
@@ -172,8 +172,11 @@
   line-height: 20px;
   color: $green;
   outline: none;
-  margin-top: 20px;
-
+  display: inline-block;
+  vertical-align: baseline;
+  font-family: 'Supermolot', 'Helvetica', sans-serif;
+  // margin-top: 20px;
+  transition: .2s;
   &:link,
   &:visited {
     color: $green;
@@ -185,6 +188,7 @@
 
   &:hover,
   &:focus {
+    color: $red;
     .news-slider__details-link-text {
       &::before {
         opacity: 1;
@@ -212,8 +216,10 @@
   display: flex;
   align-items: center;
   position: absolute;
+  
   right: 0;
   bottom: 27px;
+  
   padding-right: 35px;
   padding-left: 40px;
   width: 586px;
@@ -254,22 +260,23 @@
 }
 
 .news-slider__all-news-link {
-  color: white;
+  color: $green;
   font-size: 16px;
   line-height: 20px;
-  border: 2px solid white;
+  border: 2px solid $green;
   display: inline-block;
-  padding: 13px 37px;
+  padding: 14px 37px;
+  padding-bottom: 12px;
   margin-left: auto;
-  transition: all 0.3s;
+  transition: all 0.2s;
   &:link,
   &:visited {
-    color: white;
+    color: $green;
   }
 
   &:hover,
   &:focus {
-    color: $green;
-    background-color: #fff;
+    color: $red;
+    border-color: $red;
   }
 }
