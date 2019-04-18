@@ -29,6 +29,7 @@
 
     .main-nav__link--tickets {
       background-color: #E24145;
+      
     }
   }
 
@@ -194,7 +195,7 @@
   align-items: center;
   justify-content: center;
   outline: none;
-  transition: border-color .2s;
+  transition: all .2s;
   font-size: 14px;
   line-height: 20px;
   letter-spacing: .2px;
@@ -202,6 +203,7 @@
   > svg {
     fill: $green;
     margin-right: 8px;
+    transition: all .2s;
   }
   &:link,
   &:visited {
@@ -210,6 +212,10 @@
   &:hover,
   &:focus {
     border-color: $red;
+    color: $red;
+    > svg {
+      fill: $red;
+    }
   }
 }
 

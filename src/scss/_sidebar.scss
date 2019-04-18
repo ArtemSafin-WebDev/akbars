@@ -33,7 +33,7 @@
     color: $red;
   }
 
-  .active & {
+  .active > & {
     background-color: $green;
     color: white;
     &:hover,
@@ -90,13 +90,7 @@
 }
 
 
-.sidebar-nav__submenu {
 
-}
-
-.sidebar-nav__submenu-list-item {
- 
-}
 
 .sidebar-nav__submenu-link {
   color: $green;
@@ -117,7 +111,7 @@
     color: $red;
   }
 
-  .active & {
+  .active > & {
     background-color: $green;
     color: white;
   }

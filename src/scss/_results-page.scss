@@ -103,7 +103,6 @@
 
   tbody {
     tr:not(.results-page__date-row) {
-      
       padding: 18px 0;
       position: relative;
       &:last-child {
@@ -210,36 +209,38 @@
   display: block;
   font-family: 'Supermolot', 'Helvetica', sans-serif;
   margin-bottom: 10px;
-  transition: color .2s;
-  .results-page__score-numbers {
-    position: relative;
-    &::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: 3px;
-      height: 1px;
-      width: 100%;
-      background-image: linear-gradient(to right, $green 33%, rgba(255, 255, 255, 0) 0%);
-      background-position: bottom;
-      background-size: 3px 3px;
-      background-repeat: repeat-x;
-      transition: .2s;
-    }
-    &::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: 3px;
-      height: 1px;
-      width: 100%;
-      background-image: linear-gradient(to right, #3C8F88 33%, rgba(255, 255, 255, 0) 0%);
-      background-position: bottom;
-      background-size: 3px 3px;
-      background-repeat: repeat-x;
-      opacity: 0;
-      visibility: hidden;
-      transition: .2s;
+  transition: color 0.2s;
+  &[href] {
+    .results-page__score-numbers {
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 3px;
+        height: 1px;
+        width: 100%;
+        background-image: linear-gradient(to right, $green 33%, rgba(255, 255, 255, 0) 0%);
+        background-position: bottom;
+        background-size: 3px 3px;
+        background-repeat: repeat-x;
+        transition: 0.2s;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 3px;
+        height: 1px;
+        width: 100%;
+        background-image: linear-gradient(to right, #3c8f88 33%, rgba(255, 255, 255, 0) 0%);
+        background-position: bottom;
+        background-size: 3px 3px;
+        background-repeat: repeat-x;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.2s;
+      }
     }
   }
 
@@ -251,7 +252,7 @@
   &[href] {
     &:hover,
     &:focus {
-      color: #3C8F88;
+      color: #3c8f88;
       .results-page__legend {
         opacity: 1;
         visibility: visible;
@@ -278,7 +279,7 @@
   position: absolute;
   margin-left: 5px;
   font-weight: 400;
-  letter-spacing: .6px;
+  letter-spacing: 0.6px;
   bottom: -2px;
 
   text-transform: lowercase;
@@ -326,7 +327,7 @@
   background-color: white;
   color: #606366;
   font-family: Arial, Helvetica, sans-serif;
- 
+
   padding: 8px 10px;
   font-size: 16px;
   font-weight: 400;
