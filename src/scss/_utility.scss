@@ -79,7 +79,7 @@
   }
 
   .utility__social-toggle {
-    color: #3C8F88;
+    color: $red;
     &::before {
       opacity: 0;
       visibility: hidden;
@@ -97,7 +97,7 @@
   z-index: 50;
   &:hover,
   &:focus {
-    color: #3C8F88;
+    color: $red;
     &::before {
       opacity: 0;
       visibility: hidden;
@@ -127,7 +127,7 @@
     bottom: 5px;
     height: 1px;
     width: 100%;
-    background-image: linear-gradient(to right, #3c8f88 33%, rgba(255, 255, 255, 0) 0%);
+    background-image: linear-gradient(to right, $red 33%, rgba(255, 255, 255, 0) 0%);
     background-position: bottom;
     background-size: 3px 3px;
     background-repeat: repeat-x;

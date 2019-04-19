@@ -10,7 +10,7 @@ import customEventsPolyfill from './customEventsPolyfill'
 import setTabsOnPage from './tabs'
 import initializeSliders from './sliders'
 import searchModal from './search'
-import addCopyrightText from './copyrightText'
+// import addCopyrightText from './copyrightText'
 import cookiePolicy from './cookiePolicy'
 import customSelect from './customSelect'
 import tableSorting from './tableSorting'
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Добавляем сведения об источнике при копировании текста с сайта
 
-  addCopyrightText()
+  // addCopyrightText()
 
   // Модальное окно поиска
 
