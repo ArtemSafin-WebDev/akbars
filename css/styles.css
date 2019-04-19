@@ -6659,7 +6659,7 @@ svg {
   visibility: visible; }
 
 .social-shown .utility__social-toggle {
-  color: #3C8F88; }
+  color: #D81E23; }
   .social-shown .utility__social-toggle::before {
     opacity: 0;
     visibility: hidden; }
@@ -6672,7 +6672,7 @@ svg {
   position: relative;
   z-index: 50; }
   .utility__social-toggle:hover, .utility__social-toggle:focus {
-    color: #3C8F88; }
+    color: #D81E23; }
     .utility__social-toggle:hover::before, .utility__social-toggle:focus::before {
       opacity: 0;
       visibility: hidden; }
@@ -6700,8 +6700,8 @@ svg {
     bottom: 5px;
     height: 1px;
     width: 100%;
-    background-image: -webkit-gradient(linear, left top, right top, color-stop(33%, #3c8f88), color-stop(0%, rgba(255, 255, 255, 0)));
-    background-image: linear-gradient(to right, #3c8f88 33%, rgba(255, 255, 255, 0) 0%);
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(33%, #D81E23), color-stop(0%, rgba(255, 255, 255, 0)));
+    background-image: linear-gradient(to right, #D81E23 33%, rgba(255, 255, 255, 0) 0%);
     background-position: bottom;
     background-size: 3px 3px;
     background-repeat: repeat-x;
@@ -7304,7 +7304,7 @@ svg {
   min-height: 445px; }
 
 .news-slider__image-container {
-  width: 654px;
+  width: 666px;
   background-color: #fff;
   overflow: hidden; }
   .news-slider__image-container:hover .news-slider__image {
@@ -7312,7 +7312,7 @@ svg {
             transform: translate3d(0, 0, 0) scale(1.07); }
 
 .news-slider__text-container {
-  width: 586px;
+  width: 574px;
   padding: 30px 40px;
   padding-bottom: 85px;
   background-color: white;
@@ -7455,7 +7455,7 @@ svg {
   bottom: 27px;
   padding-right: 35px;
   padding-left: 40px;
-  width: 586px; }
+  width: 574px; }
   .news-slider__controls .slick-dots {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
@@ -17733,7 +17733,7 @@ a.news-details__video {
   outline: none;
   position: absolute;
   top: 50%;
-  margin-top: -10px;
+  margin-top: -20px;
   z-index: 40; }
   .news-gallery__slider-button:not(.swiper-button-disabled):hover .news-gallery__slider-button-content > svg polyline, .news-gallery__slider-button:not(.swiper-button-disabled):focus .news-gallery__slider-button-content > svg polyline {
     stroke: #3c8f88; }
