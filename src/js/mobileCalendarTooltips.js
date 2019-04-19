@@ -13,7 +13,7 @@ export default function() {
     <span class="calendar__date-match-info-teams">
       <span class="calendar__date-match-info-team">
         <span class="team-logo">
-          <img src="img/logo/akbars-logo.svg" alt="Логотип команды">
+          <img src="img/logos/akbars-logo.svg" alt="Логотип команды">
         </span>
         <span class="team-name">Ак Барс</span>
       </span>
@@ -22,7 +22,7 @@ export default function() {
       </span>
       <span class="calendar__date-match-info-team">
         <span class="team-logo">
-          <img src="img/logo/torpedo-logo.svg" alt="Логотип команды">
+          <img src="img/logos/torpedo-logo.svg" alt="Логотип команды">
         </span>
         <span class="team-name">Торпедо</span>
       </span>
