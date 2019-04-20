@@ -12,13 +12,18 @@
   color: $green;
   font-size: 16px;
   line-height: 20px;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
+  transition: .2s;
   &:last-child {
     margin-bottom: 0;
   }
   &:link,
   &:visited {
     color: $green;
+  }
+  &:hover,
+  &:focus {
+    color: $red;
   }
 }
 

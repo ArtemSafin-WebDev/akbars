@@ -31,6 +31,14 @@
 .stats__featured-player-photo-container {
   width: 285px;
   height: 285px;
+  position: relative;
+  &:hover,
+  &:focus {
+    .stats__photo-link-overlay {
+      opacity: 1;
+    }
+  }
+  
 }
 
 .stats__player-category-name {
@@ -62,44 +70,50 @@
         cursor: default;
         &:not(.stats__selected-player) {
           td {
-            background-color: rgba($green, 0.15);
+            background-color: #DDE8E7;
+            border-color: #DDE8E7;
+            &::before {
+              background-color: #DDE8E7;
+            }
+
             &:nth-child(2) {
               color: $red;
             }
           }
-        }
-      }
 
-      &:last-child {
-        td {
-          border-bottom: 1px solid transparent;
-          
-          &:first-child,
-          &:last-child {
-            &::before {
-              display: none;
+          + tr {
+            td {
+              border-color: #DDE8E7;
+              &::before {
+                background-color: #DDE8E7;
+              }
             }
+            
           }
         }
       }
+
+      
     }
 
     td {
       font-size: 16px;
       line-height: 36px;
-      border-bottom: 1px solid #ebebeb;
+      border-top: 1px solid #EBEBEB;
       position: relative;
-      transition: color .2s, background-color .2s;
+      transition: all .2s;
       &:first-child {
         color: #606366;
         padding-left: 16px;
         &::before {
           content: '';
           position: absolute;
-          bottom: -1px;
-          border-bottom: 1px solid white;
+          top: -1px;
+          height: 1px;
+          background-color: #fff;
           left: 0;
           width: 16px;
+          transition: all .2s;
         }
       }
       &:last-child {
@@ -111,22 +125,31 @@
         &::before {
           content: '';
           position: absolute;
-          bottom: -1px;
-          border-bottom: 1px solid white;
+          top: -1px;
+          height: 1px;
+          background-color: #fff;
           right: 0;
           width: 16px;
+          transition: all .2s;
         }
       }
     }
 
     tr.stats__selected-player {
       td {
-        background-color: #ebebeb;
-        border-bottom: 1px solid #ebebeb;
+        background-color: #EBEBEB;
+        border-top: 1px solid #EBEBEB;
         &:first-child,
         &:last-child {
           &::before {
             display: none;
+          }
+        }
+      }
+      + tr {
+        td {
+          &::before {
+            background-color: #ebebeb;
           }
         }
       }
@@ -156,5 +179,32 @@
   &:focus {
     border: 2px solid $red;
     color: $red;
+  }
+}
+
+
+
+
+.stats__photo-link-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($green, .9);
+  font-size: 16px;
+  line-height: 20px;
+  color: white;
+  outline: none;
+  transition: opacity 0.3s;
+  opacity: 0;
+  &::after {
+    content: '>';
+    color: $red;
+    margin-left: 5px;
+   
   }
 }

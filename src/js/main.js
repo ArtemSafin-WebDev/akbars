@@ -38,6 +38,7 @@ import audioPlayer from './audioPlayer'
 
 
 
+
 document.addEventListener('DOMContentLoaded', function() {
 
   // Полифилл .contains для IE 11
@@ -62,8 +63,12 @@ document.addEventListener('DOMContentLoaded', function() {
   touchDetection()
 
   // Инициализиуем слайдеры на странице
+  
 
   initializeSliders()
+
+
+  
 
   // Добавляем сведения об источнике при копировании текста с сайта
 
@@ -161,10 +166,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
   mobileHide()
 
+  
+
 
   // Аудио плеер
 
   audioPlayer()
+  
+
   
 
  

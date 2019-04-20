@@ -149,11 +149,17 @@
       position: relative;
       padding: 10px;
       transition: all 0.2s;
-      // &.sorting_1 {
-      //   background-color: #E6E7E7;
-      // }
-      &:first-child {
+      a {
+        &:link,
+        &:visited {
+          color: $green;
+        }
+      }
+      &.sorting_1 {
         font-weight: 700;
+      }
+      &:first-child {
+        // font-weight: 700;
         &::before {
           width: calc(100% - 40px);
           right: 0;
@@ -199,10 +205,10 @@
       &:hover {
         td {
           background-color: #dde8e7;
-          .staff__person-name {
-            transition: color 0.2s;
-            color: $red;
-          }
+          // .staff__person-name {
+          //   transition: color 0.2s;
+          //   color: $red;
+          // }
           &::before {
             background-color: #dde8e7;
           }

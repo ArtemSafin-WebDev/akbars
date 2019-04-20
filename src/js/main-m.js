@@ -13,6 +13,7 @@ import photogallery from './mobilePhotogallery'
 // import scrollIntoViewButtons from './scrollTabButtonIntoView'
 import mobileHide from './mobileHide'
 import formValidation from './formValidation'
+import faqAccordeon from './faqAccordeon'
 import 'simplebar'
 import 'lightcase'
 
@@ -82,5 +83,10 @@ document.addEventListener('DOMContentLoaded', function() {
   // Тултипы календаря
 
   calendarTooltips()
+
+
+  // FAQ Accordeon
+
+  faqAccordeon()
 
 })

@@ -55,8 +55,7 @@
   background-color: $green;
   outline: none;
   transition: background-color 0.2s;
-  &:hover,
-  &:focus {
+  &:hover {
     background-color: #3c8f88;
   }
   &-content {
@@ -272,7 +271,7 @@
   line-height: 20px;
   border: 2px solid $green;
   display: inline-block;
-  padding: 13px 47px;
+  padding: 12px 38px;
   transition: all 0.2s;
   color: $green;
 

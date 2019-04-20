@@ -191,6 +191,9 @@
       padding: 6px 10px;
       transition: all 0.2s;
       white-space: nowrap;
+      &.sorting_1 {
+        font-weight: 700;
+      }
       &:first-child {
         font-weight: 400;
         &::before {
@@ -209,7 +212,6 @@
         }
       }
       &:nth-child(2) {
-        color: $green;
         padding-right: 60px;
       }
 

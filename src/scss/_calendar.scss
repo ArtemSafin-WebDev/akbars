@@ -38,8 +38,7 @@
   background-color: $green;
   outline: none;
   transition: background-color 0.2s;
-  &:hover,
-  &:focus {
+  &:hover {
     background-color: #3c8f88;
   }
   &-content {

@@ -463,6 +463,7 @@
     > svg {
       fill: $green;
       margin-left: 5px;
+      transition: .2s;
     }
     &:link,
     &:visited {
@@ -471,7 +472,10 @@
 
     &:hover,
     &:focus {
-      color: $green;
+      color: #3C8F88;
+      > svg {
+        fill: #3C8F88;
+      }
     }
   }
 }

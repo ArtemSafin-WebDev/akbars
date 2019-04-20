@@ -83,7 +83,7 @@
   color: $green;
   outline: none;
   font-family: 'Supermolot', 'Helvetica', sans-serif;
-
+  vertical-align: baseline;
   &:link,
   &:visited {
     color: $green;
@@ -123,7 +123,7 @@
   line-height: 20px;
   border: 2px solid $green;
   display: inline-block;
-  padding: 14px 46px;
+  padding: 14px 37px 12px;
   transition: all 0.3s;
   color: $green;
   align-self: flex-start;
@@ -190,8 +190,7 @@
   height: 16px;
   outline: none;
   z-index: 30;
-  &:hover,
-  &:focus {
+  &:hover {
     > svg {
       fill: #3c8f88;
     }

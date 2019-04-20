@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <!-- partial:partials/_meta-m.html -->
+    <!-- partial -->
+    <title>
+      Официальный сайт хоккейного клуба "Ак Барс" (ООО "СКП "Татнефть-Ак Барс"). Главная страница
+    </title>
+  </head>
+  <body ontouchstart="">
+    <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;"><!-- partial:img/symbol/sprite.svg --><!-- partial --></div>
+
+    <div class="overlay js-overlay"></div>
+
+    <!-- partial:partials/_sidebar-mobile.html --><!-- partial -->
+    <div class="page-content">
+      <!-- partial:partials/_header-m.html --><!-- partial -->
+      <main>
+        <section class="feedback">
+          <h1 class="feedback__heading">
+            Форма обратной связи
+          </h1>
+          <div class="feedback__content">
+            <div class="feedback__faq-accorderon js-faq-accordeon">
+              <button class="feedback__faq-accordeon-button js-faq-accordeon-button">
+                <span class="feedback__faq-accordeon-button-content">
+                  Часто задаваемые вопросы
+                  <svg width="16" height="8" aria-hidden="true" class="icon-arrow-down">
+                    <use xlink:href="#arrow-down"></use>
+                  </svg>
+                </span>
+              </button>
+              <div class="feedback__faq-accorderon-content js-faq-accordeon-content">
+                <h4 class="feedback__faq-question">
+                  Я зарегистрировался на сайте, но мне не пришло письмо со ссылкой для активации учетной записи?
+                </h4>
+                <p class="feedback__faq-answer">
+                  Возможно ваш почтовый сервер не принимает письмо, считая его спамом. Попробуйте воспользоваться функцией повторной отправки кода активации (либо введите другой e-mail) по этой ссылке.
+                </p>
+                <h4 class="feedback__faq-question">
+                  Я хочу заказать атрибутику клуба, где можно это сделать?
+                </h4>
+                <p class="feedback__faq-answer">Атрибутику можно приобрести в магазине по адресу ул. Чистопольская, д.42 (Ледовый дворец спорта «ТАТНЕФТЬ-АРЕНА») либо в интернет-магазине <a href="#">www.shop.ak-bars.ru</a></p>
+                <h4 class="feedback__faq-question">
+                  В прогнозах на матчи я проставил правильные результаты, а мне не начислили ни одного очка?
+                </h4>
+                <p class="feedback__faq-answer">
+                  Очки за прогнозы начисляются автоматически после появления всех результатов матчей игрового дня на сайте (см. правила прогнозов).
+                </p>
+              </div>
+            </div>
+            <div class="feedback__select">
+              <div class="gradient-wrapper">
+                <div class="wrapper">
+                  <select name="season" onchange="return console.log(event.target.value)">
+                    <option value="1" selected>Работа сайта</option>
+                    <option value="4">Карта болельщика</option>
+                    <option value="2">Для администрации клуба</option>
+                    <option value="3">Для пресс-аташе клуба</option>
+                    <option value="6">Билеты, абонементы, именные места, вип ложи </option>
+                    <option value="5">Работа мобильной версии</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <form class="feedback__form" method="POST" action="/" data-parsley-validate>
+              <div class="feedback__form-input-group">
+                <label for="name" class="feedback__form-label">Имя</label>
+                <input type="text" id="name" name="name" class="feedback__form-input" required>
+              </div>
+              <div class="feedback__form-input-group">
+                <label for="email" class="feedback__form-label">E-mail</label>
+                <input type="email" id="email" name="email" class="feedback__form-input" required>
+              </div>
+              <div class="feedback__form-input-group feedback__form-input-group--theme">
+                <label for="theme" class="feedback__form-label">Тема сообщения</label>
+                <input type="text" id="theme" name="theme" class="feedback__form-input" required>
+              </div>
+              <div class="feedback__form-input-group">
+                <label for="message" class="feedback__form-label">Тема сообщения</label>
+                <textarea name="message" id="message" class="feedback__textarea" required></textarea>
+              </div>
+              <button type="submit" class="feedback__submit">
+                Отправить
+              </button>
+            </form>
+          </div>
+        </section>
+      </main>
+      <!-- partial:partials/_footer-m.html --><!-- partial -->
+    </div>
+  </body>
+</html>

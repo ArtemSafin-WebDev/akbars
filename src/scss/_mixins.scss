@@ -5,6 +5,96 @@
   width: 100%;
 }
 
+@mixin standardSelect() {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 700;
+  background-color: #fff;
+  margin-bottom: 0;
+  width: 100%;
+  .gradient-wrapper {
+    position: relative;
+    width: 100%;
+    &::before {
+      content: '';
+      width: 60px;
+      right: 40px;
+      top: 2px;
+      height: calc(100% - 4px);
+      background-image: linear-gradient(to left, white 20px, rgba(white, 0));
+      position: absolute;
+      z-index: 50;
+      pointer-events: none;
+    }
+  }
+  .wrapper {
+    position: relative;
+    align-self: stretch;
+    @media screen and (min-width: 0\0) {
+      height: 42px;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 2px;
+      width: 40px;
+      background-color: $green;
+      pointer-events: none;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 2px;
+      width: 40px;
+      background-color: $green;
+      z-index: 10;
+      pointer-events: none;
+    }
+  }
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    border-radius: 0;
+    font: inherit;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    padding: 8px 20px;
+    padding-right: 60px;
+    border: 2px solid #ebebeb;
+    border-right: none;
+    position: relative;
+    outline: none;
+    background-image: url("data:image/svg+xml,%3Csvg fill='white' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16.46 10.15'%3E%3Cpath d='M15 0L8.23 7.22 1.46 0 0 1.37l8.23 8.78 8.23-8.78L15 0z'/%3E%3C/svg%3E"),
+      url("data:image/svg+xml,%3Csvg width='100' height='100' preserveAspectRatio='none' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg' fill='%23256963'%3E%3Crect x='0' y='0' width='100' height='100'/%3E%3C/svg%3E");
+    background-color: transparent;
+    background-size: 16px 16px, 40px 40px;
+    background-position: right 12px top 12px, right top;
+    background-repeat: no-repeat, no-repeat;
+    background-clip: border-box;
+    cursor: pointer;
+    width: 100%;
+
+    &::-ms-expand {
+      display: none; /* hide the default arrow in ie10 and ie11 */
+    }
+
+    &:focus {
+      background-color: transparent;
+    }
+
+    @media screen and (min-width: 0\0) {
+    }
+  }
+}
+
 @mixin visuallyHidden() {
   border: 0;
   clip: rect(0 0 0 0);
@@ -40,13 +130,11 @@
 
 @mixin objectFitCoverTop() {
   object-fit: cover;
-	object-position: top;
-	font-family: 'object-fit: cover; object-position: top;';
+  object-position: top;
+  font-family: 'object-fit: cover; object-position: top;';
 }
 
 @mixin objectFitContain() {
   object-fit: contain;
   font-family: 'object-fit: contain;';
 }
-
-

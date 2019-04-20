@@ -270,7 +270,7 @@
               Полная версия
             </a>
           </li>
-          <li class="toggles__list-item">
+          <!-- <li class="toggles__list-item">
             <a href="account-m.html" class="toggles__login-link">
               <svg width="22" height="22" aria-hidden="true" class="icon-settings">
                 <use xlink:href="#settings" />
@@ -285,7 +285,7 @@
               </svg>
               Выход
             </a>
-          </li>
+          </li> -->
         </ul>
         <button class="toggles__close-sidebar-button js-burger-close">
           <svg width="16" height="16" aria-hidden="true" class="icon-cross-fat">
@@ -444,21 +444,21 @@
   </div>
   <div class="page-content">
     <header class="page-header js-header">
-      <div class="container">
-        <a href="m.html" class="page-header__logo-link">
-          <img src="img/logos/akbars-logo.svg" alt="Логотип Ак Барс" width="48" height="28" class="page-header__logo">
-        </a>
-        <button class="page-header__menu-open js-sidebar-open">
-          <span class="page-header__menu-open-content">
-            <span class="page-header__menu-open-bar"></span>
-            <span class="page-header__menu-open-bar"></span>
-            <span class="page-header__menu-open-bar"></span>
-          </span>
-        </button>
+
+      <a href="m.html" class="page-header__logo-link">
+        <img src="img/logos/akbars-logo.svg" alt="Логотип Ак Барс" width="48" height="28" class="page-header__logo">
+      </a>
+      <button class="page-header__menu-open js-sidebar-open">
+        <span class="page-header__menu-open-content">
+          <span class="page-header__menu-open-bar"></span>
+          <span class="page-header__menu-open-bar"></span>
+          <span class="page-header__menu-open-bar"></span>
+        </span>
+      </button>
 
 
 
-      </div>
+
     </header>
 
     <main>
@@ -467,34 +467,40 @@
           Фотографии
         </h1>
         <div class="photo__select">
-          <div class="photo__select-wrapper">
-            <select name="season" onchange="return console.log(event.target.value)" required>
-              <option value="2018">Сезон 2018/2019</option>
-              <option value="2017">Сезон 2017/2018</option>
-              <option value="2016">Сезон 2016/2017</option>
-              <option value="2015">Сезон 2015/2016</option>
-              <option value="2014">Сезон 2014/2015</option>
-              <option value="2013">Сезон 2013/2014</option>
-              <option value="2012">Сезон 2012/2013</option>
-              <option value="2011">Сезон 2011/2012</option>
-              <option value="2010">Сезон 2010/2011</option>
-              <option value="2009">Сезон 2009/2010</option>
-              <option value="2008">Сезон 2008/2009</option>
-              <option value="2007">Сезон 2007/2008</option>
-              <option value="2006">Сезон 2006/2007</option>
-              <option value="2005">Сезон 2005/2006</option>
-              <option value="2004">Сезон 2004/2005</option>
-              <option value="2003">Сезон 2003/2004</option>
-            </select>
+          <div class="gradient-wrapper">
+            <div class="wrapper">
+              <select name="season" onchange="return console.log(event.target.value)" required>
+                <option value="2018">Сезон 2018/2019</option>
+                <option value="2017">Сезон 2017/2018</option>
+                <option value="2016">Сезон 2016/2017</option>
+                <option value="2015">Сезон 2015/2016</option>
+                <option value="2014">Сезон 2014/2015</option>
+                <option value="2013">Сезон 2013/2014</option>
+                <option value="2012">Сезон 2012/2013</option>
+                <option value="2011">Сезон 2011/2012</option>
+                <option value="2010">Сезон 2010/2011</option>
+                <option value="2009">Сезон 2009/2010</option>
+                <option value="2008">Сезон 2008/2009</option>
+                <option value="2007">Сезон 2007/2008</option>
+                <option value="2006">Сезон 2006/2007</option>
+                <option value="2005">Сезон 2005/2006</option>
+                <option value="2004">Сезон 2004/2005</option>
+                <option value="2003">Сезон 2003/2004</option>
+              </select>
+            </div>
           </div>
-          <div class="photo__select-wrapper">
-            <select name="team" onchange="return console.log(event.target.value)" required>
-              <option value="2018" selected="selected">Все фотографии</option>
-              <option value="2018-3">Фото «Ак Барса»</option>
-              <option value="2018-5">Фото «Барса»</option>
-              <option value="2018-7">Фото «Ирбиса»</option>
-              <option value="2018-4">Мероприятия</option>
-            </select>
+        </div>
+        <div class="photo__select">
+          <div class="gradient-wrapper">
+            <div class="wrapper">
+              <select name="team" onchange="return console.log(event.target.value)" required>
+                <option value="2018" selected="selected">Все фотографии</option>
+                <option value="2018-3">Фото «Ак Барса»</option>
+                <option value="2018-5">Фото «Барса»</option>
+                <option value="2018-7">Фото «Ирбиса»</option>
+                <option value="2018-4">Мероприятия</option>
+              </select>
+            </div>
           </div>
         </div>
 
@@ -506,7 +512,15 @@
                   <img src="img/video-preview-1.jpg" alt="Фотография" class="photo__image" />
                 </span>
                 <span class="photo__description">
-                  06.04.2019 Андрей Педан на хоккейном детском фестивале в Арске
+                  <span class="photo__date">
+                    <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
+                      <use xlink:href="#news-calendar"></use>
+                    </svg>
+                    24.11.2019 г.
+                  </span>
+                  <span class="photo__title">
+                    Матч «Ак Барса» в Набережных Челнах
+                  </span>
                 </span>
               </a>
             </li>
@@ -516,7 +530,15 @@
                   <img src="img/video-preview-2.jpg" alt="Фотография" class="photo__image" />
                 </span>
                 <span class="photo__description">
-                  05.04.2019 Матч «Ак Барса» в Набережных Челнах
+                  <span class="photo__date">
+                    <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
+                      <use xlink:href="#news-calendar"></use>
+                    </svg>
+                    24.11.2019 г.
+                  </span>
+                  <span class="photo__title">
+                    Матч «Ак Барса» в Набережных Челнах
+                  </span>
                 </span>
               </a>
             </li>
@@ -526,7 +548,15 @@
                   <img src="img/video-preview-2.jpg" alt="Фотография" class="photo__image" />
                 </span>
                 <span class="photo__description">
-                  05.04.2019 Матч «Ак Барса» в Набережных Челнах
+                  <span class="photo__date">
+                    <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
+                      <use xlink:href="#news-calendar"></use>
+                    </svg>
+                    24.11.2019 г.
+                  </span>
+                  <span class="photo__title">
+                    Матч «Ак Барса» в Набережных Челнах
+                  </span>
                 </span>
               </a>
             </li>
@@ -536,7 +566,15 @@
                   <img src="img/video-preview-1.jpg" alt="Фотография" class="photo__image" />
                 </span>
                 <span class="photo__description">
-                  06.04.2019 Андрей Педан на хоккейном детском фестивале в Арске
+                  <span class="photo__date">
+                    <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
+                      <use xlink:href="#news-calendar"></use>
+                    </svg>
+                    06.04.2019 г.
+                  </span>
+                  <span class="photo__title">
+                    Андрей Педан на хоккейном детском фестивале в Арске
+                  </span>
                 </span>
               </a>
             </li>
@@ -546,7 +584,15 @@
                   <img src="img/video-preview-2.jpg" alt="Фотография" class="photo__image" />
                 </span>
                 <span class="photo__description">
-                  05.04.2019 Матч «Ак Барса» в Набережных Челнах
+                  <span class="photo__date">
+                    <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
+                      <use xlink:href="#news-calendar"></use>
+                    </svg>
+                    06.04.2019 г.
+                  </span>
+                  <span class="photo__title">
+                    Андрей Педан на хоккейном детском фестивале в Арске
+                  </span>
                 </span>
               </a>
             </li>
@@ -556,7 +602,15 @@
                   <img src="img/video-preview-2.jpg" alt="Фотография" class="photo__image" />
                 </span>
                 <span class="photo__description">
-                  05.04.2019 Матч «Ак Барса» в Набережных Челнах
+                  <span class="photo__date">
+                    <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
+                      <use xlink:href="#news-calendar"></use>
+                    </svg>
+                    24.11.2019 г.
+                  </span>
+                  <span class="photo__title">
+                    Матч «Ак Барса» в Набережных Челнах
+                  </span>
                 </span>
               </a>
             </li>
@@ -566,7 +620,15 @@
                   <img src="img/video-preview-1.jpg" alt="Фотография" class="photo__image" />
                 </span>
                 <span class="photo__description">
-                  06.04.2019 Андрей Педан на хоккейном детском фестивале в Арске
+                  <span class="photo__date">
+                    <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
+                      <use xlink:href="#news-calendar"></use>
+                    </svg>
+                    24.11.2019 г.
+                  </span>
+                  <span class="photo__title">
+                    Матч «Ак Барса» в Набережных Челнах
+                  </span>
                 </span>
               </a>
             </li>
@@ -576,7 +638,15 @@
                   <img src="img/video-preview-2.jpg" alt="Фотография" class="photo__image" />
                 </span>
                 <span class="photo__description">
-                  05.04.2019 Матч «Ак Барса» в Набережных Челнах
+                  <span class="photo__date">
+                    <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
+                      <use xlink:href="#news-calendar"></use>
+                    </svg>
+                    06.04.2019 г.
+                  </span>
+                  <span class="photo__title">
+                    Андрей Педан на хоккейном детском фестивале в Арске
+                  </span>
                 </span>
               </a>
             </li>
@@ -586,7 +656,15 @@
                   <img src="img/video-preview-2.jpg" alt="Фотография" class="photo__image" />
                 </span>
                 <span class="photo__description">
-                  05.04.2019 Матч «Ак Барса» в Набережных Челнах
+                  <span class="photo__date">
+                    <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
+                      <use xlink:href="#news-calendar"></use>
+                    </svg>
+                    06.04.2019 г.
+                  </span>
+                  <span class="photo__title">
+                    Андрей Педан на хоккейном детском фестивале в Арске
+                  </span>
                 </span>
               </a>
             </li>

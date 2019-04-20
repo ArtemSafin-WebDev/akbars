@@ -57,13 +57,16 @@
 .download__programs {
   flex-grow: 1;
   background-color: #fff;
-  padding: 20px;
+  padding: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .download__songs {
   flex-grow: 1;
   background-color: #fff;
-  padding: 20px;
+  padding: 40px;
+  padding-top: 20px;
   padding-bottom: 40px;
 }
 
@@ -71,7 +74,7 @@
   color: $green;
   font-size: 26px;
   line-height: 38px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .download__programs-list {
@@ -196,11 +199,11 @@
   }
 
   .plyr--audio .plyr__control.plyr__tab-focus, .plyr--audio .plyr__control:hover, .plyr--audio .plyr__control[aria-expanded=true], .plyr--video .plyr__control.plyr__tab-focus, .plyr--video .plyr__control:hover, .plyr--video .plyr__control[aria-expanded=true] {
-    background-color: $red;
+    background-color: $green;
   }
 
   .plyr--audio .plyr__control.plyr__tab-focus, .plyr--audio .plyr__control:hover, .plyr--audio .plyr__control[aria-expanded=true], .plyr--video .plyr__control.plyr__tab-focus, .plyr--video .plyr__control:hover, .plyr--video .plyr__control[aria-expanded=true] {
-    background-color: $red;
+    background-color: $green;
   }
 
   .plyr__control.plyr__tab-focus {

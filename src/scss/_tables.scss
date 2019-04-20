@@ -33,7 +33,7 @@
   }
 
   &:nth-child(2) {
-    width: 520px;
+    width: 350px;
     z-index: 20;
     // flex-grow: 1;
   }
@@ -168,9 +168,10 @@
           right: auto;
         }
       }
-      &:nth-child(2) {
+      &.sorting_1 {
         font-weight: 700;
       }
+      
 
       &::before {
         content: '';
@@ -197,10 +198,10 @@
       &:hover {
         td {
           background-color: #dde8e7;
-          .tables-page__team-name {
-            transition: color 0.2s;
-            color: $red;
-          }
+          // .tables-page__team-name {
+          //   transition: color 0.2s;
+          //   color: $red;
+          // }
           &::before {
             background-color: #dde8e7;
           }
