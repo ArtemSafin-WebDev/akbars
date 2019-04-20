@@ -270,7 +270,7 @@
               Полная версия
             </a>
           </li>
-          <li class="toggles__list-item">
+          <!-- <li class="toggles__list-item">
             <a href="account-m.html" class="toggles__login-link">
               <svg width="22" height="22" aria-hidden="true" class="icon-settings">
                 <use xlink:href="#settings" />
@@ -285,7 +285,7 @@
               </svg>
               Выход
             </a>
-          </li>
+          </li> -->
         </ul>
         <button class="toggles__close-sidebar-button js-burger-close">
           <svg width="16" height="16" aria-hidden="true" class="icon-cross-fat">
@@ -444,21 +444,21 @@
   </div>
   <div class="page-content">
     <header class="page-header js-header">
-      <div class="container">
-        <a href="m.html" class="page-header__logo-link">
-          <img src="img/logos/akbars-logo.svg" alt="Логотип Ак Барс" width="48" height="28" class="page-header__logo">
-        </a>
-        <button class="page-header__menu-open js-sidebar-open">
-          <span class="page-header__menu-open-content">
-            <span class="page-header__menu-open-bar"></span>
-            <span class="page-header__menu-open-bar"></span>
-            <span class="page-header__menu-open-bar"></span>
-          </span>
-        </button>
+
+      <a href="m.html" class="page-header__logo-link">
+        <img src="img/logos/akbars-logo.svg" alt="Логотип Ак Барс" width="48" height="28" class="page-header__logo">
+      </a>
+      <button class="page-header__menu-open js-sidebar-open">
+        <span class="page-header__menu-open-content">
+          <span class="page-header__menu-open-bar"></span>
+          <span class="page-header__menu-open-bar"></span>
+          <span class="page-header__menu-open-bar"></span>
+        </span>
+      </button>
 
 
 
-      </div>
+
     </header>
 
     <main>
@@ -469,38 +469,40 @@
 
         <div class="results-page__card">
           <div class="results-page__select">
-            <div class="results-page__select-wrapper">
-              <select name="team" onchange="return console.log(event.target.value)" required>
-                <option value="0">Все команды</option>
-                <option value="3">Авангард (Омская обл.)</option>
-                <option value="4">Автомобилист (Екатеринбург)</option>
-                <option value="189">Адмирал (Владивосток)</option>
-                <option value="1" selected="selected">Ак Барс (Казань)</option>
-                <option value="5">Амур (Хабаровск)</option>
-                <option value="7">Барыс (Астана)</option>
-                <option value="208">Витязь (Московская обл.)</option>
-                <option value="266">Давос (Швейцария)</option>
-                <option value="10">Динамо (Рига)</option>
-                <option value="9">Динамо (Минск)</option>
-                <option value="211">Йокерит (Хельсинки)</option>
-                <option value="252">Куньлунь Ред Стар (Пекин)</option>
-                <option value="11">Локомотив (Ярославль)</option>
-                <option value="12">Металлург (Магнитогорск)</option>
-                <option value="14">Нефтехимик (Нижнекамск)</option>
-                <option value="159">Нефтяник (Альметьевск)</option>
-                <option value="265">Олимпийская сборная России ()</option>
-                <option value="16">Салават Юлаев (Уфа)</option>
-                <option value="17">Северсталь (Череповец)</option>
-                <option value="209">Сибирь (Новосибирская обл.)</option>
-                <option value="19">СКА (Санкт-Петербург)</option>
-                <option value="156">Слован (Братислава)</option>
-                <option value="20">Спартак (Москва)</option>
-                <option value="21">Торпедо (Нижний Новгород)</option>
-                <option value="22">Трактор (Челябинск)</option>
-                <option value="258">ХК Динамо (Москва)</option>
-                <option value="212">ХК Сочи (Сочи)</option>
-                <option value="23">ЦСКА (Москва)</option>
-              </select>
+            <div class="gradient-wrapper">
+              <div class="wrapper">
+                <select name="team" onchange="return console.log(event.target.value)" required>
+                  <option value="0">Все команды</option>
+                  <option value="3">Авангард (Омская обл.)</option>
+                  <option value="4">Автомобилист (Екатеринбург)</option>
+                  <option value="189">Адмирал (Владивосток)</option>
+                  <option value="1" selected="selected">Ак Барс (Казань)</option>
+                  <option value="5">Амур (Хабаровск)</option>
+                  <option value="7">Барыс (Астана)</option>
+                  <option value="208">Витязь (Московская обл.)</option>
+                  <option value="266">Давос (Швейцария)</option>
+                  <option value="10">Динамо (Рига)</option>
+                  <option value="9">Динамо (Минск)</option>
+                  <option value="211">Йокерит (Хельсинки)</option>
+                  <option value="252">Куньлунь Ред Стар (Пекин)</option>
+                  <option value="11">Локомотив (Ярославль)</option>
+                  <option value="12">Металлург (Магнитогорск)</option>
+                  <option value="14">Нефтехимик (Нижнекамск)</option>
+                  <option value="159">Нефтяник (Альметьевск)</option>
+                  <option value="265">Олимпийская сборная России ()</option>
+                  <option value="16">Салават Юлаев (Уфа)</option>
+                  <option value="17">Северсталь (Череповец)</option>
+                  <option value="209">Сибирь (Новосибирская обл.)</option>
+                  <option value="19">СКА (Санкт-Петербург)</option>
+                  <option value="156">Слован (Братислава)</option>
+                  <option value="20">Спартак (Москва)</option>
+                  <option value="21">Торпедо (Нижний Новгород)</option>
+                  <option value="22">Трактор (Челябинск)</option>
+                  <option value="258">ХК Динамо (Москва)</option>
+                  <option value="212">ХК Сочи (Сочи)</option>
+                  <option value="23">ЦСКА (Москва)</option>
+                </select>
+              </div>
             </div>
           </div>
           <div class="results-page__card-content">

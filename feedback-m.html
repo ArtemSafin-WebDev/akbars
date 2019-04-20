@@ -462,156 +462,74 @@
     </header>
 
     <main>
-      <section class="news-all">
-        <div class="container">
-          <h1 class="news-all__heading">
-            Новости
-          </h1>
-          <ul class="news-all__list">
-            <li class="news-all__list-item">
-              <div class="news-all__news-card">
-                <a href="news-details-m.html" class="news-all__preview-container">
-                  <img src="img/video-preview-1.jpg" alt="" class="news-all__preview" />
-                </a>
-                <span class="news-all__info">
-                  <div class="news-all__info">
-                    <span class="news-all__info-block news__date">
-                      <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
-                        <use xlink:href="#news-calendar"></use>
-                      </svg>
-                      24.11.2019 г.
-                    </span>
-                    <span class="news-all__info-block news__views">
-                      <svg width="17" height="9" aria-hidden="true" class="icon-news-views">
-                        <use xlink:href="#news-views"></use>
-                      </svg>
-                      1 913
-                    </span>
-                    <a href="#" class="news-all__info-block news__comments">
-                      <svg width="16" height="13" aria-hidden="true" class="icon-news-comments">
-                        <use xlink:href="#news-comments"></use>
-                      </svg>
-                      22
-                    </a>
-                  </div>
-                </span>
-                <h3 class="news-all__news-card-heading">
-                  <a href="news-details-m.html">Данис Зарипов: «Хотели набросать сопернику кучу голов и порадовать зрителей»</a>
-                </h3>
-                <span class="news-all__text">
-                  Нападающий «Ак Барса» − о выставочном матче в Набережных Челнах
-                </span>
+      <section class="feedback">
+        <h1 class="feedback__heading">
+          Форма обратной связи
+        </h1>
+        <div class="feedback__content">
+          <div class="feedback__faq-accorderon js-faq-accordeon">
+            <button class="feedback__faq-accordeon-button js-faq-accordeon-button">
+              <span class="feedback__faq-accordeon-button-content">
+                Часто задаваемые вопросы
+                <svg width="16" height="8" aria-hidden="true" class="icon-arrow-down">
+                  <use xlink:href="#arrow-down"></use>
+                </svg>
+              </span>
+            </button>
+            <div class="feedback__faq-accorderon-content js-faq-accordeon-content">
+              <h4 class="feedback__faq-question">
+                Я зарегистрировался на сайте, но мне не пришло письмо со ссылкой для активации учетной записи?
+              </h4>
+              <p class="feedback__faq-answer">
+                Возможно ваш почтовый сервер не принимает письмо, считая его спамом. Попробуйте воспользоваться функцией повторной отправки кода активации (либо введите другой e-mail) по этой ссылке.
+              </p>
+              <h4 class="feedback__faq-question">
+                Я хочу заказать атрибутику клуба, где можно это сделать?
+              </h4>
+              <p class="feedback__faq-answer">Атрибутику можно приобрести в магазине по адресу ул. Чистопольская, д.42 (Ледовый дворец спорта «ТАТНЕФТЬ-АРЕНА») либо в интернет-магазине <a href="#">www.shop.ak-bars.ru</a></p>
+              <h4 class="feedback__faq-question">
+                В прогнозах на матчи я проставил правильные результаты, а мне не начислили ни одного очка?
+              </h4>
+              <p class="feedback__faq-answer">
+                Очки за прогнозы начисляются автоматически после появления всех результатов матчей игрового дня на сайте (см. правила прогнозов).
+              </p>
+            </div>
+          </div>
+          <div class="feedback__select">
+            <div class="gradient-wrapper">
+              <div class="wrapper">
+                <select name="season" onchange="return console.log(event.target.value)">
+                  <option value="1" selected>Работа сайта</option>
+                  <option value="4">Карта болельщика</option>
+                  <option value="2">Для администрации клуба</option>
+                  <option value="3">Для пресс-аташе клуба</option>
+                  <option value="6">Билеты, абонементы, именные места, вип ложи </option>
+                  <option value="5">Работа мобильной версии</option>
+                </select>
               </div>
-            </li>
-            <li class="news-all__list-item">
-              <div class="news-all__news-card">
-                <a href="news-details-m.html" class="news-all__preview-container">
-                  <img src="img/video-preview-2.jpg" alt="" class="news-all__preview" />
-                </a>
-                <span class="news-all__info">
-                  <div class="news-all__info">
-                    <span class="news-all__info-block news__date">
-                      <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
-                        <use xlink:href="#news-calendar"></use>
-                      </svg>
-                      24.11.2019 г.
-                    </span>
-                    <span class="news-all__info-block news__views">
-                      <svg width="17" height="9" aria-hidden="true" class="icon-news-views">
-                        <use xlink:href="#news-views"></use>
-                      </svg>
-                      1 913
-                    </span>
-                    <a href="#" class="news-all__info-block news__comments">
-                      <svg width="16" height="13" aria-hidden="true" class="icon-news-comments">
-                        <use xlink:href="#news-comments"></use>
-                      </svg>
-                      22
-                    </a>
-                  </div>
-                </span>
-                <h3 class="news-all__news-card-heading">
-                  <a href="news-details-m.html">Игроки системы «Ак Барса» провели выставочный матч против ХК «Челны»</a>
-                </h3>
-                <span class="news-all__text">
-                  Встреча завершилась победой казанцев в серии буллитов
-                </span>
-              </div>
-            </li>
-            <li class="news-all__list-item">
-              <div class="news-all__news-card">
-                <a href="news-details-m.html" class="news-all__preview-container">
-                  <img src="img/video-preview-1.jpg" alt="" class="news-all__preview" />
-                </a>
-                <span class="news-all__info">
-                  <div class="news-all__info">
-                    <span class="news-all__info-block news__date">
-                      <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
-                        <use xlink:href="#news-calendar"></use>
-                      </svg>
-                      24.11.2019 г.
-                    </span>
-                    <span class="news-all__info-block news__views">
-                      <svg width="17" height="9" aria-hidden="true" class="icon-news-views">
-                        <use xlink:href="#news-views"></use>
-                      </svg>
-                      1 913
-                    </span>
-                    <a href="#" class="news-all__info-block news__comments">
-                      <svg width="16" height="13" aria-hidden="true" class="icon-news-comments">
-                        <use xlink:href="#news-comments"></use>
-                      </svg>
-                      22
-                    </a>
-                  </div>
-                </span>
-                <h3 class="news-all__news-card-heading">
-                  <a href="news-details-m.html">Данис Зарипов: «Хотели набросать сопернику кучу голов и порадовать зрителей»</a>
-                </h3>
-                <span class="news-all__text">
-                  Нападающий «Ак Барса» − о выставочном матче в Набережных Челнах
-                </span>
-              </div>
-            </li>
-            <li class="news-all__list-item">
-              <div class="news-all__news-card">
-                <a href="news-details-m.html" class="news-all__preview-container">
-                  <img src="img/video-preview-3.jpg" alt="" class="news-all__preview" />
-                </a>
-                <span class="news-all__info">
-                  <div class="news-all__info">
-                    <span class="news-all__info-block news__date">
-                      <svg width="13" height="13" aria-hidden="true" class="icon-news-calendar">
-                        <use xlink:href="#news-calendar"></use>
-                      </svg>
-                      24.11.2019 г.
-                    </span>
-                    <span class="news-all__info-block news__views">
-                      <svg width="17" height="9" aria-hidden="true" class="icon-news-views">
-                        <use xlink:href="#news-views"></use>
-                      </svg>
-                      1 913
-                    </span>
-                    <a href="#" class="news-all__info-block news__comments">
-                      <svg width="16" height="13" aria-hidden="true" class="icon-news-comments">
-                        <use xlink:href="#news-comments"></use>
-                      </svg>
-                      22
-                    </a>
-                  </div>
-                </span>
-                <h3 class="news-all__news-card-heading">
-                  <a href="news-details-m.html">Игроки системы «Ак Барса» провели выставочный матч против ХК «Челны»</a>
-                </h3>
-                <span class="news-all__text">
-                  Встреча завершилась победой казанцев в серии буллитов
-                </span>
-              </div>
-            </li>
-          </ul>
-          <a href="#" class="news-all__more-news">
-            Загрузить еще
-          </a>
+            </div>
+          </div>
+          <form class="feedback__form" method="POST" action="/" data-parsley-validate>
+            <div class="feedback__form-input-group">
+              <label for="name" class="feedback__form-label">Имя</label>
+              <input type="text" id="name" name="name" class="feedback__form-input" required>
+            </div>
+            <div class="feedback__form-input-group">
+              <label for="email" class="feedback__form-label">E-mail</label>
+              <input type="email" id="email" name="email" class="feedback__form-input" required>
+            </div>
+            <div class="feedback__form-input-group feedback__form-input-group--theme">
+              <label for="theme" class="feedback__form-label">Тема сообщения</label>
+              <input type="text" id="theme" name="theme" class="feedback__form-input" required>
+            </div>
+            <div class="feedback__form-input-group">
+              <label for="message" class="feedback__form-label">Тема сообщения</label>
+              <textarea name="message" id="message" class="feedback__textarea" required></textarea>
+            </div>
+            <button type="submit" class="feedback__submit">
+              Отправить
+            </button>
+          </form>
         </div>
       </section>
     </main>
