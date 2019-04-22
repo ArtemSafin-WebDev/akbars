@@ -4,23 +4,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <meta name="viewport" content="width=1280">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css" />
-  <link rel="stylesheet" href="css/styles.min.css" />
+  <link rel="stylesheet" href="css/mobile/styles.min.css" />
+
+
 
   <title>
-    Архив ленты новостей о хоккейной команде «Ак Барс»
+    Официальный сайт хоккейного клуба "Ак Барс" (ООО "СКП "Татнефть-Ак Барс"). Главная страница
   </title>
-  <noscript>
-    <style>
-      [data-simplebar] {
-          overflow: auto;
-        }
-      </style>
-  </noscript>
 </head>
 
-<body>
+<body ontouchstart="">
   <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
     <?xml version="1.0" encoding="utf-8"?>
     <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -251,741 +246,375 @@
       <symbol viewBox="0 0 22.8 16.68" id="youtube" xmlns="http://www.w3.org/2000/svg">
         <path d="M22.64 3.58a5.06 5.06 0 0 0-.9-2.39 3.21 3.21 0 0 0-2.28-1c-3.18-.2-8-.2-8-.2s-4.77 0-8 .2a3.24 3.24 0 0 0-2.29 1A5 5 0 0 0 .2 3.58C.1 4.87 0 6.16 0 7.45v1.78c0 1.3.1 2.59.2 3.88a4.91 4.91 0 0 0 .89 2.38 3.93 3.93 0 0 0 2.48 1c1.79.2 7.75.2 7.75.2s4.76 0 8-.3a3.25 3.25 0 0 0 2.29-1 5.12 5.12 0 0 0 .93-2.39c.1-1.29.2-2.59.2-3.88V7.35a16.38 16.38 0 0 0-.1-3.77zm-13.5 7.84V4.67L15.29 8z" />
       </symbol>
-    </svg>
-  </div>
-  <div class="cookie-policy js-cookie-policy">
-    <div class="container">
-      <p class="cookie-policy__text">
-        Мы <a href="#" class="cookie-policy__privacy-policy-link">используем cookies</a>, чтобы вам было проще и
-        удобнее работать с сайтом. Продолжая просмотр, вы соглашаетесь на использование ваших файлов cookie.
-      </p>
-      <button class="cookie-policy__accept-button js-cookie-policy-accept">
-        Хорошо, спасибо
-      </button>
-    </div>
-  </div>
-  <div class="search-modal js-search-modal">
-    <form action="/search.html" class="search-modal__form" method="GET">
-      <input type="text" name="q" class="search-modal__input" placeholder="Введите поисковый запрос" />
-      <button type="submit" class="search-modal__submit js-search-modal-submit">
-        <svg width="20" height="20" aria-hidden="true" class="icon-search-modal">
-          <use xlink:href="#search" />
-        </svg>
-        Найти
-      </button>
-    </form>
-    <button class="search-modal__close js-search-modal-close">
-      <svg width="24" height="24" aria-hidden="true" class="icon-search-modal-close">
-        <use xlink:href="#cross" />
-      </svg>
-    </button>
-  </div>
-  <style>
-    .preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    z-index: 110000;
-    background-color: #E8E7E6;
-    background-image: url('img/bg-pattern-test.jpg');
-    background-size: 960px;
-    text-align: center;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-    opacity: 0;
-    visibility: hidden;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-  .preloader.shown {
-    opacity: 1;
-    visibility: visible;
-  }
+    </svg></div>
 
-  .preloader__content {
-    margin: auto;
-    width: 350px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
+  <div class="overlay js-overlay"></div>
 
-  .preloader__logo {
-    width: 200px;
-    margin-bottom: 25px;
-    -ms-flex-item-align: center;
-    align-self: center;
-  }
-
-  .progress {
-    position: relative;
-    height: 4px;
-    display: block;
-    width: 100%;
-    background-color: white;
-    margin: 0.5rem 0 1rem 0;
-    overflow: hidden;
-    -ms-flex-item-align: stretch;
-    align-self: stretch;
-  }
-
-  .progress .indeterminate:before {
-    content: '';
-    position: absolute;
-    background-color: inherit;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    will-change: left, right;
-    -webkit-animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
-    animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
-  }
-
-  .progress .indeterminate:after {
-    content: '';
-    position: absolute;
-    background-color: inherit;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    will-change: left, right;
-    -webkit-animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
-    animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
-    -webkit-animation-delay: 1.15s;
-    animation-delay: 1.15s;
-  }
-
-  .indeterminate {
-    background-color: #3c8f88;
-  }
-
-  .progress .indeterminate:before {
-    content: '';
-    position: absolute;
-    background-color: inherit;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    will-change: left, right;
-    -webkit-animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
-    animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
-  }
-
-  .progress .indeterminate:after {
-    content: '';
-    position: absolute;
-    background-color: inherit;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    will-change: left, right;
-    -webkit-animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
-    animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
-    -webkit-animation-delay: 1.15s;
-    animation-delay: 1.15s;
-  }
-
-  @-webkit-keyframes indeterminate {
-    0% {
-      left: -35%;
-      right: 100%;
-    }
-    60% {
-      left: 100%;
-      right: -90%;
-    }
-    100% {
-      left: 100%;
-      right: -90%;
-    }
-  }
-
-  @keyframes indeterminate {
-    0% {
-      left: -35%;
-      right: 100%;
-    }
-    60% {
-      left: 100%;
-      right: -90%;
-    }
-    100% {
-      left: 100%;
-      right: -90%;
-    }
-  }
-
-  @-webkit-keyframes indeterminate-short {
-    0% {
-      left: -200%;
-      right: 100%;
-    }
-    60% {
-      left: 107%;
-      right: -8%;
-    }
-    100% {
-      left: 107%;
-      right: -8%;
-    }
-  }
-
-  @keyframes indeterminate-short {
-    0% {
-      left: -200%;
-      right: 100%;
-    }
-    60% {
-      left: 107%;
-      right: -8%;
-    }
-    100% {
-      left: 107%;
-      right: -8%;
-    }
-  }
-</style>
-  <div class="preloader shown js-preloader">
-    <div class="preloader__content">
-      <img src="img/logos/akbars-logo.svg" alt="Логотип в прелоадере" class="preloader__logo" />
-      <div class="preloader__spinner">
-        <div class="progress">
-          <div class="indeterminate"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="page-content">
-    <div class="khl-placeholder">
-      <div class="container">
-        Заглушка панели KHL
-      </div>
-    </div>
-
-    <header class="page-header">
-      <!-- <div id="n_menu_bl" class="s_khl_menu_n_menu_bl"></div>
-  <script src="//www.khl.ru/nav/js/scripts.php?type=khl&lang=ru"></script> -->
-
-      <div class="container">
-        <div class="page-header__top-panel">
-          <section class="team">
-            <a href="index.html" class="team__page-link">
-              <img src="img/logos/akbars-logo.svg" width="162" height="92" alt="Логотип команды" class="team__logo" />
-            </a>
-            <div class="team__slider">
-              <div class="team__slider-image-block">
-                <ul class="team__slider-images">
-                  <li class="team__slider-images-item">
-                    <div class="team__slider-image-container">
-                      <img src="img/cup_rf.png" alt="Кубок" class="team__slider-image" />
-                    </div>
-                  </li>
-                  <li class="team__slider-images-item">
-                    <div class="team__slider-image-container">
-                      <img src="img/cup_gagarin.png" alt="Кубок" class="team__slider-image" />
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <div class="team__slider-text-block">
-                <ul class="team__slider-text">
-                  <li class="team__slider-text-item">
-                    Чемпион России 1998, 2006, 2009, 2010 и 2018
-                  </li>
-                  <li class="team__slider-text-item">
-                    Обладатель Кубка Гагарина 2009, 2010 и 2018
-                  </li>
-                </ul>
-                <div class="team__slider-pagination"></div>
-              </div>
-            </div>
-          </section>
-          <a href="http://www.tatneft.ru/" class="sponsor">
-            <img src="img/logos/tatneft-logo.svg" width="178" height="56" alt="Логотип спонсора" class="sponsor__logo" />
-            <span class="sponsor__description">
-              Генеральный спонсор матчей с участием ХК «Ак Барс», ХК «Барс» и ХК «Ирбис»
-            </span>
-          </a>
-          <section class="utility">
-
-            <a href="bars.html" class="utility__text-link">ХК «Барс»</a>
-            <a href="irbis.html" class="utility__text-link">ХК «Ирбис»</a>
-            <span class="utility__divider"></span>
-            <div class="utility__social">
-              <a class="utility__text-link utility__social-toggle js-social-open">Мы в соцсетях</a>
-              <div class="utility__social-wrapper js-social-wrapper">
-                <ul class="utility__social-menu">
-                  <li class="utility__social-menu-item">
-                    <a href="#" class="utility__social-link">
-                      <div class="utility__social-icon-container">
-                        <svg width="20" height="20" aria-hidden="true" class="icon-vk">
-                          <use xlink:href="#vk" />
-                        </svg>
-                      </div>
-                      Вконтакте
-                    </a>
-                  </li>
-                  <li class="utility__social-menu-item">
-                    <a href="#" class="utility__social-link">
-                      <div class="utility__social-icon-container">
-                        <svg width="20" height="20" aria-hidden="true" class="icon-fb">
-                          <use xlink:href="#fb" />
-                        </svg>
-                      </div>
-                      Facebook
-                    </a>
-                  </li>
-                  <li class="utility__social-menu-item">
-                    <a href="#" class="utility__social-link">
-                      <div class="utility__social-icon-container">
-                        <svg width="20" height="20" aria-hidden="true" class="icon-ok">
-                          <use xlink:href="#ok" />
-                        </svg>
-                      </div>
-                      Одноклассники
-                    </a>
-                  </li>
-                  <li class="utility__social-menu-item">
-                    <a href="#" class="utility__social-link">
-                      <div class="utility__social-icon-container">
-                        <svg width="20" height="20" aria-hidden="true" class="icon-instagram">
-                          <use xlink:href="#instagram" />
-                        </svg>
-                      </div>
-                      Instagram
-                    </a>
-                  </li>
-                  <li class="utility__social-menu-item">
-                    <a href="#" class="utility__social-link">
-                      <div class="utility__social-icon-container">
-                        <svg width="20" height="20" aria-hidden="true" class="icon-youtube">
-                          <use xlink:href="#youtube" />
-                        </svg>
-                      </div>
-                      YouTube
-                    </a>
-                  </li>
-                  <li class="utility__social-menu-item">
-                    <a href="#" class="utility__social-link">
-                      <div class="utility__social-icon-container">
-                        <svg width="20" height="20" aria-hidden="true" class="icon-twitter">
-                          <use xlink:href="#twitter" />
-                        </svg>
-                      </div>
-                      Twitter
-                    </a>
-                  </li>
-                  <li class="utility__social-menu-item">
-                    <a href="#" class="utility__social-link">
-                      <div class="utility__social-icon-container">
-                        <svg width="20" height="20" aria-hidden="true" class="icon-telegram">
-                          <use xlink:href="#telegram" />
-                        </svg>
-                      </div>
-                      Telegram
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <a href="#" class="utility__icon-link js-search-modal-open">
-              <svg width="20" height="20" aria-hidden="true" class="icon-search">
-                <use xlink:href="#search" />
+  <div class="sidebar js-sidebar">
+    <div class="sidebar__content">
+      <div class="toggles">
+        <ul class="toggles__list">
+          <li class="toggles__list-item">
+            <a href="login-m.html" class="toggles__login-link">
+              <svg width="22" height="22" aria-hidden="true" class="icon-login">
+                <use xlink:href="#login" />
               </svg>
-              <span class="visually-hidden">Поиск</span>
+              Вход
             </a>
-            <a href="m.html" class="utility__icon-link">
-              <svg width="20" height="20" aria-hidden="true" class="icon-mobile">
-                <use xlink:href="#mobile" />
+          </li>
+          <li class="toggles__list-item">
+            <a href="index.html" class="toggles__full-version-link">
+              <svg width="23" height="19" aria-hidden="true" class="icon-full">
+                <use xlink:href="#full" />
               </svg>
-              <span class="visually-hidden">Мобильная версия</span>
+              Полная версия
             </a>
-            <div class="utility__login">
-              <a class="utility__login-open js-login-open">
-                <svg width="20" height="20" aria-hidden="true" class="icon-search">
-                  <use xlink:href="#person" />
-                </svg>
-                <span class="visually-hidden">Личный кабинет</span>
-              </a>
-              <div class="utility__login-wrapper js-login-wrapper">
-                <div class="utility__login-content">
-
-                  <div class="utility__login-padding-wrapper">
-                    <h2 class="utility__login-heading">
-                      Вход
-                    </h2>
-                    <div class="utility__account">
-                      <div class="utility__login-avatar">
-                        <img src="img/avatar-placeholder.svg" alt="Заглушка аватара" class="utility__login-avatar-image">
-                      </div>
-                      <a href="#" class="utility__username">
-                        emiliocorleone
-                      </a>
-                    </div>
-                    <form action="/" class="utility__login-form" method="POST" data-parsley-validate>
-                      <div class="utility__login-form-row">
-                        <input autocomplete="off" type="text" name="nickname" class="utility__login-input" placeholder="Логин или E-mail" required />
-                      </div>
-                      <div class="utility__login-form-row">
-                        <input autocomplete="off" type="password" name="password" class="utility__login-input" placeholder="Пароль" required />
-                      </div>
-                      <div class="utility__login-form-row">
-                        <a href="#" class="utility__login-remember-password-link">Забыли пароль?</a>
-                      </div>
-                      <div class="utility__login-form-row">
-                        <span class="checkbox">
-                          <input type="checkbox" class="checkbox__input" name="savepassword" id="savepassword" />
-                          <label for="savepassword" class="checkbox__label">
-                            <span class="checkbox__label-icon">
-                              <svg width="10" height="7" aria-hidden="true" class="icon-checkbox">
-                                <use xlink:href="#checkbox" />
-                              </svg>
-                            </span>
-                            <span class="checkbox__label-text">Сохранить пароль</span>
-                          </label>
-                        </span>
-
-                      </div>
-                      <div class="utility__login-form-row">
-                        <button type="submit" class="utility__login-submit">
-                          Войти
-                        </button>
-                      </div>
-                    </form>
-                    <div class="utility__login-social-login">
-                      <a href="#" class="utility__login-social-login-link">
-                        Войти через:
-                        <svg width="25" height="25" aria-hidden="true" class="icon-vk">
-                          <use xlink:href="#vk" />
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="utility__register-exit">
-                    <a href="#" class="utility__register-exit-link">
-                      Регистрация
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-        <div class="page-header__bottom-panel">
-          <nav class="main-nav">
-            <ul class="main-nav__list">
-              <li class="main-nav__list-item" tabindex="0">
-                <span class="main-nav__link">Ак Барс</span>
-                <div class="main-nav__submenu">
-                  <div class="main-nav__submenu-content">
-                    <div class="main-nav__submenu-info">
-                      <h2 class="main-nav__submenu-heading">Ак Барс</h2>
-                    </div>
-                    <ul class="main-nav__submenu-list main-nav__submenu-list--team">
-                      <li class="main-nav__submenu-list-item">
-                        <a href="tables.html" class="main-nav__submenu-link">Таблицы</a>
-                      </li>
-                      <li class="main-nav__submenu-list-item">
-                        <a href="team.html" class="main-nav__submenu-link">Команда</a>
-                      </li>
-                      <li class="main-nav__submenu-list-item">
-                        <a href="statistics.html" class="main-nav__submenu-link">Статистика</a>
-                      </li>
-                      <li class="main-nav__submenu-list-item">
-                        <a href="calendar.html" class="main-nav__submenu-link">Календарь</a>
-                      </li>
-                      <li class="main-nav__submenu-list-item">
-                        <a href="play-off.html" class="main-nav__submenu-link">Плей-офф</a>
-                      </li>
-                      <li class="main-nav__submenu-list-item">
-                        <a href="results.html" class="main-nav__submenu-link">Результаты</a>
-                      </li>
-                      <li class="main-nav__submenu-list-item">
-                        <a href="reglament.html" class="main-nav__submenu-link">Регламент</a>
-                      </li>
-                      <li class="main-nav__submenu-list-item">
-                        <a href="history.html" class="main-nav__submenu-link">История</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-              <li class="main-nav__list-item" tabindex="0">
-                <span class="main-nav__link">Болельщики</span>
-                <div class="main-nav__submenu">
-                  <div class="main-nav__submenu-content">
-                    <div class="main-nav__submenu-info">
-                      <h2 class="main-nav__submenu-heading">Болельщики</h2>
-                      <a href="#" class="main-nav__submenu-buy-link">
-                        <svg width="24" height="16" aria-hidden="true" class="icon-card">
-                          <use xlink:href="#card" />
-                        </svg>
-                        Карта болельщика
-                      </a>
-                    </div>
-                    <ul class="main-nav__submenu-list main-nav__submenu-list--fans">
-                      <li class="main-nav__submenu-list-item">
-                        <a href="#" class="main-nav__submenu-link">Гостевая книга</a>
-                      </li>
-                      <li class="main-nav__submenu-list-item">
-                        <a href="prognosis.html" class="main-nav__submenu-link">Прогнозы</a>
-                      </li>
-                      <li class="main-nav__submenu-list-item">
-                        <a href="useful-links.html" class="main-nav__submenu-link">Полезные ссылки</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-              <li class="main-nav__list-item">
-                <a href="news.html" class="main-nav__link">Новости</a>
-              </li>
-              <li class="main-nav__list-item" tabindex="0">
-                <span class="main-nav__link">Медиа</span>
-                <div class="main-nav__submenu">
-                  <div class="main-nav__submenu-content">
-                    <div class="main-nav__submenu-info">
-                      <h2 class="main-nav__submenu-heading">Медиа</h2>
-                    </div>
-                    <ul class="main-nav__submenu-list main-nav__submenu-list--media">
-                      <li class="main-nav__submenu-list-item">
-                        <a href="photogallery.html" class="main-nav__submenu-link">Фотогалерея</a>
-                      </li>
-                      <li class="main-nav__submenu-list-item">
-                        <a href="videos.html" class="main-nav__submenu-link">Видео</a>
-                      </li>
-
-                      <li class="main-nav__submenu-list-item">
-                        <a href="download.html" class="main-nav__submenu-link">Материалы для скачивания</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-              <li class="main-nav__list-item" tabindex="0">
-                <span class="main-nav__link main-nav__link--tickets">
-                  <svg width="20" height="22" aria-hidden="true" class="icon-tickets">
-                    <use xlink:href="#tickets" />
-                  </svg>
-                  Билеты
-                </span>
-                <div class="main-nav__submenu">
-                  <div class="main-nav__submenu-content">
-                    <div class="main-nav__submenu-info">
-                      <h2 class="main-nav__submenu-heading">Билеты</h2>
-                      <a href="#" class="main-nav__submenu-buy-link">
-                        <svg width="20" height="22" aria-hidden="true" class="icon-tickets">
-                          <use xlink:href="#tickets" />
-                        </svg>
-                        Купить билеты
-                      </a>
-                    </div>
-                    <ul class="main-nav__submenu-list main-nav__submenu-list--tickets">
-                      <li class="main-nav__submenu-list-item">
-                        <a href="tickets.html" class="main-nav__submenu-link">Билетная программа</a>
-                      </li>
-                      <li class="main-nav__submenu-list-item">
-                        <a href="abonements.html" class="main-nav__submenu-link">Абонементы</a>
-                      </li>
-                      <li class="main-nav__submenu-list-item">
-                        <a href="#" class="main-nav__submenu-link">Кассы</a>
-                      </li>
-                      <li class="main-nav__submenu-list-item">
-                        <a href="vip.html" class="main-nav__submenu-link">VIP-ложи</a>
-                      </li>
-                      <li class="main-nav__submenu-list-item">
-                        <a href="terminals.html" class="main-nav__submenu-link">Инфокиоски «Ак Барс» Банка</a>
-                      </li>
-                      <li class="main-nav__submenu-list-item">
-                        <a href="iceberg.html" class="main-nav__submenu-link">Ресторан «Айсберг»</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </nav>
-          <nav class="extra-links">
-            <ul class="extra-links__list">
-              <li class="extra-links__list-item">
-                <a href="#" class="extra-links__link">
-                  <svg width="30" height="30" aria-hidden="true" class="icon-academy">
-                    <use xlink:href="#academy" />
-                  </svg>
-                  Академия
-                </a>
-              </li>
-              <!-- <li class="extra-links__list-item">
-            <a href="#" class="extra-links__link">
-              <svg width="30" height="30" aria-hidden="true" class="icon-tickets">
-                <use xlink:href="#tickets" />
+          </li>
+          <!-- <li class="toggles__list-item">
+            <a href="account-m.html" class="toggles__login-link">
+              <svg width="22" height="22" aria-hidden="true" class="icon-settings">
+                <use xlink:href="#settings" />
               </svg>
-              Билеты
+              Профиль
+            </a>
+          </li>
+          <li class="toggles__list-item">
+            <a href="#" class="toggles__login-link">
+              <svg width="20" height="20" aria-hidden="true" class="icon-logout">
+                <use xlink:href="#logout" />
+              </svg>
+              Выход
             </a>
           </li> -->
-              <li class="extra-links__list-item">
-                <a href="#" class="extra-links__link">
-                  <svg width="30" height="30" aria-hidden="true" class="icon-shop">
-                    <use xlink:href="#shop" />
-                  </svg>
-                  Магазин
-                </a>
+        </ul>
+        <button class="toggles__close-sidebar-button js-burger-close">
+          <svg width="16" height="16" aria-hidden="true" class="icon-cross-fat">
+            <use xlink:href="#cross-fat" />
+          </svg>
+        </button>
+      </div>
+      <div class="shop-and-tickets">
+        <a href="#" class="shop-and-tickets__link">
+          <span class="shop-and-tickets__icon-container">
+            <svg width="20" height="22" aria-hidden="true" class="icon-tickets">
+              <use xlink:href="#tickets" />
+            </svg>
+          </span>
+          Билеты
+        </a>
+        <a href="#" class="shop-and-tickets__link">
+          <span class="shop-and-tickets__icon-container">
+            <svg width="16" height="18" aria-hidden="true" class="icon-shop">
+              <use xlink:href="#shop" />
+            </svg>
+          </span>
+          Магазин
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__list-item active">
+            <a href="#" class="main-nav__link">Главная</a>
+          </li>
+          <li class="main-nav__list-item">
+            <a href="#" class="main-nav__link main-nav__link--has-submenu js-submenu-toggle">Ак Барс</a>
+            <ul class="main-nav__submenu-list js-submenu">
+              <li class="main-nav__submenu-list-item">
+                <a href="team-m.html" class="main-nav__submenu-link">Команда</a>
+              </li>
+              <li class="main-nav__submenu-list-item">
+                <a href="results-page-m.html" class="main-nav__submenu-link">Результаты</a>
+              </li>
+              <li class="main-nav__submenu-list-item">
+                <a href="tables-m.html" class="main-nav__submenu-link">Таблицы</a>
+              </li>
+              <li class="main-nav__submenu-list-item">
+                <a href="statistics-m.html" class="main-nav__submenu-link">Статистика</a>
+              </li>
+              <li class="main-nav__submenu-list-item">
+                <a href="history-m.html" class="main-nav__submenu-link">История</a>
               </li>
             </ul>
-          </nav>
-        </div>
+          </li>
+          <li class="main-nav__list-item">
+            <a href="news-all-m.html" class="main-nav__link">Новости</a>
+          </li>
+          <li class="main-nav__list-item">
+            <a href="#" class="main-nav__link main-nav__link--has-submenu js-submenu-toggle">Медиа</a>
+            <ul class="main-nav__submenu-list js-submenu">
+              <li class="main-nav__submenu-list-item">
+                <a href="video-m.html" class="main-nav__submenu-link">Видео</a>
+              </li>
+              <li class="main-nav__submenu-list-item">
+                <a href="photo-m.html" class="main-nav__submenu-link">Фото</a>
+              </li>
+            </ul>
+          </li>
+          <li class="main-nav__list-item">
+            <a href="#" class="main-nav__link">Гостевая</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="clubs">
+        <a href="#" class="clubs__academy">
+          <svg width="19" height="18" aria-hidden="true" class="icon-academy">
+            <use xlink:href="#academy" />
+          </svg>
+          Академия
+        </a>
+        <ul class="clubs__list">
+          <li class="clubs__list-item selected">
+            <a href="#" class="clubs__link">
+              ХК «АК БАРС»
+            </a>
+          </li>
+          <li class="clubs__list-item">
+            <a href="#" class="clubs__link">
+              ХК «БАРС»
+            </a>
+          </li>
+          <li class="clubs__list-item">
+            <a href="#" class="clubs__link">
+              ХК «ИРБИС»
+            </a>
+          </li>
+        </ul>
       </div>
+      <ul class="social">
+        <li class="social__item">
+          <a href="#" class="social__link">
+            <svg width="28" height="17" aria-hidden="true" class="icon-vk">
+              <use xlink:href="#vk" />
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link">
+            <svg width="25" height="25" aria-hidden="true" class="icon-instagram">
+              <use xlink:href="#instagram" />
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link">
+            <svg width="27" height="20" aria-hidden="true" class="icon-youtube">
+              <use xlink:href="#youtube" />
+            </svg>
+          </a>
+        </li>
+
+        <li class="social__item">
+          <a href="#" class="social__link">
+            <svg width="27" height="20" aria-hidden="true" class="icon-twitter">
+              <use xlink:href="#twitter" />
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link">
+            <svg width="13" height="22" aria-hidden="true" class="icon-fb">
+              <use xlink:href="#fb" />
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link">
+            <svg width="16" height="26" aria-hidden="true" class="icon-ok">
+              <use xlink:href="#ok" />
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link">
+            <svg width="27" height="22" aria-hidden="true" class="icon-telegram">
+              <use xlink:href="#telegram" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <a href="#" class="sponsor">
+        <span class="sponsor__logo">
+          <img src="img/logos/tatneft-logo-white.svg" alt="Логотип спонсора" width="130px" height="38" />
+        </span>
+        <span class="sponsor__text">
+          Генеральный спонсор матчей с участием ХК «Ак Барс», ХК «Барс» и ХК «Ирбис»
+        </span>
+      </a>
+    </div>
+  </div>
+  <div class="page-content">
+    <header class="page-header js-header">
+
+      <a href="m.html" class="page-header__logo-link">
+        <img src="img/logos/akbars-logo.svg" alt="Логотип Ак Барс" width="48" height="28" class="page-header__logo">
+      </a>
+      <button class="page-header__menu-open js-sidebar-open">
+        <span class="page-header__menu-open-content">
+          <span class="page-header__menu-open-bar"></span>
+          <span class="page-header__menu-open-bar"></span>
+          <span class="page-header__menu-open-bar"></span>
+        </span>
+      </button>
+
+
+
+
     </header>
 
     <main>
-      <div class="container container--full-height">
-        <div class="error">
-          <div class="error__content">
-            <h1 class="error__code">
-              404
-            </h1>
-            <p class="error__text error__text--large">
-              УУУПС… ПРОИЗОШЛА ОШИБКА.
-            </p>
-            <p class="error__text">
-              Страница, которую вы ищите, отсутствует<br />
-              или никогда не существовала.
-            </p>
-            <form action="/search.html" class="error__form" method="GET">
-              <input type="text" name="q" placeholder="Поиск по сайту" />
-              <button type="submit">
-                <span class="submit-content">
-                  <svg width="16" height="16" aria-hidden="true" class="icon-search">
-                    <use xlink:href="#search" />
-                  </svg>
-                </span>
-              </button>
-            </form>
-            <p class="error__recomendation">
-              Попробуйте воспользоваться поиском, или навигационным меню в шапке сайта.
-            </p>
-          </div>
+      <section class="comment-form">
+        <div class="comment-form__content">
+          <a href="news-details-m.html" class="comment-form__back-link">Назад к новости</a>
+          <h1 class="comment-form__heading">
+            Ваш комментарий
+          </h1>
+          <form action="/" method="POST" class="comment-form__form" data-parsley-validate>
+            <textarea name="comment" class="comment-form__textarea" required></textarea>
+            <button type="submit" class="comment-form__button">
+              Оставить комментарий
+            </button>
+          </form>
         </div>
-      </div>
+
+
+
+        <div class="sponsor-block">
+          <img src="img/logos/tatneft-logo.svg" width="180" alt="" class="sponsor-block__logo" />
+          <p class="sponsor-block__text">
+            Генеральный спонсор
+          </p>
+        </div>
+
+      </section>
     </main>
     <footer class="page-footer">
       <div class="container">
-        <div class="page-footer__links">
-          <div class="page-footer__links-general">
-            <a href="#" class="page-footer__link">Команда</a>
-            <a href="#" class="page-footer__link">Болельщики</a>
-            <a href="#" class="page-footer__link">Новости</a>
-            <a href="#" class="page-footer__link">Медиа</a>
-            <span class="page-footer__divider"></span>
-            <a href="#" class="page-footer__link">ХК «БАРС»</a>
-            <a href="#" class="page-footer__link">ХК «ИРБИС»</a>
-          </div>
-          <div class="page-footer__links-special">
-            <a href="#" class="page-footer__link">
-              <svg width="20" height="20" aria-hidden="true" class="icon-academy">
-                <use xlink:href="#academy" />
-              </svg>
+        <img src="img/logos/akbars-logo.svg" alt="Логотип команды" width="70" class="page-footer__team-logo" />
+        <p>
+          Официальный сайт ООО «СКП «Татнефть - Ак Барс». © 2000-2019
+        </p>
+        <p>
+          При использовании материалов сайта ссылка на источник обязательна По вопросам размещения рекламы обращайтесь по
+          тел/факс: <a href="tel:+78435338232">+7 843 53-38-232</a>
+        </p>
+        <a href="#">
+          Стать партнером ХК «Ак Барс»
+        </a>
+        <a href="#" class="page-footer__callback-form-link">
+          <span class="page-footer__callback-form-link-text">
+            Форма обратной связи
+          </span>
+        </a>
+        <ul class="page-footer__special-links-list">
+          <li class="page-footer__special-links-list-item">
+            <a href="#" class="page-footer__special-link">
+              <span class="page-footer__special-link-icon-container">
+                <svg width="20" height="18" aria-hidden="true" class="icon-academy">
+                  <use xlink:href="#academy" />
+                </svg>
+              </span>
               Академия
             </a>
-            <a href="#" class="page-footer__link">
-              <svg width="20" height="20" aria-hidden="true" class="icon-tickets">
-                <use xlink:href="#tickets" />
-              </svg>
-              Билеты</a>
-            <a href="#" class="page-footer__link">
-              <svg width="18" height="18" aria-hidden="true" class="icon-shop">
-                <use xlink:href="#shop" />
-              </svg>
+          </li>
+          <li class="page-footer__special-links-list-item">
+            <a href="#" class="page-footer__special-link">
+              <span class="page-footer__special-link-icon-container">
+                <svg width="20" height="22" aria-hidden="true" class="icon-tickets">
+                  <use xlink:href="#tickets" />
+                </svg>
+              </span>
+              Билеты
+            </a>
+          </li>
+          <li class="page-footer__special-links-list-item">
+            <a href="#" class="page-footer__special-link">
+              <span class="page-footer__special-link-icon-container">
+                <svg width="16" height="18" aria-hidden="true" class="icon-shop">
+                  <use xlink:href="#shop" />
+                </svg>
+              </span>
               Магазин
             </a>
-          </div>
-        </div>
-        <div class="page-footer__bottom-row">
-          <div class="page-footer__info-block">
-            <img src="img/logos/akbars-logo.svg" alt="Логотип команды" width="154" height="88" class="page-footer__team-logo" />
-            <div class="page-footer__information">
-              <p>Официальный сайт ООО «СКП "Татнефть - Ак Барс"». &copy; 2000-2019</p>
-              <p>
-                При использовании материалов сайта ссылка на источник обязательна По вопросам размещения рекламы обращайтесь
-                по тел/факс: +7 843 53-38-232
-              </p>
-              <a href="#">Стать партнером ХК «Ак Барс»</a>
-            </div>
-          </div>
-          <div class="page-footer__social">
-            <ul class="page-footer__social-list">
-              <li class="page-footer__social-list-item">
-                <a href="#" class="page-footer__social-link">
-                  <svg width="15" height="15" aria-hidden="true" class="icon-vk">
-                    <use xlink:href="#vk" />
-                  </svg>
-                </a>
-              </li>
-              <li class="page-footer__social-list-item">
-                <a href="#" class="page-footer__social-link">
-                  <svg width="15" height="15" aria-hidden="true" class="icon-instagram">
-                    <use xlink:href="#instagram" />
-                  </svg>
-                </a>
-              </li>
-              <li class="page-footer__social-list-item">
-                <a href="#" class="page-footer__social-link">
-                  <svg width="15" height="15" aria-hidden="true" class="icon-youtube">
-                    <use xlink:href="#youtube" />
-                  </svg>
-                </a>
-              </li>
-              <li class="page-footer__social-list-item">
-                <a href="#" class="page-footer__social-link">
-                  <svg width="15" height="15" aria-hidden="true" class="icon-twitter">
-                    <use xlink:href="#twitter" />
-                  </svg>
-                </a>
-              </li>
-              <li class="page-footer__social-list-item">
-                <a href="#" class="page-footer__social-link">
-                  <svg width="15" height="15" aria-hidden="true" class="icon-fb">
-                    <use xlink:href="#fb" />
-                  </svg>
-                </a>
-              </li>
-              <li class="page-footer__social-list-item">
-                <a href="#" class="page-footer__social-link">
-                  <svg width="15" height="15" aria-hidden="true" class="icon-ok">
-                    <use xlink:href="#ok" />
-                  </svg>
-                </a>
-              </li>
-              <li class="page-footer__social-list-item">
-                <a href="#" class="page-footer__social-link">
-                  <svg width="15" height="15" aria-hidden="true" class="icon-telegram">
-                    <use xlink:href="#telegram" />
-                  </svg>
-                </a>
-              </li>
-            </ul>
-            <a href="#" class="page-footer__callback-form-link">Форма обратной связи</a>
-          </div>
-        </div>
+          </li>
+        </ul>
+        <ul class="page-footer__bottom-nav-list">
+          <li class="page-footer__bottom-nav-list-item">
+            <a href="#" class="page-footer__bottom-nav-link">Команда</a>
+          </li>
+          <li class="page-footer__bottom-nav-list-item">
+            <a href="#" class="page-footer__bottom-nav-link">Болельщики</a>
+          </li>
+          <li class="page-footer__bottom-nav-list-item">
+            <a href="#" class="page-footer__bottom-nav-link">Новости</a>
+          </li>
+          <li class="page-footer__bottom-nav-list-item">
+            <a href="#" class="page-footer__bottom-nav-link">Медиа</a>
+          </li>
+        </ul>
+        <ul class="page-footer__bottom-nav-list">
+          <li class="page-footer__bottom-nav-list-item">
+            <a href="#" class="page-footer__bottom-nav-link">ХК «БАРС»</a>
+          </li>
+          <li class="page-footer__bottom-nav-list-item">
+            <a href="#" class="page-footer__bottom-nav-link">ХК «ИРБИС»</a>
+          </li>
+        </ul>
+        <ul class="page-footer__social-list">
+          <li class="page-footer__social-list-item">
+            <a href="#" class="page-footer__social-link">
+              <svg width="28" height="18" aria-hidden="true" class="icon-vk">
+                <use xlink:href="#vk" />
+              </svg>
+            </a>
+          </li>
+          <li class="page-footer__social-list-item">
+            <a href="#" class="page-footer__social-link">
+              <svg width="25" height="25" aria-hidden="true" class="icon-instagram">
+                <use xlink:href="#instagram" />
+              </svg>
+            </a>
+          </li>
+          <li class="page-footer__social-list-item">
+            <a href="#" class="page-footer__social-link">
+              <svg width="28" height="20" aria-hidden="true" class="icon-youtube">
+                <use xlink:href="#youtube" />
+              </svg>
+            </a>
+          </li>
+          <li class="page-footer__social-list-item">
+            <a href="#" class="page-footer__social-link">
+              <svg width="24" height="20" aria-hidden="true" class="icon-twitter">
+                <use xlink:href="#twitter" />
+              </svg>
+            </a>
+          </li>
+
+          <li class="page-footer__social-list-item">
+            <a href="#" class="page-footer__social-link">
+              <svg width="13" height="22" aria-hidden="true" class="icon-fb">
+                <use xlink:href="#fb" />
+              </svg>
+            </a>
+          </li>
+          <li class="page-footer__social-list-item">
+            <a href="#" class="page-footer__social-link">
+              <svg width="16" height="24" aria-hidden="true" class="icon-ok">
+                <use xlink:href="#ok" />
+              </svg>
+            </a>
+          </li>
+          <li class="page-footer__social-list-item">
+            <a href="#" class="page-footer__social-link">
+              <svg width="27" height="22" aria-hidden="true" class="icon-telegram">
+                <use xlink:href="#telegram" />
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-
-
-    <script src="js/app.js"></script>
+    <script src="js/mobile.js"></script>
 
   </div>
 </body>
