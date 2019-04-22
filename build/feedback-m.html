@@ -495,32 +495,37 @@
               </p>
             </div>
           </div>
-          <div class="feedback__select">
-            <div class="gradient-wrapper">
-              <div class="wrapper">
-                <select name="season" onchange="return console.log(event.target.value)">
-                  <option value="1" selected>Работа сайта</option>
-                  <option value="4">Карта болельщика</option>
-                  <option value="2">Для администрации клуба</option>
-                  <option value="3">Для пресс-аташе клуба</option>
-                  <option value="6">Билеты, абонементы, именные места, вип ложи </option>
-                  <option value="5">Работа мобильной версии</option>
-                </select>
-              </div>
-            </div>
-          </div>
+
           <form class="feedback__form" method="POST" action="/" data-parsley-validate>
             <div class="feedback__form-input-group">
+              <label for="category" class="feedback__form-label">Категория обращения</label>
+              <div class="feedback__select">
+                <div class="gradient-wrapper">
+                  <div class="wrapper">
+                    <select name="category" id="category" onchange="return console.log(event.target.value)">
+                      <option value="1" selected>Работа сайта</option>
+                      <option value="4">Карта болельщика</option>
+                      <option value="2">Для администрации клуба</option>
+                      <option value="3">Для пресс-аташе клуба</option>
+                      <option value="6">Билеты, абонементы, именные места, вип ложи </option>
+                      <option value="5">Работа мобильной версии</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="feedback__form-input-group">
               <label for="name" class="feedback__form-label">Имя</label>
-              <input type="text" id="name" name="name" class="feedback__form-input" required>
+              <input type="text" id="name" name="name" class="feedback__form-input" required />
             </div>
             <div class="feedback__form-input-group">
               <label for="email" class="feedback__form-label">E-mail</label>
-              <input type="email" id="email" name="email" class="feedback__form-input" required>
+              <input type="email" id="email" name="email" class="feedback__form-input" required />
             </div>
+
             <div class="feedback__form-input-group feedback__form-input-group--theme">
               <label for="theme" class="feedback__form-label">Тема сообщения</label>
-              <input type="text" id="theme" name="theme" class="feedback__form-input" required>
+              <input type="text" id="theme" name="theme" class="feedback__form-input" required />
             </div>
             <div class="feedback__form-input-group">
               <label for="message" class="feedback__form-label">Тема сообщения</label>
