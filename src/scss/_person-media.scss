@@ -159,8 +159,10 @@
       position: relative;
       padding: 19px 10px;
       transition: all 0.2s;
+      &.sorting_1 {
+        font-weight: 700;
+      }
       &:first-child {
-        font-weight: 400;
         &::before {
           width: calc(100% - 40px);
           right: 0;
@@ -176,7 +178,7 @@
         }
       }
       &:nth-child(3) {
-        font-weight: 700;
+        // font-weight: 700;
         white-space: nowrap;
         // width: 1200px;
       }
@@ -206,10 +208,7 @@
       &:hover {
         td {
           background-color: #dde8e7;
-          .person-media__team-name {
-            transition: color 0.2s;
-            color: $red;
-          }
+          
           &::before {
             background-color: #dde8e7;
           }
@@ -287,7 +286,7 @@
 
   .ak-bars-info__video-link {
     width: 240px;
-    height: 164px;
+    height: 140px;
     margin-right: 40px;
     flex-shrink: 0;
   }

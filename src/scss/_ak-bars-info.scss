@@ -11,111 +11,6 @@
       margin-right: 20px;
     }
   }
-
-  .tabs__item {
-    padding: 20px;
-    padding-top: 52px;
-    padding-bottom: 26px;
-    min-height: 100%;
-  }
-}
-
-
-
-.ak-bars-info__selected-video {
-  width: 400px;
-  display: flex;
-  flex-direction: column;
-  margin-right: 20px;
-  // margin-top: 32px;
-  .ak-bars-info__video-link {
-    width: 400px;
-    height: 270px;
-    width: 100%;
-  }
-}
-
-.ak-bars-info__video-preview {
-  width: 100%;
-  height: 100%;
-  @include objectFitCover();
-}
-
-.ak-bars-info__selected-video-text {
-  font-size: 16px;
-  line-height: 24px;
-  font-family: Arial, Helvetica, sans-serif;
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-
-.ak-bars-info__video-link {
-  display: block;
-  width: 174px;
-  height: 116px;
-  position: relative;
-  outline: none;
-  &:hover,
-  &:focus {
-    .ak-bars-info__play-icon {
-      fill-opacity: 1;
-    }
-  }
-}
-
-.ak-bars-info__play-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  fill: white;
-  fill-opacity: 0.8;
-  transition: fill-opacity 0.3s;
-}
-
-.ak-bars-info__video-preview {
-  display: block;
-}
-
-.ak-bars-info__selected-video-details-link {
-  font-size: 16px;
-  line-height: 20px;
-  color: $green;
-  outline: none;
-  font-family: 'Supermolot', 'Helvetica', sans-serif;
-  vertical-align: baseline;
-  &:link,
-  &:visited {
-    color: $green;
-  }
-  &::after {
-    content: ' >';
-    color: $red;
-  }
-
-  &:hover,
-  &:focus {
-    .ak-bars-info__selected-video-details-link-text {
-      &::before {
-        opacity: 1;
-      }
-    }
-  }
-
-  &-text {
-    position: relative;
-    &::before {
-      content: '';
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      height: 1.5px;
-      background-color: $green;
-      opacity: 0;
-      transition: all 0.2s;
-    }
-  }
 }
 
 .ak-bars-info__all-videos-link {
@@ -141,71 +36,168 @@
   }
 }
 
+.ak-bars-info__videos {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 40px;
+  padding-bottom: 30px;
+  // padding-right: 0;
+}
+
 .ak-bars-info__videos-slider {
-  width: 174px;
   position: relative;
+
+  .swiper-container {
+    width: 100%;
+  }
+
+  .swiper-slide {
+    width: 490px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
   &::after {
     content: '';
-    bottom: 0;
-    right: -2px;
-    width: calc(100% + 2px);
-    height: 120px;
     position: absolute;
-    z-index: 20;
+    right: 0;
+    width: 100px;
+    top: 0;
+    height: 100%;
+    background-image: linear-gradient(to left, white, rgba(white, 0));
+    z-index: 100;
     pointer-events: none;
-
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+70&0+0,1+70 */
-    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 70%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(
-      top,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 1) 70%
-    ); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 1) 70%
-    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
   }
-  .slick-vertical .slick-slide {
-    border: none;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100px;
+    top: 0;
+    height: 100%;
+    background-image: linear-gradient(to right, white, rgba(white, 0));
+    z-index: 100;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
   }
-
-  .slick-slide {
-    outline: none;
-  }
-}
-
-.ak-bars-info__videos-item {
-  display: block !important;
-  margin-bottom: 20px;
-}
-
-.ak-bars-info__videos-slider-button {
-  position: absolute;
-  left: 50%;
-  margin-left: -8px;
-  width: 16px;
-  height: 16px;
-  outline: none;
-  z-index: 30;
-  &:hover {
-    > svg {
-      fill: #3c8f88;
+  &.right-gradient-shown {
+    &::after {
+      opacity: 1;
+      visibility: visible;
     }
   }
-  > svg {
-    width: 16px;
-    height: 16px;
-    fill: $green;
-    transition: fill 0.3s;
-    position: relative;
+  &.left-gradient-shown {
+    &::before {
+      opacity: 1;
+      visibility: visible;
+    }
   }
+}
+
+.ak-bars-info__videos-link {
+  width: 100%;
+  display: block;
+  position: relative;
+  padding-bottom: 56.25%;
+  outline: none;
+  > img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    @include objectFitCover();
+  }
+
+  &:hover,
+  &:focus {
+    .ak-bars-info__videos__play-icon {
+      fill-opacity: 1;
+    }
+  }
+}
+
+.ak-bars-info__videos__play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: white;
+  fill-opacity: 0.8;
+  transition: fill-opacity 0.3s;
+}
+
+.ak-bars-info__videos-title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: $green;
+  margin-top: 5px;
+  a {
+    color: $green;
+    outline: none;
+    &:link,
+    &:visited {
+      color: $green;
+    }
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+.ak-bars-info__videos-button {
+  position: absolute;
+  top: 50%;
+  margin-top: -8px;
+  outline: none;
   &--prev {
-    bottom: calc(100% + 16px);
+    right: 100%;
+    margin-right: 12px;
   }
   &--next {
-    bottom: 0;
+    left: 100%;
+    margin-left: 12px;
+  }
+
+  &:not(.swiper-button-disabled) {
+    &:hover,
+    &:focus {
+      .ak-bars-info__videos-button-content {
+        > svg {
+          fill: #3c8f88;
+        }
+      }
+    }
+  }
+
+  &.swiper-button-disabled {
+    cursor: default;
+    .ak-bars-info__videos-button-content {
+      > svg {
+        fill: #c0c0c0;
+      }
+    }
+  }
+}
+
+.ak-bars-info__videos-button-content {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  > svg {
+    fill: $green;
+    transition: 0.2s;
   }
 }

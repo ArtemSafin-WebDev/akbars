@@ -120,11 +120,38 @@ export default function() {
     nextArrow: '.js-shop-slider-next'
   })
 
+  const akBarsInfoItems = Array.from(document.querySelectorAll('.js-ak-bars-info-item'))
+
+  akBarsInfoItems.forEach(item => {
+    new Swiper(item.querySelector('.js-ak-bars-info-slider'), {
+      slidesPerView: 'auto',
+      spaceBetween: 20,
+      navigation: {
+        nextEl: item.querySelector('.js-ak-bars-info-next'),
+        prevEl: item.querySelector('.js-ak-bars-info-prev')
+      },
+      on: {
+        reachEnd: function() {
+          item.classList.remove('right-gradient-shown')
+          item.classList.add('left-gradient-shown')
+        },
+        reachBeginning: function() {
+          item.classList.remove('left-gradient-shown')
+        },
+        fromEdge: function() {
+          item.classList.add('right-gradient-shown')
+          item.classList.remove('left-gradient-shown')
+        }
+      }
+    })
+    console.log('Initialized')
+  })
+
   const newsGallery = document.querySelector('.js-news-gallery')
 
   if (newsGallery) {
     const gradients = document.querySelector('.js-news-gallery-gradients')
-    
+
     new Swiper(newsGallery, {
       slidesPerView: 'auto',
       spaceBetween: 30,
@@ -134,7 +161,6 @@ export default function() {
       },
       on: {
         progress: function(progress) {
-          
           console.log(progress)
           if (progress !== -0 && progress !== 1) {
             console.log('Adding both')
@@ -149,8 +175,7 @@ export default function() {
         reachBeginning: function() {
           console.log('Removing left gradient')
           gradients.classList.remove('left-gradient')
-        },
-        
+        }
       }
     })
   }

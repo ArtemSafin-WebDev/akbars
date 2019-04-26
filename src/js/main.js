@@ -23,7 +23,7 @@ import highlightMaps from './highlightMaps'
 import datepickers from './datepickers'
 import loginOpen from './loginOpen'
 import socialOpen from './socialOpen'
-import selectsGroups from './selectsGroup'
+// import selectsGroups from './selectsGroup'
 import plansTables from './plansTables'
 import abonementAccordions from './abonementsAccordions'
 import smoothScrollingLinks from './anchorLinksSmoothScrolling'
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Активируем группы селектов
 
-  selectsGroups()
+  // selectsGroups()
 
   // Политика по кукам
 
