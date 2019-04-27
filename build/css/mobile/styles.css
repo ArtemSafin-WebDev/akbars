@@ -5203,7 +5203,7 @@ a.page-footer__bottom-nav-link {
   .news-details__comments-reply:hover, .news-details__comments-reply:focus {
     color: #D81E23; }
 
-.news-details__comments-paragraph {
+.news-details__comments-text-block p {
   margin-top: 10px;
   margin-bottom: 10px; }
 
