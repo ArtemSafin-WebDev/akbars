@@ -123,7 +123,7 @@
   flex-direction: column;
   flex-grow: 1;
   padding: 20px 25px;
-  box-shadow: 0px 0px 60px rgba(black, 0.12);
+  box-shadow: 0px 0px 60px rgba(black, 0.2);
   transition: all .3s, transform .3s ease-out;
   &:link,
   &:visited {
@@ -132,8 +132,8 @@
 
   &:hover,
   &:focus {
-    box-shadow: 0px 8px 20px rgba(black, 0.2);
-    transform: translateY(5px) translateZ(0);
+    box-shadow: 0px 0px 60px rgba(black, 0.12);
+    transform: translateY(-10px) translateZ(0);
     .shop__buy {
       background-color: #3C8F88;
     }

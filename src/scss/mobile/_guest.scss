@@ -1,0 +1,34 @@
+.guest__heading {
+  font-size: 18px;
+  line-height: 35px;
+  letter-spacing: 0.3px;
+  font-weight: 700;
+  color: $green;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 30px;
+  margin: 0;
+  background-color: #fff;
+}
+
+
+.guest__content {
+  background-color: #fff;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  .news-details__comments-not-allowed {
+    margin-top: 0;
+  }
+}
+
+
+.guest__comment-form {
+  margin-top: 40px;
+}
+
+
+.guest__comment-form--small {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
