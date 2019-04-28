@@ -14990,20 +14990,20 @@ a.news-details__video {
 .registration__content {
   margin-top: 35px;
   background-color: #fff;
-  padding: 20px;
-  padding-bottom: 40px;
+  padding: 40px;
+  padding-top: 35px;
   border-top: 2px solid #256963;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   font-family: Arial, Helvetica, sans-serif; }
+
+.registration__info {
+  width: 310px;
+  margin-right: 100px; }
 
 .registration__type {
   font-size: 16px;
@@ -15027,15 +15027,13 @@ a.news-details__video {
     .registration__type-link:link, .registration__type-link:visited {
       color: #256963; }
     .registration__type-link:hover, .registration__type-link:focus {
-      color: #D81E23;
       text-decoration: underline; }
       .registration__type-link:hover > svg, .registration__type-link:focus > svg {
-        fill: #D81E23; }
+        fill: #3C8F88; }
 
 .registration__form {
   width: 50%;
-  margin: 0 auto;
-  margin-top: 20px; }
+  margin: 0 auto; }
   .registration__form input {
     border: 2px solid #256963;
     outline: none;
@@ -15051,6 +15049,8 @@ a.news-details__video {
     transition: border-color .2s; }
     .registration__form input:focus {
       border-color: #D81E23; }
+    .registration__form input.parsley-error {
+      border-color: #D81E23; }
   .registration__form textarea {
     resize: none;
     -webkit-appearance: none;
@@ -15062,8 +15062,11 @@ a.news-details__video {
     width: 100%;
     height: 200px;
     padding: 6px 10px;
-    outline: none; }
+    outline: none;
+    margin-top: 5px; }
     .registration__form textarea:focus {
+      border-color: #D81E23; }
+    .registration__form textarea.parsley-error {
       border-color: #D81E23; }
   .registration__form label {
     cursor: pointer; }
@@ -15110,14 +15113,18 @@ a.news-details__video {
 
 .registration__form-submit {
   outline: none;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 20px;
-  padding: 10px 22px;
+  padding: 16px 22px;
+  padding-bottom: 14px;
+  text-transform: uppercase;
+  font-family: 'Supermolot', 'Helvetica', sans-serif;
   margin-top: 20px;
   background-color: #256963;
   color: #fff;
   -webkit-transition: background-color .2s;
-  transition: background-color .2s; }
+  transition: background-color .2s;
+  font-weight: 400; }
   .registration__form-submit:hover, .registration__form-submit:focus {
     background-color: #3C8F88; }
 
@@ -17836,3 +17843,87 @@ a.news-details__video {
     cursor: default; }
     .news-gallery__slider-button.swiper-button-disabled .news-gallery__slider-button-content > svg polyline {
       stroke: #c0c0c0; }
+
+.account__username {
+  font-size: 26px;
+  line-height: 38px;
+  font-weight: 700;
+  color: #256963;
+  font-family: 'Supermolot', 'Helvetica', sans-serif; }
+
+.account__email {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 30px;
+  font-size: 16px;
+  color: #606366; }
+
+.account__link-social {
+  margin-top: 50px; }
+
+.account__link-social-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 30px;
+  color: #242F37;
+  margin-bottom: 30px; }
+
+.account__link-social-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .account__link-social-item .social-name {
+    color: #94999F;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .account__link-social-item .social-name > svg {
+      fill: #94999F;
+      margin-right: 5px; }
+    .account__link-social-item .social-name[href] {
+      color: #256963; }
+      .account__link-social-item .social-name[href] > svg {
+        fill: #256963; }
+  .account__link-social-item .social-link {
+    font-size: 16px;
+    line-height: 20px;
+    color: #256963;
+    font-family: 'Supermolot', 'Helvetica', sans-serif;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: 15px;
+    outline: none;
+    -webkit-transition: .2s;
+    transition: .2s; }
+    .account__link-social-item .social-link::after {
+      content: '>';
+      color: #D81E23;
+      display: inline;
+      margin-left: 5px; }
+    .account__link-social-item .social-link:link, .account__link-social-item .social-link:visited {
+      color: #256963; }
+    .account__link-social-item .social-link:hover, .account__link-social-item .social-link:focus {
+      color: #D81E23; }
+
+.change-password .registration__info {
+  margin-right: 30px;
+  width: 340px; }
+
+.change-password__paragraph {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 30px;
+  color: #242F37;
+  margin-bottom: 30px; }
