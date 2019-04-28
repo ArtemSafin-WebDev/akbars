@@ -1,0 +1,125 @@
+.pagination {
+    display: flex;
+    align-items: center;
+   
+    &--top {
+      margin-bottom: 60px;
+    }
+  
+    &--bottom {
+      margin-top: 60px;
+    }
+  }
+  
+  .pagination__pages-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    margin-top: 20px;
+    justify-content: center;
+  }
+  
+  .pagination__pages-list-item {
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .pagination__page-link {
+    color: $green;
+    border: 2px solid $green;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    transition: 0.2s;
+  
+    &:link,
+    &:visited {
+      color: $green;
+    }
+    &.current {
+      background-color: $green;
+      color: white;
+    }
+  
+    &:not(.current) {
+      &:hover,
+      &:focus {
+        border: 2px solid $red;
+        color: $red;
+      }
+    }
+  }
+  
+  .pagination__next-page-link {
+    align-self: stretch;
+    color: $green;
+    border: 2px solid $green;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    transition: 0.2s;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    flex-grow: 1;
+    > svg {
+      fill: $green;
+      margin-left: 8px;
+      transition: 0.2s;
+    }
+    &:link,
+    &:visited {
+      color: $green;
+    }
+  
+    &:hover,
+    &:focus {
+      color: $red;
+      border: 2px solid $red;
+      > svg {
+        fill: $red;
+      }
+    }
+  }
+  
+  .pagination__prev-page-link {
+    align-self: stretch;
+    color: $green;
+    border: 2px solid $green;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    transition: 0.2s;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    // margin-right: 10px;
+    flex-grow: 1;
+    > svg {
+      fill: $green;
+      margin-right: 8px;
+      transition: 0.2s;
+    }
+    &:link,
+    &:visited {
+      color: $green;
+    }
+  
+    &:hover,
+    &:focus {
+      color: $red;
+      border: 2px solid $red;
+      > svg {
+        fill: $red;
+      }
+    }
+  }  
+  
