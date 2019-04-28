@@ -638,6 +638,7 @@
     transition: background-color 0.2s;
     font-family: 'Supermolot', 'Helvetica', sans-serif;
     text-transform: uppercase;
+    margin-left: auto;
     &:link,
     &:visited {
       color: white;
@@ -687,6 +688,12 @@
   opacity: 0.85;
   transition: opacity 0.2s;
   outline: none;
+  &--static {
+    position: static;
+    align-self: center;
+    margin-left: 40px;
+    // margin-right: -104px;
+  }
   &:hover,
   &:focus {
     opacity: 1;
@@ -699,6 +706,6 @@
 .abonements__sector-block {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  // justify-content: space-between;
   margin-bottom: 30px;
 }

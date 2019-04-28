@@ -35,6 +35,7 @@ import calendarTooltips from './calendarTooltips'
 import tabURLChange from './tabUrlChange'
 import mobileHide from './mobileHide'
 import audioPlayer from './audioPlayer'
+import fileUpload from './fileUpload'
 
 
 
@@ -166,7 +167,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   mobileHide()
 
-  
+  // Стилизация загрузки файлов
+
+  fileUpload()
 
 
   // Аудио плеер
