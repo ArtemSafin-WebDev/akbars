@@ -30,40 +30,40 @@
       <main>
         <div class="container">
           <div class="flex-row">
-            <div class="banner-column banner-column--left banner-column--news">
-              <a href="#" class="banner-column__item" style="background-image: url(img/banners/hoki.png)"> </a>
-              <a href="#" class="banner-column__item" style="background-image: url(img/banners/гимн.png)"> </a>
-            </div>
+            
+            <!-- partial:partials/_profile-sidebar.html --><!-- partial -->
             <section class="registration">
-              <h1 class="registration__main-heading">Регистрация</h1>
+              <h1 class="registration__main-heading">Профиль</h1>
               <div class="registration__content">
                 <div class="registration__info">
-                  <p class="registration__type">
-                    Для получения доступа к основным функциям сайта вы можете использовать упрощенную регистрацию через социальные сети: 
-                    <a href="#" class="registration__type-link registration__type-link--icon-link"
-                      ><svg width="20" height="20" aria-hidden="true" class="icon-vk">
-                        <use xlink:href="#vk" /></svg
-                    ></a>
+                  <p class="account__username">
+                    Emiliocorleone
                   </p>
-                  <p class="registration__type">
-                    Для регистрации карты болельщика необходимо зарегистрироваться в
-                    <a href="#" class="registration__type-link">программе лояльности</a>
+                  <p class="account__email">
+                    emiliocorleone@yandex.ru
                   </p>
+                  <div class="account__link-social">
+                    <p class="account__link-social-text">
+                      Вы можете привязать к вашей учетной 
+                      записи на сайте аккаунты социальных сетей 
+                      и в будущем авторизироваться через них:
+                    </p>
+                    <p class="account__link-social-item">
+                      <span class="social-name">
+                        <svg width="20" height="20" aria-hidden="true" class="icon-vk">
+                            <use xlink:href="#vk" /></svg
+                        >
+                        Вконтакте
+                      </span>
+                      <a href="#" class="social-link">
+                        Привязать
+                      </a>
+                    </p>
+                  </div>
                 </div>
 
                 <form action="/" method="POST" class="registration__form" data-parsley-validate>
-                  <div class="registration__form-row">
-                    <label for="nickname">Ваше имя/ник <sup>*</sup> (не менее 3 символов):</label>
-                    <input type="text" id="nickname" name="nickname" maxlength="25" minlength="3" required />
-                  </div>
-                  <div class="registration__form-row">
-                    <label for="password1">Пароль <sup>*</sup> (не менее 6 символов):</label>
-                    <input type="password" id="password1" name="password1" required minlength="6" data-parsley-passformat=""/>
-                  </div>
-                  <div class="registration__form-row">
-                    <label for="password2">Подтверждение пароля <sup>*</sup>:</label>
-                    <input type="password" id="password2" name="password2" required data-parsley-equalto="#password1"/>
-                  </div>
+                  
                   <div class="registration__form-row">
                     <label for="birthday">Дата рождения:</label>
                     <input autocomplete="off" type="text" id="birthday" name="birthday" class="js-birthday-input" data-parsley-moment />
@@ -73,10 +73,10 @@
                     <input type="text" id="city" name="city" maxlength="25" />
                   </div>
                   <div class="registration__form-row">
-                    <label for="email">Ваш e-mail <sup>*</sup>:</label>
-                    <input type="email" id="email" name="email" maxlength="40" required />
+                    <label for="info">Вкратце о себе:</label>
+                    <textarea name="info" id="info"></textarea>
                     <span class="registration__remark">
-                      Вводите реальный e-mail, на него будет выслано письмо для подтверждения регистрации
+                      Введите любую информацию о себе, которая будет доступна другим посетителям
                     </span>
                   </div>
                   <div class="registration__form-row">
@@ -173,29 +173,9 @@
                       </label>
                     </span>
                   </div>
-                  <div class="registration__form-row">
-                    <textarea name="info" id="info"></textarea>
-                    <span class="registration__remark">
-                      Введите любую информацию о себе, которая будет доступна другим посетителям
-                    </span>
-                  </div>
-                  <div class="registration__form-row">
-                    <span class="checkbox">
-                      <input type="checkbox" class="checkbox__input" name="agree" id="agree" required />
-                      <label for="agree" class="checkbox__label">
-                        <span class="checkbox__label-icon">
-                          <svg width="10" height="7" aria-hidden="true" class="icon-checkbox">
-                            <use xlink:href="#checkbox" />
-                          </svg>
-                        </span>
-                        <span class="checkbox__label-text">Я соглашаюсь с <a href="#" target="_blank">правилами</a> и соглашаюсь на <a href="#" target="_blank">обработку персональных данных</a></span>
-                      </label>
-                    </span>
-                  </div>
-                  <span class="registration__legend"> <sup>*</sup> - поля, обязательные для заполнения </span>
-
+                  
                   <button class="registration__form-submit">
-                    Зарегистрироваться
+                    Сохранить изменения
                   </button>
                 </form>
               </div>

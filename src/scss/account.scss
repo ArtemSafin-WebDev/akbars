@@ -1,0 +1,84 @@
+.account__username {
+  font-size: 26px;
+  line-height: 38px;
+  font-weight: 700;
+  color: $green;
+  font-family: 'Supermolot', 'Helvetica', sans-serif;
+}
+
+
+.account__email {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 30px;
+  font-size: 16px;
+  color: #606366;
+}
+
+
+
+.account__link-social {
+  margin-top: 50px;
+}
+
+
+.account__link-social-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 30px;
+  color: #242F37;
+  margin-bottom: 30px;
+}
+
+
+
+.account__link-social-item {
+  display: flex;
+  align-items: center;
+
+  .social-name {
+    color: #94999F;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    > svg {
+      fill: #94999F;
+      margin-right: 5px;
+    }
+
+    &[href] {
+      color: $green;
+      > svg {
+        fill: $green;
+      }
+    }
+  }
+
+
+  .social-link {
+    font-size: 16px;
+    line-height: 20px;
+    color: $green;
+    font-family: 'Supermolot', 'Helvetica', sans-serif;
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    outline: none;
+    transition: .2s;
+    &::after {
+      content: '>';
+      color: $red;
+      display: inline;
+      margin-left: 5px;
+    }
+    &:link,
+    &:visited {
+      color: $green;
+    }
+    &:hover,
+    &:focus {
+      color: $red;
+    }
+  }
+}
