@@ -39,9 +39,7 @@
   transition: all .3s;
   -webkit-tap-highlight-color: transparent;
   background-color: rgba(black, .8);
-  @media screen and (max-width: $mobile-version-breakpoint) {
-    background-color: transparent;
-  }
+ 
   @supports (backdrop-filter: blur(2px)) {
     backdrop-filter: blur(5px);
     background-color: rgba(white, 0);
@@ -54,14 +52,3 @@
 }
 
 
-.shown .page-content {
-
-  @media screen and (max-width: $mobile-version-breakpoint) {
-    filter: blur(3px);
-    
-  }
-
-  @supports (backdrop-filter: blur(3px)) {
-    filter: none;
-  }
-}

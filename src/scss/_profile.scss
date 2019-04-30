@@ -1,0 +1,55 @@
+.profile {
+  display: flex;
+  align-items: flex-start;
+}
+
+
+.profile__image-container {
+  width: 220px;
+  height: 220px;
+  flex-shrink: 0;
+  margin-right: 40px;
+}
+
+
+.profile__image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  @include objectFitCover();
+}
+
+
+.profile__table-container {
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    th,
+    td {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 30px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    td {
+      color: #606366;
+    }
+
+    th {
+      font-weight: 700;
+      width: 180px;
+      padding-right: 30px;
+    }
+
+    tr {
+      &:last-child {
+        td,
+        th {
+          padding-top: 18px;
+        }
+      }
+    }
+  }
+}

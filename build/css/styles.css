@@ -8013,10 +8013,10 @@ svg {
     -o-object-position: center;
        object-position: center;
     font-family: 'object-fit: cover; object-position: center;'; }
-  .ak-bars-info__videos-link:hover .ak-bars-info__videos__play-icon, .ak-bars-info__videos-link:focus .ak-bars-info__videos__play-icon {
+  .ak-bars-info__videos-link:hover .ak-bars-info__videos-play-icon, .ak-bars-info__videos-link:focus .ak-bars-info__videos-play-icon {
     fill-opacity: 1; }
 
-.ak-bars-info__videos__play-icon {
+.ak-bars-info__videos-play-icon {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -10039,7 +10039,6 @@ svg {
   .news-details__news-article-content p {
     font-size: 16px;
     line-height: 30px;
-    width: 624px;
     margin-bottom: 20px; }
   .news-details__news-article-content em {
     color: #256963;
@@ -10087,9 +10086,8 @@ svg {
     display: block;
     margin: 20px 0; }
     .news-details__news-article-content .photo-center > img {
-      width: 100%;
-      height: auto;
-      max-width: initial; }
+      height: auto !important;
+      max-width: 100%; }
     .news-details__news-article-content .photo-center > figcaption {
       color: #94999f;
       width: 460px;
@@ -10229,6 +10227,32 @@ a.news-details__video {
     .news-details__news-article-share-link > svg.icon-ok {
       width: 8px;
       height: 14px; }
+
+.twitter-post {
+  margin: 20px auto;
+  width: 500px; }
+
+.video-embd {
+  margin: 15px auto;
+  width: 640px;
+  overflow: hidden;
+  position: relative; }
+
+.video-embd::before {
+  content: '';
+  display: block;
+  padding-top: 56.25%;
+  position: relative;
+  z-index: 1; }
+
+.video-embd iframe {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2; }
 
 .news-comments {
   width: 960px;
@@ -11764,6 +11788,47 @@ a.news-details__video {
     border: 10px solid transparent;
     border-bottom: 10px solid white;
     pointer-events: none; }
+
+.person-media__videos-list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 40px; }
+  .person-media__videos-list-item:last-child {
+    margin-bottom: 0; }
+
+.person-media__videos-link {
+  width: 240px;
+  height: 140px;
+  position: relative;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-right: 40px; }
+  .person-media__videos-link:hover .person-media__videos-play-icon, .person-media__videos-link:focus .person-media__videos-play-icon {
+    fill-opacity: 1; }
+
+.person-media__videos-play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  fill: white;
+  fill-opacity: 0.8;
+  -webkit-transition: fill-opacity 0.3s;
+  transition: fill-opacity 0.3s; }
+
+.person-media__videos-preview {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  font-family: 'object-fit: cover; object-position: center;'; }
 
 .page-footer {
   margin-top: 40px;
@@ -18107,3 +18172,48 @@ a.news-details__video {
     color: #256963; }
   .avatar__delete-avatar:hover, .avatar__delete-avatar:focus {
     text-decoration: underline; }
+
+.profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+
+.profile__image-container {
+  width: 220px;
+  height: 220px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-right: 40px; }
+
+.profile__image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  font-family: 'object-fit: cover; object-position: center;'; }
+
+.profile__table-container table {
+  width: 100%;
+  border-collapse: collapse; }
+  .profile__table-container table th,
+  .profile__table-container table td {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: left;
+    vertical-align: top; }
+  .profile__table-container table td {
+    color: #606366; }
+  .profile__table-container table th {
+    font-weight: 700;
+    width: 180px;
+    padding-right: 30px; }
+  .profile__table-container table tr:last-child td,
+  .profile__table-container table tr:last-child th {
+    padding-top: 18px; }
