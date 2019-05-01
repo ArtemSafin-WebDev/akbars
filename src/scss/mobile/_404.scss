@@ -98,3 +98,17 @@
   text-align: center;
 
 }
+
+div.warning-message{
+  padding: 20px 0;
+  font-weight: bold;
+  color: red;
+  text-align: center;
+}
+
+div.success-message{
+  padding: 20px 0;
+  font-weight: bold;
+  color: #256963;
+  text-align: center;
+}
