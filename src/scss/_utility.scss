@@ -50,6 +50,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
     > svg {
       fill: $green;
       width: 24px;
@@ -62,6 +63,50 @@
       > svg {
         fill: $red;
       }
+      .utility__legend {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &__legend {
+    position: absolute;
+    top: calc(100% + 1px);
+    right: 0;
+    left: auto;
+    z-index: 41;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    padding-top: 7px;
+    white-space: nowrap;
+  }
+  
+  &__legend-content {
+    background-color: white;
+    color: #242f37;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    display: block;
+    position: relative;
+    box-shadow: 0px 5px 30px rgba(black, 0.2);
+    @supports (filter: drop-shadow(0 5px 30px rgba(black, 0.2))) {
+      filter: drop-shadow(0 5px 30px rgba(black, 0.2));
+      box-shadow: none;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      bottom: 100%;
+      right: 4px;
+      border: 10px solid transparent;
+      border-bottom: 10px solid white;
+      pointer-events: none;
     }
   }
 }
@@ -374,11 +419,19 @@
     > svg {
       fill: $red;
     }
+    .utility__legend {
+      opacity: 1;
+      visibility: visible;
+    }
   }
 
   .login-shown & {
     > svg {
       fill: $red;
+    }
+    .utility__legend { // скрываем подсказку когда развернуто окно логина
+      opacity: 0;
+      visibility: hidden;
     }
   }
 }

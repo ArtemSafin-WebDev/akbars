@@ -100,50 +100,51 @@
             <svg width="20" height="20" aria-hidden="true" class="icon-search">
               <use xlink:href="#search" />
             </svg>
-            <span class="visually-hidden">Поиск</span>
+            <span class="utility__legend">
+              <span class="utility__legend-content">Поиск по сайту</span>
+            </span>
           </a>
           <a href="m.html" class="utility__icon-link">
             <svg width="20" height="20" aria-hidden="true" class="icon-mobile">
               <use xlink:href="#mobile" />
             </svg>
-            <span class="visually-hidden">Мобильная версия</span>
+            <span class="utility__legend">
+              <span class="utility__legend-content">Мобильная версия</span>
+            </span>
           </a>
           <div class="utility__login">
             <a class="utility__login-open js-login-open">
               <svg width="20" height="20" aria-hidden="true" class="icon-search">
                 <use xlink:href="#person" />
               </svg>
-              <span class="visually-hidden">Личный кабинет</span>
+              <span class="utility__legend">
+                <span class="utility__legend-content">Личный кабинет</span>
+              </span>
             </a>
             <div class="utility__login-wrapper js-login-wrapper">
               <div class="utility__login-content">
-                <div class="utility__login-controls">
-                  <form action="/" class="utility__login-form" method="POST">
+                
+                <div class="utility__login-padding-wrapper">
+                  <h2 class="utility__login-heading">
+                    Вход
+                  </h2>
+                  <div class="utility__account">
+                    <div class="utility__login-avatar">
+                      <img src="img/avatar-placeholder.svg" alt="Заглушка аватара" class="utility__login-avatar-image">
+                    </div>
+                    <a href="#" class="utility__username">
+                      emiliocorleone
+                    </a>
+                  </div>
+                  <form action="/" class="utility__login-form" method="POST" data-parsley-validate>
                     <div class="utility__login-form-row">
-                      <div class="utility__login-avatar">
-                        <img src="img/avatar-placeholder.svg" alt="Заглушка аватара" class="utility__login-link-icon" />
-                      </div>
-                      <span class="utility__login-links">
-                        <a class="utility__login-link">Войти</a>/<a href="registration.html" class="utility__login-link"
-                          >Зарегистрироваться</a
-                        >
-                      </span>
+                      <input autocomplete="off" type="text" name="nickname" class="utility__login-input" placeholder="Логин или E-mail" required/>
                     </div>
                     <div class="utility__login-form-row">
-                      <input
-                        autocomplete="off"
-                        type="text"
-                        name="nickname"
-                        class="utility__login-input"
-                        placeholder="Логин или E-mail"
-                      />
-                      <input
-                        autocomplete="off"
-                        type="password"
-                        name="password"
-                        class="utility__login-input"
-                        placeholder="Пароль"
-                      />
+                      <input autocomplete="off" type="password" name="password" class="utility__login-input" placeholder="Пароль" required/>
+                    </div>
+                    <div class="utility__login-form-row">
+                      <a href="#" class="utility__login-remember-password-link">Забыли пароль?</a>
                     </div>
                     <div class="utility__login-form-row">
                       <span class="checkbox">
@@ -157,20 +158,27 @@
                           <span class="checkbox__label-text">Сохранить пароль</span>
                         </label>
                       </span>
-                      <a href="#" class="utility__login-remember-password-link">Забыли пароль?</a>
+                      
                     </div>
                     <div class="utility__login-form-row">
-                      <a href="#" class="utility__login-social-login-link">
-                        Войти через соцсеть:
-                        <svg width="20" height="20" aria-hidden="true" class="icon-vk">
-                          <use xlink:href="#vk" />
-                        </svg>
-                      </a>
                       <button type="submit" class="utility__login-submit">
                         Войти
                       </button>
                     </div>
                   </form>
+                  <div class="utility__login-social-login">
+                    <a href="#" class="utility__login-social-login-link">
+                      Войти через:
+                      <svg width="25" height="25" aria-hidden="true" class="icon-vk">
+                        <use xlink:href="#vk" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="utility__register-exit">
+                  <a href="#" class="utility__register-exit-link">
+                    Регистрация
+                  </a>
                 </div>
               </div>
             </div>
