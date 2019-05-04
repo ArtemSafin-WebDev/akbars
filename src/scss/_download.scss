@@ -40,17 +40,13 @@
   flex-grow: 1;
 }
 
-.download__select {
-  width: 100%;
-  position: relative;
-  z-index: 30;
-  // margin-bottom: 20px;
-  &:nth-child(1) {
-    width: 250px;
+.download__select-container {
+  display: flex;
+  padding-bottom: 20px;
+  .inline-custom-select {
+    margin: 0;
+    width: 242px;
     margin-right: 30px;
-  }
-  &:nth-child(2) {
-    width: 250px;
   }
 }
 
